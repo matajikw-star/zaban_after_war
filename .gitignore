@@ -19,3 +19,13 @@ Thumbs.db
 # scratch issues ARE tracked - see docs/agents/issue-tracker.md
 *.tsbuildinfo
 .turbo/
+
+# --- extraction pipeline (see extraction/README.md) ---
+# The 7.7 GB scan corpus. Never committed; it is an input, not an asset.
+raw_konkour_files/
+# Regenerable local artifacts: OCR text cache and rendered page PNGs.
+extraction/cache/
+
+# Raw exam papers: 2241 files / ~7.9 GB. Far past what Git LFS can hold.
+# Tracked by sources/manifest.md instead. See ADR-0006.
+raw_konkour_files/

@@ -23,7 +23,8 @@ _No sources ingested yet._
 
 Things nobody has answered yet. Each becomes a wiki page or an ADR once resolved.
 
-- Which exam years, degrees, and fields are in scope? (see `sources/manifest.md`)
+- Which of the 176 field codes and which years are in scope? 2241 papers is a different project
+  from 20 — see ADR-0006. Blocks M2 scoping.
 - What is the free-tier slice — how many words, chosen how?
 - Price point for premium, and whether it is one-off or a subscription.
 - Does a Zarinpal merchant account already exist for this domain?

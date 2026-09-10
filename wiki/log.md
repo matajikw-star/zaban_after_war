@@ -10,3 +10,5 @@ decision | 2026-09-10 | Adopted the three-layer wiki pattern (sources / wiki / s
 decision | 2026-09-10 | Zarinpal merchant account already active — removes the longest lead-time risk from M5
 decision | 2026-09-10 | Owner places raw exam files in sources/raw/ directly; manifest row required before ingest
 milestone | 2026-09-10 | M0 scaffold: pnpm workspace, TS strict + project references, Biome, Vitest, CI workflow
+decision | 2026-09-10 | Exam archive is 2241 PDFs / ~7.9 GB across 176 field codes; raw sources stay out of git (ADR-0006)
+query | 2026-09-10 | Target content is the زبان عمومی section present in every field's paper, not a single زبان exam

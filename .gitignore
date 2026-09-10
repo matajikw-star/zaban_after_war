@@ -29,3 +29,7 @@ extraction/cache/
 # Raw exam papers: 2241 files / ~7.9 GB. Far past what Git LFS can hold.
 # Tracked by sources/manifest.md instead. See ADR-0006.
 raw_konkour_files/
+
+# Python bytecode from extraction/scripts
+__pycache__/
+*.pyc

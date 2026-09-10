@@ -18,7 +18,7 @@ which lists what it got wrong.
 
 | Layer | Path | Writes |
 |---|---|---|
-| **Sources** — raw exam papers, immutable | `sources/` | Human only. Read them; never edit them. |
+| **Sources** — raw exam papers, immutable | `sources/`, `raw_konkour_files/` | Human only. Read them; never edit them. The 7.7 GB scan corpus stays out of git (ADR-0006). |
 | **Wiki** — everything derived: the lexicon, hints, project knowledge | `content/`, `wiki/`, `docs/` | Claude, continuously |
 | **Schema** — conventions and workflows | `CLAUDE.md`, `CONTEXT.md` | Both, deliberately |
 
@@ -32,16 +32,28 @@ Three named operations. The user invokes them by name ("ingest 1402 arshad", "li
 
 ### ingest `<source>`
 
-Turn one raw exam paper into lexicon entries.
+Turn raw exam papers into lexicon entries.
 
-1. Read the source from `sources/raw/`. Quality is poor (scans, bad OCR) — read carefully and
-   flag what you cannot read rather than guessing.
-2. Extract every vocabulary question into `content/exams/<exam-id>.json`. Verbatim: stem,
-   four options, the key. An unreadable field gets `null` plus a note in `uncertain[]`.
+The archive is 2,241 scanned booklets (7.7 GB, 52,467 pages, no text layer), so ingest is a
+**pipeline, not a chat task**: `extraction/`. Free local passes route and dedupe; a model reads
+only the surviving unique pages. Never open exam page images in the main session — they go to
+`exam-extractor` subagents. Run one batch with `/extract-next`; the procedure is
+`extraction/RUNBOOK.md` and the reasoning is `extraction/PIPELINE.md`.
+
+The unit of ingest is the **paper** (`arshad-<year>-pNN`), not the booklet: within a year many
+field codes sit the same English test. See `docs/adr/0007-paper-as-the-unit-of-ingest.md`.
+
+The rules that do not change, whatever runs them:
+
+1. Transcribe verbatim; never repair the English. An unreadable field is `null` plus a note in
+   `uncertain[]`. Never guess.
+2. These papers carry **no answer key**. The model infers it and records
+   `keySource: "inferred"` with a confidence. Nothing is ever labelled as coming from a key.
 3. For each tested word, create or update `content/lexicon/<word-id>.json`. A word already in
-   the lexicon gains one entry in `occurrences[]` — it does not get a second file.
+   the lexicon gains an entry in `occurrences[]` — it does not get a second file. Every
+   occurrence records `isAnswer`, and `stats.byYear` carries the per-year frequency.
 4. Report the counts and every `uncertain[]` item to the user before moving on.
-5. Append to `wiki/log.md`: `ingest | <exam-id> | <n> questions | <n> new words | <n> updated`.
+5. Append to `wiki/log.md`: `extract | <paperIds> | <n> questions | <n> new words | <n> updated`.
 
 Generating hints is a separate operation from ingest — see `docs/plan/content-pipeline.md`.
 
@@ -116,6 +128,11 @@ Issues live as markdown files under `.scratch/<feature-slug>/` in this repo. See
 ### Triage labels
 
 The five canonical triage roles, used verbatim as the label strings. See `docs/agents/triage-labels.md`.
+
+### Extraction pipeline
+
+The scan corpus is processed by `extraction/`, not by hand. Entry point:
+`extraction/RUNBOOK.md`. One batch: `/extract-next`.
 
 ### Domain docs
 

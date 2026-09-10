@@ -9,6 +9,8 @@ produces an answer worth keeping.
 - [Roadmap](../docs/plan/roadmap.md) — phases, milestones, and the work breakdown.
 - [Infrastructure](../docs/plan/infrastructure.md) — hosting, cost, deployment, backups.
 - [Content pipeline](../docs/plan/content-pipeline.md) — how a scanned exam becomes lexicon data.
+- [Extraction runbook](../extraction/RUNBOOK.md) — running the corpus through, session by session.
+- [Extraction pipeline](../extraction/PIPELINE.md) — why the pipeline is shaped the way it is.
 - [Decisions](../docs/adr/) — ADRs, newest last.
 - [Glossary](../CONTEXT.md) — the domain vocabulary.
 

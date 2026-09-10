@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "prosperous",
+  "lemma": "prosperous",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1405-p04",
+      "part": "vocabulary",
+      "questionNo": 12,
+      "reach": 1,
+      "surface": "prosperous",
+      "year": 1405
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1405": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1405,
+    "lastYear": 1405,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "prosperous"
+  ],
+  "synonyms": [],
+  "translations": []
+}

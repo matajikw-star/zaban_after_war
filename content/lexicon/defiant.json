@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "defiant",
+  "lemma": "defiant",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1405-p02",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 26,
+      "surface": "defiant",
+      "year": 1405
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1405": 1
+    },
+    "byYear": {
+      "1405": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1405,
+    "lastYear": 1405,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "defiant"
+  ],
+  "synonyms": [],
+  "translations": []
+}

@@ -1,26 +1,16 @@
 {
   "examples": [],
-  "id": "adumbrate",
-  "lemma": "adumbrate",
+  "id": "interrogate",
+  "lemma": "interrogate",
   "occurrences": [
     {
       "isAnswer": false,
-      "optionIndex": 0,
-      "paperId": "arshad-1405-p01",
-      "part": "vocabulary",
-      "questionNo": 7,
-      "reach": 29,
-      "surface": "adumbrate",
-      "year": 1405
-    },
-    {
-      "isAnswer": false,
-      "optionIndex": 3,
+      "optionIndex": 2,
       "paperId": "arshad-1405-p05",
       "part": "vocabulary",
-      "questionNo": 20,
+      "questionNo": 10,
       "reach": 1,
-      "surface": "adumbrate",
+      "surface": "Interrogating",
       "year": 1405
     }
   ],
@@ -28,19 +18,19 @@
   "stats": {
     "answersByYear": {},
     "byYear": {
-      "1405": 2
+      "1405": 1
     },
     "distinctYears": 1,
     "firstYear": 1405,
     "lastYear": 1405,
-    "priority": 4,
+    "priority": 3,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 2,
-    "timesTested": 2
+    "timesAsDistractor": 1,
+    "timesTested": 1
   },
   "status": "draft",
   "surfaceForms": [
-    "adumbrate"
+    "Interrogating"
   ],
   "synonyms": [],
   "translations": []

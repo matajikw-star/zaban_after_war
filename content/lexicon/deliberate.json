@@ -1,26 +1,26 @@
 {
   "examples": [],
-  "id": "adumbrate",
-  "lemma": "adumbrate",
+  "id": "deliberate",
+  "lemma": "deliberate",
   "occurrences": [
     {
       "isAnswer": false,
-      "optionIndex": 0,
-      "paperId": "arshad-1405-p01",
+      "optionIndex": 1,
+      "paperId": "arshad-1405-p05",
       "part": "vocabulary",
-      "questionNo": 7,
-      "reach": 29,
-      "surface": "adumbrate",
+      "questionNo": 12,
+      "reach": 1,
+      "surface": "deliberate",
       "year": 1405
     },
     {
       "isAnswer": false,
-      "optionIndex": 3,
-      "paperId": "arshad-1405-p05",
+      "optionIndex": 1,
+      "paperId": "arshad-1405-p07",
       "part": "vocabulary",
-      "questionNo": 20,
+      "questionNo": 10,
       "reach": 1,
-      "surface": "adumbrate",
+      "surface": "deliberate",
       "year": 1405
     }
   ],
@@ -40,7 +40,7 @@
   },
   "status": "draft",
   "surfaceForms": [
-    "adumbrate"
+    "deliberate"
   ],
   "synonyms": [],
   "translations": []

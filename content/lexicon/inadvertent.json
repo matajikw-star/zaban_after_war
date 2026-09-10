@@ -1,26 +1,26 @@
 {
   "examples": [],
-  "id": "adumbrate",
-  "lemma": "adumbrate",
+  "id": "inadvertent",
+  "lemma": "inadvertent",
   "occurrences": [
     {
       "isAnswer": false,
-      "optionIndex": 0,
-      "paperId": "arshad-1405-p01",
+      "optionIndex": 1,
+      "paperId": "arshad-1405-p04",
       "part": "vocabulary",
-      "questionNo": 7,
-      "reach": 29,
-      "surface": "adumbrate",
+      "questionNo": 12,
+      "reach": 1,
+      "surface": "inadvertent",
       "year": 1405
     },
     {
       "isAnswer": false,
-      "optionIndex": 3,
-      "paperId": "arshad-1405-p05",
+      "optionIndex": 1,
+      "paperId": "arshad-1405-p06",
       "part": "vocabulary",
-      "questionNo": 20,
+      "questionNo": 15,
       "reach": 1,
-      "surface": "adumbrate",
+      "surface": "inadvertent",
       "year": 1405
     }
   ],
@@ -40,7 +40,7 @@
   },
   "status": "draft",
   "surfaceForms": [
-    "adumbrate"
+    "inadvertent"
   ],
   "synonyms": [],
   "translations": []

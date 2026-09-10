@@ -1,0 +1,132 @@
+{
+  "paperId": "arshad-1405-p02",
+  "degree": "arshad",
+  "year": 1405,
+  "groupCodes": ["1117","1134","1142","1143","1162","1201","1204","1206","1207","1208","1267","1268","1302","1303","1304","1305","1306","1307","1309","1311","1312","1313","1315","1317","1319","1328"],
+  "bookletCount": 26,
+  "source": { "file": "1117-1405.pdf", "pages": [2, 3] },
+  "extractedBy": { "model": "claude-sonnet-5", "at": "2026-09-10" },
+  "questions": [
+    {
+      "no": 1,
+      "part": "vocabulary",
+      "stem": "Remember that Instagram is not a good ..... of medical and health-related information.",
+      "options": ["discovery", "source", "cause", "agreement"],
+      "optionLemmas": ["discovery", "source", "cause", "agreement"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "source",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "vocabulary",
+      "stem": "Management says that the person who built the building is ..... for the current problems.",
+      "options": ["leading", "different", "surprising", "responsible"],
+      "optionLemmas": ["leading", "different", "surprising", "responsible"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "responsible",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "vocabulary",
+      "stem": "The psychologist told him to ..... on the part of the problem that troubled him.",
+      "options": ["focus", "solve", "blame", "base"],
+      "optionLemmas": ["focus", "solve", "blame", "base"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "focus",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "vocabulary",
+      "stem": "Some of his scenarios are too extreme, but they have the ..... of acknowledging the darkness that lies in all human hearts.",
+      "options": ["dissipation", "omission", "advantage", "flaw"],
+      "optionLemmas": ["dissipation", "omission", "advantage", "flaw"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "advantage",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "vocabulary",
+      "stem": "You can easily ..... some students to a category, and some students belong to several, and some just sit in the back and all you know is their names.",
+      "options": ["assign", "abdicate", "rejoice", "falter"],
+      "optionLemmas": ["assign", "abdicate", "rejoice", "falter"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "assign",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "vocabulary",
+      "stem": "What aggravated his offense was the ..... attitude he exhibited before the jury in the courtroom.",
+      "options": ["ingenious", "defiant", "versatile", "reverent"],
+      "optionLemmas": ["ingenious", "defiant", "versatile", "reverent"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "defiant",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "vocabulary",
+      "stem": "In a video statement, Mr. Comey declared his innocence and welcomed an opportunity to ..... himself in a trial.",
+      "options": ["obviate", "vindicate", "repudiate", "retaliate"],
+      "optionLemmas": ["obviate", "vindicate", "repudiate", "retaliate"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "vindicate",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "Modern psychologists have many interests, .....(8) upon different theories and approaches depending on what they are studying.",
+      "options": ["drawing", "that draw", "draw", "who draws"],
+      "optionLemmas": ["draw", "draw", "draw", "draw"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "draw",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "grammar",
+      "stem": "There has been tremendous growth in the topics studied by psychologists .....(9) developments in computers and data analysis.",
+      "options": ["that part is due to", "of which part due to", "whose due part into", "due in part to"],
+      "optionLemmas": ["due", "due", "due", "due"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "due",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "grammar",
+      "stem": "The American Psychological Association currently has 45 divisions, .....(10) representing areas of special interest to psychologists.",
+      "options": ["which", "they", "each", "them"],
+      "optionLemmas": ["which", "they", "each", "them"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "each",
+      "uncertain": []
+    }
+  ],
+  "uncertain": []
+}

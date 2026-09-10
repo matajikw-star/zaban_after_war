@@ -1,26 +1,26 @@
 {
   "examples": [],
-  "id": "adumbrate",
-  "lemma": "adumbrate",
+  "id": "doubtful",
+  "lemma": "doubtful",
   "occurrences": [
     {
       "isAnswer": false,
-      "optionIndex": 0,
-      "paperId": "arshad-1405-p01",
+      "optionIndex": 2,
+      "paperId": "arshad-1405-p05",
       "part": "vocabulary",
-      "questionNo": 7,
-      "reach": 29,
-      "surface": "adumbrate",
+      "questionNo": 9,
+      "reach": 1,
+      "surface": "doubtful",
       "year": 1405
     },
     {
       "isAnswer": false,
-      "optionIndex": 3,
-      "paperId": "arshad-1405-p05",
+      "optionIndex": 0,
+      "paperId": "arshad-1405-p06",
       "part": "vocabulary",
-      "questionNo": 20,
+      "questionNo": 7,
       "reach": 1,
-      "surface": "adumbrate",
+      "surface": "doubtful",
       "year": 1405
     }
   ],
@@ -40,7 +40,7 @@
   },
   "status": "draft",
   "surfaceForms": [
-    "adumbrate"
+    "doubtful"
   ],
   "synonyms": [],
   "translations": []

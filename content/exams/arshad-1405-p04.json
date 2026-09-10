@@ -1,0 +1,99 @@
+{
+  "paperId": "arshad-1405-p04",
+  "degree": "arshad",
+  "year": 1405,
+  "groupCodes": ["1110"],
+  "bookletCount": 1,
+  "source": { "file": "1110-1405.pdf", "pages": [2, 3] },
+  "extractedBy": { "model": "claude-sonnet-5", "at": "2026-09-10" },
+  "questions": [
+    {
+      "no": 8,
+      "part": "vocabulary",
+      "stem": "Formal grammar follows strict rules, while ..... grammar is more flexible in conversation.",
+      "options": ["careless", "unintended", "casual", "official"],
+      "optionLemmas": ["careless", "unintended", "casual", "official"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "casual",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "vocabulary",
+      "stem": "Linguistic errors may sometimes ..... with language errors, but linguistic errors often involve deeper misunderstandings about how language works in context.",
+      "options": ["overlap", "contradict", "distinguish", "rehearse"],
+      "optionLemmas": ["overlap", "contradict", "distinguish", "rehearse"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "overlap",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "vocabulary",
+      "stem": "He sought to write a comprehensive study of his mother tongue and his monumental work A View of the Universe of Letters stands as a testament to this linguistic ..... .",
+      "options": ["convention", "provenance", "ambition", "resonance"],
+      "optionLemmas": ["convention", "provenance", "ambition", "resonance"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "ambition",
+      "uncertain": []
+    },
+    {
+      "no": 11,
+      "part": "vocabulary",
+      "stem": "His theories are undermined by multiple myths—ideas about language that have ..... from reality.",
+      "options": ["deprived", "departed", "defied", "deceased"],
+      "optionLemmas": ["deprive", "depart", "defy", "decease"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "depart",
+      "uncertain": []
+    },
+    {
+      "no": 12,
+      "part": "vocabulary",
+      "stem": "Language teacher employment is ..... and insecure regardless of whether a language teacher works in government programs university academic literacy programs.",
+      "options": ["precarious", "inadvertent", "clandestine", "prosperous"],
+      "optionLemmas": ["precarious", "inadvertent", "clandestine", "prosperous"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "precarious",
+      "uncertain": []
+    },
+    {
+      "no": 13,
+      "part": "vocabulary",
+      "stem": "If one believes in linguistic relativity, one finds oneself in the egocentric ....., unable to make assertions about reality because of doubting one's own ability to correctly describe reality.",
+      "options": ["opulence", "remuneration", "serendipity", "quandary"],
+      "optionLemmas": ["opulence", "remuneration", "serendipity", "quandary"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "quandary",
+      "uncertain": []
+    },
+    {
+      "no": 14,
+      "part": "vocabulary",
+      "stem": "A child cannot be taught by anyone whose demand, essentially, is that the child ..... his experience and all that gives him sustenance.",
+      "options": ["wallow", "repudiate", "limn", "wane"],
+      "optionLemmas": ["wallow", "repudiate", "limn", "wane"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "repudiate",
+      "uncertain": []
+    }
+  ],
+  "uncertain": [
+    "PART A (Sentence Structure, q1-4) and PART B (Written Expression / error-identification, q5-7) were not transcribed: they are dedicated grammar sections distinct from the vocabulary/cloze sections this extraction targets, and Written Expression items have no fill-in blank to map onto the stem/options schema.",
+    "PART D (Cloze Test) begins on page 3 (q15 onward) but the passage and its options are cut off at the bottom of the given page; the page(s) containing the option lists for q15+ were not included in this subagent's image set, so no cloze questions could be transcribed."
+  ]
+}

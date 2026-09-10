@@ -20,7 +20,7 @@ already done, what is left, and what is specific to this machine.
 - All five CI steps verified locally: `lint`, `typecheck`, `test`, `build`, `content:lint`.
 - `gh` 2.100.0 installed via winget. **Not yet authenticated.**
 - Git LFS installed; `.gitattributes` tracks `sources/raw/*.{pdf,jpg,jpeg,png,docx,zip}`.
-- `raw_konkour_files/` (~7.9 GB) gitignored — see ADR-0006.
+- `raw_konkour_files/` (~7.9 GB) gitignored.
 
 ## Left to do
 
@@ -34,9 +34,9 @@ already done, what is left, and what is specific to this machine.
    the lexicon is the business asset.
 4. Branch protection (command in `docs/plan/repo-setup.md` §4). `enforce_admins=true` is the
    part that matters; zero required approvals since the owner is solo.
-5. Decide and apply the tracking rule for the parallel session's output, per ADR-0006:
-   commit `extraction/cache/` and `.claude/`, gitignore nothing else new. Coordinate before
-   committing files another session is actively writing.
+5. Tracking rule for the parallel session's output, per their ADR-0006/0007:
+   they gitignore `extraction/cache/` as regenerable and commit `extraction/state/`. Commit
+   `.claude/`. Coordinate before touching files another session is actively writing.
 6. Test SSH from a GitHub Actions runner to an Iranian VPS — the M0 risk row in
    `docs/plan/roadmap.md`. If it fails, the pull-based deploy in `docs/plan/infrastructure.md`
    becomes the plan. Blocked until a VPS exists, so this may move to M3.

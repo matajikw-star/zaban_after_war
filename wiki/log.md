@@ -25,3 +25,4 @@ decision | 2026-09-10 | Dedup fingerprints only the pages before Part C — whol
 query | 2026-09-10 | 1405: 81 routed booklets collapse to 7 papers; arshad-1405-p01 alone covers 29 field codes
 decision | 2026-09-10 | Most Part B cloze blanks are grammar (one lemma across all four options); the lexicon skips any question whose options share a lemma
 extract | arshad-1405-p01 | 10 questions | 28 new words | 0 updated
+extract | arshad-1405-p02,arshad-1405-p03,arshad-1405-p04,arshad-1405-p05,arshad-1405-p06,arshad-1405-p07 | 87 questions | 222 new words | 1 updated

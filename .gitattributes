@@ -3,3 +3,9 @@
 *.jpg binary
 *.pdf binary
 *.woff2 binary
+sources/raw/*.pdf filter=lfs diff=lfs merge=lfs -text
+sources/raw/*.jpg filter=lfs diff=lfs merge=lfs -text
+sources/raw/*.jpeg filter=lfs diff=lfs merge=lfs -text
+sources/raw/*.png filter=lfs diff=lfs merge=lfs -text
+sources/raw/*.docx filter=lfs diff=lfs merge=lfs -text
+sources/raw/*.zip filter=lfs diff=lfs merge=lfs -text

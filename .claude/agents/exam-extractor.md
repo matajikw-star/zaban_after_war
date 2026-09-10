@@ -52,8 +52,16 @@ image set so that the tail of the cloze is visible; that is the only reason.
 6. **`testedWord`** is the lemma the question really tests — normally the lemma
    of the correct option; for a question whose blank is in the stem's meaning,
    the stem word being probed.
-7. Set `part` to `"vocabulary"`, `"grammar"`, or `"cloze"` per question. Grammar
-   items are transcribed but the lexicon stage skips them.
+7. Set `part` to `"vocabulary"`, `"grammar"`, or `"cloze"` per question, by what
+   the item **tests**, not by which section it sits in:
+   - `"grammar"` — the four options are inflections of one word
+     (`and formulated` / `who formulating` / `was formulated`), or a choice
+     between function words, tenses, or relative pronouns. Most cloze blanks in
+     these papers are this. Transcribe them; the lexicon stage skips them.
+   - `"cloze"` — a Part B blank where the options are **different words** and the
+     choice is lexical.
+   - `"vocabulary"` — a Part A item testing word meaning.
+   If all four `optionLemmas` come out identical, the item is `"grammar"`.
 
 ## Output
 

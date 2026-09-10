@@ -29,6 +29,10 @@ python -m pip install pymupdf rapidocr-onnxruntime
 
 That is the whole dependency list. Both are offline, CPU-only, no CDN, no API.
 
+Then **restart Claude Code once**. `/extract-next` and the `exam-extractor`
+subagent are read from `.claude/` when a session starts, so a session that was
+already open when they were added will not see them.
+
 ---
 
 ## 2. The free local passes (no tokens — run these yourself, in a terminal)
@@ -121,6 +125,16 @@ python extraction/scripts/status.py
 
 Prints where every stage stands and, at the bottom, the exact next command. When
 you are unsure what to do, this is the answer.
+
+What the numbers looked like on the first year measured (1405):
+
+```
+81 routed booklets  ->  7 distinct papers      12x dedup
+arshad-1405-p01     ->  29 field codes sat it
+                        7 vocabulary + 3 grammar items, 2 page images
+                        cross-check: 100% of options corroborated
+                        28 lexicon words, 7 of them correct answers
+```
 
 ---
 

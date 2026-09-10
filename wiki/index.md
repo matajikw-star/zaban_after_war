@@ -16,10 +16,12 @@ produces an answer worth keeping.
 
 ## Content
 
-_No sources ingested yet._
+Extraction is a pipeline, not a per-file task — see the [runbook](../extraction/RUNBOOK.md).
+Live counts: `python extraction/scripts/status.py`.
 
-| Exam | Questions | Words extracted | Ingested |
-|---|---|---|---|
+| Paper | Field codes | Questions | Words extracted | Extracted |
+|---|---|---|---|---|
+| arshad-1405-p01 | 29 | 10 | 28 | 2026-09-10 |
 
 ## Open questions
 

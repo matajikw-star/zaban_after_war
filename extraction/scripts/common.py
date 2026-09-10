@@ -49,7 +49,7 @@ PART_A = re.compile(r"part\s*a\b|vocabulary", re.I)
 PART_B = re.compile(r"part\s*b\b|cloze", re.I)
 PART_C = re.compile(r"part\s*c\b|reading\s+comprehension", re.I)
 
-_STOPWORDS = set("""the of and to in a is that for it was as with be by on not he his are this
+STOPWORDS = set("""the of and to in a is that for it was as with be by on not he his are this
 have from or had which but were an they you all we her she has been would their said one there
 what so up out if about who get which when make can like time no just him know take people into
 year your good some could them see other than then now look only come its over think also back
@@ -59,7 +59,7 @@ def english_score(text: str) -> dict:
     """Cheap, deterministic 'is this an English exam page?' score."""
     toks = re.findall(r"[A-Za-z]{2,}", text)
     low = [t.lower() for t in toks]
-    stop_hits = sum(1 for t in low if t in _STOPWORDS)
+    stop_hits = sum(1 for t in low if t in STOPWORDS)
     n = max(len(low), 1)
     return {
         "tokens": len(low),
@@ -73,8 +73,42 @@ def fingerprint_tokens(text: str) -> set[str]:
     """Order-free signature. OCR scrambles reading order across columns, so we
     compare bags of distinctive words, never sequences."""
     toks = {t.lower() for t in re.findall(r"[A-Za-z]{4,}", text)}
-    return {t for t in toks if t not in _STOPWORDS and not t.startswith("konkur")
+    return {t for t in toks if t not in STOPWORDS and not t.startswith("konkur")
             and t not in {"telegram", "forum", "uni", "www"}}
+
+def general_pages(route: dict) -> list[int]:
+    """The general-English pages of a booklet: everything before Part C.
+
+    The English section is two different things bolted together. زبان عمومی
+    (Part A vocabulary, Part B cloze) is shared across many field codes; زبان
+    تخصصی - the reading passages under Part C - is written for the field and
+    differs in every booklet. Measured on 1405: fingerprinting the whole English
+    run put 1101 and 1102 at 0.25 similarity and found no duplicates at all,
+    because the specialist passages drowned the shared part. Fingerprinting only
+    the pages before Part C puts them at 0.94 and still separates 1103's
+    different paper cleanly at 0.10.
+    """
+    eng = sorted(route.get("englishPages") or [])
+    part_c = sorted(route.get("partC") or [])
+    if part_c:
+        general = [p for p in eng if p < part_c[0]]
+        if general:
+            return general
+    return route.get("partA") or eng[:2]
+
+
+def scope_pages(route: dict) -> list[int]:
+    """Pages rendered for the model: the general-English pages, plus the first
+    Part C page. Part markers say where a section starts, not where it ends, so
+    cloze options routinely run onto the page that opens reading comprehension.
+    One extra image per paper is a cheap price for not truncating the cloze; the
+    extractor is told to ignore reading passages."""
+    general = general_pages(route)
+    part_c = sorted(route.get("partC") or [])
+    if general and part_c and part_c[0] not in general:
+        return general + [part_c[0]]
+    return general
+
 
 def jaccard(a: set, b: set) -> float:
     if not a or not b:

@@ -16,29 +16,10 @@ import argparse
 
 import fitz
 
-from common import PAGE_CACHE, RAW, STATE, read_jsonl
+from common import PAGE_CACHE, RAW, STATE, read_jsonl, scope_pages
 
 MAX_EDGE = 1400   # px on the long edge
 BASE_DPI = 150    # rendered then downscaled, which is sharper than a low-DPI render
-
-
-def scope_pages(rep: dict) -> list[int]:
-    """Pages that can hold vocabulary or cloze content.
-
-    Part markers only tell us where a section *starts*: cloze options routinely
-    run onto the next page. So we take a span, from the first English page
-    through the page where reading comprehension begins, rather than the marker
-    pages alone. Including the Part C page costs one extra image per paper and
-    buys the tail of the cloze; the extractor is told to ignore reading passages.
-    """
-    eng = sorted(rep.get("englishPages") or [])
-    if not eng:
-        return []
-    part_c = sorted(rep.get("partC") or [])
-    if part_c:
-        cut = part_c[0]
-        return [p for p in eng if p <= cut]
-    return eng
 
 
 def render_paper(paper: dict, force: bool = False) -> list[str]:

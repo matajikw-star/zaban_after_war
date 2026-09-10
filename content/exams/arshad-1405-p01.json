@@ -1,0 +1,132 @@
+{
+  "paperId": "arshad-1405-p01",
+  "degree": "arshad",
+  "year": 1405,
+  "groupCodes": ["1103", "1109", "1119", "1127", "1137", "1138", "1139", "1144", "1153", "1202", "1209", "1213", "1214", "1215", "1216", "1217", "1218", "1219", "1220", "1251", "1253", "1255", "1256", "1257", "1258", "1259", "1260", "1262", "1263"],
+  "bookletCount": 29,
+  "source": { "file": "1103-1405.pdf", "pages": [2, 3] },
+  "extractedBy": { "model": "claude-sonnet-5", "at": "2026-09-10" },
+  "questions": [
+    {
+      "no": 1,
+      "part": "vocabulary",
+      "stem": "The main ..... of a server is to provide services to other computers over a network.",
+      "options": ["trip", "position", "function", "situation"],
+      "optionLemmas": ["trip", "position", "function", "situation"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "function",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "vocabulary",
+      "stem": "Time will show him to be a very ..... president in this country, because he has made great long-term decisions.",
+      "options": ["successful", "friendly", "additional", "sudden"],
+      "optionLemmas": ["successful", "friendly", "additional", "sudden"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "successful",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "vocabulary",
+      "stem": "She soon ..... that the local people had no interest in her extraordinary stories.",
+      "options": ["discovered", "happened", "developed", "existed"],
+      "optionLemmas": ["discover", "happen", "develop", "exist"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "discover",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "vocabulary",
+      "stem": "That dystopian movie was a perfect ..... of consumerism without morals.",
+      "options": ["reliance", "prominence", "improvement", "demonstration"],
+      "optionLemmas": ["reliance", "prominence", "improvement", "demonstration"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "demonstration",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "vocabulary",
+      "stem": "It is not unusual for teeth to \"shift and drift\" as you age and it tends to ..... more in the bottom teeth than the top.",
+      "options": ["descend", "occur", "behold", "abandon"],
+      "optionLemmas": ["descend", "occur", "behold", "abandon"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "occur",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "vocabulary",
+      "stem": "To earn more money, Lydgate was forced to trade a creative career as an artist for a/an ..... one.",
+      "options": ["ebullient", "parsimonious", "lucrative", "impecunious"],
+      "optionLemmas": ["ebullient", "parsimonious", "lucrative", "impecunious"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "lucrative",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "vocabulary",
+      "stem": "On a more enlightened planet, we would not need to .....; we could, instead, honestly tell our bosses we have not finished our work and that's that.",
+      "options": ["adumbrate", "prevaricate", "disabuse", "emulate"],
+      "optionLemmas": ["adumbrate", "prevaricate", "disabuse", "emulate"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "prevaricate",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "cloze",
+      "stem": "Sigmund Freud began his career in the 1890s ..... psychoanalysis, which is both a theory of personality and a method of treating people.",
+      "options": ["and formulated", "who formulating", "was formulated", "when was formulating"],
+      "optionLemmas": ["formulate", "formulate", "formulate", "formulate"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "formulate",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "cloze",
+      "stem": "To Freud, human behavior is largely determined by wishes and memories ..... unaware.",
+      "options": ["which people have been", "people of them have been", "of which people are", "of them people are"],
+      "optionLemmas": ["be", "be", "be", "be"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "be",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "cloze",
+      "stem": "Psychoanalysis as a method of treatment ..... these memories to awareness and free the individuals from their negative influence.",
+      "options": ["seeking bringing", "seeking to bring", "seeks bringing", "seeks to bring"],
+      "optionLemmas": ["seek", "seek", "seek", "seek"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "seek",
+      "uncertain": []
+    }
+  ],
+  "uncertain": []
+}

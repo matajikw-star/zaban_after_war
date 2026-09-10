@@ -19,43 +19,44 @@ from __future__ import annotations
 import argparse
 from collections import Counter, defaultdict
 
-from common import OCR_CACHE, STATE, fingerprint_tokens, jaccard, read_jsonl, write_jsonl
+from common import (OCR_CACHE, STATE, fingerprint_tokens, general_pages, jaccard,
+                    read_jsonl, write_jsonl)
 
 THRESHOLD = 0.55   # same-paper similarity floor; scans of one paper land ~0.8+
 MIN_TOKENS = 25    # below this a fingerprint is too thin to trust
 
 
 def booklet_fingerprint(route: dict) -> set[str]:
-    """Bag of distinctive words across the booklet's English pages."""
+    """Bag of distinctive words from the booklet's general-English pages."""
     toks: set[str] = set()
-    for pno in route["englishPages"]:
+    for pno in general_pages(route):
         cf = OCR_CACHE / route["bookletId"] / f"p{pno:03d}.txt"
         if cf.exists():
             toks |= fingerprint_tokens(cf.read_text(encoding="utf-8"))
     return toks
 
 
-def cluster_year(routes: list[dict], fps: dict[str, set[str]]) -> list[list[dict]]:
-    """Greedy agglomeration against cluster centroids. O(n * clusters), and a
-    year holds ~120 booklets over a handful of papers, so this stays trivial."""
+def cluster_year(routes: list[dict], fps: dict[str, set[str]]) -> list[dict]:
+    """Greedy agglomeration, scoring against every member rather than a
+    centroid: a centroid drifts as it absorbs members, and a year holds only
+    ~120 booklets, so the extra comparisons cost nothing."""
     clusters: list[dict] = []
     for r in sorted(routes, key=lambda x: x["code"]):
         fp = fps[r["bookletId"]]
         if len(fp) < MIN_TOKENS:
-            clusters.append({"members": [r], "core": fp, "thin": True})
+            clusters.append({"members": [r], "thin": True})
             continue
         best, best_score = None, 0.0
         for c in clusters:
             if c.get("thin"):
                 continue
-            s = jaccard(fp, c["core"])
+            s = max(jaccard(fp, fps[m["bookletId"]]) for m in c["members"])
             if s > best_score:
                 best, best_score = c, s
         if best is not None and best_score >= THRESHOLD:
             best["members"].append(r)
-            best["core"] &= fp          # intersection: the paper's stable core
         else:
-            clusters.append({"members": [r], "core": set(fp), "thin": False})
+            clusters.append({"members": [r], "thin": False})
     return clusters
 
 

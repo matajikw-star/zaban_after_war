@@ -20,3 +20,8 @@ decision | 2026-09-10 | Paper, not booklet, is the unit of ingest (ADR-0007); id
 query | 2026-09-10 | Booklets carry no answer key — keys are model-inferred and marked keySource:"inferred"
 decision | 2026-09-10 | Extractor is kept blind to the local OCR so the free cross-check stays an independent second opinion
 milestone | 2026-09-10 | extraction/ pipeline built: S0-S6 scripts, exam-extractor subagent, /extract-next command, RUNBOOK
+query | 2026-09-10 | The English section is two parts: زبان عمومی (shared across field codes) then زبان تخصصی reading under Part C (per-field)
+decision | 2026-09-10 | Dedup fingerprints only the pages before Part C — whole-section fingerprints scored 0.25 and found no duplicates, general-only scored 0.94
+query | 2026-09-10 | 1405: 81 routed booklets collapse to 7 papers; arshad-1405-p01 alone covers 29 field codes
+decision | 2026-09-10 | Most Part B cloze blanks are grammar (one lemma across all four options); the lexicon skips any question whose options share a lemma
+extract | arshad-1405-p01 | 10 questions | 28 new words | 0 updated

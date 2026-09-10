@@ -21,7 +21,7 @@ import argparse
 import json
 from collections import defaultdict
 
-from common import CONTENT, STATE, load_json, read_jsonl, save_json, slugify
+from common import CONTENT, STOPWORDS, load_json, read_jsonl, save_json, slugify
 
 LEX = CONTENT / "lexicon"
 IN_SCOPE_PARTS = {"vocabulary", "cloze"}
@@ -41,14 +41,29 @@ def collect(exam_files: list) -> dict[str, dict]:
             options = q.get("options") or []
             lemmas = q.get("optionLemmas") or options
             key = q.get("key")
+
+            norm = [((lemmas[i] if i < len(lemmas) else o) or o or "").strip().lower()
+                    for i, o in enumerate(options)]
+            # A question whose four options share one lemma tests grammar, not
+            # vocabulary - "and formulated / who formulating / was formulated"
+            # would otherwise book `formulate` four times for one item. The
+            # extractor labels these `grammar`, but the shape is checkable here
+            # and this stage must not depend on it having got that right.
+            if len({n for n in norm if n}) < 2:
+                continue
+
+            seen: set[str] = set()
             for i, opt in enumerate(options):
-                lemma = (lemmas[i] if i < len(lemmas) else opt) or opt
-                if not lemma:
+                lemma = norm[i]
+                if not lemma or lemma in STOPWORDS:
                     continue
                 wid = slugify(lemma)
-                if not wid:
+                # One occurrence per distinct lemma per question, so a repeated
+                # option cannot inflate a word's frequency.
+                if not wid or wid in seen:
                     continue
-                acc[wid]["lemmas"].add(lemma.strip().lower())
+                seen.add(wid)
+                acc[wid]["lemmas"].add(lemma)
                 acc[wid]["occ"].append({
                     "paperId": paper_id,
                     "year": year,

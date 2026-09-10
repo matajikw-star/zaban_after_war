@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "discover",
+  "lemma": "discover",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 0,
+      "paperId": "arshad-1405-p01",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 29,
+      "surface": "discovered",
+      "year": 1405
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1405": 1
+    },
+    "byYear": {
+      "1405": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1405,
+    "lastYear": 1405,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "discovered"
+  ],
+  "synonyms": [],
+  "translations": []
+}

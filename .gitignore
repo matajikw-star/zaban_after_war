@@ -1,0 +1,19 @@
+node_modules/
+dist/
+build/
+.vite/
+coverage/
+
+.env
+.env.local
+*.local
+
+pb_data/
+pocketbase
+pocketbase.exe
+
+.DS_Store
+Thumbs.db
+*.log
+
+# scratch issues ARE tracked - see docs/agents/issue-tracker.md

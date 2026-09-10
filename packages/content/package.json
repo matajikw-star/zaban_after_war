@@ -1,0 +1,18 @@
+{
+  "name": "@kl/content",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --build",
+    "lint:content": "node --experimental-strip-types ./src/lint.ts"
+  },
+  "dependencies": {
+    "@kl/core": "workspace:*"
+  }
+}

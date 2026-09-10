@@ -111,8 +111,8 @@ review — and a laptop session merges with the phone's instead of overwriting i
 
 *Done when:* a real payment of a small amount grants access, and a forged callback does not.
 
-**Blocked by** the Zarinpal merchant account, which has the longest lead time in the project.
-Start that paperwork during M0, not here.
+The Zarinpal merchant account is already active (2026-09-10), so this milestone has no external
+lead time — it is gated only by M4 shipping first.
 
 ## M6 — Full content and launch
 
@@ -138,7 +138,7 @@ content editing; native wrappers; teacher/class accounts; leaderboards.
 | Risk | Milestone | Handling |
 |---|---|---|
 | Scans too poor to extract reliably | M2 | Test the worst source first, not the best. If it fails, the plan becomes manual entry and the timeline changes. |
-| Zarinpal merchant delayed or refused | M5 | Start in M0. Everything except payment ships without it. |
+| ~~Zarinpal merchant delayed~~ | M5 | Resolved 2026-09-10: the merchant account is already active. |
 | SMS OTP pattern approval slow | M4 | Start the application in M2. Email fallback exists but is worse for this audience. |
 | GitHub Actions cannot SSH to an Iranian VPS | M0 | Test in M0; pull-based deploy is the fallback (`docs/plan/infrastructure.md`). |
 | Content-rights question unresolved | M6 | It killed v1. Get an answer before launch, not after. |

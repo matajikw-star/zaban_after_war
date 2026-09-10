@@ -1,0 +1,24 @@
+{
+  "name": "konkour-leitner",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.3.4",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --build --force",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "build": "pnpm -r --if-present build",
+    "content:lint": "pnpm --filter @kl/content run lint:content"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.12",
+    "@types/node": "^22.20.1",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}

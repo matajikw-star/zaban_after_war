@@ -17,3 +17,5 @@ Thumbs.db
 *.log
 
 # scratch issues ARE tracked - see docs/agents/issue-tracker.md
+*.tsbuildinfo
+.turbo/

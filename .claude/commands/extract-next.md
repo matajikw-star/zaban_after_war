@@ -14,6 +14,14 @@ do not improvise a different pipeline.
 `exam-extractor` subagent and stays there. If you open one, this session's
 context is spent and the batch has to end early. The whole design depends on it.
 
+**Reading comprehension is not extracted, and does not need discussing.** Part C
+is deliberately out of scope; S1 has already recorded where it sits in every
+booklet (`readingPages` in `routes.jsonl`, ADR-0008), so nothing is lost and
+nothing here has to be decided about it. Never render or read a reading page in
+a batch. The same goes for a standalone grammar block - `grammarPages` has its
+address. Grammar items inside Part A and the cloze are extracted as normal,
+tagged `part: "grammar"`.
+
 ## Steps
 
 1. **Report the position.** Run:

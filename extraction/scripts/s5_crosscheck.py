@@ -18,7 +18,7 @@ import json
 import re
 from collections import Counter
 
-from common import CONTENT, OCR_CACHE, STATE, read_jsonl, write_jsonl
+from common import CONTENT, OCR_CACHE, STATE, read_jsonl, scope_pages, write_jsonl
 
 FUZZ = 0.85       # per-word similarity floor
 FLAG_RATIO = 0.9  # a paper below this share of matched options gets flagged
@@ -44,7 +44,12 @@ def word_present(word: str, toks: set[str]) -> bool:
 
 
 def check_paper(exam: dict, route: dict) -> dict:
-    toks = ocr_tokens(route["bookletId"], route["englishPages"])
+    # Exactly the pages S3 rendered - the check asks whether the local OCR of
+    # what the model saw corroborates what it wrote. Widening the pool to the
+    # whole English section (which now reaches to the end of the reading) would
+    # let a stray word from a passage vouch for a misread option.
+    pages = scope_pages(route)
+    toks = ocr_tokens(route["bookletId"], pages)
     misses, total = [], 0
     for q in exam.get("questions", []):
         for i, opt in enumerate(q.get("options") or []):
@@ -62,7 +67,7 @@ def check_paper(exam: dict, route: dict) -> dict:
         "options": total,
         "matched": matched,
         "ratio": round(ratio, 3),
-        "ocrPages": len(route["englishPages"]),
+        "ocrPages": len(pages),
         "status": "ok" if ratio >= FLAG_RATIO else "flagged",
         "misses": misses[:40],
     }

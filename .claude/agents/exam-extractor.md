@@ -29,6 +29,9 @@ Only two sections:
 
 **Ignore PART C / Reading Comprehension entirely.** Its page may be in your
 image set so that the tail of the cloze is visible; that is the only reason.
+Do not transcribe a passage, summarise one, or list its questions - not even in
+your report. Its location is already recorded in `extraction/state/routes.jsonl`
+(ADR-0008), so nothing you leave behind is lost.
 
 ## Rules
 

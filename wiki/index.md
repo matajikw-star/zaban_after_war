@@ -19,6 +19,12 @@ produces an answer worth keeping.
 Extraction is a pipeline, not a per-file task — see the [runbook](../extraction/RUNBOOK.md).
 Live counts: `python extraction/scripts/status.py`.
 
+Reading comprehension and standalone grammar blocks are **located, never transcribed**: their
+page ranges live in `readingPages` / `grammarPages` on every `extraction/state/routes.jsonl`
+row, per booklet. A future reading feature starts there, not in the scans —
+[ADR-0008](../docs/adr/0008-locate-reading-and-grammar-without-transcribing.md),
+[runbook §6](../extraction/RUNBOOK.md).
+
 | Paper | Field codes | Questions | Words extracted | Extracted |
 |---|---|---|---|---|
 | arshad-1405-p01 | 29 | 10 | 28 | 2026-09-10 |

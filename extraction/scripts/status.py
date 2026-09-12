@@ -61,6 +61,15 @@ def main() -> int:
         bad = Counter(r["status"] for r in routes if r["status"] != "ok")
         if bad:
             print(f"            route problems: {dict(bad)}")
+        # Located, never transcribed (ADR-0008). Nothing downstream waits on
+        # this, so it is reported, not enforced.
+        scanned = [r for r in routes if r.get("sectionScan")]
+        located = [r for r in scanned if r.get("readingPages")]
+        pages = sum(len(r["readingPages"]) for r in located)
+        print(f"sections    {len(scanned)}/{len(routes)} booklets scanned  "
+              f"({len(located)} with reading located, {pages} pages addressed)"
+              + ("" if len(scanned) == len(routes) else
+                 "   <- backfill: s1_route.py --sections"))
 
     by_year: dict[int, Counter] = defaultdict(Counter)
     for p in papers:

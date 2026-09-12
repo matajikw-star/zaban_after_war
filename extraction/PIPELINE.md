@@ -20,7 +20,8 @@ Spend CPU where CPU suffices, and tokens only where nothing else will do.
 
 ```
 S0 survey     2,241 PDFs                     free   seconds
-S1 route      -> ~5 English pages each       free   ~25 s/booklet, parallel
+S1 route      -> the English pages, and       free   ~3 booklets/min on 8
+                 where reading/grammar sit           workers, resumable
 S2 cluster    -> a few dozen unique papers   free   seconds
 S3 render     -> 2-3 PNGs per paper          free   seconds
 S4 extract    -> questions as JSON           TOKENS  one subagent per paper
@@ -39,6 +40,10 @@ words (`english_score` in `common.py`). Nothing about this needs a model.
 
 Routing removes about 90% of the corpus at zero cost.
 
+S1 also runs the **section scan**: having found the English run, it carries on
+past the `Part C` marker to the end of that run and writes down the page range.
+See "Reading and grammar" below for why, and ADR-0008 for the decision.
+
 ### S2 — the dedup, and why it is worth more than every other optimisation
 
 A year's English test is shared across many field codes. Measured in 1403: codes
@@ -53,6 +58,43 @@ Fingerprints are order-free bags of distinctive words, because OCR scrambles
 reading order across columns but keeps the words themselves. Matching is
 deliberately conservative: a false split costs one extra extraction, a false
 merge would silently lose a real paper.
+
+Clustering re-runs every time a new year is routed, so the ids it hands out have
+to survive that. They do: a paperId is pinned to its cluster, anchored for an
+extracted paper by the booklet its transcript was read from. It was not always
+so, and two 1405 papers swapped identities - ADR-0009.
+
+### Reading and grammar — located, never transcribed
+
+The English section is two things. زبان عمومی — Part A vocabulary and the Part B
+cloze — is shared across field codes and is the whole of what the lexicon wants.
+زبان تخصصی — the reading comprehension under Part C — is written per field, runs
+three to four pages, and is out of scope.
+
+Out of scope is not the same as unknown. The scans are the one input that is
+expensive to revisit and never changes, so S1 records where the reading sits even
+though nothing reads it:
+
+| field on a `routes.jsonl` row | meaning |
+|---|---|
+| `englishPages` | the general run, through the page that opens Part C. Unchanged by the section scan - S2 and S5 both key off it. |
+| `readingPages` | contiguous span from the Part C page to the last English page |
+| `grammarPages` | pages with a standalone "Structure and Written Expression" heading |
+| `sectionScan` | `ok` / `capped` / `no-part-c` / `no-english` |
+
+Recorded **per booklet**, not per paper: the reading is per-field, so a paper's
+representative stands in for its 29 field codes on the general pages and for
+nobody at all on the reading.
+
+The cost is CPU, never tokens. No reading page is rendered, and none reaches a
+model. When a reading feature is actually built, the address is already on disk:
+`s3_render.py --booklet <id> --reading` turns it into images.
+
+Grammar needs almost nothing here. Grammar items in this corpus live inside
+Part A and the Part B cloze, and the extractor already transcribes them tagged
+`part: "grammar"` - 29 of the first 97 questions. Only S6 skips them, because all
+four options share a lemma. A standalone grammar block is rare: 10 of the first
+2,239 pages OCR'd.
 
 ### Why the extractor is kept blind
 
@@ -83,7 +125,7 @@ escalated to the owner. No loops.
 | file | one row per | owned by |
 |---|---|---|
 | `booklets.jsonl` | PDF in the corpus | S0 |
-| `routes.jsonl` | booklet, with its English page numbers | S1 |
+| `routes.jsonl` | booklet: its English page numbers, and where its reading and grammar sit | S1 |
 | `papers.jsonl` | distinct English paper, with its members and `extraction` status | S2 / `status.py` |
 | `crosscheck.jsonl` | extracted paper, with disputed options | S5 |
 
@@ -108,7 +150,9 @@ ever been a distractor.
 - **Context-cheap.** Page images never enter the orchestrator session. That is
   why one session can run many batches, and why resuming costs nothing.
 - **Ids are frozen.** Word ids are derived once and never rewritten (`CLAUDE.md`
-  → "Word ids"). S6 refuses to rename one and reports the collision.
+  → "Word ids"). S6 refuses to rename one and reports the collision. Paper ids
+  are pinned to their cluster the same way (ADR-0009), so re-clustering after a
+  new year is routed is a safe, ordinary operation.
 - **Uncertainty is recorded, never resolved by guessing** — except the answer
   key, which the corpus does not contain and which is therefore always marked
   `keySource: "inferred"` with a confidence.

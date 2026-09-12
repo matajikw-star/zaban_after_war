@@ -1,6 +1,6 @@
-{"matched": 40, "misses": [], "ocrPages": 5, "options": 40, "paperId": "arshad-1405-p01", "ratio": 1.0, "status": "ok"}
+{"matched": 40, "misses": [], "ocrPages": 2, "options": 40, "paperId": "arshad-1405-p01", "ratio": 1.0, "status": "ok"}
 {"matched": 40, "misses": [], "ocrPages": 2, "options": 40, "paperId": "arshad-1405-p02", "ratio": 1.0, "status": "ok"}
-{"matched": 40, "misses": [], "ocrPages": 5, "options": 40, "paperId": "arshad-1405-p03", "ratio": 1.0, "status": "ok"}
+{"matched": 40, "misses": [], "ocrPages": 2, "options": 40, "paperId": "arshad-1405-p03", "ratio": 1.0, "status": "ok"}
 {"matched": 28, "misses": [], "ocrPages": 2, "options": 28, "paperId": "arshad-1405-p04", "ratio": 1.0, "status": "ok"}
 {"matched": 119, "misses": [{"option": 3, "q": 23, "text": "petitio principia"}], "ocrPages": 3, "options": 120, "paperId": "arshad-1405-p05", "ratio": 0.992, "status": "ok"}
 {"matched": 60, "misses": [], "ocrPages": 2, "options": 60, "paperId": "arshad-1405-p06", "ratio": 1.0, "status": "ok"}

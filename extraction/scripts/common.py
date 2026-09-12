@@ -49,6 +49,15 @@ PART_A = re.compile(r"part\s*a\b|vocabulary", re.I)
 PART_B = re.compile(r"part\s*b\b|cloze", re.I)
 PART_C = re.compile(r"part\s*c\b|reading\s+comprehension", re.I)
 
+# A standalone "Structure and Written Expression" block. Rare: it appears on 10
+# of the 2,239 pages OCR'd so far. Nearly all grammar in this corpus sits inside
+# Part A or the Part B cloze instead, and those items are transcribed with their
+# section (the extractor tags them part="grammar"; only the lexicon fold skips
+# them). This regex locates the rare standalone block; it is not a general
+# "find the grammar" test.
+GRAMMAR_BLOCK = re.compile(
+    r"structure\s+and\s+written|written\s+expression|sentence\s+structure", re.I)
+
 STOPWORDS = set("""the of and to in a is that for it was as with be by on not he his are this
 have from or had which but were an they you all we her she has been would their said one there
 what so up out if about who get which when make can like time no just him know take people into
@@ -95,6 +104,16 @@ def general_pages(route: dict) -> list[int]:
         if general:
             return general
     return route.get("partA") or eng[:2]
+
+
+def reading_pages(route: dict) -> list[int]:
+    """Where this booklet's reading comprehension lives: 1-based page numbers
+    in its own PDF, or [] when S1 has not section-scanned the booklet yet.
+
+    Located, never transcribed - ADR-0008. The first entry is the page that
+    opens Part C, which usually also carries the tail of the cloze.
+    """
+    return sorted(route.get("readingPages") or [])
 
 
 def scope_pages(route: dict) -> list[int]:

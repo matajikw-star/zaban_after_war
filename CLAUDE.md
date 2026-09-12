@@ -52,8 +52,12 @@ The rules that do not change, whatever runs them:
 3. For each tested word, create or update `content/lexicon/<word-id>.json`. A word already in
    the lexicon gains an entry in `occurrences[]` — it does not get a second file. Every
    occurrence records `isAnswer`, and `stats.byYear` carries the per-year frequency.
-4. Report the counts and every `uncertain[]` item to the user before moving on.
-5. Append to `wiki/log.md`: `extract | <paperIds> | <n> questions | <n> new words | <n> updated`.
+4. **Reading and grammar are located, never transcribed.** Part C is out of scope for the
+   lexicon, but S1 writes its page range into `extraction/state/routes.jsonl`
+   (`readingPages`, `grammarPages`) so a later feature never reopens the scans. Never send a
+   reading page to a model. See `docs/adr/0008-locate-reading-and-grammar-without-transcribing.md`.
+5. Report the counts and every `uncertain[]` item to the user before moving on.
+6. Append to `wiki/log.md`: `extract | <paperIds> | <n> questions | <n> new words | <n> updated`.
 
 Generating hints is a separate operation from ingest — see `docs/plan/content-pipeline.md`.
 
@@ -92,6 +96,11 @@ a numeric suffix: `bear-1` (verb, tolerate), `bear-2` (noun, animal).
 
 Never key anything user-facing on array position. The old app sliced `words[]` by index to
 build its curriculum, so adding a word silently rewrote what every user was studying.
+
+**Paper ids follow the same rule.** `arshad-1405-p02` names a cluster of booklets, not the
+second-biggest cluster of 1405 — it used to mean the latter, and two papers swapped identities
+when a new year was routed. Re-clustering keeps every id on the cluster it already named. See
+`docs/adr/0009-paper-ids-are-stable.md`.
 
 ## Stack
 

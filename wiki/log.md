@@ -26,3 +26,5 @@ query | 2026-09-10 | 1405: 81 routed booklets collapse to 7 papers; arshad-1405-
 decision | 2026-09-10 | Most Part B cloze blanks are grammar (one lemma across all four options); the lexicon skips any question whose options share a lemma
 extract | arshad-1405-p01 | 10 questions | 28 new words | 0 updated
 extract | arshad-1405-p02,arshad-1405-p03,arshad-1405-p04,arshad-1405-p05,arshad-1405-p06,arshad-1405-p07 | 87 questions | 222 new words | 1 updated
+decision | 2026-09-12 | Reading and grammar are located, never transcribed: S1 carries past Part C and records readingPages/grammarPages per booklet, so a later feature never reopens the scans (ADR-0008)
+decision | 2026-09-12 | paperIds are pinned to their cluster, not to size rank — arshad-1405-p02/p03 had swapped identities when routing a new year reordered two near-tied clusters (ADR-0009)

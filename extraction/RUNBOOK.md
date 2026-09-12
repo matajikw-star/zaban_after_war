@@ -14,6 +14,9 @@ The design behind it is in `PIPELINE.md`. Read that once; read this every time.
 instead of tokens** wherever it can:
 
 - A local OCR model finds the English pages and dedupes the papers. Free.
+- The same pass writes down where each booklet's reading and grammar sit, so
+  that nobody ever has to reopen the corpus to find them. Free, and no model
+  sees those pages.
 - Only the surviving unique pages — a few dozen, not thousands — reach Claude.
 - Claude's reading of them is checked against the local OCR. Also free.
 
@@ -44,9 +47,16 @@ session, or ask Claude to start them in the background and go do something else.
 # S0 — inventory every PDF. Seconds. Run once, or after adding files.
 python extraction/scripts/s0_survey.py
 
-# S1 — find the English pages. The long one: ~25 s per booklet, parallel.
+# S1 — find the English pages, and record where reading and grammar sit.
+#      The long one. Reading pages are dense English and OCR slowly: the
+#      section scan alone measured 3.1 booklets/min on 8 workers (1405).
 #      One 5-year block at a time, newest first.
 python extraction/scripts/s1_route.py --years 1401-1405 --workers 12
+
+# S1 backfill - only for booklets routed before the section scan existed
+#      (status.py says "<- backfill"). Replays phase one off the OCR cache,
+#      so it pays for the reading pages and nothing else. ~3 booklets/min.
+python extraction/scripts/s1_route.py --years 1398-1405 --sections --workers 12
 
 # S2 — collapse booklets that carry the same paper. Seconds.
 python extraction/scripts/s2_cluster.py
@@ -54,7 +64,9 @@ python extraction/scripts/s2_cluster.py
 
 S1 is resumable and idempotent: it skips booklets already routed and caches
 every OCR'd page, so a killed run loses only the page it was on. Re-running
-after a crash is always safe.
+after a crash is always safe. `--sections` is the single exception to "skips
+booklets already routed": it revisits the rows that predate the section scan,
+and only those.
 
 **Do the years in blocks of five, newest first**: `1401-1405`, then
 `1396-1400`, then `1393-1395`, then `1386-1390`. (1391 and 1392 are not in the
@@ -126,6 +138,9 @@ python extraction/scripts/status.py
 Prints where every stage stands and, at the bottom, the exact next command. When
 you are unsure what to do, this is the answer.
 
+The `sections` line is the reading/grammar address book (ADR-0008). It never
+blocks a batch, but a year is only finished when it reads N/N.
+
 What the numbers looked like on the first year measured (1405):
 
 ```
@@ -154,7 +169,30 @@ scan. Open the PNG under `extraction/cache/pages/<paperId>/` and look.
 
 ---
 
-## 6. Adding the older years later
+## 6. Where the reading and the grammar are
+
+Not extracted, by decision - but located, so that adding a reading or grammar
+feature later never means reopening 7.7 GB of scans (ADR-0008).
+
+Every row in `extraction/state/routes.jsonl` carries `readingPages` and
+`grammarPages`: page numbers inside that booklet's own PDF. Recorded per
+booklet, not per paper, because زبان تخصصی differs for every field code.
+
+To turn an address back into images:
+
+```bash
+python extraction/scripts/s3_render.py --booklet 1103-1405 --reading
+```
+
+PNGs land under `extraction/cache/pages/reading/<bookletId>/`. Nothing
+transcribes them and no model reads them until there is a feature that needs
+them.
+
+Grammar is mostly extracted already: items inside Part A and the Part B cloze
+are in `content/exams/*.json` tagged `part: "grammar"`. `grammarPages` records
+only the rare standalone "Structure and Written Expression" block.
+
+## 7. Adding the older years later
 
 Nothing special. Run §2 for the next block, then §3. The lexicon is a fold over
 everything in `content/exams/`, so a word first seen in 1403 simply gains

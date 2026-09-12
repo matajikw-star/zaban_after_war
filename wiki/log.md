@@ -28,3 +28,4 @@ extract | arshad-1405-p01 | 10 questions | 28 new words | 0 updated
 extract | arshad-1405-p02,arshad-1405-p03,arshad-1405-p04,arshad-1405-p05,arshad-1405-p06,arshad-1405-p07 | 87 questions | 222 new words | 1 updated
 decision | 2026-09-12 | Reading and grammar are located, never transcribed: S1 carries past Part C and records readingPages/grammarPages per booklet, so a later feature never reopens the scans (ADR-0008)
 decision | 2026-09-12 | paperIds are pinned to their cluster, not to size rank — arshad-1405-p02/p03 had swapped identities when routing a new year reordered two near-tied clusters (ADR-0009)
+decision | 2026-09-13 | Long local passes hold a Windows ES_SYSTEM_REQUIRED request: this machine is Modern Standby (no S3), so the screen timeout can itself suspend a background job. The display request is deliberately not held, so the panel still sleeps.

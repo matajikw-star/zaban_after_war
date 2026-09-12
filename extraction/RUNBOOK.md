@@ -62,6 +62,30 @@ python extraction/scripts/s1_route.py --years 1398-1405 --sections --workers 12
 python extraction/scripts/s2_cluster.py
 ```
 
+### The machine must not doze off
+
+This laptop is Modern Standby: `powercfg /a` reports `S0 Low Power Idle` and no
+S3. On that hardware the **screen timeout is itself an entry into standby**, so a
+multi-hour pass with no window on screen can be throttled or suspended a few
+minutes after you walk away - and it looks exactly like a hang.
+
+`s1_route.py` now holds a Windows "do not idle into standby" request for the
+length of its run. The display is left alone: it still turns off on its own
+timeout, so no static image sits on the panel.
+
+For a job already in flight, or anything else long, hold it from outside:
+
+```bash
+python tools/keepawake.py --hours 3
+```
+
+To check whether a run really stalled rather than guessing from the fan, count
+the OCR files by the minute they were written - that is direct evidence:
+
+```bash
+python -c "import os,time,collections,datetime; b=collections.Counter(); [b.update([datetime.datetime.fromtimestamp(f.stat().st_mtime).replace(minute=0,second=0,microsecond=0)]) for d in os.scandir('extraction/cache/ocr') if d.is_dir() for f in os.scandir(d.path)]; [print(k,v) for k,v in sorted(b.items())[-8:]]"
+```
+
 S1 is resumable and idempotent: it skips booklets already routed and caches
 every OCR'd page, so a killed run loses only the page it was on. Re-running
 after a crash is always safe. `--sections` is the single exception to "skips

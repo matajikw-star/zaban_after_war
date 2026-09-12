@@ -1,6 +1,6 @@
 """Shared helpers for the extraction pipeline. See extraction/PIPELINE.md."""
 from __future__ import annotations
-import json, os, re, unicodedata
+import contextlib, ctypes, json, os, re, sys, unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -13,6 +13,43 @@ CONTENT = ROOT / "content"
 
 for _d in (STATE, OCR_CACHE, PAGE_CACHE):
     _d.mkdir(parents=True, exist_ok=True)
+
+# --- keeping the machine awake ----------------------------------------------
+# These laptops are Modern Standby (powercfg /a reports "S0 Low Power Idle" and
+# no S3). On that hardware the screen timeout is itself an entry into standby,
+# not just a display-off: Windows can then throttle or suspend ordinary desktop
+# processes. A pass that takes hours and shows no window is exactly the kind of
+# process that gets suspended, and it looks like a hang rather than a stall.
+ES_CONTINUOUS = 0x80000000
+ES_SYSTEM_REQUIRED = 0x00000001
+
+
+@contextlib.contextmanager
+def keep_awake(label: str = ""):
+    """Hold the system awake for the duration of the block.
+
+    ES_DISPLAY_REQUIRED is deliberately NOT set. The screen still turns off on
+    its own timeout - that is what protects the panel from a static image - and
+    only the idle-to-standby transition is blocked. The request is released on
+    exit, including on Ctrl-C, so it never outlives the run that asked for it.
+    """
+    held = False
+    if sys.platform == "win32":
+        try:
+            held = bool(ctypes.windll.kernel32.SetThreadExecutionState(
+                ES_CONTINUOUS | ES_SYSTEM_REQUIRED))
+        except Exception as e:
+            print(f"keep-awake: could not ask Windows to stay awake ({e}); "
+                  f"this run may stall when the screen times out", flush=True)
+        if held:
+            print(f"keep-awake: holding{' for ' + label if label else ''} "
+                  f"(screen may still turn off)", flush=True)
+    try:
+        yield held
+    finally:
+        if held:
+            ctypes.windll.kernel32.SetThreadExecutionState(ES_CONTINUOUS)
+
 
 # --- filename parsing -------------------------------------------------------
 # Real names in the corpus are messy: "1101-1403.pdf", "1101-1393-.pdf",

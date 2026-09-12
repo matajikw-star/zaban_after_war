@@ -34,7 +34,7 @@ import fitz
 import numpy as np
 
 from common import (GRAMMAR_BLOCK, OCR_CACHE, PART_A, PART_B, PART_C, RAW, STATE,
-                    english_score, read_jsonl, write_jsonl)
+                    english_score, keep_awake, read_jsonl, write_jsonl)
 
 PROBE_UNTIL = 8    # English sits near the front of every booklet seen so far
 SECTION_CAP = 24   # how deep the section scan will chase the end of the reading
@@ -221,8 +221,11 @@ def main() -> int:
         write_jsonl(STATE / "routes.jsonl",
                     sorted(routes.values(), key=lambda r: (-r["year"], r["code"])))
 
+    # Hours of OCR with no window on screen. Without this the machine can idle
+    # into Modern Standby at the screen timeout and quietly stop making
+    # progress - see common.keep_awake.
     t0, done = time.time(), 0
-    with Pool(a.workers) as pool:
+    with keep_awake(f"{len(todo)} booklets"), Pool(a.workers) as pool:
         for res in pool.imap_unordered(route_one, todo, chunksize=1):
             routes[res["bookletId"]] = res
             done += 1
@@ -230,7 +233,7 @@ def main() -> int:
                 rate = done / max(time.time() - t0, 1e-9)
                 eta = (len(todo) - done) / max(rate, 1e-9)
                 print(f"  {done}/{len(todo)}  {rate * 60:.1f}/min  eta {eta / 60:.0f}m",
-                      file=sys.stderr)
+                      file=sys.stderr, flush=True)
                 flush()
     flush()
 

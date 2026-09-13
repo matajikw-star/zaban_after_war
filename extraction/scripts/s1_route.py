@@ -37,7 +37,13 @@ from common import (GRAMMAR_BLOCK, OCR_CACHE, PART_A, PART_B, PART_C, RAW, STATE
                     english_score, keep_awake, read_jsonl, write_jsonl)
 
 PROBE_UNTIL = 8    # English sits near the front of every booklet seen so far
-SECTION_CAP = 24   # how deep the section scan will chase the end of the reading
+# How deep the section scan will chase the end of the English run. The real
+# terminator is the two-consecutive-misses rule, which stops a normal booklet
+# after ~6 pages whatever this is set to; the cap only bounds the pathological
+# case. It was 24, which silently truncated code 1121 - a field whose whole
+# booklet is English - in all eight years scanned. The longest booklet in the
+# corpus is 65 pages.
+SECTION_CAP = 64
 DEEP_STEP = 3      # coarse sweep stride when the front probe finds nothing
 DPI = 100          # readable for OCR without wasting CPU
 
@@ -154,7 +160,13 @@ def route_one(rec: dict) -> dict:
                 # address that skips it would send a future feature to the wrong
                 # page.
                 out["readingPages"] = list(range(start, last + 1))
-                out["sectionScan"] = "capped" if last >= min(n, SECTION_CAP) else "ok"
+                # "capped" means our own cap cut the scan short, which is a
+                # reason to distrust the range. Running to the last page of the
+                # booklet is not that - it is the English section genuinely
+                # ending where the document does, which is what a field whose
+                # whole paper is English looks like.
+                reached = min(n, SECTION_CAP)
+                out["sectionScan"] = "capped" if last >= reached and reached < n else "ok"
 
             out["grammarPages"] = sorted(p for p, sc in scores.items()
                                          if sc.get("grammar"))
@@ -204,9 +216,10 @@ def main() -> int:
         r = routes.get(b["bookletId"])
         if r is None or a.redo:
             return True
-        # Backfill: rows written before the section scan carry no sectionScan.
-        # Phase 1 replays off the OCR cache, so this costs only the reading pages.
-        return a.sections and not r.get("sectionScan")
+        # Backfill: rows written before the section scan carry no sectionScan,
+        # and a "capped" row is one we already know stopped short. Phase 1
+        # replays off the OCR cache, so this costs only the new pages.
+        return a.sections and r.get("sectionScan") in (None, "", "capped")
 
     todo = [b for b in booklets if b["year"] in want and needs_work(b)]
     todo.sort(key=lambda b: (-b["year"], b["code"]))

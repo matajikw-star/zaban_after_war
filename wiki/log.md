@@ -29,3 +29,5 @@ extract | arshad-1405-p02,arshad-1405-p03,arshad-1405-p04,arshad-1405-p05,arshad
 decision | 2026-09-12 | Reading and grammar are located, never transcribed: S1 carries past Part C and records readingPages/grammarPages per booklet, so a later feature never reopens the scans (ADR-0008)
 decision | 2026-09-12 | paperIds are pinned to their cluster, not to size rank — arshad-1405-p02/p03 had swapped identities when routing a new year reordered two near-tied clusters (ADR-0009)
 decision | 2026-09-13 | Long local passes hold a Windows ES_SYSTEM_REQUIRED request: this machine is Modern Standby (no S3), so the screen timeout can itself suspend a background job. The display request is deliberately not held, so the panel still sleeps.
+query | 2026-09-13 | Field code 1121 is English end to end: its reading runs pages 4-28 (1405) to 5-40 (1398), not the 3-4 pages every other code has. It is also the only paper with 30 questions.
+extract | section scan | 972 booklets located | 4025 reading pages | 10 standalone grammar blocks

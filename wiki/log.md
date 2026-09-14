@@ -48,3 +48,4 @@ decision | 2026-09-14 | Price is 290,000 toman one-off for permanent access, lis
 extract | arshad-1404-p01, arshad-1404-p02, arshad-1404-p03, arshad-1404-p04, arshad-1404-p05, arshad-1404-p06 | 94 questions | 207 new words | 11 updated
 extract | arshad-1403-p01, arshad-1403-p02, arshad-1403-p03, arshad-1403-p04, arshad-1403-p05 | 100 questions | 194 new words | 20 updated
 extract | arshad-1402-p01, arshad-1402-p02, arshad-1402-p03, arshad-1402-p04, arshad-1402-p05, arshad-1402-p06 | 103 questions | 195 new words | 25 updated
+extract | arshad-1401-p01, arshad-1401-p02, arshad-1401-p03, arshad-1401-p04, arshad-1401-p05 | 96 questions | 174 new words | 42 updated

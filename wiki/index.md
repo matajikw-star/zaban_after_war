@@ -13,6 +13,8 @@ produces an answer worth keeping.
 - [Extraction runbook](../extraction/RUNBOOK.md) — running the corpus through, session by session.
 - [Extraction pipeline](../extraction/PIPELINE.md) — why the pipeline is shaped the way it is.
 - [Decisions](../docs/adr/) — ADRs, newest last.
+- [Market and pricing](market-and-pricing.md) — ~520-650k arshad candidates a year all sit the same paper; books run 450-550k toman; the konkour-vocabulary shelf is empty and abandoned.
+- [Push notifications in Iran](web-push-in-iran.md) — web push rides Google's socket, cannot be moved off it, and dies in a protocol-whitelist regime. Treat notifications as a bonus, never a mechanism.
 - [Glossary](../CONTEXT.md) — the domain vocabulary.
 
 ## Content

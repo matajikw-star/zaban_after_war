@@ -126,6 +126,71 @@ filtering made it the wrong choice for Iranian users regardless.
 - **Maintaining an `AGENTS.md`.** That instinct is the reason this project has any usable
   history, and it is what `CLAUDE.md` now formalises.
 
+## The scheduler, read closely
+
+Finding #1 above summarises `selectNextWord` as "weighted random over boxes". That is accurate but
+incomplete, and the omission matters because the owner's instinct that there was "a relatively
+mature idea" in there is **correct**. Read in full (`hooks/useLeitnerSystem.ts:85-116`), the
+algorithm is: *weighted random over the four reviewable boxes, with a thin-box exclusion rule,
+then uniform random within the box, over a frequency-ordered cumulative slice.* Four parts of that
+are worth carrying into v2; three are defects that must not be.
+
+### Worth carrying forward
+
+1. **The curriculum ordering is the strongest idea in v1, and it lives in the data, not the code.**
+   `data/words.ts` is hand-ordered by exam importance, and every level is a `slice()` of it, so the
+   scheduler inherits a frequency-first curriculum for free. v2 reproduces this properly through
+   `stats.priority` — but note that v1 got the *benefit* without anything in the algorithm knowing
+   about frequency at all.
+2. **`BOX_SELECTION_THRESHOLD = 10` is a real anti-repetition heuristic** (`:97-98`): any box
+   holding fewer than ten in-scope words is excluded from selection. The insight is sound —
+   sampling uniformly from a two-word box shows those two words back to back forever — and it is
+   the one place in the file where someone reasoned about the *experience* of the sampler rather
+   than its distribution. It is coarse (it acts on boxes, not words) and it disables itself in
+   exactly the endgame case where repetition is worst, but it is the seed of a proper
+   recently-seen suppression window.
+3. **The sub-level gate is a mastery *ratio* over a *cumulative* scope** — 50% of everything
+   introduced so far in the level must sit in the top two boxes (`:76-83`). Three intended
+   consequences: progress survives across days, you cannot advance by grinding only the new words
+   because the old ones are in the denominator, and 50%-not-100% deliberately lets the hard tail
+   roll forward instead of blocking. That is considered pacing, not an accident.
+4. **`remainingDaysForLevel` is a genuine pacing model** (`:51-67`): it converts the live box
+   histogram into remaining box-steps and divides by the daily goal, which is derived in the same
+   unit so the two are dimensionally consistent. It is optimistic — it assumes no future errors, so
+   the estimate stalls on bad days — but it is a real model rather than a decorative progress bar.
+
+### The break modal — v1's only spacing mechanism, and it is good
+
+`components/LearningSession.tsx:230-259` fires a two-stage modal when the daily goal is met. Stage
+one congratulates and offers to stop or continue; stage two actively argues for stopping —
+«برای این که لغات به حافظه بلند‌مدت منتقل بشن، بهتره بین جلسات یادگیری، فاصله باشه … ولی انتخاب با
+شماست» — and then extends the goal if the user insists. It is worth recognising what this is: in
+v1 the *only* spacing in the entire product was a persuasive UI nudge, because the scheduler had
+no intervals. In v2 the scheduler does the spacing, which frees this modal to be what it always
+should have been — encouragement plus an honest suggestion, never a gate.
+
+### Defects not to carry forward
+
+- **Box weights are not normalised by box population.** The weights are `(4-i)²+1` → 17/10/5/2 per
+  *box* (`:104-111`), so with 55 words in box 0 and 10 in box 3, each individual box-0 word is
+  drawn at 0.9% and each box-3 word at 0.59% — a 1.5:1 per-word gradient where 8.5:1 was intended,
+  drifting as the histogram changes. The tuning knob did not do what its author believed.
+  **v2 rule: weight per word, never per box.**
+- **The box wipe on level advance** (`:201`) — already finding #2, and still the most serious
+  defect in the engine.
+- **The streak counts app-opens, not study days.** `performDailyReset` (`utils/syncHelpers.ts:94-119`)
+  runs on load, unconditionally stamps `lastSessionDate = today` and increments the streak, which
+  makes the `recordSuccessfulAction` path dead for the rest of that day. Opening the app for one
+  second daily yields an unbroken streak with zero words reviewed. Compounding it, both paths use
+  `toISOString()`, so the day boundary is 03:30 Tehran time.
+
+### v1's tuned numbers, for reference
+
+2668 words; 5 boxes (index 4 terminal, never re-reviewed); 4 consecutive correct answers to master,
+any miss resetting to box 0; 7 levels × 7 sub-levels; 382 words per level, 55 per sub-level; daily
+goal `ceil(382×4/30)` = **51 correct answers**, extended by **+26** when the user chooses to
+continue; only correct answers counted toward the goal. Implied total programme ≈ 209 study days.
+
 ## Legal note
 
 The v1 lexicon was extracted from a copyrighted book, which is why v1 was abandoned. v2's

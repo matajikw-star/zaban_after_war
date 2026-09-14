@@ -1,0 +1,57 @@
+{
+  "examples": [],
+  "id": "suspect",
+  "lemma": "suspect",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p01",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 48,
+      "surface": "suspected",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p04",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 6,
+      "surface": "suspected",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 3,
+      "surface": "suspected",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "suspected"
+  ],
+  "synonyms": [],
+  "translations": []
+}

@@ -1,0 +1,57 @@
+{
+  "examples": [],
+  "id": "metaphorical",
+  "lemma": "metaphorical",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p02",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 30,
+      "surface": "metaphorical",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p07",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 2,
+      "surface": "metaphorical",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p13",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "metaphorical",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "metaphorical"
+  ],
+  "synonyms": [],
+  "translations": []
+}

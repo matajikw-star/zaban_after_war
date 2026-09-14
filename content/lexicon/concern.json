@@ -22,22 +22,33 @@
       "reach": 58,
       "surface": "concern",
       "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p11",
+      "part": "vocabulary",
+      "questionNo": 30,
+      "reach": 1,
+      "surface": "concern",
+      "year": 1400
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1400": 1,
       "1401": 1,
       "1404": 1
     },
-    "distinctYears": 2,
-    "firstYear": 1401,
+    "distinctYears": 3,
+    "firstYear": 1400,
     "lastYear": 1404,
-    "priority": 6,
+    "priority": 9,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 2,
-    "timesTested": 2
+    "timesAsDistractor": 3,
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [

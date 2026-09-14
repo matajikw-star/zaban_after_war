@@ -1,0 +1,67 @@
+{
+  "examples": [],
+  "id": "elite",
+  "lemma": "elite",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 23,
+      "surface": "elite",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 5,
+      "surface": "elite",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 1,
+      "surface": "elite",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 1,
+      "surface": "elite",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 4
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "elite"
+  ],
+  "synonyms": [],
+  "translations": []
+}

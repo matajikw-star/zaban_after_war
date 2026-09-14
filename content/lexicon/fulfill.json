@@ -12,25 +12,37 @@
       "reach": 34,
       "surface": "fulfill",
       "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p11",
+      "part": "vocabulary",
+      "questionNo": 29,
+      "reach": 1,
+      "surface": "fulfilling",
+      "year": 1400
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1400": 1,
       "1401": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1401,
+    "distinctYears": 2,
+    "firstYear": 1400,
     "lastYear": 1401,
-    "priority": 3,
+    "priority": 6,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesAsDistractor": 2,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
-    "fulfill"
+    "fulfill",
+    "fulfilling"
   ],
   "synonyms": [],
   "translations": []

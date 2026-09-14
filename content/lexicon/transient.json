@@ -12,21 +12,52 @@
       "reach": 34,
       "surface": "transient",
       "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p02",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 30,
+      "surface": "transient",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p07",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 2,
+      "surface": "transient",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p13",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 1,
+      "surface": "transient",
+      "year": 1400
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1400": 3,
       "1401": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1401,
+    "distinctYears": 2,
+    "firstYear": 1400,
     "lastYear": 1401,
-    "priority": 3,
+    "priority": 8,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesAsDistractor": 4,
+    "timesTested": 4
   },
   "status": "draft",
   "surfaceForms": [

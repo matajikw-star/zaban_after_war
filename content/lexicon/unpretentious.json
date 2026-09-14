@@ -1,0 +1,67 @@
+{
+  "examples": [],
+  "id": "unpretentious",
+  "lemma": "unpretentious",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 23,
+      "surface": "unpretentious",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 5,
+      "surface": "unpretentious",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 1,
+      "surface": "unpretentious",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 1,
+      "surface": "unpretentious",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 4
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "unpretentious"
+  ],
+  "synonyms": [],
+  "translations": []
+}

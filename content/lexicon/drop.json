@@ -1,0 +1,69 @@
+{
+  "examples": [],
+  "id": "drop",
+  "lemma": "drop",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 23,
+      "surface": "dropped",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 5,
+      "surface": "dropped",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 1,
+      "surface": "dropped",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 1,
+      "surface": "dropped",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1400": 3
+    },
+    "byYear": {
+      "1400": 4
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 12,
+    "timesAsAnswer": 3,
+    "timesAsDistractor": 1,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "dropped"
+  ],
+  "synonyms": [],
+  "translations": []
+}

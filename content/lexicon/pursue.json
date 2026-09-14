@@ -22,24 +22,36 @@
       "reach": 1,
       "surface": "pursuing",
       "year": 1402
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p11",
+      "part": "vocabulary",
+      "questionNo": 29,
+      "reach": 1,
+      "surface": "pursuing",
+      "year": 1400
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {
+      "1400": 1,
       "1404": 1
     },
     "byYear": {
+      "1400": 1,
       "1402": 1,
       "1404": 1
     },
-    "distinctYears": 2,
-    "firstYear": 1402,
+    "distinctYears": 3,
+    "firstYear": 1400,
     "lastYear": 1404,
-    "priority": 8,
-    "timesAsAnswer": 1,
+    "priority": 13,
+    "timesAsAnswer": 2,
     "timesAsDistractor": 1,
-    "timesTested": 2
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [

@@ -12,6 +12,36 @@
       "reach": 1,
       "surface": "retreat",
       "year": 1405
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p01",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 48,
+      "surface": "retreat",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p04",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 6,
+      "surface": "retreat",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 3,
+      "surface": "retreat",
+      "year": 1400
     }
   ],
   "pos": [],
@@ -20,15 +50,16 @@
       "1405": 1
     },
     "byYear": {
+      "1400": 3,
       "1405": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1405,
+    "distinctYears": 2,
+    "firstYear": 1400,
     "lastYear": 1405,
-    "priority": 5,
+    "priority": 10,
     "timesAsAnswer": 1,
-    "timesAsDistractor": 0,
-    "timesTested": 1
+    "timesAsDistractor": 3,
+    "timesTested": 4
   },
   "status": "draft",
   "surfaceForms": [

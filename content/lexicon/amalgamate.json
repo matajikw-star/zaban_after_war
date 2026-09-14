@@ -12,21 +12,62 @@
       "reach": 1,
       "surface": "amalgamate",
       "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 23,
+      "surface": "amalgamate",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 5,
+      "surface": "amalgamate",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "amalgamate",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "amalgamate",
+      "year": 1400
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1400": 4,
       "1401": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1401,
+    "distinctYears": 2,
+    "firstYear": 1400,
     "lastYear": 1401,
-    "priority": 3,
+    "priority": 9,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesAsDistractor": 5,
+    "timesTested": 5
   },
   "status": "draft",
   "surfaceForms": [

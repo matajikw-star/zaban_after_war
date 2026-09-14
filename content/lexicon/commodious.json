@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "commodious",
+  "lemma": "commodious",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p11",
+      "part": "vocabulary",
+      "questionNo": 25,
+      "reach": 1,
+      "surface": "commodious",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "commodious"
+  ],
+  "synonyms": [],
+  "translations": []
+}

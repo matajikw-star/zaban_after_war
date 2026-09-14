@@ -1,0 +1,87 @@
+{
+  "examples": [],
+  "id": "superficial",
+  "lemma": "superficial",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p01",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 48,
+      "surface": "superficial",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p02",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 30,
+      "surface": "superficial",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p04",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 6,
+      "surface": "superficial",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 3,
+      "surface": "superficial",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p07",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 2,
+      "surface": "superficial",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p13",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "superficial",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 6
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 8,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 6,
+    "timesTested": 6
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "superficial"
+  ],
+  "synonyms": [],
+  "translations": []
+}

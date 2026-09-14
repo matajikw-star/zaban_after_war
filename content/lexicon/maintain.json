@@ -12,6 +12,16 @@
       "reach": 1,
       "surface": "maintaining",
       "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p11",
+      "part": "vocabulary",
+      "questionNo": 21,
+      "reach": 1,
+      "surface": "maintained",
+      "year": 1400
     }
   ],
   "pos": [],
@@ -20,18 +30,20 @@
       "1402": 1
     },
     "byYear": {
+      "1400": 1,
       "1402": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1402,
+    "distinctYears": 2,
+    "firstYear": 1400,
     "lastYear": 1402,
-    "priority": 5,
+    "priority": 8,
     "timesAsAnswer": 1,
-    "timesAsDistractor": 0,
-    "timesTested": 1
+    "timesAsDistractor": 1,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
+    "maintained",
     "maintaining"
   ],
   "synonyms": [],

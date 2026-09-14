@@ -1,0 +1,67 @@
+{
+  "examples": [],
+  "id": "compatible",
+  "lemma": "compatible",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p02",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 30,
+      "surface": "compatible",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p07",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 2,
+      "surface": "compatible",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p08",
+      "part": "vocabulary",
+      "questionNo": 13,
+      "reach": 1,
+      "surface": "compatible",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p13",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 1,
+      "surface": "compatible",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 4
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "compatible"
+  ],
+  "synonyms": [],
+  "translations": []
+}

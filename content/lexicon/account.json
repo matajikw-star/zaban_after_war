@@ -1,0 +1,69 @@
+{
+  "examples": [],
+  "id": "account",
+  "lemma": "account",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 23,
+      "surface": "accounts",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 5,
+      "surface": "accounts",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 1,
+      "surface": "accounts",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 1,
+      "surface": "accounts",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1400": 4
+    },
+    "byYear": {
+      "1400": 4
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 14,
+    "timesAsAnswer": 4,
+    "timesAsDistractor": 0,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "accounts"
+  ],
+  "synonyms": [],
+  "translations": []
+}

@@ -12,24 +12,36 @@
       "reach": 1,
       "surface": "burdened",
       "year": 1404
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p11",
+      "part": "vocabulary",
+      "questionNo": 22,
+      "reach": 1,
+      "surface": "burden",
+      "year": 1400
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1400": 1,
       "1404": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1404,
+    "distinctYears": 2,
+    "firstYear": 1400,
     "lastYear": 1404,
-    "priority": 3,
+    "priority": 6,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesAsDistractor": 2,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
+    "burden",
     "burdened"
   ],
   "synonyms": [],

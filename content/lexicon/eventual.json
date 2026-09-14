@@ -1,0 +1,49 @@
+{
+  "examples": [],
+  "id": "eventual",
+  "lemma": "eventual",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p04",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 6,
+      "surface": "eventually",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 3,
+      "surface": "eventually",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1400": 2
+    },
+    "byYear": {
+      "1400": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 8,
+    "timesAsAnswer": 2,
+    "timesAsDistractor": 0,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "eventually"
+  ],
+  "synonyms": [],
+  "translations": []
+}

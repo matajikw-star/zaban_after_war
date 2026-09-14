@@ -12,21 +12,64 @@
       "reach": 1,
       "surface": "imbibe",
       "year": 1405
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 23,
+      "surface": "imbibe",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 5,
+      "surface": "imbibe",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "imbibe",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "imbibe",
+      "year": 1400
     }
   ],
   "pos": [],
   "stats": {
-    "answersByYear": {},
+    "answersByYear": {
+      "1400": 4
+    },
     "byYear": {
+      "1400": 4,
       "1405": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1405,
+    "distinctYears": 2,
+    "firstYear": 1400,
     "lastYear": 1405,
-    "priority": 3,
-    "timesAsAnswer": 0,
+    "priority": 17,
+    "timesAsAnswer": 4,
     "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesTested": 5
   },
   "status": "draft",
   "surfaceForms": [

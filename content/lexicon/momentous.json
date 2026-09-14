@@ -1,0 +1,59 @@
+{
+  "examples": [],
+  "id": "momentous",
+  "lemma": "momentous",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p02",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 30,
+      "surface": "momentous",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p07",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 2,
+      "surface": "momentous",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p13",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 1,
+      "surface": "momentous",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1400": 3
+    },
+    "byYear": {
+      "1400": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 11,
+    "timesAsAnswer": 3,
+    "timesAsDistractor": 0,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "momentous"
+  ],
+  "synonyms": [],
+  "translations": []
+}

@@ -1,0 +1,47 @@
+{
+  "examples": [],
+  "id": "delicate",
+  "lemma": "delicate",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p04",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 6,
+      "surface": "delicately",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 3,
+      "surface": "delicately",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "delicately"
+  ],
+  "synonyms": [],
+  "translations": []
+}

@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "avaricious",
+  "lemma": "avaricious",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p08",
+      "part": "vocabulary",
+      "questionNo": 17,
+      "reach": 1,
+      "surface": "avaricious",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "avaricious"
+  ],
+  "synonyms": [],
+  "translations": []
+}

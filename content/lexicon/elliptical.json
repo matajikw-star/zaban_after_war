@@ -12,24 +12,38 @@
       "reach": 1,
       "surface": "elliptically",
       "year": 1401
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p09",
+      "part": "vocabulary",
+      "questionNo": 26,
+      "reach": 1,
+      "surface": "elliptical",
+      "year": 1400
     }
   ],
   "pos": [],
   "stats": {
-    "answersByYear": {},
+    "answersByYear": {
+      "1400": 1
+    },
     "byYear": {
+      "1400": 1,
       "1401": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1401,
+    "distinctYears": 2,
+    "firstYear": 1400,
     "lastYear": 1401,
-    "priority": 3,
-    "timesAsAnswer": 0,
+    "priority": 8,
+    "timesAsAnswer": 1,
     "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
+    "elliptical",
     "elliptically"
   ],
   "synonyms": [],

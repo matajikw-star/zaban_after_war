@@ -1,0 +1,69 @@
+{
+  "examples": [],
+  "id": "broach",
+  "lemma": "broach",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 23,
+      "surface": "broached",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 5,
+      "surface": "broached",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 1,
+      "surface": "broached",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 1,
+      "surface": "broached",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1400": 4
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 8,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 3,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "broached"
+  ],
+  "synonyms": [],
+  "translations": []
+}

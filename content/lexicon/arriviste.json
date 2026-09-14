@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "arriviste",
+  "lemma": "arriviste",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p09",
+      "part": "vocabulary",
+      "questionNo": 12,
+      "reach": 1,
+      "surface": "arrivistes",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "arrivistes"
+  ],
+  "synonyms": [],
+  "translations": []
+}

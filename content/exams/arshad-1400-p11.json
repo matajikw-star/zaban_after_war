@@ -1,0 +1,798 @@
+{
+  "paperId": "arshad-1400-p11",
+  "degree": "arshad",
+  "year": 1400,
+  "groupCodes": [
+    "1148"
+  ],
+  "bookletCount": 1,
+  "source": {
+    "file": "1148-1400.pdf",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "extractedBy": {
+    "model": "claude-sonnet-5",
+    "at": "2026-09-15"
+  },
+  "questions": [
+    {
+      "no": 1,
+      "part": "grammar",
+      "stem": "To be effective, lesson report forms should be prepared by a teacher or group of teachers to match the goals and content of the particular course ----------.",
+      "options": [
+        "are taught",
+        "to be teaching it",
+        "they are teaching",
+        "having taught"
+      ],
+      "optionLemmas": [
+        "teach",
+        "teach",
+        "teach",
+        "teach"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "teach",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "grammar",
+      "stem": "Research shows that ---------- actually burns more calories and fatigues your brain, reducing your overall capacity for productive thought and work.",
+      "options": [
+        "task switching",
+        "switching of task",
+        "the switching of task",
+        "the task switching which"
+      ],
+      "optionLemmas": [
+        "switch",
+        "switch",
+        "switch",
+        "switch"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "switch",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "grammar",
+      "stem": "When you're in a situation ----------------- you feel like you don't have control, it can be easy to become paralyzed by fear and unable to move forward.",
+      "options": [
+        "that",
+        "that in it",
+        "in it",
+        "where"
+      ],
+      "optionLemmas": [
+        "that",
+        "that",
+        "in",
+        "where"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "where",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "grammar",
+      "stem": "Only when total production expands faster than the rate of labor force growth, ----------.",
+      "options": [
+        "the unemployment rate falls",
+        "does the unemployment rate fall",
+        "falls the unemployment rate",
+        "it fall does the unemployment rate"
+      ],
+      "optionLemmas": [
+        "fall",
+        "fall",
+        "fall",
+        "fall"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "fall",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "grammar",
+      "stem": "While vigorous attempts to reduce obesity should be aimed at -----------------, the most successful efforts are likely to be those directed toward children.",
+      "options": [
+        "all affected",
+        "affecting all those are",
+        "all which are affected",
+        "all of which affected"
+      ],
+      "optionLemmas": [
+        "affect",
+        "affect",
+        "affect",
+        "affect"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "affect",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "grammar",
+      "stem": "From this profoundly revolutionary form of art, then, all ideas—religious, moral, psychological—were excluded, and so ----------.",
+      "options": [
+        "all emotions except certain aesthetic ones were",
+        "all emotions except certain aesthetic ones were too",
+        "did all emotions except certain aesthetic ones either",
+        "were all emotions except certain aesthetic ones"
+      ],
+      "optionLemmas": [
+        "be",
+        "be",
+        "be",
+        "be"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "be",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "grammar",
+      "stem": "The normally reserved scientists, unable to repress their excitement, let out a tremendous cheer and gathered around Fermi ---------- his hand.",
+      "options": [
+        "shook",
+        "to shake",
+        "by shaking",
+        "whom they shook"
+      ],
+      "optionLemmas": [
+        "shake",
+        "shake",
+        "shake",
+        "shake"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "shake",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "I am not surprised by ---------- by the public against the service provided by banks.",
+      "options": [
+        "increasing the complaints dramatically",
+        "the increased complains dramatically",
+        "the dramatic increase in complaints",
+        "the increase of dramatically complaining"
+      ],
+      "optionLemmas": [
+        "increase",
+        "increase",
+        "increase",
+        "increase"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "increase",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "grammar",
+      "stem": "If the three satellites had been deployed as the designers intended, their electronic sensing devices would ---------- valuable information.",
+      "options": [
+        "be providing",
+        "have been provided",
+        "have to provided",
+        "have provided"
+      ],
+      "optionLemmas": [
+        "provide",
+        "provide",
+        "provide",
+        "provide"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "provide",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "grammar",
+      "stem": "That same evening the Algerian press ---------- seemed to shoot down yet another rumor.",
+      "options": [
+        "issued a denial, it",
+        "issued a denial which",
+        "which issued a denial,",
+        "by issuing a denial that it"
+      ],
+      "optionLemmas": [
+        "issue",
+        "issue",
+        "issue",
+        "issue"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "issue",
+      "uncertain": []
+    },
+    {
+      "no": 11,
+      "part": "grammar",
+      "stem": "The coffee cups suddenly went spinning as an exploding knocked the soldier flat on his back.",
+      "options": [
+        "spinning",
+        "exploding",
+        "flat",
+        "on"
+      ],
+      "optionLemmas": [
+        "spin",
+        "explode",
+        "flat",
+        "on"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "explode",
+      "uncertain": []
+    },
+    {
+      "no": 12,
+      "part": "grammar",
+      "stem": "The possibility that we humans are born to run has inspired many studies, books, lectures and there are debates in recent years, including the journalist Christopher McDougall's 2009 best seller, \"Born to Run.\"",
+      "options": [
+        "The possibility that",
+        "are born to run",
+        "there are debates",
+        "including"
+      ],
+      "optionLemmas": [
+        "possibility",
+        "bear",
+        "debate",
+        "include"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "debate",
+      "uncertain": []
+    },
+    {
+      "no": 13,
+      "part": "grammar",
+      "stem": "In my bedroom in Mumbai, my mattress is made of high-density foam, a better surface to move on for someone like me, someone is with muscular dystrophy.",
+      "options": [
+        "made of",
+        "a better surface",
+        "on for",
+        "someone is with"
+      ],
+      "optionLemmas": [
+        "make",
+        "surface",
+        "on",
+        "be"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "be",
+      "uncertain": []
+    },
+    {
+      "no": 14,
+      "part": "grammar",
+      "stem": "Scientists have been studying the effects of television for decades, generally focusing on whether watching violence on TV correlate with being violent in real life.",
+      "options": [
+        "have been studying",
+        "focusing",
+        "correlate",
+        "being violent"
+      ],
+      "optionLemmas": [
+        "study",
+        "focus",
+        "correlate",
+        "violent"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "correlate",
+      "uncertain": []
+    },
+    {
+      "no": 15,
+      "part": "grammar",
+      "stem": "When stress begins, a small area deep in the brain called hypothalamus pulls the strings.",
+      "options": [
+        "stress",
+        "area deep",
+        "called",
+        "hypothalamus"
+      ],
+      "optionLemmas": [
+        "stress",
+        "area",
+        "call",
+        "hypothalamus"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "hypothalamus",
+      "uncertain": []
+    },
+    {
+      "no": 16,
+      "part": "grammar",
+      "stem": "Imaging experiments show that part of the temporal lobes, on the left and right sides of the brain, experience greatly increased blood flow not just during panic attacks but from everyday anxiety.",
+      "options": [
+        "part",
+        "on",
+        "greatly increased blood flow",
+        "but"
+      ],
+      "optionLemmas": [
+        "part",
+        "on",
+        "increase",
+        "but"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "part",
+      "uncertain": []
+    },
+    {
+      "no": 17,
+      "part": "grammar",
+      "stem": "To most observers, the essence of intelligence is cleverness, is a versatility in solving novel problems.",
+      "options": [
+        "To most observers",
+        "is a versatility",
+        "in solving",
+        "problems"
+      ],
+      "optionLemmas": [
+        "observer",
+        "versatility",
+        "solve",
+        "problem"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "versatility",
+      "uncertain": []
+    },
+    {
+      "no": 18,
+      "part": "grammar",
+      "stem": "The next year, during paleontological excavations, primitive stone tools came to light, bringing with themselves the tantalizing possibility that fossilized human remains might eventually follow.",
+      "options": [
+        "came to light",
+        "themselves",
+        "that fossilized",
+        "might eventually follow"
+      ],
+      "optionLemmas": [
+        "light",
+        "themselves",
+        "fossilize",
+        "follow"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "them",
+      "uncertain": []
+    },
+    {
+      "no": 19,
+      "part": "grammar",
+      "stem": "Despite of these difficulties, what we want to know is if bees and other insects \"can feel and sense the environment from a first-person perspective.\"",
+      "options": [
+        "Despite of these difficulties",
+        "is if",
+        "the environment",
+        "a first-person"
+      ],
+      "optionLemmas": [
+        "despite",
+        "if",
+        "environment",
+        "first-person"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "despite",
+      "uncertain": []
+    },
+    {
+      "no": 20,
+      "part": "grammar",
+      "stem": "Some people start to learn a foreign language in order that they may experience something new, while others do so in order to simply have a more interesting time when travel abroad.",
+      "options": [
+        "to learn",
+        "in order that",
+        "do so",
+        "when travel abroad"
+      ],
+      "optionLemmas": [
+        "learn",
+        "order",
+        "do",
+        "travel"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "travel",
+      "uncertain": []
+    },
+    {
+      "no": 21,
+      "part": "vocabulary",
+      "stem": "The assailant was ---------- by police in a hideout near where the attack had taken place.",
+      "options": [
+        "confiscated",
+        "unveiled",
+        "apprehended",
+        "maintained"
+      ],
+      "optionLemmas": [
+        "confiscate",
+        "unveil",
+        "apprehend",
+        "maintain"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "apprehend",
+      "uncertain": []
+    },
+    {
+      "no": 22,
+      "part": "vocabulary",
+      "stem": "The loss of both her parents at such an early age took its ---------- on her mentally and she became disturbed during her adolescent years.",
+      "options": [
+        "toll",
+        "strain",
+        "harm",
+        "burden"
+      ],
+      "optionLemmas": [
+        "toll",
+        "strain",
+        "harm",
+        "burden"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "toll",
+      "uncertain": []
+    },
+    {
+      "no": 23,
+      "part": "vocabulary",
+      "stem": "Those living on the streets are at their most vulnerable during the cold winter months when they are ----------------- to the elements.",
+      "options": [
+        "restricted",
+        "accessible",
+        "exposed",
+        "pertinent"
+      ],
+      "optionLemmas": [
+        "restrict",
+        "accessible",
+        "expose",
+        "pertinent"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "expose",
+      "uncertain": []
+    },
+    {
+      "no": 24,
+      "part": "vocabulary",
+      "stem": "The government has sanctioned the sending of ---------- aid to the areas worst affected by the conflict.",
+      "options": [
+        "favorable",
+        "steady",
+        "cordial",
+        "humanitarian"
+      ],
+      "optionLemmas": [
+        "favorable",
+        "steady",
+        "cordial",
+        "humanitarian"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "humanitarian",
+      "uncertain": []
+    },
+    {
+      "no": 25,
+      "part": "vocabulary",
+      "stem": "Our hotel room was surprisingly ----------, especially taking into consideration that it was very reasonably priced.",
+      "options": [
+        "derelict",
+        "commodious",
+        "disorderly",
+        "decorous"
+      ],
+      "optionLemmas": [
+        "derelict",
+        "commodious",
+        "disorderly",
+        "decorous"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "commodious",
+      "uncertain": []
+    },
+    {
+      "no": 26,
+      "part": "vocabulary",
+      "stem": "If you ----------------- the speed limit in a construction zone, the fine is doubled.",
+      "options": [
+        "hasten",
+        "accelerate",
+        "prolong",
+        "exceed"
+      ],
+      "optionLemmas": [
+        "hasten",
+        "accelerate",
+        "prolong",
+        "exceed"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "exceed",
+      "uncertain": []
+    },
+    {
+      "no": 27,
+      "part": "vocabulary",
+      "stem": "His holiday was ----------------- short by two days on account of his having to rush back home in time for the birth of his third grandson.",
+      "options": [
+        "cut",
+        "turned",
+        "left",
+        "taken"
+      ],
+      "optionLemmas": [
+        "cut",
+        "turn",
+        "leave",
+        "take"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "cut",
+      "uncertain": []
+    },
+    {
+      "no": 28,
+      "part": "vocabulary",
+      "stem": "After the union representatives and the school board reached a ----------------, teachers were allowed to return to the classroom.",
+      "options": [
+        "qualification",
+        "compromise",
+        "determination",
+        "dilemma"
+      ],
+      "optionLemmas": [
+        "qualification",
+        "compromise",
+        "determination",
+        "dilemma"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "compromise",
+      "uncertain": []
+    },
+    {
+      "no": 29,
+      "part": "vocabulary",
+      "stem": "The prohibitive cost of college education is putting many good students from disadvantaged areas off the idea of ---------------- their studies further.",
+      "options": [
+        "fulfilling",
+        "inclining",
+        "pursuing",
+        "attaining"
+      ],
+      "optionLemmas": [
+        "fulfill",
+        "incline",
+        "pursue",
+        "attain"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "pursue",
+      "uncertain": []
+    },
+    {
+      "no": 30,
+      "part": "vocabulary",
+      "stem": "Although some of the SWAT team members wanted to burst into the drug house, the chief exercised ---------------- and waited until the timing was right.",
+      "options": [
+        "concern",
+        "prudence",
+        "constraint",
+        "timidity"
+      ],
+      "optionLemmas": [
+        "concern",
+        "prudence",
+        "constraint",
+        "timidity"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "prudence",
+      "uncertain": []
+    },
+    {
+      "no": 31,
+      "part": "vocabulary",
+      "stem": "Why do you have to be so ----------------- ? Look at the mess your thoughtlessness has got us into; you should consider the consequences next time.",
+      "options": [
+        "ingenious",
+        "gloomy",
+        "belligerent",
+        "impetuous"
+      ],
+      "optionLemmas": [
+        "ingenious",
+        "gloomy",
+        "belligerent",
+        "impetuous"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "impetuous",
+      "uncertain": []
+    },
+    {
+      "no": 32,
+      "part": "vocabulary",
+      "stem": "You are my ----------------- and you will obey me. Failure to do so will result in your dismissal.",
+      "options": [
+        "subordinate",
+        "imitator",
+        "pragmatist",
+        "rebel"
+      ],
+      "optionLemmas": [
+        "subordinate",
+        "imitator",
+        "pragmatist",
+        "rebel"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "subordinate",
+      "uncertain": []
+    },
+    {
+      "no": 33,
+      "part": "vocabulary",
+      "stem": "The writer of the movie consulted a professional athlete in order to make his sports' film more ----------.",
+      "options": [
+        "cooperative",
+        "sociable",
+        "plausible",
+        "stylish"
+      ],
+      "optionLemmas": [
+        "cooperative",
+        "sociable",
+        "plausible",
+        "stylish"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "plausible",
+      "uncertain": []
+    },
+    {
+      "no": 34,
+      "part": "vocabulary",
+      "stem": "Dozens of people in the town of Walkerton fell ill after the local water supply became ---------- with E. coli bacteria.",
+      "options": [
+        "contaminated",
+        "absorbed",
+        "diffused",
+        "depleted"
+      ],
+      "optionLemmas": [
+        "contaminate",
+        "absorb",
+        "diffuse",
+        "deplete"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "contaminate",
+      "uncertain": []
+    },
+    {
+      "no": 35,
+      "part": "vocabulary",
+      "stem": "They were forced to ---------- the accusation and issue a full apology live on air.",
+      "options": [
+        "transform",
+        "underline",
+        "precede",
+        "withdraw"
+      ],
+      "optionLemmas": [
+        "transform",
+        "underline",
+        "precede",
+        "withdraw"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "withdraw",
+      "uncertain": []
+    }
+  ],
+  "uncertain": [
+    "Part C is labeled 'Vocabulary' on page 4, not reading comprehension, matching this booklet's known layout variant (code 1148) rather than the generic Part C = reading assumption. The section runs questions 21-35 across pages 4-5; page 5 confirmed the continuation (q28-35) before PART D: Reading Comprehension begins.",
+    "Q5 (option interpretation of 'all affected' as a reduced relative clause) and Q7 (parallel verb series reading of 'shook') and Q10 ('issued a denial, it' as a comma-spliced continuation) are grammatically unusual constructions with no answer key to verify against; keyConfidence marked low/medium accordingly for Q5 and Q10."
+  ]
+}

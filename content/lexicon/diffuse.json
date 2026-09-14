@@ -1,0 +1,47 @@
+{
+  "examples": [],
+  "id": "diffuse",
+  "lemma": "diffuse",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p09",
+      "part": "vocabulary",
+      "questionNo": 14,
+      "reach": 1,
+      "surface": "diffused",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p11",
+      "part": "vocabulary",
+      "questionNo": 34,
+      "reach": 1,
+      "surface": "diffused",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "diffused"
+  ],
+  "synonyms": [],
+  "translations": []
+}

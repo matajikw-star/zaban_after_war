@@ -42,6 +42,36 @@
       "reach": 34,
       "surface": "derive",
       "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p02",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 30,
+      "surface": "derives",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p07",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 2,
+      "surface": "derives",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p13",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 1,
+      "surface": "derives",
+      "year": 1400
     }
   ],
   "pos": [],
@@ -51,17 +81,18 @@
       "1402": 1
     },
     "byYear": {
+      "1400": 3,
       "1401": 1,
       "1402": 2,
       "1404": 1
     },
-    "distinctYears": 3,
-    "firstYear": 1401,
+    "distinctYears": 4,
+    "firstYear": 1400,
     "lastYear": 1404,
-    "priority": 14,
+    "priority": 19,
     "timesAsAnswer": 2,
-    "timesAsDistractor": 2,
-    "timesTested": 4
+    "timesAsDistractor": 5,
+    "timesTested": 7
   },
   "status": "draft",
   "surfaceForms": [

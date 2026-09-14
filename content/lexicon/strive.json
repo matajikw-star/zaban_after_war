@@ -12,24 +12,56 @@
       "reach": 1,
       "surface": "strives",
       "year": 1404
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p02",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 30,
+      "surface": "strive",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p07",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 2,
+      "surface": "strive",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p13",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 1,
+      "surface": "strive",
+      "year": 1400
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1400": 3,
       "1404": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1404,
+    "distinctYears": 2,
+    "firstYear": 1400,
     "lastYear": 1404,
-    "priority": 3,
+    "priority": 8,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesAsDistractor": 4,
+    "timesTested": 4
   },
   "status": "draft",
   "surfaceForms": [
+    "strive",
     "strives"
   ],
   "synonyms": [],

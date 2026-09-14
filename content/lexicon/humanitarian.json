@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "humanitarian",
+  "lemma": "humanitarian",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p11",
+      "part": "vocabulary",
+      "questionNo": 24,
+      "reach": 1,
+      "surface": "humanitarian",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "humanitarian"
+  ],
+  "synonyms": [],
+  "translations": []
+}

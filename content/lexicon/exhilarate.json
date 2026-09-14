@@ -1,0 +1,47 @@
+{
+  "examples": [],
+  "id": "exhilarate",
+  "lemma": "exhilarate",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1403-p02",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 53,
+      "surface": "exhilarated",
+      "year": 1403
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1403-p04",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 1,
+      "surface": "exhilarated",
+      "year": 1403
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1403": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1403,
+    "lastYear": 1403,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "exhilarated"
+  ],
+  "synonyms": [],
+  "translations": []
+}

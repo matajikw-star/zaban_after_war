@@ -1,0 +1,50 @@
+{
+  "examples": [],
+  "id": "irrelevant",
+  "lemma": "irrelevant",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 0,
+      "paperId": "arshad-1403-p01",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 60,
+      "surface": "irrelevant",
+      "year": 1403
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1403-p05",
+      "part": "vocabulary",
+      "questionNo": 25,
+      "reach": 1,
+      "surface": "irrelevant at",
+      "year": 1403
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1403": 1
+    },
+    "byYear": {
+      "1403": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1403,
+    "lastYear": 1403,
+    "priority": 6,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 1,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "irrelevant",
+    "irrelevant at"
+  ],
+  "synonyms": [],
+  "translations": []
+}

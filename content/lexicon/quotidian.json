@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "quotidian",
+  "lemma": "quotidian",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1403-p03",
+      "part": "vocabulary",
+      "questionNo": 13,
+      "reach": 1,
+      "surface": "quotidian",
+      "year": 1403
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1403": 1
+    },
+    "byYear": {
+      "1403": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1403,
+    "lastYear": 1403,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "quotidian"
+  ],
+  "synonyms": [],
+  "translations": []
+}

@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "collide",
+  "lemma": "collide",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1403-p04",
+      "part": "cloze",
+      "questionNo": 30,
+      "reach": 1,
+      "surface": "collide",
+      "year": 1403
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1403": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1403,
+    "lastYear": 1403,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "collide"
+  ],
+  "synonyms": [],
+  "translations": []
+}

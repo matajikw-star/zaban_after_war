@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "enlist",
+  "lemma": "enlist",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1403-p05",
+      "part": "vocabulary",
+      "questionNo": 27,
+      "reach": 1,
+      "surface": "enlist",
+      "year": 1403
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1403": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1403,
+    "lastYear": 1403,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "enlist"
+  ],
+  "synonyms": [],
+  "translations": []
+}

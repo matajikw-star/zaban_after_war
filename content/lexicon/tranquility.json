@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "tranquility",
+  "lemma": "tranquility",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1403-p01",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 60,
+      "surface": "tranquility",
+      "year": 1403
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1403": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1403,
+    "lastYear": 1403,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "tranquility"
+  ],
+  "synonyms": [],
+  "translations": []
+}

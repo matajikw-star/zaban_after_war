@@ -1,0 +1,132 @@
+{
+  "paperId": "arshad-1403-p01",
+  "degree": "arshad",
+  "year": 1403,
+  "groupCodes": ["1101", "1102", "1104", "1105", "1106", "1107", "1108", "1111", "1112", "1113", "1114", "1115", "1116", "1117", "1130", "1132", "1134", "1142", "1143", "1152", "1201", "1203", "1204", "1206", "1207", "1208", "1251", "1257", "1259", "1263", "1264", "1267", "1268", "1272", "1277", "1283", "1294", "1301", "1302", "1303", "1304", "1305", "1306", "1307", "1308", "1309", "1311", "1312", "1313", "1315", "1317", "1319", "1321", "1328", "1352", "1357", "1358", "1360", "1364", "1509"],
+  "bookletCount": 60,
+  "source": { "file": "1101-1403.pdf", "pages": [2, 3] },
+  "extractedBy": { "model": "claude-sonnet-5", "at": "2026-09-14" },
+  "questions": [
+    {
+      "no": 1,
+      "part": "vocabulary",
+      "stem": "But at this point, it's pretty hard to hurt my ..... . I've heard it all, and I'm still here.",
+      "options": ["characterization", "feelings", "sentimentality", "pain"],
+      "optionLemmas": ["characterization", "feeling", "sentimentality", "pain"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "feeling",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "vocabulary",
+      "stem": "Be sure your child wears sunscreen whenever she's ..... to the sun.",
+      "options": ["demonstrated", "confronted", "invulnerable", "exposed"],
+      "optionLemmas": ["demonstrate", "confront", "invulnerable", "expose"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "expose",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "vocabulary",
+      "stem": "Many of these popular best-sellers will soon become dated and ....., and will eventually go out of print.",
+      "options": ["irrelevant", "permanent", "fascinating", "paramount"],
+      "optionLemmas": ["irrelevant", "permanent", "fascinating", "paramount"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "irrelevant",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "vocabulary",
+      "stem": "The men who arrived in the ..... of criminals were actually undercover police officers.",
+      "options": ["uniform", "job", "guise", "distance"],
+      "optionLemmas": ["uniform", "job", "guise", "distance"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "guise",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "vocabulary",
+      "stem": "It was more ..... to take my meals in bed, where all I had to do was push away my tray with its uneaten food and fall back upon my pillows.",
+      "options": ["haphazard", "reckless", "convenient", "vigorous"],
+      "optionLemmas": ["haphazard", "reckless", "convenient", "vigorous"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "convenient",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "vocabulary",
+      "stem": "His victory sparked a rare wave of ..... in his home country. Nicaraguans poured into the streets, honking car-horns and waving the national flag.",
+      "options": ["serendipity", "tranquility", "aspersion", "euphoria"],
+      "optionLemmas": ["serendipity", "tranquility", "aspersion", "euphoria"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "euphoria",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "vocabulary",
+      "stem": "He liked the ease and glitter of the life, and the luster ..... on him by being a member of this group of rich and conspicuous people.",
+      "options": ["conferred", "equivocated", "attained", "fabricated"],
+      "optionLemmas": ["confer", "equivocate", "attain", "fabricate"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "confer",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "Roman education had its first \"primary schools\" in the 3rd century BCE, but they were not compulsory ..... entirely on tuition fees.",
+      "options": ["which depending", "and depended", "for depended", "that depended"],
+      "optionLemmas": ["depend", "depend", "depend", "depend"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "depend",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "grammar",
+      "stem": "There were no official schools in Rome, nor were there buildings used specifically for the purpose. Wealthy families ..... private tutors to teach their children at home, while less well-off children were taught in groups.",
+      "options": ["have employed", "employed", "were employed", "employing"],
+      "optionLemmas": ["employ", "employ", "employ", "employ"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "employ",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "grammar",
+      "stem": "Tutors who taught in a wealthy family did so in comfort and with facilities; ..... been brought to Rome as slaves, and they may have been highly educated.",
+      "options": ["some of these tutors could have", "because of these tutors who have", "that some of them could have", "some of they should have"],
+      "optionLemmas": ["some", "because", "that", "some"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "some",
+      "uncertain": []
+    }
+  ],
+  "uncertain": []
+}

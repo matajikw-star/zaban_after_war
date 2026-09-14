@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "deficient",
+  "lemma": "deficient",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1403-p05",
+      "part": "vocabulary",
+      "questionNo": 26,
+      "reach": 1,
+      "surface": "deficient",
+      "year": 1403
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1403": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1403,
+    "lastYear": 1403,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "deficient"
+  ],
+  "synonyms": [],
+  "translations": []
+}

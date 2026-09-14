@@ -12,23 +12,35 @@
       "reach": 1,
       "surface": "precarious",
       "year": 1405
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1403-p05",
+      "part": "vocabulary",
+      "questionNo": 28,
+      "reach": 1,
+      "surface": "precarious",
+      "year": 1403
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {
+      "1403": 1,
       "1405": 1
     },
     "byYear": {
+      "1403": 1,
       "1405": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1405,
+    "distinctYears": 2,
+    "firstYear": 1403,
     "lastYear": 1405,
-    "priority": 5,
-    "timesAsAnswer": 1,
+    "priority": 10,
+    "timesAsAnswer": 2,
     "timesAsDistractor": 0,
-    "timesTested": 1
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [

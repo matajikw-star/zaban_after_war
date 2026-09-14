@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "adhere",
+  "lemma": "adhere",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1404-p03",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 28,
+      "surface": "adhere",
+      "year": 1404
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1404": 1
+    },
+    "byYear": {
+      "1404": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1404,
+    "lastYear": 1404,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "adhere"
+  ],
+  "synonyms": [],
+  "translations": []
+}

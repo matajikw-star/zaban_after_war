@@ -12,24 +12,36 @@
       "reach": 1,
       "surface": "protestation",
       "year": 1405
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1404-p06",
+      "part": "vocabulary",
+      "questionNo": 16,
+      "reach": 1,
+      "surface": "protest",
+      "year": 1404
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1404": 1,
       "1405": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1405,
+    "distinctYears": 2,
+    "firstYear": 1404,
     "lastYear": 1405,
-    "priority": 3,
+    "priority": 6,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesAsDistractor": 2,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
+    "protest",
     "protestation"
   ],
   "synonyms": [],

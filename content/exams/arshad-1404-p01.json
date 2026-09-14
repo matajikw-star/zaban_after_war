@@ -1,0 +1,132 @@
+{
+  "paperId": "arshad-1404-p01",
+  "degree": "arshad",
+  "year": 1404,
+  "groupCodes": ["1103","1109","1119","1127","1137","1138","1139","1144","1146","1202","1205","1209","1213","1214","1215","1216","1217","1218","1219","1253","1255","1256","1262","1273","1276","1279","1285","1287","1292","1293","1314","1322","1323","1324","1325","1327","1350","1351","1353","1356","1359","1361","1362","1363","1365","1501","1502","1503","1504","1505","1506","1507","1510","1511"],
+  "bookletCount": 54,
+  "source": { "file": "1103-1404.pdf", "pages": [2, 3] },
+  "extractedBy": { "model": "claude-sonnet-5", "at": "2026-09-14" },
+  "questions": [
+    {
+      "no": 1,
+      "part": "vocabulary",
+      "stem": "I have to say, I'm not particularly ..... in my own understanding of the true nature of fear, even though I make my living drawing horror manga.",
+      "options": ["mutual", "confident", "possible", "available"],
+      "optionLemmas": ["mutual", "confident", "possible", "available"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "confident",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "vocabulary",
+      "stem": "We must stop seeing nuclear ..... as a dangerous problem and instead recognize it as a safe byproduct of carbon-free power.",
+      "options": ["missile", "arsenal", "conflict", "waste"],
+      "optionLemmas": ["missile", "arsenal", "conflict", "waste"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "waste",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "vocabulary",
+      "stem": "My father has always been ..... with his money. I didn't have to pay for college or even for the confused year I spent at Princeton taking graduate courses in sociology.",
+      "options": ["generous", "associated", "content", "confronted"],
+      "optionLemmas": ["generous", "associate", "content", "confront"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "generous",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "vocabulary",
+      "stem": "Even though a cease-fire, in place since Friday, has brought temporary ..... from the bombardment, the threat the strikes will return leaves people displaced yet again.",
+      "options": ["relief", "suspense", "rupture", "resolution"],
+      "optionLemmas": ["relief", "suspense", "rupture", "resolution"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "relief",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "vocabulary",
+      "stem": "What you'll hear, often, is that you should ..... your dream; follow your passion; quit your job and live the life you want.",
+      "options": ["undermine", "partake", "pursue", "jeopardize"],
+      "optionLemmas": ["undermine", "partake", "pursue", "jeopardize"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "pursue",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "vocabulary",
+      "stem": "Nationwide, poor children and adolescents are participating far less in sports and fitness activities than their more ..... peers.",
+      "options": ["astute", "otiose", "impecunious", "affluent"],
+      "optionLemmas": ["astute", "otiose", "impecunious", "affluent"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "affluent",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "vocabulary",
+      "stem": "It is said that \"the El\" did not meet the historic criteria for being registered, as it ..... the view from the street of other historic buildings and because the structure generally downgraded the quality of life in the city.",
+      "options": ["gentrified", "revamped", "impeded", "galvanized"],
+      "optionLemmas": ["gentrify", "revamp", "impede", "galvanize"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "impede",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "The first step in the process of becoming an Olympic sport is .....(8) a sport from the International Olympic Committee (IOC).",
+      "options": ["to be a recognition as", "recognition as", "recognizing of", "recognizing"],
+      "optionLemmas": ["recognize", "recognize", "recognize", "recognize"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "recognize",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "grammar",
+      "stem": ".....(9), it then moves to International Sports Federation (IF) status.",
+      "options": ["For a sport be recognized", "Once a sport is recognized", "A sport be recognized", "A recognized sports"],
+      "optionLemmas": ["recognize", "recognize", "recognize", "recognize"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "recognize",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "grammar",
+      "stem": "At that point, the international organization administering the sport must enforce the World Anti-Doping Code, including conducting effective out-of-competition tests on the sport's competitors while maintaining rules .....(10) forth by the Olympic Charter.",
+      "options": ["set", "sets", "that set", "which to be set"],
+      "optionLemmas": ["set", "set", "set", "set"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "set",
+      "uncertain": []
+    }
+  ],
+  "uncertain": []
+}

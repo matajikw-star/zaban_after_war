@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "conspicuous",
+  "lemma": "conspicuous",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 2,
+      "paperId": "arshad-1404-p03",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 28,
+      "surface": "conspicuous",
+      "year": 1404
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1404": 1
+    },
+    "byYear": {
+      "1404": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1404,
+    "lastYear": 1404,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "conspicuous"
+  ],
+  "synonyms": [],
+  "translations": []
+}

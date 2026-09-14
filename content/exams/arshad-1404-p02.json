@@ -1,0 +1,132 @@
+{
+  "paperId": "arshad-1404-p02",
+  "degree": "arshad",
+  "year": 1404,
+  "groupCodes": ["1101", "1102", "1104", "1105", "1106", "1107", "1108", "1111", "1112", "1113", "1114", "1115", "1116", "1130", "1132", "1152", "1203", "1257", "1259", "1263", "1264", "1272", "1277", "1283", "1294", "1352", "1357", "1358", "1360", "1364", "1509"],
+  "bookletCount": 31,
+  "source": { "file": "1101-1404.pdf", "pages": [2, 3] },
+  "extractedBy": { "model": "claude-sonnet-5", "at": "2026-09-14" },
+  "questions": [
+    {
+      "no": 1,
+      "part": "vocabulary",
+      "stem": "One theory holds that humans became highly ..... because evolution selected those of our forefathers who were especially good at solving problems.",
+      "options": ["successive", "concerned", "passionate", "intelligent"],
+      "optionLemmas": ["successive", "concerned", "passionate", "intelligent"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "intelligent",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "vocabulary",
+      "stem": "Is it true that the greenhouse ....., the feared heating of the earth's atmosphere by burning coal and oil, is just another false alarm?",
+      "options": ["effect", "energy", "force", "warmth"],
+      "optionLemmas": ["effect", "energy", "force", "warmth"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "effect",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "vocabulary",
+      "stem": "In most people, the charitable and ..... motives operate in some reasonable kind of balance.",
+      "options": ["obvious", "high", "selfish", "prime"],
+      "optionLemmas": ["obvious", "high", "selfish", "prime"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "selfish",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "vocabulary",
+      "stem": "Whatever the immediate ..... of the Nigerian-led intervention, West African diplomats said the long-term impact of recent events in Sierra Leone would be disastrous.",
+      "options": ["reciprocity", "outcome", "reversal", "meditation"],
+      "optionLemmas": ["reciprocity", "outcome", "reversal", "meditation"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "outcome",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "vocabulary",
+      "stem": "The last thing I would wish to do is to ..... a sense of ill will, deception or animosity in an otherwise idyllic environment.",
+      "options": ["postpone", "accuse", "foster", "divest"],
+      "optionLemmas": ["postpone", "accuse", "foster", "divest"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "foster",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "vocabulary",
+      "stem": "While the movie offers unsurpassed action, ..... script makes this the least of the three \"Die Hards.\"",
+      "options": ["an auspicious", "a stirring", "an edifying", "a feeble"],
+      "optionLemmas": ["auspicious", "stirring", "edifying", "feeble"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "feeble",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "vocabulary",
+      "stem": "Relations between Communist China and the Soviet Union have unfortunately begun to ..... again after a period of relative restraint in their ideological quarrel. We can only hope that common sense prevails again.",
+      "options": ["ameliorate", "deteriorate", "solemnize", "petrify"],
+      "optionLemmas": ["ameliorate", "deteriorate", "solemnize", "petrify"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "deteriorate",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "Before the 1970s, the Olympic Games were officially limited to competitors with amateur status, but in the 1980s, many events ..... to professional athletes.",
+      "options": ["to be opened", "that were opening", "were opened", "opening"],
+      "optionLemmas": ["open", "open", "open", "open"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "open",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "grammar",
+      "stem": "The ancient Olympic Games included several of the sports ..... of the Summer Games program, which at times has included events in as many as 32 different sports.",
+      "options": ["that are now part", "which now being part", "now are parts", "had now been parts"],
+      "optionLemmas": ["part", "part", "part", "part"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "part",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "grammar",
+      "stem": "In 1924, the Winter Games were sanctioned for winter sports. ..... regarded as the world's foremost sports competition.",
+      "options": ["The Olympic Games came to have been", "The Olympic Games have come to be", "The fact is the Olympic Games to be", "That the Olympic Games have been"],
+      "optionLemmas": ["come", "come", "be", "be"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "come",
+      "uncertain": []
+    }
+  ],
+  "uncertain": []
+}

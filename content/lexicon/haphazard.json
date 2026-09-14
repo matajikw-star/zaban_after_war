@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "haphazard",
+  "lemma": "haphazard",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1404-p04",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 1,
+      "surface": "haphazard",
+      "year": 1404
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1404": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1404,
+    "lastYear": 1404,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "haphazard"
+  ],
+  "synonyms": [],
+  "translations": []
+}

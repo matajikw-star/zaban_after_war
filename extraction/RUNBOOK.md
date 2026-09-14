@@ -138,6 +138,12 @@ subagents** and the orchestrator's context barely grows.
 Do not run the orchestrator on Opus. It reads nothing hard; you would be paying
 Opus rates to run `python`.
 
+**Nothing picks the model for you.** `.claude/settings.json` sets `"model":
+"opus"`, so every new session starts on Opus — type `/model sonnet` first thing
+in an extraction session. The subagents are unaffected either way: their model
+is pinned in `.claude/agents/exam-extractor.md`, so the orchestrator's model
+changes the cost of orchestrating and nothing about the transcription.
+
 ### When to start a fresh session
 
 One year per session is the intended rhythm, and the cheapest one. Start a

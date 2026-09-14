@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "quibble",
+  "lemma": "quibble",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1404-p04",
+      "part": "vocabulary",
+      "questionNo": 12,
+      "reach": 1,
+      "surface": "quibble",
+      "year": 1404
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1404": 1
+    },
+    "byYear": {
+      "1404": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1404,
+    "lastYear": 1404,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "quibble"
+  ],
+  "synonyms": [],
+  "translations": []
+}

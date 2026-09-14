@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "feline",
+  "lemma": "feline",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1404-p06",
+      "part": "vocabulary",
+      "questionNo": 26,
+      "reach": 1,
+      "surface": "feline",
+      "year": 1404
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1404": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1404,
+    "lastYear": 1404,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "feline"
+  ],
+  "synonyms": [],
+  "translations": []
+}

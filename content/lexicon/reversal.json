@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "reversal",
+  "lemma": "reversal",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1404-p02",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 31,
+      "surface": "reversal",
+      "year": 1404
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1404": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1404,
+    "lastYear": 1404,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "reversal"
+  ],
+  "synonyms": [],
+  "translations": []
+}

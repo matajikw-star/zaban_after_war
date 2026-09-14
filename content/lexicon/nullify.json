@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "nullify",
+  "lemma": "nullify",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1404-p03",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 28,
+      "surface": "nullify",
+      "year": 1404
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1404": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1404,
+    "lastYear": 1404,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "nullify"
+  ],
+  "synonyms": [],
+  "translations": []
+}

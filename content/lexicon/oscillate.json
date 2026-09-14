@@ -1,0 +1,48 @@
+{
+  "examples": [],
+  "id": "oscillate",
+  "lemma": "oscillate",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1404-p04",
+      "part": "vocabulary",
+      "questionNo": 12,
+      "reach": 1,
+      "surface": "oscillate",
+      "year": 1404
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1404-p05",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 1,
+      "surface": "oscillates",
+      "year": 1404
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1404": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1404,
+    "lastYear": 1404,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "oscillate",
+    "oscillates"
+  ],
+  "synonyms": [],
+  "translations": []
+}

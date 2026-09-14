@@ -22,22 +22,33 @@
       "reach": 1,
       "surface": "emulate",
       "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1401-p05",
+      "part": "vocabulary",
+      "questionNo": 30,
+      "reach": 1,
+      "surface": "emulate",
+      "year": 1401
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1401": 1,
       "1402": 1,
       "1405": 1
     },
-    "distinctYears": 2,
-    "firstYear": 1402,
+    "distinctYears": 3,
+    "firstYear": 1401,
     "lastYear": 1405,
-    "priority": 6,
+    "priority": 9,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 2,
-    "timesTested": 2
+    "timesAsDistractor": 3,
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [

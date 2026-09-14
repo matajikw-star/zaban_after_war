@@ -1,0 +1,47 @@
+{
+  "examples": [],
+  "id": "unforeseeable",
+  "lemma": "unforeseeable",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1401-p01",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 58,
+      "surface": "unforeseeable",
+      "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1401-p03",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 31,
+      "surface": "unforeseeable",
+      "year": 1401
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1401": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1401,
+    "lastYear": 1401,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "unforeseeable"
+  ],
+  "synonyms": [],
+  "translations": []
+}

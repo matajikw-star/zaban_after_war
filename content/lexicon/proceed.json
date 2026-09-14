@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "proceed",
+  "lemma": "proceed",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1401-p01",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 58,
+      "surface": "proceeds",
+      "year": 1401
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1401": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1401,
+    "lastYear": 1401,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "proceeds"
+  ],
+  "synonyms": [],
+  "translations": []
+}

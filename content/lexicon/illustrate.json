@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "illustrate",
+  "lemma": "illustrate",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1401-p02",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 34,
+      "surface": "illustrate",
+      "year": 1401
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1401": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1401,
+    "lastYear": 1401,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "illustrate"
+  ],
+  "synonyms": [],
+  "translations": []
+}

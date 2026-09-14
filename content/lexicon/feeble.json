@@ -12,6 +12,16 @@
       "reach": 31,
       "surface": "a feeble",
       "year": 1404
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1401-p02",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 34,
+      "surface": "feeble",
+      "year": 1401
     }
   ],
   "pos": [],
@@ -20,19 +30,21 @@
       "1404": 1
     },
     "byYear": {
+      "1401": 1,
       "1404": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1404,
+    "distinctYears": 2,
+    "firstYear": 1401,
     "lastYear": 1404,
-    "priority": 5,
+    "priority": 8,
     "timesAsAnswer": 1,
-    "timesAsDistractor": 0,
-    "timesTested": 1
+    "timesAsDistractor": 1,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
-    "a feeble"
+    "a feeble",
+    "feeble"
   ],
   "synonyms": [],
   "translations": []

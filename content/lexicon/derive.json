@@ -32,27 +32,40 @@
       "reach": 29,
       "surface": "derives",
       "year": 1402
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 0,
+      "paperId": "arshad-1401-p02",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 34,
+      "surface": "derive",
+      "year": 1401
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {
+      "1401": 1,
       "1402": 1
     },
     "byYear": {
+      "1401": 1,
       "1402": 2,
       "1404": 1
     },
-    "distinctYears": 2,
-    "firstYear": 1402,
+    "distinctYears": 3,
+    "firstYear": 1401,
     "lastYear": 1404,
-    "priority": 9,
-    "timesAsAnswer": 1,
+    "priority": 14,
+    "timesAsAnswer": 2,
     "timesAsDistractor": 2,
-    "timesTested": 3
+    "timesTested": 4
   },
   "status": "draft",
   "surfaceForms": [
+    "derive",
     "derived",
     "derives"
   ],

@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "pretension",
+  "lemma": "pretension",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1401-p03",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 31,
+      "surface": "pretension",
+      "year": 1401
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1401": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1401,
+    "lastYear": 1401,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "pretension"
+  ],
+  "synonyms": [],
+  "translations": []
+}

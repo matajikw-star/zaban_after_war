@@ -22,21 +22,34 @@
       "reach": 1,
       "surface": "genuine",
       "year": 1405
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 0,
+      "paperId": "arshad-1401-p01",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 58,
+      "surface": "genuine",
+      "year": 1401
     }
   ],
   "pos": [],
   "stats": {
-    "answersByYear": {},
+    "answersByYear": {
+      "1401": 1
+    },
     "byYear": {
+      "1401": 1,
       "1405": 2
     },
-    "distinctYears": 1,
-    "firstYear": 1405,
+    "distinctYears": 2,
+    "firstYear": 1401,
     "lastYear": 1405,
-    "priority": 4,
-    "timesAsAnswer": 0,
+    "priority": 9,
+    "timesAsAnswer": 1,
     "timesAsDistractor": 2,
-    "timesTested": 2
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [

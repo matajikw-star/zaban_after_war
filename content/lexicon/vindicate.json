@@ -22,28 +22,41 @@
       "reach": 1,
       "surface": "vindicate",
       "year": 1403
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 0,
+      "paperId": "arshad-1402-p05",
+      "part": "vocabulary",
+      "questionNo": 17,
+      "reach": 1,
+      "surface": "vindicated",
+      "year": 1402
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {
+      "1402": 1,
       "1405": 1
     },
     "byYear": {
+      "1402": 1,
       "1403": 1,
       "1405": 1
     },
-    "distinctYears": 2,
-    "firstYear": 1403,
+    "distinctYears": 3,
+    "firstYear": 1402,
     "lastYear": 1405,
-    "priority": 8,
-    "timesAsAnswer": 1,
+    "priority": 13,
+    "timesAsAnswer": 2,
     "timesAsDistractor": 1,
-    "timesTested": 2
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [
-    "vindicate"
+    "vindicate",
+    "vindicated"
   ],
   "synonyms": [],
   "translations": []

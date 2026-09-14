@@ -12,6 +12,16 @@
       "reach": 54,
       "surface": "pursue",
       "year": 1404
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1402-p06",
+      "part": "vocabulary",
+      "questionNo": 17,
+      "reach": 1,
+      "surface": "pursuing",
+      "year": 1402
     }
   ],
   "pos": [],
@@ -20,19 +30,21 @@
       "1404": 1
     },
     "byYear": {
+      "1402": 1,
       "1404": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1404,
+    "distinctYears": 2,
+    "firstYear": 1402,
     "lastYear": 1404,
-    "priority": 5,
+    "priority": 8,
     "timesAsAnswer": 1,
-    "timesAsDistractor": 0,
-    "timesTested": 1
+    "timesAsDistractor": 1,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
-    "pursue"
+    "pursue",
+    "pursuing"
   ],
   "synonyms": [],
   "translations": []

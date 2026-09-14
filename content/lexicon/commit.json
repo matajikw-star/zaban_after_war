@@ -12,26 +12,39 @@
       "reach": 1,
       "surface": "committed to",
       "year": 1403
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1402-p06",
+      "part": "vocabulary",
+      "questionNo": 19,
+      "reach": 1,
+      "surface": "commit",
+      "year": 1402
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {
+      "1402": 1,
       "1403": 1
     },
     "byYear": {
+      "1402": 1,
       "1403": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1403,
+    "distinctYears": 2,
+    "firstYear": 1402,
     "lastYear": 1403,
-    "priority": 5,
-    "timesAsAnswer": 1,
+    "priority": 10,
+    "timesAsAnswer": 2,
     "timesAsDistractor": 0,
-    "timesTested": 1
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
+    "commit",
     "committed to"
   ],
   "synonyms": [],

@@ -1,0 +1,47 @@
+{
+  "examples": [],
+  "id": "diversity",
+  "lemma": "diversity",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1402-p03",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 29,
+      "surface": "diversity",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1402-p06",
+      "part": "vocabulary",
+      "questionNo": 24,
+      "reach": 1,
+      "surface": "diversity",
+      "year": 1402
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1402": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1402,
+    "lastYear": 1402,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "diversity"
+  ],
+  "synonyms": [],
+  "translations": []
+}

@@ -1,0 +1,687 @@
+{
+  "paperId": "arshad-1402-p05",
+  "degree": "arshad",
+  "year": 1402,
+  "groupCodes": [
+    "1121"
+  ],
+  "bookletCount": 1,
+  "source": {
+    "file": "1121-1402.pdf",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "extractedBy": {
+    "model": "claude-sonnet-5",
+    "at": "2026-09-14"
+  },
+  "questions": [
+    {
+      "no": 1,
+      "part": "grammar",
+      "stem": "By the Roman times, plumbing ..... to bring the river to inland settlements—though wastewater still flowed back out into the same rivers that might elsewhere be used for drinking.",
+      "options": [
+        "invented",
+        "was to be invented",
+        "would have been invented",
+        "had been invented"
+      ],
+      "optionLemmas": [
+        "invent",
+        "invent",
+        "invent",
+        "invent"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "invent",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "grammar",
+      "stem": "One of the world's most prestigious inventors, Thomas Alva Edison, ..... to introduce the idea of cabinets and other furniture made out of concrete.",
+      "options": [
+        "creator of the light bulb and the phonograph, tried",
+        "created the light bulb and the phonograph by trying",
+        "who created a light bulb and phonograph when trying",
+        "the creator of the light bulb and the phonograph, who tried"
+      ],
+      "optionLemmas": [
+        "try",
+        "create",
+        "create",
+        "try"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "try",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "grammar",
+      "stem": "The number of hamburgers sold ..... in the summer is shown in the previous chart.",
+      "options": [
+        "by a stand on the beach of a given week",
+        "at a stand near the beach for a given week",
+        "on a given week near the beach at a stand",
+        "for a given week near the beach by a stand"
+      ],
+      "optionLemmas": [
+        "stand",
+        "stand",
+        "stand",
+        "stand"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "stand",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "grammar",
+      "stem": "Discussion of personal income is generally seen as impolite when among people who are not close friends, as it can easily be interpreted as either bragging, whining, ......",
+      "options": [
+        "or attempting to make the other party feel inferior",
+        "which is an attempt made for the other party feel inferior",
+        "who attempt to make a feeling of inferiority in the other party",
+        "when attempts are made that the other party has an inferiority feeling"
+      ],
+      "optionLemmas": [
+        "attempt",
+        "attempt",
+        "attempt",
+        "attempt"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "attempt",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "grammar",
+      "stem": "..... is primarily composed of keratin, a protein, which grows out through the skin from follicles deep within the dermis.",
+      "options": [
+        "Hair is defined biologically that",
+        "Hair, being defined biologically",
+        "Defined biologically, hair",
+        "Biologically defining hair"
+      ],
+      "optionLemmas": [
+        "define",
+        "define",
+        "define",
+        "define"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "define",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "grammar",
+      "stem": "They cite Eriksson's ..... in relation to known areas where bog irons could have been extracted.",
+      "options": [
+        "1962's plots map of locations of major settlements and",
+        "map in 1962 that plot locations of major settlements",
+        "map of 1962 plot locations of major settlements are",
+        "1962 map that plots locations of major settlements"
+      ],
+      "optionLemmas": [
+        "map",
+        "map",
+        "map",
+        "map"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "map",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "grammar",
+      "stem": "....., the Narrative is for this reason the most comprehensive one of slavery in the English language.",
+      "options": [
+        "Arresting is today as in 1845",
+        "Today as arresting as 1845",
+        "As arresting today as in 1845",
+        "In 1845 was as arresting as in today"
+      ],
+      "optionLemmas": [
+        "arrest",
+        "arrest",
+        "arrest",
+        "arrest"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "arrest",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "..... illustrated by a study of fourteen such models.",
+      "options": [
+        "Clouds, that represented the weakest elements in climate models, was",
+        "The weakest elements in climate models, clouds represented and",
+        "That clouds represented the weakest elements in climate models was",
+        "The weakest elements in climate models as clouds represented and"
+      ],
+      "optionLemmas": [
+        "represent",
+        "represent",
+        "represent",
+        "represent"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "represent",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "vocabulary",
+      "stem": "Since Matt did not follow the instructions, his chemistry experiment produced a ..... scent that led to the evacuation of the laboratory.",
+      "options": [
+        "tenacious",
+        "fetid",
+        "rotund",
+        "condescending"
+      ],
+      "optionLemmas": [
+        "tenacious",
+        "fetid",
+        "rotund",
+        "condescending"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "fetid",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "vocabulary",
+      "stem": "When the teacher saw Kate trying to ..... her schoolwork, he threatened to keep her in at recess.",
+      "options": [
+        "rue",
+        "protract",
+        "shirk",
+        "emulate"
+      ],
+      "optionLemmas": [
+        "rue",
+        "protract",
+        "shirk",
+        "emulate"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "shirk",
+      "uncertain": []
+    },
+    {
+      "no": 11,
+      "part": "vocabulary",
+      "stem": "I am ..... emotion. I have been ever since I can remember, which is helpful when people appeal to my sympathy. I don't seem to have any.",
+      "options": [
+        "extreme for",
+        "unpredictable in",
+        "indispensable to",
+        "immune to"
+      ],
+      "optionLemmas": [
+        "extreme",
+        "unpredictable",
+        "indispensable",
+        "immune"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "immune",
+      "uncertain": []
+    },
+    {
+      "no": 12,
+      "part": "vocabulary",
+      "stem": "He felt that the stars had been ..... by the sound of the black jets and that in the morning the earth would be covered with their dust like a strange snow.",
+      "options": [
+        "veiled",
+        "pulverized",
+        "expatriated",
+        "gerrymandered"
+      ],
+      "optionLemmas": [
+        "veil",
+        "pulverize",
+        "expatriate",
+        "gerrymander"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "pulverize",
+      "uncertain": []
+    },
+    {
+      "no": 13,
+      "part": "vocabulary",
+      "stem": "But my night was wretched, my rest broken: the ground was damp, the air cold: besides, intruders passed near me more than once, and I had again and again to change my quarters: no sense of safety or tranquility ..... me.",
+      "options": [
+        "befriended",
+        "estranged",
+        "rehashed",
+        "regressed"
+      ],
+      "optionLemmas": [
+        "befriend",
+        "estrange",
+        "rehash",
+        "regress"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "befriend",
+      "uncertain": []
+    },
+    {
+      "no": 14,
+      "part": "vocabulary",
+      "stem": "Phoning at two o'clock in the morning, walking in without knocking, eating out of our refrigerator, and calling my great-grandmother \"Babe\"—all these have made me realize that Joshua is a real ......",
+      "options": [
+        "naysayer",
+        "pushover",
+        "braggart",
+        "boor"
+      ],
+      "optionLemmas": [
+        "naysayer",
+        "pushover",
+        "braggart",
+        "boor"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "boor",
+      "uncertain": []
+    },
+    {
+      "no": 15,
+      "part": "vocabulary",
+      "stem": "Unlike the carefully weighted and planned compositions of Dante, Goethe's writings have always the sense of ..... and enthusiasm.",
+      "options": [
+        "superfluity",
+        "salience",
+        "insouciance",
+        "immediacy"
+      ],
+      "optionLemmas": [
+        "superfluity",
+        "salience",
+        "insouciance",
+        "immediacy"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "immediacy",
+      "uncertain": [
+        "q15: 'immediacy' vs 'insouciance' both defensible readings of the contrast with Dante's carefully planned compositions"
+      ]
+    },
+    {
+      "no": 16,
+      "part": "vocabulary",
+      "stem": "The valedictorian's rancid remarks about the school's curriculum ..... the principal at the graduation ceremony.",
+      "options": [
+        "embellished",
+        "proselytized",
+        "embarrassed",
+        "sparked"
+      ],
+      "optionLemmas": [
+        "embellish",
+        "proselytize",
+        "embarrass",
+        "spark"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "embarrass",
+      "uncertain": []
+    },
+    {
+      "no": 17,
+      "part": "vocabulary",
+      "stem": "Ben was ..... for missing his varsity basketball game when he produced a note from his dentist, detailing his emergency root canal.",
+      "options": [
+        "vindicated",
+        "variegated",
+        "vaunted",
+        "vilified"
+      ],
+      "optionLemmas": [
+        "vindicate",
+        "variegate",
+        "vaunt",
+        "vilify"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "vindicate",
+      "uncertain": []
+    },
+    {
+      "no": 18,
+      "part": "vocabulary",
+      "stem": "A ..... by avocation, Charlene loved to visit the Franklin Mint, D.C., because it had a famous collection of rare and antique coins.",
+      "options": [
+        "lepidopterist",
+        "deltiologist",
+        "paleontologist",
+        "numismatist"
+      ],
+      "optionLemmas": [
+        "lepidopterist",
+        "deltiologist",
+        "paleontologist",
+        "numismatist"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "numismatist",
+      "uncertain": []
+    },
+    {
+      "no": 19,
+      "part": "vocabulary",
+      "stem": "The humorous story may be spun out to great ....., and may wander around as much as it pleases, and arrive nowhere in particular.",
+      "options": [
+        "extent",
+        "range",
+        "length",
+        "stock"
+      ],
+      "optionLemmas": [
+        "extent",
+        "range",
+        "length",
+        "stock"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "length",
+      "uncertain": []
+    },
+    {
+      "no": 20,
+      "part": "vocabulary",
+      "stem": "Clare stood her ..... during the meeting and refused to be intimidated even when others got angry with her point of view.",
+      "options": [
+        "chin",
+        "ground",
+        "rank",
+        "stake"
+      ],
+      "optionLemmas": [
+        "chin",
+        "ground",
+        "rank",
+        "stake"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "ground",
+      "uncertain": []
+    },
+    {
+      "no": 21,
+      "part": "vocabulary",
+      "stem": "He once had artistic aspiration, but he's ..... himself to a career of office drudgery.",
+      "options": [
+        "resigned",
+        "relinquished",
+        "reverted",
+        "resorted"
+      ],
+      "optionLemmas": [
+        "resign",
+        "relinquish",
+        "revert",
+        "resort"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "resign",
+      "uncertain": []
+    },
+    {
+      "no": 22,
+      "part": "vocabulary",
+      "stem": "During the Black Friday sales, customers rush through stores ..... merchandise up at incredibly low prices.",
+      "options": [
+        "writing",
+        "burning",
+        "shoring",
+        "snapping"
+      ],
+      "optionLemmas": [
+        "write",
+        "burn",
+        "shore",
+        "snap"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "snap",
+      "uncertain": []
+    },
+    {
+      "no": 23,
+      "part": "vocabulary",
+      "stem": "Part of living a greener and more environmentally friendly lifestyle involves looking at ways that we can reduce our carbon ......",
+      "options": [
+        "trace",
+        "track",
+        "spoor",
+        "footprint"
+      ],
+      "optionLemmas": [
+        "trace",
+        "track",
+        "spoor",
+        "footprint"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "footprint",
+      "uncertain": []
+    },
+    {
+      "no": 24,
+      "part": "cloze",
+      "stem": "Although numbers of animals in a given region may fluctuate from year to year, the fluctuations are often temporary and, over long periods, ......",
+      "options": [
+        "evenhanded",
+        "stratified",
+        "trivial",
+        "perilous"
+      ],
+      "optionLemmas": [
+        "evenhanded",
+        "stratified",
+        "trivial",
+        "perilous"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "trivial",
+      "uncertain": []
+    },
+    {
+      "no": 25,
+      "part": "grammar",
+      "stem": "The first theory attributes a relatively constant population to periodic climatic catastrophes that decimate populations ..... from exceeding some particular limit.",
+      "options": [
+        "with such frequency so as to prevent them",
+        "which prevents them frequently",
+        "and their frequency which prevents them",
+        "that are prevented, with such frequency"
+      ],
+      "optionLemmas": [
+        "prevent",
+        "prevent",
+        "prevent",
+        "prevent"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "prevent",
+      "uncertain": []
+    },
+    {
+      "no": 26,
+      "part": "grammar",
+      "stem": "In the case of small organisms with short life cycles, climatic changes need not be catastrophic: ..... in photoperiod (daily amount of sunlight), for example, can govern population growth.",
+      "options": [
+        "with normal seasonal changes",
+        "there are normal seasonal changes",
+        "in normal seasonal changes",
+        "normal seasonal changes"
+      ],
+      "optionLemmas": [
+        "change",
+        "change",
+        "change",
+        "change"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "change",
+      "uncertain": []
+    },
+    {
+      "no": 27,
+      "part": "cloze",
+      "stem": "This theory—the density-independent view—asserts that climatic factors ..... the same regulatory effect on population regardless of the number of individuals in a region.",
+      "options": [
+        "elicit",
+        "exert",
+        "embark",
+        "endue"
+      ],
+      "optionLemmas": [
+        "elicit",
+        "exert",
+        "embark",
+        "endue"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "exert",
+      "uncertain": []
+    },
+    {
+      "no": 28,
+      "part": "grammar",
+      "stem": "A second theory argues that population growth is primarily density-dependent—that is, the rate of growth of a population in a region decreases ......",
+      "options": [
+        "with the number of animals increase",
+        "and increases the number of animals",
+        "for the number of animals increase",
+        "as the number of animals increases"
+      ],
+      "optionLemmas": [
+        "increase",
+        "increase",
+        "increase",
+        "increase"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "increase",
+      "uncertain": []
+    },
+    {
+      "no": 29,
+      "part": "cloze",
+      "stem": "For example, as numbers increase, the food supply would probably diminish, which would increase ......",
+      "options": [
+        "fecundity",
+        "density",
+        "mortality",
+        "austerity"
+      ],
+      "optionLemmas": [
+        "fecundity",
+        "density",
+        "mortality",
+        "austerity"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "mortality",
+      "uncertain": []
+    },
+    {
+      "no": 30,
+      "part": "grammar",
+      "stem": "Other regulators include physiological control mechanisms: for example, Christian and Davis have demonstrated ..... may bring about hormonal changes in the pituitary and adrenal glands that in turn may regulate population.",
+      "options": [
+        "a rise in numbers that result from being crowded",
+        "the crowding, that is resulted from a rise in numbers,",
+        "how the crowding that results from a rise in numbers",
+        "from a rise in numbers that results from the crowding"
+      ],
+      "optionLemmas": [
+        "crowd",
+        "crowd",
+        "crowd",
+        "crowd"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "crowd",
+      "uncertain": []
+    }
+  ],
+  "uncertain": []
+}

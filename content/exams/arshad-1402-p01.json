@@ -1,0 +1,132 @@
+{
+  "paperId": "arshad-1402-p01",
+  "degree": "arshad",
+  "year": 1402,
+  "groupCodes": ["1103", "1109", "1119", "1125", "1127", "1137", "1138", "1139", "1144", "1146", "1202", "1205", "1209", "1213", "1214", "1215", "1216", "1217", "1218", "1219", "1253", "1255", "1256", "1262", "1273", "1276", "1279", "1285", "1286", "1287", "1290", "1292", "1293", "1295", "1314", "1322", "1323", "1324", "1325", "1350", "1351", "1353", "1356", "1359", "1361", "1362", "1363", "1501", "1502", "1503", "1504", "1505", "1506", "1507", "1510", "1511"],
+  "bookletCount": 56,
+  "source": { "file": "1103-1402.pdf", "pages": [2, 3] },
+  "extractedBy": { "model": "claude-sonnet-5", "at": "2026-09-14" },
+  "questions": [
+    {
+      "no": 1,
+      "part": "vocabulary",
+      "stem": "When you ..... a meeting, it is important to speak clearly, confidently and at a good pace.",
+      "options": ["assess", "propagate", "address", "impress"],
+      "optionLemmas": ["assess", "propagate", "address", "impress"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "address",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "vocabulary",
+      "stem": "People like the newly proposed system, but because of the costs involved we do not believe it is ....., and we need to look for other options.",
+      "options": ["compliant", "defensive", "ingenuous", "viable"],
+      "optionLemmas": ["compliant", "defensive", "ingenuous", "viable"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "viable",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "vocabulary",
+      "stem": "The country in question is very poor, and one in seven children dies in ..... .",
+      "options": ["infancy", "nutrition", "malfunction", "mortality"],
+      "optionLemmas": ["infancy", "nutrition", "malfunction", "mortality"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "mortality",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "vocabulary",
+      "stem": "I don't consider myself to be particularly ....., but when I'm given a job, I make sure it gets done.",
+      "options": ["industrious", "spontaneous", "risky", "unexceptional"],
+      "optionLemmas": ["industrious", "spontaneous", "risky", "unexceptional"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "industrious",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "vocabulary",
+      "stem": "The new airliner is more environmentally-friendly than other aircraft, its only ..... being its limited flying range.",
+      "options": ["demand", "drawback", "controversy", "attribute"],
+      "optionLemmas": ["demand", "drawback", "controversy", "attribute"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "drawback",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "vocabulary",
+      "stem": "The celebrity will ..... assistance from the police to keep stalkers away from his property.",
+      "options": ["extend", "invoke", "absolve", "withdraw"],
+      "optionLemmas": ["extend", "invoke", "absolve", "withdraw"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "invoke",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "vocabulary",
+      "stem": "When plates in the Earth's crust slide or grind against one another, an earthquake with devastating consequences may be ..... .",
+      "options": ["derived", "surpassed", "triggered", "traced"],
+      "optionLemmas": ["derive", "surpass", "trigger", "trace"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "trigger",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "The new species was named Maiacetus inuus, which means \"mother whale,\" ..... in the family Protocetidae.",
+      "options": ["placed", "that placed", "was placed", "and was placed"],
+      "optionLemmas": ["place", "place", "place", "place"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "place",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "grammar",
+      "stem": "Assignment to a new species was justified due to critical differences from other protocetid whales, such as solidly co-ossified left and right dentaries (lower jaws), ..... in the ankle, and significant disparity in hind limb elements.",
+      "options": ["there were variations", "varying", "variations", "which varied"],
+      "optionLemmas": ["variation", "vary", "variation", "vary"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "variation",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "grammar",
+      "stem": "The fossils show ..... this new species' length is unimpressive relative to some extant (living) whales, but still, Maiacetus inuus measures a respectable 2.6 meters.",
+      "options": ["when", "that", "although", "for"],
+      "optionLemmas": ["when", "that", "although", "for"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "that",
+      "uncertain": []
+    }
+  ],
+  "uncertain": []
+}

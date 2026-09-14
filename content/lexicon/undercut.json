@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "undercut",
+  "lemma": "undercut",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1402-p03",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 29,
+      "surface": "undercut",
+      "year": 1402
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1402": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1402,
+    "lastYear": 1402,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "undercut"
+  ],
+  "synonyms": [],
+  "translations": []
+}

@@ -22,21 +22,34 @@
       "reach": 1,
       "surface": "incipient",
       "year": 1403
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 0,
+      "paperId": "arshad-1402-p02",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 32,
+      "surface": "incipient",
+      "year": 1402
     }
   ],
   "pos": [],
   "stats": {
-    "answersByYear": {},
+    "answersByYear": {
+      "1402": 1
+    },
     "byYear": {
+      "1402": 1,
       "1403": 2
     },
-    "distinctYears": 1,
-    "firstYear": 1403,
+    "distinctYears": 2,
+    "firstYear": 1402,
     "lastYear": 1403,
-    "priority": 4,
-    "timesAsAnswer": 0,
+    "priority": 9,
+    "timesAsAnswer": 1,
     "timesAsDistractor": 2,
-    "timesTested": 2
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [

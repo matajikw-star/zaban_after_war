@@ -1,0 +1,47 @@
+{
+  "examples": [],
+  "id": "proselytize",
+  "lemma": "proselytize",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1402-p04",
+      "part": "vocabulary",
+      "questionNo": 14,
+      "reach": 1,
+      "surface": "proselytized",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1402-p05",
+      "part": "vocabulary",
+      "questionNo": 16,
+      "reach": 1,
+      "surface": "proselytized",
+      "year": 1402
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1402": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1402,
+    "lastYear": 1402,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "proselytized"
+  ],
+  "synonyms": [],
+  "translations": []
+}

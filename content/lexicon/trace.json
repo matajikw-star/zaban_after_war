@@ -12,24 +12,47 @@
       "reach": 1,
       "surface": "traces",
       "year": 1404
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1402-p01",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 56,
+      "surface": "traced",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1402-p05",
+      "part": "vocabulary",
+      "questionNo": 23,
+      "reach": 1,
+      "surface": "trace",
+      "year": 1402
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1402": 2,
       "1404": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1404,
+    "distinctYears": 2,
+    "firstYear": 1402,
     "lastYear": 1404,
-    "priority": 3,
+    "priority": 7,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesAsDistractor": 3,
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [
+    "trace",
+    "traced",
     "traces"
   ],
   "synonyms": [],

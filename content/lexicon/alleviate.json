@@ -12,24 +12,38 @@
       "reach": 1,
       "surface": "alleviated",
       "year": 1405
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1402-p03",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 29,
+      "surface": "alleviate",
+      "year": 1402
     }
   ],
   "pos": [],
   "stats": {
-    "answersByYear": {},
+    "answersByYear": {
+      "1402": 1
+    },
     "byYear": {
+      "1402": 1,
       "1405": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1405,
+    "distinctYears": 2,
+    "firstYear": 1402,
     "lastYear": 1405,
-    "priority": 3,
-    "timesAsAnswer": 0,
+    "priority": 8,
+    "timesAsAnswer": 1,
     "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
+    "alleviate",
     "alleviated"
   ],
   "synonyms": [],

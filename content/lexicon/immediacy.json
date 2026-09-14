@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "immediacy",
+  "lemma": "immediacy",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1402-p05",
+      "part": "vocabulary",
+      "questionNo": 15,
+      "reach": 1,
+      "surface": "immediacy",
+      "year": 1402
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1402": 1
+    },
+    "byYear": {
+      "1402": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1402,
+    "lastYear": 1402,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "immediacy"
+  ],
+  "synonyms": [],
+  "translations": []
+}

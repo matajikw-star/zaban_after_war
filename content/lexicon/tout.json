@@ -12,25 +12,39 @@
       "reach": 1,
       "surface": "tout",
       "year": 1403
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 2,
+      "paperId": "arshad-1402-p04",
+      "part": "vocabulary",
+      "questionNo": 14,
+      "reach": 1,
+      "surface": "touted",
+      "year": 1402
     }
   ],
   "pos": [],
   "stats": {
-    "answersByYear": {},
+    "answersByYear": {
+      "1402": 1
+    },
     "byYear": {
+      "1402": 1,
       "1403": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1403,
+    "distinctYears": 2,
+    "firstYear": 1402,
     "lastYear": 1403,
-    "priority": 3,
-    "timesAsAnswer": 0,
+    "priority": 8,
+    "timesAsAnswer": 1,
     "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
-    "tout"
+    "tout",
+    "touted"
   ],
   "synonyms": [],
   "translations": []

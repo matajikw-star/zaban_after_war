@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "expire",
+  "lemma": "expire",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 0,
+      "paperId": "arshad-1402-p04",
+      "part": "vocabulary",
+      "questionNo": 11,
+      "reach": 1,
+      "surface": "expire",
+      "year": 1402
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1402": 1
+    },
+    "byYear": {
+      "1402": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1402,
+    "lastYear": 1402,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "expire"
+  ],
+  "synonyms": [],
+  "translations": []
+}

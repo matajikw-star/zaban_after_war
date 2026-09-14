@@ -6,6 +6,7 @@ produces an answer worth keeping.
 ## Project knowledge
 
 - [Post-mortem of v1](../docs/postmortem-v1.md) — what the test build got wrong, and why.
+- [Product brief](../docs/plan/product-brief.md) — the owner's product statement, decoded into R1-R12 and the decisions it forces.
 - [Roadmap](../docs/plan/roadmap.md) — phases, milestones, and the work breakdown.
 - [Infrastructure](../docs/plan/infrastructure.md) — hosting, cost, deployment, backups.
 - [Content pipeline](../docs/plan/content-pipeline.md) — how a scanned exam becomes lexicon data.

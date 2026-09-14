@@ -106,11 +106,19 @@ def main() -> int:
         print("  python extraction/scripts/s2_cluster.py")
     elif any(c.get("pending") for c in by_year.values()):
         pend = sum(c.get("pending", 0) for c in by_year.values())
-        print(f"  /extract-next 6      ({pend} papers pending)")
+        # A year is the unit the owner works in: one command finishes one year
+        # and leaves the corpus in a state a cold session can read off disk.
+        nxt = max(y for y, c in by_year.items() if c.get("pending"))
+        print(f"  /complete-year {nxt}   "
+              f"({by_year[nxt]['pending']} papers pending in {nxt}, "
+              f"{pend} in all)")
     elif unrouted_years:
+        print(f"  /complete-year {unrouted_years[0]}   "
+              f"(not routed yet - the command runs S1 and S2 for it first)")
         nxt = unrouted_years[:5]
-        print(f"  python extraction/scripts/s1_route.py --years {min(nxt)}-{max(nxt)} --workers 12")
-        print("  then: python extraction/scripts/s2_cluster.py")
+        print("  or route a whole block yourself, then come back:")
+        print(f"    python extraction/scripts/s1_route.py --years {min(nxt)}-{max(nxt)} --workers 12")
+        print("    python extraction/scripts/s2_cluster.py")
     else:
         print("  nothing pending - the whole corpus is extracted")
     return 0

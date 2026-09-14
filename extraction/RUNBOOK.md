@@ -32,7 +32,7 @@ python -m pip install pymupdf rapidocr-onnxruntime
 
 That is the whole dependency list. Both are offline, CPU-only, no CDN, no API.
 
-Then **restart Claude Code once**. `/extract-next` and the `exam-extractor`
+Then **restart Claude Code once**. `/complete-year`, `/extract-next` and the `exam-extractor`
 subagent are read from `.claude/` when a session starts, so a session that was
 already open when they were added will not see them.
 
@@ -103,18 +103,29 @@ corpus.) The newest block alone is enough to start building the app.
 Open a Claude Code session in this repo and type:
 
 ```
-/extract-next 6
+/complete-year 1404
 ```
 
-That is the whole instruction. The command file
-(`.claude/commands/extract-next.md`) carries the procedure; you do not have to
-remember it or re-explain it. It renders the next pending papers, hands each to
-its own subagent, cross-checks the results, folds them into the lexicon, and
-commits.
+That is the whole instruction. **A year is the unit of work.** The command file
+(`.claude/commands/complete-year.md`) carries the procedure; you do not have to
+remember it or re-explain it. It routes and clusters the year if that has not
+happened, renders every pending paper, hands each to its own subagent,
+cross-checks the results, folds them into the lexicon, commits, and reports.
 
-Repeat `/extract-next 6` until it reports nothing pending. You can do this
-several times in one session — the orchestrator's context barely grows, because
-**page images only ever live inside subagents**.
+Leave the year off and it takes the newest unfinished one:
+
+```
+/complete-year
+```
+
+Nothing is handed between sessions. The next one runs `status.py`, reads
+`extraction/state/` off disk, and continues — which is the entire reason state
+lives there. So the loop for the rest of the corpus is: open a session, type
+`/complete-year`, read the scoreboard, close the session. Once per year of exams.
+
+`/extract-next 6` still exists for a smaller bite — half a year, or a retry —
+and can be repeated in one session, because **page images only ever live inside
+subagents** and the orchestrator's context barely grows.
 
 ### Which model
 
@@ -122,19 +133,21 @@ several times in one session — the orchestrator's context barely grows, becaus
 |---|---|---|
 | The session you type in | **Sonnet 5** | It runs scripts and dispatches. It never reads a page. |
 | `exam-extractor` subagents | **Sonnet 5** (set in the agent file) | Enough for clean printed scans, and the free cross-check catches its misses. |
-| Re-run of a flagged paper | **Opus 5** | Only papers the cross-check disputed — a handful. `/extract-next` does this automatically. |
+| Re-run of a flagged paper | **Opus 5** | Only papers the cross-check disputed — a handful. The command does this automatically. |
 
 Do not run the orchestrator on Opus. It reads nothing hard; you would be paying
 Opus rates to run `python`.
 
 ### When to start a fresh session
 
-When `/extract-next` finishes a batch and you want to keep going, just run it
-again. Start a **new** session when:
+One year per session is the intended rhythm, and the cheapest one. Start a
+**new** session when:
 
-- the context indicator says you are past ~60%, or
-- you have run more than about ten batches, or
-- you are switching to a different five-year block.
+- a year is finished and committed — just open a new one and type
+  `/complete-year` again, or
+- the context indicator says you are past ~60% mid-year. Let the current wave
+  finish and commit; re-running `/complete-year <year>` resumes the same year
+  from disk.
 
 There is nothing to hand over. The next session runs `status.py`, sees exactly
 where things stand from `extraction/state/`, and continues. That is the point of
@@ -145,11 +158,11 @@ keeping all state on disk.
 Type this and nothing else:
 
 ```
-/extract-next
+/complete-year
 ```
 
-If there is free local work outstanding instead, it will say so and stop rather
-than burning tokens.
+It works out which year is next — including a year that still needs routing, in
+which case it starts the free local pass itself and tells you the wait.
 
 ---
 
@@ -218,7 +231,36 @@ only the rare standalone "Structure and Written Expression" block.
 
 ## 7. Adding the older years later
 
-Nothing special. Run §2 for the next block, then §3. The lexicon is a fold over
-everything in `content/exams/`, so a word first seen in 1403 simply gains
-occurrences when 1396 lands — its id, and every user's progress against it, are
-untouched.
+Nothing special, and nothing to remember: `/complete-year 1397`, then `1396`,
+one per session whenever there is time. The command runs the free local passes
+for a year that has not been routed, so §2 is an optimisation — route a whole
+five-year block overnight and the years that follow start at step 3 — not a
+prerequisite.
+
+This is safe to do months apart because of three properties, and it is worth
+knowing which ones you are relying on:
+
+- **The lexicon is a fold** over everything in `content/exams/`, so a word first
+  seen in 1403 simply gains occurrences when 1396 lands. Every frequency and
+  priority is recomputed from scratch, never patched.
+- **Word ids are frozen**, so a user's progress survives that recount untouched.
+- **Paper ids stay on their cluster** (ADR-0009), so re-clustering a corpus that
+  grew by a year does not renumber what is already extracted.
+
+What *does* change when an old year lands is the **ranking** of words by
+priority — a word at priority 3 today may be priority 1 once five more years are
+in. That is the system working, not drifting: the ordering is derived from the
+counts, and nothing user-facing is keyed on it.
+
+## 8. Context vocabulary — deliberately not yet
+
+Words in a question's stem that were never one of the four options (`ability`,
+`knowledge`, `score`) get no lexicon entry today. They are not lost: every stem
+is stored verbatim in `content/exams/*.json`, and since ADR-0010 every stem word
+is corroborated against the local OCR like an option is.
+
+Choosing which of them earn an entry is a **separate pass that runs once, after
+the years are in** — it reads the stored stems as text, never the scans, so it
+sees all ~830 questions at once and can use repetition as evidence instead of
+guessing paper by paper. Do not add it to an extraction session; the ticket is
+`.scratch/stem-vocab/issues/01`.

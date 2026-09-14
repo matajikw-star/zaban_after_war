@@ -22,6 +22,7 @@ from common import CONTENT, OCR_CACHE, STATE, read_jsonl, scope_pages, write_jso
 
 FUZZ = 0.85       # per-word similarity floor
 FLAG_RATIO = 0.9  # a paper below this share of matched options gets flagged
+STEM_FLAG_RATIO = 0.9  # same, for the words of the question stems
 
 
 def ocr_tokens(booklet_id: str, pages: list[int]) -> set[str]:
@@ -51,6 +52,7 @@ def check_paper(exam: dict, route: dict) -> dict:
     pages = scope_pages(route)
     toks = ocr_tokens(route["bookletId"], pages)
     misses, total = [], 0
+    stem_misses, stem_total = [], 0
     for q in exam.get("questions", []):
         for i, opt in enumerate(q.get("options") or []):
             if opt is None:
@@ -60,16 +62,32 @@ def check_paper(exam: dict, route: dict) -> dict:
             words = re.findall(r"[A-Za-z]{3,}", opt)
             if words and not all(word_present(w, toks) for w in words):
                 misses.append({"q": q.get("no"), "option": i, "text": opt})
+        # The stem is first-class data, not context for the options: it is the
+        # real exam sentence the learner is shown, and it is the pool a later
+        # pass picks context vocabulary from (ADR-0010). A hallucinated word in
+        # an unverified stem would walk straight into the lexicon, so a stem is
+        # corroborated word by word exactly like an option.
+        for w in re.findall(r"[A-Za-z]{3,}", q.get("stem") or ""):
+            stem_total += 1
+            if not word_present(w, toks):
+                stem_misses.append({"q": q.get("no"), "word": w})
     matched = total - len(misses)
     ratio = matched / total if total else 1.0
+    stem_matched = stem_total - len(stem_misses)
+    stem_ratio = stem_matched / stem_total if stem_total else 1.0
+    ok = ratio >= FLAG_RATIO and stem_ratio >= STEM_FLAG_RATIO
     return {
         "paperId": exam["paperId"],
         "options": total,
         "matched": matched,
         "ratio": round(ratio, 3),
+        "stemWords": stem_total,
+        "stemMatched": stem_matched,
+        "stemRatio": round(stem_ratio, 3),
         "ocrPages": len(pages),
-        "status": "ok" if ratio >= FLAG_RATIO else "flagged",
+        "status": "ok" if ok else "flagged",
         "misses": misses[:40],
+        "stemMisses": stem_misses[:40],
     }
 
 
@@ -106,10 +124,13 @@ def main() -> int:
     print("status:", dict(Counter(r["status"] for r in results)))
     for r in sorted(results, key=lambda x: x["ratio"]):
         if r["status"] != "ok":
-            print(f"\n{r['paperId']}  matched {r.get('matched')}/{r.get('options')} "
-                  f"({r['ratio']:.0%})  -> re-extract on Opus")
+            print(f"\n{r['paperId']}  options {r.get('matched')}/{r.get('options')} "
+                  f"({r['ratio']:.0%})  stems {r.get('stemMatched')}/{r.get('stemWords')} "
+                  f"({r.get('stemRatio', 0):.0%})  -> re-extract on Opus")
             for m in r["misses"][:8]:
                 print(f"    q{m['q']} option {m['option'] + 1}: {m['text']!r}")
+            for m in r.get("stemMisses", [])[:8]:
+                print(f"    q{m['q']} stem word: {m['word']!r}")
     return 0
 
 

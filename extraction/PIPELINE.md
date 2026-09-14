@@ -118,6 +118,25 @@ contains those words, fuzzy-matched and **order-free** — testing OCR only wher
 OCR is strong. A paper below 90% corroboration is re-extracted once on Opus, then
 escalated to the owner. No loops.
 
+The same check runs over every word of every **stem**, at the same floor, for the
+reasons in ADR-0010: the stem is the sentence the learner is shown and the pool
+context vocabulary is later drawn from, so an unverified stem would put a
+hallucinated word straight into the lexicon. Measured across the seven 1405
+papers: 97–100% of stem words corroborated, every miss an OCR failure on a proper
+noun or a short word rather than a model error.
+
+### Context vocabulary — captured now, judged later
+
+Stem words that are never one of the four options are real konkour vocabulary
+with no lexicon entry today. They are not lost: the stem is stored verbatim, so
+the words are on disk and only the judgment about them is missing.
+
+That judgment is deliberately **not** S4's. S4 sees one paper and would have to
+guess which words matter; a later pass reads all ~830 stored stems as text and
+can use repetition across years as evidence. It is also revocable — re-running it
+costs the price of the text (~20k tokens for eight years), while getting it wrong
+inside S4 would cost a re-read of every page image. See ADR-0010.
+
 ## Data contracts
 
 **`extraction/state/`** — pipeline state, committed, append-only in spirit.
@@ -127,7 +146,7 @@ escalated to the owner. No loops.
 | `booklets.jsonl` | PDF in the corpus | S0 |
 | `routes.jsonl` | booklet: its English page numbers, and where its reading and grammar sit | S1 |
 | `papers.jsonl` | distinct English paper, with its members and `extraction` status | S2 / `status.py` |
-| `crosscheck.jsonl` | extracted paper, with disputed options | S5 |
+| `crosscheck.jsonl` | extracted paper, with disputed options and stem words | S5 |
 
 **`extraction/cache/`** — gitignored and fully regenerable: OCR text per page,
 rendered PNGs per paper.

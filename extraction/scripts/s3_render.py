@@ -14,6 +14,7 @@ feature arrives, this turns that address into images without anyone reopening
 the corpus by hand. It is not part of the extraction batch.
 
     python extraction/scripts/s3_render.py --paper arshad-1403-p01
+    python extraction/scripts/s3_render.py --year 1404     # a whole year's pending
     python extraction/scripts/s3_render.py --next 4        # next pending papers
     python extraction/scripts/s3_render.py --booklet 1103-1405 --reading
 """
@@ -79,6 +80,8 @@ def main() -> int:
     ap.add_argument("--reading", action="store_true",
                     help="render the booklet's reading pages instead of the exam scope")
     ap.add_argument("--next", type=int, default=0, help="render the N next pending papers")
+    ap.add_argument("--year", type=int, default=0,
+                    help="render every pending paper of one year (the /complete-year unit)")
     ap.add_argument("--force", action="store_true")
     a = ap.parse_args()
 
@@ -98,10 +101,20 @@ def main() -> int:
         if not sel:
             print(f"Unknown paperId {a.paper}")
             return 1
+    elif a.year:
+        sel = [p for p in papers
+               if p["year"] == a.year and p.get("extraction") == "pending"]
+        if not sel:
+            done = [p for p in papers if p["year"] == a.year]
+            print(f"Nothing pending for {a.year}"
+                  + (f" - all {len(done)} papers are done." if done else
+                     " - no papers clustered for that year yet."))
+            return 0
     elif a.next:
         sel = [p for p in papers if p.get("extraction") == "pending"][:a.next]
     else:
-        print("Pass --paper <id>, --next <n>, or --booklet <id> --reading.")
+        print("Pass --paper <id>, --year <year>, --next <n>, "
+              "or --booklet <id> --reading.")
         return 1
 
     for p in sel:

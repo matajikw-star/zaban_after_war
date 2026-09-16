@@ -5,8 +5,13 @@ requirements and the decisions it forces. This is the input to the build specifi
 coding agent will execute. It supersedes nothing in `docs/adr/`; where it conflicts with an ADR,
 the conflict is called out here and resolved by a new ADR, not silently.
 
-Status: **brief captured, decisions open.** Do not start building against this file until
-`## Open decisions` is empty or explicitly deferred.
+Status (2026-09-16): **decisions substantially closed.** Rounds 1-6 below settle D1-D12 and
+Q13-Q38; five product questions (Q33-Q37) and two owner-action items (SMS provider, VPS) remain.
+This file is a *decision log*, not a build specification — it is the input to `docs/spec/`, which
+does not exist yet. Before any production work starts, the schema layer must be brought in line:
+`packages/core/src/types.ts` still carries the superseded interval ladder and `wordId`, ADR-0003
+documents the old intervals, ADR-0004 assumes Zarinpal is the only payment source, and CONTEXT.md
+has no vocabulary for conquered / weight / high-water mark / presentation.
 
 ---
 
@@ -329,6 +334,90 @@ Rough first-season shape at that price: ~520k candidates, 1-3% reaching an insta
 first-year app, 3-6% of those converting — on the order of 150-900 sales, 40-260 million toman. A
 real return for one season, not a living. Season two is where the number moves, which is the
 argument for shipping in Aban rather than waiting for 1407.
+
+### Settled in round 7 (2026-09-16)
+
+- **Q33 — measure the funnel.** Cohort queries over synced review events for registered users,
+  self-hosted Umami on the same VPS for the site, and a **first-party milestone beacon** from the
+  app: a fixed, documented event list (`first_open`, `onboarding_done`, `first_review`,
+  `reviews_10`, `paywall_shown`, `purchase_started`, `purchase_done`), sent to our own origin with
+  a random install id and queued while offline. The event list is fixed in the repo, never
+  free-form. It stays inside ADR-0005 because no third party is involved. Without it the pre-paywall
+  drop-off is invisible, which is the number that separates "wrong product" from "wrong price".
+- **Q34 — real-exam mode ships in the demo as specified** (one complete past paper, free, timed,
+  scored, with missed words offered into the deck), but **where and when it sits in the product is
+  deferred**. Inferred answer keys are not a concern for the owner — they will be reconciled
+  against Sanjesh's published keys later.
+  - **Later feature, recorded now:** a test unlocks once the user has reviewed all of its words,
+    and the app tells them «یک آزمون جدید داری که بلدی». Note this must be an in-app signal, not a
+    push notification, per Q32.
+- **Q35 — every word gets a generated example sentence; the verbatim exam stem is an addition, not
+  a replacement.** The reasoning, from the owner and confirmed against the corpus: a distractor
+  never appears in a sentence — the stem's blank takes the key — so for a distractor-only word
+  there is no exam sentence to show. **185 of the current 250 lexicon entries (74%) are
+  distractor-only.** Even for the quarter that were answers, a freshly authored example is still
+  generated, so every word has a sentence of the same provenance and quality.
+  - This **enlarges** the enrichment pipeline rather than shrinking it, and it sharpens CLAUDE.md
+    rule 4: the stem is the example *for answer-words*, alongside the authored one.
+  - Card layout: reveal shows translation plus a sentence; definition, hint and exam history behind
+    one tap; the exam badge («۴ بار در کنکور، آخرین بار ۱۴۰۳») on the front, under the word.
+  - **v1's hint template (`قالب / تداعی / جمله کمکی`) is kept verbatim** — proven, and a fixed set
+    of slots is what makes the two-pass agreement check from Q16 possible at all.
+- **Q36 — error reports and support live in PocketBase.** A collection carrying word id, field,
+  the user's note and the app version, reviewed in the admin UI, with a manual entitlement-grant
+  screen built at the same time.
+- **Q37 — the exam date passing triggers a season summary**, not silence and not a reset: a prompt
+  to update the date, the season's numbers (words conquered, days studied, reviews done), and at
+  that moment the referral code and a request for a Bazaar review. Every figure already exists.
+- **Q41 — the app's Persian name is deferred** (owner, 2026-09-16). The spec pack uses a
+  placeholder and must name the exact set of places it appears — manifest, TWA package id,
+  onboarding copy, store listing — so renaming later is a single mechanical change.
+- **Q36 (revised, settled 2026-09-17) — a report is a structured flag, not a form.** The user taps
+  «این کلمه اشکال داره» and picks one of three reasons (ترجمه اشتباهه / مثال اشتباهه / راهنما
+  بی‌ربطه). The flag rides **the same outbox as review events** — no new transport, no second
+  offline queue, no free text to moderate, no abuse surface beyond what sync already carries. The
+  owner reads it as a query.
+  - *Why not Telegram from the client:* a bot token in the app violates constitution rule 5, and
+    `api.telegram.org` is a foreign host most Iranian users cannot reach (ADR-0005's reasoning), so
+    reports would fail silently for exactly the target audience. Any Telegram path still has the
+    client talking to PocketBase first, which makes Telegram a *notification* layer rather than a
+    storage decision.
+  - *Why structured beats prose:* "eleven people say this translation is wrong" tells the enrichment
+    pipeline which word to regenerate; a paragraph does not. And the flag carries a **word id**,
+    which a screenshot in a chat never does.
+  - *Why it matters at all:* the Q5 answer ships words whose only quality gate is an automated
+    agreement check, in a product people paid 290,000 toman for. The flag is the safety net under
+    that decision.
+  - **Owner notification is deliberately deferred.** At launch scale the flags will trickle; a
+    nightly digest or a `pb_hook` Telegram relay is an isolated addition later, by which time we
+    will know whether the VPS can reach Telegram at all.
+- **Q39 — the owner is starting the SMS panel purchase now; the VPS follows shortly.**
+- **Q40 — the ADRs and the spec pack are written before any production session starts.** A
+  decision log records what was chosen; a builder needs type signatures, JSON schemas, screen
+  states and acceptance tests. The gap between the two is where an agent improvises, and
+  improvisation is what produced v1.
+
+### Measured, 2026-09-17 — the deferred unknowns are now known
+
+Extraction completed years 1398-1405. **58 papers, 1,776 distinct lexicon entries.** The estimates
+that several decisions were made against can now be replaced with counts.
+
+- **Corpus size: ~1,776 words**, at the low end of the 1,500-2,700 band projected from a single
+  year. The denominator the user sees is effectively settled.
+- **Cross-year repetition is low.** `distinctYears` is 1 for 1,518 entries (85%), 2 for 207, 3 for
+  44, 4 for 6, and 5 for exactly one word. **Only 15% of words were tested in more than one year.**
+  - *Product consequence:* «این کلمه ۴ بار در کنکور آمده» is a rare claim, not the usual one. The
+    exam badge must be designed for the common case — «۱ بار در کنکور، سال ۱۴۰۲» — which is still
+    specific and true, and still something no competitor can say. Copy written for the rare case
+    will look thin on 85% of cards.
+- **The Q27 decision rule fires, and raw weight survives it.** The rule was: switch to a dampened
+  weight if the bottom half of words by weight carries under ~25% of the total. Measured, the
+  bottom half carries **34.3%**, so the endgame will not feel dead and **raw `timesTested` stands**.
+- **Weighting still does the job the owner wanted, roughly doubling early progress.** `timesTested`
+  is 1 for 1,341 entries (75%) with a thin tail out to 11, total weight 2,586. Because the corpus
+  is ordered by exam value, the **top 20% of words carry 42% of the total weight** — so a user a
+  fifth of the way through the ordering is 42% of the way through the percentage, against 20% under
+  a plain count. Front-loaded, as intended, without a dampening function.
 
 ## 4. What this becomes
 

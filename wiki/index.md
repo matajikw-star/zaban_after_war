@@ -36,8 +36,13 @@ row, per booklet. A future reading feature starts there, not in the scans —
 
 Things nobody has answered yet. Each becomes a wiki page or an ADR once resolved.
 
-- Which of the 176 field codes and which years are in scope? 2241 papers is a different project
-  from 20 — see ADR-0006. Blocks M2 scoping.
-- What is the free-tier slice — how many words, chosen how?
-- Price point for premium, and whether it is one-off or a subscription.
-- Does a Zarinpal merchant account already exist for this domain?
+- The app's Persian name, which reaches the manifest, the TWA package id, onboarding copy and the
+  store listing. Deferred by the owner 2026-09-16; the spec pack uses a placeholder.
+- Which SMS provider, and how long OTP pattern approval takes. Purchase started 2026-09-16.
+- Whether an Iranian VPS can reach `api.telegram.org` without a proxy — decides whether owner
+  notification for content flags is a `pb_hook` relay or a nightly digest. Not on the launch path.
+
+Answered, kept here as pointers: years in scope are **1398-1405** (`docs/plan/product-brief.md`);
+the free slice is the first ~150 words by exam value with a 100-presentation soft paywall; the
+price is **290,000 toman one-off** (`wiki/market-and-pricing.md`); the Zarinpal merchant account is
+active as of 2026-09-10.

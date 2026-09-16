@@ -91,6 +91,37 @@ took the shortlist from 439 to 2,514 and recovered `buttress`, `nostalgic`,
 `obesity`, `overturn`, `persist`, `plaintiff`, `quarrel`, `realm`, `toil` and
 `tuition`, each of which appears in exactly one year.
 
+## Domain terms are a third verdict, tagged with their field
+
+Some stem words are hard and load-bearing and still not worth teaching to
+everyone: `Paleolithic`, `symbiotic`, `zooxanthellae`. They are the vocabulary of
+a discipline, not of konkour English. So the judging pass returns three verdicts,
+not two — `yes`, `no`, `domain-term` — and a domain term is kept, flagged, and
+attributed to the field codes of the papers it appeared in.
+
+This is the per-field *view* over shared content that `docs/plan/product-brief.md`
+R11 concluded was worth having at near-zero content cost, and onboarding already
+collects the candidate's field code (R7, Q25).
+
+The attribution is real because the corpus records it: `groupCodes` on every
+paper. Three field codes — **1110, 1121 and 1148** — sit their own English paper
+in almost every year (8, 8 and 6 of the 58 papers). Everyone else shares the
+general papers, where a word's field codes number up to 60 and say nothing.
+
+**The trap to avoid:** which paper a word appeared in is *not* evidence that it
+is a domain term. Of the 1,295 shortlist words that attribute to a narrow code
+set, most are ordinary words that merely happened to sit in a narrow paper —
+`anybody`, `amongst`, `animated`, `anxious` all attribute to 1121. Treating
+attribution as detection would repeat exactly the mistake this ADR corrects:
+mistaking a co-occurrence statistic for the judgment it cannot make.
+
+So: **the model decides whether a word is a domain term; the field codes only say
+whom it would matter to, once the model has said so.** The codes are recorded for
+every shortlist word regardless, as metadata.
+
+Note the codes are bare numbers. Nothing in the repo maps `1121` to a field name,
+and the app will need that mapping anyway for onboarding. Tracked separately.
+
 ## Nothing is discarded
 
 Every one of the 4,542 lemmas is classified and kept in

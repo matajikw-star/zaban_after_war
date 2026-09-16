@@ -50,6 +50,11 @@ EASY_RANK = 3000
 # one question still blocks it, however many years it appeared in.
 MIN_YEARS = 2
 
+# A word whose papers were sat by at most this many field codes is treated as
+# attributable to a discipline. Above it the paper was a general one and the
+# attribution says nothing.
+FIELD_SPECIFIC_MAX = 5
+
 # Function words carry no teaching value at any level; they are not "vocabulary"
 # in the sense this product means, so they never reach the bands.
 STOPWORDS = set(
@@ -214,9 +219,16 @@ def main() -> int:
     if not exam_files:
         sys.exit(f"no exam files under {EXAMS}")
 
+    # Which field codes (کد رشته) sat each paper. A word's field attribution is
+    # the union of the codes of the papers it appeared in: 28 of the 58 papers
+    # were sat by exactly one code, so a term seen only there is pinned to one
+    # discipline, while a term from `p01` (up to 60 codes) is simply general.
+    paper_codes: dict[str, list[str]] = {}
+
     for f in exam_files:
         d = json.loads(f.read_text(encoding="utf-8"))
         year, paper = d["year"], d["paperId"]
+        paper_codes[paper] = d.get("groupCodes") or []
         for q in d.get("questions", []):
             stem = q.get("stem") or ""
             for raw in re.findall(r"[A-Za-z][A-Za-z'\-]*", stem.lower()):
@@ -252,6 +264,20 @@ def main() -> int:
             band = "rare"            # outside the top 10k - likely academic
 
         inflected = lem.endswith(INFLECTION_ENDINGS) and rank is None
+
+        # Field attribution, carried only for words that can reach the lexicon.
+        # `specific` means every paper this word appeared in was sat by a narrow
+        # set of field codes, so a per-field view can show it to just those
+        # candidates (product-brief R11). `broad` means it came off a general
+        # paper and belongs to everyone.
+        if band in ("mid", "rare"):
+            codes = sorted({c for p in e["papers"] for c in paper_codes.get(p, [])})
+            field = {
+                "codes": codes,
+                "scope": "specific" if 0 < len(codes) <= FIELD_SPECIFIC_MAX else "broad",
+            }
+        else:
+            field = None
         rows.append(
             {
                 "lemma": lem,
@@ -263,6 +289,7 @@ def main() -> int:
                 "surfaces": sorted(e["surfaces"]),
                 "meetsYearFloor": len(e["years"]) >= MIN_YEARS,
                 "lemmaUncertain": inflected,
+                "field": field,
                 # Only the shortlist carries its example stem. Storing one for
                 # all ~4.5k lemmas made this file 2.5 MB of mostly `because`.
                 "example": e["example"] if band in ("mid", "rare") else None,

@@ -32,24 +32,36 @@
       "reach": 1,
       "surface": "repudiate",
       "year": 1403
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p03",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 30,
+      "surface": "repudiate",
+      "year": 1398
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {
+      "1398": 1,
       "1405": 1
     },
     "byYear": {
+      "1398": 1,
       "1403": 1,
       "1405": 2
     },
-    "distinctYears": 2,
-    "firstYear": 1403,
+    "distinctYears": 3,
+    "firstYear": 1398,
     "lastYear": 1405,
-    "priority": 9,
-    "timesAsAnswer": 1,
+    "priority": 14,
+    "timesAsAnswer": 2,
     "timesAsDistractor": 2,
-    "timesTested": 3
+    "timesTested": 4
   },
   "status": "draft",
   "surfaceForms": [

@@ -22,22 +22,33 @@
       "reach": 1,
       "surface": "ingenious",
       "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p01",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 58,
+      "surface": "ingenious",
+      "year": 1398
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1398": 1,
       "1400": 1,
       "1405": 1
     },
-    "distinctYears": 2,
-    "firstYear": 1400,
+    "distinctYears": 3,
+    "firstYear": 1398,
     "lastYear": 1405,
-    "priority": 6,
+    "priority": 9,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 2,
-    "timesTested": 2
+    "timesAsDistractor": 3,
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [

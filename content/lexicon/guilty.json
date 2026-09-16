@@ -12,27 +12,40 @@
       "reach": 28,
       "surface": "a guilty",
       "year": 1404
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p01",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 58,
+      "surface": "guilty",
+      "year": 1398
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {
+      "1398": 1,
       "1404": 1
     },
     "byYear": {
+      "1398": 1,
       "1404": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1404,
+    "distinctYears": 2,
+    "firstYear": 1398,
     "lastYear": 1404,
-    "priority": 5,
-    "timesAsAnswer": 1,
+    "priority": 10,
+    "timesAsAnswer": 2,
     "timesAsDistractor": 0,
-    "timesTested": 1
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
-    "a guilty"
+    "a guilty",
+    "guilty"
   ],
   "synonyms": [],
   "translations": []

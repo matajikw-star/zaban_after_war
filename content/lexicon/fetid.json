@@ -12,6 +12,16 @@
       "reach": 1,
       "surface": "fetid",
       "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p05",
+      "part": "vocabulary",
+      "questionNo": 11,
+      "reach": 1,
+      "surface": "fetid",
+      "year": 1398
     }
   ],
   "pos": [],
@@ -20,15 +30,16 @@
       "1402": 1
     },
     "byYear": {
+      "1398": 1,
       "1402": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1402,
+    "distinctYears": 2,
+    "firstYear": 1398,
     "lastYear": 1402,
-    "priority": 5,
+    "priority": 8,
     "timesAsAnswer": 1,
-    "timesAsDistractor": 0,
-    "timesTested": 1
+    "timesAsDistractor": 1,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [

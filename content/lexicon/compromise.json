@@ -22,6 +22,16 @@
       "reach": 1,
       "surface": "compromise",
       "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p01",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 58,
+      "surface": "compromise",
+      "year": 1398
     }
   ],
   "pos": [],
@@ -30,15 +40,16 @@
       "1400": 2
     },
     "byYear": {
+      "1398": 1,
       "1400": 2
     },
-    "distinctYears": 1,
-    "firstYear": 1400,
+    "distinctYears": 2,
+    "firstYear": 1398,
     "lastYear": 1400,
-    "priority": 8,
+    "priority": 11,
     "timesAsAnswer": 2,
-    "timesAsDistractor": 0,
-    "timesTested": 2
+    "timesAsDistractor": 1,
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [

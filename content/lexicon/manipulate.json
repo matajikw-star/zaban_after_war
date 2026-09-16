@@ -32,24 +32,36 @@
       "reach": 1,
       "surface": "manipulated",
       "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p05",
+      "part": "cloze",
+      "questionNo": 33,
+      "reach": 1,
+      "surface": "manipulate",
+      "year": 1398
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1398": 1,
       "1399": 3
     },
-    "distinctYears": 1,
-    "firstYear": 1399,
+    "distinctYears": 2,
+    "firstYear": 1398,
     "lastYear": 1399,
-    "priority": 5,
+    "priority": 8,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 3,
-    "timesTested": 3
+    "timesAsDistractor": 4,
+    "timesTested": 4
   },
   "status": "draft",
   "surfaceForms": [
+    "manipulate",
     "manipulated"
   ],
   "synonyms": [],

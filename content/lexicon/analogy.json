@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "analogy",
+  "lemma": "analogy",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 2,
+      "paperId": "arshad-1398-p03",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 30,
+      "surface": "analogy",
+      "year": 1398
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "analogy"
+  ],
+  "synonyms": [],
+  "translations": []
+}

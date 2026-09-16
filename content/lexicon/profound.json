@@ -12,6 +12,16 @@
       "reach": 1,
       "surface": "profoundly",
       "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1398-p01",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 58,
+      "surface": "profound",
+      "year": 1398
     }
   ],
   "pos": [],
@@ -20,18 +30,20 @@
       "1399": 1
     },
     "byYear": {
+      "1398": 1,
       "1399": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1399,
+    "distinctYears": 2,
+    "firstYear": 1398,
     "lastYear": 1399,
-    "priority": 5,
+    "priority": 8,
     "timesAsAnswer": 1,
-    "timesAsDistractor": 0,
-    "timesTested": 1
+    "timesAsDistractor": 1,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
+    "profound",
     "profoundly"
   ],
   "synonyms": [],

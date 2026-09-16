@@ -12,24 +12,36 @@
       "reach": 1,
       "surface": "vaunted",
       "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p05",
+      "part": "vocabulary",
+      "questionNo": 28,
+      "reach": 1,
+      "surface": "vaunt",
+      "year": 1398
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1398": 1,
       "1402": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1402,
+    "distinctYears": 2,
+    "firstYear": 1398,
     "lastYear": 1402,
-    "priority": 3,
+    "priority": 6,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesAsDistractor": 2,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
+    "vaunt",
     "vaunted"
   ],
   "synonyms": [],

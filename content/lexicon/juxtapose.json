@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "juxtapose",
+  "lemma": "juxtapose",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p05",
+      "part": "cloze",
+      "questionNo": 36,
+      "reach": 1,
+      "surface": "juxtaposing",
+      "year": 1398
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "juxtaposing"
+  ],
+  "synonyms": [],
+  "translations": []
+}

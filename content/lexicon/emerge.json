@@ -32,22 +32,33 @@
       "reach": 10,
       "surface": "emerged from",
       "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p01",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 58,
+      "surface": "emerged",
+      "year": 1398
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1398": 1,
       "1399": 2,
       "1401": 1
     },
-    "distinctYears": 2,
-    "firstYear": 1399,
+    "distinctYears": 3,
+    "firstYear": 1398,
     "lastYear": 1401,
-    "priority": 7,
+    "priority": 10,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 3,
-    "timesTested": 3
+    "timesAsDistractor": 4,
+    "timesTested": 4
   },
   "status": "draft",
   "surfaceForms": [

@@ -42,6 +42,16 @@
       "reach": 1,
       "surface": "peripheral",
       "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p05",
+      "part": "cloze",
+      "questionNo": 40,
+      "reach": 1,
+      "surface": "more peripheral",
+      "year": 1398
     }
   ],
   "pos": [],
@@ -50,19 +60,21 @@
       "1400": 1
     },
     "byYear": {
+      "1398": 1,
       "1399": 3,
       "1400": 1
     },
-    "distinctYears": 2,
-    "firstYear": 1399,
+    "distinctYears": 3,
+    "firstYear": 1398,
     "lastYear": 1400,
-    "priority": 10,
+    "priority": 13,
     "timesAsAnswer": 1,
-    "timesAsDistractor": 3,
-    "timesTested": 4
+    "timesAsDistractor": 4,
+    "timesTested": 5
   },
   "status": "draft",
   "surfaceForms": [
+    "more peripheral",
     "peripheral"
   ],
   "synonyms": [],

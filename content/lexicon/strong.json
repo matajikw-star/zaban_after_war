@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "strong",
+  "lemma": "strong",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p05",
+      "part": "cloze",
+      "questionNo": 40,
+      "reach": 1,
+      "surface": "stronger",
+      "year": 1398
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "stronger"
+  ],
+  "synonyms": [],
+  "translations": []
+}

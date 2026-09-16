@@ -12,6 +12,16 @@
       "reach": 1,
       "surface": "casual",
       "year": 1405
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p07",
+      "part": "cloze",
+      "questionNo": 189,
+      "reach": 1,
+      "surface": "casually",
+      "year": 1398
     }
   ],
   "pos": [],
@@ -20,19 +30,21 @@
       "1405": 1
     },
     "byYear": {
+      "1398": 1,
       "1405": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1405,
+    "distinctYears": 2,
+    "firstYear": 1398,
     "lastYear": 1405,
-    "priority": 5,
+    "priority": 8,
     "timesAsAnswer": 1,
-    "timesAsDistractor": 0,
-    "timesTested": 1
+    "timesAsDistractor": 1,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
-    "casual"
+    "casual",
+    "casually"
   ],
   "synonyms": [],
   "translations": []

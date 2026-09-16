@@ -12,24 +12,38 @@
       "reach": 1,
       "surface": "colloquially",
       "year": 1401
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p03",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 30,
+      "surface": "colloquial",
+      "year": 1398
     }
   ],
   "pos": [],
   "stats": {
-    "answersByYear": {},
+    "answersByYear": {
+      "1398": 1
+    },
     "byYear": {
+      "1398": 1,
       "1401": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1401,
+    "distinctYears": 2,
+    "firstYear": 1398,
     "lastYear": 1401,
-    "priority": 3,
-    "timesAsAnswer": 0,
+    "priority": 8,
+    "timesAsAnswer": 1,
     "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
+    "colloquial",
     "colloquially"
   ],
   "synonyms": [],

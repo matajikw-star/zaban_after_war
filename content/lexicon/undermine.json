@@ -22,21 +22,32 @@
       "reach": 1,
       "surface": "undermined",
       "year": 1404
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p07",
+      "part": "vocabulary",
+      "questionNo": 171,
+      "reach": 1,
+      "surface": "undermine",
+      "year": 1398
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1398": 1,
       "1404": 2
     },
-    "distinctYears": 1,
-    "firstYear": 1404,
+    "distinctYears": 2,
+    "firstYear": 1398,
     "lastYear": 1404,
-    "priority": 4,
+    "priority": 7,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 2,
-    "timesTested": 2
+    "timesAsDistractor": 3,
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [

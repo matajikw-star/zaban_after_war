@@ -22,6 +22,16 @@
       "reach": 1,
       "surface": "opulence",
       "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p05",
+      "part": "vocabulary",
+      "questionNo": 19,
+      "reach": 1,
+      "surface": "opulence",
+      "year": 1398
     }
   ],
   "pos": [],
@@ -30,16 +40,17 @@
       "1400": 1
     },
     "byYear": {
+      "1398": 1,
       "1400": 1,
       "1405": 1
     },
-    "distinctYears": 2,
-    "firstYear": 1400,
+    "distinctYears": 3,
+    "firstYear": 1398,
     "lastYear": 1405,
-    "priority": 8,
+    "priority": 11,
     "timesAsAnswer": 1,
-    "timesAsDistractor": 1,
-    "timesTested": 2
+    "timesAsDistractor": 2,
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [

@@ -1,0 +1,47 @@
+{
+  "examples": [],
+  "id": "sequence",
+  "lemma": "sequence",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p03",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 30,
+      "surface": "sequence",
+      "year": 1398
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p07",
+      "part": "cloze",
+      "questionNo": 176,
+      "reach": 1,
+      "surface": "sequence",
+      "year": 1398
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "sequence"
+  ],
+  "synonyms": [],
+  "translations": []
+}

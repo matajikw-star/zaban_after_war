@@ -1,0 +1,49 @@
+{
+  "examples": [],
+  "id": "hyperbole",
+  "lemma": "hyperbole",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p04",
+      "part": "vocabulary",
+      "questionNo": 16,
+      "reach": 1,
+      "surface": "hyperbole",
+      "year": 1398
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p05",
+      "part": "vocabulary",
+      "questionNo": 14,
+      "reach": 1,
+      "surface": "hyperbole",
+      "year": 1398
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 6,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 1,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "hyperbole"
+  ],
+  "synonyms": [],
+  "translations": []
+}

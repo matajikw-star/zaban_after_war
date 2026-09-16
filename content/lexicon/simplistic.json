@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "simplistic",
+  "lemma": "simplistic",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p01",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 58,
+      "surface": "simplistic",
+      "year": 1398
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "simplistic"
+  ],
+  "synonyms": [],
+  "translations": []
+}

@@ -32,27 +32,41 @@
       "reach": 1,
       "surface": "concern",
       "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p02",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 33,
+      "surface": "concerned",
+      "year": 1398
     }
   ],
   "pos": [],
   "stats": {
-    "answersByYear": {},
+    "answersByYear": {
+      "1398": 1
+    },
     "byYear": {
+      "1398": 1,
       "1400": 1,
       "1401": 1,
       "1404": 1
     },
-    "distinctYears": 3,
-    "firstYear": 1400,
+    "distinctYears": 4,
+    "firstYear": 1398,
     "lastYear": 1404,
-    "priority": 9,
-    "timesAsAnswer": 0,
+    "priority": 14,
+    "timesAsAnswer": 1,
     "timesAsDistractor": 3,
-    "timesTested": 3
+    "timesTested": 4
   },
   "status": "draft",
   "surfaceForms": [
-    "concern"
+    "concern",
+    "concerned"
   ],
   "synonyms": [],
   "translations": []

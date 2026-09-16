@@ -102,6 +102,16 @@
       "reach": 10,
       "surface": "Withdrawn",
       "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p07",
+      "part": "cloze",
+      "questionNo": 181,
+      "reach": 1,
+      "surface": "withdrew",
+      "year": 1398
     }
   ],
   "pos": [],
@@ -110,23 +120,25 @@
       "1400": 1
     },
     "byYear": {
+      "1398": 1,
       "1399": 4,
       "1400": 4,
       "1402": 2
     },
-    "distinctYears": 3,
-    "firstYear": 1399,
+    "distinctYears": 4,
+    "firstYear": 1398,
     "lastYear": 1402,
-    "priority": 18,
+    "priority": 21,
     "timesAsAnswer": 1,
-    "timesAsDistractor": 9,
-    "timesTested": 10
+    "timesAsDistractor": 10,
+    "timesTested": 11
   },
   "status": "draft",
   "surfaceForms": [
     "Withdrawn",
     "withdraw",
-    "withdrawn"
+    "withdrawn",
+    "withdrew"
   ],
   "synonyms": [],
   "translations": []

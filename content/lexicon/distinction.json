@@ -72,22 +72,33 @@
       "reach": 1,
       "surface": "distinction",
       "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p01",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 58,
+      "surface": "distinction",
+      "year": 1398
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1398": 1,
       "1399": 3,
       "1400": 4
     },
-    "distinctYears": 2,
-    "firstYear": 1399,
+    "distinctYears": 3,
+    "firstYear": 1398,
     "lastYear": 1400,
-    "priority": 11,
+    "priority": 14,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 7,
-    "timesTested": 7
+    "timesAsDistractor": 8,
+    "timesTested": 8
   },
   "status": "draft",
   "surfaceForms": [

@@ -22,6 +22,16 @@
       "reach": 1,
       "surface": "prevent",
       "year": 1403
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p01",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 58,
+      "surface": "prevent",
+      "year": 1398
     }
   ],
   "pos": [],
@@ -31,16 +41,17 @@
       "1405": 1
     },
     "byYear": {
+      "1398": 1,
       "1403": 1,
       "1405": 1
     },
-    "distinctYears": 2,
-    "firstYear": 1403,
+    "distinctYears": 3,
+    "firstYear": 1398,
     "lastYear": 1405,
-    "priority": 10,
+    "priority": 13,
     "timesAsAnswer": 2,
-    "timesAsDistractor": 0,
-    "timesTested": 2
+    "timesAsDistractor": 1,
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [

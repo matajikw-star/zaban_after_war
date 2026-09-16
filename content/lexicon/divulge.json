@@ -12,6 +12,16 @@
       "reach": 1,
       "surface": "divulge",
       "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p04",
+      "part": "vocabulary",
+      "questionNo": 17,
+      "reach": 1,
+      "surface": "divulging",
+      "year": 1398
     }
   ],
   "pos": [],
@@ -20,19 +30,21 @@
       "1400": 1
     },
     "byYear": {
+      "1398": 1,
       "1400": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1400,
+    "distinctYears": 2,
+    "firstYear": 1398,
     "lastYear": 1400,
-    "priority": 5,
+    "priority": 8,
     "timesAsAnswer": 1,
-    "timesAsDistractor": 0,
-    "timesTested": 1
+    "timesAsDistractor": 1,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
-    "divulge"
+    "divulge",
+    "divulging"
   ],
   "synonyms": [],
   "translations": []

@@ -22,27 +22,39 @@
       "reach": 1,
       "surface": "enforce",
       "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1398-p05",
+      "part": "cloze",
+      "questionNo": 36,
+      "reach": 1,
+      "surface": "enforcing",
+      "year": 1398
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1398": 1,
       "1399": 1,
       "1404": 1
     },
-    "distinctYears": 2,
-    "firstYear": 1399,
+    "distinctYears": 3,
+    "firstYear": 1398,
     "lastYear": 1404,
-    "priority": 6,
+    "priority": 9,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 2,
-    "timesTested": 2
+    "timesAsDistractor": 3,
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [
     "enforce",
-    "enforced"
+    "enforced",
+    "enforcing"
   ],
   "synonyms": [],
   "translations": []

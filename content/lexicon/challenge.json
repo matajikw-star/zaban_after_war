@@ -22,26 +22,40 @@
       "reach": 32,
       "surface": "challenging",
       "year": 1402
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p02",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 33,
+      "surface": "challenges",
+      "year": 1398
     }
   ],
   "pos": [],
   "stats": {
-    "answersByYear": {},
+    "answersByYear": {
+      "1398": 1
+    },
     "byYear": {
+      "1398": 1,
       "1402": 1,
       "1405": 1
     },
-    "distinctYears": 2,
-    "firstYear": 1402,
+    "distinctYears": 3,
+    "firstYear": 1398,
     "lastYear": 1405,
-    "priority": 6,
-    "timesAsAnswer": 0,
+    "priority": 11,
+    "timesAsAnswer": 1,
     "timesAsDistractor": 2,
-    "timesTested": 2
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [
     "challenge",
+    "challenges",
     "challenging"
   ],
   "synonyms": [],

@@ -12,25 +12,37 @@
       "reach": 54,
       "surface": "partake",
       "year": 1404
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1398-p03",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 30,
+      "surface": "partake of",
+      "year": 1398
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1398": 1,
       "1404": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1404,
+    "distinctYears": 2,
+    "firstYear": 1398,
     "lastYear": 1404,
-    "priority": 3,
+    "priority": 6,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesAsDistractor": 2,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
-    "partake"
+    "partake",
+    "partake of"
   ],
   "synonyms": [],
   "translations": []

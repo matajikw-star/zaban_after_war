@@ -1,0 +1,47 @@
+{
+  "examples": [],
+  "id": "interference",
+  "lemma": "interference",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p03",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 30,
+      "surface": "interference",
+      "year": 1398
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p07",
+      "part": "cloze",
+      "questionNo": 183,
+      "reach": 1,
+      "surface": "interference",
+      "year": 1398
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "interference"
+  ],
+  "synonyms": [],
+  "translations": []
+}

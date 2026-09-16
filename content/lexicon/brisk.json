@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "brisk",
+  "lemma": "brisk",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p07",
+      "part": "vocabulary",
+      "questionNo": 173,
+      "reach": 1,
+      "surface": "brisk",
+      "year": 1398
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "brisk"
+  ],
+  "synonyms": [],
+  "translations": []
+}

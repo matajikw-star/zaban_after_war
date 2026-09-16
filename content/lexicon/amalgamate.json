@@ -52,26 +52,38 @@
       "reach": 1,
       "surface": "amalgamate",
       "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1398-p04",
+      "part": "vocabulary",
+      "questionNo": 17,
+      "reach": 1,
+      "surface": "amalgamating",
+      "year": 1398
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1398": 1,
       "1400": 4,
       "1401": 1
     },
-    "distinctYears": 2,
-    "firstYear": 1400,
+    "distinctYears": 3,
+    "firstYear": 1398,
     "lastYear": 1401,
-    "priority": 9,
+    "priority": 12,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 5,
-    "timesTested": 5
+    "timesAsDistractor": 6,
+    "timesTested": 6
   },
   "status": "draft",
   "surfaceForms": [
-    "amalgamate"
+    "amalgamate",
+    "amalgamating"
   ],
   "synonyms": [],
   "translations": []

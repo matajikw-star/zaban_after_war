@@ -1,0 +1,47 @@
+{
+  "examples": [],
+  "id": "effortless",
+  "lemma": "effortless",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p02",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 33,
+      "surface": "effortless",
+      "year": 1398
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p07",
+      "part": "cloze",
+      "questionNo": 185,
+      "reach": 1,
+      "surface": "effortless",
+      "year": 1398
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "effortless"
+  ],
+  "synonyms": [],
+  "translations": []
+}

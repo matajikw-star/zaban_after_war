@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "relent",
+  "lemma": "relent",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p05",
+      "part": "vocabulary",
+      "questionNo": 13,
+      "reach": 1,
+      "surface": "relent",
+      "year": 1398
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "relent"
+  ],
+  "synonyms": [],
+  "translations": []
+}

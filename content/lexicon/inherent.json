@@ -22,24 +22,36 @@
       "reach": 10,
       "surface": "inherent",
       "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p03",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 30,
+      "surface": "Inherent",
+      "year": 1398
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1398": 1,
       "1399": 2
     },
-    "distinctYears": 1,
-    "firstYear": 1399,
+    "distinctYears": 2,
+    "firstYear": 1398,
     "lastYear": 1399,
-    "priority": 4,
+    "priority": 7,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 2,
-    "timesTested": 2
+    "timesAsDistractor": 3,
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [
+    "Inherent",
     "inherent"
   ],
   "synonyms": [],

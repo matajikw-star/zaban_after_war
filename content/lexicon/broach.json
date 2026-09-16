@@ -42,26 +42,39 @@
       "reach": 1,
       "surface": "broached",
       "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p04",
+      "part": "vocabulary",
+      "questionNo": 18,
+      "reach": 1,
+      "surface": "broach",
+      "year": 1398
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {
+      "1398": 1,
       "1400": 1
     },
     "byYear": {
+      "1398": 1,
       "1400": 4
     },
-    "distinctYears": 1,
-    "firstYear": 1400,
+    "distinctYears": 2,
+    "firstYear": 1398,
     "lastYear": 1400,
-    "priority": 8,
-    "timesAsAnswer": 1,
+    "priority": 13,
+    "timesAsAnswer": 2,
     "timesAsDistractor": 3,
-    "timesTested": 4
+    "timesTested": 5
   },
   "status": "draft",
   "surfaceForms": [
+    "broach",
     "broached"
   ],
   "synonyms": [],

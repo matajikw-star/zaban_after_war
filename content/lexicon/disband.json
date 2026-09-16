@@ -12,21 +12,34 @@
       "reach": 1,
       "surface": "disband",
       "year": 1404
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p05",
+      "part": "vocabulary",
+      "questionNo": 13,
+      "reach": 1,
+      "surface": "disband",
+      "year": 1398
     }
   ],
   "pos": [],
   "stats": {
-    "answersByYear": {},
+    "answersByYear": {
+      "1398": 1
+    },
     "byYear": {
+      "1398": 1,
       "1404": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1404,
+    "distinctYears": 2,
+    "firstYear": 1398,
     "lastYear": 1404,
-    "priority": 3,
-    "timesAsAnswer": 0,
+    "priority": 8,
+    "timesAsAnswer": 1,
     "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [

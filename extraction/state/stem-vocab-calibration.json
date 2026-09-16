@@ -1,0 +1,43 @@
+{
+  "note": "Calibration batch for the S8 judging pass. 30 words drawn stratified from the S7 shortlist (seed 42), judged by Opus against ADR-0011's criterion: a stem word earns a lexicon entry when a candidate plausibly does not know it AND the sentence leans on it. This file is the owner's review surface and the schema the full run will follow. It writes nothing to content/.",
+  "judgedBy": "claude-opus-5",
+  "date": "2026-09-17",
+  "criterion": "importance to understanding the question x plausibility the candidate does not know it",
+  "verdicts": {
+    "yes": "earns a lexicon entry as occurrenceType: context",
+    "no": "kept classified, not taught",
+    "domain-term": "hard and load-bearing, but the vocabulary of a discipline rather than of konkour English; kept and attributed to its field codes"
+  },
+  "words": [
+    { "lemma": "meal", "verdict": "no", "confidence": "high", "reason": "Basic vocabulary at any level. Its general rank of 5034 sat above the 3000 cutoff, which is evidence the cutoff is too low." },
+    { "lemma": "increasingly", "verdict": "no", "confidence": "high", "reason": "Transparent from `increase`, and the blank is elsewhere in the sentence." },
+    { "lemma": "largely", "verdict": "no", "confidence": "high", "reason": "Transparent from `large`." },
+    { "lemma": "accurate", "verdict": "no", "confidence": "high", "reason": "Common at B1." },
+    { "lemma": "coal", "verdict": "no", "confidence": "high", "reason": "Basic, and redundant in its sentence - the list `coal, oil and gas` carries itself." },
+    { "lemma": "lesson", "verdict": "no", "confidence": "high", "reason": "Basic." },
+    { "lemma": "publish", "verdict": "no", "confidence": "high", "reason": "Common academic word; the blank is a preposition." },
+    { "lemma": "mile", "verdict": "no", "confidence": "high", "reason": "Basic." },
+    { "lemma": "undertaken", "verdict": "yes", "confidence": "high", "reason": "`undertake` is above B2 and the clause turns on it: voyages `not undertaken from the view of amusement` is the sentence's whole claim.", "lemmaNote": "should fold to `undertake`" },
+    { "lemma": "exclude", "verdict": "yes", "confidence": "medium", "reason": "Load-bearing - misreading it inverts the sentence, which is about who the unemployment count leaves out." },
+    { "lemma": "observer", "verdict": "no", "confidence": "high", "reason": "Transparent from `observe`, and `to most observers` is framing, not content." },
+    { "lemma": "strongly", "verdict": "no", "confidence": "high", "reason": "Transparent from `strong`." },
+    { "lemma": "soil", "verdict": "no", "confidence": "low", "reason": "Load-bearing in its sentence, but common enough that most candidates have it. A genuine borderline call." },
+    { "lemma": "instructor", "verdict": "no", "confidence": "high", "reason": "Transparent from `instruct`." },
+    { "lemma": "attainable", "verdict": "yes", "confidence": "medium", "reason": "`attain` is worth teaching; the sentence glosses it in parentheses, which lowers how much it blocks comprehension." },
+    { "lemma": "climber", "verdict": "no", "confidence": "high", "reason": "Transparent from `climb`." },
+    { "lemma": "cling", "verdict": "yes", "confidence": "high", "reason": "Not known at B2, and `cling to the hope` is the emotional core the answer contrasts against." },
+    { "lemma": "emit", "verdict": "yes", "confidence": "high", "reason": "Academic vocabulary, and the whole sentence is about emission - the blank depends on reading it." },
+    { "lemma": "retire", "verdict": "no", "confidence": "high", "reason": "Well known. Absent from the frequency list, which shows the list has gaps and `rare` is not proof of difficulty." },
+    { "lemma": "destructive", "verdict": "no", "confidence": "medium", "reason": "Transparent from `destroy`." },
+    { "lemma": "thinkers", "verdict": "no", "confidence": "high", "reason": "Transparent from `think`.", "lemmaNote": "should fold to `thinker`" },
+    { "lemma": "jaws", "verdict": "no", "confidence": "medium", "reason": "Moderately known, and here it is itself the gloss for `dentaries` rather than the thing being leaned on.", "lemmaNote": "should fold to `jaw`" },
+    { "lemma": "troublesome", "verdict": "no", "confidence": "high", "reason": "Transparent from `trouble`." },
+    { "lemma": "zest", "verdict": "yes", "confidence": "high", "reason": "The clearest yes in the batch. The blank sits directly against it and the question cannot be answered without knowing zest means enthusiasm." },
+    { "lemma": "ridicule", "verdict": "yes", "confidence": "high", "reason": "Above B2 and carries the sentence's meaning - hostility or ridicule is what the slang is said to express." },
+    { "lemma": "meditative", "verdict": "yes", "confidence": "medium", "reason": "Hard, and the Coleridge/Wordsworth contrast depends on grasping it, though `and calm` partly glosses it." },
+    { "lemma": "defamation", "verdict": "yes", "confidence": "medium", "reason": "Hard, and common in general journalism rather than confined to law - so a yes rather than a domain term." },
+    { "lemma": "nitric", "verdict": "domain-term", "confidence": "high", "reason": "Chemistry. Appears only inside a bracketed gloss of `agua fortis`.", "fieldCodes": ["1121"] },
+    { "lemma": "situational", "verdict": "domain-term", "confidence": "medium", "reason": "`situational irony` is a literary-criticism term. Hard and load-bearing, but belongs to a discipline rather than to konkour English generally.", "fieldCodes": ["1121"] },
+    { "lemma": "evolutionary", "verdict": "no", "confidence": "medium", "reason": "Transparent from `evolution` and widely known in academic English." }
+  ]
+}

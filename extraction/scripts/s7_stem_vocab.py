@@ -38,9 +38,17 @@ FREQ_FILE = ROOT / "extraction" / "data" / "en-frequency-top10k.txt"
 OUT = ROOT / "extraction" / "state" / "stem-vocab.json"
 
 # Rank in the general-English frequency list at or below which a word counts as
-# baseline vocabulary an MA/PhD candidate already has. Tuned against the corpus:
-# see the band samples this script prints and docs/adr/0011.
-EASY_RANK = 3000
+# baseline vocabulary an MA/PhD candidate already has.
+#
+# Raised from 3000 to 5000 by the calibration batch
+# (extraction/state/stem-vocab-calibration.json). Of the 30 words judged, every
+# rejected word carrying a rank sat at 6533 or below, while the only accepted
+# words with a rank were `exclude` (6306) and `undertaken` (7211) - so the real
+# boundary is somewhere near 6000. 5000 is deliberately short of it: the sample
+# is 30 words and it is the same sample the number was read off, so a cutoff
+# placed exactly on the observed edge would be fitting to noise. A second,
+# independent batch would justify moving to 6000 and would drop ~150 more.
+EASY_RANK = 5000
 
 # Recorded, never used to gate. An earlier draft required 2+ distinct years as
 # "noise protection", but S5 already corroborates every stem word against

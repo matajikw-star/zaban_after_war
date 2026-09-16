@@ -1,0 +1,1603 @@
+[
+ {
+  "lemma": "intrusive",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p05",
+  "questionNo": 19,
+  "stem": "While the behavior of some officers at entry points can be .................... and intrusive, the problem of what America has become for visitors is owed to misconceived laws, not to people charged with border enforcement.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "intuition",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1398-p07",
+  "questionNo": 161,
+  "stem": "Isenberg's recent research on the cognitive processes of senior managers reveals that managers' intuition is neither of these. ..... , senior managers use intuition in at least five distinct ways.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "inuus",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1402-p01",
+  "questionNo": 8,
+  "stem": "The new species was named Maiacetus inuus, which means \"mother whale,\" ..... in the family Protocetidae.",
+  "lemmaUncertain": true
+ },
+ {
+  "lemma": "invasive",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p06",
+  "questionNo": 2,
+  "stem": "Urban development should avoid ..... wetlands through drainage, infill, water diversion, pollution or the introduction of invasive species.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "invented",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p02",
+  "questionNo": 5,
+  "stem": "The internet seems to have almost ..... every mode of communication ever invented!",
+  "lemmaUncertain": true
+ },
+ {
+  "lemma": "inventors",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p05",
+  "questionNo": 2,
+  "stem": "One of the world's most prestigious inventors, Thomas Alva Edison, ..... to introduce the idea of cabinets and other furniture made out of concrete.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "invest",
+  "band": "mid",
+  "generalRank": 6119,
+  "distinctYears": 3,
+  "occurrences": 3,
+  "paperId": "arshad-1398-p01",
+  "questionNo": 9,
+  "stem": "The promoters conducted a survey to study the ..... of the project before investing their money in it.",
+  "surfaces": [
+   "invest",
+   "investing"
+  ]
+ },
+ {
+  "lemma": "investigate",
+  "band": "mid",
+  "generalRank": 6098,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1398-p01",
+  "questionNo": 11,
+  "stem": "Some researchers investigated the effect of listening to music by Mozart ..... spatial reasoning, and the results were published in Nature.",
+  "surfaces": [
+   "investigated"
+  ]
+ },
+ {
+  "lemma": "irradiation",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p10",
+  "questionNo": 12,
+  "stem": "Although any destruction of vitamins caused by food irradiation could be counterbalanced by the use of diet supplements, but there may be no protection from carcinogens that some fear might be introduced into foods by the process.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "issuance",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p03",
+  "questionNo": 7,
+  "stem": "To avoid liability, officers were told that they need to ..... closely to established department rules and demonstrate that probable cause for an arrest or the issuance of a summons existed."
+ },
+ {
+  "lemma": "jam",
+  "band": "mid",
+  "generalRank": 5201,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p04",
+  "questionNo": 14,
+  "stem": "James Jackson, a retired English teacher, spent months at home ..... in gloomy thoughts, replaying wistful memories and berating the cruel and idiotic ways of the world and his fellow men.",
+  "surfaces": [
+   "james"
+  ],
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "jaws",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p01",
+  "questionNo": 9,
+  "stem": "Assignment to a new species was justified due to critical differences from other protocetid whales, such as solidly co-ossified left and right dentaries (lower jaws), ..... in the ankle, and significant disparity in hind limb elements.",
+  "lemmaUncertain": true
+ },
+ {
+  "lemma": "jen",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p02",
+  "questionNo": 7,
+  "stem": "Jen takes medicine at the first sight of a/an ..... headache; Lin, by contrast, resists taking medicine even when she's really sick."
+ },
+ {
+  "lemma": "jeremey",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p08",
+  "questionNo": 15,
+  "stem": "Jeremey seems to have found the secret of perpetual youth, and we all hope that he will long continue to demonstrate this youthful ..... .",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "jess",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p07",
+  "questionNo": 13,
+  "stem": "Jess had studied so hard for her exams that the end of exam week found her in a state of complete ....., barely able to do more than reach toward her bedside table for her mug of cocoa.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "jest",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p05",
+  "questionNo": 22,
+  "stem": "He said in jest that becoming a polyglot requires two things: a little hard work to learn extra languages and the ..... to dare to use them clumsily.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "joan",
+  "band": "mid",
+  "generalRank": 7034,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 25,
+  "stem": "Joan needs to take her ..... attitude elsewhere and realize that she is not queen of the world.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "joke",
+  "band": "mid",
+  "generalRank": 6598,
+  "distinctYears": 3,
+  "occurrences": 6,
+  "paperId": "arshad-1399-p07",
+  "questionNo": 20,
+  "stem": "Xiu's timely joke served to ..... the tension in the room, and the rest of the meeting was highly productive.",
+  "surfaces": [
+   "joke",
+   "joked",
+   "jokes"
+  ]
+ },
+ {
+  "lemma": "journalist",
+  "band": "mid",
+  "generalRank": 8935,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p11",
+  "questionNo": 12,
+  "stem": "The possibility that we humans are born to run has inspired many studies, books, lectures and there are debates in recent years, including the journalist Christopher McDougall's 2009 best seller, \"Born to Run.\"",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "jovial",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 4,
+  "paperId": "arshad-1400-p03",
+  "questionNo": 7,
+  "stem": "Although Mr. Jackson was ....., he attempted to be jovial so that his colleagues at the meeting wouldn't think there was a problem."
+ },
+ {
+  "lemma": "juncture",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p04",
+  "questionNo": 3,
+  "stem": "While we certainly don't know everything there is to know, ....., at this juncture we are in a position to do far better than the language-as-instinct thesis.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "jungle",
+  "band": "mid",
+  "generalRank": 7803,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1399-p01",
+  "questionNo": 2,
+  "stem": "Deserted for six months, the property began to look more like a jungle and less like a residence—weed grew ..... in the front yard."
+ },
+ {
+  "lemma": "jury",
+  "band": "mid",
+  "generalRank": 5868,
+  "distinctYears": 2,
+  "occurrences": 4,
+  "paperId": "arshad-1400-p02",
+  "questionNo": 10,
+  "stem": "It is often an attorney's job to construe the meaning of a contract and then share that ..... with a client and, if needed, with a judge or jury."
+ },
+ {
+  "lemma": "keratin",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p05",
+  "questionNo": 5,
+  "stem": "..... is primarily composed of keratin, a protein, which grows out through the skin from follicles deep within the dermis.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "kevlar",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p01",
+  "questionNo": 9,
+  "stem": "Kevlar is a ..... new material which is used for everything from airplane wings, to bullet-proof vests, to hockey sticks."
+ },
+ {
+  "lemma": "kilometers",
+  "band": "mid",
+  "generalRank": 8172,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p10",
+  "questionNo": 20,
+  "stem": "The HDR resource base is generally defined to include crustal rock that is hotter than 150°C, at depths less than ten kilometers, and can be drilled with presently available equipment.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "knave",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p05",
+  "questionNo": 8,
+  "stem": "No man is so much a fool as not to have wit enough sometimes to be a knave; nor ..... as not to have the weakness sometimes to play the fool.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "knight",
+  "band": "mid",
+  "generalRank": 5167,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p04",
+  "questionNo": 19,
+  "stem": "When the knights set forth from Camelot on their quests, they often endured great hardships for their beloved ....., King Arthur.",
+  "surfaces": [
+   "knights"
+  ],
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "knock",
+  "band": "mid",
+  "generalRank": 9694,
+  "distinctYears": 2,
+  "occurrences": 5,
+  "paperId": "arshad-1400-p01",
+  "questionNo": 6,
+  "stem": "The primary aim in sumo wrestling is to knock your ..... right out of the ring!",
+  "surfaces": [
+   "knock",
+   "knocked",
+   "knocking"
+  ]
+ },
+ {
+  "lemma": "lain",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p08",
+  "questionNo": 10,
+  "stem": "As soon as Sanskrit became known to the Western learned world, the unravelling of comparative Indo-European grammar ensued, and the foundations were lain for the whole 19th-century edifice of comparative philology and historical linguistics.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "landlord",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p03",
+  "questionNo": 2,
+  "stem": "The couple were finally ..... by the landlord after not paying their rent for six months."
+ },
+ {
+  "lemma": "largely",
+  "band": "mid",
+  "generalRank": 5475,
+  "distinctYears": 5,
+  "occurrences": 5,
+  "paperId": "arshad-1398-p07",
+  "questionNo": 176,
+  "stem": "While there is no blueprint for transforming a largely government-controlled economy into a free one, the ..... of the United Kingdom since 1979 clearly shows one approach that works: privatization, in which state-owned industries are sold to private companies."
+ },
+ {
+  "lemma": "laugh",
+  "band": "mid",
+  "generalRank": 6194,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 8,
+  "stem": "Ralph has always longed to be a dictator, but his awkward mannerisms caused assemblies to laugh at his brutal, fascist harangues rather than ..... .",
+  "surfaces": [
+   "laugh",
+   "laughing"
+  ],
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "laughter",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p05",
+  "questionNo": 13,
+  "stem": "There is nothing more ..... than the laughter of young children; it makes you smile and it does not really matter what they are laughing about.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "laypeople",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p04",
+  "questionNo": 10,
+  "stem": "Without a demonstrably immense superiority on skill over the novice, there can be no true experts, only laypeople with imposing credentials.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "learner",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 3,
+  "occurrences": 10,
+  "paperId": "arshad-1398-p04",
+  "questionNo": 9,
+  "stem": "Regarding foreign language learners, problems can, in fact, be anticipated in Intercultural Communication when Grice's CP and maxims are adhered to in different ways by different cultural groups, and participants in an interaction are not aware of these differences.",
+  "surfaces": [
+   "learners"
+  ]
+ },
+ {
+  "lemma": "lecturer",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p02",
+  "questionNo": 8,
+  "stem": "Though he spoke for over an hour, the lecturer was completely ..... and the students had no idea what he was talking about."
+ },
+ {
+  "lemma": "legitimate",
+  "band": "mid",
+  "generalRank": 7967,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p06",
+  "questionNo": 11,
+  "stem": "It is the exclusive right of City management to take disciplinary action for proper cause, relieve City employees from duty, for instance, because lack of work or other legitimate reasons.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "lent",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p07",
+  "questionNo": 218,
+  "stem": "..... someone had a scientific reason for wanting to examine his films, the man lent me copies, and my colleague Wally Friesen and I spent six months carefully examining them.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "lethal",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p04",
+  "questionNo": 11,
+  "stem": "Whales that surface too quickly from deep dives may ..... from decompression sickness, a sometimes lethal condition that also affects humans.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "lexical",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p04",
+  "questionNo": 22,
+  "stem": "Most words are \"lexical words\", i.e. nouns signifying \"things\", the majority of which are ..... concepts rather than physical objects in the world; only \"proper nouns\" have specific and unique referents in the everyday world.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "liars",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p04",
+  "questionNo": 13,
+  "stem": "As many a young girl has learned to her ....., pathological liars are great at deception.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "lifespan",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1399-p01",
+  "questionNo": 7,
+  "stem": "The lifespan of a mayfly is ....., lasting from a few hours to a couple of days."
+ },
+ {
+  "lemma": "lightning",
+  "band": "mid",
+  "generalRank": 7452,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p05",
+  "questionNo": 19,
+  "stem": "As this experiment reveals, what we call ..... decision-making is really one's ability to recognize patterns at lightning speed.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "limb",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p01",
+  "questionNo": 9,
+  "stem": "Assignment to a new species was justified due to critical differences from other protocetid whales, such as solidly co-ossified left and right dentaries (lower jaws), ..... in the ankle, and significant disparity in hind limb elements."
+ },
+ {
+  "lemma": "linen",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1401-p04",
+  "questionNo": 8,
+  "stem": "This all started on a Saturday morning in May, one of those warm spring's days that smell like clean linen.",
+  "surfaces": [
+   "linen",
+   "linens"
+  ],
+  "fieldCodes": [
+   "1110",
+   "1148"
+  ]
+ },
+ {
+  "lemma": "linework",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p05",
+  "questionNo": 4,
+  "stem": "A red violin with black strings lies on a golden background, .................... emphasized through the simple yet expressive linework of the illustration.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "linguist",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 3,
+  "occurrences": 4,
+  "paperId": "arshad-1400-p08",
+  "questionNo": 1,
+  "stem": "..... are often heard to say that what they do is linguistics that happens to be in a forensic context, and that a forensic linguist must first be a good linguist.",
+  "surfaces": [
+   "linguist",
+   "linguists"
+  ],
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "linguistic",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 5,
+  "occurrences": 13,
+  "paperId": "arshad-1398-p04",
+  "questionNo": 7,
+  "stem": "A text means what it means not because of any inherent objective linguistic features but because it is generated by discursive formations, each being with its particular ideologies and particular ways of controlling power."
+ },
+ {
+  "lemma": "linguistics",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 4,
+  "occurrences": 11,
+  "paperId": "arshad-1400-p08",
+  "questionNo": 1,
+  "stem": "..... are often heard to say that what they do is linguistics that happens to be in a forensic context, and that a forensic linguist must first be a good linguist.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1110",
+   "1121"
+  ]
+ },
+ {
+  "lemma": "literacy",
+  "band": "mid",
+  "generalRank": 5342,
+  "distinctYears": 3,
+  "occurrences": 9,
+  "paperId": "arshad-1400-p02",
+  "questionNo": 14,
+  "stem": "..... no improvement in children's abilities in literacy and numeracy ..... ."
+ },
+ {
+  "lemma": "literal",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p06",
+  "questionNo": 15,
+  "stem": "In literature, a literal image is one that is unambiguously apparent to sensory perception, however a figurative image is subject to wide-ranging interpretation.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "livable",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p07",
+  "questionNo": 166,
+  "stem": "Writing has never been a ..... career choice, but a recent study by the Authors' Guild, a professional organization for book writers, shows that it may not even be a livable one anymore.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "livelihood",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1400-p09",
+  "questionNo": 37,
+  "stem": "Moreover, many of these communities lead an agrarian lifestyle, and when their livestock – and so, by implication, their livelihood – is threatened by predation, this will also inevitably compel them to act to ..... the threat.",
+  "surfaces": [
+   "livelihood",
+   "livelihoods"
+  ],
+  "fieldCodes": [
+   "1121",
+   "1148"
+  ]
+ },
+ {
+  "lemma": "livestock",
+  "band": "mid",
+  "generalRank": 8043,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1400-p09",
+  "questionNo": 37,
+  "stem": "Moreover, many of these communities lead an agrarian lifestyle, and when their livestock – and so, by implication, their livelihood – is threatened by predation, this will also inevitably compel them to act to ..... the threat.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "lobby",
+  "band": "mid",
+  "generalRank": 8007,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p09",
+  "questionNo": 23,
+  "stem": "The decor of the hotel was .....; it screamed 'five-star' from the moment you stepped into the lobby.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "lobes",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p11",
+  "questionNo": 16,
+  "stem": "Imaging experiments show that part of the temporal lobes, on the left and right sides of the brain, experience greatly increased blood flow not just during panic attacks but from everyday anxiety.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "logan",
+  "band": "mid",
+  "generalRank": 9318,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p01",
+  "questionNo": 6,
+  "stem": "Logan has been working long hours, but that is no excuse for him to be ..... to customers."
+ },
+ {
+  "lemma": "logical",
+  "band": "mid",
+  "generalRank": 5690,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1398-p04",
+  "questionNo": 5,
+  "stem": "Through logical analysis, Wittgenstein held that we could arrive at a conception of language ..... related by the now-familiar elements of first-order logic.",
+  "fieldCodes": [
+   "1110",
+   "1121"
+  ]
+ },
+ {
+  "lemma": "longitudinal",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p05",
+  "questionNo": 7,
+  "stem": "Freeman (1993) conducted a longitudinal study of changes in the practices of four foreign language teachers doing an in-service masters' degree ..... aims the development of teachers' understanding of the professional discourse of education.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "looksay",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 39,
+  "stem": "In one, called whole-word instruction (also known as the \"looksay\" method), children learn by rote how to ..... at a glance a vocabulary of 50 to 100 words.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "loosened",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p05",
+  "questionNo": 16,
+  "stem": "Prejudices are most difficult to ..... from the heart whose soil has never been loosened or fertilized by education.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "lumps",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p06",
+  "questionNo": 13,
+  "stem": "This material gradually coalesced into lumps called planetesimals as gravity and chance smashed smaller pieces together, was a chaotic and violent process that became more so as planetesimals grew in size and gravitational pull.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "lung",
+  "band": "mid",
+  "generalRank": 5964,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p09",
+  "questionNo": 1,
+  "stem": "The doctors were not sure whether the blood clot on Henry's lung was autochthonous or whether it had traveled through the bloodstream ..... there.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "luster",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p01",
+  "questionNo": 7,
+  "stem": "He liked the ease and glitter of the life, and the luster ..... on him by being a member of this group of rich and conspicuous people."
+ },
+ {
+  "lemma": "machinery",
+  "band": "mid",
+  "generalRank": 5037,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p07",
+  "questionNo": 222,
+  "stem": "We then tested whether sleep loss affects the expression not only of structural proteins such as BRP and DLG, but ..... of the secretory machinery.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "maggots",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 5,
+  "stem": "Calorie restriction delays puberty in rats, mice and monkeys. And the maggots produced by long-lived flies die in greater ..... .",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "magnificent",
+  "band": "mid",
+  "generalRank": 9550,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p07",
+  "questionNo": 12,
+  "stem": "The period when the great painted caves at Lascaux and Altamira were occupied by Upper Paleolithic people have been established by carbon-14 dating but what is much more difficult to determine is the reason for their decoration, the use to which primitive people put the caves, and the meaning of the magnificently depicted animals.",
+  "surfaces": [
+   "magnificently"
+  ],
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "mainstream",
+  "band": "mid",
+  "generalRank": 7400,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p05",
+  "questionNo": 3,
+  "stem": "Whether it is the student's race, linguistic heritage, immigration status, socioeconomic class, sexuality, or other cultural factors working alone or in combination, ..... often tell the student that she is outside the mainstream.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "manga",
+  "band": "mid",
+  "generalRank": 5091,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p01",
+  "questionNo": 1,
+  "stem": "I have to say, I'm not particularly ..... in my own understanding of the true nature of fear, even though I make my living drawing horror manga."
+ },
+ {
+  "lemma": "mangroves",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 2,
+  "stem": "One of the charges voiced by environmentalists is that the people constructing shallow ponds for shrimp farming all too often destroy mangroves, salt-tolerant trees ..... .",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "mannerisms",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 8,
+  "stem": "Ralph has always longed to be a dictator, but his awkward mannerisms caused assemblies to laugh at his brutal, fascist harangues rather than ..... .",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "manuscript",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p02",
+  "questionNo": 6,
+  "stem": "The ..... of the editor's comments made us think that he hadn't really read the manuscript."
+ },
+ {
+  "lemma": "marathon",
+  "band": "mid",
+  "generalRank": 8633,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p01",
+  "questionNo": 2,
+  "stem": "I don't really think I'd have the ..... to finish a marathon!"
+ },
+ {
+  "lemma": "marshaled",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 19,
+  "stem": "Professor Weiss told a familiar tale: although my paper was chock-full of information and even interesting ideas, there was no argumentative structure, no thesis that my ..... of facts had been marshaled to support.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "masse",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p07",
+  "questionNo": 175,
+  "stem": "With the ..... of new trade routes at the beginning of modern times the once thriving town lost its importance, and in 1745 the citizens nearly decided to emigrate en masse.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "matchboxes",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p03",
+  "questionNo": 17,
+  "stem": "He must be an avid ....., as he has collected matchboxes from all over the world and has a rather comprehensive collection of them.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "mathematical",
+  "band": "mid",
+  "generalRank": 5689,
+  "distinctYears": 2,
+  "occurrences": 3,
+  "paperId": "arshad-1399-p01",
+  "questionNo": 10,
+  "stem": "Computers have helped solve some of the mathematical ..... which have puzzled man for many centuries."
+ },
+ {
+  "lemma": "mattress",
+  "band": "mid",
+  "generalRank": 9282,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p11",
+  "questionNo": 13,
+  "stem": "In my bedroom in Mumbai, my mattress is made of high-density foam, a better surface to move on for someone like me, someone is with muscular dystrophy.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "mayfly",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1399-p01",
+  "questionNo": 7,
+  "stem": "The lifespan of a mayfly is ....., lasting from a few hours to a couple of days."
+ },
+ {
+  "lemma": "meal",
+  "band": "mid",
+  "generalRank": 5034,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p01",
+  "questionNo": 5,
+  "stem": "It was more ..... to take my meals in bed, where all I had to do was push away my tray with its uneaten food and fall back upon my pillows.",
+  "surfaces": [
+   "meals"
+  ]
+ },
+ {
+  "lemma": "meanwhile",
+  "band": "mid",
+  "generalRank": 7150,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p05",
+  "questionNo": 27,
+  "stem": "In O. Henry's classic tale, The Gift of the Magi, a wife cuts off her long hair to sell it in order to buy her husband a chain for his prized watch. Meanwhile, the husband has sold his watch in order to buy his wife a comb for her hair. The situational ..... comes from each person not expecting to have their gift be undercut by the other's actions.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "mechanics",
+  "band": "mid",
+  "generalRank": 7126,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 10,
+  "stem": "Some scientists say consciousness exists but ....., like quantum mechanics is for monkeys.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "meditative",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p05",
+  "questionNo": 28,
+  "stem": "Coleridge and Wordsworth were very good friends and ..... Wordsworth was much more meditative and calm, Coleridge was the opposite and lived a more uncontrolled life.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "mellifluous",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p01",
+  "questionNo": 4,
+  "stem": "The singer's mellifluous voice kept the audience ..... for two hours.",
+  "lemmaUncertain": true
+ },
+ {
+  "lemma": "melts",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p05",
+  "questionNo": 9,
+  "stem": "As with most gifts, you don't ask questions; you just savor the morsels, as the chocolate .................... and slowly melts, releasing buttery, subtly fruity flavors across your tongue.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "merely",
+  "band": "mid",
+  "generalRank": 5502,
+  "distinctYears": 2,
+  "occurrences": 5,
+  "paperId": "arshad-1398-p02",
+  "questionNo": 13,
+  "stem": "..... , some of the treated animals survived longer than the oldest-living animals in the control group, that the maximum life span (the oldest attainable age), not merely the average life span, increased."
+ },
+ {
+  "lemma": "mess",
+  "band": "mid",
+  "generalRank": 7910,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p11",
+  "questionNo": 31,
+  "stem": "Why do you have to be so ----------------- ? Look at the mess your thoughtlessness has got us into; you should consider the consequences next time.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "metabolic",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 7,
+  "stem": "Symbiotic cells of algae known as zooxanthellae carry out photosynthesis using the metabolic wastes of the corals, ....., for their coral hosts, and even for other members of the reef community.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "metalanguage",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p03",
+  "questionNo": 4,
+  "stem": "A humanly-assigned metalanguage could be regarded ..... generic power, or, in some applications, differentiating units identical in expression, enhancing the possibilities of specificity in searching.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "meteorological",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p04",
+  "questionNo": 9,
+  "stem": "Computers cannot precisely foretell climate change unless the mathematical equations fed into them ..... capture the natural meteorological processes they are aimed to simulate.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "methodology",
+  "band": "mid",
+  "generalRank": 5640,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p07",
+  "questionNo": 9,
+  "stem": "A good, critical review should show that not only have you read extensively the existing work in the field but you have also understood the methodology and arguments, by pointing out the strengths and weaknesses, by comparing the results of different studies, and evaluating them with reference to your own interests.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "miasma",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 2,
+  "stem": "The miasma of failure that hung in the locker room after the boys lost the football game was ..... without launching into a pep talk.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "mice",
+  "band": "mid",
+  "generalRank": 5363,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 5,
+  "stem": "Calorie restriction delays puberty in rats, mice and monkeys. And the maggots produced by long-lived flies die in greater ..... .",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "midsized",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p05",
+  "questionNo": 3,
+  "stem": "If you had told me as a teenager that at 27 I would be an ordinary clerk in a midsized firm in Cyprus, I ..... steadfast in assuring you that is not the dream I imagined.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "migrating",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p04",
+  "questionNo": 8,
+  "stem": "Conventional paleoanthropological wisdom holds that the first humans had left Africa were tall, large-brained people equipped with sophisticated stone tools who began migrating northward around a million years ago.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "migration",
+  "band": "mid",
+  "generalRank": 5209,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p03",
+  "questionNo": 2,
+  "stem": "Immigration ..... from the Latin word migration and means the act of a foreigner entering a country in the aim of obtaining the right of permanent residence."
+ },
+ {
+  "lemma": "mindset",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p05",
+  "questionNo": 10,
+  "stem": "..... uncertainty requires a shift in mindset that acknowledges that life is ever-changing, and that certainty is an illusion.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "misconceived",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p05",
+  "questionNo": 19,
+  "stem": "While the behavior of some officers at entry points can be .................... and intrusive, the problem of what America has become for visitors is owed to misconceived laws, not to people charged with border enforcement.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "misplaced",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p05",
+  "questionNo": 23,
+  "stem": "The woman felt that he was a human ....................—senseless and misplaced, a bad joke, a joke with no place to land.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "mistake",
+  "band": "mid",
+  "generalRank": 5741,
+  "distinctYears": 1,
+  "occurrences": 3,
+  "paperId": "arshad-1399-p02",
+  "questionNo": 14,
+  "stem": "..... , they learn from their mistakes.",
+  "surfaces": [
+   "mistakes"
+  ]
+ },
+ {
+  "lemma": "misunderstandings",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p04",
+  "questionNo": 9,
+  "stem": "Linguistic errors may sometimes ..... with language errors, but linguistic errors often involve deeper misunderstandings about how language works in context.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "misuse",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p01",
+  "questionNo": 2,
+  "stem": "A recent study shows that the prevalence and sometimes misuse of cell phones and computers has led to a/an ..... in some people about the benefits of technology."
+ },
+ {
+  "lemma": "mnemonics",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1399-p01",
+  "questionNo": 6,
+  "stem": "You are recommended to use mnemonics to help you ..... important items of information.",
+  "lemmaUncertain": true
+ },
+ {
+  "lemma": "mold",
+  "band": "mid",
+  "generalRank": 8881,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p04",
+  "questionNo": 21,
+  "stem": "Brad's thesis is that attempts to ground moral status on a single criterion have been unsuccessful, as they inevitably lead to ..... measures to fit diverse values into a single mold.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "molecules",
+  "band": "mid",
+  "generalRank": 9095,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p06",
+  "questionNo": 1,
+  "stem": "All of these alternatives are carbon-based fuels whose molecules are smaller and simpler than ..... .",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "monarchy",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p05",
+  "questionNo": 36,
+  "stem": "Carnell acknowledges that Behn admired the skill of such contemporary writers of dramatic tragedy as John Dryden, ..... Behn's own comic stage productions revealed the same partisanship for the reigning Stuart monarchy that characterized most of the politically oriented dramatic tragedies of her day.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "monkey",
+  "band": "mid",
+  "generalRank": 6114,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 5,
+  "stem": "Calorie restriction delays puberty in rats, mice and monkeys. And the maggots produced by long-lived flies die in greater ..... .",
+  "surfaces": [
+   "monkeys"
+  ],
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "monolingual",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p03",
+  "questionNo": 18,
+  "stem": "With the growth of international contacts in the course of establishing capitalist relations in the 19th century, the division of the world into monolingual nation-states, in which foreign language skills were the privilege of upper classes, became ..... for further development.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "monumental",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p04",
+  "questionNo": 10,
+  "stem": "He sought to write a comprehensive study of his mother tongue and his monumental work A View of the Universe of Letters stands as a testament to this linguistic ..... .",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "mood",
+  "band": "mid",
+  "generalRank": 5392,
+  "distinctYears": 1,
+  "occurrences": 4,
+  "paperId": "arshad-1403-p04",
+  "questionNo": 1,
+  "stem": "Shiraz is ..... a great city that one's mood quickly perks up on jumping out of the taxi.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "moot",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p04",
+  "questionNo": 18,
+  "stem": "Exactly how this position might be positively determined remains moot, and it is probably ..... to resist giving it definitional closure.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "morality",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p05",
+  "questionNo": 27,
+  "stem": "Conversational poetry was the literary genre most commonly used by Wordsworth and Coleridge, ..... a series of eight poems examining higher ideas of nature, man, and morality.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "morphology",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p04",
+  "questionNo": 1,
+  "stem": "Linguists sometimes use the terms analytic and synthetic to describe ..... morphology is made use of in a language.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "morsels",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p05",
+  "questionNo": 9,
+  "stem": "As with most gifts, you don't ask questions; you just savor the morsels, as the chocolate .................... and slowly melts, releasing buttery, subtly fruity flavors across your tongue.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "mortal",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p07",
+  "questionNo": 18,
+  "stem": "After five days, the mountain climber was discharged from the hospital. The experience had taught him a ..... lesson: he was a mortal, and nature was much more powerful than him.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "moth",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p06",
+  "questionNo": 5,
+  "stem": "The gypsy moth is also subject to attack by the nucleo-polyhedrosis virus, or wilt disease, ..... the caterpillars in outbreak years.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "motherland",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p09",
+  "questionNo": 22,
+  "stem": "God has showered His ..... upon our motherland. Our country is blessed with immense natural wealth, with mountains and plains and forests and rivers and oceans and snow and sun.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "motives",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1399-p10",
+  "questionNo": 14,
+  "stem": "In early period of human history, when voyages and travels were not undertaken from the view of amusement or instruction, or from political or commercial motives, the discovery of adjacent countries was chiefly affected by war, and of distant regions by commerce.",
+  "lemmaUncertain": true
+ },
+ {
+  "lemma": "motorists",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p05",
+  "questionNo": 18,
+  "stem": "New York has introduced a fee of $50 to park on certain streets in the city in a bid to ..... motorists from clogging its roads.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "mountebank",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p09",
+  "questionNo": 20,
+  "stem": "That used car salesman turned out to be a bit of a mountebank; his dashing flattery faded when I realized the car I bought was a .....",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "mug",
+  "band": "mid",
+  "generalRank": 9818,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p07",
+  "questionNo": 13,
+  "stem": "Jess had studied so hard for her exams that the end of exam week found her in a state of complete ....., barely able to do more than reach toward her bedside table for her mug of cocoa.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "multiply",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 27,
+  "stem": "Population control is a ..... need of the hour. We just cannot afford to let our numbers multiply unchecked.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "municipality",
+  "band": "mid",
+  "generalRank": 9513,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1404-p06",
+  "questionNo": 6,
+  "stem": "Can you please explain to the municipal management team why ..... contribute to the overall function of the whole municipality?",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "muscular",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p11",
+  "questionNo": 13,
+  "stem": "In my bedroom in Mumbai, my mattress is made of high-density foam, a better surface to move on for someone like me, someone is with muscular dystrophy.",
+  "fieldCodes": [
+   "1148"
+  ]
+ }
+]

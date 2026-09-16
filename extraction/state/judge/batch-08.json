@@ -1,0 +1,1634 @@
+[
+ {
+  "lemma": "musician",
+  "band": "mid",
+  "generalRank": 8798,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p05",
+  "questionNo": 25,
+  "stem": "The vernacular of rap musicians is full of ..... and is becoming more commonly used in public places.",
+  "surfaces": [
+   "musicians"
+  ],
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "mutation",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p05",
+  "questionNo": 21,
+  "stem": "Civilization does not depend on the .............. mass, the average man, but upon the creative minority, the innovator, the brilliant few and the restless elite who have made mutation a social as well as a biological fact.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "myth",
+  "band": "mid",
+  "generalRank": 8749,
+  "distinctYears": 3,
+  "occurrences": 3,
+  "paperId": "arshad-1401-p05",
+  "questionNo": 23,
+  "stem": "One of the most often repeated urban myths has to do with ..... living in the sewers of the city.",
+  "surfaces": [
+   "myth",
+   "myths"
+  ],
+  "fieldCodes": [
+   "1110",
+   "1121"
+  ]
+ },
+ {
+  "lemma": "namely",
+  "band": "mid",
+  "generalRank": 8308,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1402-p03",
+  "questionNo": 9,
+  "stem": "But if head teachers at state schools ..... given the same freedom as those at private schools, namely ..... poor teachers and pay more to good ones, parents would not need to send their children to private schools any more."
+ },
+ {
+  "lemma": "narrative",
+  "band": "mid",
+  "generalRank": 8020,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1402-p05",
+  "questionNo": 7,
+  "stem": "....., the Narrative is for this reason the most comprehensive one of slavery in the English language.",
+  "surfaces": [
+   "narrative",
+   "narratives"
+  ],
+  "fieldCodes": [
+   "1110",
+   "1121"
+  ]
+ },
+ {
+  "lemma": "naturally",
+  "band": "mid",
+  "generalRank": 5865,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 37,
+  "stem": "..... of phonics—a rigorous study of the relation between letters and sounds—maintain that this approach is more effective than the \"whole language\" method, ..... naturally learn to recognize words through reading and writing.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "navigator",
+  "band": "mid",
+  "generalRank": 9115,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p02",
+  "questionNo": 2,
+  "stem": "The islands ..... their name from the sacred images found on them by the early European navigators.",
+  "surfaces": [
+   "navigators"
+  ]
+ },
+ {
+  "lemma": "negotiate",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 29,
+  "stem": "The local union is a ..... organization that lacks the power to negotiate higher wages for its members.",
+  "surfaces": [
+   "negotiate",
+   "negotiating"
+  ],
+  "fieldCodes": [
+   "1121",
+   "1148"
+  ]
+ },
+ {
+  "lemma": "neighbor",
+  "band": "mid",
+  "generalRank": 9082,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 14,
+  "stem": "When the parent required her 10-year old to say something nice to the mean neighbor, the child simply uttered a/an ..... to appease her parent.",
+  "surfaces": [
+   "neighbor",
+   "neighbors"
+  ],
+  "fieldCodes": [
+   "1110",
+   "1121"
+  ]
+ },
+ {
+  "lemma": "nerve",
+  "band": "mid",
+  "generalRank": 8276,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 11,
+  "stem": "When she is nervous, the singer's stomach always feels like a ..... mass of tangled nerves.",
+  "surfaces": [
+   "nerves"
+  ],
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "neural",
+  "band": "mid",
+  "generalRank": 9581,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 33,
+  "stem": "Shaywitz studied the neural activity of 27 normal readers, 19 \"accuracy-improved readers\" who have learned to read more accurately by going at a slow pace, and 24 \"persistently poor readers\" who ..... both speed and comprehension.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "nevertheless",
+  "band": "mid",
+  "generalRank": 6850,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1398-p04",
+  "questionNo": 3,
+  "stem": "..... the notions of social distance and power relationships are related—disparates, for instance, tend to be more socially distant from one another than equals—the categories are nevertheless distinct.",
+  "fieldCodes": [
+   "1110",
+   "1121"
+  ]
+ },
+ {
+  "lemma": "nicaraguans",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p01",
+  "questionNo": 6,
+  "stem": "His victory sparked a rare wave of ..... in his home country. Nicaraguans poured into the streets, honking car-horns and waving the national flag.",
+  "lemmaUncertain": true
+ },
+ {
+  "lemma": "niche",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p05",
+  "questionNo": 23,
+  "stem": "It is .....—a work quite unlike any other—a travel book about an imaginary but thoroughly plausible city, and it will have its odd niche among the curiosities of literature.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "niece",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p01",
+  "questionNo": 3,
+  "stem": "My niece has a ..... imagination. She can turn a tree and a stick into a castle and a wand and spend hours in her fairy kingdom."
+ },
+ {
+  "lemma": "nighttime",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p07",
+  "questionNo": 15,
+  "stem": "Downtown Los Angeles was under ..... early Wednesday morning after Mayor Karen Bass announced the nighttime restrictions, an effort to calm protests.",
+  "fieldCodes": [
+   "1296"
+  ]
+ },
+ {
+  "lemma": "nineteenth",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p04",
+  "questionNo": 9,
+  "stem": "Any civilized human being in this nineteenth century should not be aware that the earth traveled round the sun appeared to me to be such an extraordinary fact that I could hardly realize it.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "nitric",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 3,
+  "stem": "To doctors, sugar hides a great blackness; it blackens the teeth, and under its sweetness it is nothing but a very great acrimony, ..... it equals agua fortis [nitric acid].",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "nonexistence",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p09",
+  "questionNo": 7,
+  "stem": "The phrase \"head of the family\" that once ..... has now become merely titular and is probably on its way to nonexistence.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "nonhuman",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p02",
+  "questionNo": 3,
+  "stem": "Animal rights is not just a philosophy—it is a social movement that ..... society's traditional view that all nonhuman animals exist solely for human use."
+ },
+ {
+  "lemma": "nonliterary",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 4,
+  "paperId": "arshad-1400-p03",
+  "questionNo": 4,
+  "stem": "The writer's stories appeal to a wide range of people—young and old, ..... and poor, literary and nonliterary."
+ },
+ {
+  "lemma": "nonstop",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 26,
+  "stem": "The phrase \"sibling rivalry\" is hardly adequate to describe the ..... between J R and Colin, whose interaction consists of almost nonstop sniping, undermining and other forms of verbal abuse.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "nonverbal",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p06",
+  "questionNo": 6,
+  "stem": "Nonverbal thinking, ..... mechanism in engineering design, involves perceptions, the stock-in-trade of the artist, not the scientist.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "norm",
+  "band": "mid",
+  "generalRank": 9570,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p04",
+  "questionNo": 8,
+  "stem": "By sociolinguistic competence is meant the knowledge of \"the extent to which utterances are produced and understood appropriately in different sociolinguistic contexts depending on contextual factors such as status of participants, purposes of the interaction, and there are norms or conventions of interaction\".",
+  "surfaces": [
+   "norms"
+  ],
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "northward",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p04",
+  "questionNo": 8,
+  "stem": "Conventional paleoanthropological wisdom holds that the first humans had left Africa were tall, large-brained people equipped with sophisticated stone tools who began migrating northward around a million years ago.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "nostalgic",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 4,
+  "paperId": "arshad-1400-p03",
+  "questionNo": 5,
+  "stem": "His nostalgic ..... of growing up in a small city are comical, though they are perhaps embellished for comic effect."
+ },
+ {
+  "lemma": "notion",
+  "band": "mid",
+  "generalRank": 7629,
+  "distinctYears": 3,
+  "occurrences": 4,
+  "paperId": "arshad-1398-p04",
+  "questionNo": 3,
+  "stem": "..... the notions of social distance and power relationships are related—disparates, for instance, tend to be more socially distant from one another than equals—the categories are nevertheless distinct.",
+  "surfaces": [
+   "notion",
+   "notions"
+  ],
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "nouns",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1398-p04",
+  "questionNo": 22,
+  "stem": "Most words are \"lexical words\", i.e. nouns signifying \"things\", the majority of which are ..... concepts rather than physical objects in the world; only \"proper nouns\" have specific and unique referents in the everyday world.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "novice",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p04",
+  "questionNo": 10,
+  "stem": "Without a demonstrably immense superiority on skill over the novice, there can be no true experts, only laypeople with imposing credentials.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "nowadays",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 23,
+  "stem": "The ..... of the players has badly affected the spirit of sports; most of the players nowadays require money more than they require name, and thus cheat not only their teams but also their countries.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "nowhere",
+  "band": "mid",
+  "generalRank": 9270,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p05",
+  "questionNo": 19,
+  "stem": "The humorous story may be spun out to great ....., and may wander around as much as it pleases, and arrive nowhere in particular.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "numeracy",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 6,
+  "paperId": "arshad-1400-p02",
+  "questionNo": 14,
+  "stem": "..... no improvement in children's abilities in literacy and numeracy ..... ."
+ },
+ {
+  "lemma": "nutritious",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p04",
+  "questionNo": 7,
+  "stem": "As our primate ancestors' need to stoke the energy-consuming organ in their skulls with nutritious, calorie-rich fuel created selection pressure favoring features now characteristic of primates.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "obesity",
+  "band": "mid",
+  "generalRank": 9204,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1400-p08",
+  "questionNo": 22,
+  "stem": "Obesity is partly due to inappropriate nutrition and partly to a ..... lifestyle that does not involve any physical effort.",
+  "fieldCodes": [
+   "1110",
+   "1148"
+  ]
+ },
+ {
+  "lemma": "obey",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p11",
+  "questionNo": 32,
+  "stem": "You are my ----------------- and you will obey me. Failure to do so will result in your dismissal.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "obliged",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p05",
+  "questionNo": 7,
+  "stem": "...................., I am obliged to put myself in the chef's hands.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "observe",
+  "band": "mid",
+  "generalRank": 7495,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1400-p13",
+  "questionNo": 14,
+  "stem": "..... no improvement in children's abilities in literacy and numeracy has been observed.",
+  "surfaces": [
+   "observed"
+  ],
+  "fieldCodes": [
+   "1148",
+   "1160"
+  ]
+ },
+ {
+  "lemma": "observer",
+  "band": "mid",
+  "generalRank": 6533,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p11",
+  "questionNo": 17,
+  "stem": "To most observers, the essence of intelligence is cleverness, is a versatility in solving novel problems.",
+  "surfaces": [
+   "observers"
+  ],
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "obsession",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1403-p05",
+  "questionNo": 26,
+  "stem": "His favorite subject remains the subtle human presence exuding out of urban landscapes, and his obsession to encapsulate enough fragile moments of ..... beauty as to create with them an imaginary city where every single moment would be beautiful.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "occasion",
+  "band": "mid",
+  "generalRank": 5401,
+  "distinctYears": 1,
+  "occurrences": 3,
+  "paperId": "arshad-1400-p02",
+  "questionNo": 8,
+  "stem": "When the climbers reached the peak of the tallest mountain in the world, they felt it was a ..... occasion and were filled with pride."
+ },
+ {
+  "lemma": "occasionally",
+  "band": "mid",
+  "generalRank": 6257,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p05",
+  "questionNo": 5,
+  "stem": "The prevailing wisdom seems to be that readers do not want to hear about ideas; they'd ..... a good story about people who occasionally have ideas.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "occipital",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p07",
+  "questionNo": 1,
+  "stem": "The cerebral cortex has two hemispheres (right and left), ..... (occipital, parietal, temporal, and frontal).",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "odd",
+  "band": "mid",
+  "generalRank": 5389,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p05",
+  "questionNo": 23,
+  "stem": "It is .....—a work quite unlike any other—a travel book about an imaginary but thoroughly plausible city, and it will have its odd niche among the curiosities of literature.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "oddity",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p04",
+  "questionNo": 5,
+  "stem": "..... this controversial stop-motion oddity from Spain centers on a sausage-making contest and the pet chicken destined for the meat grinder.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "offense",
+  "band": "mid",
+  "generalRank": 7057,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p02",
+  "questionNo": 6,
+  "stem": "What aggravated his offense was the ..... attitude he exhibited before the jury in the courtroom."
+ },
+ {
+  "lemma": "offensive",
+  "band": "mid",
+  "generalRank": 6205,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1399-p07",
+  "questionNo": 15,
+  "stem": "The novels of Henry Miller are too explicit to .....; by the time a conservative editor finished removing offensive material there would be little left to read.",
+  "fieldCodes": [
+   "1110",
+   "1296"
+  ]
+ },
+ {
+  "lemma": "officially",
+  "band": "mid",
+  "generalRank": 7515,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p02",
+  "questionNo": 8,
+  "stem": "Before the 1970s, the Olympic Games were officially limited to competitors with amateur status, but in the 1980s, many events ..... to professional athletes."
+ },
+ {
+  "lemma": "omitted",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 3,
+  "paperId": "arshad-1399-p02",
+  "questionNo": 1,
+  "stem": "I omitted all the extraneous details while explaining the ..... of the matter to him.",
+  "lemmaUncertain": true
+ },
+ {
+  "lemma": "oneself",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p04",
+  "questionNo": 13,
+  "stem": "If one believes in linguistic relativity, one finds oneself in the egocentric ....., unable to make assertions about reality because of doubting one's own ability to correctly describe reality.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "oppose",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 3,
+  "occurrences": 5,
+  "paperId": "arshad-1400-p01",
+  "questionNo": 15,
+  "stem": "Formalism evaluates works on a purely visual level, ..... medium and compositional elements as opposed to any reference to realism, context, or content.",
+  "surfaces": [
+   "oppose",
+   "opposed"
+  ]
+ },
+ {
+  "lemma": "opposite",
+  "band": "mid",
+  "generalRank": 5364,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p05",
+  "questionNo": 28,
+  "stem": "Coleridge and Wordsworth were very good friends and ..... Wordsworth was much more meditative and calm, Coleridge was the opposite and lived a more uncontrolled life.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "orbit",
+  "band": "mid",
+  "generalRank": 9477,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p04",
+  "questionNo": 10,
+  "stem": "The capsule, built by a famous space firm, was propelled into orbit by a Falcon 9 rocket at the second attempt; the first, scheduled for June 20th, was ..... because of bad weather.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "organ",
+  "band": "mid",
+  "generalRank": 6577,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p04",
+  "questionNo": 7,
+  "stem": "As our primate ancestors' need to stoke the energy-consuming organ in their skulls with nutritious, calorie-rich fuel created selection pressure favoring features now characteristic of primates.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "organisms",
+  "band": "mid",
+  "generalRank": 9668,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1402-p05",
+  "questionNo": 26,
+  "stem": "In the case of small organisms with short life cycles, climatic changes need not be catastrophic: ..... in photoperiod (daily amount of sunlight), for example, can govern population growth.",
+  "fieldCodes": [
+   "1121",
+   "1148"
+  ]
+ },
+ {
+  "lemma": "organize",
+  "band": "mid",
+  "generalRank": 7318,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1404-p03",
+  "questionNo": 8,
+  "stem": "The first organized international competition involving winter sports ..... just five years after the birth of the modern Olympics in 1896.",
+  "surfaces": [
+   "organized"
+  ]
+ },
+ {
+  "lemma": "originates",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p04",
+  "questionNo": 4,
+  "stem": "This continuum concept, which originates with the Greeks, ..... still widely held today by many people.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "orthodox",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 1,
+  "stem": "The orthodox view of a single intelligence, widely, if wrongly, accepted today in the minds of the general population, ....., who by the second decade of this century had put forth its major precepts.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "ostentatious",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p05",
+  "questionNo": 22,
+  "stem": "Some celebrities ..... their income with what they call \"bling,\" and what others call ostentatious jewelry.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "outbreak",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p06",
+  "questionNo": 5,
+  "stem": "The gypsy moth is also subject to attack by the nucleo-polyhedrosis virus, or wilt disease, ..... the caterpillars in outbreak years.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "outer",
+  "band": "mid",
+  "generalRank": 5584,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 16,
+  "stem": "The book appears to be very ..... when you read its outer jacket and the back cover, but as you read it, you find that there is very little substance as it is far removed from practicality.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "outpouring",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p05",
+  "questionNo": 26,
+  "stem": "One of Wordsworth's well-known works is \"The Solitary Reaper\" (1807), ..... the outpouring of expression and emotion that Wordsworth felt was necessary in poetry.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "overcame",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p04",
+  "questionNo": 14,
+  "stem": "Nick, after sprawling on the couch for a couple of weeks after school, got out, eventually overcame his ..... and went looking for a job.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "overcome",
+  "band": "mid",
+  "generalRank": 7453,
+  "distinctYears": 3,
+  "occurrences": 3,
+  "paperId": "arshad-1401-p05",
+  "questionNo": 16,
+  "stem": "In terms of helping me overcome my problems with my second-year biology course, he was not much of a but whether he meant it or not, as a life coach he was ..... to none.",
+  "surfaces": [
+   "overcome",
+   "overcoming"
+  ]
+ },
+ {
+  "lemma": "overestimate",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p07",
+  "questionNo": 170,
+  "stem": "..... information about energy use, people tend to overestimate the amount of energy used by visible equipment, such as lights, that must be turned on and off and underestimate that used by unobtrusive equipment, such as water heaters.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "overpopulation",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p09",
+  "questionNo": 32,
+  "stem": "Similarly, in developing countries where overpopulation is becoming increasingly problematic, and as communities push out further and further into the wilderness to find a place to live, ..... on the habitat of wild and dangerous animals more and more.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "overreacting",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 4,
+  "paperId": "arshad-1400-p03",
+  "questionNo": 8,
+  "stem": "Obviously the network is overreacting and engaging in ..... when they say \"55 million people are in danger!\" for normal thunderstorms.",
+  "lemmaUncertain": true
+ },
+ {
+  "lemma": "overturn",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1401-p05",
+  "questionNo": 34,
+  "stem": "Carnell contends that Behn, ....., may have turned to an emerging literary form, the novel, in a conscious attempt to criticize, and overturn for her own ends, the conventions and ideology ..... .",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "owed",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p05",
+  "questionNo": 19,
+  "stem": "While the behavior of some officers at entry points can be .................... and intrusive, the problem of what America has become for visitors is owed to misconceived laws, not to people charged with border enforcement.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "owes",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 4,
+  "paperId": "arshad-1401-p01",
+  "questionNo": 12,
+  "stem": "Since the 1960s, however, ..... the ascent of thinkers like Noam Chomsky, and a host of cognitive scientists, ..... that linguistic differences don't really matter, ..... language is a universal human trait, and that our ability to talk to one another owes more to our shared genetics ......",
+  "lemmaUncertain": true
+ },
+ {
+  "lemma": "oxygen",
+  "band": "mid",
+  "generalRank": 5496,
+  "distinctYears": 1,
+  "occurrences": 5,
+  "paperId": "arshad-1400-p03",
+  "questionNo": 15,
+  "stem": "In addition, ..... reduces the ability of the hemoglobin to release oxygen, resulting in shortness of breath."
+ },
+ {
+  "lemma": "ozone",
+  "band": "mid",
+  "generalRank": 8955,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p03",
+  "questionNo": 2,
+  "stem": "The weakened ozone ....., which is vital to protecting life on Earth, is on track to be restored to full strength within decades."
+ },
+ {
+  "lemma": "pace",
+  "band": "mid",
+  "generalRank": 5262,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 33,
+  "stem": "Shaywitz studied the neural activity of 27 normal readers, 19 \"accuracy-improved readers\" who have learned to read more accurately by going at a slow pace, and 24 \"persistently poor readers\" who ..... both speed and comprehension."
+ },
+ {
+  "lemma": "paleoanthropological",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p04",
+  "questionNo": 8,
+  "stem": "Conventional paleoanthropological wisdom holds that the first humans had left Africa were tall, large-brained people equipped with sophisticated stone tools who began migrating northward around a million years ago.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "paleontological",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p11",
+  "questionNo": 18,
+  "stem": "The next year, during paleontological excavations, primitive stone tools came to light, bringing with themselves the tantalizing possibility that fossilized human remains might eventually follow.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "pandemic",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p05",
+  "questionNo": 11,
+  "stem": "I bring all this up because I have been playing video games with my 4-years-old daughter, Frankie, since the start of the pandemic.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "panic",
+  "band": "mid",
+  "generalRank": 8449,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p11",
+  "questionNo": 16,
+  "stem": "Imaging experiments show that part of the temporal lobes, on the left and right sides of the brain, experience greatly increased blood flow not just during panic attacks but from everyday anxiety.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "pantry",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p05",
+  "questionNo": 2,
+  "stem": "It's strange—buying books and treasuring them ................... reading them, splurging on clothing too beautiful to wear, and piling pantry shelves with goodies to reserve until past the use-by date.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "paralyzed",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p11",
+  "questionNo": 3,
+  "stem": "When you're in a situation ----------------- you feel like you don't have control, it can be easy to become paralyzed by fear and unable to move forward.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "paraphrase",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p04",
+  "questionNo": 6,
+  "stem": "To paraphrase Samuel Johnson, Rand had just one vision and it was the wrong one. Even Eilenberger, ..... impatient with and staggered by Rand's potted version of the Nietzschean superman and will to power.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "parasite",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1402-p06",
+  "questionNo": 7,
+  "stem": "If a species of parasite is to survive, the host organisms must live long enough for the parasite to reproduce; if the host species becomes extinct, so ..... .",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "parietal",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p07",
+  "questionNo": 1,
+  "stem": "The cerebral cortex has two hemispheres (right and left), ..... (occipital, parietal, temporal, and frontal).",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "participant",
+  "band": "mid",
+  "generalRank": 6511,
+  "distinctYears": 1,
+  "occurrences": 4,
+  "paperId": "arshad-1398-p01",
+  "questionNo": 12,
+  "stem": "They gave research participants one of three standard tests of abstract spatial reasoning ..... each of three listening conditions: the Sonata for Two Pianos in D major, K. 448 by Mozart, verbal relaxation instructions, and ..... .",
+  "surfaces": [
+   "participants"
+  ]
+ },
+ {
+  "lemma": "partisanship",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p05",
+  "questionNo": 36,
+  "stem": "Carnell acknowledges that Behn admired the skill of such contemporary writers of dramatic tragedy as John Dryden, ..... Behn's own comic stage productions revealed the same partisanship for the reigning Stuart monarchy that characterized most of the politically oriented dramatic tragedies of her day.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "passenger",
+  "band": "mid",
+  "generalRank": 5084,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p05",
+  "questionNo": 15,
+  "stem": "A single cup of water has been .................... to each passenger, the sum of amenities from cabin attendants radiating the imperious frown that is the hallmark of Aeroflot.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "pathological",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p04",
+  "questionNo": 13,
+  "stem": "As many a young girl has learned to her ....., pathological liars are great at deception.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "pathway",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 2,
+  "occurrences": 3,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 34,
+  "stem": "Images showed that the slow but accurate readers did not activate the same brain regions when reading as the normal subjects, ..... some standard neural circuitry but their brains had compensated with other pathways.",
+  "surfaces": [
+   "pathway",
+   "pathways"
+  ]
+ },
+ {
+  "lemma": "patriarchy",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 17,
+  "stem": "We must continue to ..... freedom not only from toil, but from the despotism of the boss, from a viciously enforced racial order, and from the intimate violence of patriarchy.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "patronage",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p07",
+  "questionNo": 156,
+  "stem": "..... , this increased patronage poses dangers for them, too.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "paws",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p09",
+  "questionNo": 11,
+  "stem": "Humans like watching dogs open doors with their paws—as though they had hands—because we like to ..... animals.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "peaceful",
+  "band": "mid",
+  "generalRank": 8531,
+  "distinctYears": 1,
+  "occurrences": 3,
+  "paperId": "arshad-1400-p01",
+  "questionNo": 3,
+  "stem": "Our organization is committed to pursuing its aims through peaceful ..... . We totally reject violence as a means of political change."
+ },
+ {
+  "lemma": "peasant",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p06",
+  "questionNo": 16,
+  "stem": "Members of poor peasant families spun or wove cloth and linens at home for scant remuneration in an attempt to supplement their ..... family income.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "peculiar",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p04",
+  "questionNo": 20,
+  "stem": "Though he's known for his athleticism, he's also become known for his ..... prowess on account of his peculiar choice of clothing.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "pep",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 2,
+  "stem": "The miasma of failure that hung in the locker room after the boys lost the football game was ..... without launching into a pep talk.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "perceive",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1402-p06",
+  "questionNo": 20,
+  "stem": "The use of celebrities such as singers and movie stars is common in advertising. The intention is for the positively perceived ..... of the celebrity to be transferred to the advertised product.",
+  "surfaces": [
+   "perceive",
+   "perceived"
+  ]
+ },
+ {
+  "lemma": "perception",
+  "band": "mid",
+  "generalRank": 7008,
+  "distinctYears": 2,
+  "occurrences": 4,
+  "paperId": "arshad-1402-p04",
+  "questionNo": 6,
+  "stem": "Whereas self-determination theory addresses students' perceptions of their level of autonomy, competence, and relatedness in a given activity, and self-regulation theory is concerned with what students do to generate and sustain their engagement.",
+  "surfaces": [
+   "perception",
+   "perceptions"
+  ]
+ },
+ {
+  "lemma": "periodic",
+  "band": "mid",
+  "generalRank": 7836,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p05",
+  "questionNo": 25,
+  "stem": "The first theory attributes a relatively constant population to periodic climatic catastrophes that decimate populations ..... from exceeding some particular limit.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "perish",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 2,
+  "occurrences": 3,
+  "paperId": "arshad-1399-p04",
+  "questionNo": 8,
+  "stem": "Experienced Iditarod runners tried to ..... Gary Paulsen from competing in the grueling Alaska race, but they were not successful. The writer and his team of sled dogs nearly perished during the race.",
+  "surfaces": [
+   "perish",
+   "perished"
+  ]
+ },
+ {
+  "lemma": "perk",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1401-p05",
+  "questionNo": 12,
+  "stem": "My company car is a benefit in .....; I would sorely miss it were I to move to another job that did not offer the same perk.",
+  "surfaces": [
+   "perk",
+   "perks"
+  ],
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "perpetual",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p08",
+  "questionNo": 15,
+  "stem": "Jeremey seems to have found the secret of perpetual youth, and we all hope that he will long continue to demonstrate this youthful ..... .",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "persist",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p06",
+  "questionNo": 3,
+  "stem": "..... atmospheric storms arise in a matter of hours and last for days, magnetic tempests develop over decades and persist for centuries.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "personality",
+  "band": "mid",
+  "generalRank": 5549,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p01",
+  "questionNo": 8,
+  "stem": "Sigmund Freud began his career in the 1890s ..... psychoanalysis, which is both a theory of personality and a method of treating people."
+ },
+ {
+  "lemma": "pessimism",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1403-p04",
+  "questionNo": 25,
+  "stem": "The most ubiquitous findings across optimism and pessimism research ..... optimism of many sorts to more positive affect.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "pessimist",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p03",
+  "questionNo": 5,
+  "stem": "My uncle, a farmer, is an ..... pessimist when he discusses the weather. For example, if the sun is shining, he's sure a drought is beginning; if it's raining, he's sure his crops will be washed away."
+ },
+ {
+  "lemma": "petroleum",
+  "band": "mid",
+  "generalRank": 6477,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1401-p03",
+  "questionNo": 15,
+  "stem": "ANL also investigated hydrogen's effects on petroleum use and found that using hydrogen as a fuel (15) ..... petroleum use by nearly %100 regardless of fuel production pathway."
+ },
+ {
+  "lemma": "pharmaceutical",
+  "band": "mid",
+  "generalRank": 5589,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1398-p03",
+  "questionNo": 6,
+  "stem": "The pharmaceutical company had to ..... its advertising claim regarding the healing power of its new arthritis medicine because research studies clearly indicate the medicine isn't effective."
+ },
+ {
+  "lemma": "phenomenon",
+  "band": "mid",
+  "generalRank": 8761,
+  "distinctYears": 3,
+  "occurrences": 4,
+  "paperId": "arshad-1398-p01",
+  "questionNo": 10,
+  "stem": "That is too ..... an explanation for this strange phenomenon—I am sure there's something more complex at work."
+ },
+ {
+  "lemma": "philology",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p08",
+  "questionNo": 10,
+  "stem": "As soon as Sanskrit became known to the Western learned world, the unravelling of comparative Indo-European grammar ensued, and the foundations were lain for the whole 19th-century edifice of comparative philology and historical linguistics.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "philosopher",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1399-p01",
+  "questionNo": 12,
+  "stem": "Philosopher René Descartes had begun to formulate a new concept of nature ..... an intricate, impersonal and inert machine."
+ },
+ {
+  "lemma": "phonics",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 4,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 37,
+  "stem": "..... of phonics—a rigorous study of the relation between letters and sounds—maintain that this approach is more effective than the \"whole language\" method, ..... naturally learn to recognize words through reading and writing.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "photoperiod",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p05",
+  "questionNo": 26,
+  "stem": "In the case of small organisms with short life cycles, climatic changes need not be catastrophic: ..... in photoperiod (daily amount of sunlight), for example, can govern population growth.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "photosynthesis",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 7,
+  "stem": "Symbiotic cells of algae known as zooxanthellae carry out photosynthesis using the metabolic wastes of the corals, ....., for their coral hosts, and even for other members of the reef community.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "physiological",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p05",
+  "questionNo": 30,
+  "stem": "Other regulators include physiological control mechanisms: for example, Christian and Davis have demonstrated ..... may bring about hormonal changes in the pituitary and adrenal glands that in turn may regulate population.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "picnic",
+  "band": "mid",
+  "generalRank": 9442,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p06",
+  "questionNo": 1,
+  "stem": "If it ..... tomorrow, we will cancel the picnic.",
+  "fieldCodes": [
+   "1161"
+  ]
+ },
+ {
+  "lemma": "pie",
+  "band": "mid",
+  "generalRank": 6252,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p10",
+  "questionNo": 5,
+  "stem": "Only when we had eaten the pie ..... it was out of date.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "piling",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p05",
+  "questionNo": 2,
+  "stem": "It's strange—buying books and treasuring them ................... reading them, splurging on clothing too beautiful to wear, and piling pantry shelves with goodies to reserve until past the use-by date.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "pill",
+  "band": "mid",
+  "generalRank": 5101,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1399-p04",
+  "questionNo": 2,
+  "stem": "The advertisement for the weight loss pills is very ..... since studies have shown they're ineffective.",
+  "surfaces": [
+   "pills"
+  ]
+ },
+ {
+  "lemma": "pillow",
+  "band": "mid",
+  "generalRank": 8569,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p01",
+  "questionNo": 5,
+  "stem": "It was more ..... to take my meals in bed, where all I had to do was push away my tray with its uneaten food and fall back upon my pillows.",
+  "surfaces": [
+   "pillows"
+  ]
+ },
+ {
+  "lemma": "pitch",
+  "band": "mid",
+  "generalRank": 6199,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p05",
+  "questionNo": 18,
+  "stem": "On the pitch, the faces of numerous players were pictures of disbelief, .................... at the goal they had just witnessed.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "pituitary",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p05",
+  "questionNo": 30,
+  "stem": "Other regulators include physiological control mechanisms: for example, Christian and Davis have demonstrated ..... may bring about hormonal changes in the pituitary and adrenal glands that in turn may regulate population.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "placards",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1404-p06",
+  "questionNo": 5,
+  "stem": "..... only about 10,000 on-street parking spots at schools reserved for employees with placards, traffic experts fear that holders of the new placards will not find a proper spot to park their car.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "plaintiff",
+  "band": "mid",
+  "generalRank": 7974,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p07",
+  "questionNo": 6,
+  "stem": "The plaintiffs who were reached declined to comment, ..... lawyer.",
+  "surfaces": [
+   "plaintiffs"
+  ],
+  "fieldCodes": [
+   "1296"
+  ]
+ },
+ {
+  "lemma": "planetesimals",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1402-p06",
+  "questionNo": 13,
+  "stem": "This material gradually coalesced into lumps called planetesimals as gravity and chance smashed smaller pieces together, was a chaotic and violent process that became more so as planetesimals grew in size and gravitational pull.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "plastics",
+  "band": "mid",
+  "generalRank": 8682,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p07",
+  "questionNo": 162,
+  "stem": "From an environmental standpoint, the plastic bag industry should be forced to switch to newly developed plastics, ..... after only 20 years.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "playful",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 22,
+  "stem": "The new movie remains tonally elusive, changing at times scene by scene or even moment by moment between playful comedy and something more ..... and ruminative.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "playground",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p09",
+  "questionNo": 30,
+  "stem": "MJ and McKenzie were the leading scapegraces of the playground in the park; their mothers often had to extricate them from ..... over whose turn it was at the swings or who had the right to the last cookie.",
+  "fieldCodes": [
+   "1121"
+  ]
+ }
+]

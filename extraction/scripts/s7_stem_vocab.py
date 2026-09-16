@@ -7,11 +7,16 @@ to.
 What it does NOT do: write to content/. It produces a classification only, which
 the owner approves before anything folds into the lexicon.
 
-Selection, in one line: a stem word earns a lexicon entry when it is ABOVE the
-baseline an MA candidate is assumed to have, not when it is frequent. Frequency
-in the exam corpus turned out to rank `people`, `because` and `water` at the top
-- see docs/adr/0011. So general-English frequency is used the other way round:
-as evidence a word is too EASY to be worth teaching.
+The criterion is IMPORTANCE TO UNDERSTANDING THE QUESTION, crossed with
+difficulty - not frequency, and not difficulty alone. A stem word earns an entry
+when a candidate plausibly does not know it AND the sentence leans on it. See
+docs/adr/0011.
+
+That judgment is not mechanical, so this script does not make it. This is a
+sieve: it drops only what provably needs no judgment - function words, and words
+common enough in general English that a candidate already knows them, where the
+"plausibly does not know it" factor is near zero - and hands the rest to the
+judging pass.
 
 Every stem lemma is classified and kept, including the easy ones. Nothing is
 discarded, so a later level-graded edition can draw on the bands below the cut.
@@ -37,8 +42,12 @@ OUT = ROOT / "extraction" / "state" / "stem-vocab.json"
 # see the band samples this script prints and docs/adr/0011.
 EASY_RANK = 3000
 
-# A lemma must appear in at least this many distinct exam years to be offered at
-# all. A floor against one-off noise and OCR debris - NOT a ranking signal.
+# Recorded, never used to gate. An earlier draft required 2+ distinct years as
+# "noise protection", but S5 already corroborates every stem word against
+# independent OCR, so the floor protected against nothing - it was the last
+# remnant of the frequency thinking ADR-0011 rejects. Under the real criterion
+# (importance in the sentence x difficulty) a word that blocks comprehension of
+# one question still blocks it, however many years it appeared in.
 MIN_YEARS = 2
 
 # Function words carry no teaching value at any level; they are not "vocabulary"
@@ -66,15 +75,28 @@ cannot let's don't etc via per thus hence therefore however moreover
 # that the surface form IS the lemma.
 INFLECTION_ENDINGS = ("ing", "ed", "ies", "es", "s")
 
+# Lemmas that merely look plural. `-ics` is handled by rule (physics, politics,
+# linguistics, statistics); these are the ones no rule catches, where stripping
+# the -s lands on a real but unrelated word.
+NEVER_REDUCE = {
+    "news", "means", "series", "species", "lens", "bias", "campus", "status",
+    "focus", "virus", "census", "consensus", "crisis", "basis", "analysis",
+    "thesis", "hypothesis", "emphasis", "apparatus", "corpus", "index",
+}
+
 
 def load_freq_ranks() -> dict[str, int]:
     if not FREQ_FILE.exists():
         sys.exit(f"missing frequency reference: {FREQ_FILE}")
     words = [w.strip().lower() for w in FREQ_FILE.read_text(encoding="utf-8").splitlines()]
-    return {w: i + 1 for i, w in enumerate(words) if w}
+    # Entries shorter than 3 characters are scraping debris, not words - the list
+    # carries `ne`, `br`, `th`, `ti`, `cl` among others. Left in, they become
+    # reduction targets and produce need -> ne, bring -> br, thing -> th. Every
+    # real 2-letter English word is a stopword here anyway, so nothing is lost.
+    return {w: i + 1 for i, w in enumerate(words) if len(w) >= 3}
 
 
-def build_lemmatizer(known: set[str]):
+def build_lemmatizer(known: set[str], reduce_targets: set[str] | None = None):
     """Crude suffix stripping, validated against a known-word set.
 
     There is no spaCy or NLTK here on purpose - extraction/requirements.txt is
@@ -82,9 +104,16 @@ def build_lemmatizer(known: set[str]):
     the reduced form is itself a known word, which is what keeps `bus` from
     becoming `bu` and `sanctioned` from becoming `sanction` only when
     `sanction` is real.
-    """
 
-    def candidates(w: str):
+    `reduce_targets` widens what counts as "real" for reductions only. It carries
+    the corpus's own surface forms, so `psychologists` -> `psychologist` works
+    even though neither form is in the frequency list: the singular turning up in
+    another stem is evidence enough.
+    """
+    targets = known if reduce_targets is None else reduce_targets
+
+    def inflectional(w: str):
+        """Plural and tense: same word, different grammatical form."""
         if w.endswith("ies") and len(w) > 4:
             yield w[:-3] + "y"
         if w.endswith("ied") and len(w) > 4:
@@ -99,10 +128,13 @@ def build_lemmatizer(known: set[str]):
             if len(w) > 4 and w[-3] == w[-4]:
                 yield w[:-3]      # stopped -> stop
         if w.endswith("ing") and len(w) > 4:
-            yield w[:-3]          # giving -> giv (rejected), reading -> read
-            yield w[:-3] + "e"    # giving -> give
+            yield w[:-3]          # reading -> read
+            yield w[:-3] + "e"    # giving  -> give
             if len(w) > 5 and w[-4] == w[-5]:
                 yield w[:-4]      # running -> run
+
+    def derivational(w: str):
+        """A different word built from another: only as a fallback."""
         if w.endswith("ly") and len(w) > 4:
             yield w[:-2]          # commonly -> common
         if w.endswith("est") and len(w) > 5:
@@ -111,9 +143,24 @@ def build_lemmatizer(known: set[str]):
             yield w[:-2]
 
     def lemma(w: str) -> str:
+        # Reduce INFLECTION first, even when the surface form is itself a known
+        # word. The frequency list is web-derived and lists plenty of inflected
+        # forms (finds, ties, scientists, humans, years all appear in it), so an
+        # "already known, leave it alone" shortcut silently refuses to reduce
+        # exactly the words that most need it, and splits one word's counts
+        # across two rows.
+        if w not in NEVER_REDUCE and not (w.endswith("ics") and len(w) > 4):
+            # Longest candidate first: `ties` offers both `ti` and `tie`, and the
+            # longer one is the real lemma every time.
+            hits = [c for c in inflectional(w) if len(c) >= 3 and c in targets]
+            if hits:
+                return max(hits, key=len)
         if w in known:
             return w
-        for c in candidates(w):
+        # Derivation (-ly, -er, -est) only as a fallback: `commonly` -> `common`
+        # is wanted, but `early` -> `ear` is not, and the exam may be testing the
+        # derived form itself.
+        for c in derivational(w):
             if c in known:
                 return c
         return w
@@ -133,7 +180,31 @@ def main() -> int:
             pass
 
     known = set(ranks) | lexicon_ids | lexicon_lemmas
-    lemma_of = build_lemmatizer(known)
+
+    # First pass: every surface form the corpus actually uses. It widens what a
+    # reduction may land on, which is how the pairs that are in neither the
+    # frequency list nor the lexicon (psychologist / psychologists) get merged.
+    # It also records which words are ever seen in lower case. A word that is
+    # capitalised every time it appears, and never sits at the start of a
+    # sentence, is a name - Christopher, Nicolaus, Lascaux. Those are not
+    # vocabulary and must not reach the judging pass.
+    surfaces_seen: set[str] = set()
+    ever_lower: set[str] = set()
+    for f in sorted(EXAMS.glob("*.json")):
+        d = json.loads(f.read_text(encoding="utf-8"))
+        for q in d.get("questions", []):
+            stem = q.get("stem") or ""
+            for m in re.finditer(r"[A-Za-z][A-Za-z'\-]*", stem):
+                raw = m.group(0).strip("'-")
+                if not raw:
+                    continue
+                surfaces_seen.add(raw.lower())
+                before = stem[: m.start()].rstrip()
+                sentence_initial = not before or before[-1] in ".!?\"'"
+                if raw[0].islower() or sentence_initial:
+                    ever_lower.add(raw.lower())
+
+    lemma_of = build_lemmatizer(known, reduce_targets=known | surfaces_seen)
 
     agg: dict[str, dict] = defaultdict(
         lambda: {"years": set(), "papers": set(), "n": 0, "surfaces": set(), "example": None}
@@ -168,6 +239,8 @@ def main() -> int:
         rank = ranks.get(lem)
         if lem in lexicon_ids or lem in lexicon_lemmas:
             band = "tested"          # already a lexicon word; nothing to decide
+        elif not (e["surfaces"] & ever_lower):
+            band = "proper"          # capitalised every time: a name, not a word
         elif "-" in lem:
             band = "compound"        # `year-old`, `cutting-edge`: a phrase, not a
                                      # word id. Kept, never offered as a lemma.
@@ -192,17 +265,15 @@ def main() -> int:
                 "lemmaUncertain": inflected,
                 # Only the shortlist carries its example stem. Storing one for
                 # all ~4.5k lemmas made this file 2.5 MB of mostly `because`.
-                "example": e["example"]
-                if band in ("mid", "rare") and len(e["years"]) >= MIN_YEARS
-                else None,
+                "example": e["example"] if band in ("mid", "rare") else None,
             }
         )
 
     rows.sort(key=lambda r: (-r["distinctYears"], -r["occurrences"], r["lemma"]))
 
-    shortlist = [
-        r for r in rows if r["band"] in ("mid", "rare") and r["meetsYearFloor"]
-    ]
+    # Everything the mechanical sieve cannot decide goes to the judging pass.
+    # No year floor: see MIN_YEARS above.
+    shortlist = [r for r in rows if r["band"] in ("mid", "rare")]
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(
@@ -216,7 +287,7 @@ def main() -> int:
                     "shortlist": len(shortlist),
                     **{
                         b: sum(1 for r in rows if r["band"] == b)
-                        for b in ("tested", "baseline", "mid", "rare", "compound")
+                        for b in ("tested", "baseline", "mid", "rare", "compound", "proper")
                     },
                 },
                 "words": rows,
@@ -230,15 +301,15 @@ def main() -> int:
 
     print(f"exam files      {len(exam_files)}")
     print(f"stem lemmas     {len(rows):,}")
-    for b in ("tested", "baseline", "mid", "rare", "compound"):
+    for b in ("tested", "baseline", "mid", "rare", "compound", "proper"):
         c = sum(1 for r in rows if r["band"] == b)
         f = sum(1 for r in rows if r["band"] == b and r["meetsYearFloor"])
         print(f"  {b:<9} {c:>5,}   (>= {MIN_YEARS} years: {f:,})")
-    print(f"\nSHORTLIST (mid+rare, >= {MIN_YEARS} years): {len(shortlist):,}")
+    print(f"\nSHORTLIST for judging (mid+rare, no year floor): {len(shortlist):,}")
     print(f"written to {OUT.relative_to(ROOT)}")
 
     for band in ("rare", "mid", "baseline"):
-        sample = [r["lemma"] for r in rows if r["band"] == band and r["meetsYearFloor"]][:30]
+        sample = [r["lemma"] for r in rows if r["band"] == band][:30]
         print(f"\n--- {band}, top 30 by year-spread ---\n   " + ", ".join(sample))
 
     return 0

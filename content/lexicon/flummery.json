@@ -12,25 +12,39 @@
       "reach": 1,
       "surface": "flummeries",
       "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 14,
+      "reach": 1,
+      "surface": "flummery",
+      "year": 1399
     }
   ],
   "pos": [],
   "stats": {
-    "answersByYear": {},
+    "answersByYear": {
+      "1399": 1
+    },
     "byYear": {
+      "1399": 1,
       "1400": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1400,
+    "distinctYears": 2,
+    "firstYear": 1399,
     "lastYear": 1400,
-    "priority": 3,
-    "timesAsAnswer": 0,
+    "priority": 8,
+    "timesAsAnswer": 1,
     "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
-    "flummeries"
+    "flummeries",
+    "flummery"
   ],
   "synonyms": [],
   "translations": []

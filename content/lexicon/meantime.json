@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "meantime",
+  "lemma": "meantime",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p02",
+      "part": "cloze",
+      "questionNo": 14,
+      "reach": 20,
+      "surface": "In the meantime",
+      "year": 1399
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "In the meantime"
+  ],
+  "synonyms": [],
+  "translations": []
+}

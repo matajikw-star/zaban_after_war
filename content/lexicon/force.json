@@ -12,25 +12,37 @@
       "reach": 31,
       "surface": "force",
       "year": 1404
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p10",
+      "part": "vocabulary",
+      "questionNo": 22,
+      "reach": 1,
+      "surface": "forces",
+      "year": 1399
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1399": 1,
       "1404": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1404,
+    "distinctYears": 2,
+    "firstYear": 1399,
     "lastYear": 1404,
-    "priority": 3,
+    "priority": 6,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesAsDistractor": 2,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
-    "force"
+    "force",
+    "forces"
   ],
   "synonyms": [],
   "translations": []

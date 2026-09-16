@@ -1,0 +1,69 @@
+{
+  "examples": [],
+  "id": "enigma",
+  "lemma": "enigma",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 20,
+      "surface": "enigma",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 9,
+      "surface": "enigma",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p07",
+      "part": "vocabulary",
+      "questionNo": 21,
+      "reach": 1,
+      "surface": "enigma",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 1,
+      "surface": "enigma",
+      "year": 1399
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 4
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 8,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 3,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "enigma"
+  ],
+  "synonyms": [],
+  "translations": []
+}

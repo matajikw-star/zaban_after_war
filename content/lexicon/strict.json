@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "strict",
+  "lemma": "strict",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 9,
+      "surface": "strictly",
+      "year": 1399
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "strictly"
+  ],
+  "synonyms": [],
+  "translations": []
+}

@@ -1,0 +1,49 @@
+{
+  "examples": [],
+  "id": "deposit",
+  "lemma": "deposit",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p01",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 42,
+      "surface": "deposits",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p03",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 16,
+      "surface": "deposits",
+      "year": 1399
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1399": 2
+    },
+    "byYear": {
+      "1399": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 8,
+    "timesAsAnswer": 2,
+    "timesAsDistractor": 0,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "deposits"
+  ],
+  "synonyms": [],
+  "translations": []
+}

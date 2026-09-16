@@ -42,25 +42,47 @@
       "reach": 1,
       "surface": "arise",
       "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 12,
+      "surface": "Arisen",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 10,
+      "surface": "Arisen",
+      "year": 1399
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1399": 2,
       "1400": 3,
       "1402": 1
     },
-    "distinctYears": 2,
-    "firstYear": 1400,
+    "distinctYears": 3,
+    "firstYear": 1399,
     "lastYear": 1402,
-    "priority": 8,
+    "priority": 12,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 4,
-    "timesTested": 4
+    "timesAsDistractor": 6,
+    "timesTested": 6
   },
   "status": "draft",
   "surfaceForms": [
+    "Arisen",
     "arise",
     "arises"
   ],

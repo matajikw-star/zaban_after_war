@@ -12,24 +12,46 @@
       "reach": 58,
       "surface": "proceeds",
       "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 12,
+      "surface": "proceed",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 10,
+      "surface": "proceed",
+      "year": 1399
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1399": 2,
       "1401": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1401,
+    "distinctYears": 2,
+    "firstYear": 1399,
     "lastYear": 1401,
-    "priority": 3,
+    "priority": 7,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesAsDistractor": 3,
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [
+    "proceed",
     "proceeds"
   ],
   "synonyms": [],

@@ -22,24 +22,36 @@
       "reach": 58,
       "surface": "inevitable",
       "year": 1401
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p10",
+      "part": "vocabulary",
+      "questionNo": 32,
+      "reach": 1,
+      "surface": "inevitable",
+      "year": 1399
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {
+      "1399": 1,
       "1401": 1
     },
     "byYear": {
+      "1399": 1,
       "1401": 1,
       "1402": 1
     },
-    "distinctYears": 2,
-    "firstYear": 1401,
+    "distinctYears": 3,
+    "firstYear": 1399,
     "lastYear": 1402,
-    "priority": 8,
-    "timesAsAnswer": 1,
+    "priority": 13,
+    "timesAsAnswer": 2,
     "timesAsDistractor": 1,
-    "timesTested": 2
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [

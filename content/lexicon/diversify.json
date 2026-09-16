@@ -12,25 +12,49 @@
       "reach": 58,
       "surface": "diversified",
       "year": 1401
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 12,
+      "surface": "diversified into",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 10,
+      "surface": "diversified into",
+      "year": 1399
     }
   ],
   "pos": [],
   "stats": {
-    "answersByYear": {},
+    "answersByYear": {
+      "1399": 2
+    },
     "byYear": {
+      "1399": 2,
       "1401": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1401,
+    "distinctYears": 2,
+    "firstYear": 1399,
     "lastYear": 1401,
-    "priority": 3,
-    "timesAsAnswer": 0,
+    "priority": 11,
+    "timesAsAnswer": 2,
     "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [
-    "diversified"
+    "diversified",
+    "diversified into"
   ],
   "synonyms": [],
   "translations": []

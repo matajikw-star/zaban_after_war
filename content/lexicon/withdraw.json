@@ -62,6 +62,46 @@
       "reach": 1,
       "surface": "withdraw",
       "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p01",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 42,
+      "surface": "withdraw",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p03",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 16,
+      "surface": "withdraw",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 12,
+      "surface": "Withdrawn",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 10,
+      "surface": "Withdrawn",
+      "year": 1399
     }
   ],
   "pos": [],
@@ -70,19 +110,21 @@
       "1400": 1
     },
     "byYear": {
+      "1399": 4,
       "1400": 4,
       "1402": 2
     },
-    "distinctYears": 2,
-    "firstYear": 1400,
+    "distinctYears": 3,
+    "firstYear": 1399,
     "lastYear": 1402,
-    "priority": 12,
+    "priority": 18,
     "timesAsAnswer": 1,
-    "timesAsDistractor": 5,
-    "timesTested": 6
+    "timesAsDistractor": 9,
+    "timesTested": 10
   },
   "status": "draft",
   "surfaceForms": [
+    "Withdrawn",
     "withdraw",
     "withdrawn"
   ],

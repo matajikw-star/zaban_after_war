@@ -12,24 +12,46 @@
       "reach": 1,
       "surface": "invectives",
       "year": 1405
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p07",
+      "part": "vocabulary",
+      "questionNo": 17,
+      "reach": 1,
+      "surface": "invectives",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 14,
+      "reach": 1,
+      "surface": "invective",
+      "year": 1399
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1399": 2,
       "1405": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1405,
+    "distinctYears": 2,
+    "firstYear": 1399,
     "lastYear": 1405,
-    "priority": 3,
+    "priority": 7,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesAsDistractor": 3,
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [
+    "invective",
     "invectives"
   ],
   "synonyms": [],

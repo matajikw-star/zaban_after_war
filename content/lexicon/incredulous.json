@@ -22,6 +22,16 @@
       "reach": 53,
       "surface": "incredulous",
       "year": 1403
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p07",
+      "part": "vocabulary",
+      "questionNo": 19,
+      "reach": 1,
+      "surface": "incredulous",
+      "year": 1399
     }
   ],
   "pos": [],
@@ -31,16 +41,17 @@
       "1404": 1
     },
     "byYear": {
+      "1399": 1,
       "1403": 1,
       "1404": 1
     },
-    "distinctYears": 2,
-    "firstYear": 1403,
+    "distinctYears": 3,
+    "firstYear": 1399,
     "lastYear": 1404,
-    "priority": 10,
+    "priority": 13,
     "timesAsAnswer": 2,
-    "timesAsDistractor": 0,
-    "timesTested": 2
+    "timesAsDistractor": 1,
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [

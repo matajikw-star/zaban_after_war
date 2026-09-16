@@ -1,0 +1,59 @@
+{
+  "examples": [],
+  "id": "gist",
+  "lemma": "gist",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 20,
+      "surface": "gist",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 9,
+      "surface": "gist",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 1,
+      "surface": "gist",
+      "year": 1399
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1399": 3
+    },
+    "byYear": {
+      "1399": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 11,
+    "timesAsAnswer": 3,
+    "timesAsDistractor": 0,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "gist"
+  ],
+  "synonyms": [],
+  "translations": []
+}

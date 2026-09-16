@@ -1,0 +1,47 @@
+{
+  "examples": [],
+  "id": "humble",
+  "lemma": "humble",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p01",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 42,
+      "surface": "humble",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p03",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 16,
+      "surface": "humble",
+      "year": 1399
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "humble"
+  ],
+  "synonyms": [],
+  "translations": []
+}

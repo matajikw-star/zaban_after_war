@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "wizardly",
+  "lemma": "wizardly",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 29,
+      "reach": 1,
+      "surface": "wizardly",
+      "year": 1399
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "wizardly"
+  ],
+  "synonyms": [],
+  "translations": []
+}

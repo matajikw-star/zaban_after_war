@@ -1,0 +1,807 @@
+{
+  "paperId": "arshad-1399-p10",
+  "degree": "arshad",
+  "year": 1399,
+  "groupCodes": [
+    "1148"
+  ],
+  "bookletCount": 1,
+  "source": {
+    "file": "1148-1399.pdf",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "extractedBy": {
+    "model": "claude-sonnet-5",
+    "at": "2026-09-15"
+  },
+  "questions": [
+    {
+      "no": 1,
+      "part": "grammar",
+      "stem": "The more internal commitment is desired, ..... .",
+      "options": [
+        "this involvement would be the greater",
+        "greater would be this involvement",
+        "the greater this involvement would be",
+        "would be greater this involvement"
+      ],
+      "optionLemmas": [
+        "great",
+        "great",
+        "great",
+        "great"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "great",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "grammar",
+      "stem": "In this model, you don't need the old command-and-control approach, ..... to keep people in line.",
+      "options": [
+        "which was designated",
+        "to be designated",
+        "designated it was",
+        "that was designated"
+      ],
+      "optionLemmas": [
+        "designate",
+        "designate",
+        "designate",
+        "designate"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "designate",
+      "uncertain": [
+        "q2: option 1 (which was designated) and option 4 (that was designated) are both grammatically plausible non-restrictive/restrictive relative clauses; picked option 1 because the comma suggests a non-restrictive clause, where 'which' is preferred over 'that', but this is a judgment call"
+      ]
+    },
+    {
+      "no": 3,
+      "part": "grammar",
+      "stem": "Because they are external to workers' jobs, task purposes depend not only upon workers' activities, ..... .",
+      "options": [
+        "as well as on outside events",
+        "but on outside events as well",
+        "also outside event as well",
+        "they do also on outside event"
+      ],
+      "optionLemmas": [
+        "event",
+        "event",
+        "event",
+        "event"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "event",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "grammar",
+      "stem": "It is important that work tasks ..... or allocated so that individual workers are given whole projects where possible.",
+      "options": [
+        "are designed",
+        "to be designed",
+        "designed",
+        "be designed"
+      ],
+      "optionLemmas": [
+        "design",
+        "design",
+        "design",
+        "design"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "design",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "grammar",
+      "stem": "Only when we had eaten the pie ..... it was out of date.",
+      "options": [
+        "we had realized that",
+        "that was realized",
+        "did we realize that",
+        "we realized the fact"
+      ],
+      "optionLemmas": [
+        "realize",
+        "realize",
+        "realize",
+        "realize"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "realize",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "grammar",
+      "stem": "Analysts remain cautious about the company's future ..... it has performed strongly over the past year.",
+      "options": [
+        "however",
+        "such that",
+        "even though",
+        "notwithstanding"
+      ],
+      "optionLemmas": [
+        "however",
+        "such",
+        "though",
+        "notwithstanding"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "though",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "grammar",
+      "stem": "The majority of customers were satisfied with the food, ..... compared with just over 100 who responded negatively.",
+      "options": [
+        "with just over 400 giving a positive answer",
+        "just over 400 gave a positive answer",
+        "a positive answer to have been given by just over 400",
+        "due to a positive answer was given by just over 400"
+      ],
+      "optionLemmas": [
+        "give",
+        "give",
+        "give",
+        "give"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "give",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "The individual members of the group were not among the top in the organization, yet their synergy was so remarkable ..... first place.",
+      "options": [
+        "yet again they won",
+        "for which to win",
+        "for them to win",
+        "that they won"
+      ],
+      "optionLemmas": [
+        "win",
+        "win",
+        "win",
+        "win"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "win",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "grammar",
+      "stem": "It is in the place that tales occupied in the lives of the slaves and ..... that the clearest resemblances to African tradition can be found.",
+      "options": [
+        "the meaning to derive from them by slaves",
+        "in the meaning slaves derived from them",
+        "derived from them the meaning by slaves",
+        "the meaning which salves derived it from them"
+      ],
+      "optionLemmas": [
+        "meaning",
+        "meaning",
+        "meaning",
+        "meaning"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "meaning",
+      "uncertain": [
+        "q9: parallel-structure cleft sentence ('It is X and Y that...'); judged option 2 correct because it parallels the earlier 'in the place that tales occupied', but the reasoning is not fully certain. Option 4 is transcribed verbatim including the printed typo 'salves' for 'slaves' and the redundant 'it'."
+      ]
+    },
+    {
+      "no": 10,
+      "part": "grammar",
+      "stem": "..... taking an extra cupcake off the food line in the cafeteria, Rasheen beguiled the server with a bright smile and a shrug and said, \"It's for my friend who forgot to take one when she picked up her lunch.\"",
+      "options": [
+        "Caught",
+        "To be caught",
+        "Having caught",
+        "For being caught"
+      ],
+      "optionLemmas": [
+        "catch",
+        "catch",
+        "catch",
+        "catch"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "catch",
+      "uncertain": []
+    },
+    {
+      "no": 11,
+      "part": "grammar",
+      "stem": "When one buys products online, you should be sure that you know the return policy of the company.",
+      "options": [
+        "one buys",
+        "online",
+        "that",
+        "the return policy of the company"
+      ],
+      "optionLemmas": [
+        "buy",
+        "online",
+        "that",
+        "policy"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "buy",
+      "uncertain": []
+    },
+    {
+      "no": 12,
+      "part": "grammar",
+      "stem": "Although any destruction of vitamins caused by food irradiation could be counterbalanced by the use of diet supplements, but there may be no protection from carcinogens that some fear might be introduced into foods by the process.",
+      "options": [
+        "caused by food irradiation",
+        "by",
+        "but there may be no protection",
+        "that some fear might"
+      ],
+      "optionLemmas": [
+        "cause",
+        "by",
+        "but",
+        "that"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "but",
+      "uncertain": []
+    },
+    {
+      "no": 13,
+      "part": "grammar",
+      "stem": "So much of modern fiction in modern literature is autobiographical, and so much of the autobiography fictionalized, then the genres sometimes seem largely interchangeable.",
+      "options": [
+        "So much of modern fiction",
+        "of the autobiography",
+        "then the genres sometimes",
+        "interchangeable"
+      ],
+      "optionLemmas": [
+        "fiction",
+        "autobiography",
+        "then",
+        "interchangeable"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "then",
+      "uncertain": []
+    },
+    {
+      "no": 14,
+      "part": "grammar",
+      "stem": "In early period of human history, when voyages and travels were not undertaken from the view of amusement or instruction, or from political or commercial motives, the discovery of adjacent countries was chiefly affected by war, and of distant regions by commerce.",
+      "options": [
+        "In early period of human history",
+        "from the view of",
+        "was chiefly affected by war",
+        "of distant regions by commerce"
+      ],
+      "optionLemmas": [
+        "period",
+        "view",
+        "affect",
+        "region"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "period",
+      "uncertain": [
+        "q14: picked segment 1 (missing article: 'In early period' should be 'In the early period') as the error, but segment 2 ('from the view of', a non-idiomatic phrase) is also a defensible candidate"
+      ]
+    },
+    {
+      "no": 15,
+      "part": "grammar",
+      "stem": "To many of us, it is inconceivable that having a computer once considered as a luxury because now we cannot imagine doing business without data programs, e-mails, video conferencing, and the Internet.",
+      "options": [
+        "To many of us",
+        "once considered as",
+        "doing business",
+        "the Internet"
+      ],
+      "optionLemmas": [
+        "many",
+        "consider",
+        "business",
+        "internet"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "consider",
+      "uncertain": []
+    },
+    {
+      "no": 16,
+      "part": "grammar",
+      "stem": "In her job as an operator for the police department hot line, Tamika discovered it was difficult to get people to speak calmly and slowly in emergency.",
+      "options": [
+        "as an operator",
+        "it was difficult",
+        "to speak",
+        "in emergency"
+      ],
+      "optionLemmas": [
+        "operator",
+        "difficult",
+        "speak",
+        "emergency"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "emergency",
+      "uncertain": []
+    },
+    {
+      "no": 17,
+      "part": "grammar",
+      "stem": "While the plays of Christopher Marlowe were enormously successful during his lifetime, most contemporary critics find them inferior to William Shakespeare.",
+      "options": [
+        "While",
+        "during his lifetime",
+        "find them inferior",
+        "to William Shakespeare"
+      ],
+      "optionLemmas": [
+        "while",
+        "lifetime",
+        "inferior",
+        "shakespeare"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "inferior",
+      "uncertain": []
+    },
+    {
+      "no": 18,
+      "part": "grammar",
+      "stem": "When there had been a recent infestation of termites in the house became evident as soon as the contractors removed the old paneling.",
+      "options": [
+        "When",
+        "had been",
+        "became evident",
+        "removed"
+      ],
+      "optionLemmas": [
+        "when",
+        "have",
+        "become",
+        "remove"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "when",
+      "uncertain": []
+    },
+    {
+      "no": 19,
+      "part": "grammar",
+      "stem": "If you interviewed a random sample of business school students in 1988, the concept of environmental markets would be foreign to virtually everyone you spoke with.",
+      "options": [
+        "business school students",
+        "would be foreign",
+        "to virtually everyone",
+        "spoke with"
+      ],
+      "optionLemmas": [
+        "student",
+        "foreign",
+        "everyone",
+        "speak"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "foreign",
+      "uncertain": []
+    },
+    {
+      "no": 20,
+      "part": "grammar",
+      "stem": "The HDR resource base is generally defined to include crustal rock that is hotter than 150°C, at depths less than ten kilometers, and can be drilled with presently available equipment.",
+      "options": [
+        "to include",
+        "that is",
+        "at depths less than",
+        "presently"
+      ],
+      "optionLemmas": [
+        "include",
+        "that",
+        "depth",
+        "presently"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "presently",
+      "uncertain": [
+        "q20: no candidate error stood out clearly; guessed 'presently' (traditionally means 'soon', not 'currently') as the intended error, but this is a low-confidence guess and should be reviewed"
+      ]
+    },
+    {
+      "no": 21,
+      "part": "vocabulary",
+      "stem": "This latest proposal will create more ..... tape, which will harm the growth of small businesses.",
+      "options": [
+        "blue",
+        "black",
+        "white",
+        "red"
+      ],
+      "optionLemmas": [
+        "blue",
+        "black",
+        "white",
+        "red"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "red",
+      "uncertain": []
+    },
+    {
+      "no": 22,
+      "part": "vocabulary",
+      "stem": "In the end, the success of the business ..... all down to supply and demand.",
+      "options": [
+        "reduces",
+        "boils",
+        "forces",
+        "evaporates"
+      ],
+      "optionLemmas": [
+        "reduce",
+        "boil",
+        "force",
+        "evaporate"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "boil",
+      "uncertain": []
+    },
+    {
+      "no": 23,
+      "part": "vocabulary",
+      "stem": "Can we just modify the old company brochure or do we have to start again from .....?",
+      "options": [
+        "ground",
+        "bottom",
+        "outline",
+        "scratch"
+      ],
+      "optionLemmas": [
+        "ground",
+        "bottom",
+        "outline",
+        "scratch"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "scratch",
+      "uncertain": []
+    },
+    {
+      "no": 24,
+      "part": "vocabulary",
+      "stem": "This scheme should help to ..... feelings of satisfaction among all our clients.",
+      "options": [
+        "enhance",
+        "enlarge",
+        "enforce",
+        "entail"
+      ],
+      "optionLemmas": [
+        "enhance",
+        "enlarge",
+        "enforce",
+        "entail"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "enhance",
+      "uncertain": []
+    },
+    {
+      "no": 25,
+      "part": "vocabulary",
+      "stem": "The initial ..... on equipment is high but the day-to-day running costs are quite low.",
+      "options": [
+        "outlet",
+        "outcome",
+        "outlay",
+        "outset"
+      ],
+      "optionLemmas": [
+        "outlet",
+        "outcome",
+        "outlay",
+        "outset"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "outlay",
+      "uncertain": []
+    },
+    {
+      "no": 26,
+      "part": "vocabulary",
+      "stem": "..... from his work as a business trainer, he also runs a chain of clothing stores.",
+      "options": [
+        "Except",
+        "Addition",
+        "Apart",
+        "Far"
+      ],
+      "optionLemmas": [
+        "except",
+        "addition",
+        "apart",
+        "far"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "apart",
+      "uncertain": []
+    },
+    {
+      "no": 27,
+      "part": "vocabulary",
+      "stem": "Market research needs to be carried ..... to analyze the existing competition in the snacks market and any new trends in consumer behavior.",
+      "options": [
+        "away",
+        "out",
+        "in",
+        "through"
+      ],
+      "optionLemmas": [
+        "away",
+        "out",
+        "in",
+        "through"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "out",
+      "uncertain": []
+    },
+    {
+      "no": 28,
+      "part": "vocabulary",
+      "stem": "Branding often seems something in which large companies invest huge amounts of time and money but which is ..... small companies who have to focus on the day-to-day task of keeping the revenue coming in.",
+      "options": [
+        "irrelevant to",
+        "reminded of",
+        "involved in",
+        "commensurate with"
+      ],
+      "optionLemmas": [
+        "irrelevant",
+        "remind",
+        "involve",
+        "commensurate"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "irrelevant",
+      "uncertain": []
+    },
+    {
+      "no": 29,
+      "part": "vocabulary",
+      "stem": "I have to confess due to the problems we are grappling with the investment has ..... to almost half of its original value.",
+      "options": [
+        "attached",
+        "dwindled",
+        "inflated",
+        "disclosed"
+      ],
+      "optionLemmas": [
+        "attach",
+        "dwindle",
+        "inflate",
+        "disclose"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "dwindle",
+      "uncertain": []
+    },
+    {
+      "no": 30,
+      "part": "vocabulary",
+      "stem": "The company is planning some really ..... changes in their management structure.",
+      "options": [
+        "qualifying",
+        "speculating",
+        "sweeping",
+        "imposing"
+      ],
+      "optionLemmas": [
+        "qualify",
+        "speculate",
+        "sweeping",
+        "impose"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "sweeping",
+      "uncertain": []
+    },
+    {
+      "no": 31,
+      "part": "vocabulary",
+      "stem": "Hoping to ..... the black mark from his record, Bart conducted himself with proper decorum during the remainder of his tenure.",
+      "options": [
+        "restore",
+        "efface",
+        "surpass",
+        "deduce"
+      ],
+      "optionLemmas": [
+        "restore",
+        "efface",
+        "surpass",
+        "deduce"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "efface",
+      "uncertain": []
+    },
+    {
+      "no": 32,
+      "part": "vocabulary",
+      "stem": "Technical glitches are ....., frustrating as it is for everyone.",
+      "options": [
+        "innovative",
+        "pragmatic",
+        "flexible",
+        "inevitable"
+      ],
+      "optionLemmas": [
+        "innovative",
+        "pragmatic",
+        "flexible",
+        "inevitable"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "inevitable",
+      "uncertain": []
+    },
+    {
+      "no": 33,
+      "part": "vocabulary",
+      "stem": "As more and more books are ordered through the Internet, bookstores have suffered ....., and have closed.",
+      "options": [
+        "accession",
+        "attrition",
+        "alleviation",
+        "ambition"
+      ],
+      "optionLemmas": [
+        "accession",
+        "attrition",
+        "alleviation",
+        "ambition"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "attrition",
+      "uncertain": []
+    },
+    {
+      "no": 34,
+      "part": "vocabulary",
+      "stem": "After a brief summary of proper swimming technique, the coach ..... the specifics of each stroke, spending 30 minutes alone on the backstroke.",
+      "options": [
+        "inspired",
+        "correlated",
+        "depicted",
+        "adopted"
+      ],
+      "optionLemmas": [
+        "inspire",
+        "correlate",
+        "depict",
+        "adopt"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "depict",
+      "uncertain": [
+        "q34: none of the four options is a strong idiomatic fit for 'went into detail about the specifics of each stroke'; picked 'depicted' as the closest sense (described/portrayed in detail) but this is a low-confidence guess"
+      ]
+    },
+    {
+      "no": 35,
+      "part": "vocabulary",
+      "stem": "The ..... of voters was so great that less than half the people who were eligible to vote actually bothered to do so.",
+      "options": [
+        "apathy",
+        "peril",
+        "resemblance",
+        "authority"
+      ],
+      "optionLemmas": [
+        "apathy",
+        "peril",
+        "resemblance",
+        "authority"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "apathy",
+      "uncertain": []
+    }
+  ],
+  "uncertain": [
+    "Part C: Vocabulary spans questions 21-35 across pages 4-5; page 5 (q23-35) confirmed the continuation, and Part D: Reading Comprehension begins immediately after q35 on page 5. No cloze/Part B section (as described in the generic instructions) was present in this paper; the paper's actual structure is PART A: Structure (grammar), PART B: Written Expression (error identification, classified as grammar), PART C: Vocabulary (q21-35)."
+  ]
+}

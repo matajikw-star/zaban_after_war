@@ -12,23 +12,45 @@
       "reach": 34,
       "surface": "proximity",
       "year": 1401
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 12,
+      "surface": "proximity",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 10,
+      "surface": "proximity",
+      "year": 1399
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {
+      "1399": 2,
       "1401": 1
     },
     "byYear": {
+      "1399": 2,
       "1401": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1401,
+    "distinctYears": 2,
+    "firstYear": 1399,
     "lastYear": 1401,
-    "priority": 5,
-    "timesAsAnswer": 1,
+    "priority": 13,
+    "timesAsAnswer": 3,
     "timesAsDistractor": 0,
-    "timesTested": 1
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [

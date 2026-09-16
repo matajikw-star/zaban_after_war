@@ -22,22 +22,43 @@
       "reach": 31,
       "surface": "elicited",
       "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 12,
+      "surface": "elicit",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 10,
+      "surface": "elicit",
+      "year": 1399
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1399": 2,
       "1401": 1,
       "1402": 1
     },
-    "distinctYears": 2,
-    "firstYear": 1401,
+    "distinctYears": 3,
+    "firstYear": 1399,
     "lastYear": 1402,
-    "priority": 6,
+    "priority": 10,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 2,
-    "timesTested": 2
+    "timesAsDistractor": 4,
+    "timesTested": 4
   },
   "status": "draft",
   "surfaceForms": [

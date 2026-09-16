@@ -22,6 +22,16 @@
       "reach": 28,
       "surface": "ambition",
       "year": 1404
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p10",
+      "part": "vocabulary",
+      "questionNo": 33,
+      "reach": 1,
+      "surface": "ambition",
+      "year": 1399
     }
   ],
   "pos": [],
@@ -30,16 +40,17 @@
       "1405": 1
     },
     "byYear": {
+      "1399": 1,
       "1404": 1,
       "1405": 1
     },
-    "distinctYears": 2,
-    "firstYear": 1404,
+    "distinctYears": 3,
+    "firstYear": 1399,
     "lastYear": 1405,
-    "priority": 8,
+    "priority": 11,
     "timesAsAnswer": 1,
-    "timesAsDistractor": 1,
-    "timesTested": 2
+    "timesAsDistractor": 2,
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [

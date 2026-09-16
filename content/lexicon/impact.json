@@ -42,24 +42,46 @@
       "reach": 1,
       "surface": "impacts",
       "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 12,
+      "surface": "impact",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 10,
+      "surface": "impact",
+      "year": 1399
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1399": 2,
       "1400": 4
     },
-    "distinctYears": 1,
-    "firstYear": 1400,
+    "distinctYears": 2,
+    "firstYear": 1399,
     "lastYear": 1400,
-    "priority": 6,
+    "priority": 10,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 4,
-    "timesTested": 4
+    "timesAsDistractor": 6,
+    "timesTested": 6
   },
   "status": "draft",
   "surfaceForms": [
+    "impact",
     "impacts"
   ],
   "synonyms": [],

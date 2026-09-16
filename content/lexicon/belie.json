@@ -22,22 +22,35 @@
       "reach": 31,
       "surface": "belie",
       "year": 1401
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 12,
+      "reach": 1,
+      "surface": "belie",
+      "year": 1399
     }
   ],
   "pos": [],
   "stats": {
-    "answersByYear": {},
+    "answersByYear": {
+      "1399": 1
+    },
     "byYear": {
+      "1399": 1,
       "1401": 1,
       "1404": 1
     },
-    "distinctYears": 2,
-    "firstYear": 1401,
+    "distinctYears": 3,
+    "firstYear": 1399,
     "lastYear": 1404,
-    "priority": 6,
-    "timesAsAnswer": 0,
+    "priority": 11,
+    "timesAsAnswer": 1,
     "timesAsDistractor": 2,
-    "timesTested": 2
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [

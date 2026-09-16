@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "speculate",
+  "lemma": "speculate",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p10",
+      "part": "vocabulary",
+      "questionNo": 30,
+      "reach": 1,
+      "surface": "speculating",
+      "year": 1399
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "speculating"
+  ],
+  "synonyms": [],
+  "translations": []
+}

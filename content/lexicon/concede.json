@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "concede",
+  "lemma": "concede",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p08",
+      "part": "cloze",
+      "questionNo": 31,
+      "reach": 1,
+      "surface": "concede",
+      "year": 1399
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "concede"
+  ],
+  "synonyms": [],
+  "translations": []
+}

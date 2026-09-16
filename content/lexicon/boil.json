@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "boil",
+  "lemma": "boil",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p10",
+      "part": "vocabulary",
+      "questionNo": 22,
+      "reach": 1,
+      "surface": "boils",
+      "year": 1399
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "boils"
+  ],
+  "synonyms": [],
+  "translations": []
+}

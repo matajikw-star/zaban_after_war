@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "profound",
+  "lemma": "profound",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p08",
+      "part": "cloze",
+      "questionNo": 32,
+      "reach": 1,
+      "surface": "profoundly",
+      "year": 1399
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "profoundly"
+  ],
+  "synonyms": [],
+  "translations": []
+}

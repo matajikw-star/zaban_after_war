@@ -1,0 +1,57 @@
+{
+  "examples": [],
+  "id": "reassure",
+  "lemma": "reassure",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 20,
+      "surface": "reassured",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 9,
+      "surface": "reassured",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 1,
+      "surface": "reassured",
+      "year": 1399
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "reassured"
+  ],
+  "synonyms": [],
+  "translations": []
+}

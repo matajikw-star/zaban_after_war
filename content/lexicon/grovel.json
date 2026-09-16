@@ -12,27 +12,40 @@
       "reach": 1,
       "surface": "grovel",
       "year": 1405
+    },
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 17,
+      "reach": 1,
+      "surface": "groveled",
+      "year": 1399
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {
+      "1399": 1,
       "1405": 1
     },
     "byYear": {
+      "1399": 1,
       "1405": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1405,
+    "distinctYears": 2,
+    "firstYear": 1399,
     "lastYear": 1405,
-    "priority": 5,
-    "timesAsAnswer": 1,
+    "priority": 10,
+    "timesAsAnswer": 2,
     "timesAsDistractor": 0,
-    "timesTested": 1
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
-    "grovel"
+    "grovel",
+    "groveled"
   ],
   "synonyms": [],
   "translations": []

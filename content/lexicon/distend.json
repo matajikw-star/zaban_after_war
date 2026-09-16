@@ -12,24 +12,36 @@
       "reach": 1,
       "surface": "distending",
       "year": 1403
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p07",
+      "part": "vocabulary",
+      "questionNo": 20,
+      "reach": 1,
+      "surface": "distend",
+      "year": 1399
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1399": 1,
       "1403": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1403,
+    "distinctYears": 2,
+    "firstYear": 1399,
     "lastYear": 1403,
-    "priority": 3,
+    "priority": 6,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesAsDistractor": 2,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
+    "distend",
     "distending"
   ],
   "synonyms": [],

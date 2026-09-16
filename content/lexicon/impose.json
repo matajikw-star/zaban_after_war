@@ -12,25 +12,37 @@
       "reach": 34,
       "surface": "impose",
       "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p10",
+      "part": "vocabulary",
+      "questionNo": 30,
+      "reach": 1,
+      "surface": "imposing",
+      "year": 1399
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1399": 1,
       "1401": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1401,
+    "distinctYears": 2,
+    "firstYear": 1399,
     "lastYear": 1401,
-    "priority": 3,
+    "priority": 6,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesAsDistractor": 2,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
-    "impose"
+    "impose",
+    "imposing"
   ],
   "synonyms": [],
   "translations": []

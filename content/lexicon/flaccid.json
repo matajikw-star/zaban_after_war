@@ -1,0 +1,39 @@
+{
+  "examples": [],
+  "id": "flaccid",
+  "lemma": "flaccid",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 29,
+      "reach": 1,
+      "surface": "flaccid",
+      "year": 1399
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "flaccid"
+  ],
+  "synonyms": [],
+  "translations": []
+}

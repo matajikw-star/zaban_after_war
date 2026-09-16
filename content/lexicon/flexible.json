@@ -32,21 +32,32 @@
       "reach": 3,
       "surface": "flexible",
       "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p10",
+      "part": "vocabulary",
+      "questionNo": 32,
+      "reach": 1,
+      "surface": "flexible",
+      "year": 1399
     }
   ],
   "pos": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
+      "1399": 1,
       "1400": 3
     },
-    "distinctYears": 1,
-    "firstYear": 1400,
+    "distinctYears": 2,
+    "firstYear": 1399,
     "lastYear": 1400,
-    "priority": 5,
+    "priority": 8,
     "timesAsAnswer": 0,
-    "timesAsDistractor": 3,
-    "timesTested": 3
+    "timesAsDistractor": 4,
+    "timesTested": 4
   },
   "status": "draft",
   "surfaceForms": [

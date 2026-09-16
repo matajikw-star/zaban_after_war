@@ -12,6 +12,16 @@
       "reach": 1,
       "surface": "ceded",
       "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 12,
+      "reach": 1,
+      "surface": "cede",
+      "year": 1399
     }
   ],
   "pos": [],
@@ -20,18 +30,20 @@
       "1400": 1
     },
     "byYear": {
+      "1399": 1,
       "1400": 1
     },
-    "distinctYears": 1,
-    "firstYear": 1400,
+    "distinctYears": 2,
+    "firstYear": 1399,
     "lastYear": 1400,
-    "priority": 5,
+    "priority": 8,
     "timesAsAnswer": 1,
-    "timesAsDistractor": 0,
-    "timesTested": 1
+    "timesAsDistractor": 1,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [
+    "cede",
     "ceded"
   ],
   "synonyms": [],

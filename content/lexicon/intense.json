@@ -1,0 +1,47 @@
+{
+  "examples": [],
+  "id": "intense",
+  "lemma": "intense",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p01",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 42,
+      "surface": "intense",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p03",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 16,
+      "surface": "intense",
+      "year": 1399
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "intense"
+  ],
+  "synonyms": [],
+  "translations": []
+}

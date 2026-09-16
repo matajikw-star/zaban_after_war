@@ -1,0 +1,37 @@
+{
+  "examples": [],
+  "id": "ingenuity",
+  "lemma": "ingenuity",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 22,
+      "reach": 1,
+      "surface": "ingenuity",
+      "year": 1399
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "ingenuity"
+  ],
+  "synonyms": [],
+  "translations": []
+}

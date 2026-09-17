@@ -27,8 +27,6 @@ Persian terms are given where you will meet them in an Iranian panel.
 
 - Sign up at kavenegar.com as an individual («حقیقی») with your national ID; identity
   verification («احراز هویت») is required before any SMS is sent.
-- Buy initial credit: **500,000 toman** is plenty for beta and launch (an OTP costs on the order
-  of a few hundred toman; verify the current price in the panel and record it).
 - **Ignore «وب‌پوش» (web push)** — that page is for browser notifications, which the product
   does not use, and its `<script>` snippet must never be added to the site (ADR-0005).
 - No dedicated line is needed: OTPs go through **Verify Lookup** (sidebar «اعتبارسنجی»). Create a

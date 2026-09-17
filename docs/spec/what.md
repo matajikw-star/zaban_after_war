@@ -771,9 +771,10 @@ its edge certificate — recorded here if it happens.
 
 ### 14.3 DNS
 
-`A` records for the apex, `www`, `app`, `admin` → the VPS IP. Preferred: nameservers at
-ArvanCloud DNS (free, Iranian, has an API) so records are managed by `tools/dns` from
-`ARVAN_API_KEY`; fallback: the owner adds them at the registrar. TTL 300 during launch.
+`A` records for the apex, `www`, `app`, `admin` → the VPS IP, hosted on **Parspack's CDN
+product** (free plan, DNS-only — proxying off), nameservers `hail.parspack.net` /
+`star.parspack.net`. Done 2026-09-18; procedure and the two problems hit along the way are in
+`docs/runbooks/server-setup.md`.
 
 ### 14.4 Deploy procedure
 
@@ -890,8 +891,8 @@ PocketBase binary); `deploy` on `main` if SSH works; `android` on tags. Branch p
 (`kavenegar`|`console`), `SMS_API_KEY`, `SMS_OTP_TEMPLATE`, `ZARINPAL_MERCHANT_ID`,
 `ZARINPAL_SANDBOX` (`0`|`1`), `ZARINPAL_CALLBACK_URL`, `PUBLIC_APP_ORIGIN`, `CONTENT_DIR`,
 `SOURCEMAP_DIR`, `BACKUP_S3_ENDPOINT`, `BACKUP_S3_BUCKET`, `BACKUP_S3_KEY`, `BACKUP_S3_SECRET`.
-Local bootstrap and DNS (`.env.local`, git-ignored, used once): `VPS_IP`, `VPS_ROOT_PASSWORD`,
-`ARVAN_API_KEY`.
+Local bootstrap (`.env.local`, git-ignored, used once): `VPS_IP`, `VPS_ROOT_PASSWORD`. DNS is
+done (§14.3) and needs no key — it is managed by hand in Parspack's CDN panel.
 GitHub: `DEPLOY_HOST`, `DEPLOY_USER`, `DEPLOY_SSH_KEY`, `ANDROID_KEYSTORE_B64`,
 `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`. Build: `VITE_API_ORIGIN`, `VITE_APP_NAME`
 (the deferred Persian name — one constant). Local tools (`.env.local`, git-ignored):

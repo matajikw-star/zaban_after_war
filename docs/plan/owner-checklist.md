@@ -61,25 +61,17 @@ Fallback if Kavenegar rejects the account or approval stalls beyond a week: SMS.
 - Enable the **sandbox** («محیط تست») if the panel offers it; otherwise Claude uses Zarinpal's
   public sandbox merchant.
 
-### A4. Domain DNS — `konkurleitner.com` — **hosted at Parspack's nameservers**
+### A4. Domain DNS — `konkurleitner.com` — **done, 2026-09-18**
 
-The domain already uses `ns1-4.parspack.co`, so the records are edited in the Parspack panel:
-`docs/runbooks/server-setup.md` §2 has the exact four rows. ArvanCloud is not needed.
-
-- Claude cannot click through a registrar's web panel, so DNS goes one of two ways:
-  - **Option 1, Claude does it (preferred):** sign up at ArvanCloud (panel.arvancloud.ir, free,
-    needs one-time identity verification), add the domain under «DNS ابری», and set the two
-    nameservers it shows at your registrar. Then create an API key («کلید API» in the profile
-    menu) and put it in `.env.local` as `ARVAN_API_KEY=`. Claude creates and maintains every
-    record from then on.
-  - **Option 2, you add four records:** in the registrar's DNS panel add `A` records `@`, `www`,
-    `app`, `admin` → the VPS IP, TTL 300, when Claude gives you the IP.
-- Either way, tell Claude where the domain is registered.
+Hosted on Parspack's free CDN product (nameservers `hail.parspack.net` / `star.parspack.net`,
+*not* `ns1-4.parspack.co` — that page has no zone editor). All four records point at
+`188.212.96.127` with the proxy toggle off. Nothing left to do here; full story if it ever needs
+revisiting is `docs/runbooks/server-setup.md` §2.
 
 ### A5. Backup storage — S3-compatible, a few GB
 
-- Parspack «فضای ابری / Object Storage» if they sell it; otherwise ArvanCloud «فضای ابری» (free
-  tier is enough). Create one bucket named `kl-backups`.
+- Parspack «فضای ابری / Object Storage» if they sell it; otherwise any Iranian S3-compatible
+  provider (free tier is enough for this data size). Create one bucket named `kl-backups`.
 - Hand over: endpoint URL, bucket name, access key, secret key.
 
 ### A6. Not needed now

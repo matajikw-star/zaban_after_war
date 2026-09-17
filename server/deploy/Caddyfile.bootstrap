@@ -5,6 +5,10 @@
 
 {
 	email admin@konkurleitner.com
+	# ZeroSSL (Caddy's other default issuer) returned a malformed, non-JSON response when
+	# tested from this VPS on 2026-09-18 - plausibly unreachable/filtered for an Iranian IP.
+	# Let's Encrypt alone is what has actually been verified to work here.
+	acme_ca https://acme-v02.api.letsencrypt.org/directory
 }
 
 (common) {

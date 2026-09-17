@@ -6,7 +6,7 @@
   },
   "id": "initial",
   "lemma": "initial",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +42,70 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "final",
+        "eventual"
+      ],
+      "definition": "happening at the beginning of a process, before anything else",
+      "examples": [
+        {
+          "en": "The initial results of the survey surprised the whole team.",
+          "fa": "نتایج اولیهٔ این نظرسنجی تمام تیم را شگفت‌زده کرد."
+        }
+      ],
+      "ipa": "/ɪˈnɪʃl/",
+      "pos": "adj",
+      "synonyms": [
+        "first",
+        "opening",
+        "early"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 30
+        },
+        {
+          "paperId": "arshad-1398-p01",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1398-p03",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "نخستین",
+        "اولیه",
+        "آغازین"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "the first letter of each of a person's names, used as a short form",
+      "examples": [
+        {
+          "en": "He carved his initials into the corner of the wooden desk.",
+          "fa": "حروف اول نامش را گوشهٔ آن میز چوبی حک کرد."
+        }
+      ],
+      "ipa": "/ɪˈnɪʃl/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "حرف اول نام",
+        "سرحرف"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

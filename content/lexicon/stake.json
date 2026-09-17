@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هم‌آوا با stake؛ اما steak یعنی تکه گوشت (استیک)",
+      "word": "steak"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "stake",
   "lemma": "stake",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,89 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a share or personal interest in something, so that you gain or lose by what happens to it",
+      "examples": [
+        {
+          "en": "Every teacher in the school has a stake in how the reform turns out.",
+          "fa": "هر معلمی در آن مدرسه در سرانجام این اصلاحات ذی‌نفع است."
+        }
+      ],
+      "ipa": "/steɪk/",
+      "pos": "n",
+      "synonyms": [
+        "share",
+        "interest",
+        "investment"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 190
+        }
+      ],
+      "translations": [
+        "سهم",
+        "نفع و منفعت",
+        "ذی‌نفع بودن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a pointed wooden or metal post driven into the ground to support something or mark a place",
+      "examples": [
+        {
+          "en": "He drove a stake into the soil beside each young tree.",
+          "fa": "کنار هر نهال یک تیرک در خاک فرو کرد."
+        }
+      ],
+      "ipa": "/steɪk/",
+      "pos": "n",
+      "synonyms": [
+        "post",
+        "peg",
+        "pole"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p05",
+          "questionNo": 20
+        }
+      ],
+      "translations": [
+        "میخ چوبی",
+        "تیرک",
+        "چوب‌بست"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "used in the phrase \"at stake\", to say that something important may be lost if things go wrong",
+      "examples": [
+        {
+          "en": "With the company's future at stake, the board met all night.",
+          "fa": "در حالی که آیندهٔ شرکت در خطر بود، هیئت‌مدیره تمام شب جلسه داشت."
+        }
+      ],
+      "ipa": "/steɪk/",
+      "pos": "n",
+      "synonyms": [
+        "at risk"
+      ],
+      "testedIn": [],
+      "translations": [
+        "در معرض خطر (در ترکیب at stake: در میان بودن)",
+        "در گرو"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

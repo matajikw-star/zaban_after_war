@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "ظاهر و آهنگ نزدیک؛ اما pungent یعنی تند و زننده (دربارهٔ بو یا مزه)",
+      "word": "pungent"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "poignant",
   "lemma": "poignant",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,47 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "unmoving"
+      ],
+      "definition": "causing a sharp feeling of sadness, pity or regret",
+      "examples": [
+        {
+          "en": "The last letter she wrote to her brother is painfully poignant.",
+          "fa": "آخرین نامه‌ای که برای برادرش نوشت به‌شکلی دردناک غم‌انگیز است."
+        }
+      ],
+      "ipa": "/ˈpɔɪnjənt/",
+      "pos": "adj",
+      "synonyms": [
+        "moving",
+        "touching",
+        "affecting"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p07",
+          "questionNo": 18
+        },
+        {
+          "paperId": "arshad-1400-p08",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "تأثیرگذار و غم‌انگیز",
+        "دلخراش",
+        "سوزناک"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1

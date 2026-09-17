@@ -6,7 +6,7 @@
   },
   "id": "feeble",
   "lemma": "feeble",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -31,8 +31,73 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "forceful",
+        "vigorous"
+      ],
+      "definition": "not strong or good enough to convince anyone or to have any effect",
+      "examples": [
+        {
+          "en": "He offered a feeble excuse for missing the meeting again.",
+          "fa": "او برای غیبت دوباره‌اش در جلسه بهانه‌ای سست آورد."
+        }
+      ],
+      "ipa": "/ˈfiːbl/",
+      "pos": "adj",
+      "synonyms": [
+        "weak",
+        "lame",
+        "ineffectual"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p02",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1401-p02",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "سست",
+        "بی‌اثر",
+        "بی‌رمق"
+      ]
+    },
+    {
+      "antonyms": [
+        "robust",
+        "sturdy"
+      ],
+      "definition": "physically weak, especially because of illness or old age",
+      "examples": [
+        {
+          "en": "Her grandfather grew feeble after the long winter illness.",
+          "fa": "پدربزرگش پس از بیماری طولانی زمستان ناتوان شد."
+        }
+      ],
+      "ipa": "/ˈfiːbl/",
+      "pos": "adj",
+      "synonyms": [
+        "frail",
+        "infirm"
+      ],
+      "testedIn": [],
+      "translations": [
+        "ناتوان",
+        "کم‌بنیه",
+        "ضعیف"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1404": 1

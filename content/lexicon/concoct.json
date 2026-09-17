@@ -6,7 +6,7 @@
   },
   "id": "concoct",
   "lemma": "concoct",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -42,8 +42,70 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to invent a story or an excuse that is not true, in order to deceive someone",
+      "examples": [
+        {
+          "en": "The boy concocted a wild excuse for losing his homework.",
+          "fa": "پسر برای گم کردن تکالیفش بهانه‌ای عجیب از خود ساخت."
+        }
+      ],
+      "ipa": "/kənˈkɒkt/",
+      "pos": "v",
+      "synonyms": [
+        "fabricate",
+        "invent",
+        "make up"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "از خود ساختن",
+        "سرهم کردن",
+        "جعل کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to make a dish or a drink by mixing several ingredients together, often in an unusual way",
+      "examples": [
+        {
+          "en": "She concocted a strange drink from ginger, honey and lemon.",
+          "fa": "او از زنجبیل، عسل و لیمو نوشیدنی عجیبی درست کرد."
+        }
+      ],
+      "ipa": "/kənˈkɒkt/",
+      "pos": "v",
+      "synonyms": [
+        "mix",
+        "brew"
+      ],
+      "testedIn": [],
+      "translations": [
+        "درست کردن (با ترکیب مواد)",
+        "ترکیب کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 3

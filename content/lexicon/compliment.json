@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هم‌آوا اما متفاوت؛ complement یعنی مکمل چیزی بودن و کامل کردن آن",
+      "word": "complement"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "compliment",
   "lemma": "compliment",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,72 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "insult",
+        "criticism"
+      ],
+      "definition": "a remark that expresses praise or admiration for someone",
+      "examples": [
+        {
+          "en": "She blushed at the unexpected compliment about her writing.",
+          "fa": "از تعریف غیرمنتظره دربارهٔ نوشته‌اش سرخ شد."
+        }
+      ],
+      "ipa": "/ˈkɒmplɪmənt/",
+      "pos": "n",
+      "synonyms": [
+        "praise",
+        "tribute"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p03",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "تعریف",
+        "تمجید",
+        "سخن ستایش‌آمیز"
+      ]
+    },
+    {
+      "antonyms": [
+        "criticize",
+        "insult"
+      ],
+      "definition": "to tell someone that you admire something they have done or something about them",
+      "examples": [
+        {
+          "en": "Everyone complimented him on the design of the garden.",
+          "fa": "همه به خاطر طراحی آن باغ از او تعریف کردند."
+        }
+      ],
+      "ipa": "/ˈkɒmplɪment/",
+      "pos": "v",
+      "synonyms": [
+        "praise",
+        "commend"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p03",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "تعریف کردن از",
+        "تمجید کردن از"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

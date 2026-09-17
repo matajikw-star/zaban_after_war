@@ -6,7 +6,7 @@
   },
   "id": "depict",
   "lemma": "depict",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -64,8 +64,57 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to show or describe someone or something, in a picture or in words",
+      "examples": [
+        {
+          "en": "The painting depicts a busy market in a small town.",
+          "fa": "این نقاشی بازاری شلوغ در شهری کوچک را به تصویر می‌کشد."
+        }
+      ],
+      "ipa": "/dɪˈpɪkt/",
+      "pos": "v",
+      "synonyms": [
+        "portray",
+        "describe",
+        "represent"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 34
+        }
+      ],
+      "translations": [
+        "به تصویر کشیدن",
+        "توصیف کردن",
+        "نشان دادن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1

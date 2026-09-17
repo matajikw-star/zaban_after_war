@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "hazardous یعنی خطرناک؛ haphazard به بی‌نظمی اشاره دارد نه به خطر",
+      "word": "hazardous"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "haphazard",
   "lemma": "haphazard",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,52 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "systematic",
+        "methodical"
+      ],
+      "definition": "done without any plan, order or system",
+      "examples": [
+        {
+          "en": "Books were stacked on the floor in a haphazard way.",
+          "fa": "کتاب‌ها به‌شکلی بی‌نظم و سرسری روی زمین چیده شده بودند."
+        }
+      ],
+      "ipa": "/ˌhæpˈhæzəd/",
+      "pos": "adj",
+      "synonyms": [
+        "random",
+        "disorganized",
+        "unsystematic"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p04",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1403-p01",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1401-p03",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "بی‌برنامه",
+        "سرسری",
+        "بی‌نظم و اتفاقی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

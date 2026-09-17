@@ -6,7 +6,7 @@
   },
   "id": "serendipity",
   "lemma": "serendipity",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +42,51 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "misfortune"
+      ],
+      "definition": "the happy chance of finding something good or useful without looking for it",
+      "examples": [
+        {
+          "en": "Many great discoveries owe more to serendipity than to planning.",
+          "fa": "بسیاری از کشف‌های بزرگ بیش از برنامه‌ریزی مدیون اقبال خوش‌اند."
+        }
+      ],
+      "ipa": "/ˌserənˈdɪpəti/",
+      "pos": "n",
+      "synonyms": [
+        "luck",
+        "chance",
+        "fluke"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p04",
+          "questionNo": 13
+        },
+        {
+          "paperId": "arshad-1404-p04",
+          "questionNo": 14
+        },
+        {
+          "paperId": "arshad-1403-p01",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "اقبال خوش",
+        "یافتن اتفاقیِ چیزی ارزشمند",
+        "تصادف خوشایند"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "پایانهٔ مشابه دارند، اما superficial یعنی سطحی و کم‌عمق",
+      "word": "superficial"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "artificial",
   "lemma": "artificial",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +58,56 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "natural",
+        "genuine"
+      ],
+      "definition": "made by people as a copy of something natural, rather than existing in nature",
+      "examples": [
+        {
+          "en": "The park is full of artificial flowers that never need water.",
+          "fa": "آن پارک پر از گل‌های مصنوعی است که هرگز به آب نیاز ندارند."
+        }
+      ],
+      "ipa": "/ˌɑːtɪˈfɪʃl/",
+      "pos": "adj",
+      "synonyms": [
+        "synthetic",
+        "man-made",
+        "fake"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p01",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "مصنوعی",
+        "ساختگی",
+        "تصنعی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 3

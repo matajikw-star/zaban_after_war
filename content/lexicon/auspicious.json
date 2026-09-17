@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "تنها در آغاز واژه تفاوت دارند اما بار معنایی وارونه است؛ suspicious یعنی مشکوک",
+      "word": "suspicious"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "auspicious",
   "lemma": "auspicious",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,48 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "ominous",
+        "inauspicious"
+      ],
+      "definition": "showing signs that something is likely to be successful in the future",
+      "examples": [
+        {
+          "en": "The clear sky made an auspicious start to the sailing season.",
+          "fa": "آسمان صاف آغازی خجسته برای فصل قایقرانی رقم زد."
+        }
+      ],
+      "ipa": "/ɔːˈspɪʃəs/",
+      "pos": "adj",
+      "synonyms": [
+        "promising",
+        "favourable",
+        "propitious"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p02",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 23
+        }
+      ],
+      "translations": [
+        "خجسته",
+        "مبارک",
+        "نویدبخش"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

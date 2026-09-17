@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شباهت ظاهری؛ indulge یعنی دل به خواسته‌ای سپردن یا زیاده‌روی کردن",
+      "word": "indulge"
+    },
+    {
+      "note": "diverge یعنی واگرا شدن و جدا شدن مسیرها",
+      "word": "diverge"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "divulge",
   "lemma": "divulge",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -31,8 +40,47 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "conceal",
+        "withhold"
+      ],
+      "definition": "to make known a piece of information that was secret or private",
+      "examples": [
+        {
+          "en": "The bank refused to divulge the names of its largest clients.",
+          "fa": "بانک از فاش کردن نام بزرگ‌ترین مشتریانش خودداری کرد."
+        }
+      ],
+      "ipa": "/daɪˈvʌldʒ/",
+      "pos": "v",
+      "synonyms": [
+        "reveal",
+        "disclose"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p08",
+          "questionNo": 20
+        },
+        {
+          "paperId": "arshad-1398-p04",
+          "questionNo": 17
+        }
+      ],
+      "translations": [
+        "فاش کردن",
+        "افشا کردن",
+        "برملا کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 1

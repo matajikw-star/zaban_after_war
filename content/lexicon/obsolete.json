@@ -6,7 +6,7 @@
   },
   "id": "obsolete",
   "lemma": "obsolete",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -42,8 +42,52 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "current",
+        "up-to-date"
+      ],
+      "definition": "no longer used or needed, because something newer and better has replaced it",
+      "examples": [
+        {
+          "en": "Video tapes became obsolete once cheap digital storage arrived.",
+          "fa": "نوارهای ویدئویی با آمدن حافظهٔ دیجیتال ارزان منسوخ شدند."
+        }
+      ],
+      "ipa": "/ˈɒbsəliːt/",
+      "pos": "adj",
+      "synonyms": [
+        "outdated",
+        "outmoded",
+        "antiquated"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "منسوخ",
+        "از رده خارج",
+        "کهنه و بی‌استفاده"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 3

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "در گزینه‌های همین آزمون آمده بود؛ یعنی حرف یا عقیدهٔ خود را رسماً پس گرفتن.",
+      "word": "recant"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "recall",
   "lemma": "recall",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -42,8 +47,70 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "forget"
+      ],
+      "definition": "to bring a fact or an event back into your mind",
+      "examples": [
+        {
+          "en": "I cannot recall the name of the street where we met.",
+          "fa": "نام خیابانی را که در آن همدیگر را دیدیم به یاد نمی‌آورم."
+        }
+      ],
+      "ipa": "/rɪˈkɔːl/",
+      "pos": "v",
+      "synonyms": [
+        "remember",
+        "recollect"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 31
+        }
+      ],
+      "translations": [
+        "به یاد آوردن",
+        "به خاطر آوردن",
+        "یادآوری کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to officially ask for a product to be returned because a fault has been found in it",
+      "examples": [
+        {
+          "en": "The company recalled thousands of cars because of a faulty brake.",
+          "fa": "شرکت به دلیل نقص در ترمز هزاران خودرو را فراخواند."
+        }
+      ],
+      "ipa": "/rɪˈkɔːl/",
+      "pos": "v",
+      "synonyms": [
+        "withdraw"
+      ],
+      "testedIn": [],
+      "translations": [
+        "فراخواندن (کالای معیوب)",
+        "پس گرفتن از بازار"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 3

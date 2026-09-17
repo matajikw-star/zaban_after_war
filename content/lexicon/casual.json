@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "جابه‌جایی حروف؛ causal یعنی علّی و مربوط به رابطهٔ علت و معلول",
+      "word": "causal"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "casual",
   "lemma": "casual",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -31,8 +36,73 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "formal",
+        "official"
+      ],
+      "definition": "relaxed and informal, rather than following strict rules or a formal style",
+      "examples": [
+        {
+          "en": "He wore casual clothes to the office on Friday.",
+          "fa": "او روز جمعه لباس غیررسمی به دفتر پوشید."
+        }
+      ],
+      "ipa": "/ˈkæʒuəl/",
+      "pos": "adj",
+      "synonyms": [
+        "informal",
+        "relaxed"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p04",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "غیررسمی",
+        "خودمانی",
+        "محاوره‌ای"
+      ]
+    },
+    {
+      "antonyms": [
+        "careful",
+        "earnest"
+      ],
+      "definition": "showing little interest, care or serious attention",
+      "examples": [
+        {
+          "en": "She gave the report only a casual glance before signing it.",
+          "fa": "او پیش از امضای گزارش فقط نگاهی سرسری به آن انداخت."
+        }
+      ],
+      "ipa": "/ˈkæʒuəl/",
+      "pos": "adj",
+      "synonyms": [
+        "offhand",
+        "indifferent"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 189
+        }
+      ],
+      "translations": [
+        "بی‌اعتنا",
+        "سرسری",
+        "بی‌خیال"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

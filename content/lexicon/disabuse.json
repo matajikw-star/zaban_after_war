@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "پیشوند dis- در اینجا به معنای «سوءاستفاده نکردن» نیست؛ disabuse یعنی کسی را از باوری نادرست رهاندن",
+      "word": "abuse"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "disabuse",
   "lemma": "disabuse",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,46 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "mislead",
+        "delude"
+      ],
+      "definition": "to tell someone that a belief they hold is wrong, so that they stop believing it",
+      "examples": [
+        {
+          "en": "Let me disabuse you of the idea that this kind of work is easy.",
+          "fa": "بگذار تو را از این تصور که چنین کاری آسان است بیرون بیاورم."
+        }
+      ],
+      "ipa": "/ˌdɪsəˈbjuːz/",
+      "pos": "v",
+      "synonyms": [
+        "undeceive",
+        "enlighten"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p01",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 17
+        }
+      ],
+      "translations": [
+        "از اشتباه درآوردن",
+        "توهم کسی را زدودن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

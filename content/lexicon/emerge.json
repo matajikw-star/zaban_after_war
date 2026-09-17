@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "immerse یعنی فرو بردن در مایع؛ درست نقطهٔ مقابل بیرون آمدن است",
+      "word": "immerse"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "emerge",
   "lemma": "emerge",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +58,78 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "disappear",
+        "vanish"
+      ],
+      "definition": "to come out of a place where you could not be seen, or to appear for the first time",
+      "examples": [
+        {
+          "en": "A small boat emerged from the fog near the harbour wall.",
+          "fa": "قایقی کوچک از میان مه نزدیک دیوار بندر پدیدار شد."
+        }
+      ],
+      "ipa": "/iˈmɜːdʒ/",
+      "pos": "v",
+      "synonyms": [
+        "appear",
+        "surface",
+        "come out"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1398-p01",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "پدیدار شدن",
+        "بیرون آمدن",
+        "سر برآوردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to become known after being hidden or unclear",
+      "examples": [
+        {
+          "en": "It later emerged that the report had been written in haste.",
+          "fa": "بعدها معلوم شد که آن گزارش با عجله نوشته شده بود."
+        }
+      ],
+      "ipa": "/iˈmɜːdʒ/",
+      "pos": "v",
+      "synonyms": [
+        "come to light",
+        "transpire"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p01",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "آشکار شدن",
+        "معلوم شدن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

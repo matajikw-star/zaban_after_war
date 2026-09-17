@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شکل نزدیک، اما sentient یعنی دارای حس و آگاهی",
+      "word": "sentient"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "sententious",
   "lemma": "sententious",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,51 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "plain-spoken"
+      ],
+      "definition": "speaking or writing in a pompous way that is full of short moral sayings, as if giving a lesson",
+      "examples": [
+        {
+          "en": "His sententious remarks about hard work irritated the younger staff.",
+          "fa": "اظهارات پرطمطراق و پندآموز او دربارهٔ سخت‌کوشی، کارکنان جوان‌تر را می‌رنجاند."
+        }
+      ],
+      "ipa": "/senˈtenʃəs/",
+      "pos": "adj",
+      "synonyms": [
+        "moralizing",
+        "pompous",
+        "aphoristic"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p05",
+          "questionNo": 26
+        },
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 15
+        },
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 16
+        }
+      ],
+      "translations": [
+        "پرطمطراق و پندآموز",
+        "قصارگو",
+        "متکلف در بیان حکمت"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1,

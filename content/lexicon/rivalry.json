@@ -6,7 +6,7 @@
   },
   "id": "rivalry",
   "lemma": "rivalry",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -42,8 +42,51 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "cooperation"
+      ],
+      "definition": "a long-standing state of competition between people, teams or groups",
+      "examples": [
+        {
+          "en": "The rivalry between the two clubs goes back eighty years.",
+          "fa": "رقابت میان این دو باشگاه به هشتاد سال پیش بازمی‌گردد."
+        }
+      ],
+      "ipa": "/ˈraɪvlri/",
+      "pos": "n",
+      "synonyms": [
+        "competition",
+        "contest",
+        "antagonism"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p03",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "رقابت",
+        "هماوردی",
+        "کشمکش"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

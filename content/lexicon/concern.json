@@ -1,12 +1,12 @@
 {
   "confusables": [],
   "homograph": {
-    "note": null,
-    "suspected": false
+    "note": "\"be concerned with\" (to be about a subject) and \"concern\" the noun (worry) are far enough apart that a learner who knows the worry sense will misread the exam sentence; they also differ in part of speech. A hint must say which sense it targets.",
+    "suspected": true
   },
   "id": "concern",
   "lemma": "concern",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +53,78 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to be about a particular subject or to deal with it, often in the phrase \"be concerned with\"",
+      "examples": [
+        {
+          "en": "The report is concerned with air quality in large industrial cities.",
+          "fa": "آن گزارش به کیفیت هوا در شهرهای بزرگ صنعتی می‌پردازد."
+        }
+      ],
+      "ipa": "/kənˈsɜːn/",
+      "pos": "v",
+      "synonyms": [
+        "deal with",
+        "relate to",
+        "involve"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p02",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1404-p06",
+          "questionNo": 19
+        }
+      ],
+      "translations": [
+        "مربوط بودن به",
+        "سروکار داشتن با",
+        "پرداختن به"
+      ]
+    },
+    {
+      "antonyms": [
+        "indifference"
+      ],
+      "definition": "a feeling of worry about something important, or the thing that causes that worry",
+      "examples": [
+        {
+          "en": "Rising prices are a growing concern for families in the city.",
+          "fa": "افزایش قیمت‌ها دغدغه‌ای فزاینده برای خانواده‌های شهر است."
+        }
+      ],
+      "ipa": "/kənˈsɜːn/",
+      "pos": "n",
+      "synonyms": [
+        "worry",
+        "anxiety",
+        "care"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p01",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p11",
+          "questionNo": 30
+        }
+      ],
+      "translations": [
+        "نگرانی",
+        "دغدغه"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

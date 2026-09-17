@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املای بسیار نزدیک اما بی‌ربط؛ inventive یعنی خلاق و مبتکر، نه ناسزاگویی",
+      "word": "inventive"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "invective",
   "lemma": "invective",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,51 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "praise"
+      ],
+      "definition": "harsh and insulting language used to attack or criticize someone",
+      "examples": [
+        {
+          "en": "His speech soon turned into a stream of invective against his rivals.",
+          "fa": "سخنرانی او خیلی زود به سیلی از ناسزا علیه رقیبانش تبدیل شد."
+        }
+      ],
+      "ipa": "/ɪnˈvektɪv/",
+      "pos": "n",
+      "synonyms": [
+        "abuse",
+        "vituperation",
+        "tirade"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 17
+        },
+        {
+          "paperId": "arshad-1399-p07",
+          "questionNo": 17
+        },
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "ناسزا",
+        "دشنام تند",
+        "حملهٔ لفظی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

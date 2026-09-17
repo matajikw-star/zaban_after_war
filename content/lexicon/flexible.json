@@ -6,7 +6,7 @@
   },
   "id": "flexible",
   "lemma": "flexible",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +53,79 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "rigid",
+        "fixed"
+      ],
+      "definition": "able to change, or to be changed easily, in order to suit a new situation",
+      "examples": [
+        {
+          "en": "Our working hours are flexible, so you can start early or late.",
+          "fa": "ساعات کاری ما انعطاف‌پذیر است، بنابراین می‌توانی زود یا دیر شروع کنی."
+        }
+      ],
+      "ipa": "/ˈfleksəbl/",
+      "pos": "adj",
+      "synonyms": [
+        "adaptable",
+        "adjustable"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 32
+        }
+      ],
+      "translations": [
+        "انعطاف‌پذیر",
+        "قابل تغییر",
+        "منعطف"
+      ]
+    },
+    {
+      "antonyms": [
+        "stiff",
+        "brittle"
+      ],
+      "definition": "able to bend or be bent easily without breaking",
+      "examples": [
+        {
+          "en": "The pipe is flexible enough to bend around the corner.",
+          "fa": "لوله آن‌قدر نرم هست که بتواند دور گوشه خم شود."
+        }
+      ],
+      "ipa": "/ˈfleksəbl/",
+      "pos": "adj",
+      "synonyms": [
+        "pliable",
+        "supple"
+      ],
+      "testedIn": [],
+      "translations": [
+        "نرم و خم‌شو",
+        "قابل خم شدن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

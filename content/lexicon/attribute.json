@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املا و تلفظ نزدیکی دارد، اما یعنی سهم داشتن و کمک کردن.",
+      "word": "contribute"
+    }
+  ],
   "homograph": {
-    "note": null,
-    "suspected": false
+    "note": "The noun /ˈætrɪbjuːt/ and the verb /əˈtrɪbjuːt/ differ in stress and in the first vowel, so a learner who knows one does not hear the other inside the same spelling. Both were tested; a hint must say which one it targets.",
+    "suspected": true
   },
   "id": "attribute",
   "lemma": "attribute",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,71 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a quality or feature that someone or something has, especially a good one",
+      "examples": [
+        {
+          "en": "Patience is the most valuable attribute a good teacher can have.",
+          "fa": "صبر ارزشمندترین ویژگی‌ای است که یک معلم خوب می‌تواند داشته باشد."
+        }
+      ],
+      "ipa": "/ˈætrɪbjuːt/",
+      "pos": "n",
+      "synonyms": [
+        "quality",
+        "characteristic",
+        "trait"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p01",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1402-p06",
+          "questionNo": 20
+        }
+      ],
+      "translations": [
+        "ویژگی",
+        "خصیصه",
+        "صفت"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to say that something is caused by a particular person or thing, in the pattern \"attribute something to something\"",
+      "examples": [
+        {
+          "en": "Scientists attribute the rise in sea levels to warmer ocean temperatures.",
+          "fa": "دانشمندان بالا آمدن سطح دریاها را به گرم‌تر شدن دمای اقیانوس‌ها نسبت می‌دهند."
+        }
+      ],
+      "ipa": "/əˈtrɪbjuːt/",
+      "pos": "v",
+      "synonyms": [
+        "ascribe",
+        "credit"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p03",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "نسبت دادن به",
+        "ناشی از چیزی دانستن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1,

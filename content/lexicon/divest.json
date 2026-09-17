@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "پیشوند آن را وارونه می‌کند؛ invest یعنی سرمایه‌گذاری کردن، اما divest یعنی سلب کردن یا واگذاشتن",
+      "word": "invest"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "divest",
   "lemma": "divest",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,71 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "endow",
+        "invest"
+      ],
+      "definition": "to take away someone's power, rights or property, usually by force or by law",
+      "examples": [
+        {
+          "en": "The court divested him of every right to manage the estate.",
+          "fa": "دادگاه همهٔ حقوق او برای ادارهٔ آن ملک را از او سلب کرد."
+        }
+      ],
+      "ipa": "/daɪˈvest/",
+      "pos": "v",
+      "synonyms": [
+        "strip",
+        "deprive",
+        "dispossess"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p02",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 17
+        }
+      ],
+      "translations": [
+        "سلب کردن",
+        "محروم کردن",
+        "خلع کردن"
+      ]
+    },
+    {
+      "antonyms": [
+        "acquire"
+      ],
+      "definition": "to sell a business or an investment that a company owns",
+      "examples": [
+        {
+          "en": "The group divested its European branches to pay off its debts.",
+          "fa": "آن گروه شعبه‌های اروپایی‌اش را برای پرداخت بدهی‌هایش واگذار کرد."
+        }
+      ],
+      "ipa": "/daɪˈvest/",
+      "pos": "v",
+      "synonyms": [
+        "sell off",
+        "dispose of"
+      ],
+      "testedIn": [],
+      "translations": [
+        "واگذار کردن",
+        "فروختن دارایی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

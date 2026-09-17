@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شکل بسیار نزدیک، اما collaborate یعنی با هم کار کردن و همکاری",
+      "word": "collaborate"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "corroborate",
   "lemma": "corroborate",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -53,8 +58,56 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "contradict",
+        "refute"
+      ],
+      "definition": "to give evidence or information that supports a statement, a theory or an account of events",
+      "examples": [
+        {
+          "en": "Two other witnesses corroborated what the driver had told the police.",
+          "fa": "دو شاهد دیگر آنچه را راننده به پلیس گفته بود تأیید کردند."
+        }
+      ],
+      "ipa": "/kəˈrɒbəreɪt/",
+      "pos": "v",
+      "synonyms": [
+        "confirm",
+        "substantiate",
+        "verify"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p02",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "تأیید کردن (با مدرک)",
+        "صحت چیزی را ثابت کردن",
+        "گواهی دادن بر"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 3,

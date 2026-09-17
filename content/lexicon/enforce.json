@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "reinforce یعنی تقویت و تحکیم کردن، نه به اجرا گذاشتن قانون",
+      "word": "reinforce"
+    },
+    {
+      "note": "enhance یعنی بهبود بخشیدن و ارتقا دادن کیفیت چیزی",
+      "word": "enhance"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "enforce",
   "lemma": "enforce",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +51,49 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to make sure that a law, rule or agreement is obeyed",
+      "examples": [
+        {
+          "en": "Local police rarely enforce the parking rules on this street.",
+          "fa": "پلیس محلی به‌ندرت مقررات پارک را در این خیابان اجرا می‌کند."
+        }
+      ],
+      "ipa": "/ɪnˈfɔːs/",
+      "pos": "v",
+      "synonyms": [
+        "impose",
+        "implement",
+        "apply"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p03",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 24
+        },
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 36
+        }
+      ],
+      "translations": [
+        "اجرا کردن (قانون)",
+        "به اجرا گذاشتن",
+        "تحمیل کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

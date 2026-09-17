@@ -6,7 +6,7 @@
   },
   "id": "transient",
   "lemma": "transient",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +53,56 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "permanent",
+        "lasting"
+      ],
+      "definition": "continuing for only a short time and then gone",
+      "examples": [
+        {
+          "en": "The drug gives transient relief but does not treat the cause.",
+          "fa": "آن دارو تسکینی گذرا می‌دهد اما علت بیماری را درمان نمی‌کند."
+        }
+      ],
+      "ipa": "/ˈtrænziənt/",
+      "pos": "adj",
+      "synonyms": [
+        "fleeting",
+        "transitory",
+        "ephemeral"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p02",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "گذرا",
+        "زودگذر",
+        "ناپایدار"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شباهت ظاهری؛ current یعنی کنونی یا جریان، نه هم‌زمان",
+      "word": "current"
+    },
+    {
+      "note": "consecutive یعنی پشت سر هم و پیاپی، درست نقطهٔ مقابل هم‌زمان بودن",
+      "word": "consecutive"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "concurrent",
   "lemma": "concurrent",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +62,55 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "consecutive",
+        "successive"
+      ],
+      "definition": "happening or existing at the same time as something else",
+      "examples": [
+        {
+          "en": "The two trials were concurrent, so the lawyer hurried between courtrooms.",
+          "fa": "دو دادرسی هم‌زمان بودند، بنابراین وکیل میان دادگاه‌ها می‌دوید."
+        }
+      ],
+      "ipa": "/kənˈkʌrənt/",
+      "pos": "adj",
+      "synonyms": [
+        "simultaneous",
+        "coinciding"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p06",
+          "questionNo": 21
+        },
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "هم‌زمان",
+        "مقارن",
+        "موازی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "ریشهٔ نزدیک اما معنای متفاوت؛ mendicant یعنی گدا و سائل، نه دروغگو",
+      "word": "mendicant"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "mendacity",
   "lemma": "mendacity",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,47 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "honesty",
+        "veracity"
+      ],
+      "definition": "the habit of not telling the truth; in the plural, the lies that someone tells",
+      "examples": [
+        {
+          "en": "Years of mendacity had left the minister with no credibility at all.",
+          "fa": "سال‌ها دروغگویی هیچ اعتباری برای آن وزیر باقی نگذاشته بود."
+        }
+      ],
+      "ipa": "/menˈdæsəti/",
+      "pos": "n",
+      "synonyms": [
+        "untruthfulness",
+        "deceitfulness"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p03",
+          "questionNo": 14
+        },
+        {
+          "paperId": "arshad-1401-p04",
+          "questionNo": 13
+        }
+      ],
+      "translations": [
+        "دروغگویی",
+        "ناراستی",
+        "دروغ‌ها"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "impetus یعنی انگیزه و نیروی آغازگرِ یک حرکت، نه اثر و پیامد آن",
+      "word": "impetus"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "impact",
   "lemma": "impact",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -75,8 +80,103 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "the powerful effect that something has on a situation or on people",
+      "examples": [
+        {
+          "en": "The new tax had an immediate impact on small businesses.",
+          "fa": "مالیات جدید تأثیری فوری بر کسب‌وکارهای کوچک گذاشت."
+        }
+      ],
+      "ipa": "/ˈɪmpækt/",
+      "pos": "n",
+      "synonyms": [
+        "effect",
+        "influence",
+        "consequence"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "تأثیر",
+        "اثرگذاری",
+        "پیامد"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "the force of one object hitting another",
+      "examples": [
+        {
+          "en": "The bottle broke on impact with the stone floor.",
+          "fa": "بطری در لحظهٔ برخورد با کف سنگی شکست."
+        }
+      ],
+      "ipa": "/ˈɪmpækt/",
+      "pos": "n",
+      "synonyms": [
+        "collision",
+        "blow"
+      ],
+      "testedIn": [],
+      "translations": [
+        "برخورد",
+        "ضربه"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to have a strong effect on someone or something",
+      "examples": [
+        {
+          "en": "Rising fuel prices impact every part of the economy.",
+          "fa": "بالا رفتن قیمت سوخت بر همهٔ بخش‌های اقتصاد تأثیر می‌گذارد."
+        }
+      ],
+      "ipa": "/ɪmˈpækt/",
+      "pos": "v",
+      "synonyms": [
+        "affect",
+        "influence"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تأثیر گذاشتن بر",
+        "اثر گذاشتن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

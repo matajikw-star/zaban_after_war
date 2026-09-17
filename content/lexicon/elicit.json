@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "تلفظ تقریباً یکسان است، اما illicit صفت است و یعنی غیرقانونی و ممنوع",
+      "word": "illicit"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "elicit",
   "lemma": "elicit",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +58,53 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to succeed in getting information or a reaction from someone",
+      "examples": [
+        {
+          "en": "The teacher's question elicited no response from the tired class.",
+          "fa": "پرسش معلم هیچ واکنشی از کلاسِ خسته برنینگیخت."
+        }
+      ],
+      "ipa": "/iˈlɪsɪt/",
+      "pos": "v",
+      "synonyms": [
+        "draw out",
+        "evoke",
+        "extract"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p05",
+          "questionNo": 27
+        },
+        {
+          "paperId": "arshad-1401-p03",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "بیرون کشیدن",
+        "برانگیختن",
+        "به دست آوردن (پاسخ یا اطلاعات)"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

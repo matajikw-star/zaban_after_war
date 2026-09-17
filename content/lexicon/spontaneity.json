@@ -6,7 +6,7 @@
   },
   "id": "spontaneity",
   "lemma": "spontaneity",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -31,8 +31,47 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "deliberation",
+        "calculation"
+      ],
+      "definition": "the quality of doing things naturally and on impulse, without planning them first",
+      "examples": [
+        {
+          "en": "Too strict a schedule can drain all the spontaneity out of a holiday.",
+          "fa": "برنامهٔ بیش از حد سخت‌گیرانه می‌تواند همهٔ خودانگیختگی یک سفر را از آن بگیرد."
+        }
+      ],
+      "ipa": "/ˌspɒntəˈneɪəti/",
+      "pos": "n",
+      "synonyms": [
+        "impulsiveness",
+        "naturalness"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 14
+        },
+        {
+          "paperId": "arshad-1403-p02",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "خودانگیختگی",
+        "بداهگی",
+        "بی‌برنامگی (به معنای مثبت)"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

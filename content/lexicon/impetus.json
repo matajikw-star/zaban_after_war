@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "impetuous صفت است و یعنی شتاب‌زده و بی‌پروا، نه نیروی محرک",
+      "word": "impetuous"
+    },
+    {
+      "note": "impact یعنی تأثیر یا برخورد؛ impetus نیرویی است که کاری را به راه می‌اندازد",
+      "word": "impact"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "impetus",
   "lemma": "impetus",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -31,8 +40,47 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "deterrent"
+      ],
+      "definition": "something that encourages a process or activity to start or to develop faster",
+      "examples": [
+        {
+          "en": "The new railway gave fresh impetus to trade across the region.",
+          "fa": "راه‌آهن جدید به تجارت در سراسر منطقه انگیزه و شتاب تازه‌ای داد."
+        }
+      ],
+      "ipa": "/ˈɪmpɪtəs/",
+      "pos": "n",
+      "synonyms": [
+        "stimulus",
+        "incentive",
+        "momentum"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "انگیزه",
+        "محرک",
+        "نیروی پیش‌برنده"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 2

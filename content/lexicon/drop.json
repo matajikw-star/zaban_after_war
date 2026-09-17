@@ -6,7 +6,7 @@
   },
   "id": "drop",
   "lemma": "drop",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -53,8 +53,82 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "pursue",
+        "broach"
+      ],
+      "definition": "to stop discussing or doing something, and not return to it, as in \"drop the subject\"",
+      "examples": [
+        {
+          "en": "Let's drop the matter and talk about something more pleasant.",
+          "fa": "بیایید این موضوع را رها کنیم و دربارهٔ چیزی خوشایندتر حرف بزنیم."
+        }
+      ],
+      "ipa": "/drɒp/",
+      "pos": "v",
+      "synonyms": [
+        "abandon",
+        "give up",
+        "let go of"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "رها کردن (بحث یا کار)",
+        "کنار گذاشتن",
+        "دنبال نکردن"
+      ]
+    },
+    {
+      "antonyms": [
+        "lift",
+        "rise"
+      ],
+      "definition": "to let something fall, or to fall suddenly to a lower level",
+      "examples": [
+        {
+          "en": "She dropped the glass and it broke on the kitchen floor.",
+          "fa": "او لیوان را انداخت و لیوان روی کف آشپزخانه شکست."
+        }
+      ],
+      "ipa": "/drɒp/",
+      "pos": "v",
+      "synonyms": [
+        "fall",
+        "let fall",
+        "decline"
+      ],
+      "testedIn": [],
+      "translations": [
+        "انداختن",
+        "افتادن",
+        "کاهش یافتن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 3

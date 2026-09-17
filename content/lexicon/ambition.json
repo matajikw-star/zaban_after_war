@@ -6,7 +6,7 @@
   },
   "id": "ambition",
   "lemma": "ambition",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -42,8 +42,72 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "something important that you very much want to achieve, often over a long time",
+      "examples": [
+        {
+          "en": "Her lifelong ambition was to build a school in her village.",
+          "fa": "آرزوی دیرینهٔ او ساختن یک مدرسه در روستایش بود."
+        }
+      ],
+      "ipa": "/æmˈbɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "aspiration",
+        "goal",
+        "dream"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p04",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1404-p03",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 33
+        }
+      ],
+      "translations": [
+        "آرزوی بزرگ",
+        "هدف بلندپروازانه",
+        "آرمان"
+      ]
+    },
+    {
+      "antonyms": [
+        "apathy"
+      ],
+      "definition": "the strong desire and drive to be successful, powerful or rich",
+      "examples": [
+        {
+          "en": "He has the talent but not the ambition to reach the top.",
+          "fa": "او استعداد دارد اما جاه‌طلبی لازم برای رسیدن به قله را ندارد."
+        }
+      ],
+      "ipa": "/æmˈbɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "drive",
+        "determination"
+      ],
+      "testedIn": [],
+      "translations": [
+        "جاه‌طلبی",
+        "بلندپروازی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

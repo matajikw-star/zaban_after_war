@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "تنها یک حرف تفاوت دارند؛ frigid یعنی بسیار سرد یا سرد و بی‌عاطفه",
+      "word": "frigid"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "rigid",
   "lemma": "rigid",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,79 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "flexible",
+        "pliable"
+      ],
+      "definition": "stiff and firm, and not able to be bent or shaped easily",
+      "examples": [
+        {
+          "en": "The tent is held up by three rigid metal poles.",
+          "fa": "چادر با سه میلهٔ فلزی سفت سرپا نگه داشته می‌شود."
+        }
+      ],
+      "ipa": "/ˈrɪdʒɪd/",
+      "pos": "adj",
+      "synonyms": [
+        "stiff",
+        "inflexible",
+        "firm"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "سفت",
+        "خشک",
+        "انعطاف‌ناپذیر"
+      ]
+    },
+    {
+      "antonyms": [
+        "lenient",
+        "adaptable"
+      ],
+      "definition": "not willing to change rules, plans or opinions, even when change would help",
+      "examples": [
+        {
+          "en": "Her parents kept a rigid schedule for meals and homework.",
+          "fa": "پدر و مادرش برنامه‌ای خشک و تغییرناپذیر برای غذا و تکالیف داشتند."
+        }
+      ],
+      "ipa": "/ˈrɪdʒɪd/",
+      "pos": "adj",
+      "synonyms": [
+        "strict",
+        "unbending",
+        "uncompromising"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 189
+        }
+      ],
+      "translations": [
+        "سخت‌گیر",
+        "تغییرناپذیر",
+        "خشک و بی‌انعطاف"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

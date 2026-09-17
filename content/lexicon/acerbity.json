@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "صفتِ هم‌ریشه است؛ acerbic یعنی تند و گزنده، و acerbity حالتِ اسمیِ همان است",
+      "word": "acerbic"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "acerbity",
   "lemma": "acerbity",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -42,8 +47,52 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "gentleness",
+        "mildness"
+      ],
+      "definition": "harshness and sharpness in the way someone speaks or writes, which can hurt or offend people",
+      "examples": [
+        {
+          "en": "There was a note of acerbity in her reply to the young reporter.",
+          "fa": "در پاسخ او به آن خبرنگار جوان رگه‌ای از تندی و گزندگی بود."
+        }
+      ],
+      "ipa": "/əˈsɜːbəti/",
+      "pos": "n",
+      "synonyms": [
+        "asperity",
+        "harshness",
+        "sharpness"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "تندی و گزندگی (کلام)",
+        "تلخی لحن",
+        "زنندگی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 3

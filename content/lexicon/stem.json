@@ -1,12 +1,12 @@
 {
   "confusables": [],
   "homograph": {
-    "note": null,
-    "suspected": false
+    "note": "Three meanings that a reader cannot guess from one another: the verb \"stem from\" (to originate in), the noun for the stalk of a plant, and the verb \"stem the tide\" (to hold something back). The hint pass must state which one its mnemonic targets; the exam tested only \"stem from\".",
+    "suspected": true
   },
   "id": "stem",
   "lemma": "stem",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -42,8 +42,90 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to be caused by something or to have something as its origin; used as \"stem from\"",
+      "examples": [
+        {
+          "en": "Most of his fears stem from a single childhood accident.",
+          "fa": "بیشتر ترس‌های او از یک حادثهٔ دوران کودکی سرچشمه می‌گیرد."
+        }
+      ],
+      "ipa": "/stem/",
+      "pos": "v",
+      "synonyms": [
+        "arise from",
+        "originate in",
+        "result from"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p06",
+          "questionNo": 17
+        },
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "ناشی شدن از",
+        "سرچشمه گرفتن از",
+        "برخاستن از"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "the long thin central part of a plant that supports its leaves and flowers",
+      "examples": [
+        {
+          "en": "She cut the stems short before putting the flowers in water.",
+          "fa": "او پیش از گذاشتن گل‌ها در آب، ساقه‌ها را کوتاه کرد."
+        }
+      ],
+      "ipa": "/stem/",
+      "pos": "n",
+      "synonyms": [
+        "stalk"
+      ],
+      "testedIn": [],
+      "translations": [
+        "ساقه"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to stop something bad from spreading or increasing; used as \"stem the tide\" or \"stem the flow\"",
+      "examples": [
+        {
+          "en": "New rules were introduced to stem the flow of counterfeit goods.",
+          "fa": "مقررات تازه‌ای برای مهار سیل کالاهای تقلبی وضع شد."
+        }
+      ],
+      "ipa": "/stem/",
+      "pos": "v",
+      "synonyms": [
+        "curb",
+        "check",
+        "halt"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مهار کردن",
+        "جلوی چیزی را گرفتن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1402": 1

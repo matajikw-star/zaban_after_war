@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هم‌ریشه است اما impertinent یعنی گستاخ و بی‌ادب، نه نامرتبط",
+      "word": "impertinent"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "pertinent",
   "lemma": "pertinent",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -64,8 +69,60 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "irrelevant",
+        "peripheral"
+      ],
+      "definition": "directly connected with the subject being discussed, and therefore worth considering",
+      "examples": [
+        {
+          "en": "Please keep your questions pertinent to the topic under discussion.",
+          "fa": "لطفاً پرسش‌هایتان را مرتبط با موضوع مورد بحث نگه دارید."
+        }
+      ],
+      "ipa": "/ˈpɜːtɪnənt/",
+      "pos": "adj",
+      "synonyms": [
+        "relevant",
+        "applicable",
+        "apposite"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p02",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p11",
+          "questionNo": 23
+        },
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "مرتبط",
+        "به‌جا",
+        "درخور موضوع"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 3

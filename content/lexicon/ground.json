@@ -1,12 +1,12 @@
 {
   "confusables": [],
   "homograph": {
-    "note": null,
-    "suspected": false
+    "note": "The same spelling is also the past tense and past participle of \"grind\" (ground coffee, ground meat), which is etymologically unrelated to the noun \"ground\". A hint must say which word it targets.",
+    "suspected": true
   },
   "id": "ground",
   "lemma": "ground",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -31,8 +31,93 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "back down",
+        "give way"
+      ],
+      "definition": "used in the phrase \"stand your ground\", to keep to your position and refuse to be pushed back or frightened off",
+      "examples": [
+        {
+          "en": "She stood her ground and refused to lower the price.",
+          "fa": "او پای موضع خود ایستاد و حاضر نشد قیمت را پایین بیاورد."
+        }
+      ],
+      "ipa": "/ɡraʊnd/",
+      "pos": "n",
+      "synonyms": [
+        "hold your own",
+        "stand firm"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p05",
+          "questionNo": 20
+        }
+      ],
+      "translations": [
+        "پای موضع خود ایستادن (در ترکیب stand one's ground)",
+        "کوتاه نیامدن"
+      ]
+    },
+    {
+      "antonyms": [
+        "sky"
+      ],
+      "definition": "the solid surface of the earth that people stand and walk on",
+      "examples": [
+        {
+          "en": "The apples had fallen and were lying on the wet ground.",
+          "fa": "سیب‌ها افتاده بودند و روی زمین خیس مانده بودند."
+        }
+      ],
+      "ipa": "/ɡraʊnd/",
+      "pos": "n",
+      "synonyms": [
+        "earth",
+        "soil"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 23
+        }
+      ],
+      "translations": [
+        "زمین",
+        "سطح زمین",
+        "کف"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a reason for saying, doing or believing something, usually used in the plural as \"grounds\"",
+      "examples": [
+        {
+          "en": "He was dismissed on the grounds of repeated absence from work.",
+          "fa": "او به دلیل غیبت‌های مکرر از کار برکنار شد."
+        }
+      ],
+      "ipa": "/ɡraʊnd/",
+      "pos": "n",
+      "synonyms": [
+        "basis",
+        "justification"
+      ],
+      "testedIn": [],
+      "translations": [
+        "دلیل",
+        "مبنا",
+        "مستند"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1402": 1

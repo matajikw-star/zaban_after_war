@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "بسیار شبیه؛ اما palpitate یعنی تند و نامنظم تپیدن قلب",
+      "word": "palpitate"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "palpate",
   "lemma": "palpate",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -31,8 +36,43 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to examine part of the body by pressing and feeling it with the hands, as a doctor does",
+      "examples": [
+        {
+          "en": "The doctor palpated the swollen area before ordering an ultrasound.",
+          "fa": "پزشک پیش از درخواست سونوگرافی، ناحیهٔ متورم را لمس کرد."
+        }
+      ],
+      "ipa": "/ˈpælpeɪt/",
+      "pos": "v",
+      "synonyms": [
+        "feel",
+        "examine"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 17
+        },
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 30
+        }
+      ],
+      "translations": [
+        "لمس کردن (در معاینهٔ پزشکی)",
+        "معاینهٔ لمسی کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "پایانهٔ مشابه، اما regress یعنی پسرفت کردن و به حالت پیشین بازگشتن",
+      "word": "regress"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "digress",
   "lemma": "digress",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -53,8 +58,52 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to move away from the main subject while speaking or writing, and talk about something else",
+      "examples": [
+        {
+          "en": "The speaker digressed for ten minutes before returning to his main point.",
+          "fa": "سخنران ده دقیقه به حاشیه رفت و سپس به نکتهٔ اصلی‌اش بازگشت."
+        }
+      ],
+      "ipa": "/daɪˈɡres/",
+      "pos": "v",
+      "synonyms": [
+        "deviate",
+        "stray",
+        "wander"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "از موضوع منحرف شدن",
+        "به حاشیه رفتن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 4

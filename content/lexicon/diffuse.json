@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "فقط یک حرف فرق دارند: defuse یعنی خنثی کردن بمب یا فرو نشاندن تنش",
+      "word": "defuse"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "diffuse",
   "lemma": "diffuse",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,77 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "concentrate"
+      ],
+      "definition": "to spread something over a wide area, or to make a feeling or force less concentrated",
+      "examples": [
+        {
+          "en": "A joke can diffuse the anger in a crowded room.",
+          "fa": "یک شوخی می‌تواند خشم را در اتاقی شلوغ فرو بنشاند."
+        }
+      ],
+      "ipa": "/dɪˈfjuːz/",
+      "pos": "v",
+      "synonyms": [
+        "disperse",
+        "scatter",
+        "dissipate"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 14
+        },
+        {
+          "paperId": "arshad-1400-p11",
+          "questionNo": 34
+        },
+        {
+          "paperId": "arshad-1399-p07",
+          "questionNo": 20
+        }
+      ],
+      "translations": [
+        "پخش کردن",
+        "پراکندن",
+        "فرو نشاندن"
+      ]
+    },
+    {
+      "antonyms": [
+        "concentrated",
+        "concise"
+      ],
+      "definition": "spread out over a wide area and not concentrated; of writing or speech, using too many words",
+      "examples": [
+        {
+          "en": "The light in the room was soft and diffuse.",
+          "fa": "نور اتاق ملایم و پراکنده بود."
+        }
+      ],
+      "ipa": "/dɪˈfjuːs/",
+      "pos": "adj",
+      "synonyms": [
+        "scattered",
+        "dispersed",
+        "verbose"
+      ],
+      "testedIn": [],
+      "translations": [
+        "پراکنده",
+        "نامتمرکز",
+        "پرگو"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1

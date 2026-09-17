@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "یعنی ستایش‌گر، یعنی خودِ سخن که ستایش می‌کند؛ اما laudable یعنی شایستهٔ ستایش.",
+      "word": "laudatory"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "laudable",
   "lemma": "laudable",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -42,8 +47,52 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "deplorable",
+        "blameworthy"
+      ],
+      "definition": "deserving praise, even if the result is not successful",
+      "examples": [
+        {
+          "en": "Her effort to help the flood victims was entirely laudable.",
+          "fa": "تلاش او برای کمک به سیل‌زدگان کاملاً ستودنی بود."
+        }
+      ],
+      "ipa": "/ˈlɔːdəbl/",
+      "pos": "adj",
+      "synonyms": [
+        "commendable",
+        "praiseworthy",
+        "admirable"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "ستودنی",
+        "قابل تحسین",
+        "پسندیده"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 3

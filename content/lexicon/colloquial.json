@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هم‌ریشه‌اند، اما loquacious یعنی پرحرف؛ colloquial دربارهٔ سبک زبان است",
+      "word": "loquacious"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "colloquial",
   "lemma": "colloquial",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,48 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "formal",
+        "literary"
+      ],
+      "definition": "used in ordinary, familiar conversation rather than in formal speech or writing",
+      "examples": [
+        {
+          "en": "Textbooks rarely teach the colloquial words people actually use at home.",
+          "fa": "کتاب‌های درسی به‌ندرت واژه‌های محاوره‌ای را که مردم واقعاً در خانه به کار می‌برند آموزش می‌دهند."
+        }
+      ],
+      "ipa": "/kəˈləʊkwiəl/",
+      "pos": "adj",
+      "synonyms": [
+        "informal",
+        "conversational",
+        "vernacular"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p03",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 24
+        }
+      ],
+      "translations": [
+        "محاوره‌ای",
+        "عامیانه",
+        "گفتاری"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

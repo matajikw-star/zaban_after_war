@@ -6,7 +6,7 @@
   },
   "id": "innovative",
   "lemma": "innovative",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +42,51 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "conventional"
+      ],
+      "definition": "introducing new ideas or new ways of doing something",
+      "examples": [
+        {
+          "en": "The company built its reputation on innovative teaching software.",
+          "fa": "این شرکت اعتبارش را با نرم‌افزارهای آموزشی نوآورانه به دست آورد."
+        }
+      ],
+      "ipa": "/ˈɪnəveɪtɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "original",
+        "groundbreaking",
+        "inventive"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p06",
+          "questionNo": 18
+        },
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 32
+        },
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 169
+        }
+      ],
+      "translations": [
+        "نوآورانه",
+        "بدیع",
+        "خلاقانه"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

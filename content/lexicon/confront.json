@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شکل نزدیک، اما confound یعنی گیج کردن یا نقش بر آب کردن",
+      "word": "confound"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "confront",
   "lemma": "confront",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -75,8 +80,64 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "avoid",
+        "evade"
+      ],
+      "definition": "to face a difficult situation or person and deal with them, or to appear in front of someone in a threatening way",
+      "examples": [
+        {
+          "en": "Every new government must confront the problem of rising unemployment.",
+          "fa": "هر دولت تازه‌ای باید با مسئلهٔ افزایش بیکاری رویارو شود."
+        }
+      ],
+      "ipa": "/kənˈfrʌnt/",
+      "pos": "v",
+      "synonyms": [
+        "face",
+        "tackle",
+        "encounter"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p01",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1403-p01",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "رویارو شدن با",
+        "مواجه شدن با",
+        "به مصاف رفتن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

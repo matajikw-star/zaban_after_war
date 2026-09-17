@@ -6,7 +6,7 @@
   },
   "id": "opulence",
   "lemma": "opulence",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +42,52 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "destitution",
+        "poverty"
+      ],
+      "definition": "great wealth, shown in expensive and luxurious surroundings",
+      "examples": [
+        {
+          "en": "The palace was decorated with an opulence that shocked the visitors.",
+          "fa": "کاخ با چنان تجملی آراسته شده بود که بازدیدکنندگان را شگفت‌زده کرد."
+        }
+      ],
+      "ipa": "/ˈɒpjələns/",
+      "pos": "n",
+      "synonyms": [
+        "affluence",
+        "luxury",
+        "splendour"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p08",
+          "questionNo": 18
+        },
+        {
+          "paperId": "arshad-1405-p04",
+          "questionNo": 13
+        },
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 19
+        }
+      ],
+      "translations": [
+        "تجمل",
+        "ثروت هنگفت",
+        "شکوه و رفاه"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 1

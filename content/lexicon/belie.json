@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هم‌خانواده به نظر می‌رسد اما ربطی به باور کردن ندارد.",
+      "word": "believe"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "belie",
   "lemma": "belie",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,74 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "reveal"
+      ],
+      "definition": "to give an impression of something that is false, so that the real situation is hidden",
+      "examples": [
+        {
+          "en": "His calm voice belied the panic he felt inside.",
+          "fa": "صدای آرام او وحشتی را که در درون احساس می‌کرد وارونه نشان می‌داد."
+        }
+      ],
+      "ipa": "/bɪˈlaɪ/",
+      "pos": "v",
+      "synonyms": [
+        "misrepresent",
+        "distort"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 12
+        },
+        {
+          "paperId": "arshad-1404-p05",
+          "questionNo": 13
+        }
+      ],
+      "translations": [
+        "وارونه نشان دادن",
+        "تحریف کردن",
+        "پنهان کردن حقیقت"
+      ]
+    },
+    {
+      "antonyms": [
+        "confirm"
+      ],
+      "definition": "to show that a claim or belief is not true",
+      "examples": [
+        {
+          "en": "The latest figures belie the claim that crime is falling.",
+          "fa": "آمار تازه این ادعا را که جرم رو به کاهش است نقض می‌کند."
+        }
+      ],
+      "ipa": "/bɪˈlaɪ/",
+      "pos": "v",
+      "synonyms": [
+        "contradict",
+        "disprove"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p03",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "نقض کردن",
+        "خلاف آن را ثابت کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "تنها یک حرف تفاوت؛ اما thrive یعنی شکوفا شدن و رونق گرفتن، نه کوشیدن",
+      "word": "thrive"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "strive",
   "lemma": "strive",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +58,56 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "give up",
+        "idle"
+      ],
+      "definition": "to try very hard over a long time to achieve or obtain something difficult",
+      "examples": [
+        {
+          "en": "For years the clinic has striven to reach every village in the valley.",
+          "fa": "سال‌هاست آن درمانگاه می‌کوشد به هر روستای آن دره برسد."
+        }
+      ],
+      "ipa": "/straɪv/",
+      "pos": "v",
+      "synonyms": [
+        "endeavor",
+        "struggle",
+        "strain"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p04",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "کوشیدن",
+        "تلاش سخت کردن",
+        "جد و جهد کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

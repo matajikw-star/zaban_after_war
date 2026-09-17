@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "آهنگ و پایانهٔ مشابه؛ اما abundant یعنی فراوان و پرشمار، نه زائد",
+      "word": "abundant"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "redundant",
   "lemma": "redundant",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +58,78 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "essential",
+        "necessary"
+      ],
+      "definition": "not needed, because it repeats something or adds nothing useful",
+      "examples": [
+        {
+          "en": "The editor cut every redundant word from the opening paragraph.",
+          "fa": "ویراستار هر واژهٔ زائدی را از بند آغازین حذف کرد."
+        }
+      ],
+      "ipa": "/rɪˈdʌndənt/",
+      "pos": "adj",
+      "synonyms": [
+        "superfluous",
+        "unnecessary",
+        "surplus"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1398-p01",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "زائد",
+        "اضافی",
+        "غیرضروری"
+      ]
+    },
+    {
+      "antonyms": [
+        "employed"
+      ],
+      "definition": "having lost your job because your employer no longer needs anyone to do it",
+      "examples": [
+        {
+          "en": "Three hundred workers were made redundant when the plant closed.",
+          "fa": "با تعطیلی آن کارخانه سیصد کارگر شغل خود را از دست دادند."
+        }
+      ],
+      "ipa": "/rɪˈdʌndənt/",
+      "pos": "adj",
+      "synonyms": [
+        "laid off"
+      ],
+      "testedIn": [],
+      "translations": [
+        "اخراج‌شده (به دلیل حذف شغل)",
+        "بیکارشده"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

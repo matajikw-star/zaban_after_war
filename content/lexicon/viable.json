@@ -6,7 +6,7 @@
   },
   "id": "viable",
   "lemma": "viable",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -31,8 +31,68 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "unworkable",
+        "impractical"
+      ],
+      "definition": "able to work successfully and to be kept going, especially without too much cost",
+      "examples": [
+        {
+          "en": "Without more funding the plan is simply not viable.",
+          "fa": "بدون بودجهٔ بیشتر، این طرح اصلاً عملی نیست."
+        }
+      ],
+      "ipa": "/ˈvaɪəbl/",
+      "pos": "adj",
+      "synonyms": [
+        "feasible",
+        "workable",
+        "practicable"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p01",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1398-p04",
+          "questionNo": 13
+        }
+      ],
+      "translations": [
+        "عملی",
+        "قابل‌اجرا",
+        "کارآمد"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "able to live and develop on its own, used of seeds, cells or young creatures",
+      "examples": [
+        {
+          "en": "The seeds remain viable for about three years in storage.",
+          "fa": "بذرها در انبار حدود سه سال زنده و قابل‌کشت می‌مانند."
+        }
+      ],
+      "ipa": "/ˈvaɪəbl/",
+      "pos": "adj",
+      "synonyms": [
+        "living"
+      ],
+      "testedIn": [],
+      "translations": [
+        "زنده‌ماندنی",
+        "قابل‌زیست"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1,

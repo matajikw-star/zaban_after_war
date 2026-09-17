@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "eventful یعنی پرماجرا و پر از رویداد، نه نهایی",
+      "word": "eventful"
+    },
+    {
+      "note": "دام رایج: eventually یعنی سرانجام، نه «احتمالاً»",
+      "word": "possibly"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "eventual",
   "lemma": "eventual",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -31,8 +40,47 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "initial",
+        "immediate"
+      ],
+      "definition": "happening at the end of a period of time or of a process, after a long wait",
+      "examples": [
+        {
+          "en": "Years of small savings led to her eventual purchase of the shop.",
+          "fa": "سال‌ها پس‌انداز اندک سرانجام به خرید آن مغازه به دست او انجامید."
+        }
+      ],
+      "ipa": "/ɪˈventʃuəl/",
+      "pos": "adj",
+      "synonyms": [
+        "final",
+        "ultimate"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "نهایی",
+        "سرانجام (به صورت قید: eventually)",
+        "در نهایت"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 2

@@ -6,7 +6,7 @@
   },
   "id": "interpretation",
   "lemma": "interpretation",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -42,8 +42,67 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "an explanation of what something means, or the particular way a person understands it",
+      "examples": [
+        {
+          "en": "Two historians gave a very different interpretation of the same letter.",
+          "fa": "دو تاریخ‌نگار از همان نامه تفسیری بسیار متفاوت ارائه دادند."
+        }
+      ],
+      "ipa": "/ɪnˌtɜːprɪˈteɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "reading",
+        "construal",
+        "explanation"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "تفسیر",
+        "برداشت",
+        "تعبیر"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "the work of translating what a speaker says into another language while they speak",
+      "examples": [
+        {
+          "en": "The conference provided simultaneous interpretation into four languages.",
+          "fa": "همایش ترجمهٔ هم‌زمان به چهار زبان فراهم کرده بود."
+        }
+      ],
+      "ipa": "/ɪnˌtɜːprɪˈteɪʃn/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "ترجمهٔ شفاهی",
+        "ترجمهٔ هم‌زمان"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 3

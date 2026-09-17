@@ -1,12 +1,12 @@
 {
   "confusables": [],
   "homograph": {
-    "note": null,
-    "suspected": false
+    "note": "Two senses that a learner will not derive from each other: the grammar/style sense (words deliberately omitted) and the geometry sense (oval). Same stress and ultimately the same Greek root, but different domains, so a hint must say which sense it targets.",
+    "suspected": true
   },
   "id": "elliptical",
   "lemma": "elliptical",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,68 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "explicit",
+        "verbose"
+      ],
+      "definition": "using very few words, with parts of a sentence left out, so that the meaning is compressed and sometimes unclear",
+      "examples": [
+        {
+          "en": "Poets often write elliptical lines that leave the reader to fill the gaps.",
+          "fa": "شاعران اغلب سطرهایی حذف‌دار می‌نویسند و پر کردن جاهای خالی را به خواننده می‌سپارند."
+        }
+      ],
+      "ipa": "/ɪˈlɪptɪkl/",
+      "pos": "adj",
+      "synonyms": [
+        "terse",
+        "condensed"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 26
+        },
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 24
+        }
+      ],
+      "translations": [
+        "حذف‌دار (با حذف به قرینه)",
+        "موجز و مبهم"
+      ]
+    },
+    {
+      "antonyms": [
+        "circular"
+      ],
+      "definition": "having the shape of an ellipse, like a circle that has been stretched",
+      "examples": [
+        {
+          "en": "The planet follows an elliptical path around its star.",
+          "fa": "این سیاره مسیری بیضوی را گرد ستاره‌اش می‌پیماید."
+        }
+      ],
+      "ipa": "/ɪˈlɪptɪkl/",
+      "pos": "adj",
+      "synonyms": [
+        "oval"
+      ],
+      "testedIn": [],
+      "translations": [
+        "بیضوی",
+        "بیضی‌شکل"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 1

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "swindle یعنی کلاهبرداری کردن و پول کسی را بالا کشیدن، نه کم شدن",
+      "word": "swindle"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "dwindle",
   "lemma": "dwindle",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -31,8 +36,49 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "grow",
+        "swell",
+        "increase"
+      ],
+      "definition": "to become gradually smaller in size, number or amount",
+      "examples": [
+        {
+          "en": "Their savings dwindled month by month until almost nothing remained.",
+          "fa": "پس‌اندازشان ماه به ماه کم شد تا آنکه تقریباً چیزی باقی نماند."
+        }
+      ],
+      "ipa": "/ˈdwɪndl/",
+      "pos": "v",
+      "synonyms": [
+        "shrink",
+        "decrease",
+        "diminish"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p03",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 29
+        }
+      ],
+      "translations": [
+        "به‌تدریج کم شدن",
+        "تحلیل رفتن",
+        "رو به کاهش گذاشتن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1,

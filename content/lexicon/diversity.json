@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هر دو از تفاوت می‌گویند؛ اما disparity یعنی اختلاف و نابرابری میان دو چیز، نه تنوع",
+      "word": "disparity"
+    },
+    {
+      "note": "ظاهر و آهنگ نزدیک؛ اما adversity یعنی سختی و مصیبت",
+      "word": "adversity"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "diversity",
   "lemma": "diversity",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +51,52 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "uniformity",
+        "homogeneity"
+      ],
+      "definition": "the fact of including many different kinds of people or things in one group",
+      "examples": [
+        {
+          "en": "The island is famous for the diversity of its birds and insects.",
+          "fa": "آن جزیره به تنوع پرندگان و حشراتش شهرت دارد."
+        }
+      ],
+      "ipa": "/daɪˈvɜːsəti/",
+      "pos": "n",
+      "synonyms": [
+        "variety",
+        "range",
+        "plurality"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p03",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1402-p06",
+          "questionNo": 24
+        },
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 31
+        }
+      ],
+      "translations": [
+        "تنوع",
+        "گوناگونی",
+        "گونه‌گونی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

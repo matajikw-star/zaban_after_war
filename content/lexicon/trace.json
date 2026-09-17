@@ -6,7 +6,7 @@
   },
   "id": "trace",
   "lemma": "trace",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +53,99 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to find the origin or the development of something by following it back step by step",
+      "examples": [
+        {
+          "en": "Historians traced the custom back to the twelfth century.",
+          "fa": "تاریخ‌نگاران ریشهٔ این رسم را تا قرن دوازدهم پی گرفتند."
+        }
+      ],
+      "ipa": "/treɪs/",
+      "pos": "v",
+      "synonyms": [
+        "track down",
+        "follow",
+        "pinpoint"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p05",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1402-p01",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "ردیابی کردن",
+        "پی گرفتن",
+        "رد چیزی را زدن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a mark or sign showing that someone or something has been present",
+      "examples": [
+        {
+          "en": "The thieves left no trace of their visit behind them.",
+          "fa": "دزدها هیچ ردی از حضورشان بر جای نگذاشتند."
+        }
+      ],
+      "ipa": "/treɪs/",
+      "pos": "n",
+      "synonyms": [
+        "mark",
+        "sign",
+        "vestige"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p05",
+          "questionNo": 23
+        }
+      ],
+      "translations": [
+        "رد",
+        "نشانه",
+        "اثر"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a very small amount of something, often too small to be seen easily",
+      "examples": [
+        {
+          "en": "Doctors found traces of the drug in his blood.",
+          "fa": "پزشکان مقدار ناچیزی از آن دارو را در خونش یافتند."
+        }
+      ],
+      "ipa": "/treɪs/",
+      "pos": "n",
+      "synonyms": [
+        "hint",
+        "touch"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p03",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "مقدار ناچیز",
+        "اندکی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

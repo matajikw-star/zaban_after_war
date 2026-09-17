@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "تلفظ و املای نزدیک؛ اما flaw یعنی نقص، نه کف اتاق",
+      "word": "floor"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "flaw",
   "lemma": "flaw",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,48 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "merit",
+        "strength"
+      ],
+      "definition": "a fault or weakness in something that stops it from being perfect or from working properly",
+      "examples": [
+        {
+          "en": "A small flaw in the design let water into the engine.",
+          "fa": "نقصی کوچک در طراحی باعث شد آب وارد موتور شود."
+        }
+      ],
+      "ipa": "/flɔː/",
+      "pos": "n",
+      "synonyms": [
+        "defect",
+        "shortcoming",
+        "fault"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p05",
+          "questionNo": 20
+        },
+        {
+          "paperId": "arshad-1405-p02",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "نقص",
+        "عیب",
+        "ایراد"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1403": 1

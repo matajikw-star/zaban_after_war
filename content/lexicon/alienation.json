@@ -6,7 +6,7 @@
   },
   "id": "alienation",
   "lemma": "alienation",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,47 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "belonging",
+        "attachment"
+      ],
+      "definition": "the feeling of being separated from other people or from a group you should belong to",
+      "examples": [
+        {
+          "en": "Long hours of night work led to a deep sense of alienation.",
+          "fa": "ساعت‌های طولانی کار شبانه به احساس عمیقی از بیگانگی انجامید."
+        }
+      ],
+      "ipa": "/ˌeɪliəˈneɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "estrangement",
+        "isolation"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p04",
+          "questionNo": 11
+        },
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 23
+        }
+      ],
+      "translations": [
+        "بیگانگی",
+        "از خودبیگانگی",
+        "احساس طرد شدن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

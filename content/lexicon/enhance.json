@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شکل نزدیک، اما enforce یعنی به اجرا گذاشتن قانون یا قاعده",
+      "word": "enforce"
+    },
+    {
+      "note": "در گزینه‌های کنکور کنار هم می‌آیند؛ entail یعنی در پی داشتن و مستلزم بودن",
+      "word": "entail"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "enhance",
   "lemma": "enhance",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -42,8 +51,52 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "diminish",
+        "detract from"
+      ],
+      "definition": "to increase or further improve the good quality, value or status of something",
+      "examples": [
+        {
+          "en": "Good lighting can greatly enhance the appearance of a small room.",
+          "fa": "نورپردازی خوب می‌تواند ظاهر اتاقی کوچک را به‌شدت بهبود بخشد."
+        }
+      ],
+      "ipa": "/ɪnˈhɑːns/",
+      "pos": "v",
+      "synonyms": [
+        "improve",
+        "boost",
+        "heighten"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p06",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 24
+        },
+        {
+          "paperId": "arshad-1398-p03",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "ارتقا دادن",
+        "بهبود بخشیدن",
+        "افزایش دادن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1,

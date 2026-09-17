@@ -6,7 +6,7 @@
   },
   "id": "wallow",
   "lemma": "wallow",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,69 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "overcome",
+        "resist"
+      ],
+      "definition": "to allow yourself to enjoy a feeling or situation completely, usually a sad one, without trying to escape it",
+      "examples": [
+        {
+          "en": "After the defeat he spent a week wallowing in self-pity.",
+          "fa": "پس از آن شکست، یک هفته را در دلسوزی برای خود غوطه خورد."
+        }
+      ],
+      "ipa": "/ˈwɒləʊ/",
+      "pos": "v",
+      "synonyms": [
+        "indulge",
+        "luxuriate",
+        "revel"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p04",
+          "questionNo": 14
+        },
+        {
+          "paperId": "arshad-1405-p04",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "غوطه خوردن (در احساسی)",
+        "فرو رفتن در",
+        "دل سپردن به"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "of a large animal, to roll about in mud or water for pleasure or to keep cool",
+      "examples": [
+        {
+          "en": "Buffalo wallow in the shallow river through the hottest hours.",
+          "fa": "گاومیش‌ها در گرم‌ترین ساعت‌ها در آب کم‌عمق رودخانه غلت می‌زنند."
+        }
+      ],
+      "ipa": "/ˈwɒləʊ/",
+      "pos": "v",
+      "synonyms": [
+        "roll",
+        "flounder"
+      ],
+      "testedIn": [],
+      "translations": [
+        "غلت زدن (در گل یا آب)",
+        "لمیدن در گل"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1403": 1

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هم‌خانواده به نظر می‌رسند، اما raise فعل متعدی است و حتماً مفعول می‌گیرد",
+      "word": "raise"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "arise",
   "lemma": "arise",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -75,8 +80,87 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "disappear"
+      ],
+      "definition": "to happen or begin to exist, especially as a result of a particular situation",
+      "examples": [
+        {
+          "en": "Problems may arise when two departments share the same budget.",
+          "fa": "هنگامی که دو بخش بودجه‌ای مشترک داشته باشند ممکن است مشکلاتی پدید آید."
+        }
+      ],
+      "ipa": "/əˈraɪz/",
+      "pos": "v",
+      "synonyms": [
+        "occur",
+        "emerge",
+        "stem from"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p03",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "پدید آمدن",
+        "ناشی شدن (از)",
+        "پیش آمدن"
+      ]
+    },
+    {
+      "antonyms": [
+        "sit down"
+      ],
+      "definition": "to get up from a sitting or lying position; a formal or literary use",
+      "examples": [
+        {
+          "en": "He arose early and left the house before sunrise.",
+          "fa": "او زود برخاست و پیش از طلوع آفتاب از خانه بیرون رفت."
+        }
+      ],
+      "ipa": "/əˈraɪz/",
+      "pos": "v",
+      "synonyms": [
+        "get up",
+        "rise",
+        "stand up"
+      ],
+      "testedIn": [],
+      "translations": [
+        "برخاستن",
+        "از جا بلند شدن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -6,7 +6,7 @@
   },
   "id": "triumph",
   "lemma": "triumph",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -42,8 +42,73 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "defeat",
+        "failure"
+      ],
+      "definition": "an important victory or success, especially after a long or difficult effort",
+      "examples": [
+        {
+          "en": "Winning the regional final was a triumph for the small school.",
+          "fa": "بردن فینال منطقه‌ای پیروزی بزرگی برای آن مدرسهٔ کوچک بود."
+        }
+      ],
+      "ipa": "/ˈtraɪʌmf/",
+      "pos": "n",
+      "synonyms": [
+        "victory",
+        "conquest",
+        "success"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "پیروزی",
+        "موفقیت بزرگ",
+        "کامیابی"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "the feeling of great satisfaction and pride that comes from winning",
+      "examples": [
+        {
+          "en": "She raised the trophy with a look of pure triumph.",
+          "fa": "جام را با نگاهی سرشار از حس پیروزی بالا برد."
+        }
+      ],
+      "ipa": "/ˈtraɪʌmf/",
+      "pos": "n",
+      "synonyms": [
+        "exultation",
+        "jubilation"
+      ],
+      "testedIn": [],
+      "translations": [
+        "حس پیروزی",
+        "سرمستی از پیروزی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 3

@@ -6,7 +6,7 @@
   },
   "id": "commodity",
   "lemma": "commodity",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,65 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a raw material or product that is bought and sold, especially in large quantities",
+      "examples": [
+        {
+          "en": "Copper is a commodity whose price moves with global demand.",
+          "fa": "مس کالایی است که قیمتش با تقاضای جهانی بالا و پایین می‌رود."
+        }
+      ],
+      "ipa": "/kəˈmɒdəti/",
+      "pos": "n",
+      "synonyms": [
+        "goods",
+        "product",
+        "merchandise"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 29
+        },
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 188
+        }
+      ],
+      "translations": [
+        "کالا",
+        "متاع",
+        "محصول قابل داد و ستد"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "something useful or valuable that people want and that is often in short supply",
+      "examples": [
+        {
+          "en": "In a busy newsroom, quiet is a rare commodity.",
+          "fa": "در یک اتاق خبر پرتکاپو، سکوت متاعی کمیاب است."
+        }
+      ],
+      "ipa": "/kəˈmɒdəti/",
+      "pos": "n",
+      "synonyms": [
+        "asset"
+      ],
+      "testedIn": [],
+      "translations": [
+        "چیز ارزشمند",
+        "متاع کمیاب"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

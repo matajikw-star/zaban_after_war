@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "successful یعنی موفق؛ successive یعنی پیاپی و پشت‌سرهم",
+      "word": "successful"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "successive",
   "lemma": "successive",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -64,8 +69,59 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "intermittent"
+      ],
+      "definition": "following one after another without a break in between",
+      "examples": [
+        {
+          "en": "The team lost four successive matches before the manager resigned.",
+          "fa": "تیم پیش از استعفای سرمربی چهار بازی پیاپی را باخت."
+        }
+      ],
+      "ipa": "/səkˈsesɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "consecutive",
+        "sequential",
+        "back-to-back"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p02",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "پیاپی",
+        "متوالی",
+        "پشت‌سرهم"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

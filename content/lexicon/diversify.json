@@ -6,7 +6,7 @@
   },
   "id": "diversify",
   "lemma": "diversify",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +42,73 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "specialize"
+      ],
+      "definition": "of a company, to start making or selling a new kind of product in addition to what it already offers; usually \"diversify into something\"",
+      "examples": [
+        {
+          "en": "The dairy company has diversified into frozen desserts and juices.",
+          "fa": "آن شرکت لبنیاتی فعالیتش را به دسرهای یخ‌زده و آبمیوه هم گسترش داده است."
+        }
+      ],
+      "ipa": "/daɪˈvɜːsɪfaɪ/",
+      "pos": "v",
+      "synonyms": [
+        "branch out",
+        "expand into"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "دامنهٔ فعالیت را گسترش دادن",
+        "وارد حوزهٔ تازه شدن"
+      ]
+    },
+    {
+      "antonyms": [
+        "narrow"
+      ],
+      "definition": "to make something include more different kinds of things or people",
+      "examples": [
+        {
+          "en": "The school diversified its curriculum to attract a wider range of students.",
+          "fa": "مدرسه برنامهٔ درسی‌اش را متنوع کرد تا طیف گسترده‌تری از دانش‌آموزان را جذب کند."
+        }
+      ],
+      "ipa": "/daɪˈvɜːsɪfaɪ/",
+      "pos": "v",
+      "synonyms": [
+        "vary",
+        "broaden"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p01",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "متنوع کردن",
+        "گوناگون کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 2

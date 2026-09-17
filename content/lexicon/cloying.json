@@ -6,7 +6,7 @@
   },
   "id": "cloying",
   "lemma": "cloying",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -31,8 +31,47 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "restrained",
+        "understated"
+      ],
+      "definition": "so sweet or so full of feeling that it becomes unpleasant and tiring",
+      "examples": [
+        {
+          "en": "The film's cloying ending spoiled an otherwise honest story.",
+          "fa": "پایان دل‌زنندهٔ فیلم، داستانی را که در کل صادقانه بود خراب کرد."
+        }
+      ],
+      "ipa": "/ˈklɔɪɪŋ/",
+      "pos": "adj",
+      "synonyms": [
+        "sickly",
+        "saccharine"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 21
+        },
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "دل‌زننده (از فرط شیرینی)",
+        "بیش از حد احساساتی",
+        "چندش‌آور"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

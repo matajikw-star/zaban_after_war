@@ -6,7 +6,7 @@
   },
   "id": "stagnant",
   "lemma": "stagnant",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +42,76 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "booming",
+        "thriving"
+      ],
+      "definition": "not growing, developing or changing, said especially of an economy or a business",
+      "examples": [
+        {
+          "en": "Wages have been stagnant in this industry for almost a decade.",
+          "fa": "دستمزدها در این صنعت نزدیک به یک دهه راکد مانده است."
+        }
+      ],
+      "ipa": "/ˈstæɡnənt/",
+      "pos": "adj",
+      "synonyms": [
+        "sluggish",
+        "flat",
+        "static"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1404-p06",
+          "questionNo": 26
+        }
+      ],
+      "translations": [
+        "راکد",
+        "بی‌رونق",
+        "درجا زده"
+      ]
+    },
+    {
+      "antonyms": [
+        "running",
+        "flowing"
+      ],
+      "definition": "of water, not flowing and therefore dirty and unpleasant",
+      "examples": [
+        {
+          "en": "Mosquitoes breed quickly in the stagnant water behind the house.",
+          "fa": "پشه‌ها در آب راکد پشت خانه به‌سرعت زادوولد می‌کنند."
+        }
+      ],
+      "ipa": "/ˈstæɡnənt/",
+      "pos": "adj",
+      "synonyms": [
+        "still",
+        "motionless"
+      ],
+      "testedIn": [],
+      "translations": [
+        "راکد (آب)",
+        "مانده"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 2

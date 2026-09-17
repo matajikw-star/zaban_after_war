@@ -6,7 +6,7 @@
   },
   "id": "besmirch",
   "lemma": "besmirch",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -31,8 +31,48 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "honour",
+        "vindicate"
+      ],
+      "definition": "to damage someone's good name or reputation by saying bad things about them",
+      "examples": [
+        {
+          "en": "A single careless remark can besmirch a politician's reputation for years.",
+          "fa": "یک اظهارنظر بی‌احتیاط می‌تواند سال‌ها آبروی یک سیاستمدار را لکه‌دار کند."
+        }
+      ],
+      "ipa": "/bɪˈsmɜːtʃ/",
+      "pos": "v",
+      "synonyms": [
+        "tarnish",
+        "sully",
+        "defame"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 17
+        },
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 27
+        }
+      ],
+      "translations": [
+        "لکه‌دار کردن",
+        "بدنام کردن",
+        "آلودن (آبرو)"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 1

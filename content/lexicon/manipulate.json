@@ -6,7 +6,7 @@
   },
   "id": "manipulate",
   "lemma": "manipulate",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +53,76 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to control or change someone or something cleverly and often dishonestly, to get what you want",
+      "examples": [
+        {
+          "en": "The witness had manipulated the dates to hide where he really was.",
+          "fa": "شاهد تاریخ‌ها را دستکاری کرده بود تا پنهان کند واقعاً کجا بوده است."
+        }
+      ],
+      "ipa": "/məˈnɪpjuleɪt/",
+      "pos": "v",
+      "synonyms": [
+        "exploit",
+        "maneuver",
+        "rig"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "دستکاری کردن",
+        "به بازی گرفتن",
+        "اعمال نفوذ کردن بر"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to handle or operate something with skill, especially with the hands",
+      "examples": [
+        {
+          "en": "Surgeons learn to manipulate tiny instruments through a very small opening.",
+          "fa": "جراحان می‌آموزند ابزارهای بسیار ریز را از میان شکافی کوچک ماهرانه به کار ببرند."
+        }
+      ],
+      "ipa": "/məˈnɪpjuleɪt/",
+      "pos": "v",
+      "synonyms": [
+        "handle",
+        "operate",
+        "work"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 33
+        }
+      ],
+      "translations": [
+        "ماهرانه به کار بردن",
+        "کار کردن با (دست یا ابزار)"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شکل نزدیک، اما lurid یعنی هولناک و زننده یا زننده‌رنگ",
+      "word": "lurid"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "lucid",
   "lemma": "lucid",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +58,79 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "obscure",
+        "confused"
+      ],
+      "definition": "expressed clearly and easy to understand",
+      "examples": [
+        {
+          "en": "His explanation of the theory was short and remarkably lucid.",
+          "fa": "توضیح او دربارهٔ آن نظریه کوتاه و به‌طرز چشمگیری روشن بود."
+        }
+      ],
+      "ipa": "/ˈluːsɪd/",
+      "pos": "adj",
+      "synonyms": [
+        "clear",
+        "coherent",
+        "intelligible"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p06",
+          "questionNo": 27
+        },
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "روشن و شیوا",
+        "واضح",
+        "رسا"
+      ]
+    },
+    {
+      "antonyms": [
+        "confused"
+      ],
+      "definition": "able to think and speak clearly, especially during or after an illness",
+      "examples": [
+        {
+          "en": "The patient stayed lucid for an hour and then fell asleep.",
+          "fa": "بیمار یک ساعت هشیار ماند و سپس به خواب رفت."
+        }
+      ],
+      "ipa": "/ˈluːsɪd/",
+      "pos": "adj",
+      "synonyms": [
+        "rational",
+        "clear-headed"
+      ],
+      "testedIn": [],
+      "translations": [
+        "هشیار",
+        "دارای ذهن روشن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 3

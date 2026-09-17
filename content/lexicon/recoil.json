@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شکل نزدیک، اما recall یعنی به یاد آوردن یا فراخواندن",
+      "word": "recall"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "recoil",
   "lemma": "recoil",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -53,8 +58,55 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "approach"
+      ],
+      "definition": "to move back suddenly, or to react with strong dislike or fear, when you see or hear something unpleasant",
+      "examples": [
+        {
+          "en": "She recoiled in horror at the sight of the deep wound.",
+          "fa": "او با دیدن آن زخم عمیق از وحشت واپس کشید."
+        }
+      ],
+      "ipa": "/rɪˈkɔɪl/",
+      "pos": "v",
+      "synonyms": [
+        "flinch",
+        "shrink back",
+        "wince"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 28
+        }
+      ],
+      "translations": [
+        "واپس کشیدن",
+        "جا خوردن و عقب کشیدن",
+        "بیزاری نشان دادن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 3

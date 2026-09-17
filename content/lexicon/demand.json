@@ -6,7 +6,7 @@
   },
   "id": "demand",
   "lemma": "demand",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +53,95 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to ask for something very firmly, as if you have a right to it",
+      "examples": [
+        {
+          "en": "The workers demanded a written answer from the company by Friday.",
+          "fa": "کارگران تا جمعه خواستار پاسخی کتبی از شرکت شدند."
+        }
+      ],
+      "ipa": "/dɪˈmɑːnd/",
+      "pos": "v",
+      "synonyms": [
+        "insist on",
+        "call for",
+        "require"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p05",
+          "questionNo": 11
+        },
+        {
+          "paperId": "arshad-1402-p06",
+          "questionNo": 26
+        },
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 170
+        }
+      ],
+      "translations": [
+        "مطالبه کردن",
+        "خواستار شدن",
+        "طلب کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a firm request, or a need that something or someone places on you",
+      "examples": [
+        {
+          "en": "The new job makes heavy demands on her free time.",
+          "fa": "شغل جدید خواسته‌های سنگینی از وقت آزاد او دارد."
+        }
+      ],
+      "ipa": "/dɪˈmɑːnd/",
+      "pos": "n",
+      "synonyms": [
+        "requirement",
+        "claim"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p01",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "خواسته",
+        "مطالبه",
+        "نیاز"
+      ]
+    },
+    {
+      "antonyms": [
+        "supply"
+      ],
+      "definition": "the amount of a product or service that people want to buy",
+      "examples": [
+        {
+          "en": "Demand for electric cars has risen sharply in recent years.",
+          "fa": "تقاضا برای خودروهای برقی در سال‌های اخیر به‌شدت بالا رفته است."
+        }
+      ],
+      "ipa": "/dɪˈmɑːnd/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "تقاضا"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

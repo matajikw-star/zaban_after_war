@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شکل ظاهری بسیار نزدیک اما تقریباً وارونه؛ underline یعنی زیر چیزی خط کشیدن و بر آن تأکید کردن",
+      "word": "underline"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "undermine",
   "lemma": "undermine",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,52 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "strengthen",
+        "bolster"
+      ],
+      "definition": "to weaken something gradually and indirectly, especially confidence, authority or an argument",
+      "examples": [
+        {
+          "en": "Constant criticism can undermine a young player's confidence.",
+          "fa": "انتقاد مداوم می‌تواند اعتمادبه‌نفس یک بازیکن جوان را تضعیف کند."
+        }
+      ],
+      "ipa": "/ˌʌndəˈmaɪn/",
+      "pos": "v",
+      "synonyms": [
+        "weaken",
+        "erode",
+        "sabotage"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p01",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1404-p05",
+          "questionNo": 13
+        },
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 171
+        }
+      ],
+      "translations": [
+        "تضعیف کردن",
+        "سست کردن",
+        "خدشه‌دار کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

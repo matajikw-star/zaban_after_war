@@ -6,7 +6,7 @@
   },
   "id": "challenge",
   "lemma": "challenge",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +42,73 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "accept",
+        "endorse"
+      ],
+      "definition": "to question whether something is right, true or legal, and to invite others to defend it",
+      "examples": [
+        {
+          "en": "Several scientists challenged the results of the new study.",
+          "fa": "چند دانشمند نتایج پژوهش تازه را زیر سؤال بردند."
+        }
+      ],
+      "ipa": "/ˈtʃælɪndʒ/",
+      "pos": "v",
+      "synonyms": [
+        "dispute",
+        "question",
+        "contest"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p02",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1405-p06",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1402-p02",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "زیر سؤال بردن",
+        "به چالش کشیدن",
+        "اعتراض کردن به"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a difficult task that tests someone's ability and needs a lot of effort",
+      "examples": [
+        {
+          "en": "Learning a new language at fifty is a real challenge.",
+          "fa": "آموختن یک زبان تازه در پنجاه‌سالگی چالشی واقعی است."
+        }
+      ],
+      "ipa": "/ˈtʃælɪndʒ/",
+      "pos": "n",
+      "synonyms": [
+        "test",
+        "difficulty"
+      ],
+      "testedIn": [],
+      "translations": [
+        "چالش",
+        "کار دشوار"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

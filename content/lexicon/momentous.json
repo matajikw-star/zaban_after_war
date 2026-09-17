@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "درست برعکس آن است: لحظه‌ای و زودگذر، و در گزینه‌های همین آزمون هم آمده بود.",
+      "word": "momentary"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "momentous",
   "lemma": "momentous",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -42,8 +47,52 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "trivial",
+        "insignificant"
+      ],
+      "definition": "very important because of the great effect it will have on future events",
+      "examples": [
+        {
+          "en": "The signing of the treaty was a momentous day for both countries.",
+          "fa": "امضای آن پیمان روزی سرنوشت‌ساز برای هر دو کشور بود."
+        }
+      ],
+      "ipa": "/məˈmentəs/",
+      "pos": "adj",
+      "synonyms": [
+        "historic",
+        "landmark",
+        "weighty"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "سرنوشت‌ساز",
+        "بسیار مهم",
+        "تاریخی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 3

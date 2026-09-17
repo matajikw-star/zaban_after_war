@@ -1,12 +1,12 @@
 {
   "confusables": [],
   "homograph": {
-    "note": null,
-    "suspected": false
+    "note": "The adjective /dɪˈlɪbərət/ \"intentional\" and the verb /dɪˈlɪbəreɪt/ \"to think or discuss carefully\" differ in the final vowel and in part of speech, and a candidate who knows one does not guess the other. The exam used both readings as distractors.",
+    "suspected": true
   },
   "id": "deliberate",
   "lemma": "deliberate",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +53,80 @@
       "year": 1402
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "accidental",
+        "unintentional"
+      ],
+      "definition": "done on purpose, after thinking about it, rather than by accident",
+      "examples": [
+        {
+          "en": "The damage to the painting was clearly deliberate, not an accident.",
+          "fa": "آسیب وارد شده به تابلو آشکارا عمدی بود، نه یک اتفاق."
+        }
+      ],
+      "ipa": "/dɪˈlɪbərət/",
+      "pos": "adj",
+      "synonyms": [
+        "intentional",
+        "calculated",
+        "premeditated"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 12
+        },
+        {
+          "paperId": "arshad-1405-p07",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "عمدی",
+        "از روی قصد",
+        "سنجیده"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to think about or discuss something carefully before reaching a decision",
+      "examples": [
+        {
+          "en": "The jury deliberated for three days before reaching a verdict.",
+          "fa": "هیئت منصفه سه روز تأمل و مشورت کرد تا به رأی رسید."
+        }
+      ],
+      "ipa": "/dɪˈlɪbəreɪt/",
+      "pos": "v",
+      "synonyms": [
+        "ponder",
+        "weigh up",
+        "consider"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p02",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1402-p04",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "تأمل کردن",
+        "به مشورت نشستن",
+        "سبک‌سنگین کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

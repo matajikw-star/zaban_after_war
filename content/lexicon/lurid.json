@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "livid یعنی سخت خشمگین، یا کبود و بی‌رنگ؛ با lurid اشتباه گرفته می‌شود",
+      "word": "livid"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "lurid",
   "lemma": "lurid",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -31,8 +36,70 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "restrained"
+      ],
+      "definition": "shocking in a violent or sensational way, and described in too much detail",
+      "examples": [
+        {
+          "en": "The magazine printed lurid details of the whole scandal.",
+          "fa": "مجله جزئیات هولناک و زنندهٔ کل آن رسوایی را چاپ کرد."
+        }
+      ],
+      "ipa": "/ˈlʊərɪd/",
+      "pos": "adj",
+      "synonyms": [
+        "sensational",
+        "gruesome",
+        "shocking"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 21
+        },
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 18
+        }
+      ],
+      "translations": [
+        "هولناک",
+        "زننده و جنجالی",
+        "چندش‌آور"
+      ]
+    },
+    {
+      "antonyms": [
+        "muted"
+      ],
+      "definition": "unpleasantly bright in colour",
+      "examples": [
+        {
+          "en": "She wore a lurid green jacket that everyone noticed.",
+          "fa": "او کت سبزِ چشم‌آزاری پوشیده بود که توجه همه را جلب کرد."
+        }
+      ],
+      "ipa": "/ˈlʊərɪd/",
+      "pos": "adj",
+      "synonyms": [
+        "garish",
+        "gaudy"
+      ],
+      "testedIn": [],
+      "translations": [
+        "چشم‌آزار",
+        "پرزرق‌وبرق و زننده"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1,

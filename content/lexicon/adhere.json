@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "cohere یعنی منسجم و به‌هم‌پیوسته بودن اجزای یک چیز، نه پایبندی به قانون",
+      "word": "cohere"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "adhere",
   "lemma": "adhere",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -31,8 +36,69 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "violate",
+        "flout"
+      ],
+      "definition": "to follow a rule, standard or agreement exactly, without departing from it; used as \"adhere to\"",
+      "examples": [
+        {
+          "en": "Every laboratory must adhere to the safety rules without exception.",
+          "fa": "هر آزمایشگاهی باید بدون استثنا مقررات ایمنی را رعایت کند."
+        }
+      ],
+      "ipa": "/ədˈhɪə(r)/",
+      "pos": "v",
+      "synonyms": [
+        "comply with",
+        "abide by",
+        "stick to"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p03",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1403-p05",
+          "questionNo": 23
+        }
+      ],
+      "translations": [
+        "پایبند بودن به",
+        "رعایت کردن",
+        "تبعیت کردن از"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to stick firmly to a surface",
+      "examples": [
+        {
+          "en": "The label will not adhere to a wet bottle.",
+          "fa": "برچسب به بطری خیس نمی‌چسبد."
+        }
+      ],
+      "ipa": "/ədˈhɪə(r)/",
+      "pos": "v",
+      "synonyms": [
+        "stick",
+        "cling"
+      ],
+      "testedIn": [],
+      "translations": [
+        "چسبیدن",
+        "سفت چسبیدن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1403": 1,

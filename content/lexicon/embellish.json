@@ -6,7 +6,7 @@
   },
   "id": "embellish",
   "lemma": "embellish",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,69 @@
       "year": 1402
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "strip",
+        "simplify"
+      ],
+      "definition": "to make something more attractive by adding decoration or detail to it",
+      "examples": [
+        {
+          "en": "The cover was embellished with gold letters and a thin border.",
+          "fa": "جلد با حروف طلایی و حاشیه‌ای باریک آراسته شده بود."
+        }
+      ],
+      "ipa": "/ɪmˈbelɪʃ/",
+      "pos": "v",
+      "synonyms": [
+        "adorn",
+        "decorate",
+        "ornament"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p05",
+          "questionNo": 25
+        },
+        {
+          "paperId": "arshad-1402-p05",
+          "questionNo": 16
+        }
+      ],
+      "translations": [
+        "آراستن",
+        "زینت دادن",
+        "تزیین کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to make a story more interesting by adding details that are not true",
+      "examples": [
+        {
+          "en": "He embellished the story a little more each time he told it.",
+          "fa": "هر بار که آن داستان را تعریف می‌کرد کمی بیشتر به آن شاخ و برگ می‌داد."
+        }
+      ],
+      "ipa": "/ɪmˈbelɪʃ/",
+      "pos": "v",
+      "synonyms": [
+        "exaggerate",
+        "embroider"
+      ],
+      "testedIn": [],
+      "translations": [
+        "شاخ و برگ دادن به",
+        "آب و تاب دادن به"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

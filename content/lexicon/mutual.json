@@ -6,7 +6,7 @@
   },
   "id": "mutual",
   "lemma": "mutual",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -75,8 +75,63 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "one-sided"
+      ],
+      "definition": "felt or done by each of two or more people towards the other, or shared by them",
+      "examples": [
+        {
+          "en": "The two countries signed the treaty for their mutual benefit.",
+          "fa": "دو کشور آن پیمان را به سود متقابل خود امضا کردند."
+        }
+      ],
+      "ipa": "/ˈmjuːtʃuəl/",
+      "pos": "adj",
+      "synonyms": [
+        "reciprocal",
+        "shared",
+        "joint"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p01",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "متقابل",
+        "دوجانبه",
+        "مشترک"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 3

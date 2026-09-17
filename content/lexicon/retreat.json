@@ -6,7 +6,7 @@
   },
   "id": "retreat",
   "lemma": "retreat",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -53,8 +53,98 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "advance"
+      ],
+      "definition": "the act of moving back or away from a difficult or dangerous situation",
+      "examples": [
+        {
+          "en": "The general ordered a retreat before the bridge was destroyed.",
+          "fa": "ژنرال پیش از تخریب پل دستور عقب‌نشینی داد."
+        }
+      ],
+      "ipa": "/rɪˈtriːt/",
+      "pos": "n",
+      "synonyms": [
+        "withdrawal",
+        "pullback"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p07",
+          "questionNo": 12
+        }
+      ],
+      "translations": [
+        "عقب‌نشینی",
+        "واپس‌نشینی"
+      ]
+    },
+    {
+      "antonyms": [
+        "advance"
+      ],
+      "definition": "to move back or away, especially from an enemy or from something unpleasant",
+      "examples": [
+        {
+          "en": "The troops retreated to the hills as darkness fell.",
+          "fa": "نیروها با فرا رسیدن تاریکی به تپه‌ها عقب‌نشینی کردند."
+        }
+      ],
+      "ipa": "/rɪˈtriːt/",
+      "pos": "v",
+      "synonyms": [
+        "withdraw",
+        "fall back"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "عقب‌نشینی کردن",
+        "پس کشیدن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a quiet private place where you can go to rest or think",
+      "examples": [
+        {
+          "en": "The cottage became their weekend retreat from city noise.",
+          "fa": "آن کلبه به خلوتگاه آخر هفتهٔ آن‌ها دور از هیاهوی شهر بدل شد."
+        }
+      ],
+      "ipa": "/rɪˈtriːt/",
+      "pos": "n",
+      "synonyms": [
+        "haven",
+        "refuge"
+      ],
+      "testedIn": [],
+      "translations": [
+        "خلوتگاه",
+        "پناهگاه آرام"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

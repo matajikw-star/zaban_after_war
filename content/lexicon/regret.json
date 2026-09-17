@@ -6,7 +6,7 @@
   },
   "id": "regret",
   "lemma": "regret",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -42,8 +42,70 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to feel sorry about something you did or failed to do, and wish it had been different",
+      "examples": [
+        {
+          "en": "She still regrets leaving university before finishing her degree.",
+          "fa": "او هنوز از ترک دانشگاه پیش از پایان تحصیلاتش پشیمان است."
+        }
+      ],
+      "ipa": "/rɪˈɡret/",
+      "pos": "v",
+      "synonyms": [
+        "rue",
+        "repent"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "پشیمان بودن از",
+        "افسوس خوردن برای",
+        "تأسف خوردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a feeling of sadness or disappointment about something that happened or was done",
+      "examples": [
+        {
+          "en": "He spoke about the decision with obvious regret in his voice.",
+          "fa": "او دربارهٔ آن تصمیم با افسوسی آشکار در صدایش سخن گفت."
+        }
+      ],
+      "ipa": "/rɪˈɡret/",
+      "pos": "n",
+      "synonyms": [
+        "remorse",
+        "contrition"
+      ],
+      "testedIn": [],
+      "translations": [
+        "پشیمانی",
+        "افسوس",
+        "تأسف"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 3

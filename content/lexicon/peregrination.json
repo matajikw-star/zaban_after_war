@@ -6,7 +6,7 @@
   },
   "id": "peregrination",
   "lemma": "peregrination",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -31,8 +31,45 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a long journey with much wandering from place to place",
+      "examples": [
+        {
+          "en": "His peregrinations across Central Asia filled three thick notebooks.",
+          "fa": "سفرهای طولانی او در آسیای مرکزی سه دفتر قطور را پر کرد."
+        }
+      ],
+      "ipa": "/ˌperɪɡrɪˈneɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "wandering",
+        "odyssey",
+        "trek"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p05",
+          "questionNo": 22
+        },
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "سفر طولانی و پرگشت‌وگذار",
+        "سیر و سیاحت",
+        "دوره‌گردی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1404": 1

@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "accede یعنی رضایت دادن یا پذیرفتن درخواست",
+      "word": "accede"
+    },
+    {
+      "note": "excel یعنی برتری یافتن و عالی بودن، اما exceed یعنی از حدی گذشتن",
+      "word": "excel"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "exceed",
   "lemma": "exceed",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +62,54 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "fall short of"
+      ],
+      "definition": "to be greater than a particular number or amount, or to go beyond an official limit",
+      "examples": [
+        {
+          "en": "Costs must not exceed the budget the council approved last spring.",
+          "fa": "هزینه‌ها نباید از بودجه‌ای که شورا بهار گذشته تصویب کرد فراتر رود."
+        }
+      ],
+      "ipa": "/ɪkˈsiːd/",
+      "pos": "v",
+      "synonyms": [
+        "surpass",
+        "go beyond"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p11",
+          "questionNo": 26
+        },
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "فراتر رفتن از",
+        "تجاوز کردن از",
+        "بیشتر بودن از"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 1

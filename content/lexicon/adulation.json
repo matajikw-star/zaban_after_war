@@ -6,7 +6,7 @@
   },
   "id": "adulation",
   "lemma": "adulation",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,47 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "criticism",
+        "scorn"
+      ],
+      "definition": "praise and admiration for someone that is far greater than they deserve",
+      "examples": [
+        {
+          "en": "The young singer was unprepared for the adulation of her new fans.",
+          "fa": "خوانندهٔ جوان آمادگی ستایش افراطی هواداران تازه‌اش را نداشت."
+        }
+      ],
+      "ipa": "/ˌædjuˈleɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "flattery",
+        "worship"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p08",
+          "questionNo": 14
+        },
+        {
+          "paperId": "arshad-1404-p05",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "ستایش افراطی",
+        "چاپلوسی",
+        "تملق"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 1

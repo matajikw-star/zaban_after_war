@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املا و آوای بسیار نزدیک، اما jealous یعنی حسود",
+      "word": "jealous"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "zealous",
   "lemma": "zealous",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -75,8 +80,64 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "indifferent",
+        "apathetic"
+      ],
+      "definition": "showing great energy and enthusiasm in support of a person, a cause or a belief",
+      "examples": [
+        {
+          "en": "The new manager is a zealous defender of workers' rights.",
+          "fa": "مدیر جدید مدافعی پرشور برای حقوق کارگران است."
+        }
+      ],
+      "ipa": "/ˈzeləs/",
+      "pos": "adj",
+      "synonyms": [
+        "ardent",
+        "fervent",
+        "enthusiastic"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p05",
+          "questionNo": 12
+        },
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p08",
+          "questionNo": 19
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "پرشور",
+        "مشتاق و پرحرارت",
+        "متعصب"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 4,

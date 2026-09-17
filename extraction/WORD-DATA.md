@@ -148,6 +148,13 @@ distance.
   `vicious`/`viscous`). Konkour distractors are built from exactly this. Leave
   the array empty when there is genuinely nothing; a forced confusable is worse
   than none.
+
+  A **spelling variant of the same word** counts — `artifact`/`artefact`,
+  `meager`/`meagre` — but only when the note says outright that it is the same
+  word. A learner who meets both in an exam has a real question, and answering
+  it is worth a slot. Decided during batch 05 rather than by the owner, so it is
+  reversible: if the owner would rather confusables be distinct lemmas only,
+  these come out.
 - **`ipa`** — per sense, because `attribute` the verb and the noun differ. Use
   the **learner-dictionary (Oxford/Cambridge) convention**: `/r/` not `/ɹ/`,
   `/e/` not `/ɛ/`, syllabic `/ˈkənˈtrɪʃn/`. The hint pass generates `تداعی صوتی`
@@ -179,7 +186,9 @@ distance.
   pass, since no word data depends on a code being named.
 - **`status` stays `draft`.** Only the owner promotes to `approved`.
 - **A wrong lemma is reported, never renamed.** Word ids are frozen forever
-  (constitution rule 6). `content/lexicon/histrionic.json` has
+  (constitution rule 6). Report it into
+  `.scratch/word-data/issues/01-lemma-reports.md`, which is the running
+  collection point for the pass. `content/lexicon/histrionic.json` has
   `surfaceForms: ["histroinic"]` — a typo in the exam paper, transcribed verbatim
   as ingest rule 1 requires. Do not fix it; the lemma is right.
 - **Hints are a different operation.** `content/hints/<word-id>.md` stays empty.

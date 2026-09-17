@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "exculpate یعنی تبرئه کردن و از اتهام مبرا دانستن، درست برعکس نکوهش",
+      "word": "exculpate"
+    },
+    {
+      "note": "expatiate یعنی مفصل و طولانی دربارهٔ موضوعی سخن گفتن",
+      "word": "expatiate"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "excoriate",
   "lemma": "excoriate",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -31,8 +40,48 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "praise",
+        "commend"
+      ],
+      "definition": "to criticize someone or something very severely, usually in public",
+      "examples": [
+        {
+          "en": "The newspaper excoriated the minister for ignoring repeated safety warnings.",
+          "fa": "روزنامه وزیر را برای نادیده گرفتن هشدارهای مکرر ایمنی به‌شدت نکوهش کرد."
+        }
+      ],
+      "ipa": "/ɪkˈskɔːrieɪt/",
+      "pos": "v",
+      "synonyms": [
+        "denounce",
+        "censure",
+        "lambaste"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p03",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1398-p04",
+          "questionNo": 21
+        }
+      ],
+      "translations": [
+        "به‌شدت نکوهش کردن",
+        "سخت تاختن به",
+        "تقبیح کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1,

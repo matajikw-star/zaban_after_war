@@ -1,12 +1,12 @@
 {
   "confusables": [],
   "homograph": {
-    "note": null,
-    "suspected": false
+    "note": "The noun (a description of events) and the verb phrase \"account for\" (to explain, or to make up a share of a total) are far enough apart that a learner who knows one will not guess the other; the bank-account sense is a third, separate reading. A hint must say which sense it targets.",
+    "suspected": true
   },
   "id": "account",
   "lemma": "account",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -53,8 +53,75 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a written or spoken description of something that has happened",
+      "examples": [
+        {
+          "en": "Her account of the accident differed sharply from the driver's.",
+          "fa": "روایت او از آن تصادف به‌شدت با روایت راننده تفاوت داشت."
+        }
+      ],
+      "ipa": "/əˈkaʊnt/",
+      "pos": "n",
+      "synonyms": [
+        "description",
+        "report",
+        "narrative"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "شرح",
+        "روایت",
+        "گزارش"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "used in \"account for\" — to explain the cause of something, or to form a particular part of a total",
+      "examples": [
+        {
+          "en": "Oil accounts for almost half of the country's export income.",
+          "fa": "نفت تقریباً نیمی از درآمد صادراتی آن کشور را تشکیل می‌دهد."
+        }
+      ],
+      "ipa": "/əˈkaʊnt/",
+      "pos": "v",
+      "synonyms": [
+        "explain",
+        "make up",
+        "constitute"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تشکیل دادن (سهمی از کل)",
+        "توضیح دادن علت چیزی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 4

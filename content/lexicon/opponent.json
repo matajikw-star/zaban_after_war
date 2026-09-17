@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املای نزدیکی دارد اما معنایش دقیقاً مقابل است: طرفدار و مدافع.",
+      "word": "proponent"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "opponent",
   "lemma": "opponent",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -42,8 +47,75 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "teammate",
+        "ally"
+      ],
+      "definition": "the person you are competing against in a game, a contest or an election",
+      "examples": [
+        {
+          "en": "The young boxer knocked out his opponent in the third round.",
+          "fa": "بوکسور جوان حریفش را در راند سوم ناک‌اوت کرد."
+        }
+      ],
+      "ipa": "/əˈpəʊnənt/",
+      "pos": "n",
+      "synonyms": [
+        "rival",
+        "adversary",
+        "contender"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "حریف",
+        "رقیب"
+      ]
+    },
+    {
+      "antonyms": [
+        "proponent",
+        "supporter"
+      ],
+      "definition": "a person who disagrees with a plan or a policy and works to stop it",
+      "examples": [
+        {
+          "en": "Opponents of the new tax gathered outside the parliament building.",
+          "fa": "مخالفان مالیات جدید بیرون ساختمان پارلمان گرد آمدند."
+        }
+      ],
+      "ipa": "/əˈpəʊnənt/",
+      "pos": "n",
+      "synonyms": [
+        "critic",
+        "objector"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مخالف",
+        "معارض"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 3

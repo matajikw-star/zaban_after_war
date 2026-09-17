@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "amenable صفت است و یعنی پذیرا و رام؛ امکانات رفاهی معنی نمی‌دهد",
+      "word": "amenable"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "amenity",
   "lemma": "amenity",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -42,8 +47,51 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "drudgery"
+      ],
+      "definition": "a feature or service of a place that makes living there easier or more pleasant, usually used in the plural",
+      "examples": [
+        {
+          "en": "The building offers few amenities beyond a small car park.",
+          "fa": "این ساختمان جز پارکینگی کوچک امکانات رفاهی اندکی دارد."
+        }
+      ],
+      "ipa": "/əˈmiːnəti/",
+      "pos": "n",
+      "synonyms": [
+        "facility",
+        "comfort",
+        "convenience"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 17
+        },
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "امکانات رفاهی",
+        "تسهیلات",
+        "آسایش‌های زندگی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "simulate یعنی شبیه‌سازی کردن یا وانمود کردن، نه الگو گرفتن از کسی",
+      "word": "simulate"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "emulate",
   "lemma": "emulate",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,49 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to try to do something as well as or better than someone you admire, by copying the way they do it",
+      "examples": [
+        {
+          "en": "Young players try to emulate their heroes on the field.",
+          "fa": "بازیکنان جوان می‌کوشند در زمین از قهرمانان خود الگو بگیرند."
+        }
+      ],
+      "ipa": "/ˈemjuleɪt/",
+      "pos": "v",
+      "synonyms": [
+        "imitate",
+        "follow",
+        "match"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p01",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1402-p05",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 30
+        }
+      ],
+      "translations": [
+        "الگو گرفتن از",
+        "تأسی کردن به",
+        "هم‌چشمی کردن با"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -8,8 +8,7 @@ commit. The reasoning behind any of it is not here: it is in `how-why.md` and in
 How to read the status marks: `[planned]` = specified, no code yet · `[building]` = a ticket is
 open · `[live]` = on `main` and deployed. A builder session flips the mark when it ships.
 
-Last full revision: 2026-09-17 (the development plan). Design system: **pending the owner's
-choice** — see §7.9.
+Last full revision: 2026-09-17 (the development plan). Design system: decided 2026-09-18 — see §7.9.
 
 ---
 
@@ -93,29 +92,32 @@ not be reachable on the app origin.
 
 ```
 apps/
-  web/            the PWA (Vite + React + TS + Tailwind)                     [planned]
-  landing/        the one-page marketing site (Vite, static)                [planned]
-  admin/          the owner's stats dashboard (Vite + React, tiny)          [planned]
+  web/            the PWA (Vite + React + TS + Tailwind)                     [building — scaffold]
+  landing/        the one-page marketing site (Vite, static)                [building — placeholder]
+  admin/          the owner's stats dashboard (Vite + React, tiny)          [building — scaffold]
 packages/
   core/           the SRS engine: pure functions, exhaustively tested       [building — types exist, superseded]
   content/        JSON schemas, lint, package builder                       [building — lint exists]
-  design/         design tokens (CSS variables), fonts, shared base styles  [planned]
+  design/         design tokens (CSS variables), fonts, shared base styles  [building — tokens + Vazirmatn]
 server/
   pb_hooks/       PocketBase JS hooks (routes, crons)                        [planned]
   pb_migrations/  collections and API rules                                  [planned]
   Caddyfile, systemd/, deploy/   VPS configuration and deploy scripts       [planned]
-  POCKETBASE_VERSION            the pinned binary version                    [planned]
-android/          Bubblewrap TWA project (twa-manifest.json); keystore NOT in git [planned]
-tools/            simulator, error/log readers, deploy, backup pull          [partly]
+  POCKETBASE_VERSION            the pinned binary version                    [building — 0.40.2]
+android/          Bubblewrap TWA project (twa-manifest.json); keystore NOT in git [building — README]
+tools/            simulator, error/log readers, deploy, backup pull, budget  [building — budget works, rest stubs]
 content/          the lexicon, exams, hints (the asset)                      [live]
 extraction/       the scan → lexicon pipeline (Python)                       [live]
 docs/spec/        this file and how-why.md
 docs/runbooks/    operational procedures (deploy, debug-from-log, restore)
 ```
 
-Workspace: pnpm, Node ≥ 22, TypeScript strict, Biome, Vitest. Root scripts: `test`, `lint`,
-`typecheck`, `build`, `content:lint`, plus (planned) `content:build`, `e2e`, `deploy`, `errors`,
-`logs`, `simulate`.
+Workspace: pnpm, Node ≥ 22, TypeScript strict, Biome, Vitest, Playwright. Root scripts, all
+registered: `test`, `test:watch`, `lint`, `format`, `typecheck` (`tsc --build` for the composite
+packages, then `pnpm -r typecheck` for the apps, which are `noEmit`), `build`, `budget`, `e2e`,
+`content:lint`, and the `tools/` entry points `simulate`, `errors`, `logs`, `flags`, `deploy`,
+`content:build` — the last six are stubs that print `not implemented` and exit 1. `deploy`
+must be run as `pnpm run deploy`: bare `pnpm deploy` is pnpm's own subcommand.
 
 ---
 
@@ -476,14 +478,29 @@ the end of onboarding and from settings. In-app browsers (Telegram, Instagram) d
 the app detects them (UA sniff) and shows «در Chrome باز کنید» with a copy-link button. iOS shows
 the Share → Add to Home Screen instruction. The landing page also offers the APK.
 
-### 7.9 Design system — **pending**
+### 7.9 Design system — **decided 2026-09-18** (ADR-0020)
 
-The owner is choosing a reference system (candidates given 2026-09-17: Geist, Linear, Apple HIG,
-Material 3, Sonnat, Untitled UI). Once chosen, this section records: the token set in
-`packages/design/tokens.css` (colour scale, one accent, radius, spacing, type scale), the Persian
-face (default Vazirmatn, self-hosted, with a system fallback stack), motion rules (150–250 ms,
-reduced-motion respected), and the one mockup screen approved before app code starts. Until then
-no component is styled beyond tokens.
+- **Components:** the shadcn/ui pattern — Radix primitives copied into `apps/web/src/ui/`,
+  styled with Tailwind v4 utilities and the tokens below. No component library at runtime.
+- **Look:** "liquid glass" in the shadcn idiom — translucent surfaces (`backdrop-filter: blur`),
+  large radius (24 px cards, 12 px controls, full-round pills), soft one-pixel borders, no drop
+  shadows heavier than `shadow-sm`, dark cards allowed on a light ground for emphasis.
+- **Palette:** monochrome. One neutral gray scale (50–950) plus pure black and white; a light
+  theme and a dark theme (`prefers-color-scheme` with a manual override in settings). **Colour
+  is reserved for the two grading buttons** («بلد بودم» green, «بلد نبودم» red) and destructive
+  confirmations. Everything else, including progress rings and charts, is gray-scale.
+- **Typography:** Sonnat's type scale — 16 px base; h1 56/1.29, h2 48/1.33, h3 32/1.5,
+  h4 24/1.67, h5 20/1.8, h6 18/1.78, subtitle 16/1.75, subtitle-sm 14/1.71, body 16/1.63,
+  body-sm 14/1.57, caption 12/1.67, caption-sm 10/1.8; headings and subtitles weight 500, body
+  400. Persian face: **Vazirmatn** (self-hosted woff2, weights 400/500/700, SIL OFL) with the
+  fallback stack `Vazirmatn, Tahoma, Arial, sans-serif`. Sonnat's own face is IRANSans, which is
+  commercial; if the owner buys a web licence the swap is one `@font-face` block in
+  `packages/design/fonts.css`. Latin (the English word on the card) uses the same face.
+- **Tokens:** `packages/design/tokens.css` defines every colour, radius, spacing and type step
+  as CSS variables on `:root` and `[data-theme="dark"]`; Tailwind v4 reads them through
+  `@theme`. Motion 150–250 ms, `prefers-reduced-motion` respected.
+- **Hints on the card** are collapsed by default behind «راهنمای یادگیری»; a word without a
+  hint shows «راهنمای این کلمه به‌زودی اضافه می‌شود» inside the same disclosure.
 
 Fixed regardless of choice: mobile-first at 360–430 px, RTL, minimum tap target 44 px, Persian
 digits via `Intl.NumberFormat('fa-IR')`, no more than one primary action per screen, no
@@ -902,7 +919,7 @@ GitHub: `DEPLOY_HOST`, `DEPLOY_USER`, `DEPLOY_SSH_KEY`, `ANDROID_KEYSTORE_B64`,
 
 ## 19. Known limitations and open items
 
-- **Design system** and the **Persian app name** are pending the owner (§7.9, `VITE_APP_NAME`).
+- The **Persian app name** is pending the owner (`VITE_APP_NAME`); the design system is decided (§7.9).
 - **Hints do not exist yet** (0 of 2,098); the free 150 need approved hints before launch.
 - **Word data is 895 of 2,098**; the paid package grows with content updates until complete.
 - iOS: no install prompt API; storage for a home-screen PWA is persistent in practice but not

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Konkur Leitner">
+  <title>Konkur Leitner</title>
+  <rect width="512" height="512" rx="112" ry="112" fill="#09090b"/>
+  <g fill="#fafafa">
+    <rect x="128" y="90" width="288" height="44" rx="22" ry="22"/>
+    <rect x="176" y="162" width="240" height="44" rx="22" ry="22"/>
+    <rect x="224" y="234" width="192" height="44" rx="22" ry="22"/>
+    <rect x="272" y="306" width="144" height="44" rx="22" ry="22"/>
+    <rect x="320" y="378" width="96" height="44" rx="22" ry="22"/>
+  </g>
+</svg>

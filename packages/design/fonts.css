@@ -1,0 +1,27 @@
+/* Vazirmatn v33.003, self-hosted (ADR-0005: no runtime CDN, ADR-0020: design system).
+   Source: https://github.com/rastikerdar/vazirmatn release v33.003, fonts/webfonts/.
+   Licence: SIL Open Font License 1.1 — see ./fonts/OFL.txt. */
+
+@font-face {
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/Vazirmatn-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/Vazirmatn-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/Vazirmatn-Bold.woff2") format("woff2");
+}

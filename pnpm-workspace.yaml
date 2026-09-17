@@ -5,3 +5,8 @@ packages:
 # esbuild ships a platform binary that its install script unpacks; vitest needs it.
 allowBuilds:
   esbuild: true
+
+# pnpm 12 holds back packages published in the last few days. lucide-react 1.47.0 is the
+# version this scaffold pinned (2026-09-18) and is let through deliberately.
+minimumReleaseAgeExclude:
+  - lucide-react@1.47.0

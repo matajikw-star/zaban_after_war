@@ -186,7 +186,94 @@ The fixed constraints (mobile-first, RTL, one primary action, no clutter) do not
 | Telegram bot from the client for reports | Token in the client (rule 5) and `api.telegram.org` unreachable for the audience. |
 | Expiring entitlements / DRM on the paid file | Permanent purchase is the product; a paid user's device holds the content by design (ADR-0004). |
 
-## 5. How to extend this file
+## 5. The build start (2026-09-18)
+
+The owner handed over the whole build in one instruction: take the system in `what.md` from the
+scaffold to a downloadable APK, orchestrating cheaper agents for routine code and stronger ones
+for the engine and the state machines, testing every part, and keeping the code easy to change
+because the product is early. Decisions made at the start:
+
+- **Design system chosen** — ADR-0020: shadcn/ui components with a liquid-glass look, Sonnat
+  typography and RTL rules, monochrome palette with colour only on the grading buttons, light
+  and dark themes. Vazirmatn stands in for Sonnat's commercial IRANSans.
+- **OTP is developed in full but tested with a mock.** Kavenegar cannot send to anyone but the
+  owner until identity verification completes, so `SMS_PROVIDER=mock` accepts the fixed code
+  `123456` and the real provider is switched on by one environment variable. The mock is never
+  the default in production configuration.
+- **Hints ship as a placeholder.** No hint data exists yet; the card shows a collapsed
+  «راهنمای یادگیری» disclosure that says the hint is coming, so the UI does not change shape
+  when hints arrive.
+- **Content ships incomplete by design.** Packages include only words with written senses
+  (895 of 2,098 on this date) and grow with content updates, as §6.2 already allowed.
+- **Dependency versions are pinned to what the registry served on 2026-09-18** and recorded in
+  each `package.json`; a line per new dependency is added below as they are introduced.
+
+### 5.1 Dependencies added by the scaffold (ticket dev-foundation/01)
+
+| Dependency | Why |
+|---|---|
+| `react`, `react-dom` 19 | §4. |
+| `vite`, `@vitejs/plugin-react` | §4; Vite is the build for all three apps. |
+| `tailwindcss`, `@tailwindcss/vite` v4 | §4; tokens through `@theme`. |
+| `vite-plugin-pwa` | Workbox precache and the prompt-style update (§7.7). |
+| `react-router` | The one flat route table (§4). |
+| `zustand` | Four small stores (§4). |
+| `dexie` | IndexedDB (§7.3). |
+| `uuid` | UUIDv7 ids (§4). |
+| `date-fns`, `date-fns-jalali` | Jalali dates in onboarding and the season summary. |
+| `lucide-react` | Icons, tree-shaken. |
+| `radix-ui`, `class-variance-authority`, `clsx`, `tailwind-merge` | The shadcn/ui pattern (§7.9). |
+| `fast-check` | Property tests for the engine (§16.1). |
+| `@playwright/test` | E2E (§16.2). |
+| `@types/react`, `@types/react-dom` | Types for React 19; React ships none itself. |
+
+Versions as the registry served them on 2026-09-18, pinned exactly (no `^`) in each
+`package.json`: vite 8.3.0, `@vitejs/plugin-react` 6.1.1, react / react-dom 19.3.0,
+`@types/react` / `@types/react-dom` 19.3.0, tailwindcss / `@tailwindcss/vite` 4.3.3,
+vite-plugin-pwa 1.3.0, react-router 8.4.0, zustand 5.0.15, dexie 4.4.6, uuid 14.0.2,
+date-fns 4.4.0, date-fns-jalali 4.4.0-0, lucide-react 1.47.0, radix-ui 1.6.7,
+class-variance-authority 0.7.1, clsx 2.1.1, tailwind-merge 3.7.0, `@playwright/test` 1.63.0.
+fast-check 4.10.1 is a devDependency of `packages/core` (the only package with property tests);
+everything else belongs to the app that uses it, never to the root. TypeScript stays on 5.9.x:
+7.0 shipped, and moving the whole workspace onto a rewritten compiler is a change to make on
+its own, not inside a scaffold.
+
+### 5.2 Things the scaffold had to decide (2026-09-18)
+
+- **Apps are not `composite`; packages are.** A Vite app emits nothing, so making it a
+  `tsc --build` project buys only stale `.tsbuildinfo` files. Root `typecheck` therefore runs
+  `tsc --build --force` for `packages/*` and then `pnpm -r --if-present typecheck` for the apps,
+  each of which runs `tsc --noEmit -p .`. One command still checks everything.
+- **Playwright's Chromium cannot be downloaded from Iran.** `cdn.playwright.dev` answers
+  `403 … not available in your location` — the same filtering the product exists to work
+  around. CI runs outside Iran and downloads it normally; locally, `KL_E2E_CHANNEL=msedge`
+  (or `chrome`) makes Playwright drive the Chromium already installed on the machine. The
+  browser under test is Chromium either way, which is what the audience runs.
+- **The app name is substituted by a small Vite plugin, not by Vite's `%VITE_*%` mechanism.**
+  Vite only substitutes variables that are set, and `VITE_APP_NAME` is deliberately unset until
+  the owner picks the name (§19); the plugin applies the fallback from `apps/web/src/strings.ts`
+  so the HTML title, the web manifest and the UI can never disagree. `apps/landing` repeats the
+  fallback literal because it cannot import from `apps/web`; when the name is decided, setting
+  `VITE_APP_NAME` in the environment retires both copies.
+- **Vazirmatn is committed, not fetched.** The three woff2 files (400/500/700) and `OFL.txt`
+  sit in `packages/design/fonts/`, about 150 KB, from the upstream release `v33.003`. A build
+  that can be done offline is worth more than a clean `git` tree here (ADR-0005).
+- **The bundle budget counts only `.js` and `.css` under `apps/web/dist/assets`**, excluding
+  sourcemaps and any `content/` package: those are not part of the shell a user downloads to
+  start. The scaffold measures 69.2 KB gzipped against the 300 KB limit.
+- **PocketBase is pinned to 0.40.2**, the version `what.md` §4's floor was written against and
+  one that exists upstream; 0.40.4 was the latest on this date. Bumping it is a one-line change
+  to `server/POCKETBASE_VERSION`, which CI, the deploy script and a local run all read.
+- **`deploy` is invoked as `pnpm run deploy`.** `pnpm deploy` is one of pnpm's own
+  subcommands and shadows a workspace script of that name. The script keeps the name the
+  spec gives it rather than being renamed around a package manager's namespace; the two
+  places that call it say `run`.
+- **Biome needed two configuration changes, not source changes**: `css.parser.tailwindDirectives`
+  so `@theme` parses, and `!.claude` in `files.includes` so a nested agent worktree does not read
+  as a second root configuration.
+
+## 6. How to extend this file
+
 
 Append a dated section per decision session. State the decision, the alternatives, and the
 reason in the owner's terms. If it changes `what.md`, change `what.md` in the same commit. If it

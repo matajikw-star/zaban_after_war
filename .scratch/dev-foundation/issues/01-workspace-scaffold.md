@@ -1,6 +1,6 @@
 # 01 — Workspace scaffold for the application
 
-Status: ready-for-agent
+Status: resolved
 Type: task
 Phase: 1
 
@@ -29,3 +29,30 @@ serves a blank RTL page with the app name from `VITE_APP_NAME`; `what.md` §3 ma
 - Every dependency added gets one line in `docs/spec/how-why.md` §4 or a new dated section.
 - No CDN, no runtime font loading from Google — fonts are files in `packages/design`.
 - Do not touch `content/` or `extraction/`.
+
+## Comments
+
+**2026-09-18 — done.** `apps/web` (Vite 8 + React 19 + Tailwind v4 + vite-plugin-pwa, RTL shell,
+`strings.ts` / `version.ts`, the eight §7.1 folders), `apps/landing` (static, «به‌زودی»),
+`apps/admin` (React placeholder), `packages/design` (`tokens.css`, `fonts.css`, Vazirmatn
+v33.003 400/500/700 + OFL), `android/README.md`, a rewritten `server/README.md` plus
+`server/POCKETBASE_VERSION` = `0.40.2`, six `tools/` stubs and a working `tools/budget`, the CI
+`Budget` step and the new `e2e` job. `pnpm install / lint / typecheck / test / build / budget /
+e2e` all pass; the shell serves `dir="rtl"` with the app name from `VITE_APP_NAME`.
+
+Deviations, all recorded in `docs/spec/how-why.md` §5.1–5.2:
+
+- **Playwright's browser download is blocked from Iran** (`cdn.playwright.dev` → 403). CI is
+  unaffected; locally `KL_E2E_CHANNEL=msedge pnpm e2e` drives the installed Chromium. The
+  smoke test passes that way.
+- Apps are **not `composite`**, so root `typecheck` is `tsc --build --force` for the packages
+  then `pnpm -r --if-present typecheck` for the apps.
+- `%VITE_APP_NAME%` is substituted by a small Vite plugin rather than Vite's own mechanism,
+  because Vite only substitutes variables that are set and the name is still unset (§19).
+  `apps/landing` repeats the fallback literal; setting `VITE_APP_NAME` retires both copies.
+- Biome needed `css.parser.tailwindDirectives` (for `@theme`) and `!.claude` in `files.includes`
+  (a nested agent worktree read as a second root configuration). No source was bent to the linter.
+- The icon is a hand-written monochrome SVG; the 192/512 and maskable PNGs were rendered with
+  the Pillow already installed for the extraction pipeline, so no new dependency.
+- `PocketBase 0.40.4` was the latest upstream tag; `0.40.2` was pinned as the ticket asked and
+  verified to exist.

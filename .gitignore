@@ -33,3 +33,17 @@ raw_konkour_files/
 # Python bytecode from extraction/scripts
 __pycache__/
 *.pyc
+
+# --- application scaffold (ticket dev-foundation/01) ---
+# vite-plugin-pwa's dev-mode service worker output.
+dev-dist/
+# Content packages are built by `pnpm content:build`, never committed.
+apps/web/public/content/
+server/content/
+# Playwright output.
+test-results/
+playwright-report/
+# The PocketBase binary CI downloads for the e2e job.
+server/.pb/
+# Scratch git worktrees the agent harness creates. The tracked .claude/ files stay tracked.
+.claude/worktrees/

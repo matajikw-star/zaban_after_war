@@ -92,29 +92,32 @@ not be reachable on the app origin.
 
 ```
 apps/
-  web/            the PWA (Vite + React + TS + Tailwind)                     [planned]
-  landing/        the one-page marketing site (Vite, static)                [planned]
-  admin/          the owner's stats dashboard (Vite + React, tiny)          [planned]
+  web/            the PWA (Vite + React + TS + Tailwind)                     [building — scaffold]
+  landing/        the one-page marketing site (Vite, static)                [building — placeholder]
+  admin/          the owner's stats dashboard (Vite + React, tiny)          [building — scaffold]
 packages/
   core/           the SRS engine: pure functions, exhaustively tested       [building — types exist, superseded]
   content/        JSON schemas, lint, package builder                       [building — lint exists]
-  design/         design tokens (CSS variables), fonts, shared base styles  [planned]
+  design/         design tokens (CSS variables), fonts, shared base styles  [building — tokens + Vazirmatn]
 server/
   pb_hooks/       PocketBase JS hooks (routes, crons)                        [planned]
   pb_migrations/  collections and API rules                                  [planned]
   Caddyfile, systemd/, deploy/   VPS configuration and deploy scripts       [planned]
-  POCKETBASE_VERSION            the pinned binary version                    [planned]
-android/          Bubblewrap TWA project (twa-manifest.json); keystore NOT in git [planned]
-tools/            simulator, error/log readers, deploy, backup pull          [partly]
+  POCKETBASE_VERSION            the pinned binary version                    [building — 0.40.2]
+android/          Bubblewrap TWA project (twa-manifest.json); keystore NOT in git [building — README]
+tools/            simulator, error/log readers, deploy, backup pull, budget  [building — budget works, rest stubs]
 content/          the lexicon, exams, hints (the asset)                      [live]
 extraction/       the scan → lexicon pipeline (Python)                       [live]
 docs/spec/        this file and how-why.md
 docs/runbooks/    operational procedures (deploy, debug-from-log, restore)
 ```
 
-Workspace: pnpm, Node ≥ 22, TypeScript strict, Biome, Vitest. Root scripts: `test`, `lint`,
-`typecheck`, `build`, `content:lint`, plus (planned) `content:build`, `e2e`, `deploy`, `errors`,
-`logs`, `simulate`.
+Workspace: pnpm, Node ≥ 22, TypeScript strict, Biome, Vitest, Playwright. Root scripts, all
+registered: `test`, `test:watch`, `lint`, `format`, `typecheck` (`tsc --build` for the composite
+packages, then `pnpm -r typecheck` for the apps, which are `noEmit`), `build`, `budget`, `e2e`,
+`content:lint`, and the `tools/` entry points `simulate`, `errors`, `logs`, `flags`, `deploy`,
+`content:build` — the last six are stubs that print `not implemented` and exit 1. `deploy`
+must be run as `pnpm run deploy`: bare `pnpm deploy` is pnpm's own subcommand.
 
 ---
 

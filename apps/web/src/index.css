@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@import "@kl/design/fonts.css";
+@import "@kl/design/tokens.css";
+
+/* Tailwind v4 reads the design tokens through @theme, so a utility class and a CSS variable
+   can never disagree. Tokens are defined once in packages/design (ADR-0020, what.md §7.9). */
+@theme {
+  /* The neutral scale is not re-declared here: tokens.css already sets --color-neutral-*
+     on :root with the zinc values, which overrides Tailwind's own defaults of the same
+     names, so `bg-neutral-900` resolves to our gray. */
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-border: var(--border);
+  --color-glass-bg: var(--glass-bg);
+  --color-glass-border: var(--glass-border);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+
+  --radius-card: var(--radius-card);
+  --radius-control: var(--radius-control);
+  --radius-pill: var(--radius-pill);
+
+  --font-fa: var(--font-fa);
+  --font-sans: var(--font-fa);
+
+  --text-h1: var(--text-h1);
+  --text-h1--line-height: var(--leading-h1);
+  --text-h2: var(--text-h2);
+  --text-h2--line-height: var(--leading-h2);
+  --text-h3: var(--text-h3);
+  --text-h3--line-height: var(--leading-h3);
+  --text-h4: var(--text-h4);
+  --text-h4--line-height: var(--leading-h4);
+  --text-h5: var(--text-h5);
+  --text-h5--line-height: var(--leading-h5);
+  --text-h6: var(--text-h6);
+  --text-h6--line-height: var(--leading-h6);
+  --text-subtitle: var(--text-subtitle);
+  --text-subtitle--line-height: var(--leading-subtitle);
+  --text-subtitle-sm: var(--text-subtitle-sm);
+  --text-subtitle-sm--line-height: var(--leading-subtitle-sm);
+  --text-body: var(--text-body);
+  --text-body--line-height: var(--leading-body);
+  --text-body-sm: var(--text-body-sm);
+  --text-body-sm--line-height: var(--leading-body-sm);
+  --text-caption: var(--text-caption);
+  --text-caption--line-height: var(--leading-caption);
+  --text-caption-sm: var(--text-caption-sm);
+  --text-caption-sm--line-height: var(--leading-caption-sm);
+}
+
+html {
+  background-color: var(--bg);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-fa);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  /* Persian digits are produced by Intl.NumberFormat('fa-IR'), never by a font feature. */
+  -webkit-font-smoothing: antialiased;
+}

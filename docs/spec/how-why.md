@@ -225,6 +225,52 @@ because the product is early. Decisions made at the start:
 | `radix-ui`, `class-variance-authority`, `clsx`, `tailwind-merge` | The shadcn/ui pattern (§7.9). |
 | `fast-check` | Property tests for the engine (§16.1). |
 | `@playwright/test` | E2E (§16.2). |
+| `@types/react`, `@types/react-dom` | Types for React 19; React ships none itself. |
+
+Versions as the registry served them on 2026-09-18, pinned exactly (no `^`) in each
+`package.json`: vite 8.3.0, `@vitejs/plugin-react` 6.1.1, react / react-dom 19.3.0,
+`@types/react` / `@types/react-dom` 19.3.0, tailwindcss / `@tailwindcss/vite` 4.3.3,
+vite-plugin-pwa 1.3.0, react-router 8.4.0, zustand 5.0.15, dexie 4.4.6, uuid 14.0.2,
+date-fns 4.4.0, date-fns-jalali 4.4.0-0, lucide-react 1.47.0, radix-ui 1.6.7,
+class-variance-authority 0.7.1, clsx 2.1.1, tailwind-merge 3.7.0, `@playwright/test` 1.63.0.
+fast-check 4.10.1 is a devDependency of `packages/core` (the only package with property tests);
+everything else belongs to the app that uses it, never to the root. TypeScript stays on 5.9.x:
+7.0 shipped, and moving the whole workspace onto a rewritten compiler is a change to make on
+its own, not inside a scaffold.
+
+### 5.2 Things the scaffold had to decide (2026-09-18)
+
+- **Apps are not `composite`; packages are.** A Vite app emits nothing, so making it a
+  `tsc --build` project buys only stale `.tsbuildinfo` files. Root `typecheck` therefore runs
+  `tsc --build --force` for `packages/*` and then `pnpm -r --if-present typecheck` for the apps,
+  each of which runs `tsc --noEmit -p .`. One command still checks everything.
+- **Playwright's Chromium cannot be downloaded from Iran.** `cdn.playwright.dev` answers
+  `403 … not available in your location` — the same filtering the product exists to work
+  around. CI runs outside Iran and downloads it normally; locally, `KL_E2E_CHANNEL=msedge`
+  (or `chrome`) makes Playwright drive the Chromium already installed on the machine. The
+  browser under test is Chromium either way, which is what the audience runs.
+- **The app name is substituted by a small Vite plugin, not by Vite's `%VITE_*%` mechanism.**
+  Vite only substitutes variables that are set, and `VITE_APP_NAME` is deliberately unset until
+  the owner picks the name (§19); the plugin applies the fallback from `apps/web/src/strings.ts`
+  so the HTML title, the web manifest and the UI can never disagree. `apps/landing` repeats the
+  fallback literal because it cannot import from `apps/web`; when the name is decided, setting
+  `VITE_APP_NAME` in the environment retires both copies.
+- **Vazirmatn is committed, not fetched.** The three woff2 files (400/500/700) and `OFL.txt`
+  sit in `packages/design/fonts/`, about 150 KB, from the upstream release `v33.003`. A build
+  that can be done offline is worth more than a clean `git` tree here (ADR-0005).
+- **The bundle budget counts only `.js` and `.css` under `apps/web/dist/assets`**, excluding
+  sourcemaps and any `content/` package: those are not part of the shell a user downloads to
+  start. The scaffold measures 69.2 KB gzipped against the 300 KB limit.
+- **PocketBase is pinned to 0.40.2**, the version `what.md` §4's floor was written against and
+  one that exists upstream; 0.40.4 was the latest on this date. Bumping it is a one-line change
+  to `server/POCKETBASE_VERSION`, which CI, the deploy script and a local run all read.
+- **`deploy` is invoked as `pnpm run deploy`.** `pnpm deploy` is one of pnpm's own
+  subcommands and shadows a workspace script of that name. The script keeps the name the
+  spec gives it rather than being renamed around a package manager's namespace; the two
+  places that call it say `run`.
+- **Biome needed two configuration changes, not source changes**: `css.parser.tailwindDirectives`
+  so `@theme` parses, and `!.claude` in `files.includes` so a nested agent worktree does not read
+  as a second root configuration.
 
 ## 6. How to extend this file
 

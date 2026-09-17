@@ -9,10 +9,18 @@
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest",
-    "typecheck": "tsc --build --force",
+    "typecheck": "tsc --build --force && pnpm -r --if-present typecheck",
     "lint": "biome check .",
     "format": "biome check --write .",
     "build": "pnpm -r --if-present build",
+    "budget": "node tools/budget/index.mjs",
+    "e2e": "pnpm --filter @kl/web e2e",
+    "simulate": "node --experimental-strip-types tools/simulate/index.ts",
+    "errors": "node --experimental-strip-types tools/errors/index.ts",
+    "logs": "node --experimental-strip-types tools/logs/index.ts",
+    "flags": "node --experimental-strip-types tools/flags/index.ts",
+    "deploy": "node --experimental-strip-types tools/deploy/index.ts",
+    "content:build": "node --experimental-strip-types tools/content-build/index.ts",
     "content:lint": "pnpm --filter @kl/content run lint:content"
   },
   "devDependencies": {

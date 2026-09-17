@@ -38,3 +38,66 @@ jobs:
 
       - name: Build
         run: pnpm build
+
+      - name: Budget
+        run: pnpm budget
+
+  e2e:
+    name: e2e
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      # One pinned version for CI, the deploy script and a local run (server/README.md).
+      - name: Read the pinned PocketBase version
+        id: pb
+        run: echo "version=$(cat server/POCKETBASE_VERSION)" >> "$GITHUB_OUTPUT"
+
+      - name: Cache the PocketBase binary
+        id: pb-cache
+        uses: actions/cache@v4
+        with:
+          path: server/.pb
+          key: pocketbase-linux-amd64-${{ steps.pb.outputs.version }}
+
+      - name: Download PocketBase
+        if: steps.pb-cache.outputs.cache-hit != 'true'
+        env:
+          VERSION: ${{ steps.pb.outputs.version }}
+        run: |
+          mkdir -p server/.pb
+          curl -fsSL -o /tmp/pocketbase.zip \
+            "https://github.com/pocketbase/pocketbase/releases/download/v${VERSION}/pocketbase_${VERSION}_linux_amd64.zip"
+          unzip -o /tmp/pocketbase.zip -d server/.pb
+          chmod +x server/.pb/pocketbase
+
+      - name: PocketBase sanity check
+        run: ./server/.pb/pocketbase --version
+
+      - name: Install Chromium for Playwright
+        run: pnpm --filter @kl/web exec playwright install --with-deps chromium
+
+      - name: Build
+        run: pnpm build
+
+      - name: E2E
+        run: pnpm e2e
+
+      - name: Upload the Playwright report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: apps/web/playwright-report
+          retention-days: 7

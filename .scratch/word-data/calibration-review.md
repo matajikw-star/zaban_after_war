@@ -456,11 +456,11 @@ The exam tested only one of the meanings. The question is how many to write.
 **Confusables:**
 - `contentment` — اسمِ حالتِ رضایت است، نه محتوا؛ content به معنای محتوا اسمی جداگانه است
 
-**⚠ homograph flag:** Different stress and different part of speech: the noun /ˈkɒntent/ (subject matter) and the adjective /kənˈtent/ (satisfied). Unrelated for a learner. Candidate split: content-1 (n, محتوا) / content-2 (adj, راضی).
+**⚠ homograph flag:** Different stress and different part of speech: the noun /ˈkɒntent/ (subject matter) and the adjective /kənˈtent/ (satisfied). A learner will not guess one from the other, so the card must show the two senses as separate blocks and a hint must say which one it targets.
 
 **You:** ________________
 
-### run   ·   `A1`
+### run   ·   `C1`
 
 `tested=2× · key=2× · context=0× · priority=10`
 
@@ -541,7 +541,7 @@ The exam tested only one of the meanings. The question is how many to write.
 
 **You:** ________________
 
-### bear   ·   `B1`
+### bear   ·   `B2`
 
 `tested=1× · key=0× · context=0× · priority=3`
 
@@ -572,7 +572,7 @@ The exam tested only one of the meanings. The question is how many to write.
 **Confusables:**
 - `bare` — هم‌آوا با bear؛ اما bare یعنی برهنه، خالی و بدون پوشش
 
-**⚠ homograph flag:** CLAUDE.md names this case explicitly: the verb (endure / have as a feature) and the noun (the animal) are unrelated for a learner. Candidate split: bear-1 (v, تحمل کردن) / bear-2 (n, خرس).
+**⚠ homograph flag:** The verb (endure / have as a feature) and the noun (the animal) share nothing but a spelling. Only the verb was ever tested, so the animal sense is there for completeness; a hint must say which sense it targets.
 
 **You:** ________________
 
@@ -606,7 +606,7 @@ The exam tested only one of the meanings. The question is how many to write.
 
 **Confusables:** none - deliberately left empty.
 
-**⚠ homograph flag:** The fastener, the lightning flash and the verb "to dash away" are far apart for a learner even though they share a root. Candidate split: bolt-1 (n, پیچ/کلون) / bolt-2 (v, رم کردن). Owner's call.
+**⚠ homograph flag:** The fastener, the lightning flash and the verb "to dash away" are far apart for a learner even though they share a root. Only the fastener was tested; the card must keep the three visibly separate.
 
 **You:** ________________
 

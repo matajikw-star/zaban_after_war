@@ -91,6 +91,15 @@ cheaply by the model already holding the word in mind. Deferring it means that
 edition begins with a full re-pass. ADR-0011 already keeps the *rejected* stem
 vocabulary classified for the same reason.
 
+**Amended 2026-09-17:** `level` is the level of **`senses[0]`** — the meaning the
+exam tested — not of the word in the abstract. The calibration batch surfaced the
+gap: `run` as a word is `A1`, but the meaning the exam tested is `run the risk
+of`, which is `C1`. Labelling the file `A1` would have put `run` in the beginner
+tier of the level-graded edition carrying content no beginner can read. For a
+single-sense word the two readings coincide, so this costs nothing and is honest
+where it differs. The card leads with `senses[0]`, so the label describes what
+the card actually teaches.
+
 **`ipa`** — per sense, because `attribute` the verb and the noun differ. The
 hint format the product inherits from v1 is `تداعی صوتی`, sound association
 (`docs/plan/content-pipeline.md` § 4): hints are generated *from* pronunciation.

@@ -6,9 +6,20 @@
         "pos": "adj",
         "ipa": "/ˈperələs/",
         "definition": "very dangerous, especially because someone could be badly hurt or killed",
-        "translations": ["پرخطر", "خطرناک", "مخاطره‌آمیز"],
-        "synonyms": ["hazardous", "treacherous", "precarious"],
-        "antonyms": ["safe", "secure"],
+        "translations": [
+          "پرخطر",
+          "خطرناک",
+          "مخاطره‌آمیز"
+        ],
+        "synonyms": [
+          "hazardous",
+          "treacherous",
+          "precarious"
+        ],
+        "antonyms": [
+          "safe",
+          "secure"
+        ],
         "examples": [
           {
             "en": "The mountain path becomes perilous after heavy rain.",
@@ -16,23 +27,55 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1403-p05", "questionNo": 19 },
-          { "paperId": "arshad-1402-p05", "questionNo": 24 },
-          { "paperId": "arshad-1400-p01", "questionNo": 10 },
-          { "paperId": "arshad-1400-p03", "questionNo": 3 },
-          { "paperId": "arshad-1400-p04", "questionNo": 10 },
-          { "paperId": "arshad-1400-p05", "questionNo": 3 },
-          { "paperId": "arshad-1400-p06", "questionNo": 10 },
-          { "paperId": "arshad-1400-p10", "questionNo": 3 },
-          { "paperId": "arshad-1400-p12", "questionNo": 3 },
-          { "paperId": "arshad-1399-p07", "questionNo": 14 }
+          {
+            "paperId": "arshad-1403-p05",
+            "questionNo": 19
+          },
+          {
+            "paperId": "arshad-1402-p05",
+            "questionNo": 24
+          },
+          {
+            "paperId": "arshad-1400-p01",
+            "questionNo": 10
+          },
+          {
+            "paperId": "arshad-1400-p03",
+            "questionNo": 3
+          },
+          {
+            "paperId": "arshad-1400-p04",
+            "questionNo": 10
+          },
+          {
+            "paperId": "arshad-1400-p05",
+            "questionNo": 3
+          },
+          {
+            "paperId": "arshad-1400-p06",
+            "questionNo": 10
+          },
+          {
+            "paperId": "arshad-1400-p10",
+            "questionNo": 3
+          },
+          {
+            "paperId": "arshad-1400-p12",
+            "questionNo": 3
+          },
+          {
+            "paperId": "arshad-1399-p07",
+            "questionNo": 14
+          }
         ]
       }
     ],
     "confusables": [],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "derive": {
     "level": "B2",
     "senses": [
@@ -40,8 +83,16 @@
         "pos": "v",
         "ipa": "/dɪˈraɪv/",
         "definition": "to get or obtain something from a particular source",
-        "translations": ["به دست آوردن از", "گرفتن از", "کسب کردن"],
-        "synonyms": ["obtain", "gain", "draw"],
+        "translations": [
+          "به دست آوردن از",
+          "گرفتن از",
+          "کسب کردن"
+        ],
+        "synonyms": [
+          "obtain",
+          "gain",
+          "draw"
+        ],
         "antonyms": [],
         "examples": [
           {
@@ -50,19 +101,42 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1401-p02", "questionNo": 2 },
-          { "paperId": "arshad-1404-p04", "questionNo": 10 },
-          { "paperId": "arshad-1402-p01", "questionNo": 7 },
-          { "paperId": "arshad-1399-p04", "questionNo": 8 },
-          { "paperId": "arshad-1399-p05", "questionNo": 8 }
+          {
+            "paperId": "arshad-1401-p02",
+            "questionNo": 2
+          },
+          {
+            "paperId": "arshad-1404-p04",
+            "questionNo": 10
+          },
+          {
+            "paperId": "arshad-1402-p01",
+            "questionNo": 7
+          },
+          {
+            "paperId": "arshad-1399-p04",
+            "questionNo": 8
+          },
+          {
+            "paperId": "arshad-1399-p05",
+            "questionNo": 8
+          }
         ]
       },
       {
         "pos": "v",
         "ipa": "/dɪˈraɪv/",
         "definition": "to have something as its origin; to come from something",
-        "translations": ["ریشه گرفتن از", "برگرفته شدن از", "نشئت گرفتن"],
-        "synonyms": ["originate", "stem", "spring"],
+        "translations": [
+          "ریشه گرفتن از",
+          "برگرفته شدن از",
+          "نشئت گرفتن"
+        ],
+        "synonyms": [
+          "originate",
+          "stem",
+          "spring"
+        ],
         "antonyms": [],
         "examples": [
           {
@@ -71,19 +145,36 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1402-p03", "questionNo": 2 },
-          { "paperId": "arshad-1400-p02", "questionNo": 2 },
-          { "paperId": "arshad-1400-p07", "questionNo": 2 },
-          { "paperId": "arshad-1400-p13", "questionNo": 2 }
+          {
+            "paperId": "arshad-1402-p03",
+            "questionNo": 2
+          },
+          {
+            "paperId": "arshad-1400-p02",
+            "questionNo": 2
+          },
+          {
+            "paperId": "arshad-1400-p07",
+            "questionNo": 2
+          },
+          {
+            "paperId": "arshad-1400-p13",
+            "questionNo": 2
+          }
         ]
       }
     ],
     "confusables": [
-      { "word": "deprive", "note": "شباهت ظاهری؛ deprive یعنی محروم کردن و هم‌ریشهٔ derive نیست" }
+      {
+        "word": "deprive",
+        "note": "شباهت ظاهری؛ deprive یعنی محروم کردن و هم‌ریشهٔ derive نیست"
+      }
     ],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "affluent": {
     "level": "C1",
     "senses": [
@@ -91,9 +182,21 @@
         "pos": "adj",
         "ipa": "/ˈæfluənt/",
         "definition": "having plenty of money and a comfortable standard of living",
-        "translations": ["مرفه", "ثروتمند", "متمکن"],
-        "synonyms": ["wealthy", "prosperous", "well-off"],
-        "antonyms": ["impecunious", "destitute", "needy"],
+        "translations": [
+          "مرفه",
+          "ثروتمند",
+          "متمکن"
+        ],
+        "synonyms": [
+          "wealthy",
+          "prosperous",
+          "well-off"
+        ],
+        "antonyms": [
+          "impecunious",
+          "destitute",
+          "needy"
+        ],
         "examples": [
           {
             "en": "They grew up in an affluent neighbourhood where every family owned two cars.",
@@ -101,21 +204,44 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1405-p03", "questionNo": 6 },
-          { "paperId": "arshad-1404-p01", "questionNo": 6 },
-          { "paperId": "arshad-1400-p03", "questionNo": 4 },
-          { "paperId": "arshad-1400-p05", "questionNo": 4 },
-          { "paperId": "arshad-1400-p10", "questionNo": 4 },
-          { "paperId": "arshad-1400-p12", "questionNo": 4 }
+          {
+            "paperId": "arshad-1405-p03",
+            "questionNo": 6
+          },
+          {
+            "paperId": "arshad-1404-p01",
+            "questionNo": 6
+          },
+          {
+            "paperId": "arshad-1400-p03",
+            "questionNo": 4
+          },
+          {
+            "paperId": "arshad-1400-p05",
+            "questionNo": 4
+          },
+          {
+            "paperId": "arshad-1400-p10",
+            "questionNo": 4
+          },
+          {
+            "paperId": "arshad-1400-p12",
+            "questionNo": 4
+          }
         ]
       }
     ],
     "confusables": [
-      { "word": "effluent", "note": "تلفظ و املای بسیار نزدیک، اما effluent یعنی پساب و فاضلاب" }
+      {
+        "word": "effluent",
+        "note": "تلفظ و املای بسیار نزدیک، اما effluent یعنی پساب و فاضلاب"
+      }
     ],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "apprehensive": {
     "level": "C1",
     "senses": [
@@ -123,9 +249,20 @@
         "pos": "adj",
         "ipa": "/ˌæprɪˈhensɪv/",
         "definition": "worried or nervous that something unpleasant is going to happen",
-        "translations": ["دلواپس", "نگران", "بیمناک"],
-        "synonyms": ["anxious", "uneasy", "fearful"],
-        "antonyms": ["confident", "unconcerned"],
+        "translations": [
+          "دلواپس",
+          "نگران",
+          "بیمناک"
+        ],
+        "synonyms": [
+          "anxious",
+          "uneasy",
+          "fearful"
+        ],
+        "antonyms": [
+          "confident",
+          "unconcerned"
+        ],
         "examples": [
           {
             "en": "She felt apprehensive about her first day at the new school.",
@@ -133,22 +270,48 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1405-p03", "questionNo": 6 },
-          { "paperId": "arshad-1401-p05", "questionNo": 21 },
-          { "paperId": "arshad-1400-p03", "questionNo": 7 },
-          { "paperId": "arshad-1400-p05", "questionNo": 7 },
-          { "paperId": "arshad-1400-p10", "questionNo": 7 },
-          { "paperId": "arshad-1400-p12", "questionNo": 7 }
+          {
+            "paperId": "arshad-1405-p03",
+            "questionNo": 6
+          },
+          {
+            "paperId": "arshad-1401-p05",
+            "questionNo": 21
+          },
+          {
+            "paperId": "arshad-1400-p03",
+            "questionNo": 7
+          },
+          {
+            "paperId": "arshad-1400-p05",
+            "questionNo": 7
+          },
+          {
+            "paperId": "arshad-1400-p10",
+            "questionNo": 7
+          },
+          {
+            "paperId": "arshad-1400-p12",
+            "questionNo": 7
+          }
         ]
       }
     ],
     "confusables": [
-      { "word": "comprehensive", "note": "شباهت ظاهری؛ comprehensive یعنی جامع و فراگیر، نه نگران" },
-      { "word": "apprehend", "note": "هم‌ریشه است اما فعل و به معنای دستگیر کردن یا درک کردن" }
+      {
+        "word": "comprehensive",
+        "note": "شباهت ظاهری؛ comprehensive یعنی جامع و فراگیر، نه نگران"
+      },
+      {
+        "word": "apprehend",
+        "note": "هم‌ریشه است اما فعل و به معنای دستگیر کردن یا درک کردن"
+      }
     ],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "withdraw": {
     "level": "B2",
     "senses": [
@@ -156,9 +319,19 @@
         "pos": "v",
         "ipa": "/wɪðˈdrɔː/",
         "definition": "to say officially that something you said or offered is no longer true or available",
-        "translations": ["پس گرفتن", "پس کشیدن (حرف یا حمایت)"],
-        "synonyms": ["retract", "revoke", "rescind"],
-        "antonyms": ["affirm", "uphold"],
+        "translations": [
+          "پس گرفتن",
+          "پس کشیدن (حرف یا حمایت)"
+        ],
+        "synonyms": [
+          "retract",
+          "revoke",
+          "rescind"
+        ],
+        "antonyms": [
+          "affirm",
+          "uphold"
+        ],
         "examples": [
           {
             "en": "The newspaper withdrew the claim once the evidence had been checked.",
@@ -166,17 +339,32 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1400-p11", "questionNo": 35 },
-          { "paperId": "arshad-1402-p01", "questionNo": 6 }
+          {
+            "paperId": "arshad-1400-p11",
+            "questionNo": 35
+          },
+          {
+            "paperId": "arshad-1402-p01",
+            "questionNo": 6
+          }
         ]
       },
       {
         "pos": "v",
         "ipa": "/wɪðˈdrɔː/",
         "definition": "to take money out of a bank account, or to remove something from a place",
-        "translations": ["برداشت کردن", "بیرون کشیدن", "خارج کردن"],
-        "synonyms": ["extract", "remove"],
-        "antonyms": ["deposit"],
+        "translations": [
+          "برداشت کردن",
+          "بیرون کشیدن",
+          "خارج کردن"
+        ],
+        "synonyms": [
+          "extract",
+          "remove"
+        ],
+        "antonyms": [
+          "deposit"
+        ],
         "examples": [
           {
             "en": "He withdrew a small amount from his savings account.",
@@ -184,18 +372,38 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1398-p07", "questionNo": 181 },
-          { "paperId": "arshad-1399-p01", "questionNo": 6 },
-          { "paperId": "arshad-1399-p03", "questionNo": 6 }
+          {
+            "paperId": "arshad-1398-p07",
+            "questionNo": 181
+          },
+          {
+            "paperId": "arshad-1399-p01",
+            "questionNo": 6
+          },
+          {
+            "paperId": "arshad-1399-p03",
+            "questionNo": 6
+          }
         ]
       },
       {
         "pos": "v",
         "ipa": "/wɪðˈdrɔː/",
         "definition": "to move back or away from a place or situation, or to stop taking part in something",
-        "translations": ["عقب کشیدن", "کناره‌گیری کردن", "انصراف دادن"],
-        "synonyms": ["retreat", "pull out", "back off"],
-        "antonyms": ["advance", "engage"],
+        "translations": [
+          "عقب کشیدن",
+          "کناره‌گیری کردن",
+          "انصراف دادن"
+        ],
+        "synonyms": [
+          "retreat",
+          "pull out",
+          "back off"
+        ],
+        "antonyms": [
+          "advance",
+          "engage"
+        ],
         "examples": [
           {
             "en": "Two runners withdrew from the race after the first lap.",
@@ -203,21 +411,44 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1400-p01", "questionNo": 8 },
-          { "paperId": "arshad-1400-p04", "questionNo": 8 },
-          { "paperId": "arshad-1400-p06", "questionNo": 8 },
-          { "paperId": "arshad-1399-p04", "questionNo": 10 },
-          { "paperId": "arshad-1399-p05", "questionNo": 10 },
-          { "paperId": "arshad-1402-p03", "questionNo": 4 }
+          {
+            "paperId": "arshad-1400-p01",
+            "questionNo": 8
+          },
+          {
+            "paperId": "arshad-1400-p04",
+            "questionNo": 8
+          },
+          {
+            "paperId": "arshad-1400-p06",
+            "questionNo": 8
+          },
+          {
+            "paperId": "arshad-1399-p04",
+            "questionNo": 10
+          },
+          {
+            "paperId": "arshad-1399-p05",
+            "questionNo": 10
+          },
+          {
+            "paperId": "arshad-1402-p03",
+            "questionNo": 4
+          }
         ]
       }
     ],
     "confusables": [
-      { "word": "withhold", "note": "withdraw یعنی چیزی را که داده‌ای پس بگیری؛ withhold یعنی از همان اول ندهی" }
+      {
+        "word": "withhold",
+        "note": "withdraw یعنی چیزی را که داده‌ای پس بگیری؛ withhold یعنی از همان اول ندهی"
+      }
     ],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "impede": {
     "level": "C1",
     "senses": [
@@ -225,9 +456,20 @@
         "pos": "v",
         "ipa": "/ɪmˈpiːd/",
         "definition": "to slow something down or make it more difficult to move or happen",
-        "translations": ["مانع شدن", "سد راه شدن", "کند کردن"],
-        "synonyms": ["hinder", "obstruct", "hamper"],
-        "antonyms": ["facilitate", "expedite"],
+        "translations": [
+          "مانع شدن",
+          "سد راه شدن",
+          "کند کردن"
+        ],
+        "synonyms": [
+          "hinder",
+          "obstruct",
+          "hamper"
+        ],
+        "antonyms": [
+          "facilitate",
+          "expedite"
+        ],
         "examples": [
           {
             "en": "Thick fog impeded the rescue team's progress up the mountain.",
@@ -235,16 +477,24 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1404-p01", "questionNo": 7 }
+          {
+            "paperId": "arshad-1404-p01",
+            "questionNo": 7
+          }
         ]
       }
     ],
     "confusables": [
-      { "word": "impel", "note": "شباهت ظاهری اما تقریباً معنای عکس؛ impel یعنی وادار کردن و به حرکت واداشتن" }
+      {
+        "word": "impel",
+        "note": "شباهت ظاهری اما تقریباً معنای عکس؛ impel یعنی وادار کردن و به حرکت واداشتن"
+      }
     ],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "vicious": {
     "level": "B2",
     "senses": [
@@ -252,9 +502,14 @@
         "pos": "adj",
         "ipa": "/ˈvɪʃəs/",
         "definition": "used in the phrase \"vicious circle\" or \"vicious cycle\", to describe a situation in which each problem causes another and makes the whole thing worse",
-        "translations": ["باطل (در ترکیب vicious circle: دور باطل)", "معیوب"],
+        "translations": [
+          "باطل (در ترکیب vicious circle: دور باطل)",
+          "معیوب"
+        ],
         "synonyms": [],
-        "antonyms": ["virtuous"],
+        "antonyms": [
+          "virtuous"
+        ],
         "examples": [
           {
             "en": "Debt and low pay form a vicious circle that is hard to escape.",
@@ -262,16 +517,30 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1404-p05", "questionNo": 14 }
+          {
+            "paperId": "arshad-1404-p05",
+            "questionNo": 14
+          }
         ]
       },
       {
         "pos": "adj",
         "ipa": "/ˈvɪʃəs/",
         "definition": "cruel and violent, or intended to hurt someone",
-        "translations": ["بی‌رحم", "درنده‌خو", "وحشیانه"],
-        "synonyms": ["brutal", "savage", "ferocious"],
-        "antonyms": ["gentle", "kindly"],
+        "translations": [
+          "بی‌رحم",
+          "درنده‌خو",
+          "وحشیانه"
+        ],
+        "synonyms": [
+          "brutal",
+          "savage",
+          "ferocious"
+        ],
+        "antonyms": [
+          "gentle",
+          "kindly"
+        ],
         "examples": [
           {
             "en": "The dog had a vicious temper and could not be left with children.",
@@ -282,11 +551,16 @@
       }
     ],
     "confusables": [
-      { "word": "viscous", "note": "املا و تلفظ بسیار نزدیک، اما viscous یعنی غلیظ و چسبناک" }
+      {
+        "word": "viscous",
+        "note": "املا و تلفظ بسیار نزدیک، اما viscous یعنی غلیظ و چسبناک"
+      }
     ],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "bulwark": {
     "level": "C2",
     "senses": [
@@ -294,8 +568,16 @@
         "pos": "n",
         "ipa": "/ˈbʊlwək/",
         "definition": "something or someone that protects or defends against danger or attack",
-        "translations": ["سنگر", "دژ دفاعی", "سپر محافظ"],
-        "synonyms": ["rampart", "safeguard", "defence"],
+        "translations": [
+          "سنگر",
+          "دژ دفاعی",
+          "سپر محافظ"
+        ],
+        "synonyms": [
+          "rampart",
+          "safeguard",
+          "defence"
+        ],
         "antonyms": [],
         "examples": [
           {
@@ -304,14 +586,19 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1399-p08", "questionNo": 26 }
+          {
+            "paperId": "arshad-1399-p08",
+            "questionNo": 26
+          }
         ]
       }
     ],
     "confusables": [],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "dwell": {
     "level": "C1",
     "senses": [
@@ -319,9 +606,19 @@
         "pos": "v",
         "ipa": "/dwel/",
         "definition": "to keep thinking or talking about something, especially something unpleasant (usually \"dwell on\")",
-        "translations": ["مدام به چیزی فکر کردن", "روی چیزی ماندن", "کِش دادن موضوع"],
-        "synonyms": ["brood", "linger on"],
-        "antonyms": ["dismiss", "move on"],
+        "translations": [
+          "مدام به چیزی فکر کردن",
+          "روی چیزی ماندن",
+          "کِش دادن موضوع"
+        ],
+        "synonyms": [
+          "brood",
+          "linger on"
+        ],
+        "antonyms": [
+          "dismiss",
+          "move on"
+        ],
         "examples": [
           {
             "en": "Try not to dwell on mistakes you can no longer fix.",
@@ -329,15 +626,25 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1405-p05", "questionNo": 10 }
+          {
+            "paperId": "arshad-1405-p05",
+            "questionNo": 10
+          }
         ]
       },
       {
         "pos": "v",
         "ipa": "/dwel/",
         "definition": "to live in a particular place (formal or literary)",
-        "translations": ["سکونت داشتن", "زیستن", "ساکن بودن"],
-        "synonyms": ["reside", "inhabit"],
+        "translations": [
+          "سکونت داشتن",
+          "زیستن",
+          "ساکن بودن"
+        ],
+        "synonyms": [
+          "reside",
+          "inhabit"
+        ],
         "antonyms": [],
         "examples": [
           {
@@ -349,11 +656,16 @@
       }
     ],
     "confusables": [
-      { "word": "dwindle", "note": "شباهت ظاهری؛ dwindle یعنی کم‌کم کاهش یافتن و آب رفتن" }
+      {
+        "word": "dwindle",
+        "note": "شباهت ظاهری؛ dwindle یعنی کم‌کم کاهش یافتن و آب رفتن"
+      }
     ],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "propitious": {
     "level": "C2",
     "senses": [
@@ -361,9 +673,20 @@
         "pos": "adj",
         "ipa": "/prəˈpɪʃəs/",
         "definition": "likely to produce a good result; favourable for a particular activity",
-        "translations": ["مساعد", "مناسب", "خوش‌یُمن"],
-        "synonyms": ["auspicious", "favourable", "opportune"],
-        "antonyms": ["inauspicious", "unfavourable"],
+        "translations": [
+          "مساعد",
+          "مناسب",
+          "خوش‌یُمن"
+        ],
+        "synonyms": [
+          "auspicious",
+          "favourable",
+          "opportune"
+        ],
+        "antonyms": [
+          "inauspicious",
+          "unfavourable"
+        ],
         "examples": [
           {
             "en": "The calm sea and clear sky were propitious for the launch.",
@@ -371,16 +694,24 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1403-p04", "questionNo": 21 }
+          {
+            "paperId": "arshad-1403-p04",
+            "questionNo": 21
+          }
         ]
       }
     ],
     "confusables": [
-      { "word": "precipitous", "note": "شباهت ظاهری؛ precipitous یعنی بسیار پرشیب یا شتاب‌زده" }
+      {
+        "word": "precipitous",
+        "note": "شباهت ظاهری؛ precipitous یعنی بسیار پرشیب یا شتاب‌زده"
+      }
     ],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "content": {
     "level": "B1",
     "senses": [
@@ -388,9 +719,18 @@
         "pos": "n",
         "ipa": "/ˈkɒntent/",
         "definition": "the subject matter or material contained in a book, programme, speech or website",
-        "translations": ["محتوا", "مضمون", "مطالب"],
-        "synonyms": ["substance", "material"],
-        "antonyms": ["form"],
+        "translations": [
+          "محتوا",
+          "مضمون",
+          "مطالب"
+        ],
+        "synonyms": [
+          "substance",
+          "material"
+        ],
+        "antonyms": [
+          "form"
+        ],
         "examples": [
           {
             "en": "The book's content is excellent, but the title is misleading.",
@@ -398,16 +738,29 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1402-p06", "questionNo": 24 }
+          {
+            "paperId": "arshad-1402-p06",
+            "questionNo": 24
+          }
         ]
       },
       {
         "pos": "adj",
         "ipa": "/kənˈtent/",
         "definition": "happy and satisfied with what you have, without wanting more",
-        "translations": ["راضی", "خرسند", "قانع"],
-        "synonyms": ["satisfied", "at ease"],
-        "antonyms": ["discontented", "dissatisfied"],
+        "translations": [
+          "راضی",
+          "خرسند",
+          "قانع"
+        ],
+        "synonyms": [
+          "satisfied",
+          "at ease"
+        ],
+        "antonyms": [
+          "discontented",
+          "dissatisfied"
+        ],
         "examples": [
           {
             "en": "She is content with a small house and a quiet life.",
@@ -415,28 +768,40 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1404-p01", "questionNo": 3 }
+          {
+            "paperId": "arshad-1404-p01",
+            "questionNo": 3
+          }
         ]
       }
     ],
     "confusables": [
-      { "word": "contentment", "note": "اسمِ حالتِ رضایت است، نه محتوا؛ content به معنای محتوا اسمی جداگانه است" }
+      {
+        "word": "contentment",
+        "note": "اسمِ حالتِ رضایت است، نه محتوا؛ content به معنای محتوا اسمی جداگانه است"
+      }
     ],
     "homograph": {
       "suspected": true,
-      "note": "Different stress and different part of speech: the noun /ˈkɒntent/ (subject matter) and the adjective /kənˈtent/ (satisfied). Unrelated for a learner. Candidate split: content-1 (n, محتوا) / content-2 (adj, راضی)."
+      "note": "Different stress and different part of speech: the noun /ˈkɒntent/ (subject matter) and the adjective /kənˈtent/ (satisfied). A learner will not guess one from the other, so the card must show the two senses as separate blocks and a hint must say which one it targets."
     }
   },
-
   "run": {
-    "level": "A1",
+    "level": "C1",
     "senses": [
       {
         "pos": "v",
         "ipa": "/rʌn/",
         "definition": "to be in a situation where something bad could happen to you, as in \"run a risk\" or \"run the risk of\"",
-        "translations": ["در معرض خطر بودن", "خطر کردن", "ریسک کردن"],
-        "synonyms": ["risk", "incur"],
+        "translations": [
+          "در معرض خطر بودن",
+          "خطر کردن",
+          "ریسک کردن"
+        ],
+        "synonyms": [
+          "risk",
+          "incur"
+        ],
         "antonyms": [],
         "examples": [
           {
@@ -445,15 +810,25 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1401-p01", "questionNo": 10 }
+          {
+            "paperId": "arshad-1401-p01",
+            "questionNo": 10
+          }
         ]
       },
       {
         "pos": "v",
         "ipa": "/rʌn/",
         "definition": "to be at a particular level, rate or amount",
-        "translations": ["بالغ بودن بر", "در سطحِ ... بودن", "رسیدن به (میزان)"],
-        "synonyms": ["stand at", "amount to"],
+        "translations": [
+          "بالغ بودن بر",
+          "در سطحِ ... بودن",
+          "رسیدن به (میزان)"
+        ],
+        "synonyms": [
+          "stand at",
+          "amount to"
+        ],
         "antonyms": [],
         "examples": [
           {
@@ -462,16 +837,26 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1398-p07", "questionNo": 177 }
+          {
+            "paperId": "arshad-1398-p07",
+            "questionNo": 177
+          }
         ]
       },
       {
         "pos": "v",
         "ipa": "/rʌn/",
         "definition": "to move quickly on foot, faster than walking",
-        "translations": ["دویدن"],
-        "synonyms": ["sprint", "dash"],
-        "antonyms": ["walk"],
+        "translations": [
+          "دویدن"
+        ],
+        "synonyms": [
+          "sprint",
+          "dash"
+        ],
+        "antonyms": [
+          "walk"
+        ],
         "examples": [
           {
             "en": "He runs five kilometres every morning before work.",
@@ -484,8 +869,14 @@
         "pos": "v",
         "ipa": "/rʌn/",
         "definition": "to manage or be in charge of a business or organization",
-        "translations": ["اداره کردن", "گرداندن"],
-        "synonyms": ["manage", "operate"],
+        "translations": [
+          "اداره کردن",
+          "گرداندن"
+        ],
+        "synonyms": [
+          "manage",
+          "operate"
+        ],
         "antonyms": [],
         "examples": [
           {
@@ -497,9 +888,11 @@
       }
     ],
     "confusables": [],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "address": {
     "level": "B2",
     "senses": [
@@ -507,8 +900,13 @@
         "pos": "v",
         "ipa": "/əˈdres/",
         "definition": "to give a formal speech to a group of people",
-        "translations": ["سخنرانی کردن برای", "خطاب قرار دادن"],
-        "synonyms": ["speak to"],
+        "translations": [
+          "سخنرانی کردن برای",
+          "خطاب قرار دادن"
+        ],
+        "synonyms": [
+          "speak to"
+        ],
         "antonyms": [],
         "examples": [
           {
@@ -517,16 +915,29 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1402-p01", "questionNo": 1 }
+          {
+            "paperId": "arshad-1402-p01",
+            "questionNo": 1
+          }
         ]
       },
       {
         "pos": "v",
         "ipa": "/əˈdres/",
         "definition": "to deal with a problem or question, or to give attention to it",
-        "translations": ["پرداختن به", "رسیدگی کردن به", "مورد توجه قرار دادن"],
-        "synonyms": ["tackle", "deal with"],
-        "antonyms": ["ignore", "neglect"],
+        "translations": [
+          "پرداختن به",
+          "رسیدگی کردن به",
+          "مورد توجه قرار دادن"
+        ],
+        "synonyms": [
+          "tackle",
+          "deal with"
+        ],
+        "antonyms": [
+          "ignore",
+          "neglect"
+        ],
         "examples": [
           {
             "en": "The report fails to address the cost of the plan.",
@@ -534,14 +945,20 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1404-p06", "questionNo": 21 }
+          {
+            "paperId": "arshad-1404-p06",
+            "questionNo": 21
+          }
         ]
       },
       {
         "pos": "n",
         "ipa": "/əˈdres/",
         "definition": "the details of the place where someone lives or where mail is delivered",
-        "translations": ["نشانی", "آدرس"],
+        "translations": [
+          "نشانی",
+          "آدرس"
+        ],
         "synonyms": [],
         "antonyms": [],
         "examples": [
@@ -554,18 +971,26 @@
       }
     ],
     "confusables": [],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "bear": {
-    "level": "B1",
+    "level": "B2",
     "senses": [
       {
         "pos": "v",
         "ipa": "/beə(r)/",
         "definition": "to have or show a particular quality or relation, as in \"bear a resemblance to\" something",
-        "translations": ["داشتن (شباهت یا نشانه)", "حمل کردن (نشان)"],
-        "synonyms": ["carry", "have"],
+        "translations": [
+          "داشتن (شباهت یا نشانه)",
+          "حمل کردن (نشان)"
+        ],
+        "synonyms": [
+          "carry",
+          "have"
+        ],
         "antonyms": [],
         "examples": [
           {
@@ -574,15 +999,26 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1398-p02", "questionNo": 5 }
+          {
+            "paperId": "arshad-1398-p02",
+            "questionNo": 5
+          }
         ]
       },
       {
         "pos": "v",
         "ipa": "/beə(r)/",
         "definition": "to accept or endure something unpleasant without complaining",
-        "translations": ["تحمل کردن", "برتافتن", "طاقت آوردن"],
-        "synonyms": ["endure", "tolerate", "stand"],
+        "translations": [
+          "تحمل کردن",
+          "برتافتن",
+          "طاقت آوردن"
+        ],
+        "synonyms": [
+          "endure",
+          "tolerate",
+          "stand"
+        ],
         "antonyms": [],
         "examples": [
           {
@@ -596,7 +1032,9 @@
         "pos": "n",
         "ipa": "/beə(r)/",
         "definition": "a large heavy wild animal with thick fur and sharp claws",
-        "translations": ["خرس"],
+        "translations": [
+          "خرس"
+        ],
         "synonyms": [],
         "antonyms": [],
         "examples": [
@@ -609,14 +1047,16 @@
       }
     ],
     "confusables": [
-      { "word": "bare", "note": "هم‌آوا با bear؛ اما bare یعنی برهنه، خالی و بدون پوشش" }
+      {
+        "word": "bare",
+        "note": "هم‌آوا با bear؛ اما bare یعنی برهنه، خالی و بدون پوشش"
+      }
     ],
     "homograph": {
       "suspected": true,
-      "note": "CLAUDE.md names this case explicitly: the verb (endure / have as a feature) and the noun (the animal) are unrelated for a learner. Candidate split: bear-1 (v, تحمل کردن) / bear-2 (n, خرس)."
+      "note": "The verb (endure / have as a feature) and the noun (the animal) share nothing but a spelling. Only the verb was ever tested, so the animal sense is there for completeness; a hint must say which sense it targets."
     }
   },
-
   "bolt": {
     "level": "B2",
     "senses": [
@@ -624,8 +1064,15 @@
         "pos": "n",
         "ipa": "/bəʊlt/",
         "definition": "a thick metal pin used with a nut to fasten things together, or a bar that slides across to lock a door",
-        "translations": ["پیچ (با مهره)", "کلون", "چفت"],
-        "synonyms": ["pin", "latch"],
+        "translations": [
+          "پیچ (با مهره)",
+          "کلون",
+          "چفت"
+        ],
+        "synonyms": [
+          "pin",
+          "latch"
+        ],
         "antonyms": [],
         "examples": [
           {
@@ -634,15 +1081,23 @@
           }
         ],
         "testedIn": [
-          { "paperId": "arshad-1399-p08", "questionNo": 16 }
+          {
+            "paperId": "arshad-1399-p08",
+            "questionNo": 16
+          }
         ]
       },
       {
         "pos": "n",
         "ipa": "/bəʊlt/",
         "definition": "a sudden flash of lightning that strikes the ground",
-        "translations": ["آذرخش", "صاعقه"],
-        "synonyms": ["thunderbolt"],
+        "translations": [
+          "آذرخش",
+          "صاعقه"
+        ],
+        "synonyms": [
+          "thunderbolt"
+        ],
         "antonyms": [],
         "examples": [
           {
@@ -656,8 +1111,15 @@
         "pos": "v",
         "ipa": "/bəʊlt/",
         "definition": "to run away suddenly and very fast, especially because of fear",
-        "translations": ["رم کردن", "در رفتن", "ناگهان گریختن"],
-        "synonyms": ["dash", "flee"],
+        "translations": [
+          "رم کردن",
+          "در رفتن",
+          "ناگهان گریختن"
+        ],
+        "synonyms": [
+          "dash",
+          "flee"
+        ],
         "antonyms": [],
         "examples": [
           {
@@ -671,10 +1133,9 @@
     "confusables": [],
     "homograph": {
       "suspected": true,
-      "note": "The fastener, the lightning flash and the verb \"to dash away\" are far apart for a learner even though they share a root. Candidate split: bolt-1 (n, پیچ/کلون) / bolt-2 (v, رم کردن). Owner's call."
+      "note": "The fastener, the lightning flash and the verb \"to dash away\" are far apart for a learner even though they share a root. Only the fastener was tested; the card must keep the three visibly separate."
     }
   },
-
   "extraneous": {
     "level": "C1",
     "senses": [
@@ -682,9 +1143,21 @@
         "pos": "adj",
         "ipa": "/ɪkˈstreɪniəs/",
         "definition": "not directly connected with or relevant to the matter being dealt with",
-        "translations": ["نامربوط", "زائد", "بیرونی"],
-        "synonyms": ["irrelevant", "superfluous", "immaterial"],
-        "antonyms": ["relevant", "pertinent", "germane"],
+        "translations": [
+          "نامربوط",
+          "زائد",
+          "بیرونی"
+        ],
+        "synonyms": [
+          "irrelevant",
+          "superfluous",
+          "immaterial"
+        ],
+        "antonyms": [
+          "relevant",
+          "pertinent",
+          "germane"
+        ],
         "examples": [
           {
             "en": "The editor cut every extraneous detail from the report.",
@@ -695,11 +1168,16 @@
       }
     ],
     "confusables": [
-      { "word": "extrinsic", "note": "هر دو «بیرونی»‌اند، اما extrinsic یعنی ذاتی نیست و از بیرون می‌آید؛ extraneous یعنی به موضوع ربطی ندارد" }
+      {
+        "word": "extrinsic",
+        "note": "هر دو «بیرونی»‌اند، اما extrinsic یعنی ذاتی نیست و از بیرون می‌آید؛ extraneous یعنی به موضوع ربطی ندارد"
+      }
     ],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "avocation": {
     "level": "C2",
     "senses": [
@@ -707,9 +1185,20 @@
         "pos": "n",
         "ipa": "/ˌævəʊˈkeɪʃn/",
         "definition": "a hobby or activity someone does regularly besides their main job",
-        "translations": ["سرگرمی", "کار ذوقی", "شغل جانبی"],
-        "synonyms": ["hobby", "pastime", "sideline"],
-        "antonyms": ["vocation", "profession"],
+        "translations": [
+          "سرگرمی",
+          "کار ذوقی",
+          "شغل جانبی"
+        ],
+        "synonyms": [
+          "hobby",
+          "pastime",
+          "sideline"
+        ],
+        "antonyms": [
+          "vocation",
+          "profession"
+        ],
         "examples": [
           {
             "en": "A surgeon by profession, he was a jazz pianist by avocation.",
@@ -720,11 +1209,16 @@
       }
     ],
     "confusables": [
-      { "word": "vocation", "note": "دقیقاً نقطهٔ مقابل؛ vocation شغل اصلی و رسالت است و avocation کار ذوقی در کنار آن" }
+      {
+        "word": "vocation",
+        "note": "دقیقاً نقطهٔ مقابل؛ vocation شغل اصلی و رسالت است و avocation کار ذوقی در کنار آن"
+      }
     ],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "contrition": {
     "level": "C2",
     "senses": [
@@ -732,9 +1226,19 @@
         "pos": "n",
         "ipa": "/kənˈtrɪʃn/",
         "definition": "sincere sorrow and regret for having done something wrong",
-        "translations": ["پشیمانی", "ندامت", "توبه"],
-        "synonyms": ["remorse", "repentance", "penitence"],
-        "antonyms": ["impenitence"],
+        "translations": [
+          "پشیمانی",
+          "ندامت",
+          "توبه"
+        ],
+        "synonyms": [
+          "remorse",
+          "repentance",
+          "penitence"
+        ],
+        "antonyms": [
+          "impenitence"
+        ],
         "examples": [
           {
             "en": "His apology sounded rehearsed and showed little real contrition.",
@@ -745,11 +1249,16 @@
       }
     ],
     "confusables": [
-      { "word": "contribution", "note": "شباهت ظاهری و شنیداری؛ contribution یعنی سهم و کمک و هیچ ربطی به پشیمانی ندارد" }
+      {
+        "word": "contribution",
+        "note": "شباهت ظاهری و شنیداری؛ contribution یعنی سهم و کمک و هیچ ربطی به پشیمانی ندارد"
+      }
     ],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "covariance": {
     "level": "C2",
     "senses": [
@@ -757,7 +1266,10 @@
         "pos": "n",
         "ipa": "/kəʊˈveəriəns/",
         "definition": "a statistical measure of how much two variables change together",
-        "translations": ["کوواریانس", "هم‌پراکندگی"],
+        "translations": [
+          "کوواریانس",
+          "هم‌پراکندگی"
+        ],
         "synonyms": [],
         "antonyms": [],
         "examples": [
@@ -770,11 +1282,16 @@
       }
     ],
     "confusables": [
-      { "word": "variance", "note": "واریانس پراکندگی یک متغیر را می‌سنجد؛ کوواریانس رابطهٔ تغییرات دو متغیر را" }
+      {
+        "word": "variance",
+        "note": "واریانس پراکندگی یک متغیر را می‌سنجد؛ کوواریانس رابطهٔ تغییرات دو متغیر را"
+      }
     ],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "morphology": {
     "level": "C2",
     "senses": [
@@ -782,7 +1299,10 @@
         "pos": "n",
         "ipa": "/mɔːˈfɒlədʒi/",
         "definition": "in linguistics, the study of how words are built out of smaller meaningful parts",
-        "translations": ["صرف", "ساخت‌واژه"],
+        "translations": [
+          "صرف",
+          "ساخت‌واژه"
+        ],
         "synonyms": [],
         "antonyms": [],
         "examples": [
@@ -797,7 +1317,9 @@
         "pos": "n",
         "ipa": "/mɔːˈfɒlədʒi/",
         "definition": "in biology, the form and structure of living things",
-        "translations": ["ریخت‌شناسی"],
+        "translations": [
+          "ریخت‌شناسی"
+        ],
         "synonyms": [],
         "antonyms": [],
         "examples": [
@@ -810,11 +1332,16 @@
       }
     ],
     "confusables": [
-      { "word": "phonology", "note": "صرف دربارهٔ ساختِ واژه است؛ واج‌شناسی دربارهٔ نظام آواهای زبان" }
+      {
+        "word": "phonology",
+        "note": "صرف دربارهٔ ساختِ واژه است؛ واج‌شناسی دربارهٔ نظام آواهای زبان"
+      }
     ],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "conscience": {
     "level": "B2",
     "senses": [
@@ -822,8 +1349,14 @@
         "pos": "n",
         "ipa": "/ˈkɒnʃəns/",
         "definition": "the sense inside you that tells you whether what you are doing is right or wrong",
-        "translations": ["وجدان", "وجدان اخلاقی"],
-        "synonyms": ["scruples", "moral sense"],
+        "translations": [
+          "وجدان",
+          "وجدان اخلاقی"
+        ],
+        "synonyms": [
+          "scruples",
+          "moral sense"
+        ],
         "antonyms": [],
         "examples": [
           {
@@ -835,12 +1368,20 @@
       }
     ],
     "confusables": [
-      { "word": "conscious", "note": "صفت است و یعنی هوشیار یا آگاه؛ conscience اسم است و یعنی وجدان" },
-      { "word": "conscientious", "note": "صفت و یعنی وظیفه‌شناس و باوجدان در کار" }
+      {
+        "word": "conscious",
+        "note": "صفت است و یعنی هوشیار یا آگاه؛ conscience اسم است و یعنی وجدان"
+      },
+      {
+        "word": "conscientious",
+        "note": "صفت و یعنی وظیفه‌شناس و باوجدان در کار"
+      }
     ],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "contentment": {
     "level": "B2",
     "senses": [
@@ -848,9 +1389,19 @@
         "pos": "n",
         "ipa": "/kənˈtentmənt/",
         "definition": "a state of quiet happiness and satisfaction with what you have",
-        "translations": ["خرسندی", "رضایت", "قناعت"],
-        "synonyms": ["satisfaction", "ease"],
-        "antonyms": ["discontent", "dissatisfaction"],
+        "translations": [
+          "خرسندی",
+          "رضایت",
+          "قناعت"
+        ],
+        "synonyms": [
+          "satisfaction",
+          "ease"
+        ],
+        "antonyms": [
+          "discontent",
+          "dissatisfaction"
+        ],
         "examples": [
           {
             "en": "After years of striving, she found contentment in a quiet life.",
@@ -861,11 +1412,16 @@
       }
     ],
     "confusables": [
-      { "word": "content", "note": "content اسم که باشد یعنی محتوا؛ حالتِ رضایت را باید با contentment گفت" }
+      {
+        "word": "content",
+        "note": "content اسم که باشد یعنی محتوا؛ حالتِ رضایت را باید با contentment گفت"
+      }
     ],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "adjacent": {
     "level": "B2",
     "senses": [
@@ -873,9 +1429,20 @@
         "pos": "adj",
         "ipa": "/əˈdʒeɪsnt/",
         "definition": "next to or very near something else",
-        "translations": ["مجاور", "همسایه", "کنار هم"],
-        "synonyms": ["neighbouring", "abutting", "contiguous"],
-        "antonyms": ["distant", "remote"],
+        "translations": [
+          "مجاور",
+          "همسایه",
+          "کنار هم"
+        ],
+        "synonyms": [
+          "neighbouring",
+          "abutting",
+          "contiguous"
+        ],
+        "antonyms": [
+          "distant",
+          "remote"
+        ],
         "examples": [
           {
             "en": "Our office is adjacent to the main library.",
@@ -886,11 +1453,16 @@
       }
     ],
     "confusables": [
-      { "word": "adjoining", "note": "adjoining یعنی چسبیده و دارای دیوار یا مرز مشترک؛ adjacent می‌تواند فقط نزدیک باشد" }
+      {
+        "word": "adjoining",
+        "note": "adjoining یعنی چسبیده و دارای دیوار یا مرز مشترک؛ adjacent می‌تواند فقط نزدیک باشد"
+      }
     ],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "elusive": {
     "level": "C1",
     "senses": [
@@ -898,9 +1470,19 @@
         "pos": "adj",
         "ipa": "/iˈluːsɪv/",
         "definition": "hard to describe, define or remember exactly",
-        "translations": ["توصیف‌ناپذیر", "مبهم", "دیریاب"],
-        "synonyms": ["indefinable", "intangible"],
-        "antonyms": ["obvious", "clear-cut"],
+        "translations": [
+          "توصیف‌ناپذیر",
+          "مبهم",
+          "دیریاب"
+        ],
+        "synonyms": [
+          "indefinable",
+          "intangible"
+        ],
+        "antonyms": [
+          "obvious",
+          "clear-cut"
+        ],
         "examples": [
           {
             "en": "The charm of the old city is real but elusive.",
@@ -913,9 +1495,17 @@
         "pos": "adj",
         "ipa": "/iˈluːsɪv/",
         "definition": "difficult to find, catch or achieve",
-        "translations": ["دست‌نیافتنی", "گریزپا"],
-        "synonyms": ["evasive", "slippery"],
-        "antonyms": ["attainable"],
+        "translations": [
+          "دست‌نیافتنی",
+          "گریزپا"
+        ],
+        "synonyms": [
+          "evasive",
+          "slippery"
+        ],
+        "antonyms": [
+          "attainable"
+        ],
         "examples": [
           {
             "en": "A cure for the disease has remained elusive for decades.",
@@ -926,11 +1516,16 @@
       }
     ],
     "confusables": [
-      { "word": "illusive", "note": "تلفظ تقریباً یکسان؛ اما illusive یعنی توهمی و خیالی، نه دیریاب" }
+      {
+        "word": "illusive",
+        "note": "تلفظ تقریباً یکسان؛ اما illusive یعنی توهمی و خیالی، نه دیریاب"
+      }
     ],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   },
-
   "render": {
     "level": "C1",
     "senses": [
@@ -938,8 +1533,15 @@
         "pos": "v",
         "ipa": "/ˈrendə(r)/",
         "definition": "to express or translate something into another language or form",
-        "translations": ["برگرداندن", "ترجمه کردن", "بازنمایاندن"],
-        "synonyms": ["translate", "express"],
+        "translations": [
+          "برگرداندن",
+          "ترجمه کردن",
+          "بازنمایاندن"
+        ],
+        "synonyms": [
+          "translate",
+          "express"
+        ],
         "antonyms": [],
         "examples": [
           {
@@ -953,8 +1555,14 @@
         "pos": "v",
         "ipa": "/ˈrendə(r)/",
         "definition": "to cause someone or something to be in a particular state or condition",
-        "translations": ["کردن (به حالتی درآوردن)", "ساختن"],
-        "synonyms": ["make", "leave"],
+        "translations": [
+          "کردن (به حالتی درآوردن)",
+          "ساختن"
+        ],
+        "synonyms": [
+          "make",
+          "leave"
+        ],
         "antonyms": [],
         "examples": [
           {
@@ -968,9 +1576,17 @@
         "pos": "v",
         "ipa": "/ˈrendə(r)/",
         "definition": "to give or provide a service or help, especially formally",
-        "translations": ["ارائه دادن (خدمت)", "رساندن (کمک)"],
-        "synonyms": ["provide", "furnish"],
-        "antonyms": ["withhold"],
+        "translations": [
+          "ارائه دادن (خدمت)",
+          "رساندن (کمک)"
+        ],
+        "synonyms": [
+          "provide",
+          "furnish"
+        ],
+        "antonyms": [
+          "withhold"
+        ],
         "examples": [
           {
             "en": "The hospital rendered assistance to everyone injured in the crash.",
@@ -981,6 +1597,9 @@
       }
     ],
     "confusables": [],
-    "homograph": { "suspected": false, "note": null }
+    "homograph": {
+      "suspected": false,
+      "note": null
+    }
   }
 }

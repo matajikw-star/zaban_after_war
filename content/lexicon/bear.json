@@ -6,12 +6,12 @@
     }
   ],
   "homograph": {
-    "note": "CLAUDE.md names this case explicitly: the verb (endure / have as a feature) and the noun (the animal) are unrelated for a learner. Candidate split: bear-1 (v, تحمل کردن) / bear-2 (n, خرس).",
+    "note": "The verb (endure / have as a feature) and the noun (the animal) share nothing but a spelling. Only the verb was ever tested, so the animal sense is there for completeness; a hint must say which sense it targets.",
     "suspected": true
   },
   "id": "bear",
   "lemma": "bear",
-  "level": "B1",
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,

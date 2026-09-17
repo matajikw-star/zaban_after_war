@@ -194,7 +194,8 @@ Answered by the owner during the design interview. Each still needs an ADR befor
     1 in the schedule while the map keeps it conquered.
 - **D2 — The review log is keyed by `itemId`**, an opaque globally-unique id with no `type`
   field. Word ids are unchanged. New constitutional rule: ids are unique across the whole
-  product, so a future grammar item cannot collide with `bear-1`.
+  product, so a future grammar item cannot collide with `bear` (ADR-0013 retired the
+  `bear-1` / `bear-2` form: one spelling is one entry).
 - **D3/D4 — Anonymous first, phone + OTP at purchase or at an explicit "save my progress".** The
   anonymous→account upgrade **migrates the local log into the account** and never replaces it.
   The owner flagged implementation risk here; it gets its own spec section and its own tests.

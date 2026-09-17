@@ -104,8 +104,12 @@ Non-negotiable. Violating one of these is worse than shipping late.
 
 A word id is a slug of the lemma: `attribute`, `distinct`, `set-off`. Lowercase, ASCII,
 hyphen-separated. It is derived once, at first ingest, and then **frozen** — renaming one
-orphans every user's progress for that word. Homographs with genuinely different meanings get
-a numeric suffix: `bear-1` (verb, tolerate), `bear-2` (noun, animal).
+orphans every user's progress for that word.
+
+**One spelling is one entry**, however far apart its meanings: `bear` the verb and `bear` the
+animal share a file and are carried as two entries in `senses[]`. There are no `bear-1` /
+`bear-2` ids. The front of a card is just the word, so two ids with the same spelling ask the
+user a question they cannot answer. See `docs/adr/0013-one-entry-per-spelling-no-homograph-split.md`.
 
 Never key anything user-facing on array position. The old app sliced `words[]` by index to
 build its curriculum, so adding a word silently rewrote what every user was studying.

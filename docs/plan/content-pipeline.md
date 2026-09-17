@@ -104,9 +104,12 @@ makes either side rewrite the other's fields is a bug.
   `optionIndex` and an `isAnswer`) or `"context"` (it appeared in the stem, so it has neither).
 - `senses[].testedIn` links a meaning to the questions that tested *that* meaning. It is knowable
   only while reading the question, which is why it is written during generation and never after.
-- `homograph.suspected` flags a word whose senses are different enough to deserve `word-1` /
-  `word-2`. Raise the flag; the split is the owner's call and must happen before any user has
-  progress on the id.
+- `homograph.suspected` flags a word whose senses are far enough apart that a reader would not
+  guess one from another — different stress, different part of speech, unrelated etymology.
+  It does **not** mean the entry should be split: one spelling is one entry
+  (`docs/adr/0013-one-entry-per-spelling-no-homograph-split.md`). The flag tells the card
+  renderer to show those senses as separate blocks, and tells the hint pass to say which sense
+  its mnemonic targets.
 - `status`: `draft` → `approved`. Only the owner promotes to `approved`.
 - Translations, definitions and examples are **written fresh**, not copied from any book or
   dictionary. This is the legal premise of v2 (`docs/postmortem-v1.md` → "Legal note").
@@ -151,9 +154,10 @@ Run after any bulk change. Implemented as `pnpm content:lint`, and by Claude on 
 
 6. Words with no hint file, or a hint still unapproved.
 7. Entries still `draft` after their exam has been reported complete.
-8. Homograph suspects: `homograph.suspected` is true, or one entry carries senses that look
-   unrelated — it probably needs splitting into `word-1` / `word-2` (do this *before* users have
-   progress on it).
+8. Homograph flags: `homograph.suspected` is true but the senses are plainly related, or it is
+   false while the entry carries senses a reader could not guess from one another. Never a
+   split — one spelling is one entry (ADR-0013) — but a wrong flag misleads the card renderer
+   and the hint pass, both of which read it.
 9. `uncertain[]` items still open.
 10. Orphans: exam questions whose `testedWord` is `null`.
 11. Context-only entries: a lexicon file whose every occurrence is

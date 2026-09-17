@@ -1,4 +1,4 @@
-/* Design tokens — see ADR-0020 (docs/adr/0020-design-system-shadcn-liquid-glass.md)
+/* Design tokens — see ADR-0020 (docs/adr/0020-design-system-shadcn-glass-sonnat-type.md)
    and docs/spec/what.md §7.9. Monochrome by decision: colour exists only for the two
    grading buttons and destructive confirmations. Every value here is a CSS variable so
    Tailwind v4 can read it through @theme and so a theme swap is one attribute. */

@@ -77,14 +77,14 @@ export default defineConfig(({ mode }) => {
           ],
         },
         workbox: {
-          globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
           navigateFallback: '/index.html',
           // /api/* is network-only: the app has its own database and never caches a response
           // from the server (§7.7). No runtimeCaching entry exists, by design.
           navigateFallbackDenylist: [/^\/api\//],
           runtimeCaching: [],
-          // The paid content package is fetched and stored in IndexedDB, not precached.
-          globIgnores: ['**/content/**'],
+          // The free package is precached so the first launch works offline (§7.7); the paid
+          // package never lives in this build - it is downloaded into IndexedDB after purchase.
+          globPatterns: ['**/*.{js,css,html,svg,png,woff2}', 'content/free.json'],
         },
         devOptions: { enabled: false },
       }),

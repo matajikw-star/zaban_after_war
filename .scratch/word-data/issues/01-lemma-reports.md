@@ -21,6 +21,8 @@ alias, not a rename.
 | `impromptu` | — | batch-13 | Not a wrong lemma. `surfaceForms` carries `impromptuj`, a typo **in the exam paper** (`arshad-1398-p05` q12), transcribed verbatim like `histroinic`. The lemma is right; leave it. |
 | `non-sequitur` | — | batch-14 | Not wrong. The id is hyphenated and the lemma is `non sequitur` with a space, which is correct for a multiword entry. |
 
+| `petitio-principia` | `petitio-principii` | batch-20 area | The fallacy is *petitio principii*. `arshad-1405-p05` q23 printed `principia` and it was transcribed verbatim per ingest rule 1, so the id is frozen on the exam's misspelling. See `04-non-words-and-latin-phrases.md`. |
+
 ## Not a lemma problem, but adjacent
 
 - **18 surface forms are claimed by two ids each**, because the lemmatiser

@@ -202,6 +202,17 @@ distance.
   (`.scratch/stem-vocab/issues/02-field-code-names.md`). Neither blocks this
   pass, since no word data depends on a code being named.
 - **`status` stays `draft`.** Only the owner promotes to `approved`.
+- **An entry that is not a real word is reported, never invented around.** The
+  exam builds distractors, and some are not English: `as like` and `as likewise`
+  were minted from `alike`/`likewise` in `arshad-1404-p06` q23 and now have
+  lexicon files. Write the honest card — one `phrase` sense whose definition
+  says outright that it is not standard English, a Persian translation naming
+  the correct form, confusables pointing at it — and add the entry to
+  `.scratch/word-data/issues/04-non-words-and-latin-phrases.md`. Never invent a
+  meaning to fill the slot.
+- **Latin phrases are a real recurring question type**, not an error: q23 has
+  been a Latin slot in 1403, 1404 and 1405. Write them normally; the `ipa` is
+  the anglicised reading, and say so in your report if you are unsure of it.
 - **A wrong lemma is reported, never renamed.** Word ids are frozen forever
   (constitution rule 6). Report it into
   `.scratch/word-data/issues/01-lemma-reports.md`, which is the running

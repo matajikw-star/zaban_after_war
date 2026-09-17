@@ -6,7 +6,7 @@
   },
   "id": "alacrity",
   "lemma": "alacrity",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +20,44 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "reluctance",
+        "hesitation"
+      ],
+      "definition": "cheerful eagerness and speed in doing something you have been asked to do",
+      "examples": [
+        {
+          "en": "He accepted the invitation with surprising alacrity and began packing at once.",
+          "fa": "دعوت را با اشتیاق و چالاکیِ شگفت‌آوری پذیرفت و بی‌درنگ شروع به بستن چمدان کرد."
+        }
+      ],
+      "ipa": "/əˈlækrəti/",
+      "pos": "n",
+      "synonyms": [
+        "eagerness",
+        "readiness",
+        "willingness"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p04",
+          "questionNo": 12
+        }
+      ],
+      "translations": [
+        "اشتیاق و چالاکی",
+        "شور و شتاب",
+        "رغبت"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

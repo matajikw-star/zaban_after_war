@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "appendix هم بخشی افزوده در پایان کتاب است، اما addendum معمولاً مطلبی است که بعداً برای تکمیل یا اصلاح افزوده می‌شود.",
+      "word": "appendix"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "addendum",
   "lemma": "addendum",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,41 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "an extra section added at the end of a book, report or contract, usually to add or correct information; the plural is \"addenda\"",
+      "examples": [
+        {
+          "en": "The contract came with a two-page addendum on delivery dates.",
+          "fa": "قرارداد با یک الحاقیه‌ی دوصفحه‌ای درباره‌ی تاریخ‌های تحویل همراه بود."
+        }
+      ],
+      "ipa": "/əˈdendəm/",
+      "pos": "n",
+      "synonyms": [
+        "appendix",
+        "supplement",
+        "postscript"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 13
+        }
+      ],
+      "translations": [
+        "الحاقیه",
+        "ضمیمه",
+        "پیوست پایانی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

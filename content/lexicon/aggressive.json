@@ -6,7 +6,7 @@
   },
   "id": "aggressive",
   "lemma": "aggressive",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +20,67 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "peaceful",
+        "meek"
+      ],
+      "definition": "behaving in an angry or violent way, as if you want to attack someone",
+      "examples": [
+        {
+          "en": "The dog became aggressive whenever a stranger came near the gate.",
+          "fa": "آن سگ هر بار که غریبه‌ای به دروازه نزدیک می‌شد پرخاشگر می‌شد."
+        }
+      ],
+      "ipa": "/əˈɡresɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "hostile",
+        "belligerent",
+        "combative"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 174
+        }
+      ],
+      "translations": [
+        "پرخاشگر",
+        "ستیزه‌جو",
+        "تهاجمی"
+      ]
+    },
+    {
+      "antonyms": [
+        "cautious"
+      ],
+      "definition": "very forceful and determined in trying to succeed, especially in business",
+      "examples": [
+        {
+          "en": "The company follows an aggressive strategy to win new markets abroad.",
+          "fa": "آن شرکت برای تصاحب بازارهای تازه در خارج، راهبردی تهاجمی در پیش گرفته است."
+        }
+      ],
+      "ipa": "/əˈɡresɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "assertive",
+        "vigorous"
+      ],
+      "testedIn": [],
+      "translations": [
+        "جسورانه",
+        "تهاجمی (در کسب‌وکار)"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

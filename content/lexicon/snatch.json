@@ -6,7 +6,7 @@
   },
   "id": "snatch",
   "lemma": "snatch",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,64 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to take something quickly and often roughly, especially by force",
+      "examples": [
+        {
+          "en": "A thief snatched her bag and ran off into the crowd.",
+          "fa": "دزدی کیفش را قاپید و به میان جمعیت گریخت."
+        }
+      ],
+      "ipa": "/snætʃ/",
+      "pos": "v",
+      "synonyms": [
+        "grab",
+        "seize"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "قاپیدن",
+        "ربودن",
+        "چنگ زدن و برداشتن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to manage to get something, especially rest or a chance, in a short hurried moment",
+      "examples": [
+        {
+          "en": "She snatched a few hours of sleep before the night shift began.",
+          "fa": "او پیش از آغاز شیفت شب، چند ساعتی خواب را غنیمت شمرد."
+        }
+      ],
+      "ipa": "/snætʃ/",
+      "pos": "v",
+      "synonyms": [
+        "grab"
+      ],
+      "testedIn": [],
+      "translations": [
+        "غنیمت شمردن (فرصت کوتاه)",
+        "به‌سرعت دست و پا کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

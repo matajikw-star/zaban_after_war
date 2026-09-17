@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "tract یعنی پهنه یا قطعه‌ای از زمین (و نیز رساله‌ای کوتاه)، در حالی که track به رد و مسیر اشاره دارد.",
+      "word": "tract"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "track",
   "lemma": "track",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,66 @@
       "year": 1402
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a mark or line of marks left behind by a person, animal or vehicle that has passed, or the rough path they follow",
+      "examples": [
+        {
+          "en": "The hunters followed the tracks of the deer across the snow.",
+          "fa": "شکارچیان رد آهو را روی برف دنبال کردند."
+        }
+      ],
+      "ipa": "/træk/",
+      "pos": "n",
+      "synonyms": [
+        "trail",
+        "trace",
+        "path"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p04",
+          "questionNo": 13
+        },
+        {
+          "paperId": "arshad-1402-p05",
+          "questionNo": 23
+        }
+      ],
+      "translations": [
+        "رد",
+        "ردپا",
+        "مسیر خاکی"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to follow the movements or the progress of someone or something over a period of time",
+      "examples": [
+        {
+          "en": "This app tracks how much water you drink each day.",
+          "fa": "این برنامه دنبال می‌کند که هر روز چقدر آب می‌نوشی."
+        }
+      ],
+      "ipa": "/træk/",
+      "pos": "v",
+      "synonyms": [
+        "trace",
+        "monitor"
+      ],
+      "testedIn": [],
+      "translations": [
+        "ردیابی کردن",
+        "دنبال کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

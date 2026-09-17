@@ -6,7 +6,7 @@
   },
   "id": "aleatory",
   "lemma": "aleatory",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +20,44 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "planned",
+        "deliberate"
+      ],
+      "definition": "depending on chance or on a random choice rather than on a plan",
+      "examples": [
+        {
+          "en": "The composer wrote an aleatory piece in which the players choose the order.",
+          "fa": "آهنگساز قطعه‌ای تصادفی نوشت که در آن نوازندگان خودشان ترتیب را انتخاب می‌کنند."
+        }
+      ],
+      "ipa": "/ˈeɪliətəri/",
+      "pos": "adj",
+      "synonyms": [
+        "random",
+        "chance",
+        "unpredictable"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 20
+        }
+      ],
+      "translations": [
+        "تصادفی",
+        "وابسته به بخت",
+        "اتفاقی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

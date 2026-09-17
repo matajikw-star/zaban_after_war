@@ -6,7 +6,7 @@
   },
   "id": "assert",
   "lemma": "assert",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +20,67 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "deny",
+        "retract"
+      ],
+      "definition": "to state firmly that something is true, especially when other people may disagree",
+      "examples": [
+        {
+          "en": "The researcher asserted that the earlier findings were simply wrong.",
+          "fa": "آن پژوهشگر قاطعانه گفت که یافته‌های پیشین به‌سادگی نادرست بوده‌اند."
+        }
+      ],
+      "ipa": "/əˈsɜːt/",
+      "pos": "v",
+      "synonyms": [
+        "declare",
+        "maintain",
+        "affirm"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p02",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "ادعا کردن",
+        "قاطعانه بیان کردن",
+        "تأکید کردن"
+      ]
+    },
+    {
+      "antonyms": [
+        "yield"
+      ],
+      "definition": "to behave or speak confidently so that people notice you, or to claim a right forcefully",
+      "examples": [
+        {
+          "en": "She slowly learned to assert herself in meetings full of louder colleagues.",
+          "fa": "کم‌کم یاد گرفت در جلساتی پر از همکاران پرصداتر ابراز وجود کند."
+        }
+      ],
+      "ipa": "/əˈsɜːt/",
+      "pos": "v",
+      "synonyms": [
+        "insist on",
+        "stand up for"
+      ],
+      "testedIn": [],
+      "translations": [
+        "ابراز وجود کردن",
+        "(حقی را) مطالبه کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -6,7 +6,7 @@
   },
   "id": "arena",
   "lemma": "arena",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +20,62 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a large flat area surrounded by seats, used for sports or entertainment",
+      "examples": [
+        {
+          "en": "Thousands of fans filled the arena an hour before the match began.",
+          "fa": "هزاران هوادار یک ساعت پیش از آغاز بازی، ورزشگاه را پر کردند."
+        }
+      ],
+      "ipa": "/əˈriːnə/",
+      "pos": "n",
+      "synonyms": [
+        "stadium",
+        "ring"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p03",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "ورزشگاه",
+        "میدان مسابقه",
+        "آوردگاه"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "an area of activity in which people compete or argue publicly",
+      "examples": [
+        {
+          "en": "She entered the political arena after teaching law for twenty years.",
+          "fa": "پس از بیست سال تدریس حقوق، به عرصهٔ سیاست وارد شد."
+        }
+      ],
+      "ipa": "/əˈriːnə/",
+      "pos": "n",
+      "synonyms": [
+        "sphere",
+        "domain",
+        "field"
+      ],
+      "testedIn": [],
+      "translations": [
+        "عرصه",
+        "میدان (مثلاً سیاست)"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

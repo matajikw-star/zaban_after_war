@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شکل درست همین است؛ alike پس از دو چیزی که به هم ربط می‌دهد می‌آید: «young and old alike»",
+      "word": "alike"
+    },
+    {
+      "note": "likely یعنی محتمل، و جای «alike» را نمی‌گیرد",
+      "word": "likely"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "as-like",
   "lemma": "as like",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +29,35 @@
       "year": 1404
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "not standard English: a made-up option built from \"alike\"; English uses \"alike\" after the two things it links, or \"like\" as a preposition before a noun",
+      "examples": [
+        {
+          "en": "Correct English says \"rich and poor alike\", never \"rich and poor as like\".",
+          "fa": "انگلیسیِ درست می‌گوید «rich and poor alike» و هرگز «rich and poor as like» به کار نمی‌رود."
+        }
+      ],
+      "ipa": "/əz ˈlaɪk/",
+      "pos": "phrase",
+      "synonyms": [],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p06",
+          "questionNo": 23
+        }
+      ],
+      "translations": [
+        "نادرست است؛ شکل درستِ آن alike به‌معنای «هر دو، به یک اندازه» است"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

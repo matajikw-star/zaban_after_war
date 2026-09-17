@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "abrogate یعنی لغو کردن رسمی قانون یا قرارداد، اما abdicate یعنی کناره‌گیری از مقام.",
+      "word": "abrogate"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "abdicate",
   "lemma": "abdicate",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,65 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "accede",
+        "assume"
+      ],
+      "definition": "to give up a throne or a position of power formally",
+      "examples": [
+        {
+          "en": "The king abdicated in favour of his younger brother.",
+          "fa": "پادشاه به سود برادر کوچک‌ترش از سلطنت کناره‌گیری کرد."
+        }
+      ],
+      "ipa": "/ˈæbdɪkeɪt/",
+      "pos": "v",
+      "synonyms": [
+        "step down",
+        "renounce",
+        "resign"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p02",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "کناره‌گیری کردن (از سلطنت یا مقام)",
+        "واگذاشتن قدرت"
+      ]
+    },
+    {
+      "antonyms": [
+        "assume"
+      ],
+      "definition": "to fail to carry out a duty or responsibility that belongs to you",
+      "examples": [
+        {
+          "en": "The company abdicated its responsibility for the polluted river.",
+          "fa": "شرکت از مسئولیت خود در قبال رود آلوده شانه خالی کرد."
+        }
+      ],
+      "ipa": "/ˈæbdɪkeɪt/",
+      "pos": "v",
+      "synonyms": [
+        "shirk"
+      ],
+      "testedIn": [],
+      "translations": [
+        "شانه خالی کردن از (مسئولیت)",
+        "وانهادن وظیفه"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

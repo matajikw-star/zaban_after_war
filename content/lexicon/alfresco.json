@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "fresco به‌تنهایی یعنی نقاشی دیواری روی گچ تَر، نه «در فضای باز»",
+      "word": "fresco"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "alfresco",
   "lemma": "alfresco",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,42 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "indoors"
+      ],
+      "definition": "in the open air, outside a building, especially when eating a meal",
+      "examples": [
+        {
+          "en": "On warm evenings the family prefers to dine alfresco in the garden.",
+          "fa": "در شب‌های گرم، خانواده ترجیح می‌دهد شام را در فضای باز و در باغ بخورد."
+        }
+      ],
+      "ipa": "/ˌælˈfreskəʊ/",
+      "pos": "adv",
+      "synonyms": [
+        "outdoors",
+        "outside"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 12
+        }
+      ],
+      "translations": [
+        "در فضای باز",
+        "زیر آسمان",
+        "بیرون از ساختمان"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

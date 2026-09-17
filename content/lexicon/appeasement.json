@@ -6,7 +6,7 @@
   },
   "id": "appeasement",
   "lemma": "appeasement",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +20,65 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "provocation"
+      ],
+      "definition": "the act of making someone or something calmer or less angry by giving them what they want",
+      "examples": [
+        {
+          "en": "A quick apology was offered as a small gesture of appeasement.",
+          "fa": "عذرخواهیِ سریعی به نشانهٔ دلجویی انجام شد."
+        }
+      ],
+      "ipa": "/əˈpiːzmənt/",
+      "pos": "n",
+      "synonyms": [
+        "placation",
+        "pacification"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p05",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "آرام‌سازی",
+        "دلجویی",
+        "فرونشاندن"
+      ]
+    },
+    {
+      "antonyms": [
+        "resistance",
+        "confrontation"
+      ],
+      "definition": "the policy of giving in to the demands of an aggressive power in order to avoid war",
+      "examples": [
+        {
+          "en": "Historians still argue about whether appeasement made the war more likely.",
+          "fa": "مورخان هنوز بر سر اینکه آیا سیاست مماشات جنگ را محتمل‌تر کرد بحث می‌کنند."
+        }
+      ],
+      "ipa": "/əˈpiːzmənt/",
+      "pos": "n",
+      "synonyms": [
+        "conciliation"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مماشات",
+        "سیاست سازش"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

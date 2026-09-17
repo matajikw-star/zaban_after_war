@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "confirm یعنی درستیِ چیزی را تأیید و قطعی کردن، اما affirm یعنی قاطعانه اعلام کردن",
+      "word": "confirm"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "affirm",
   "lemma": "affirm",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,44 @@
       "year": 1402
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "deny",
+        "refute"
+      ],
+      "definition": "to state firmly and publicly that something is true, or to formally uphold a decision",
+      "examples": [
+        {
+          "en": "The higher court affirmed the earlier ruling after a long review.",
+          "fa": "دادگاه بالاتر پس از بررسی طولانی، رأی پیشین را تأیید کرد."
+        }
+      ],
+      "ipa": "/əˈfɜːm/",
+      "pos": "v",
+      "synonyms": [
+        "assert",
+        "declare",
+        "uphold"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p02",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "تأیید کردن",
+        "قاطعانه اظهار کردن",
+        "تصدیق کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

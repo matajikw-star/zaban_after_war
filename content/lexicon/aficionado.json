@@ -6,7 +6,7 @@
   },
   "id": "aficionado",
   "lemma": "aficionado",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +20,41 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "someone who is very enthusiastic about a particular activity or subject and knows a lot about it",
+      "examples": [
+        {
+          "en": "Only a true opera aficionado would recognize that rare old recording.",
+          "fa": "فقط یک دلباختهٔ واقعی اپرا آن ضبط قدیمی و کمیاب را می‌شناسد."
+        }
+      ],
+      "ipa": "/əˌfɪʃəˈnɑːdəʊ/",
+      "pos": "n",
+      "synonyms": [
+        "enthusiast",
+        "devotee",
+        "buff"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p03",
+          "questionNo": 12
+        }
+      ],
+      "translations": [
+        "دلباخته",
+        "علاقه‌مند پرشور",
+        "شیفته"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

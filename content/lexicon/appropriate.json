@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "expropriate یعنی مصادرهٔ رسمیِ مال به دست دولت، اما appropriate برداشتنِ چیزی برای خود است",
+      "word": "expropriate"
+    }
+  ],
   "homograph": {
-    "note": null,
-    "suspected": false
+    "note": "The verb /əˈprəʊpriet/ 'to take something for one's own use' and the much commoner adjective /əˈprəʊpriət/ 'suitable' share a spelling but differ in the final syllable and in meaning; a learner who knows only the adjective will not reach the verb, so the two need separate blocks and separate mnemonics.",
+    "suspected": true
   },
   "id": "appropriate",
   "lemma": "appropriate",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,91 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "return",
+        "restore"
+      ],
+      "definition": "to take something for your own use, especially without permission or without any right to it",
+      "examples": [
+        {
+          "en": "The new manager appropriated the best office before anyone could object.",
+          "fa": "مدیر تازه پیش از آنکه کسی اعتراض کند، بهترین اتاق را تصاحب کرد."
+        }
+      ],
+      "ipa": "/əˈprəʊprieɪt/",
+      "pos": "v",
+      "synonyms": [
+        "seize",
+        "commandeer",
+        "confiscate"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 18
+        }
+      ],
+      "translations": [
+        "تصاحب کردن",
+        "به تملک درآوردن",
+        "ضبط کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to officially set money aside for a particular purpose",
+      "examples": [
+        {
+          "en": "Parliament appropriated extra funds for flood defences this year.",
+          "fa": "پارلمان امسال بودجهٔ اضافی برای مهار سیل اختصاص داد."
+        }
+      ],
+      "ipa": "/əˈprəʊprieɪt/",
+      "pos": "v",
+      "synonyms": [
+        "allocate",
+        "earmark"
+      ],
+      "testedIn": [],
+      "translations": [
+        "اختصاص دادن (بودجه)",
+        "تخصیص دادن"
+      ]
+    },
+    {
+      "antonyms": [
+        "inappropriate",
+        "unsuitable"
+      ],
+      "definition": "suitable or right for a particular situation, person or occasion",
+      "examples": [
+        {
+          "en": "Jeans are not appropriate clothing for a formal job interview.",
+          "fa": "شلوار جین لباس مناسبی برای مصاحبهٔ کاریِ رسمی نیست."
+        }
+      ],
+      "ipa": "/əˈprəʊpriət/",
+      "pos": "adj",
+      "synonyms": [
+        "suitable",
+        "fitting",
+        "proper"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مناسب",
+        "بجا",
+        "درخور"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

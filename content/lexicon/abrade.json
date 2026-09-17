@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شکل و آوای نزدیکی دارند؛ upbraid یعنی سرزنش کردن، اما abrade یعنی ساییدن و خراشیدن.",
+      "word": "upbraid"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "abrade",
   "lemma": "abrade",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,43 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "polish"
+      ],
+      "definition": "to wear away or damage a surface by rubbing or scraping against it",
+      "examples": [
+        {
+          "en": "Years of blowing sand had abraded the stone faces of the statues.",
+          "fa": "سال‌ها وزش شن، چهره‌های سنگی مجسمه‌ها را ساییده بود."
+        }
+      ],
+      "ipa": "/əˈbreɪd/",
+      "pos": "v",
+      "synonyms": [
+        "scrape",
+        "erode",
+        "wear away"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 27
+        }
+      ],
+      "translations": [
+        "ساییدن",
+        "خراشیدن",
+        "فرسودن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "تلفظ کاملاً یکسان است /eə(r)/ اما heir یعنی وارث",
+      "word": "heir"
+    }
+  ],
   "homograph": {
-    "note": null,
-    "suspected": false
+    "note": "The verb 'air' (to state opinions or complaints publicly) and the everyday noun 'air' (the atmosphere) share one spelling and one pronunciation, but a learner who knows only the noun will not reach the verb sense; show them as separate blocks, and a mnemonic must name which sense it targets.",
+    "suspected": true
   },
   "id": "air",
   "lemma": "air",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,85 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "suppress",
+        "withhold"
+      ],
+      "definition": "to express your opinions or complaints publicly so that other people hear them",
+      "examples": [
+        {
+          "en": "The meeting gave the staff a chance to air their complaints openly.",
+          "fa": "آن جلسه به کارکنان فرصت داد شکایت‌هایشان را آشکارا مطرح کنند."
+        }
+      ],
+      "ipa": "/eə(r)/",
+      "pos": "v",
+      "synonyms": [
+        "voice",
+        "express",
+        "ventilate"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 13
+        }
+      ],
+      "translations": [
+        "ابراز کردن",
+        "علنی مطرح کردن",
+        "بازگو کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "the mixture of gases around the earth that we breathe",
+      "examples": [
+        {
+          "en": "The air in the mountains felt cold and wonderfully clean that morning.",
+          "fa": "آن روز صبح، هوای کوهستان سرد و به‌طرز دلپذیری پاک بود."
+        }
+      ],
+      "ipa": "/eə(r)/",
+      "pos": "n",
+      "synonyms": [
+        "atmosphere"
+      ],
+      "testedIn": [],
+      "translations": [
+        "هوا"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "the particular appearance or manner that someone or something seems to have",
+      "examples": [
+        {
+          "en": "She answered every question with an air of complete confidence.",
+          "fa": "به هر پرسشی با حالتی سرشار از اطمینان پاسخ می‌داد."
+        }
+      ],
+      "ipa": "/eə(r)/",
+      "pos": "n",
+      "synonyms": [
+        "manner",
+        "demeanour"
+      ],
+      "testedIn": [],
+      "translations": [
+        "ظاهر",
+        "حالت",
+        "هوا و حال"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

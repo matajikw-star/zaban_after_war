@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "advancement بیشتر به ارتقای شغلی یا پیشبرد یک هدف اشاره دارد، اما advance هم فعلِ پیش بردن است و هم اسمِ پیشرفت.",
+      "word": "advancement"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "advance",
   "lemma": "advance",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,87 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "hinder",
+        "impede"
+      ],
+      "definition": "to help something make progress, or to move forward towards something",
+      "examples": [
+        {
+          "en": "The discovery advanced our understanding of how memory works.",
+          "fa": "این کشف، درک ما را از سازوکار حافظه پیش برد."
+        }
+      ],
+      "ipa": "/ədˈvɑːns/",
+      "pos": "v",
+      "synonyms": [
+        "further",
+        "promote",
+        "progress"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 168
+        }
+      ],
+      "translations": [
+        "پیش بردن",
+        "پیشرفت دادن",
+        "جلو رفتن"
+      ]
+    },
+    {
+      "antonyms": [
+        "setback"
+      ],
+      "definition": "a development or improvement that takes something to a better state",
+      "examples": [
+        {
+          "en": "Recent advances in medicine have made the operation much safer.",
+          "fa": "پیشرفت‌های اخیر پزشکی این عمل را بسیار ایمن‌تر کرده است."
+        }
+      ],
+      "ipa": "/ədˈvɑːns/",
+      "pos": "n",
+      "synonyms": [
+        "breakthrough",
+        "progress"
+      ],
+      "testedIn": [],
+      "translations": [
+        "پیشرفت",
+        "تحول رو به جلو"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "used in the phrase \"in advance\", meaning before a particular time or event",
+      "examples": [
+        {
+          "en": "Tickets for the concert must be booked two weeks in advance.",
+          "fa": "بلیت‌های کنسرت باید دو هفته پیشاپیش رزرو شود."
+        }
+      ],
+      "ipa": "/ədˈvɑːns/",
+      "pos": "n",
+      "synonyms": [
+        "beforehand"
+      ],
+      "testedIn": [],
+      "translations": [
+        "پیشاپیش",
+        "از قبل"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "unstable بیشتر برای بی‌ثباتی وضعیت، ماده یا روحیه به کار می‌رود، اما unsteady برای لرزان و بی‌تعادل بودن حرکت یا بدن است.",
+      "word": "unstable"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "unsteady",
   "lemma": "unsteady",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,48 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "steady",
+        "firm"
+      ],
+      "definition": "not firm or well balanced, so that it shakes or is likely to fall; not regular or constant",
+      "examples": [
+        {
+          "en": "He was still unsteady on his feet after the long illness.",
+          "fa": "او پس از آن بیماری طولانی هنوز روی پاهایش لرزان بود."
+        }
+      ],
+      "ipa": "/ʌnˈstedi/",
+      "pos": "adj",
+      "synonyms": [
+        "shaky",
+        "wobbly",
+        "unstable"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "لرزان",
+        "بی‌تعادل",
+        "بی‌ثبات"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

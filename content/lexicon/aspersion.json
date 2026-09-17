@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املای نزدیک اما بی‌ربط؛ aspiration یعنی آرزو و هدف بلند",
+      "word": "aspiration"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "aspersion",
   "lemma": "aspersion",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,44 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "praise",
+        "compliment"
+      ],
+      "definition": "an unkind remark that damages someone's reputation, almost always in the phrase \"cast aspersions on\"",
+      "examples": [
+        {
+          "en": "He cast aspersions on his rival's honesty without offering a single proof.",
+          "fa": "بی‌آنکه حتی یک مدرک ارائه کند، به صداقت رقیبش تهمت زد."
+        }
+      ],
+      "ipa": "/əˈspɜːʃn/",
+      "pos": "n",
+      "synonyms": [
+        "slur",
+        "slander",
+        "insinuation"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p01",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "تهمت",
+        "بدگویی",
+        "لکه‌دار کردن نام کسی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

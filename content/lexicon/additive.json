@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "addictive یعنی اعتیادآور؛ فقط املایش به additive شبیه است.",
+      "word": "addictive"
+    },
+    {
+      "note": "additional یعنی اضافی و بیشتر، اما additive به افزودنی یا خاصیت جمع‌شوندگی اشاره دارد.",
+      "word": "additional"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "additive",
   "lemma": "additive",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +29,59 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "produced by adding things together, so that the separate parts simply add up",
+      "examples": [
+        {
+          "en": "The effects of the two drugs are additive, so the doses must be lowered.",
+          "fa": "اثر این دو دارو با هم جمع می‌شود، پس باید دوزها را کاهش داد."
+        }
+      ],
+      "ipa": "/ˈædətɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "cumulative"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p04",
+          "questionNo": 16
+        }
+      ],
+      "translations": [
+        "جمع‌شونده",
+        "افزایشی",
+        "حاصل‌جمعی"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a substance added to food or fuel in small amounts to improve or preserve it",
+      "examples": [
+        {
+          "en": "The label says the juice contains no artificial additives.",
+          "fa": "روی برچسب نوشته که این آبمیوه هیچ افزودنی مصنوعی ندارد."
+        }
+      ],
+      "ipa": "/ˈædətɪv/",
+      "pos": "n",
+      "synonyms": [
+        "preservative"
+      ],
+      "testedIn": [],
+      "translations": [
+        "افزودنی",
+        "ماده‌ی افزودنی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

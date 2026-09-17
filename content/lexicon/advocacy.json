@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "advocate یا فعلِ «حمایت کردن» است یا اسمِ «مدافع و وکیل»، اما advocacy خودِ عملِ حمایت و دفاع است.",
+      "word": "advocate"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "advocacy",
   "lemma": "advocacy",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,43 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "opposition"
+      ],
+      "definition": "public support for a cause, a policy or a group, and the work of arguing for it",
+      "examples": [
+        {
+          "en": "Her advocacy for clean water changed the law in three provinces.",
+          "fa": "پشتیبانی او از آب سالم، قانون را در سه استان تغییر داد."
+        }
+      ],
+      "ipa": "/ˈædvəkəsi/",
+      "pos": "n",
+      "synonyms": [
+        "support",
+        "championing",
+        "promotion"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p03",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "پشتیبانی علنی",
+        "دفاع (از یک آرمان)",
+        "جانبداری"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

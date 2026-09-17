@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املای نزدیک اما بی‌ربط؛ elevation یعنی ارتفاع یا بالا بردن",
+      "word": "elevation"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "alleviation",
   "lemma": "alleviation",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,44 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "aggravation",
+        "worsening"
+      ],
+      "definition": "the act of making pain, suffering or a problem less severe",
+      "examples": [
+        {
+          "en": "The charity spends most of its budget on the alleviation of rural poverty.",
+          "fa": "آن خیریه بیشتر بودجه‌اش را صرف کاهش فقر روستایی می‌کند."
+        }
+      ],
+      "ipa": "/əˌliːviˈeɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "relief",
+        "mitigation",
+        "easing"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 33
+        }
+      ],
+      "translations": [
+        "تسکین",
+        "تخفیف",
+        "کاهش (درد یا مشکل)"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

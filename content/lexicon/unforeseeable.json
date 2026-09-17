@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "unforeseen یعنی پیش‌بینی‌نشده (چیزی که رخ داده و انتظارش را نداشتند)، اما unforeseeable یعنی اساساً قابل پیش‌بینی نیست.",
+      "word": "unforeseen"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "unforeseeable",
   "lemma": "unforeseeable",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,45 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "foreseeable",
+        "predictable"
+      ],
+      "definition": "impossible to know about or predict before it happens",
+      "examples": [
+        {
+          "en": "The contract covers delays caused by unforeseeable events such as storms.",
+          "fa": "قرارداد تأخیرهای ناشی از رویدادهای پیش‌بینی‌ناپذیر مانند طوفان را پوشش می‌دهد."
+        }
+      ],
+      "ipa": "/ˌʌnfɔːˈsiːəbl/",
+      "pos": "adj",
+      "synonyms": [
+        "unpredictable"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p01",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1401-p03",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "پیش‌بینی‌ناپذیر",
+        "غیرقابل پیش‌بینی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

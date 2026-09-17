@@ -6,7 +6,7 @@
   },
   "id": "amendment",
   "lemma": "amendment",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +20,41 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a small change or addition made to a law, a document or a rule in order to improve it",
+      "examples": [
+        {
+          "en": "Parliament passed the amendment after a long and heated debate.",
+          "fa": "پارلمان پس از بحثی طولانی و پرتنش، آن اصلاحیه را تصویب کرد."
+        }
+      ],
+      "ipa": "/əˈmendmənt/",
+      "pos": "n",
+      "synonyms": [
+        "revision",
+        "modification",
+        "alteration"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 18
+        }
+      ],
+      "translations": [
+        "اصلاحیه",
+        "متمم",
+        "تغییر (در قانون یا متن)"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

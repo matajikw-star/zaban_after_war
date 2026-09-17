@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املای بسیار نزدیک اما تقریباً متضاد؛ apostate یعنی مرتد",
+      "word": "apostate"
+    },
+    {
+      "note": "املای نزدیک؛ epistle یعنی نامه یا رساله، نه شخص",
+      "word": "epistle"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "apostle",
   "lemma": "apostle",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +29,62 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "one of the twelve men chosen by Jesus to teach and spread his message",
+      "examples": [
+        {
+          "en": "The painting shows the apostles gathered around one long wooden table.",
+          "fa": "آن نقاشی حواریون را گرد یک میز چوبیِ دراز نشان می‌دهد."
+        }
+      ],
+      "ipa": "/əˈpɒsl/",
+      "pos": "n",
+      "synonyms": [
+        "disciple"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p04",
+          "questionNo": 19
+        }
+      ],
+      "translations": [
+        "حواری",
+        "رسول"
+      ]
+    },
+    {
+      "antonyms": [
+        "opponent"
+      ],
+      "definition": "a person who believes strongly in an idea and works hard to spread it",
+      "examples": [
+        {
+          "en": "She became an apostle of free education for every child in the country.",
+          "fa": "او به مبلّغ آموزش رایگان برای همهٔ کودکان آن کشور بدل شد."
+        }
+      ],
+      "ipa": "/əˈpɒsl/",
+      "pos": "n",
+      "synonyms": [
+        "advocate",
+        "champion",
+        "proponent"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مبلّغ",
+        "پیشگامِ یک اندیشه"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

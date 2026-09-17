@@ -6,7 +6,7 @@
   },
   "id": "agreement",
   "lemma": "agreement",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +20,61 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "disagreement",
+        "dispute"
+      ],
+      "definition": "an arrangement or promise that two or more people or groups accept",
+      "examples": [
+        {
+          "en": "The two companies reached an agreement after months of hard talks.",
+          "fa": "دو شرکت پس از ماه‌ها مذاکرهٔ دشوار به توافق رسیدند."
+        }
+      ],
+      "ipa": "/əˈɡriːmənt/",
+      "pos": "n",
+      "synonyms": [
+        "deal",
+        "accord",
+        "contract"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p02",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "توافق",
+        "قرارداد",
+        "موافقت‌نامه"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "in grammar, the way a verb or adjective matches the noun it belongs to in number or person",
+      "examples": [
+        {
+          "en": "English shows subject-verb agreement clearly only in the third person singular.",
+          "fa": "انگلیسی مطابقت فعل و فاعل را به‌روشنی تنها در سوم‌شخص مفرد نشان می‌دهد."
+        }
+      ],
+      "ipa": "/əˈɡriːmənt/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "مطابقت (دستوری)"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

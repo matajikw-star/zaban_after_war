@@ -6,7 +6,7 @@
   },
   "id": "arabesque",
   "lemma": "arabesque",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +20,56 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a position in ballet in which the dancer stands on one leg with the other stretched straight out behind",
+      "examples": [
+        {
+          "en": "The dancer held a perfect arabesque for several long seconds.",
+          "fa": "رقصنده چند ثانیهٔ طولانی، حالت آرابسک را بی‌نقص نگه داشت."
+        }
+      ],
+      "ipa": "/ˌærəˈbesk/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 21
+        }
+      ],
+      "translations": [
+        "آرابسک (حالتی در باله)",
+        "حالت باله با یک پای کشیده به عقب"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a decorative design made of flowing lines, leaves and geometric shapes",
+      "examples": [
+        {
+          "en": "The old tiles were covered with delicate arabesques in blue and gold.",
+          "fa": "کاشی‌های کهنه پوشیده از نقش‌های اسلیمیِ ظریفِ آبی و طلایی بودند."
+        }
+      ],
+      "ipa": "/ˌærəˈbesk/",
+      "pos": "n",
+      "synonyms": [
+        "ornament"
+      ],
+      "testedIn": [],
+      "translations": [
+        "نقش اسلیمی",
+        "تزیین گره‌چینی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

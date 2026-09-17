@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "ambiguous وصفِ سخن یا موقعیتِ مبهم است، اما ambivalent وصفِ آدمی است که دو حس متضاد دارد",
+      "word": "ambiguous"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "ambivalent",
   "lemma": "ambivalent",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,44 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "decisive",
+        "certain"
+      ],
+      "definition": "having two opposite feelings about someone or something at the same time, so that you cannot decide",
+      "examples": [
+        {
+          "en": "She feels ambivalent about moving abroad for the new job.",
+          "fa": "دربارهٔ مهاجرت به خارج برای آن شغل تازه دودل است."
+        }
+      ],
+      "ipa": "/æmˈbɪvələnt/",
+      "pos": "adj",
+      "synonyms": [
+        "conflicted",
+        "undecided",
+        "uncertain"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p03",
+          "questionNo": 11
+        }
+      ],
+      "translations": [
+        "دودل",
+        "دارای احساسات متضاد",
+        "مردد"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

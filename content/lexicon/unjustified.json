@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "unjustifiable یعنی توجیه‌ناپذیر (اصلاً نمی‌توان توجیهش کرد)، ولی unjustified یعنی توجیه‌نشده و بی‌دلیل.",
+      "word": "unjustifiable"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "unjustified",
   "lemma": "unjustified",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,47 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "justified",
+        "warranted"
+      ],
+      "definition": "not supported by a good reason, and therefore unfair or without basis",
+      "examples": [
+        {
+          "en": "Her fear of the interview turned out to be completely unjustified.",
+          "fa": "ترس او از مصاحبه کاملاً بی‌دلیل از آب درآمد."
+        }
+      ],
+      "ipa": "/ʌnˈdʒʌstɪfaɪd/",
+      "pos": "adj",
+      "synonyms": [
+        "groundless",
+        "unwarranted"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "ناموجه",
+        "بی‌دلیل",
+        "ناروا"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

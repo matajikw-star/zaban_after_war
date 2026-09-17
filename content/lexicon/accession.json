@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "ascension یعنی بالا رفتن و عروج، اما accession به رسیدن به مقام یا الحاق رسمی اشاره دارد.",
+      "word": "ascension"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "accession",
   "lemma": "accession",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,65 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "abdication"
+      ],
+      "definition": "the act of reaching a high office or rank, especially a throne",
+      "examples": [
+        {
+          "en": "The country marked the queen's accession with three days of festivities.",
+          "fa": "کشور جلوس ملکه را با سه روز جشن گرامی داشت."
+        }
+      ],
+      "ipa": "/əkˈseʃn/",
+      "pos": "n",
+      "synonyms": [
+        "succession",
+        "assumption"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 33
+        }
+      ],
+      "translations": [
+        "جلوس (بر تخت)",
+        "رسیدن به مقام",
+        "احراز منصب"
+      ]
+    },
+    {
+      "antonyms": [
+        "withdrawal"
+      ],
+      "definition": "the act of formally joining a group, a treaty or an organization",
+      "examples": [
+        {
+          "en": "The country's accession to the trade treaty took five years of talks.",
+          "fa": "الحاق آن کشور به پیمان تجاری پنج سال مذاکره به طول انجامید."
+        }
+      ],
+      "ipa": "/əkˈseʃn/",
+      "pos": "n",
+      "synonyms": [
+        "entry",
+        "admission"
+      ],
+      "testedIn": [],
+      "translations": [
+        "الحاق",
+        "پیوستن رسمی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

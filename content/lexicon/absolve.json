@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "تنها یک حرف تفاوت دارند؛ absorb یعنی جذب کردن، اما absolve یعنی تبرئه کردن.",
+      "word": "absorb"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "absolve",
   "lemma": "absolve",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,44 @@
       "year": 1402
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "blame",
+        "convict"
+      ],
+      "definition": "to state officially that someone is free from guilt, blame or an obligation",
+      "examples": [
+        {
+          "en": "The report absolved the driver of any blame for the crash.",
+          "fa": "گزارش، راننده را از هرگونه تقصیر در تصادف تبرئه کرد."
+        }
+      ],
+      "ipa": "/əbˈzɒlv/",
+      "pos": "v",
+      "synonyms": [
+        "acquit",
+        "exonerate",
+        "clear"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p01",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "تبرئه کردن",
+        "مبرا دانستن",
+        "معاف کردن (از تعهد)"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

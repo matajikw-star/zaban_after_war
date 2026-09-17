@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "additive یا ماده‌ی افزودنی است یا صفتی به معنای «جمع‌شونده»، اما additional یعنی اضافی.",
+      "word": "additive"
+    },
+    {
+      "note": "addictive یعنی اعتیادآور؛ تنها املایش به additional نزدیک است.",
+      "word": "addictive"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "additional",
   "lemma": "additional",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +29,41 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "more than what is already there or what was first agreed",
+      "examples": [
+        {
+          "en": "Passengers must pay an additional fee for heavy luggage.",
+          "fa": "مسافران باید برای بار سنگین هزینه‌ای اضافی بپردازند."
+        }
+      ],
+      "ipa": "/əˈdɪʃənl/",
+      "pos": "adj",
+      "synonyms": [
+        "extra",
+        "supplementary",
+        "further"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p01",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "اضافی",
+        "بیشتر",
+        "تکمیلی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

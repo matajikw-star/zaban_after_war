@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هم‌ریشه اما وارونه؛ ailurophobe یعنی کسی که از گربه می‌ترسد",
+      "word": "ailurophobe"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "ailurophile",
   "lemma": "ailurophile",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,40 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "ailurophobe"
+      ],
+      "definition": "a person who loves cats",
+      "examples": [
+        {
+          "en": "A lifelong ailurophile, she has shared her small flat with seven cats.",
+          "fa": "او که از کودکی گربه‌دوست بوده، آپارتمان کوچکش را با هفت گربه شریک شده است."
+        }
+      ],
+      "ipa": "/aɪˈlʊərəfaɪl/",
+      "pos": "n",
+      "synonyms": [
+        "cat lover"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p03",
+          "questionNo": 17
+        }
+      ],
+      "translations": [
+        "گربه‌دوست",
+        "دوستدار گربه"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

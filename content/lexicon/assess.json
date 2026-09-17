@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املا و تلفظ نزدیک اما بی‌ربط؛ access یعنی دسترسی یا راه ورود",
+      "word": "access"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "assess",
   "lemma": "assess",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,41 @@
       "year": 1402
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to judge carefully the quality, the amount or the value of something",
+      "examples": [
+        {
+          "en": "Inspectors assessed the damage to the old bridge after the flood.",
+          "fa": "بازرسان پس از سیل، آسیبِ واردشده به آن پل قدیمی را ارزیابی کردند."
+        }
+      ],
+      "ipa": "/əˈses/",
+      "pos": "v",
+      "synonyms": [
+        "evaluate",
+        "appraise",
+        "gauge"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p01",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "ارزیابی کردن",
+        "سنجیدن",
+        "برآورد کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

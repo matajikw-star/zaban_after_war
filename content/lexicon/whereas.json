@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "whereby یعنی «که به وسیله‌ی آن» و روش را بیان می‌کند، اما whereas تقابل دو چیز را نشان می‌دهد.",
+      "word": "whereby"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "whereas",
   "lemma": "whereas",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,63 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "used to put two facts or situations side by side and show that they are different",
+      "examples": [
+        {
+          "en": "My brother loves crowded cities, whereas I prefer quiet villages.",
+          "fa": "برادرم شهرهای شلوغ را دوست دارد، در حالی که من روستاهای آرام را ترجیح می‌دهم."
+        }
+      ],
+      "ipa": "/ˌweərˈæz/",
+      "pos": "conj",
+      "synonyms": [
+        "while"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 14
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "در حالی که",
+        "حال آنکه",
+        "برعکس"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "in legal or official documents, used at the start of a clause that states the fact on which what follows is based",
+      "examples": [
+        {
+          "en": "Whereas both parties have agreed to cooperate, this contract is hereby signed.",
+          "fa": "نظر به اینکه دو طرف بر همکاری توافق کرده‌اند، این قرارداد بدین‌وسیله امضا می‌شود."
+        }
+      ],
+      "ipa": "/ˌweərˈæz/",
+      "pos": "conj",
+      "synonyms": [
+        "since"
+      ],
+      "testedIn": [],
+      "translations": [
+        "نظر به اینکه",
+        "از آنجا که"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

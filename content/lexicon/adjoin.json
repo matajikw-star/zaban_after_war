@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "adjourn یعنی جلسه را به وقت دیگری موکول کردن؛ املا و تلفظش با adjoin اشتباه گرفته می‌شود.",
+      "word": "adjourn"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "adjoin",
   "lemma": "adjoin",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,41 @@
       "year": 1402
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to be next to something and share a wall or a border with it",
+      "examples": [
+        {
+          "en": "Our garden adjoins the school playground on the northern side.",
+          "fa": "باغ ما از سمت شمال به زمین بازی مدرسه چسبیده است."
+        }
+      ],
+      "ipa": "/əˈdʒɔɪn/",
+      "pos": "v",
+      "synonyms": [
+        "border",
+        "abut",
+        "neighbour"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p04",
+          "questionNo": 12
+        }
+      ],
+      "translations": [
+        "مجاور بودن",
+        "هم‌مرز بودن با",
+        "چسبیده بودن به"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

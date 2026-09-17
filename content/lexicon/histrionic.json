@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شباهت ظاهری زیادی دارند؛ historic یعنی تاریخی و مهم، اما histrionic یعنی نمایشی و اغراق‌آمیز.",
+      "word": "historic"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "histrionic",
   "lemma": "histrionic",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -29,8 +34,64 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "restrained",
+        "understated"
+      ],
+      "definition": "showing emotion in a very exaggerated, theatrical way that does not seem sincere",
+      "examples": [
+        {
+          "en": "His histrionic apology convinced nobody in the room.",
+          "fa": "عذرخواهی نمایشی و اغراق‌آمیز او هیچ‌کس را در آن اتاق قانع نکرد."
+        }
+      ],
+      "ipa": "/ˌhɪstriˈɒnɪk/",
+      "pos": "adj",
+      "synonyms": [
+        "melodramatic",
+        "theatrical"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "نمایشی",
+        "اغراق‌آمیز",
+        "تصنعی"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "exaggerated dramatic behaviour such as shouting or weeping, used to attract attention; usually plural, \"histrionics\"",
+      "examples": [
+        {
+          "en": "The manager had no patience for histrionics during staff meetings.",
+          "fa": "مدیر در جلسه‌های کارکنان حوصله‌ی ادا و اطوار را نداشت."
+        }
+      ],
+      "ipa": "/ˌhɪstriˈɒnɪks/",
+      "pos": "n",
+      "synonyms": [
+        "theatrics"
+      ],
+      "testedIn": [],
+      "translations": [
+        "رفتار نمایشی",
+        "ادا و اطوار",
+        "قشقرق"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

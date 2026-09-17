@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "همان واژه با پیشوندی دیگر و دقیقاً به همان معنای ناشدنی؛ infeasible در متون فنی رایج‌تر است.",
+      "word": "infeasible"
+    },
+    {
+      "note": "feasible صورت مثبت همین واژه است و یعنی شدنی و عملی.",
+      "word": "feasible"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "unfeasible",
   "lemma": "unfeasible",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +40,47 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "feasible",
+        "workable"
+      ],
+      "definition": "not able to be done or carried out in practice",
+      "examples": [
+        {
+          "en": "Building the whole tunnel in a single year proved unfeasible.",
+          "fa": "ساختن کل تونل در یک سال ناشدنی از آب درآمد."
+        }
+      ],
+      "ipa": "/ˌʌnˈfiːzəbl/",
+      "pos": "adj",
+      "synonyms": [
+        "impractical",
+        "unworkable"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "ناشدنی",
+        "غیرعملی",
+        "اجرانشدنی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

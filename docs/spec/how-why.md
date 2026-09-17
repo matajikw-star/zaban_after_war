@@ -224,6 +224,7 @@ because the product is early. Decisions made at the start:
 | `lucide-react` | Icons, tree-shaken. |
 | `radix-ui`, `class-variance-authority`, `clsx`, `tailwind-merge` | The shadcn/ui pattern (§7.9). |
 | `fast-check` | Property tests for the engine (§16.1). |
+| `@vitest/coverage-v8`, `vitest` (in `packages/core`) | The engine's 100 % line-coverage report (`pnpm --filter @kl/core coverage`). |
 | `@playwright/test` | E2E (§16.2). |
 | `@types/react`, `@types/react-dom` | Types for React 19; React ships none itself. |
 

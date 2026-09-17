@@ -96,7 +96,7 @@ apps/
   landing/        the one-page marketing site (Vite, static)                [building — placeholder]
   admin/          the owner's stats dashboard (Vite + React, tiny)          [building — scaffold]
 packages/
-  core/           the SRS engine: pure functions, exhaustively tested       [building — types exist, superseded]
+  core/           the SRS engine: pure functions, exhaustively tested       [live]
   content/        JSON schemas, lint, package builder                       [building — lint exists]
   design/         design tokens (CSS variables), fonts, shared base styles  [building — tokens + Vazirmatn]
 server/
@@ -182,18 +182,25 @@ export interface ItemState {
   readonly box: Box;               // live schedule box
   readonly highWaterBox: Box;      // never decreases; drives progress
   readonly lastReviewedAt: number;
-  readonly dueAt: number;          // lastReviewedAt + INTERVAL_MS[box]
+  readonly dueAt: number;          // lastReviewedAt + params.intervalsMs[box]
   readonly reviewCount: number;
   readonly lapseCount: number;
 }
 
-export interface Fold {
-  readonly items: ReadonlyMap<ItemId, ItemState>;
-  readonly byDay: ReadonlyMap<DayKey, DayStats>;   // Tehran-local day → {presentations, correct, conquered, introduced}
-  readonly lastEventAt: number;
+export interface DayStats {
+  readonly presentations: number;   // every event, whatever its kind or grade
+  readonly correct: number;         // events with grade 1, `know` included
+  readonly conquered: number;       // highWaterBox first reached 5 today, through a `review` only
+  readonly introduced: number;      // items whose first event ever fell today
 }
 
-export type DayKey = number; // floor((at + TEHRAN_OFFSET_MS) / DAY_MS)
+export interface Fold {
+  readonly items: ReadonlyMap<ItemId, ItemState>;
+  readonly byDay: ReadonlyMap<DayKey, DayStats>;   // Tehran-local day → DayStats
+  readonly lastEventAt: number;                    // 0 for an empty log
+}
+
+export type DayKey = number; // floor((at + TEHRAN_OFFSET_MS) / DAY_MS), in day.ts
 
 export interface ContentItem {            // the engine's view of a word; the card has more
   readonly id: ItemId;
@@ -217,43 +224,63 @@ export interface Params {                 // one object, one file: params.ts. Tu
 
 ### 5.2 The fold
 
-`fold(events: ReviewEvent[], params): Fold`
+`fold(events: readonly ReviewEvent[], params: Params): Fold` — `fold.ts`, with
+`isConquered(state)` alongside it.
 
-- Sort by `(at, id)`; ignore exact-duplicate ids (sync can deliver the same event twice).
+- Sort by `(at, id)`; ignore exact-duplicate ids (sync can deliver the same event twice). The
+  array it is given is never mutated.
+- An item with no events yet is treated as box 1 and already due, so its first `review` with
+  grade 1 promotes it to box 2. That is what makes the seven-day minimum (1 + 2 + 4 days)
+  reachable.
 - `review` grade 1 → `box = min(box+1, 5)` **only if** `at ≥ dueAt` (interval elapsed); an
   early correct answer leaves the box unchanged. Grade 0 → `box = 1`, `lapseCount++`, always.
-- `know` → `box = 5`.
+- `know` → `box = 5`, whatever the grade recorded on it, and it never counts a lapse.
 - `highWaterBox = max(highWaterBox, box)` after every event.
-- `dueAt = at + intervalsMs[box]` after every event.
+- `dueAt = at + intervalsMs[box]` after every event — an early answer therefore postpones the
+  next due date without promoting the card.
+- `reviewCount` counts every event for the item, `know` included.
 - A word is **conquered** when `highWaterBox === 5`. It keeps being scheduled (box 5 every 8
   days) but its progress contribution is already full.
-- `byDay` counts presentations (every event), correct answers, words conquered that day (first
-  time `highWaterBox` reaches 5), words introduced that day (first event for the id).
+- `byDay` counts presentations (every event), correct answers (grade 1), words conquered that
+  day (first time `highWaterBox` reaches 5 **through a `review`**; a `know` never counts, since
+  this number feeds the introduction budget), words introduced that day (first event for the id).
 - Property: folding a shuffled log gives the same `Fold` (tested with fast-check).
 
 ### 5.3 Progress, streak, pace
 
 ```ts
 progress(fold, content): { percent: number; conquered: number; total: number; weightEarned: number; weightTotal: number }
-//   Σ over content items of (highWaterBox/5 × weight) / Σ weight. Unseen items contribute 0.
+//   Σ over content items of (highWaterBox/5 × weight) / Σ weight, as a percentage (0..100, and 0
+//   when the content carries no weight at all). Unseen items contribute 0.
 //   weight = timesTested; context-only words (weight 0) never move the percentage. Never decreases.
+//   `conquered` and `total` count content items, context words included.
 
 streak(fold, dailyGoal, now, params): { days: number; todayCounts: boolean }
-//   A day counts when presentations ≥ max(10, ceil(goal × streakMinFraction)). Consecutive
-//   Tehran-local days ending today or yesterday. Yesterday-only keeps the streak alive; today not yet counted.
+//   A day counts when presentations ≥ max(STREAK_MIN_PRESENTATIONS, ceil(goal × streakMinFraction)).
+//   The floor of 10 is a constant in streak.ts, not a tunable. Consecutive Tehran-local days ending
+//   today or yesterday. Yesterday-only keeps the streak alive; today not yet counted.
 
 paceEstimate(fold, content, dailyGoal, examDate, now, params):
   { remainingSteps: number; stepsPerDay: number; daysNeeded: number; daysLeft: number; verdict: 'ahead' | 'ok' | 'behind' }
 //   remainingSteps = Σ (5 − highWaterBox) over seen items + 5 × unseen items (weight > 0 only).
-//   stepsPerDay = goal × accuracy(last 7 days, default 0.8) × 0.9 (the 0.9 covers early answers that do not promote).
-//   verdict 'behind' when daysNeeded > daysLeft × 1.1; the UI nudges the goal up.
+//   stepsPerDay = goal × accuracy(last 7 days, default 0.8) × EARLY_ANSWER_FACTOR = 0.9 (the 0.9
+//   covers early answers that do not promote). `recentAccuracy(fold, now, params)` is exported too.
+//   daysLeft = max(0, whole Tehran days from now to examDate); daysNeeded = ceil(remainingSteps / stepsPerDay),
+//   0 when nothing is left and Infinity when the goal is 0.
+//   verdict 'behind' when daysNeeded > daysLeft × 1.1, 'ahead' when < daysLeft × 0.7, else 'ok';
+//   the UI nudges the goal up on 'behind'.
 ```
 
 ### 5.4 Queue: what card comes next
 
-`nextCard(fold, content, recent: ItemId[], now, dailyGoal, rng, params): { itemId; source: 'due' | 'new' | 'conquered' | 'early' } | null`
+`nextCard(fold, content, recent: readonly ItemId[], now, dailyGoal, rng: () => number, params): { itemId; source: 'due' | 'new' | 'conquered' | 'early' } | null`
 
-Order of pools, first non-empty wins:
+`recent` is **most-recent-first**: `recent[0]` is the card the user just saw. `rng` returns a
+number in [0, 1).
+
+Order of pools, first non-empty wins — except that pool 2 is tested **before** pool 1, because its
+own guard is "pool 1 is thin": reading the order literally would leave `minDuePool` dead, since a
+non-empty due pool would always win and an empty one is thinner than any threshold.
 
 1. **Due, not conquered** — `box < 5`, `dueAt ≤ now`. Weighted random: weight
    `(1 + overdueDays) × boxDrawFactor[box]`, computed **per word** (never per box). The
@@ -268,12 +295,22 @@ Order of pools, first non-empty wins:
 4. **Early** — not-yet-due words, soonest-due first. Grade 1 does not promote; grade 0 demotes.
    This pool is why the app can never say "you are done".
 
-`null` only when the content is empty. The UI never shows an empty-queue state.
+Every pool is drawn from the content package: an item the fold knows but the package does not
+carry has no card, so it is ignored. Pools 3 and 4 break a tie on `itemId`, so the queue is
+reproducible from the same fold.
+
+`null` only when no content item can be shown at all — empty content, or content that the fold has
+never touched and the budget cannot introduce. The UI never shows an empty-queue state.
+
+Three helpers ship with it, all pure: `introductionBudget(fold, dailyGoal, now, params)` returning
+`{ floor, cap, budget, introduced, remaining }`, and, for the boxes screen,
+`dueCounts(fold, now): Record<Box, number>` and
+`boxCounts(fold, content): { byBox: Record<Box, number>; unseen: number }`.
 
 ### 5.5 Daily goal from onboarding
 
 `goalFromMinutes(minutes) = max(50, minutes × 10)` presentations; onboarding offers 10 / 20 / 30 /
-45 minutes. The exam date only feeds `paceEstimate`; it never changes intervals.
+45 minutes (`ONBOARDING_MINUTES`). The exam date only feeds `paceEstimate`; it never changes intervals.
 
 ### 5.6 Placement
 

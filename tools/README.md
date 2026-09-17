@@ -6,7 +6,7 @@ step and no bundler here. Every one is registered as a root `pnpm` script.
 
 | Script | Entry | Does | State |
 |---|---|---|---|
-| `pnpm simulate` | `tools/simulate/index.ts` | Runs a synthetic user through the engine and prints the schedule (what.md §5.7). | stub |
+| `pnpm simulate` | `tools/simulate/index.ts` | Runs a synthetic user through the engine and prints the schedule (what.md §5.7). | working |
 | `pnpm errors` | `tools/errors/index.ts` | Groups `client_errors` into a ranked list and symbolicates a stack (§10.3). | stub |
 | `pnpm logs` | `tools/logs/index.ts` | Tails and filters the server's structured logs by request id (§10.2). | stub |
 | `pnpm flags` | `tools/flags/index.ts` | Lists and resolves user-submitted word flags (§10.3). | stub |

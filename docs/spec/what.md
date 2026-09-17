@@ -318,11 +318,42 @@ Onboarding offers the top 100 words by rank as a swipe list: «بلدم» emits 
 «بلد نیستم» emits nothing (the word will be introduced normally). Skippable, and the first thing
 cut if time is short.
 
-### 5.7 Simulator (`tools/simulate`)
+### 5.7 Simulator (`tools/simulate`) `[live]`
 
 Replays a synthetic user (accuracy profile, minutes/day, days) through the real engine and prints
 the schedule, introductions, conquests per day, and the pace estimate versus reality. Parameter
 tuning is a conversation about its output, never about vibes.
+
+`pnpm simulate --minutes M --days D --accuracy A` (`A` a constant or five comma-separated
+per-box values); `--words N` caps to the top N words by the §6.2 rank order, `--seed`, `--exam-days`
+and `--json` round it out. The default word set and its weights are read from `content/lexicon`
+at run time, never hard-coded.
+
+**Measured, 2026-09-18** — seed 20260918, the full lexicon (1,776 words with `timesTested > 0`),
+90 days, constant accuracy 0.85:
+
+| minutes/day | conquest days (min · p25 · median · p75 · max) | all conquered by | pace estimate at day 0 | error |
+|---|---|---|---|---|
+| 10 | 7 · 8 · 8 · 11 · 44 | not within 90 days (1,321/1,776) | day 124 | n/a |
+| 20 | 7 · 7 · 8 · 11 · 36 | day 81 | day 62 | −19 days |
+| 45 | 7 · 7 · 8 · 11 · 51 | day 68 | day 28 | −40 days |
+
+The seven-day floor holds in every run. The median does not — it lands at 8 days, not the
+2–3 weeks the simulator's own ticket assumed before it was built: with 200+ presentations/day
+against 1,776 words, review capacity so outstrips due-load that most words are reviewed almost
+exactly on the day they come due, so most words ride the ladder's 7-day minimum (1 + 2 + 4 days)
+with barely any slack. This is a real finding, not a bug, and no parameter in `params.ts` was
+changed to produce it — the fast median is a property of this content size and these goals, and
+whether it is desirable (fast wins keep motivation up) or not (the app should feel more like a
+multi-week course) is a product call for the owner, not an engine one.
+
+The pace estimate is a **lower bound**, not a forecast: it counts remaining box-steps against a
+naive `goal × accuracy × 0.9` throughput and ignores the ladder's fixed wait times, so it always
+finishes optimistic — the gap widens as the daily goal grows (−19 days at 20 min, −40 at 45),
+since a bigger goal buys speed only up to the point where the ladder's own intervals become the
+bottleneck instead of review capacity. This is a property of the estimate's definition (§5.3),
+not a bug; no parameter was changed here either. If a tighter exam-readiness estimate is wanted,
+that is a `paceEstimate` formula change, to be made from this data, not from vibes.
 
 ---
 

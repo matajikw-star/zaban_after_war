@@ -9,15 +9,19 @@ Persian terms are given where you will meet them in an Iranian panel.
 
 ### A1. VPS at Parspack — «سرور مجازی»
 
-- Plan: Linux VPS, **2 vCPU, 4 GB RAM, 40 GB NVMe SSD**, Iranian datacenter, monthly billing.
-  If the exact tier does not exist, take the nearest with ≥ 4 GB RAM; do not go below 2 GB.
+- Plan: **VPS2 — 1 vCPU, 2 GB RAM, 40 GB SSD**, location **Iran** («ایران»), monthly billing.
+  PocketBase and Caddy together idle under 200 MB; this tier serves thousands of users, and
+  Parspack resizes in place («ارتقا») if it ever does not. VPS1 (1 GB) would also run it but
+  leaves no headroom for the nightly backup job.
 - OS image: **Ubuntu 24.04 LTS** (64-bit). Nothing pre-installed (no cPanel, no Docker image).
 - Traffic: unlimited domestic («ترافیک داخلی نامحدود») is enough; international traffic is
   only used by deploys and TLS issuance.
 - At purchase: choose a **root password** and, if offered, paste an SSH public key (Claude will
   generate one for you in Phase 4 if not).
-- Hand over: the **IP address**, the **root password** (or key), the panel login. Claude creates
-  the `kl` user, disables password login and never uses root again.
+- Hand over: the **IP address** and the **root password** (from the order e-mail or the panel's
+  «مشخصات سرور»). Put them in `.env.local` as `VPS_IP=` and `VPS_ROOT_PASSWORD=`. Claude connects
+  over SSH from your machine, creates the `kl` user with a key, disables password login and
+  never uses root again; you can then change or forget the root password.
 
 ### A2. SMS panel at Kavenegar — «پنل پیامک»
 
@@ -25,7 +29,9 @@ Persian terms are given where you will meet them in an Iranian panel.
   verification («احراز هویت») is required before any SMS is sent.
 - Buy initial credit: **500,000 toman** is plenty for beta and launch (an OTP costs on the order
   of a few hundred toman; verify the current price in the panel and record it).
-- No dedicated line is needed: OTPs go through **Verify Lookup** («سرویس اعتبارسنجی»). Create a
+- **Ignore «وب‌پوش» (web push)** — that page is for browser notifications, which the product
+  does not use, and its `<script>` snippet must never be added to the site (ADR-0005).
+- No dedicated line is needed: OTPs go through **Verify Lookup** (sidebar «اعتبارسنجی»). Create a
   template («الگو») named `kl-otp` with exactly this text and submit it for approval:
 
   ```
@@ -34,7 +40,11 @@ Persian terms are given where you will meet them in an Iranian panel.
 
   (If they require the app name in the text, use the placeholder name for now; the template is
   edited once the Persian name is chosen.)
-- Hand over: the **API key** («کلید API»), the approved **template name**, the panel login.
+- Hand over: the **API key** (user menu at the top → account settings → «API Key»; it is a long
+  hex string, not the web-push `appId`), and the approved **template name**. Put them in
+  `.env.local` as `SMS_API_KEY=` and `SMS_OTP_TEMPLATE=kl-otp`.
+- Credit: the 550,000 rial (55,000 toman) already on the account covers a few hundred OTPs —
+  enough for beta; top up before launch.
 
 Fallback if Kavenegar rejects the account or approval stalls beyond a week: SMS.ir with its
 «ارسال سریع» template. Claude's code talks to one interface; the swap is one file.
@@ -43,19 +53,23 @@ Fallback if Kavenegar rejects the account or approval stalls beyond a week: SMS.
 
 - In the merchant panel, make sure the registered website is `konkurleitner.com` and the
   merchant is in «درگاه مستقیم» mode.
-- Hand over: the **Merchant ID** («مرچنت کد», a UUID), the panel login (to check payments and
-  do refunds), and confirmation of whether your merchant amounts are in **rial or toman** (the
-  panel's settings say; Claude verifies with a real 1,000-toman payment in Phase 5).
+- Merchant ID: **received 2026-09-17** and stored in `.env.local`. Amounts: the v4 API takes an
+  explicit `currency` of `IRT` (toman), so no panel setting matters; Claude still verifies with
+  one real 1,000-toman payment in Phase 5.
 - Enable the **sandbox** («محیط تست») if the panel offers it; otherwise Claude uses Zarinpal's
   public sandbox merchant.
 
 ### A4. Domain DNS — `konkurleitner.com`
 
-- Log in to wherever the domain is registered (the reseller you bought it from).
-- Hand over: either the registrar login, or add these four `A` records yourself when Claude
-  gives you the VPS IP: `@`, `www`, `app`, `admin`, all → the VPS IP, TTL 300.
-- If the registrar's DNS panel is unusable, sign up for ArvanCloud DNS (free) and move the
-  nameservers there; tell Claude which.
+- Claude cannot click through a registrar's web panel, so DNS goes one of two ways:
+  - **Option 1, Claude does it (preferred):** sign up at ArvanCloud (panel.arvancloud.ir, free,
+    needs one-time identity verification), add the domain under «DNS ابری», and set the two
+    nameservers it shows at your registrar. Then create an API key («کلید API» in the profile
+    menu) and put it in `.env.local` as `ARVAN_API_KEY=`. Claude creates and maintains every
+    record from then on.
+  - **Option 2, you add four records:** in the registrar's DNS panel add `A` records `@`, `www`,
+    `app`, `admin` → the VPS IP, TTL 300, when Claude gives you the IP.
+- Either way, tell Claude where the domain is registered.
 
 ### A5. Backup storage — S3-compatible, a few GB
 

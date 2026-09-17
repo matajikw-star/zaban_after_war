@@ -551,9 +551,9 @@ in-hook counter where the key is a phone number or install id.
 ### 8.3 Payment rules
 
 - Prices are read from `app_config` on the server at request time; the client only displays.
-- Amounts are toman in our records; Zarinpal is called in the unit its API expects (rial or toman
-  per merchant setting — verified once in Phase 5 with a 1,000-toman real payment and recorded
-  here).
+- Amounts are toman everywhere; Zarinpal v4 is called with `currency: "IRT"` on both `request`
+  and `verify`, so no merchant-panel setting is involved. Verified once in Phase 5 with a real
+  1,000-toman payment and recorded here.
 - Verification compares the amount; a mismatch fails the payment and logs an error.
 - A user who already holds an entitlement gets `codeStatus: 'already-entitled'` from `quote` and
   `request` refuses to charge twice.
@@ -730,7 +730,9 @@ Detects in-app browsers and tells the user to open in Chrome. No JavaScript beyo
 
 ### 14.1 The machine
 
-One Parspack VPS: 2 vCPU, 4 GB RAM, 40 GB NVMe, Ubuntu 24.04 LTS, Iranian datacenter. Setup is
+One Parspack **VPS2**: 1 vCPU, 2 GB RAM, 40 GB SSD, Ubuntu 24.04 LTS, Iran location (100 GB/month
+traffic, which is ~150,000 paid-package downloads). PocketBase and Caddy idle under 200 MB; this
+tier carries thousands of users, and Parspack resizes in place if it ever does not. Setup is
 `docs/runbooks/server-setup.md` (planned) and is scripted in `server/deploy/bootstrap.sh`:
 
 - user `kl` (no root login, SSH keys only, password auth off), `ufw` allowing 22/80/443,
@@ -769,8 +771,9 @@ its edge certificate — recorded here if it happens.
 
 ### 14.3 DNS
 
-`A` records for the apex, `www`, `app`, `admin` → the VPS IP, at the registrar's DNS panel (or
-ArvanCloud DNS if the registrar's panel is unusable). TTL 300 during launch.
+`A` records for the apex, `www`, `app`, `admin` → the VPS IP. Preferred: nameservers at
+ArvanCloud DNS (free, Iranian, has an API) so records are managed by `tools/dns` from
+`ARVAN_API_KEY`; fallback: the owner adds them at the registrar. TTL 300 during launch.
 
 ### 14.4 Deploy procedure
 
@@ -887,6 +890,8 @@ PocketBase binary); `deploy` on `main` if SSH works; `android` on tags. Branch p
 (`kavenegar`|`console`), `SMS_API_KEY`, `SMS_OTP_TEMPLATE`, `ZARINPAL_MERCHANT_ID`,
 `ZARINPAL_SANDBOX` (`0`|`1`), `ZARINPAL_CALLBACK_URL`, `PUBLIC_APP_ORIGIN`, `CONTENT_DIR`,
 `SOURCEMAP_DIR`, `BACKUP_S3_ENDPOINT`, `BACKUP_S3_BUCKET`, `BACKUP_S3_KEY`, `BACKUP_S3_SECRET`.
+Local bootstrap and DNS (`.env.local`, git-ignored, used once): `VPS_IP`, `VPS_ROOT_PASSWORD`,
+`ARVAN_API_KEY`.
 GitHub: `DEPLOY_HOST`, `DEPLOY_USER`, `DEPLOY_SSH_KEY`, `ANDROID_KEYSTORE_B64`,
 `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`. Build: `VITE_API_ORIGIN`, `VITE_APP_NAME`
 (the deferred Persian name — one constant). Local tools (`.env.local`, git-ignored):

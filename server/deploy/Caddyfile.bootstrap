@@ -1,0 +1,27 @@
+# Temporary Caddyfile used between bootstrap and the first real deploy.
+# All three hostnames serve the same static placeholder over HTTPS, which is what
+# Kavenegar's template review and Zarinpal's site check need to see.
+# Replaced by server/Caddyfile when PocketBase is deployed (docs/spec/what.md §14.2).
+
+{
+	email admin@konkurleitner.com
+}
+
+(common) {
+	encode zstd gzip
+	header X-Robots-Tag "noindex"
+	log {
+		output file /var/log/caddy/access.log
+		format json
+	}
+}
+
+www.konkurleitner.com {
+	redir https://konkurleitner.com{uri} 308
+}
+
+konkurleitner.com, app.konkurleitner.com, admin.konkurleitner.com {
+	import common
+	root * /opt/kl/placeholder
+	file_server
+}

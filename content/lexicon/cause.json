@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "course یعنی دوره یا مسیر؛ نزدیکی تلفظ باعث اشتباه رایج با cause می‌شود",
+      "word": "course"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "cause",
   "lemma": "cause",
-  "level": null,
+  "level": "A2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,92 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "prevent"
+      ],
+      "definition": "to make something happen, especially something unwanted",
+      "examples": [
+        {
+          "en": "Heavy rain caused the river to overflow into nearby streets.",
+          "fa": "باران شدید باعث شد رودخانه به خیابان‌های اطراف سرریز کند."
+        }
+      ],
+      "ipa": "/kɔːz/",
+      "pos": "v",
+      "synonyms": [
+        "bring about",
+        "produce"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p03",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "باعث شدن",
+        "سبب شدن",
+        "ایجاد کردن"
+      ]
+    },
+    {
+      "antonyms": [
+        "effect",
+        "result"
+      ],
+      "definition": "the person, event or thing that makes something happen",
+      "examples": [
+        {
+          "en": "Investigators are still looking for the cause of the fire.",
+          "fa": "بازرسان هنوز در پی یافتن علت آتش‌سوزی هستند."
+        }
+      ],
+      "ipa": "/kɔːz/",
+      "pos": "n",
+      "synonyms": [
+        "reason",
+        "source"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p02",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "علت",
+        "سبب",
+        "دلیل"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "an aim or principle that a group of people work hard to support",
+      "examples": [
+        {
+          "en": "She gave most of her salary to a cause she believed in.",
+          "fa": "بیشتر حقوقش را به آرمانی داد که به آن باور داشت."
+        }
+      ],
+      "ipa": "/kɔːz/",
+      "pos": "n",
+      "synonyms": [
+        "movement"
+      ],
+      "testedIn": [],
+      "translations": [
+        "آرمان",
+        "هدف اجتماعی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

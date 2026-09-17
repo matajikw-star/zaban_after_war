@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "chronicle یعنی وقایع‌نگاری و شرح رویدادها، نه خودِ ترتیب زمانی آن‌ها",
+      "word": "chronicle"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "chronology",
   "lemma": "chronology",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,43 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "the order in which a series of events happened, or a list of them in that order",
+      "examples": [
+        {
+          "en": "The book opens with a clear chronology of the war years.",
+          "fa": "کتاب با سالشماری روشن از سال‌های جنگ آغاز می‌شود."
+        }
+      ],
+      "ipa": "/krəˈnɒlədʒi/",
+      "pos": "n",
+      "synonyms": [
+        "timeline"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "ترتیب زمانی رویدادها",
+        "گاه‌شماری",
+        "سالشمار"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

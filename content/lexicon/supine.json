@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "prone یعنی دمر و رو به پایین، درست نقطه مقابل supine که یعنی طاق‌باز.",
+      "word": "prone"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "supine",
   "lemma": "supine",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,64 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "prone"
+      ],
+      "definition": "lying on your back with your face turned upward",
+      "examples": [
+        {
+          "en": "For this scan, the patient must remain supine for ten minutes.",
+          "fa": "برای این اسکن، بیمار باید ده دقیقه طاق‌باز بماند."
+        }
+      ],
+      "ipa": "/ˈsuːpaɪn/",
+      "pos": "adj",
+      "synonyms": [
+        "face-up"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 21
+        }
+      ],
+      "translations": [
+        "طاق‌باز",
+        "به پشت خوابیده"
+      ]
+    },
+    {
+      "antonyms": [
+        "assertive"
+      ],
+      "definition": "failing to act or resist when you should, because of weakness or laziness",
+      "examples": [
+        {
+          "en": "The council was criticized as supine in the face of the developers.",
+          "fa": "شورا را در برابر سازندگان منفعل و بی‌عمل خواندند."
+        }
+      ],
+      "ipa": "/ˈsuːpaɪn/",
+      "pos": "adj",
+      "synonyms": [
+        "passive",
+        "inert"
+      ],
+      "testedIn": [],
+      "translations": [
+        "منفعل",
+        "بی‌عمل",
+        "تن‌آسا"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1

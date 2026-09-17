@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "conservationist یعنی طرفدار حفاظت از محیط زیست، نه محافظه‌کار",
+      "word": "conservationist"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "conservative",
   "lemma": "conservative",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,65 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "progressive",
+        "radical"
+      ],
+      "definition": "not liking change, and preferring traditional ways of doing things",
+      "examples": [
+        {
+          "en": "His taste in clothes is conservative: dark suits and plain shirts.",
+          "fa": "سلیقه‌اش در لباس محافظه‌کارانه است: کت و شلوار تیره و پیراهن ساده."
+        }
+      ],
+      "ipa": "/kənˈsɜːvətɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "traditional"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "محافظه‌کار",
+        "سنت‌گرا"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "of an estimate, deliberately lower than the real figure is likely to be",
+      "examples": [
+        {
+          "en": "At a conservative estimate, repairs will take at least three months.",
+          "fa": "به برآوردی محتاطانه، تعمیرات دست‌کم سه ماه طول می‌کشد."
+        }
+      ],
+      "ipa": "/kənˈsɜːvətɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "cautious"
+      ],
+      "testedIn": [],
+      "translations": [
+        "محتاطانه (برآورد)",
+        "دست‌پایین"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "trepidation یعنی دلهره و نگرانی پیش از رویداد، نه خودِ رنج و مصیبت.",
+      "word": "trepidation"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "tribulation",
   "lemma": "tribulation",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,44 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "blessing",
+        "ease"
+      ],
+      "definition": "a serious trouble or hardship that causes suffering, especially one lasting a long time",
+      "examples": [
+        {
+          "en": "They spoke of the trials and tribulations of their first year abroad.",
+          "fa": "از سختی‌ها و مصیبت‌های سال اول زندگی در غربت گفتند."
+        }
+      ],
+      "ipa": "/ˌtrɪbjuˈleɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "ordeal",
+        "affliction",
+        "hardship"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p07",
+          "questionNo": 17
+        }
+      ],
+      "translations": [
+        "مصیبت",
+        "رنج و سختی",
+        "محنت"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1

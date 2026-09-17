@@ -6,7 +6,7 @@
   },
   "id": "bright",
   "lemma": "bright",
-  "level": null,
+  "level": "A2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,70 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "dark",
+        "dim"
+      ],
+      "definition": "full of light, or shining strongly",
+      "examples": [
+        {
+          "en": "The kitchen is bright in the morning because it faces east.",
+          "fa": "آشپزخانه صبح‌ها روشن است چون رو به شرق دارد."
+        }
+      ],
+      "ipa": "/braɪt/",
+      "pos": "adj",
+      "synonyms": [
+        "shining",
+        "radiant"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "روشن",
+        "درخشان",
+        "پرنور"
+      ]
+    },
+    {
+      "antonyms": [
+        "dull"
+      ],
+      "definition": "quick at learning and understanding things",
+      "examples": [
+        {
+          "en": "She is a bright student who finishes the exercises before everyone else.",
+          "fa": "او دانش‌آموز باهوشی است که تمرین‌ها را زودتر از همه تمام می‌کند."
+        }
+      ],
+      "ipa": "/braɪt/",
+      "pos": "adj",
+      "synonyms": [
+        "clever",
+        "intelligent"
+      ],
+      "testedIn": [],
+      "translations": [
+        "باهوش",
+        "زرنگ"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

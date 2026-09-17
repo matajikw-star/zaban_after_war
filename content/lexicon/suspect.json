@@ -1,12 +1,12 @@
 {
   "confusables": [],
   "homograph": {
-    "note": null,
-    "suspected": false
+    "note": "The verb is /səˈspekt/ while the noun and adjective are stressed on the first syllable, /ˈsʌspekt/; a mnemonic must say which of the two it is teaching.",
+    "suspected": true
   },
   "id": "suspect",
   "lemma": "suspect",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +42,96 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "trust",
+        "verify"
+      ],
+      "definition": "to think without proof that something is probably true, especially something bad, or to doubt that something is honest or genuine",
+      "examples": [
+        {
+          "en": "Police suspected that the fire had been started deliberately.",
+          "fa": "پلیس گمان می‌برد که آتش‌سوزی عمدی بوده است."
+        }
+      ],
+      "ipa": "/səˈspekt/",
+      "pos": "v",
+      "synonyms": [
+        "surmise",
+        "doubt",
+        "distrust"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "گمان بردن",
+        "مشکوک بودن به",
+        "ظنین بودن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a person the police believe may have committed a crime",
+      "examples": [
+        {
+          "en": "The main suspect was released for lack of evidence.",
+          "fa": "مظنون اصلی به دلیل نبود مدرک آزاد شد."
+        }
+      ],
+      "ipa": "/ˈsʌspekt/",
+      "pos": "n",
+      "synonyms": [
+        "accused"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مظنون",
+        "متهم احتمالی"
+      ]
+    },
+    {
+      "antonyms": [
+        "reliable",
+        "sound"
+      ],
+      "definition": "likely to be false, faulty or dangerous, and therefore not to be trusted",
+      "examples": [
+        {
+          "en": "His figures looked suspect to the auditors.",
+          "fa": "ارقام او به نظر حسابرسان مشکوک می‌آمد."
+        }
+      ],
+      "ipa": "/ˈsʌspekt/",
+      "pos": "adj",
+      "synonyms": [
+        "dubious",
+        "questionable"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مشکوک",
+        "غیرقابل‌اعتماد"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

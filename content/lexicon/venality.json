@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "venial یعنی (گناه یا خطای) کوچک و بخشودنی و ربطی به پول و رشوه ندارد",
+      "word": "venial"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "venality",
   "lemma": "venality",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,42 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "integrity"
+      ],
+      "definition": "willingness to act dishonestly in return for money or other rewards",
+      "examples": [
+        {
+          "en": "The venality of the inspectors let unsafe buildings pass every check.",
+          "fa": "رشوه‌پذیری بازرسان باعث شد ساختمان‌های ناایمن از هر بازرسی بگذرند."
+        }
+      ],
+      "ipa": "/vɪˈnæləti/",
+      "pos": "n",
+      "synonyms": [
+        "corruptibility",
+        "corruption"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 23
+        }
+      ],
+      "translations": [
+        "رشوه‌پذیری",
+        "فساد مالی",
+        "پول‌پرستی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

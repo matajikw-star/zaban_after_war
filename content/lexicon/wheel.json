@@ -6,7 +6,7 @@
   },
   "id": "wheel",
   "lemma": "wheel",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,53 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "used in \"a fifth wheel\", a person who is not needed and feels out of place in a group",
+      "examples": [
+        {
+          "en": "Among the old friends, the new colleague felt like a fifth wheel.",
+          "fa": "میان دوستان قدیمی، همکار تازه احساس می‌کرد آدم زیادی است."
+        }
+      ],
+      "ipa": "/ˌfɪfθ ˈwiːl/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 16
+        }
+      ],
+      "translations": [
+        "آدم زیادی",
+        "وصله ناجور"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a round part under a vehicle or machine that turns and makes it move",
+      "examples": [
+        {
+          "en": "One wheel of the cart came loose on the rough road.",
+          "fa": "یکی از چرخ‌های گاری در جاده ناهموار شل شد."
+        }
+      ],
+      "ipa": "/wiːl/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "چرخ"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1

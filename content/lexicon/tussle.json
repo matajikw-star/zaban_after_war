@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "tousle یعنی (موی کسی را) آشفته و ژولیده کردن؛ املا و تلفظ بسیار نزدیک است",
+      "word": "tousle"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "tussle",
   "lemma": "tussle",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,58 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a short, rough struggle or fight, especially over something both sides want",
+      "examples": [
+        {
+          "en": "The two boys had a brief tussle over the last seat.",
+          "fa": "آن دو پسر بر سر آخرین صندلی کشمکش کوتاهی داشتند."
+        }
+      ],
+      "ipa": "/ˈtʌsl/",
+      "pos": "n",
+      "synonyms": [
+        "scuffle",
+        "scrap"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 30
+        }
+      ],
+      "translations": [
+        "کشمکش",
+        "زد و خورد",
+        "گلاویزی"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to fight or struggle with someone by pushing and pulling",
+      "examples": [
+        {
+          "en": "Police tussled with protesters who tried to block the road.",
+          "fa": "پلیس با معترضانی که می‌خواستند جاده را ببندند گلاویز شد."
+        }
+      ],
+      "ipa": "/ˈtʌsl/",
+      "pos": "v",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "گلاویز شدن",
+        "دست و پنجه نرم کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 1

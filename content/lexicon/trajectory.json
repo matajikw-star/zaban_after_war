@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "itinerary یعنی برنامه و مسیر سفر، نه خط سیر پرتابه یا سیر پیشرفت.",
+      "word": "itinerary"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "trajectory",
   "lemma": "trajectory",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,61 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "the course that something such as a career or a process follows as it develops over time",
+      "examples": [
+        {
+          "en": "The company's growth followed an upward trajectory for a decade.",
+          "fa": "رشد شرکت یک دهه سیر صعودی داشت."
+        }
+      ],
+      "ipa": "/trəˈdʒektəri/",
+      "pos": "n",
+      "synonyms": [
+        "course",
+        "path"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 18
+        }
+      ],
+      "translations": [
+        "سیر",
+        "مسیر پیشرفت",
+        "روند"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "the curved path that an object follows as it moves through the air",
+      "examples": [
+        {
+          "en": "Physicists calculated the trajectory of the rocket.",
+          "fa": "فیزیک‌دانان مسیر حرکت موشک را محاسبه کردند."
+        }
+      ],
+      "ipa": "/trəˈdʒektəri/",
+      "pos": "n",
+      "synonyms": [
+        "flight path",
+        "arc"
+      ],
+      "testedIn": [],
+      "translations": [
+        "خط سیر",
+        "مسیر پرتابه"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

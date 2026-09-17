@@ -6,7 +6,7 @@
   },
   "id": "sui-generis",
   "lemma": "sui generis",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,43 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "ordinary",
+        "typical"
+      ],
+      "definition": "of its own kind, so that nothing else can properly be compared with it; a Latin phrase used in formal writing",
+      "examples": [
+        {
+          "en": "The building is sui generis, belonging to no recognized style.",
+          "fa": "آن ساختمان بی‌همتاست و به هیچ سبک شناخته‌شده‌ای تعلق ندارد."
+        }
+      ],
+      "ipa": "/ˌsuːi ˈdʒenərɪs/",
+      "pos": "adj",
+      "synonyms": [
+        "unique",
+        "unparalleled"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 23
+        }
+      ],
+      "translations": [
+        "بی‌همتا",
+        "یگانه در نوع خود",
+        "منحصربه‌فرد"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "evolve یعنی تکامل یافتن و به‌تدریج تغییر کردن",
+      "word": "evolve"
+    },
+    {
+      "note": "revolve یعنی چرخیدن دور یک محور",
+      "word": "revolve"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "devolve",
   "lemma": "devolve",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +40,65 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "centralize"
+      ],
+      "definition": "to pass power, work or responsibility from a central authority down to a lower level",
+      "examples": [
+        {
+          "en": "The government devolved health budgets to the provincial councils.",
+          "fa": "دولت بودجه‌های سلامت را به شوراهای استانی واگذار کرد."
+        }
+      ],
+      "ipa": "/dɪˈvɒlv/",
+      "pos": "v",
+      "synonyms": [
+        "delegate",
+        "transfer"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p07",
+          "questionNo": 20
+        },
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 12
+        }
+      ],
+      "translations": [
+        "واگذار کردن (اختیارات)",
+        "تفویض کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "used with \"into\", to get worse and turn into a disorderly state",
+      "examples": [
+        {
+          "en": "The meeting devolved into shouting before the first hour ended.",
+          "fa": "جلسه پیش از پایان ساعت نخست به داد و فریاد کشیده شد."
+        }
+      ],
+      "ipa": "/dɪˈvɒlv/",
+      "pos": "v",
+      "synonyms": [
+        "degenerate"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تنزل یافتن به",
+        "کشیده شدن به (وضعیتی بد)"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

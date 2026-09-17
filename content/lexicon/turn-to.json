@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "turn into یعنی تبدیل شدن به چیزی دیگر، نه روی آوردن به کاری",
+      "word": "turn into"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "turn-to",
   "lemma": "turn to",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,57 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to start doing a new activity, or to give your attention to it instead",
+      "examples": [
+        {
+          "en": "After the injury ended his career, he turned to coaching.",
+          "fa": "پس از آنکه مصدومیت به حرفه‌اش پایان داد، به مربیگری روی آورد."
+        }
+      ],
+      "ipa": "/ˈtɜːn tuː/",
+      "pos": "phr v",
+      "synonyms": [
+        "take up",
+        "switch to"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 33
+        }
+      ],
+      "translations": [
+        "روی آوردن به",
+        "پرداختن به"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to go to someone for help, advice or support",
+      "examples": [
+        {
+          "en": "When money runs short, most students turn to their families.",
+          "fa": "وقتی پول کم می‌آید، بیشتر دانشجوها به خانواده‌هایشان پناه می‌برند."
+        }
+      ],
+      "ipa": "/ˈtɜːn tuː/",
+      "pos": "phr v",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "به کسی پناه بردن",
+        "دست به دامن کسی شدن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

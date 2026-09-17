@@ -6,7 +6,7 @@
   },
   "id": "transformation",
   "lemma": "transformation",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +42,50 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "stagnation"
+      ],
+      "definition": "a complete change in the form, appearance or character of something",
+      "examples": [
+        {
+          "en": "The old factory underwent a transformation into a public library.",
+          "fa": "کارخانه قدیمی دگرگون شد و به کتابخانه‌ای عمومی تبدیل گشت."
+        }
+      ],
+      "ipa": "/ˌtrænsfəˈmeɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "conversion",
+        "metamorphosis"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "دگرگونی",
+        "تحول",
+        "تغییر شکل"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

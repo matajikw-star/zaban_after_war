@@ -6,7 +6,7 @@
   },
   "id": "stigmatize",
   "lemma": "stigmatize",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,40 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to treat someone or something as shameful and unacceptable, in a way that makes other people see them that way too",
+      "examples": [
+        {
+          "en": "Health campaigns have tried to stop society from stigmatizing mental illness.",
+          "fa": "کارزارهای سلامت کوشیده‌اند جلوی انگ‌زدن جامعه به بیماری روانی را بگیرند."
+        }
+      ],
+      "ipa": "/ˈstɪɡmətaɪz/",
+      "pos": "v",
+      "synonyms": [
+        "brand",
+        "label"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p08",
+          "questionNo": 16
+        }
+      ],
+      "translations": [
+        "انگ زدن",
+        "داغ ننگ زدن",
+        "بدنام کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 1

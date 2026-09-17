@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "uninterested یعنی بی‌علاقه، در حالی که disinterested بیشتر یعنی بی‌طرف و بی‌غرض",
+      "word": "uninterested"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "disinterest",
   "lemma": "disinterest",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,67 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "enthusiasm"
+      ],
+      "definition": "a lack of interest in something, or the state of not caring about it",
+      "examples": [
+        {
+          "en": "Public disinterest in the election showed in the very low turnout.",
+          "fa": "بی‌علاقگی مردم به انتخابات در مشارکت بسیار پایین دیده شد."
+        }
+      ],
+      "ipa": "/dɪsˈɪntrəst/",
+      "pos": "n",
+      "synonyms": [
+        "indifference",
+        "apathy"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "بی‌علاقگی",
+        "بی‌اعتنایی"
+      ]
+    },
+    {
+      "antonyms": [
+        "bias"
+      ],
+      "definition": "the quality of being fair because you have nothing personal to gain",
+      "examples": [
+        {
+          "en": "Scientific review depends on the disinterest of the people judging it.",
+          "fa": "داوری علمی به بی‌طرفی کسانی وابسته است که آن را ارزیابی می‌کنند."
+        }
+      ],
+      "ipa": "/dɪsˈɪntrəst/",
+      "pos": "n",
+      "synonyms": [
+        "impartiality"
+      ],
+      "testedIn": [],
+      "translations": [
+        "بی‌طرفی",
+        "نداشتن غرض شخصی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

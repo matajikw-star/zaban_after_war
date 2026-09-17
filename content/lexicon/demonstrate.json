@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "remonstrate یعنی اعتراض و گلایه کردن، نه نشان دادن",
+      "word": "remonstrate"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "demonstrate",
   "lemma": "demonstrate",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,84 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "disprove"
+      ],
+      "definition": "to show clearly that something is true, or that you have a particular quality",
+      "examples": [
+        {
+          "en": "The study demonstrates a clear link between sleep and exam results.",
+          "fa": "این پژوهش پیوند روشنی میان خواب و نتایج آزمون نشان می‌دهد."
+        }
+      ],
+      "ipa": "/ˈdemənstreɪt/",
+      "pos": "v",
+      "synonyms": [
+        "show",
+        "prove"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p01",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1403-p05",
+          "questionNo": 18
+        }
+      ],
+      "translations": [
+        "نشان دادن",
+        "اثبات کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to explain how something works by showing people how to do it",
+      "examples": [
+        {
+          "en": "The nurse demonstrated how to change the dressing at home.",
+          "fa": "پرستار نشان داد چگونه پانسمان را در خانه عوض کنند."
+        }
+      ],
+      "ipa": "/ˈdemənstreɪt/",
+      "pos": "v",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "نمایش عملی دادن",
+        "طرز کار چیزی را نشان دادن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to take part in a public march or gathering as a protest",
+      "examples": [
+        {
+          "en": "Thousands demonstrated outside the ministry for three days running.",
+          "fa": "هزاران نفر سه روز پیاپی مقابل وزارتخانه تظاهرات کردند."
+        }
+      ],
+      "ipa": "/ˈdemənstreɪt/",
+      "pos": "v",
+      "synonyms": [
+        "protest",
+        "rally"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تظاهرات کردن",
+        "راهپیمایی اعتراضی کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

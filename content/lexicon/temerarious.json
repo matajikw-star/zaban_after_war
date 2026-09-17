@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "timorous یعنی ترسو و کم‌جرئت، تقریباً نقطه مقابل temerarious که یعنی بی‌پروا.",
+      "word": "timorous"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "temerarious",
   "lemma": "temerarious",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,44 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "cautious",
+        "prudent"
+      ],
+      "definition": "acting with reckless boldness, without stopping to think about the danger",
+      "examples": [
+        {
+          "en": "It was a temerarious decision to sail without checking the forecast.",
+          "fa": "تصمیمی بی‌پروا بود که بدون بررسی پیش‌بینی هوا به دریا بزنند."
+        }
+      ],
+      "ipa": "/ˌteməˈreəriəs/",
+      "pos": "adj",
+      "synonyms": [
+        "rash",
+        "reckless",
+        "audacious"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 20
+        }
+      ],
+      "translations": [
+        "بی‌پروا",
+        "بی‌محابا",
+        "گستاخ و نترس"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

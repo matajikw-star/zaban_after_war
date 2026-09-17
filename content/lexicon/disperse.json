@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "disburse یعنی پرداخت کردن یا توزیع وجه و تلفظش بسیار نزدیک به disperse است",
+      "word": "disburse"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "disperse",
   "lemma": "disperse",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,47 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "gather",
+        "assemble"
+      ],
+      "definition": "to spread out over a wide area, or to make a crowd spread out and leave",
+      "examples": [
+        {
+          "en": "The crowd dispersed quietly once the announcement was made.",
+          "fa": "جمعیت پس از اعلام خبر آرام متفرق شد."
+        }
+      ],
+      "ipa": "/dɪˈspɜːs/",
+      "pos": "v",
+      "synonyms": [
+        "scatter",
+        "break up"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "پراکنده شدن",
+        "متفرق کردن",
+        "پخش شدن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "substantial صفت است به معنای چشمگیر و قابل‌توجه، نه فعلی به معنای اثبات کردن.",
+      "word": "substantial"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "substantiate",
   "lemma": "substantiate",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,44 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "refute",
+        "disprove"
+      ],
+      "definition": "to give evidence that shows a claim or a story is true",
+      "examples": [
+        {
+          "en": "The journalist could not substantiate the claims with documents.",
+          "fa": "روزنامه‌نگار نتوانست ادعاها را با اسناد اثبات کند."
+        }
+      ],
+      "ipa": "/səbˈstænʃieɪt/",
+      "pos": "v",
+      "synonyms": [
+        "verify",
+        "corroborate",
+        "prove"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p05",
+          "questionNo": 27
+        }
+      ],
+      "translations": [
+        "اثبات کردن",
+        "مستند کردن",
+        "با دلیل تأیید کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1403": 1

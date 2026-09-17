@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "dedicate یعنی وقف کردن یا اختصاص دادن و تنها در چند حرف با delicate فرق دارد",
+      "word": "dedicate"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "delicate",
   "lemma": "delicate",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,67 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "sturdy",
+        "robust"
+      ],
+      "definition": "easily damaged or broken, and so needing to be handled with care",
+      "examples": [
+        {
+          "en": "These delicate glasses must be washed by hand, never in machines.",
+          "fa": "این لیوان‌های ظریف باید با دست شسته شوند، نه در ماشین."
+        }
+      ],
+      "ipa": "/ˈdelɪkət/",
+      "pos": "adj",
+      "synonyms": [
+        "fragile"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "ظریف",
+        "شکننده",
+        "نازک"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "needing careful and sensitive treatment, because it could easily go wrong",
+      "examples": [
+        {
+          "en": "Asking him to step down was a delicate matter for everyone.",
+          "fa": "درخواست کناره‌گیری از او برای همه موضوعی حساس بود."
+        }
+      ],
+      "ipa": "/ˈdelɪkət/",
+      "pos": "adj",
+      "synonyms": [
+        "sensitive",
+        "tricky"
+      ],
+      "testedIn": [],
+      "translations": [
+        "حساس (موقعیت)",
+        "ظریف و حساس"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

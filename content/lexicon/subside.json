@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "subsidize یعنی یارانه دادن؛ آن را با subside به معنای فروکش کردن اشتباه نگیرید.",
+      "word": "subsidize"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "subside",
   "lemma": "subside",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,75 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "intensify",
+        "escalate"
+      ],
+      "definition": "to become gradually less strong, less severe or less loud until it almost stops",
+      "examples": [
+        {
+          "en": "The pain subsided a few hours after the injection.",
+          "fa": "درد چند ساعت پس از تزریق فروکش کرد."
+        }
+      ],
+      "ipa": "/səbˈsaɪd/",
+      "pos": "v",
+      "synonyms": [
+        "abate",
+        "diminish",
+        "ebb"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "فروکش کردن",
+        "آرام گرفتن",
+        "کاهش یافتن"
+      ]
+    },
+    {
+      "antonyms": [
+        "rise"
+      ],
+      "definition": "said of land or a building, to sink slowly to a lower level",
+      "examples": [
+        {
+          "en": "The ground near the river has subsided by several centimetres.",
+          "fa": "زمین نزدیک رودخانه چند سانتی‌متر نشست کرده است."
+        }
+      ],
+      "ipa": "/səbˈsaɪd/",
+      "pos": "v",
+      "synonyms": [
+        "sink",
+        "settle"
+      ],
+      "testedIn": [],
+      "translations": [
+        "نشست کردن (زمین یا ساختمان)",
+        "فرو نشستن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

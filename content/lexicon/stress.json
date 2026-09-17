@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "stressful صفتِ موقعیت است (استرس‌زا)، اما stressed out حال خودِ شخص را می‌گوید.",
+      "word": "stressful"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "stress",
   "lemma": "stress",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,90 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "relaxed",
+        "unruffled"
+      ],
+      "definition": "in the form \"stressed out\": worried and worn down because of too much pressure",
+      "examples": [
+        {
+          "en": "She gets stressed out whenever the deadline moves closer.",
+          "fa": "هر وقت مهلت کار نزدیک‌تر می‌شود، زیر فشار عصبی کلافه می‌شود."
+        }
+      ],
+      "ipa": "/strest ˈaʊt/",
+      "pos": "adj",
+      "synonyms": [
+        "frazzled",
+        "overwrought"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p04",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "زیر فشار عصبی",
+        "کلافه و مضطرب",
+        "به‌هم‌ریخته"
+      ]
+    },
+    {
+      "antonyms": [
+        "calm"
+      ],
+      "definition": "the mental pressure a person feels when life or work demands more than they can easily manage",
+      "examples": [
+        {
+          "en": "Too much stress at work began to affect his sleep.",
+          "fa": "فشار روانی زیاد در محل کار کم‌کم خوابش را به هم ریخت."
+        }
+      ],
+      "ipa": "/stres/",
+      "pos": "n",
+      "synonyms": [
+        "pressure",
+        "strain"
+      ],
+      "testedIn": [],
+      "translations": [
+        "استرس",
+        "فشار روانی",
+        "تنش"
+      ]
+    },
+    {
+      "antonyms": [
+        "downplay"
+      ],
+      "definition": "to say something with special force because you want other people to notice how important it is",
+      "examples": [
+        {
+          "en": "The coach stressed the need for patience in the second half.",
+          "fa": "مربی بر لزوم صبر در نیمه دوم تأکید کرد."
+        }
+      ],
+      "ipa": "/stres/",
+      "pos": "v",
+      "synonyms": [
+        "emphasize",
+        "underline"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تأکید کردن",
+        "پررنگ کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1403": 1

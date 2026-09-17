@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "successive یعنی پیاپی و پشت‌سرهم، نه موفق.",
+      "word": "successive"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "successful",
   "lemma": "successful",
-  "level": null,
+  "level": "A2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,43 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "unsuccessful",
+        "failed"
+      ],
+      "definition": "achieving what you wanted or aimed at, or getting a good result",
+      "examples": [
+        {
+          "en": "Her second novel was far more successful than her first.",
+          "fa": "رمان دوم او بسیار موفق‌تر از رمان اولش بود."
+        }
+      ],
+      "ipa": "/səkˈsesfl/",
+      "pos": "adj",
+      "synonyms": [
+        "triumphant",
+        "effective"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p01",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "موفق",
+        "کامیاب",
+        "پیروز"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

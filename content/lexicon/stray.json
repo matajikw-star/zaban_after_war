@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "astray قید است و با go و lead می‌آید (go astray یعنی گم شدن یا به بیراهه رفتن)، اما stray خودش فعل است.",
+      "word": "astray"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "stray",
   "lemma": "stray",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,66 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "adhere",
+        "keep to"
+      ],
+      "definition": "to move away from the path, place or subject that you are supposed to keep to",
+      "examples": [
+        {
+          "en": "The discussion strayed from the main point within minutes.",
+          "fa": "بحث ظرف چند دقیقه از موضوع اصلی دور شد."
+        }
+      ],
+      "ipa": "/streɪ/",
+      "pos": "v",
+      "synonyms": [
+        "deviate",
+        "depart",
+        "wander"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 24
+        }
+      ],
+      "translations": [
+        "منحرف شدن",
+        "دور شدن",
+        "فاصله گرفتن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "said of an animal that has no home or has become lost, or of a thing that has become separated from the rest",
+      "examples": [
+        {
+          "en": "They took in a stray cat that kept visiting their yard.",
+          "fa": "گربه‌ای ولگرد را که مدام به حیاطشان می‌آمد نگه داشتند."
+        }
+      ],
+      "ipa": "/streɪ/",
+      "pos": "adj",
+      "synonyms": [
+        "homeless",
+        "abandoned"
+      ],
+      "testedIn": [],
+      "translations": [
+        "ولگرد (حیوان)",
+        "بی‌صاحب",
+        "پرت‌افتاده"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

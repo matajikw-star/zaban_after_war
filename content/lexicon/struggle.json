@@ -6,7 +6,7 @@
   },
   "id": "struggle",
   "lemma": "struggle",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,64 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "breeze through"
+      ],
+      "definition": "to find something very difficult and have to try very hard at it, often over a long time; usually \"struggle with\"",
+      "examples": [
+        {
+          "en": "Many new students struggle with academic writing in their first year.",
+          "fa": "بسیاری از دانشجویان تازه‌وارد در سال اول با نگارش دانشگاهی دست‌وپنجه نرم می‌کنند."
+        }
+      ],
+      "ipa": "/ˈstrʌɡl/",
+      "pos": "v",
+      "synonyms": [
+        "grapple with",
+        "labour"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 33
+        }
+      ],
+      "translations": [
+        "دست‌وپنجه نرم کردن",
+        "به سختی از پس چیزی برآمدن",
+        "مشکل داشتن با"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a long and hard fight for something, or against someone who is stronger",
+      "examples": [
+        {
+          "en": "The country's long struggle for independence ended in victory.",
+          "fa": "مبارزه طولانی آن کشور برای استقلال به پیروزی انجامید."
+        }
+      ],
+      "ipa": "/ˈstrʌɡl/",
+      "pos": "n",
+      "synonyms": [
+        "fight",
+        "battle"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مبارزه",
+        "کشمکش",
+        "تقلا"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

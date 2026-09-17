@@ -1,12 +1,12 @@
 {
   "confusables": [],
   "homograph": {
-    "note": null,
-    "suspected": false
+    "note": "The adjective steep (sharply sloping) and the verb steep (to soak, and figuratively \"steeped in\") are unrelated in origin and meaning; the tested sense is the verb, so a hint must say which one it targets.",
+    "suspected": true
   },
   "id": "steep",
   "lemma": "steep",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,86 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "in the form \"steeped in\": filled with or shaped through and through by a quality, history or tradition, as if soaked in it",
+      "examples": [
+        {
+          "en": "The old university town is steeped in tradition.",
+          "fa": "آن شهر دانشگاهی قدیمی سرشار از سنت است."
+        }
+      ],
+      "ipa": "/stiːpt ɪn/",
+      "pos": "v",
+      "synonyms": [
+        "immersed",
+        "saturated"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 15
+        }
+      ],
+      "translations": [
+        "آغشته",
+        "سرشار",
+        "غرق (در چیزی)"
+      ]
+    },
+    {
+      "antonyms": [
+        "gentle",
+        "gradual"
+      ],
+      "definition": "rising or falling sharply, so that going up or down it is hard work",
+      "examples": [
+        {
+          "en": "The path up to the village is too steep for a bicycle.",
+          "fa": "مسیر بالا رفتن به روستا برای دوچرخه بیش از حد پرشیب است."
+        }
+      ],
+      "ipa": "/stiːp/",
+      "pos": "adj",
+      "synonyms": [
+        "sharp",
+        "abrupt"
+      ],
+      "testedIn": [],
+      "translations": [
+        "شیب‌دار",
+        "تند (سربالایی)",
+        "پرشیب"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to leave something in a liquid for a while so that it softens or gives out its flavour",
+      "examples": [
+        {
+          "en": "Steep the tea leaves in hot water for five minutes.",
+          "fa": "برگ‌های چای را پنج دقیقه در آب داغ دم کنید."
+        }
+      ],
+      "ipa": "/stiːp/",
+      "pos": "v",
+      "synonyms": [
+        "soak",
+        "infuse"
+      ],
+      "testedIn": [],
+      "translations": [
+        "خیساندن",
+        "دم کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

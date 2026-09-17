@@ -6,7 +6,7 @@
   },
   "id": "complicated",
   "lemma": "complicated",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,47 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "simple",
+        "straightforward"
+      ],
+      "definition": "made of many parts or steps, and therefore hard to understand or deal with",
+      "examples": [
+        {
+          "en": "The visa rules are so complicated that most people need help.",
+          "fa": "قوانین ویزا چنان پیچیده است که بیشتر مردم به کمک نیاز دارند."
+        }
+      ],
+      "ipa": "/ˈkɒmplɪkeɪtɪd/",
+      "pos": "adj",
+      "synonyms": [
+        "complex",
+        "intricate"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "پیچیده",
+        "بغرنج",
+        "دشوار"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

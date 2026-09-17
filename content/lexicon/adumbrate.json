@@ -6,7 +6,7 @@
   },
   "id": "adumbrate",
   "lemma": "adumbrate",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,64 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to describe something in a general way, without giving the details",
+      "examples": [
+        {
+          "en": "The minister adumbrated the reform plan but gave no firm dates.",
+          "fa": "وزیر کلیات طرح اصلاحی را بیان کرد اما تاریخ قطعی نداد."
+        }
+      ],
+      "ipa": "/ˈædʌmbreɪt/",
+      "pos": "v",
+      "synonyms": [
+        "outline",
+        "sketch"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p01",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 20
+        }
+      ],
+      "translations": [
+        "به اجمال شرح دادن",
+        "کلیات چیزی را بیان کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to be an early sign of something that will happen much later",
+      "examples": [
+        {
+          "en": "Those early strikes adumbrated the much larger crisis of the following year.",
+          "fa": "آن اعتصاب‌های نخستین، بحران بسیار بزرگ‌تر سال بعد را پیش‌نمایی می‌کرد."
+        }
+      ],
+      "ipa": "/ˈædʌmbreɪt/",
+      "pos": "v",
+      "synonyms": [
+        "foreshadow",
+        "presage"
+      ],
+      "testedIn": [],
+      "translations": [
+        "پیش‌نمایی کردن",
+        "نشانه پیشین بودن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

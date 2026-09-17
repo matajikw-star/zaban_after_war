@@ -1,5 +1,10 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "صرف دربارهٔ ساختِ واژه است؛ واج‌شناسی دربارهٔ نظام آواهای زبان",
+      "word": "phonology"
+    }
+  ],
   "domain": {
     "fieldCodes": [
       "1110"
@@ -11,7 +16,7 @@
   },
   "id": "morphology",
   "lemma": "morphology",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -23,8 +28,48 @@
       "year": 1402
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "in linguistics, the study of how words are built out of smaller meaningful parts",
+      "examples": [
+        {
+          "en": "English morphology explains how \"unhappiness\" is built from three parts.",
+          "fa": "صرفِ انگلیسی توضیح می‌دهد که واژهٔ «unhappiness» چگونه از سه جزء ساخته شده است."
+        }
+      ],
+      "ipa": "/mɔːˈfɒlədʒi/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "صرف",
+        "ساخت‌واژه"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "in biology, the form and structure of living things",
+      "examples": [
+        {
+          "en": "The two fish look alike but differ in the morphology of their fins.",
+          "fa": "آن دو ماهی شبیه هم‌اند اما ریخت‌شناسی باله‌هایشان فرق دارد."
+        }
+      ],
+      "ipa": "/mɔːˈfɒlədʒi/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "ریخت‌شناسی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {},

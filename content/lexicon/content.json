@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "اسمِ حالتِ رضایت است، نه محتوا؛ content به معنای محتوا اسمی جداگانه است",
+      "word": "contentment"
+    }
+  ],
   "homograph": {
-    "note": null,
-    "suspected": false
+    "note": "Different stress and different part of speech: the noun /ˈkɒntent/ (subject matter) and the adjective /kənˈtent/ (satisfied). Unrelated for a learner. Candidate split: content-1 (n, محتوا) / content-2 (adj, راضی).",
+    "suspected": true
   },
   "id": "content",
   "lemma": "content",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,72 @@
       "year": 1402
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "form"
+      ],
+      "definition": "the subject matter or material contained in a book, programme, speech or website",
+      "examples": [
+        {
+          "en": "The book's content is excellent, but the title is misleading.",
+          "fa": "محتوای کتاب عالی است، اما عنوانش گمراه‌کننده است."
+        }
+      ],
+      "ipa": "/ˈkɒntent/",
+      "pos": "n",
+      "synonyms": [
+        "substance",
+        "material"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p06",
+          "questionNo": 24
+        }
+      ],
+      "translations": [
+        "محتوا",
+        "مضمون",
+        "مطالب"
+      ]
+    },
+    {
+      "antonyms": [
+        "discontented",
+        "dissatisfied"
+      ],
+      "definition": "happy and satisfied with what you have, without wanting more",
+      "examples": [
+        {
+          "en": "She is content with a small house and a quiet life.",
+          "fa": "او به خانه‌ای کوچک و زندگی‌ای آرام راضی است."
+        }
+      ],
+      "ipa": "/kənˈtent/",
+      "pos": "adj",
+      "synonyms": [
+        "satisfied",
+        "at ease"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p01",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "راضی",
+        "خرسند",
+        "قانع"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1402": 1

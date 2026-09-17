@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هم‌آوا با bear؛ اما bare یعنی برهنه، خالی و بدون پوشش",
+      "word": "bare"
+    }
+  ],
   "homograph": {
-    "note": null,
-    "suspected": false
+    "note": "CLAUDE.md names this case explicitly: the verb (endure / have as a feature) and the noun (the animal) are unrelated for a learner. Candidate split: bear-1 (v, تحمل کردن) / bear-2 (n, خرس).",
+    "suspected": true
   },
   "id": "bear",
   "lemma": "bear",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,79 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to have or show a particular quality or relation, as in *bear a resemblance to* something",
+      "examples": [
+        {
+          "en": "The copy bears no resemblance to the original painting.",
+          "fa": "آن نسخه هیچ شباهتی به نقاشی اصلی ندارد."
+        }
+      ],
+      "ipa": "/beə(r)/",
+      "pos": "v",
+      "synonyms": [
+        "carry",
+        "have"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p02",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "داشتن (شباهت یا نشانه)",
+        "حمل کردن (نشان)"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to accept or endure something unpleasant without complaining",
+      "examples": [
+        {
+          "en": "He could not bear the noise from the street any longer.",
+          "fa": "او دیگر نمی‌توانست سروصدای خیابان را تحمل کند."
+        }
+      ],
+      "ipa": "/beə(r)/",
+      "pos": "v",
+      "synonyms": [
+        "endure",
+        "tolerate",
+        "stand"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تحمل کردن",
+        "برتافتن",
+        "طاقت آوردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a large heavy wild animal with thick fur and sharp claws",
+      "examples": [
+        {
+          "en": "A brown bear was seen near the campsite at dawn.",
+          "fa": "سپیده‌دم خرسی قهوه‌ای نزدیک اردوگاه دیده شد."
+        }
+      ],
+      "ipa": "/beə(r)/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "خرس"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

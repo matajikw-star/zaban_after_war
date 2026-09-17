@@ -6,7 +6,7 @@
   },
   "id": "bulwark",
   "lemma": "bulwark",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +20,41 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "something or someone that protects or defends against danger or attack",
+      "examples": [
+        {
+          "en": "An independent press is a bulwark against the abuse of power.",
+          "fa": "مطبوعات مستقل سنگری در برابر سوءاستفاده از قدرت‌اند."
+        }
+      ],
+      "ipa": "/ˈbʊlwək/",
+      "pos": "n",
+      "synonyms": [
+        "rampart",
+        "safeguard",
+        "defence"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 26
+        }
+      ],
+      "translations": [
+        "سنگر",
+        "دژ دفاعی",
+        "سپر محافظ"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

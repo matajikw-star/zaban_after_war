@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "تلفظ و املای بسیار نزدیک، اما effluent یعنی پساب و فاضلاب",
+      "word": "effluent"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "affluent",
   "lemma": "affluent",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -75,8 +80,65 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "impecunious",
+        "destitute",
+        "needy"
+      ],
+      "definition": "having plenty of money and a comfortable standard of living",
+      "examples": [
+        {
+          "en": "They grew up in an affluent neighbourhood where every family owned two cars.",
+          "fa": "آن‌ها در محله‌ای مرفه بزرگ شدند که هر خانواده در آن دو خودرو داشت."
+        }
+      ],
+      "ipa": "/ˈæfluənt/",
+      "pos": "adj",
+      "synonyms": [
+        "wealthy",
+        "prosperous",
+        "well-off"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p03",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1404-p01",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "مرفه",
+        "ثروتمند",
+        "متمکن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 4,

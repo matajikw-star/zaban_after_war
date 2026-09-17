@@ -1,5 +1,10 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "واریانس پراکندگی یک متغیر را می‌سنجد؛ کوواریانس رابطهٔ تغییرات دو متغیر را",
+      "word": "variance"
+    }
+  ],
   "domain": {
     "fieldCodes": [
       "1121"
@@ -11,7 +16,7 @@
   },
   "id": "covariance",
   "lemma": "covariance",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -23,8 +28,31 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a statistical measure of how much two variables change together",
+      "examples": [
+        {
+          "en": "A positive covariance means the two variables tend to rise together.",
+          "fa": "کوواریانس مثبت یعنی دو متغیر معمولاً با هم افزایش می‌یابند."
+        }
+      ],
+      "ipa": "/kəʊˈveəriəns/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "کوواریانس",
+        "هم‌پراکندگی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {},

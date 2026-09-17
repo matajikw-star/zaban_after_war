@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شباهت ظاهری؛ dwindle یعنی کم‌کم کاهش یافتن و آب رفتن",
+      "word": "dwindle"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "dwell",
   "lemma": "dwell",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,65 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "dismiss",
+        "move on"
+      ],
+      "definition": "to keep thinking or talking about something, especially something unpleasant (usually *dwell on*)",
+      "examples": [
+        {
+          "en": "Try not to dwell on mistakes you can no longer fix.",
+          "fa": "سعی کن مدام به اشتباه‌هایی که دیگر نمی‌توانی جبرانشان کنی فکر نکنی."
+        }
+      ],
+      "ipa": "/dwel/",
+      "pos": "v",
+      "synonyms": [
+        "brood",
+        "linger on"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "مدام به چیزی فکر کردن",
+        "روی چیزی ماندن",
+        "کِش دادن موضوع"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to live in a particular place (formal or literary)",
+      "examples": [
+        {
+          "en": "Few people still dwell in the old part of the village.",
+          "fa": "افراد کمی هنوز در بخش قدیمی روستا سکونت دارند."
+        }
+      ],
+      "ipa": "/dwel/",
+      "pos": "v",
+      "synonyms": [
+        "reside",
+        "inhabit"
+      ],
+      "testedIn": [],
+      "translations": [
+        "سکونت داشتن",
+        "زیستن",
+        "ساکن بودن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

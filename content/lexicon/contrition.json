@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شباهت ظاهری و شنیداری؛ contribution یعنی سهم و کمک و هیچ ربطی به پشیمانی ندارد",
+      "word": "contribution"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "contrition",
   "lemma": "contrition",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -18,8 +23,38 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "impenitence"
+      ],
+      "definition": "sincere sorrow and regret for having done something wrong",
+      "examples": [
+        {
+          "en": "His apology sounded rehearsed and showed little real contrition.",
+          "fa": "عذرخواهی‌اش از پیش تمرین‌شده به نظر می‌رسید و پشیمانی واقعی چندانی در آن نبود."
+        }
+      ],
+      "ipa": "/kənˈtrɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "remorse",
+        "repentance",
+        "penitence"
+      ],
+      "testedIn": [],
+      "translations": [
+        "پشیمانی",
+        "ندامت",
+        "توبه"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {},

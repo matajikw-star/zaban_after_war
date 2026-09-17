@@ -1,0 +1,1159 @@
+[
+  {
+    "input": "respondent",
+    "lemma": "respondent",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "It is the actor of the relative clause, but respond + -ent reads through transparently for a B2 reader, exactly like the calibration's observer and instructor."
+  },
+  {
+    "input": "restraint",
+    "lemma": "restraint",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 4,
+    "reason": "The blank is defined by contrast with it: relations begin to ..... again after a period of relative restraint, so a reader who misses restraint cannot choose the verb.",
+    "gloss": "self-control; the act of holding back"
+  },
+  {
+    "input": "restrictive",
+    "lemma": "restrictive",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "restrict + -ive is transparent, and restrictive response formats is a background detail the item does not turn on."
+  },
+  {
+    "input": "retailer",
+    "lemma": "retailer",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Common business English and transparent from retail; the blank leans on defective stock and fancy boxes, not on who the seller is."
+  },
+  {
+    "input": "retire",
+    "lemma": "retire",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "A retired couple is scene-setting; the blank depends on the list of active hobbies that follows, and retire is school vocabulary (settled in the calibration)."
+  },
+  {
+    "input": "retiree",
+    "lemma": "retiree",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The blank is a correlative connector far from the word, and retiree benefits is readable from retire plus the health-care context."
+  },
+  {
+    "input": "retrieval",
+    "lemma": "retrieval",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "information retrieval sits in a modifying phrase; the blank is a clause connector at the other end of a long sentence."
+  },
+  {
+    "input": "reveal",
+    "lemma": "reveal",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "reveals that managers' intuition is neither of these uses a verb any B1 reader knows."
+  },
+  {
+    "input": "reward",
+    "lemma": "reward",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "more rewarding than a meticulously planned life rests on a word taught at school level."
+  },
+  {
+    "input": "rhythm",
+    "lemma": "rhythm",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "daily rhythms is ordinary vocabulary reinforced by the local solar day that follows it."
+  },
+  {
+    "input": "ridicule",
+    "lemma": "ridicule",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "express hostility or ridicule, often with sharp wit is the clause that explains what slang is created from, and the word is genuinely opaque to a B2 reader.",
+    "gloss": "mockery; contemptuous laughter directed at someone"
+  },
+  {
+    "input": "rigorous",
+    "lemma": "rigorous",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "Hard, but the apposition defines phonics rather than rigour: strike rigorous and a rigorous study of the relation between letters and sounds still answers the blank the same way."
+  },
+  {
+    "input": "ripened",
+    "lemma": "ripen",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "The blank is the parallel participle to ripened by decades of antagonism, but ripen reads straight off ripe, which a B2 candidate knows."
+  },
+  {
+    "input": "risen",
+    "lemma": "rise",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "The blank is the preposition in productivity ..... employee; has risen is elementary."
+  },
+  {
+    "input": "rite",
+    "lemma": "rite",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 4,
+    "reason": "The blank sits directly against it in a rite of ....., so the whole item is the idiom rite of passage and is unanswerable without the noun.",
+    "gloss": "a formal ceremony or customary ritual"
+  },
+  {
+    "input": "rituals",
+    "lemma": "ritual",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "The sentence itself glosses it by pairing customs, rituals and behaviors, and ritual is ordinary academic vocabulary."
+  },
+  {
+    "input": "rivulets",
+    "lemma": "rivulet",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "It is the subject doing the work in rivulets have carved into the stone, and a reader who does not know it loses the erosion picture the blank's adjective depends on.",
+    "gloss": "a very small stream"
+  },
+  {
+    "input": "robber",
+    "lemma": "robber",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "rob + -er is transparent and when facing a robber is school-level English."
+  },
+  {
+    "input": "robust",
+    "lemma": "robust",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "A hard word, but a robust plan of action is a tail-end modifier and the blank sits far away in water ..... professionals."
+  },
+  {
+    "input": "rocket",
+    "lemma": "rocket",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "a Falcon 9 rocket is background; the blank turns on what happened to the first attempt because of bad weather."
+  },
+  {
+    "input": "rodents",
+    "lemma": "rodent",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "animals larger than rodents versus in dogs still reads as a jump in animal size without the exact species class, and the blank is about the therapy working."
+  },
+  {
+    "input": "romantic",
+    "lemma": "romantic",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "romantic love is an international word every candidate knows."
+  },
+  {
+    "input": "rotation",
+    "lemma": "rotation",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Earth's rotation is common science English and transparent from rotate."
+  },
+  {
+    "input": "rote",
+    "lemma": "rote",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "The blank is the reading strategy set against identify words by rote memory, so the contrast that decides the answer is invisible without it.",
+    "gloss": "mechanical memorisation without understanding"
+  },
+  {
+    "input": "routine",
+    "lemma": "routine",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "routine maintenance of aircraft is everyday vocabulary and the blank is the clause subject earlier in the sentence."
+  },
+  {
+    "input": "rubbed",
+    "lemma": "rub",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "The blank is the preposition after it, and rub is elementary even though emollient in the same clause is not."
+  },
+  {
+    "input": "rude",
+    "lemma": "rude",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "the rude behavior of the clerk is school vocabulary, reinforced by courteous treatment in the next sentence."
+  },
+  {
+    "input": "ruining",
+    "lemma": "ruin",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 1,
+    "reason": "The blank does turn on the ruin-then-make-good logic, but ruin is a B1 word."
+  },
+  {
+    "input": "rulers",
+    "lemma": "ruler",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Brazil's military rulers is transparent from rule and common in news English."
+  },
+  {
+    "input": "ruminative",
+    "lemma": "ruminative",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 5,
+    "reason": "The blank is conjoined with it in something more ..... and ruminative, so the answer is whatever pairs with a word almost no candidate knows.",
+    "gloss": "deeply and slowly thoughtful; brooding"
+  },
+  {
+    "input": "rumor",
+    "lemma": "rumor",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "shoot down yet another rumor uses a word common in journalism, and the blank is a separate noun phrase for the press."
+  },
+  {
+    "input": "runner",
+    "lemma": "runner",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Experienced Iditarod runners is run + -er; the blank depends on but they were not successful."
+  },
+  {
+    "input": "sacred",
+    "lemma": "sacred",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The blank is the verb of getting a name from something; the images being sacred rather than merely found changes nothing about that choice."
+  },
+  {
+    "input": "sad",
+    "lemma": "sad",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "baffling, unedifying and sad leans on the two hard adjectives, not on the elementary one."
+  },
+  {
+    "input": "sailor",
+    "lemma": "sailor",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "The blank is the adjective for crew quarters and is decided by only a tiny locker; sailor is transparent from sail."
+  },
+  {
+    "input": "salesman",
+    "lemma": "salesman",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "A transparent compound; the item's difficulty lives entirely in mountebank and dashing flattery."
+  },
+  {
+    "input": "sandra",
+    "lemma": "sandra",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 1,
+    "reason": "A personal name in Sandra is truly a/an ....., not vocabulary."
+  },
+  {
+    "input": "sang",
+    "lemma": "sing",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "a sick boy who sang for low wages uses an elementary irregular past."
+  },
+  {
+    "input": "sapiens",
+    "lemma": "sapiens",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Homo sapiens is a recognisable binomial name rather than a word to learn, and the blank is the artefact being discovered."
+  },
+  {
+    "input": "satisfactorily",
+    "lemma": "satisfactorily",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 2,
+    "reason": "fairly satisfactorily determined is a transparent adverb of satisfactory, and this item's error is the Although ... but structure."
+  },
+  {
+    "input": "satisfy",
+    "lemma": "satisfy",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "customers were satisfied with the food is B1 vocabulary; the blank is a quantity expression."
+  },
+  {
+    "input": "savage",
+    "lemma": "savage",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank continues a list of traits predicated of the savage as a noun, and the nominal use of the word is well beyond the adjective a B2 reader might half-know.",
+    "gloss": "a person regarded as primitive or brutal; fierce, uncivilised"
+  },
+  {
+    "input": "savannas",
+    "lemma": "savanna",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 1,
+    "difficulty": 3,
+    "reason": "the savannas of central Brazil is a location detail; the blank is what the Kalapalo lack in order to change their lifestyle."
+  },
+  {
+    "input": "scant",
+    "lemma": "scant",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "The blank is the adjective for family income and is decided by matching scant remuneration; without the word the parallel is lost.",
+    "gloss": "barely sufficient; very little"
+  },
+  {
+    "input": "scapegraces",
+    "lemma": "scapegrace",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "the leading scapegraces of the playground is the characterisation that makes the blank a word for childish quarrels, and the word is opaque even to many native readers.",
+    "gloss": "a mischievous or unruly person; a rascal"
+  },
+  {
+    "input": "scary",
+    "lemma": "scary",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "a rather scary thought is school vocabulary built on scare."
+  },
+  {
+    "input": "scenario",
+    "lemma": "scenario",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Some of his scenarios uses an internationally borrowed word familiar in Persian too."
+  },
+  {
+    "input": "scent",
+    "lemma": "scent",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "The blank sits directly against it in produced a ..... scent, so the adjective can only be chosen by a reader who knows the noun means a smell.",
+    "gloss": "a smell, especially a distinctive one"
+  },
+  {
+    "input": "scholar",
+    "lemma": "scholar",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "bridge the gap between the scholars uses a standard academic word any konkour candidate meets constantly."
+  },
+  {
+    "input": "schoolwork",
+    "lemma": "schoolwork",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "A transparent compound; the blank is the verb for evading it, cued by threatened to keep her in at recess."
+  },
+  {
+    "input": "scientificity",
+    "lemma": "scientificity",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "An odd nominalisation, but it reads off scientific, and the blank pairs with insistent to modify unanimity rather than depending on it."
+  },
+  {
+    "input": "scientist",
+    "lemma": "scientist",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Scientists first recognized the value of the practice is elementary; the blank is the participle governing the low-calorie diet."
+  },
+  {
+    "input": "screamed",
+    "lemma": "scream",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "The blank does rest on it screamed 'five-star', but scream is a B1 word and the figurative use is easy to infer."
+  },
+  {
+    "input": "sculptors",
+    "lemma": "sculptor",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Sculptors is transparent from sculpture and the blank's adjective is decided by the statues of Lincoln clause that follows."
+  },
+  {
+    "input": "sculpture",
+    "lemma": "sculpture",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "looked at the sculpture up close is ordinary vocabulary; the blank turns on blemishes and not perfect."
+  },
+  {
+    "input": "seawater",
+    "lemma": "seawater",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "A transparent compound of sea and water; the blank is the verb for water leaving the house."
+  },
+  {
+    "input": "secretory",
+    "lemma": "secretory",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 5,
+    "reason": "the secretory machinery is cell-biology vocabulary with no general-journalism life, and the blank is only the correlative of not only.",
+    "gloss": "relating to secretion, the release of substances by a cell or gland",
+    "fieldCodes": [
+      "1148"
+    ]
+  },
+  {
+    "input": "sedimented",
+    "lemma": "sediment",
+    "verdict": "no",
+    "confidence": "low",
+    "importance": 2,
+    "difficulty": 5,
+    "reason": "meaning is sedimented in the institution of language is opaque phenomenological usage, but the blank is a verb parallel to limits and is decided by utterly other and outside the subject."
+  },
+  {
+    "input": "seemingly",
+    "lemma": "seemingly",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "the seemingly indefinable nature of art is a transparent adverb of seem, and the blank is the concessive connector."
+  },
+  {
+    "input": "segregation",
+    "lemma": "segregation",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank is the verb whose subject-purpose is segregation itself, so the sentence cannot be completed without knowing what the noun names.",
+    "gloss": "enforced separation of groups, especially by race"
+  },
+  {
+    "input": "seismometers",
+    "lemma": "seismometer",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "The blank is an adjective for the information and is decided by before they stopped operating; the instrument's name is background and decodable from seismic."
+  },
+  {
+    "input": "semantic",
+    "lemma": "semantic",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "grammatical and semantic analysis of sentences sits at the far end of the sentence from the blank, and semantic has wide general currency."
+  },
+  {
+    "input": "semiology",
+    "lemma": "semiology",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "The whole main clause is predicated of semiology, but the word belongs to semiotics as a discipline rather than to konkour English.",
+    "gloss": "the study of signs and symbols; semiotics",
+    "fieldCodes": [
+      "1110"
+    ]
+  },
+  {
+    "input": "senseless",
+    "lemma": "senseless",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "sense + -less is transparent, and the dash gloss senseless and misplaced, a bad joke hands the reader the whole idea."
+  },
+  {
+    "input": "sensory",
+    "lemma": "sensory",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "apparent to sensory perception reads off sense, and this item's difficulty is the however that joins two clauses."
+  },
+  {
+    "input": "sentient",
+    "lemma": "sentient",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "The blank is the cognition verb attached to some sentient being who ....., so the choice depends on knowing the adjective means capable of awareness.",
+    "gloss": "able to perceive or feel things; conscious"
+  },
+  {
+    "input": "sewers",
+    "lemma": "sewer",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank is what lives in the sewers of the city, so the creature can only be chosen by a reader who knows what a sewer is.",
+    "gloss": "an underground pipe or channel carrying waste water"
+  },
+  {
+    "input": "sexuality",
+    "lemma": "sexuality",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "One item in a list of cultural factors, transparent from sexual, and well away from the blank."
+  },
+  {
+    "input": "shallow",
+    "lemma": "shallow",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "shallow ponds for shrimp farming is scene-setting; the blank is the relative clause describing mangroves at the end of the sentence."
+  },
+  {
+    "input": "shaywitz",
+    "lemma": "shaywitz",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 1,
+    "reason": "A researcher's surname in Sally E. Shaywitz and her colleagues, not vocabulary."
+  },
+  {
+    "input": "sheep",
+    "lemma": "sheep",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "herded the sheep into Mr. Ingersoll's house is elementary; the blank is the adjective for how the boys tried to sound."
+  },
+  {
+    "input": "shelter",
+    "lemma": "shelter",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "take shelter in an abandoned building is common B2 usage, and the blank is the participle describing the movement."
+  },
+  {
+    "input": "shelves",
+    "lemma": "shelf",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "piling pantry shelves with goodies is elementary; the blank is the connector between buying books and reading them."
+  },
+  {
+    "input": "shield",
+    "lemma": "shield",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "the banners and shields of their own tribe is a common noun; the difficulty of the item lives in chauvinism and in the blank's verb."
+  },
+  {
+    "input": "shine",
+    "lemma": "shine",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "if the sun is shining is elementary; the blank is the adjective qualifying pessimist."
+  },
+  {
+    "input": "shiraz",
+    "lemma": "shiraz",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 1,
+    "reason": "A city name, and one every Iranian candidate already knows."
+  },
+  {
+    "input": "shoot",
+    "lemma": "shoot",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "shoot down yet another rumor is a common idiom on an elementary verb; the blank is the noun phrase for the press."
+  },
+  {
+    "input": "shortage",
+    "lemma": "shortage",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "The blank does act on the town's job shortage, but the noun is transparent from short and ubiquitous in news English."
+  },
+  {
+    "input": "shorter",
+    "lemma": "short",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "five years shorter than ..... is a comparative-structure item, not a vocabulary one."
+  },
+  {
+    "input": "shortness",
+    "lemma": "shortness",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "shortness of breath is a transparent nominalisation and a familiar medical collocation."
+  },
+  {
+    "input": "shout",
+    "lemma": "shout",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "If you shout, 'Help!' is elementary; the blank is the grammatical label for the one-word utterance."
+  },
+  {
+    "input": "shrewd",
+    "lemma": "shrewd",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "It opens the character sketch that the blank completes on the other hand, and a B2 reader who loses shrewd, calculating, tenacious loses the contrast the item is built on.",
+    "gloss": "having sharp practical judgement; astute"
+  },
+  {
+    "input": "shrimp",
+    "lemma": "shrimp",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "shrimp farming is a familiar food word and sits far from the blank about mangroves."
+  },
+  {
+    "input": "shrinking",
+    "lemma": "shrink",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "growing or shrinking glosses itself by the contrast, and the blank is the concessive connector Whether."
+  },
+  {
+    "input": "shrug",
+    "lemma": "shrug",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "a bright smile and a shrug is a decorative detail; the blank is the opening participle about being caught taking the cupcake."
+  },
+  {
+    "input": "sibling",
+    "lemma": "sibling",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "The quoted phrase sibling rivalry leans on rivalry for the blank, and sibling is standard academic vocabulary."
+  },
+  {
+    "input": "sickness",
+    "lemma": "sickness",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "decompression sickness is glossed on the spot as a sometimes lethal condition, and sickness is transparent from sick."
+  },
+  {
+    "input": "sigmund",
+    "lemma": "sigmund",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 1,
+    "reason": "A given name in Sigmund Freud, not vocabulary."
+  },
+  {
+    "input": "signifier",
+    "lemma": "signifier",
+    "verdict": "domain-term",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "The sentence is entirely about signifier and signified producing a sign, but the pair is Saussurean technical vocabulary rather than general English.",
+    "gloss": "in semiotics, the form of a sign as distinct from the concept it denotes",
+    "fieldCodes": [
+      "1110"
+    ]
+  },
+  {
+    "input": "silence",
+    "lemma": "silence",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "tried to ..... them into silence rests on a word taught at school level."
+  },
+  {
+    "input": "silent",
+    "lemma": "silent",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "silent, ....., and with tear-stained face pairs the blank with an elementary adjective."
+  },
+  {
+    "input": "similarly",
+    "lemma": "similarly",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "A transparent adverb of similar opening the sentence, far from the blank about pushing into habitats."
+  },
+  {
+    "input": "simile",
+    "lemma": "simile",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank is the term that is often expressed as a simile, so the item is a straight test of knowing this word, even though the quoted example softens it.",
+    "gloss": "a figure of speech comparing two things using like or as"
+  },
+  {
+    "input": "simpler",
+    "lemma": "simple",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "smaller and simpler than ..... is a comparison-structure item on elementary adjectives."
+  },
+  {
+    "input": "simulate",
+    "lemma": "simulate",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "they are aimed to simulate follows meteorological processes and is reinforced by the familiar simulation; the blank is the adverb before capture."
+  },
+  {
+    "input": "sincerity",
+    "lemma": "sincerity",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "with simpler sincerity is a manner phrase; the blank is the verb governing their cause."
+  },
+  {
+    "input": "sing",
+    "lemma": "sing",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "singing or playing a musical instrument is elementary; the blank is the preposition phrase before their international names."
+  },
+  {
+    "input": "singer",
+    "lemma": "singer",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "celebrities such as singers and movie stars is elementary; the blank is what gets transferred to the product."
+  },
+  {
+    "input": "sinkholes",
+    "lemma": "sinkhole",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "The blank is the adjective sitting directly against ..... sinkholes, so a reader who does not know the noun cannot judge which adjective fits it.",
+    "gloss": "a hollow or cavity formed when the ground surface collapses"
+  },
+  {
+    "input": "sinus",
+    "lemma": "sinus",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "sinus headache uses a medical word already borrowed into Persian, and the blank is the comparative preposition opening the sentence."
+  },
+  {
+    "input": "situational",
+    "lemma": "situational",
+    "verdict": "domain-term",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "The blank completes the literary label situational ....., and the calibration already settled this word as a domain term for 1121.",
+    "gloss": "arising from a particular situation, as in situational irony",
+    "fieldCodes": [
+      "1121"
+    ]
+  },
+  {
+    "input": "skating",
+    "lemma": "skating",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Figure skating was included in the Olympics is common vocabulary; the blank is the contrastive connector."
+  },
+  {
+    "input": "skulls",
+    "lemma": "skull",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "the energy-consuming organ in their skulls is a periphrasis for the brain that the reader can resolve without the word, and this item's fault is the dangling As."
+  },
+  {
+    "input": "slang",
+    "lemma": "slang",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "he may be creating slang uses a word borrowed worldwide, and the item's error is unless it is not picked up."
+  },
+  {
+    "input": "slave",
+    "lemma": "slave",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "the lives of the slaves is school vocabulary; the blank is a coordinated noun phrase."
+  },
+  {
+    "input": "slavery",
+    "lemma": "slavery",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "the most comprehensive one of slavery is transparent from slave; the blank is the opening participial phrase."
+  },
+  {
+    "input": "sled",
+    "lemma": "sled",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 1,
+    "difficulty": 4,
+    "reason": "his team of sled dogs appears in the second sentence, while the blank is the verb of trying to stop Paulsen from competing."
+  },
+  {
+    "input": "slowdown",
+    "lemma": "slowdown",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "the end result of this slowdown is a transparent compound summarising less blood reaches the brain."
+  },
+  {
+    "input": "slowly",
+    "lemma": "slowly",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "speak calmly and slowly in emergency is elementary; the item turns on the missing article in in emergency."
+  },
+  {
+    "input": "smartness",
+    "lemma": "smartness",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "students' inherent smartness is a transparent nominalisation of smart; the blank is the opening determiner phrase."
+  },
+  {
+    "input": "smashed",
+    "lemma": "smash",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "gravity and chance smashed smaller pieces together is common vocabulary and this item's fault is the was that has no subject."
+  },
+  {
+    "input": "smell",
+    "lemma": "smell",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "days that smell like clean linen uses an elementary verb."
+  },
+  {
+    "input": "snacks",
+    "lemma": "snack",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "the snacks market uses a word borrowed into Persian; the blank is the particle in carried ....."
+  },
+  {
+    "input": "snide",
+    "lemma": "snide",
+    "verdict": "no",
+    "confidence": "low",
+    "importance": 2,
+    "difficulty": 5,
+    "reason": "A genuinely hard word, but the blank is the conjunction joining crack jokes to ..... snide remarks, so the item tests a collocation rather than this adjective."
+  },
+  {
+    "input": "sniping",
+    "lemma": "snipe",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "The sentence glosses it immediately with undermining and other forms of verbal abuse, which is enough to fix the blank."
+  },
+  {
+    "input": "snowstorm",
+    "lemma": "snowstorm",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "driving during the snowstorm is a transparent compound, and icy roads carries the blank."
+  },
+  {
+    "input": "socioeconomic",
+    "lemma": "socioeconomic",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "socioeconomic class is a transparent compound of two known parts, listed among other cultural factors well away from the blank."
+  },
+  {
+    "input": "sociolinguistic",
+    "lemma": "sociolinguistic",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "sociolinguistic competence is transparent from social plus linguistic, and this item's fault is the there are inside the quotation."
+  },
+  {
+    "input": "sociology",
+    "lemma": "sociology",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "relate linguistics more closely to sociology and anthropology uses a discipline name familiar in Persian; the item's fault is that for than."
+  },
+  {
+    "input": "soldier",
+    "lemma": "soldier",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "knocked the soldier flat on his back is elementary; the sentence's fault is the bare an exploding."
+  },
+  {
+    "input": "solely",
+    "lemma": "solely",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "exist solely for human use uses a standard academic adverb, and the blank is the verb of what the movement does to that view."
+  },
+  {
+    "input": "someday",
+    "lemma": "someday",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "will someday ..... himself is a transparent compound; the difficulty is the blank's reflexive verb."
+  },
+  {
+    "input": "sophisticated",
+    "lemma": "sophisticated",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "sophisticated lab tests is a very common academic adjective, and the blank is decided by trust their fingers."
+  },
+  {
+    "input": "sorely",
+    "lemma": "sorely",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "I would sorely miss it sits in the explanatory second clause, while the blank completes the fixed phrase a benefit in ....."
+  },
+  {
+    "input": "sought",
+    "lemma": "seek",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "He sought to write a comprehensive study uses a common verb whose irregular past is standard B2 knowledge."
+  }
+]

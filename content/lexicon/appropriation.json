@@ -1,0 +1,35 @@
+{
+  "examples": [],
+  "id": "appropriation",
+  "lemma": "appropriation",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1404-p06",
+      "part": "vocabulary",
+      "questionNo": 25,
+      "reach": 1,
+      "surface": "appropriation",
+      "year": 1404
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "appropriation"
+  ],
+  "synonyms": [],
+  "translations": []
+}

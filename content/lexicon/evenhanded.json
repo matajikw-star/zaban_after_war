@@ -5,6 +5,7 @@
   "occurrences": [
     {
       "isAnswer": false,
+      "occurrenceType": "tested",
       "optionIndex": 0,
       "paperId": "arshad-1402-p05",
       "part": "cloze",
@@ -25,6 +26,7 @@
     "lastYear": 1402,
     "priority": 3,
     "timesAsAnswer": 0,
+    "timesAsContext": 0,
     "timesAsDistractor": 1,
     "timesTested": 1
   },

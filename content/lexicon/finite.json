@@ -1,0 +1,44 @@
+{
+  "examples": [],
+  "id": "finite",
+  "lemma": "finite",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p01",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 42,
+      "surface": "finite",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p03",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 16,
+      "surface": "finite",
+      "year": 1399
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 2,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "finite"
+  ],
+  "synonyms": [],
+  "translations": []
+}

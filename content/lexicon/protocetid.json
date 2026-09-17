@@ -1,0 +1,38 @@
+{
+  "domain": {
+    "fieldCodes": []
+  },
+  "examples": [],
+  "id": "protocetid",
+  "lemma": "protocetid",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1402-p01",
+      "part": "grammar",
+      "questionNo": 9,
+      "reach": 56,
+      "surface": "protocetid",
+      "year": 1402
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "protocetid"
+  ],
+  "synonyms": [],
+  "translations": []
+}

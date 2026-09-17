@@ -1,0 +1,35 @@
+{
+  "examples": [],
+  "id": "perpetual",
+  "lemma": "perpetual",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p08",
+      "part": "vocabulary",
+      "questionNo": 15,
+      "reach": 1,
+      "surface": "perpetual",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "perpetual"
+  ],
+  "synonyms": [],
+  "translations": []
+}

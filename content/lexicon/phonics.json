@@ -1,0 +1,67 @@
+{
+  "domain": {
+    "fieldCodes": [
+      "1121"
+    ]
+  },
+  "examples": [],
+  "id": "phonics",
+  "lemma": "phonics",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1398-p05",
+      "part": "cloze",
+      "questionNo": 37,
+      "reach": 1,
+      "surface": "phonics",
+      "year": 1398
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1398-p05",
+      "part": "grammar",
+      "questionNo": 38,
+      "reach": 1,
+      "surface": "phonics",
+      "year": 1398
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1398-p05",
+      "part": "grammar",
+      "questionNo": 39,
+      "reach": 1,
+      "surface": "phonics",
+      "year": 1398
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1398-p05",
+      "part": "cloze",
+      "questionNo": 40,
+      "reach": 1,
+      "surface": "phonics",
+      "year": 1398
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 4,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "phonics"
+  ],
+  "synonyms": [],
+  "translations": []
+}

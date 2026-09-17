@@ -1,0 +1,44 @@
+{
+  "examples": [],
+  "id": "rote",
+  "lemma": "rote",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p08",
+      "part": "cloze",
+      "questionNo": 39,
+      "reach": 1,
+      "surface": "rote",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1398-p05",
+      "part": "cloze",
+      "questionNo": 36,
+      "reach": 1,
+      "surface": "rote",
+      "year": 1398
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 2,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "rote"
+  ],
+  "synonyms": [],
+  "translations": []
+}

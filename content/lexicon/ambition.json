@@ -5,6 +5,7 @@
   "occurrences": [
     {
       "isAnswer": true,
+      "occurrenceType": "tested",
       "optionIndex": 2,
       "paperId": "arshad-1405-p04",
       "part": "vocabulary",
@@ -15,6 +16,7 @@
     },
     {
       "isAnswer": false,
+      "occurrenceType": "tested",
       "optionIndex": 0,
       "paperId": "arshad-1404-p03",
       "part": "vocabulary",
@@ -25,6 +27,7 @@
     },
     {
       "isAnswer": false,
+      "occurrenceType": "tested",
       "optionIndex": 3,
       "paperId": "arshad-1399-p10",
       "part": "vocabulary",
@@ -49,6 +52,7 @@
     "lastYear": 1405,
     "priority": 11,
     "timesAsAnswer": 1,
+    "timesAsContext": 0,
     "timesAsDistractor": 2,
     "timesTested": 3
   },

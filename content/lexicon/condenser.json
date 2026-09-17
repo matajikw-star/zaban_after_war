@@ -1,0 +1,40 @@
+{
+  "domain": {
+    "fieldCodes": [
+      "1148"
+    ]
+  },
+  "examples": [],
+  "id": "condenser",
+  "lemma": "condenser",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1402-p06",
+      "part": "grammar",
+      "questionNo": 11,
+      "reach": 1,
+      "surface": "condenser",
+      "year": 1402
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "condenser"
+  ],
+  "synonyms": [],
+  "translations": []
+}

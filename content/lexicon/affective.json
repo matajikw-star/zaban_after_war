@@ -1,0 +1,50 @@
+{
+  "domain": {
+    "fieldCodes": [
+      "1110",
+      "1121"
+    ]
+  },
+  "examples": [],
+  "id": "affective",
+  "lemma": "affective",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1403-p04",
+      "part": "grammar",
+      "questionNo": 28,
+      "reach": 1,
+      "surface": "affective",
+      "year": 1403
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1401-p04",
+      "part": "grammar",
+      "questionNo": 3,
+      "reach": 1,
+      "surface": "affective",
+      "year": 1401
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 2,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "affective"
+  ],
+  "synonyms": [],
+  "translations": []
+}

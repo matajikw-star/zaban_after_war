@@ -1,0 +1,35 @@
+{
+  "examples": [],
+  "id": "continuum",
+  "lemma": "continuum",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1404-p04",
+      "part": "grammar",
+      "questionNo": 4,
+      "reach": 1,
+      "surface": "continuum",
+      "year": 1404
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "continuum"
+  ],
+  "synonyms": [],
+  "translations": []
+}

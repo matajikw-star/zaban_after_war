@@ -5,6 +5,7 @@
   "occurrences": [
     {
       "isAnswer": false,
+      "occurrenceType": "tested",
       "optionIndex": 3,
       "paperId": "arshad-1400-p01",
       "part": "vocabulary",
@@ -15,6 +16,7 @@
     },
     {
       "isAnswer": false,
+      "occurrenceType": "tested",
       "optionIndex": 1,
       "paperId": "arshad-1400-p03",
       "part": "vocabulary",
@@ -25,6 +27,7 @@
     },
     {
       "isAnswer": false,
+      "occurrenceType": "tested",
       "optionIndex": 3,
       "paperId": "arshad-1400-p04",
       "part": "vocabulary",
@@ -35,6 +38,7 @@
     },
     {
       "isAnswer": false,
+      "occurrenceType": "tested",
       "optionIndex": 1,
       "paperId": "arshad-1400-p05",
       "part": "vocabulary",
@@ -45,6 +49,7 @@
     },
     {
       "isAnswer": false,
+      "occurrenceType": "tested",
       "optionIndex": 3,
       "paperId": "arshad-1400-p06",
       "part": "vocabulary",
@@ -55,6 +60,7 @@
     },
     {
       "isAnswer": false,
+      "occurrenceType": "tested",
       "optionIndex": 1,
       "paperId": "arshad-1400-p10",
       "part": "vocabulary",
@@ -65,6 +71,7 @@
     },
     {
       "isAnswer": false,
+      "occurrenceType": "tested",
       "optionIndex": 1,
       "paperId": "arshad-1400-p12",
       "part": "vocabulary",
@@ -85,6 +92,7 @@
     "lastYear": 1400,
     "priority": 9,
     "timesAsAnswer": 0,
+    "timesAsContext": 0,
     "timesAsDistractor": 7,
     "timesTested": 7
   },

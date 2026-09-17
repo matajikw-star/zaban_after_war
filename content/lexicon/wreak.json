@@ -1,0 +1,35 @@
+{
+  "examples": [],
+  "id": "wreak",
+  "lemma": "wreak",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1401-p02",
+      "part": "grammar",
+      "questionNo": 11,
+      "reach": 34,
+      "surface": "wreak",
+      "year": 1401
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "wreak"
+  ],
+  "synonyms": [],
+  "translations": []
+}

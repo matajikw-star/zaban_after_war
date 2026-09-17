@@ -1,0 +1,1185 @@
+[
+ {
+  "input": "musician",
+  "lemma": "musician",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "The blank asks what the vernacular of rap musicians is full of; 'musicians' is school vocabulary that no candidate needs taught."
+ },
+ {
+  "input": "mutation",
+  "lemma": "mutation",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "The blank sits on 'the ..... mass, the average man', and 'mutation' only arrives in a trailing clause that the answer does not depend on."
+ },
+ {
+  "input": "myth",
+  "lemma": "myth",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "'urban myths' is a familiar collocation and the blank is answered by 'living in the sewers of the city', not by this word."
+ },
+ {
+  "input": "namely",
+  "lemma": "namely",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 3,
+  "reason": "The second blank sits directly after 'namely', so a reader who misses that it introduces an elaboration of 'the same freedom' cannot see what the blank has to complete.",
+  "gloss": "that is to say; used to introduce a precise restatement"
+ },
+ {
+  "input": "narrative",
+  "lemma": "narrative",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "'the Narrative' here is the title of a work, and the word itself is standard academic vocabulary."
+ },
+ {
+  "input": "naturally",
+  "lemma": "naturally",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "A transparent adverb of 'natural' sitting inside the relative clause, not at either blank."
+ },
+ {
+  "input": "navigator",
+  "lemma": "navigator",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "Transparent agent noun from 'navigate', and the blank ('take their name') turns on the sacred images rather than on the navigators."
+ },
+ {
+  "input": "negotiate",
+  "lemma": "negotiate",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The blank ('weak') does lean on 'lacks the power to negotiate higher wages', but negotiate is ordinary B2 vocabulary for this audience."
+ },
+ {
+  "input": "neighbor",
+  "lemma": "neighbor",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "The blank is what the child uttered to appease the parent; 'mean neighbor' is elementary vocabulary."
+ },
+ {
+  "input": "nerve",
+  "lemma": "nerve",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "'When she is nervous' in the same sentence hands the reader 'tangled nerves'."
+ },
+ {
+  "input": "neural",
+  "lemma": "neural",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "'neural activity' is only the frame of the study; the blank sits at the far end, on what the poor readers do with speed and comprehension."
+ },
+ {
+  "input": "nevertheless",
+  "lemma": "nevertheless",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The blank is the concessive connector that 'nevertheless' answers, but the word is common academic English that a B2 reader already has."
+ },
+ {
+  "input": "nicaraguans",
+  "lemma": "Nicaraguan",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "A country demonym rather than vocabulary; the blank ('jubilation') is carried by people pouring into the streets honking car-horns."
+ },
+ {
+  "input": "niche",
+  "lemma": "niche",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "'it will have its odd niche among the curiosities of literature' is the sentence's verdict on the book, and 'niche' is the word that carries it.",
+  "gloss": "a small specialised place or position that suits someone or something"
+ },
+ {
+  "input": "niece",
+  "lemma": "niece",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "The blank ('vivid') is spelled out by the castle-and-wand sentence that follows; 'niece' merely supplies a child."
+ },
+ {
+  "input": "nighttime",
+  "lemma": "nighttime",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "A transparent compound, and 'restrictions ... to calm protests' is what points at the blank ('curfew')."
+ },
+ {
+  "input": "nineteenth",
+  "lemma": "nineteenth",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 1,
+  "difficulty": 1,
+  "reason": "An ordinal number in a date expression; nothing in the sentence turns on it."
+ },
+ {
+  "input": "nitric",
+  "lemma": "nitric",
+  "verdict": "domain-term",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 5,
+  "reason": "'it equals agua fortis [nitric acid]' is chemistry vocabulary used as the comparison for sugar's acrimony, hard but not konkour English.",
+  "gloss": "of or containing nitrogen; nitric acid is a strong corrosive acid",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "input": "nonexistence",
+  "lemma": "nonexistence",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Transparent from 'non-' plus 'existence', which a B2 reader has."
+ },
+ {
+  "input": "nonhuman",
+  "lemma": "nonhuman",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Transparent compound, and the blank is the verb describing what the movement does to society's traditional view."
+ },
+ {
+  "input": "nonliterary",
+  "lemma": "nonliterary",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "The sentence pairs it with 'literary' in the same list of contrasts, which makes it self-glossing."
+ },
+ {
+  "input": "nonstop",
+  "lemma": "nonstop",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "Transparent compound; 'sniping, undermining and other forms of verbal abuse' is what supplies the blank."
+ },
+ {
+  "input": "nonverbal",
+  "lemma": "nonverbal",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The blank sits right against 'Nonverbal thinking', but the word is transparent from 'verbal' and the sentence glosses it with 'perceptions'."
+ },
+ {
+  "input": "norm",
+  "lemma": "norm",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "'norms or conventions of interaction' glosses itself inside the quoted definition."
+ },
+ {
+  "input": "northward",
+  "lemma": "northward",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Transparent from 'north', and it sits in the closing adjunct about when migration began."
+ },
+ {
+  "input": "nostalgic",
+  "lemma": "nostalgic",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The blank sits directly against 'His nostalgic .....', but nostalgic is a loanword this audience already uses in Persian."
+ },
+ {
+  "input": "notion",
+  "lemma": "notion",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "The blank is the concessive connector at the head of the sentence; 'the notions of social distance' is common academic phrasing."
+ },
+ {
+  "input": "nouns",
+  "lemma": "noun",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "A grammar term every candidate knows, and the sentence itself glosses it as words 'signifying things'."
+ },
+ {
+  "input": "novice",
+  "lemma": "novice",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The claim rests on it: without an immense superiority in skill 'over the novice' there can be no true experts, only laypeople with credentials.",
+  "gloss": "a beginner; someone new to an activity"
+ },
+ {
+  "input": "nowadays",
+  "lemma": "nowadays",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Elementary time adverb; the blank ('greed/commercialization') is carried by players requiring money more than name."
+ },
+ {
+  "input": "nowhere",
+  "lemma": "nowhere",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "'arrive nowhere in particular' is plain vocabulary, and the blank is the noun after 'spun out to great .....'."
+ },
+ {
+  "input": "numeracy",
+  "lemma": "numeracy",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 4,
+  "reason": "Genuinely unfamiliar, but it is the second half of a conjoined pair with 'literacy' and the blanks are clause-level; the sentence reads the same without it."
+ },
+ {
+  "input": "nutritious",
+  "lemma": "nutritious",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "'calorie-rich' stands beside it in the same phrase and hands over the meaning."
+ },
+ {
+  "input": "obesity",
+  "lemma": "obesity",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 3,
+  "reason": "The blank ('sedentary') is reachable only by setting obesity against a lifestyle 'that does not involve any physical effort'.",
+  "gloss": "the condition of being very overweight"
+ },
+ {
+  "input": "obey",
+  "lemma": "obey",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The blank ('subordinate') leans on 'you will obey me', but obey is school vocabulary."
+ },
+ {
+  "input": "obliged",
+  "lemma": "oblige",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 3,
+  "reason": "The main clause is 'I am obliged to put myself in the chef's hands', so the introductory blank can only be chosen once 'obliged' is read as 'compelled'.",
+  "gloss": "to force or compel someone to do something"
+ },
+ {
+  "input": "observe",
+  "lemma": "observe",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "'has been observed' is a common academic passive and the blank is the opening connector."
+ },
+ {
+  "input": "observer",
+  "lemma": "observer",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "'To most observers' is a transparent agent noun in an opening adjunct, judged 'no' in the calibration as well."
+ },
+ {
+  "input": "obsession",
+  "lemma": "obsession",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "The blank is the adjective before 'beauty'; 'his obsession to encapsulate fragile moments' only frames it and the word is widely known."
+ },
+ {
+  "input": "occasion",
+  "lemma": "occasion",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The blank sits directly against 'occasion', but the word is common and 'filled with pride' supplies the answer."
+ },
+ {
+  "input": "occasionally",
+  "lemma": "occasionally",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "Transparent adverb from 'occasion', sitting in the relative clause rather than at the blank."
+ },
+ {
+  "input": "occipital",
+  "lemma": "occipital",
+  "verdict": "domain-term",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 5,
+  "reason": "It appears in a parenthetical list of cortical lobes that identifies the blank as 'four lobes'; this is neuroanatomy, not konkour English.",
+  "gloss": "of the occipital lobe, at the back of the brain",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "input": "odd",
+  "lemma": "odd",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "'its odd niche' uses the plainest sense of a very common word, and the blank is glossed by 'a work quite unlike any other'."
+ },
+ {
+  "input": "oddity",
+  "lemma": "oddity",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "Reasonably transparent from 'odd', and 'this controversial stop-motion oddity from Spain' is already framed by 'controversial'."
+ },
+ {
+  "input": "offense",
+  "lemma": "offense",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "'aggravated his offense ... before the jury in the courtroom' fixes the sense, and the word is common."
+ },
+ {
+  "input": "offensive",
+  "lemma": "offensive",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "'removing offensive material' is plain vocabulary; the blank is the verb after 'too explicit to .....'."
+ },
+ {
+  "input": "officially",
+  "lemma": "officially",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Transparent adverb from 'official' in the background clause about amateur status."
+ },
+ {
+  "input": "omitted",
+  "lemma": "omit",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 3,
+  "reason": "The blank ('the essence') is defined purely by its contrast with what was omitted, 'all the extraneous details', so the verb carries the question.",
+  "gloss": "to leave out; to fail to include"
+ },
+ {
+  "input": "oneself",
+  "lemma": "oneself",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "'one finds oneself' is a grammatical reflexive, not vocabulary a candidate is missing."
+ },
+ {
+  "input": "oppose",
+  "lemma": "oppose",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "'as opposed to' is a set phrase the candidate meets constantly in academic reading."
+ },
+ {
+  "input": "opposite",
+  "lemma": "opposite",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "'Coleridge was the opposite' is elementary vocabulary; the blank is the concessive connector."
+ },
+ {
+  "input": "orbit",
+  "lemma": "orbit",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "'propelled into orbit by a Falcon 9 rocket' is common vocabulary, and the blank is about the scrubbed first attempt."
+ },
+ {
+  "input": "organ",
+  "lemma": "organ",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "'the energy-consuming organ in their skulls' is a periphrasis for the brain built from a common word."
+ },
+ {
+  "input": "organisms",
+  "lemma": "organism",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "'small organisms with short life cycles' is school biology vocabulary, and the blank is the noun governing photoperiod."
+ },
+ {
+  "input": "organize",
+  "lemma": "organize",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "'The first organized international competition' uses a word every candidate has."
+ },
+ {
+  "input": "originates",
+  "lemma": "originate",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "Transparent from 'origin', and the blank is the main verb 'is' after the relative clause."
+ },
+ {
+  "input": "orthodox",
+  "lemma": "orthodox",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The subject of the sentence is 'the orthodox view of a single intelligence', and the point that this accepted view was put forth by particular psychologists is unreadable without it.",
+  "gloss": "conventional; generally accepted as correct"
+ },
+ {
+  "input": "ostentatious",
+  "lemma": "ostentatious",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 5,
+  "reason": "The blank ('flaunt') is recoverable only from the contrast between what celebrities call 'bling' and what others call ostentatious jewelry.",
+  "gloss": "showy; designed to impress by a display of wealth"
+ },
+ {
+  "input": "outbreak",
+  "lemma": "outbreak",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "'in outbreak years' is a trailing adjunct; the blank about what the virus does to the caterpillars does not depend on it."
+ },
+ {
+  "input": "outer",
+  "lemma": "outer",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "'its outer jacket and the back cover' is elementary, and the blank is answered by 'very little substance'."
+ },
+ {
+  "input": "outpouring",
+  "lemma": "outpouring",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "'of expression and emotion' glosses it on the spot and it is readable from 'pour out'."
+ },
+ {
+  "input": "overcame",
+  "lemma": "overcome",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The blank ('lethargy') leans on 'eventually overcame his .....', but overcome is common B2 vocabulary."
+ },
+ {
+  "input": "overcome",
+  "lemma": "overcome",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "'helping me overcome my problems' sits in the opening adjunct and the blank is the idiom 'second to none'."
+ },
+ {
+  "input": "overestimate",
+  "lemma": "overestimate",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "'underestimate' appears in the same sentence, making the over-/under- pair transparent."
+ },
+ {
+  "input": "overpopulation",
+  "lemma": "overpopulation",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Transparent compound, glossed by 'communities push out further into the wilderness to find a place to live'."
+ },
+ {
+  "input": "overreacting",
+  "lemma": "overreact",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Transparent from 'over-' plus 'react', and the '55 million people are in danger' example spells the meaning out."
+ },
+ {
+  "input": "overturn",
+  "lemma": "overturn",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "The blank is the appositive about Behn; 'overturn ... the conventions' is readable from 'turn over' and from its pairing with 'criticize'."
+ },
+ {
+  "input": "owed",
+  "lemma": "owe",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "The blank is the adjective describing officers' behavior at entry points, well away from 'is owed to misconceived laws'."
+ },
+ {
+  "input": "owes",
+  "lemma": "owe",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "'owes more to our shared genetics' trails after the last blank and the idiom is recoverable from the comparison it sets up."
+ },
+ {
+  "input": "oxygen",
+  "lemma": "oxygen",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "'release oxygen, resulting in shortness of breath' uses a word every candidate learned at school."
+ },
+ {
+  "input": "ozone",
+  "lemma": "ozone",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "'The weakened ozone .....' is followed by 'vital to protecting life on Earth', and the word itself is universally known."
+ },
+ {
+  "input": "pace",
+  "lemma": "pace",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "'going at a slow pace' is a familiar phrase and the blank is the verb about speed and comprehension."
+ },
+ {
+  "input": "paleoanthropological",
+  "lemma": "paleoanthropological",
+  "verdict": "domain-term",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 5,
+  "reason": "'Conventional paleoanthropological wisdom holds that ...' names a discipline's consensus; the word belongs to that discipline, not to konkour English.",
+  "gloss": "relating to the study of early humans from their fossil remains",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "input": "paleontological",
+  "lemma": "paleontological",
+  "verdict": "domain-term",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 5,
+  "reason": "'during paleontological excavations, primitive stone tools came to light' uses the vocabulary of fossil science rather than general English.",
+  "gloss": "relating to the study of fossils",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "input": "pandemic",
+  "lemma": "pandemic",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "'since the start of the pandemic' is a time adjunct using a word that became universal after 2020."
+ },
+ {
+  "input": "panic",
+  "lemma": "panic",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "'panic attacks ... everyday anxiety' pairs a loanword with its own gloss."
+ },
+ {
+  "input": "pantry",
+  "lemma": "pantry",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 4,
+  "reason": "Genuinely unfamiliar, but the third parallel item is carried by 'goodies', 'shelves' and 'use-by date', while the blank sits in the first item about books."
+ },
+ {
+  "input": "paralyzed",
+  "lemma": "paralyze",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "'unable to move forward' glosses it immediately, and the blank is the relative adverb after 'in a situation'."
+ },
+ {
+  "input": "paraphrase",
+  "lemma": "paraphrase",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "'To paraphrase Samuel Johnson' uses a word Iranian English students meet in every writing course."
+ },
+ {
+  "input": "parasite",
+  "lemma": "parasite",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 5,
+  "difficulty": 2,
+  "reason": "The whole sentence turns on the parasite-host relation, but 'parasite' is school biology vocabulary for this audience."
+ },
+ {
+  "input": "parietal",
+  "lemma": "parietal",
+  "verdict": "domain-term",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 5,
+  "reason": "It sits in the parenthetical list of cortical lobes that identifies the blank; this is neuroanatomy vocabulary.",
+  "gloss": "of the parietal lobe, at the upper side of the brain",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "input": "participant",
+  "lemma": "participant",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "'research participants' is transparent from 'participate' and is standard in any study description."
+ },
+ {
+  "input": "partisanship",
+  "lemma": "partisanship",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 5,
+  "reason": "The connector in the blank has to mark the relation between Behn admiring her rivals' skill and her plays revealing 'the same partisanship for the reigning Stuart monarchy'.",
+  "gloss": "strong, often uncritical, support for a party or cause"
+ },
+ {
+  "input": "passenger",
+  "lemma": "passenger",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "'to each passenger' is elementary; the blank is the verb about the single cup of water."
+ },
+ {
+  "input": "pathological",
+  "lemma": "pathological",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 4,
+  "reason": "The blank ('cost') is carried by 'liars are great at deception'; the sentence reads much the same with the adjective removed."
+ },
+ {
+  "input": "pathway",
+  "lemma": "pathway",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "A transparent compound of 'path' and 'way', and 'compensated with other pathways' is glossed by 'brain regions' earlier in the sentence."
+ },
+ {
+  "input": "patriarchy",
+  "lemma": "patriarchy",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 4,
+  "reason": "It is the last item in a list of oppressions, far from the blank, which is the verb governing 'freedom'."
+ },
+ {
+  "input": "patronage",
+  "lemma": "patronage",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 5,
+  "reason": "The subject of the clause the blank introduces is 'this increased patronage poses dangers for them, too', so the connector cannot be chosen without the word.",
+  "gloss": "the custom or financial support given by customers or by a patron"
+ },
+ {
+  "input": "paws",
+  "lemma": "paw",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "'as though they had hands' glosses it directly, and that apposition, not 'paws', is what gives the blank away."
+ },
+ {
+  "input": "peaceful",
+  "lemma": "peaceful",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "Transparent from 'peace', and the following sentence about rejecting violence supplies the blank."
+ },
+ {
+  "input": "peasant",
+  "lemma": "peasant",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "The subject is 'Members of poor peasant families' spinning cloth at home, and the blank about supplementing a meager family income rests on that rural-poverty frame.",
+  "gloss": "a poor farmer or farm worker of low social rank"
+ },
+ {
+  "input": "peculiar",
+  "lemma": "peculiar",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The blank ('sartorial') is recoverable only from 'on account of his peculiar choice of clothing'.",
+  "gloss": "strange or unusual"
+ },
+ {
+  "input": "pep",
+  "lemma": "pep",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 5,
+  "reason": "The blank asks what could not be done to the miasma of failure 'without launching into a pep talk', so the idiom is the hinge of the question.",
+  "gloss": "energy and high spirits; a pep talk is a short speech meant to encourage"
+ },
+ {
+  "input": "perceive",
+  "lemma": "perceive",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "'the positively perceived .....' uses a common academic verb, and the blank is the noun it modifies."
+ },
+ {
+  "input": "perception",
+  "lemma": "perception",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "'students' perceptions of their level of autonomy' is standard academic vocabulary in a theory-comparison sentence."
+ },
+ {
+  "input": "periodic",
+  "lemma": "periodic",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Transparent from 'period'; the blank is the participle about preventing populations from exceeding a limit."
+ },
+ {
+  "input": "perish",
+  "lemma": "perish",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "The blank ('dissuade') is motivated by the second sentence, that his team of sled dogs 'nearly perished during the race'.",
+  "gloss": "to die, especially suddenly or violently"
+ },
+ {
+  "input": "perk",
+  "lemma": "perk",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The sentence defines the word by example, a company car he would 'sorely miss' at a job 'that did not offer the same perk', and the blank completes that definition.",
+  "gloss": "an extra benefit that comes with a job"
+ },
+ {
+  "input": "perpetual",
+  "lemma": "perpetual",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The blank ('vigor') is read straight off 'the secret of perpetual youth' earlier in the sentence.",
+  "gloss": "never ending; continuing forever"
+ },
+ {
+  "input": "persist",
+  "lemma": "persist",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "The parallel first clause, 'storms arise in a matter of hours and last for days', glosses 'persist for centuries'."
+ },
+ {
+  "input": "personality",
+  "lemma": "personality",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "'a theory of personality' is elementary vocabulary and the blank is the participle after 'began his career'."
+ },
+ {
+  "input": "pessimism",
+  "lemma": "pessimism",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "It is paired with 'optimism' twice in the same sentence, and both are taught vocabulary."
+ },
+ {
+  "input": "pessimist",
+  "lemma": "pessimist",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The blank sits directly against it, but the drought-and-washed-away-crops example defines the word and it is standard vocabulary."
+ },
+ {
+  "input": "petroleum",
+  "lemma": "petroleum",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "'hydrogen's effects on petroleum use' concerns a word no Iranian candidate is missing."
+ },
+ {
+  "input": "pharmaceutical",
+  "lemma": "pharmaceutical",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "Readable from 'pharmacy', and 'its new arthritis medicine' in the same sentence fixes the sense."
+ },
+ {
+  "input": "phenomenon",
+  "lemma": "phenomenon",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "'this strange phenomenon' is common academic vocabulary and the blank is the adjective before 'an explanation'."
+ },
+ {
+  "input": "philology",
+  "lemma": "philology",
+  "verdict": "domain-term",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 5,
+  "reason": "'the whole 19th-century edifice of comparative philology and historical linguistics' names a discipline, and the word lives inside linguistics rather than in general English.",
+  "gloss": "the historical and comparative study of languages and texts",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "input": "philosopher",
+  "lemma": "philosopher",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "It is a title before a name and the blank is the preposition introducing the machine metaphor."
+ },
+ {
+  "input": "phonics",
+  "lemma": "phonics",
+  "verdict": "domain-term",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The dash gloss 'a rigorous study of the relation between letters and sounds' hands the meaning over, and the word is the technical vocabulary of language teaching.",
+  "gloss": "a method of teaching reading through letter-sound relations",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "input": "photoperiod",
+  "lemma": "photoperiod",
+  "verdict": "domain-term",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 5,
+  "reason": "The sentence parenthesises it as '(daily amount of sunlight)', which both lowers the block and marks it as ecology's own vocabulary.",
+  "gloss": "the daily amount of daylight an organism receives",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "input": "photosynthesis",
+  "lemma": "photosynthesis",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "'carry out photosynthesis using the metabolic wastes of the corals' uses a direct cognate of a term every Iranian candidate met in school biology."
+ },
+ {
+  "input": "physiological",
+  "lemma": "physiological",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "'physiology' is a familiar loanword, and 'control mechanisms ... hormonal changes' fixes the sense in the same sentence."
+ },
+ {
+  "input": "picnic",
+  "lemma": "picnic",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "A loanword in a conditional grammar item whose blank is the verb 'rains'."
+ },
+ {
+  "input": "pie",
+  "lemma": "pie",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Elementary vocabulary in an inversion item whose blank is the clause after 'Only when we had eaten the pie'."
+ },
+ {
+  "input": "piling",
+  "lemma": "pile",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "'piling pantry shelves with goodies' sits in the third parallel item while the blank is in the first, about buying books and treasuring them."
+ },
+ {
+  "input": "pill",
+  "lemma": "pill",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "'the weight loss pills' is elementary; the blank ('misleading') comes from the studies showing they are ineffective."
+ },
+ {
+  "input": "pillow",
+  "lemma": "pillow",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "'fall back upon my pillows' is everyday vocabulary and the blank is the adjective after 'It was more .....'."
+ },
+ {
+  "input": "pitch",
+  "lemma": "pitch",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 4,
+  "reason": "The football-field sense is genuinely unfamiliar, but 'On the pitch' only sets the scene while the blank is carried by 'faces ... were pictures of disbelief'."
+ },
+ {
+  "input": "pituitary",
+  "lemma": "pituitary",
+  "verdict": "domain-term",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 5,
+  "reason": "'hormonal changes in the pituitary and adrenal glands' is endocrinology vocabulary, hard but not part of konkour English.",
+  "gloss": "the pituitary gland, at the base of the brain, which controls hormone release",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "input": "placards",
+  "lemma": "placard",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The whole sentence is about spots 'reserved for employees with placards' and whether 'holders of the new placards' will find parking, so the blank cannot be read without it.",
+  "gloss": "a printed sign or permit displayed publicly"
+ },
+ {
+  "input": "plaintiff",
+  "lemma": "plaintiff",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The subject is 'The plaintiffs who were reached declined to comment', and like 'defamation' this is courtroom vocabulary that ordinary journalism uses constantly.",
+  "gloss": "the person who brings a legal case against someone in court"
+ },
+ {
+  "input": "planetesimals",
+  "lemma": "planetesimal",
+  "verdict": "domain-term",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 5,
+  "reason": "The sentence itself introduces it as 'lumps called planetesimals', and the word belongs to planetary science rather than to general English.",
+  "gloss": "a small body of rock or ice that clumps together to form a planet",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "input": "plastics",
+  "lemma": "plastic",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "'newly developed plastics' repeats 'the plastic bag industry' from the same sentence, in a word everyone has."
+ },
+ {
+  "input": "playful",
+  "lemma": "playful",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Transparent from 'play', and it is the pole the blank contrasts with rather than the hard half of the contrast."
+ },
+ {
+  "input": "playground",
+  "lemma": "playground",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "A transparent compound setting the scene; the blank ('squabbles') comes from the quarrel over swings and the last cookie."
+ }
+]

@@ -1,0 +1,1156 @@
+[
+  {
+    "input": "sowed",
+    "lemma": "sow",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank sits directly against it in \"he thinks he sowed .....\", so the whole completion turns on knowing that sow takes a figurative object like seeds of doubt.",
+    "gloss": "to plant seed; figuratively, to set something in motion"
+  },
+  {
+    "input": "span",
+    "lemma": "span",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"maximum life span (the oldest attainable age)\" glosses itself in apposition, and life span is ordinary B2 vocabulary."
+  },
+  {
+    "input": "spatial",
+    "lemma": "spatial",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The blank is the preposition in \"the effect of listening to music by Mozart ..... spatial reasoning\", so the candidate only needs the collocation effect on, not the meaning of spatial."
+  },
+  {
+    "input": "specialization",
+    "lemma": "specialization",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "A transparent noun from special/specialize, and the blank sits far away on the adjective before \"environment for innovation\"."
+  },
+  {
+    "input": "specialized",
+    "lemma": "specialized",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"different specialized areas of the brain\" uses the word in its ordinary transparent sense, and the tested error is the although/but construction."
+  },
+  {
+    "input": "specificity",
+    "lemma": "specificity",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Transparent -ity derivative of specific, and it sits at the tail of \"enhancing the possibilities of specificity in searching\", far from the preposition blank."
+  },
+  {
+    "input": "specifics",
+    "lemma": "specific",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "\"the specifics of each stroke\" is the plural noun of a word every B2 knows, and \"spending 30 minutes alone on the backstroke\" makes the sense obvious."
+  },
+  {
+    "input": "spilt",
+    "lemma": "spill",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "It appears only inside the quoted proverb \"No use crying over spilt milk\", while the blank tests the adjective describing how she spoke."
+  },
+  {
+    "input": "spin",
+    "lemma": "spin",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"The coffee cups suddenly went spinning\" uses a word school English already covers."
+  },
+  {
+    "input": "splurging",
+    "lemma": "splurge",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "\"splurging on clothing too beautiful to wear\" is one of the three parallel paradoxes the blank has to connect, and splurge is well outside B2 vocabulary.",
+    "gloss": "to spend money freely or extravagantly"
+  },
+  {
+    "input": "spoke",
+    "lemma": "speak",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"Though he spoke for over an hour\" is elementary vocabulary; the blank turns on \"the students had no idea\"."
+  },
+  {
+    "input": "sprawling",
+    "lemma": "sprawl",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "\"after sprawling on the couch for a couple of weeks\" is the entire evidence for the noun in \"overcame his .....\", so a reader who misses sprawl cannot pick lethargy.",
+    "gloss": "to sit or lie stretched out in a careless, slouching way"
+  },
+  {
+    "input": "spun",
+    "lemma": "spin",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank sits immediately after it in \"may be spun out to great .....\", and only the phrasal sense of spin out makes \"length\" the answer.",
+    "gloss": "to spin out: to prolong something beyond its natural length"
+  },
+  {
+    "input": "staggered",
+    "lemma": "stagger",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "The blank sits directly against \"..... impatient with and staggered by Rand's potted version\", and the figurative sense of staggered (shocked, not walking unsteadily) is what carries Eilenberger's reaction.",
+    "gloss": "to shock or astonish someone deeply"
+  },
+  {
+    "input": "stagnate",
+    "lemma": "stagnate",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "The vicious circle closes on \"demand continues to stagnate or decline\", which is the clause the opening blank has to be made consistent with.",
+    "gloss": "to stop developing or growing; to become inactive"
+  },
+  {
+    "input": "stalkers",
+    "lemma": "stalker",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "\"to keep stalkers away from his property\" explains itself well enough for the blank, which only needs a verb meaning request before \"assistance from the police\"."
+  },
+  {
+    "input": "stampeding",
+    "lemma": "stampede",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "The second blank sits immediately after \"herds of elephants capable of stampeding their way through .....\", so the word governs what can fill it.",
+    "gloss": "to rush headlong in a panicked mass, as a herd does"
+  },
+  {
+    "input": "standpoint",
+    "lemma": "standpoint",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"From an environmental standpoint\" is a transparent compound in an opening adverbial, while the blank tests the relative clause about the new plastics."
+  },
+  {
+    "input": "stark",
+    "lemma": "stark",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "\"In stark contrast with his predecessor\" would read the same as \"in contrast\": the logic is carried by contrast and by \"so decisive\", not by the intensifier."
+  },
+  {
+    "input": "starvation",
+    "lemma": "starvation",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "\"it is starvation of the soul\" is load-bearing for the blank, but starve and starvation are school vocabulary for any B2 candidate."
+  },
+  {
+    "input": "starving",
+    "lemma": "starve",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "\"worse than starving the body\" sets up the blank, but the verb itself is known to every B2 reader."
+  },
+  {
+    "input": "statues",
+    "lemma": "statue",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"his two statues of Lincoln\" uses an elementary noun; the blank is the adjective before \"footprints in the sand of time\"."
+  },
+  {
+    "input": "steadfast",
+    "lemma": "steadfast",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "The blank sits directly against it in \"I ..... steadfast in assuring you\", and steadfast is the predicate the whole counterfactual asserts.",
+    "gloss": "firmly loyal or unwavering in a position"
+  },
+  {
+    "input": "steadily",
+    "lemma": "steadily",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"The hikers climbed steadily\" is a transparent adverb from steady; the blank tests the infinitive after \"just in time\"."
+  },
+  {
+    "input": "steal",
+    "lemma": "steal",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"for stealing cars\" is elementary vocabulary; the blank asks for a verb meaning punish."
+  },
+  {
+    "input": "stereotype",
+    "lemma": "stereotype",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "\"Excesses often accompany these stereotypes\" is immediately unpacked by the colon list, and the word is an internationalism a B2 candidate recognises."
+  },
+  {
+    "input": "steroids",
+    "lemma": "steroid",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"had never taken steroids\" is an internationalism, and the blank needs a verb meaning tarnish, cued by \"an angry reporter\"."
+  },
+  {
+    "input": "stiffen",
+    "lemma": "stiffen",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "\"the arteries stiffen, less blood reaches the brain\" is a transparent -en derivative of stiff, and the following clause spells out the consequence anyway."
+  },
+  {
+    "input": "stockbroker",
+    "lemma": "stockbroker",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "It is only the speaker tag in \"advised the Millers' stockbroker\", and the quoted advice about high-tech stocks supplies everything the blank needs."
+  },
+  {
+    "input": "stockholders",
+    "lemma": "stockholder",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"the existing stockholders will have first right to buy any new stock\" is a transparent compound that the sentence itself explains."
+  },
+  {
+    "input": "stoke",
+    "lemma": "stoke",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "It is the verb of the clause the sentence is built on, \"the need to stoke the energy-consuming organ in their skulls\", and no B2 candidate is expected to know it.",
+    "gloss": "to feed fuel to a fire or furnace; to keep something supplied with energy"
+  },
+  {
+    "input": "stomach",
+    "lemma": "stomach",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"the singer's stomach always feels like\" uses elementary vocabulary."
+  },
+  {
+    "input": "stood",
+    "lemma": "stand",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "\"Clare stood her .....\" tests the idiom stand one's ground, but the lemma stand itself is elementary."
+  },
+  {
+    "input": "strengthen",
+    "lemma": "strengthen",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"to strengthen and to .....\" is a transparent derivative of strong; the difficulty in the sentence is buttress, not this word."
+  },
+  {
+    "input": "stroke",
+    "lemma": "stroke",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "The swimming sense in \"the specifics of each stroke\" is handed to the reader by \"proper swimming technique\" and \"the backstroke\"."
+  },
+  {
+    "input": "stronger",
+    "lemma": "strong",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"a stronger ..... to experience negative affect\" is an elementary comparative; the difficulty there is affect, not strong."
+  },
+  {
+    "input": "struck",
+    "lemma": "strike",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "\"He is struck deaf by disease\" is what tells the reader what he must overcome, but strike is common school vocabulary and \"deaf\" carries the sense."
+  },
+  {
+    "input": "subclasses",
+    "lemma": "subclass",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"all the classes and subclasses as well as rules\" is a transparent sub- compound sitting in a list of reasons, far from the blank."
+  },
+  {
+    "input": "subgenre",
+    "lemma": "subgenre",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "The blank is the grammatical connector in \"..... science fiction is a literary subgenre is a point often overlooked\", and sub- plus genre is transparent."
+  },
+  {
+    "input": "submarine",
+    "lemma": "submarine",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "\"The crew quarters on the submarine\" is an internationalism, and \"only a tiny locker\" gives the blank away."
+  },
+  {
+    "input": "subsequently",
+    "lemma": "subsequently",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "\"which for many years subsequently was regarded as authoritative\" would read the same without the adverb; the blank tests the adjective before criticism."
+  },
+  {
+    "input": "substantially",
+    "lemma": "substantially",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "\"GDP has increased substantially\" is a transparent derivative of substantial, and the contrast is carried by \"Despite the fact that\"."
+  },
+  {
+    "input": "substitute",
+    "lemma": "substitute",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "\"a good DVD is a ..... substitute for a yoga instructor\" puts the blank against it, but substitute is ordinary B2 vocabulary."
+  },
+  {
+    "input": "substrates",
+    "lemma": "substrate",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "\"have distinct biological substrates\" carries half the claim about positive and negative affect, but the word belongs to biology and psychology rather than to konkour English.",
+    "gloss": "the underlying biological basis of a function or process",
+    "fieldCodes": ["1121"]
+  },
+  {
+    "input": "subtasks",
+    "lemma": "subtask",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"spatial-reasoning subtasks of the Stanford-Binet IQ test\" is a transparent sub- compound."
+  },
+  {
+    "input": "subtle",
+    "lemma": "subtle",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "\"the subtle human presence exuding out of urban landscapes\" is the sentence's subject and the model for the blank in \"fragile moments of ..... beauty\".",
+    "gloss": "faint or delicate, hard to notice or describe"
+  },
+  {
+    "input": "subtly",
+    "lemma": "subtly",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "\"releasing buttery, subtly fruity flavors\" is decorative: the blank is the verb describing what the chocolate does before it melts."
+  },
+  {
+    "input": "subtraction",
+    "lemma": "subtraction",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "\"difficulty with regrouping in subtraction\" is school arithmetic vocabulary that every candidate has met."
+  },
+  {
+    "input": "succeed",
+    "lemma": "succeed",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "\"Succeeding Coleridge and Wordsworth was a new ..... of poets\" uses the follow-after sense, not the be-successful sense the candidate knows, and the blank depends on it.",
+    "gloss": "to come after and take the place of someone"
+  },
+  {
+    "input": "suddenly",
+    "lemma": "suddenly",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 1,
+    "reason": "\"The coffee cups suddenly went spinning\" uses elementary vocabulary."
+  },
+  {
+    "input": "summons",
+    "lemma": "summons",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "The legal noun sits at the far end of \"probable cause for an arrest or the issuance of a summons\", while the blank tests adhere closely to."
+  },
+  {
+    "input": "sumo",
+    "lemma": "sumo",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "\"The primary aim in sumo wrestling\" is a culturally familiar term, and \"knock your ..... right out of the ring\" supplies the answer by itself."
+  },
+  {
+    "input": "sunlight",
+    "lemma": "sunlight",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"photoperiod (daily amount of sunlight)\" is a transparent compound used inside a parenthetical gloss."
+  },
+  {
+    "input": "sunscreen",
+    "lemma": "sunscreen",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "\"wears sunscreen whenever she's ..... to the sun\" is a transparent compound, and the blank tests exposed to."
+  },
+  {
+    "input": "superman",
+    "lemma": "superman",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"the Nietzschean superman and will to power\" is a transparent compound and a proper-name concept, not konkour vocabulary."
+  },
+  {
+    "input": "supplement",
+    "lemma": "supplement",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "\"counterbalanced by the use of diet supplements\" is a common academic noun, and the item tests the Although/but redundancy."
+  },
+  {
+    "input": "suppose",
+    "lemma": "suppose",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"the three-member team was supposed to .....\" uses a construction every B1 learner has drilled."
+  },
+  {
+    "input": "sur",
+    "lemma": "sure",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "The surface was \"the surest way to hone your mental powers\", an elementary superlative that the lemmatiser truncated to a non-word."
+  },
+  {
+    "input": "surely",
+    "lemma": "surely",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"but surely one of the most important\" is a transparent adverb; the blank tests subject-verb agreement."
+  },
+  {
+    "input": "survive",
+    "lemma": "survive",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "\"some of the treated animals survived longer\" is ordinary vocabulary for any B2 candidate."
+  },
+  {
+    "input": "survivor",
+    "lemma": "survivor",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"Palestinian survivors who withstood the atrocities\" is a transparent -or derivative of survive; the hard word in that sentence is withstood."
+  },
+  {
+    "input": "sustain",
+    "lemma": "sustain",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "\"the water in the oceans will not sustain us because we cannot drink salt water\" glosses the verb in the very next clause."
+  },
+  {
+    "input": "sustenance",
+    "lemma": "sustenance",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank governs \"his experience and all that gives him sustenance\", so the reader must know what the child would be giving up.",
+    "gloss": "food or support that keeps someone alive and going"
+  },
+  {
+    "input": "swathes",
+    "lemma": "swathe",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "The blank sits immediately after \"vast swathes of habitat are being ..... to the advancing desert\", and swathe is well beyond B2.",
+    "gloss": "a broad strip or large area of something"
+  },
+  {
+    "input": "swatter",
+    "lemma": "swatter",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "\"ruining his father's tennis racquet by using it as a fly swatter\" makes the misdeed clear regardless, and the blank is the verb meaning redeemed."
+  },
+  {
+    "input": "sweeteners",
+    "lemma": "sweetener",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "\"There are lots of ..... sweeteners available, but nothing is quite as sweet as sugar\" is a transparent derivative of sweet that the sentence explains."
+  },
+  {
+    "input": "sweetness",
+    "lemma": "sweetness",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"under its sweetness it is nothing but a very great acrimony\" pairs a transparent -ness noun against the genuinely hard word, acrimony."
+  },
+  {
+    "input": "swim",
+    "lemma": "swim",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"a brief summary of proper swimming technique\" is elementary vocabulary."
+  },
+  {
+    "input": "swing",
+    "lemma": "swing",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"whose turn it was at the swings\" is a common playground noun; the hard words there are scapegraces and extricate."
+  },
+  {
+    "input": "swoop",
+    "lemma": "swoop",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank is coordinated directly with it in \"going to swoop down and ..... the town\", so the verb sets what can follow.",
+    "gloss": "to dive down suddenly and steeply, as a bird does"
+  },
+  {
+    "input": "symbiotic",
+    "lemma": "symbiotic",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The mutual benefit \"for their coral hosts, and even for other members of the reef community\" is exactly what symbiotic means, and the phrase is as common in journalism as in biology.",
+    "gloss": "involving a close relationship in which each side benefits"
+  },
+  {
+    "input": "synergy",
+    "lemma": "synergy",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The whole point of \"the individual members were not among the top ... yet their synergy was so remarkable\" collapses if the reader does not know the word.",
+    "gloss": "the extra effect produced when people or things work together"
+  },
+  {
+    "input": "syntactic",
+    "lemma": "syntactic",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The contrast in \"it can include syntactic tools ... direct mappings of sound to meaning, without syntactic intervention\" turns on the word, but it is linguistics vocabulary rather than general konkour English.",
+    "gloss": "relating to syntax, the arrangement of words into sentences",
+    "fieldCodes": ["1110"]
+  },
+  {
+    "input": "synthetic",
+    "lemma": "synthetic",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "\"the terms analytic and synthetic\" are named as technical labels being defined by the rest of the sentence, and the everyday sense of synthetic is already familiar."
+  },
+  {
+    "input": "tacit",
+    "lemma": "tacit",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "The quoted definition contrasts \"(tacit) knowledge\" with \"(ability for) use\", so the distinction the sentence exists to make rests on a word no B2 candidate knows.",
+    "gloss": "understood or implied without being stated"
+  },
+  {
+    "input": "tactic",
+    "lemma": "tactic",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "\"a good tactic some call strategic .....\" uses an internationalism the candidate already knows; the difficulty is the collocation strategic retreat."
+  },
+  {
+    "input": "tailpipe",
+    "lemma": "tailpipe",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "\"(11) ..... no tailpipe emissions\" would read the same as \"no emissions\": the connector is what is tested and emissions carries the meaning."
+  },
+  {
+    "input": "tale",
+    "lemma": "tale",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"Professor Weiss told a familiar tale\" is ordinary B2 vocabulary; the blank asks for a collective noun before \"of facts\"."
+  },
+  {
+    "input": "talent",
+    "lemma": "talent",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"attracting the level of talent it needs\" uses a word common to Persian and English alike."
+  },
+  {
+    "input": "tangled",
+    "lemma": "tangle",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "The blank sits directly before \"..... mass of tangled nerves\", and the image of knotted nerves is the only cue for what fills it.",
+    "gloss": "twisted together into a knotted, disordered mass"
+  },
+  {
+    "input": "tantrum",
+    "lemma": "tantrum",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 4,
+    "reason": "The short sentence is nothing but \"When the little boy is ....., he is more likely to throw a tantrum\", so the adjective can only be chosen by someone who knows the noun.",
+    "gloss": "a sudden outburst of childish anger"
+  },
+  {
+    "input": "taxi",
+    "lemma": "taxi",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 1,
+    "reason": "\"on jumping out of the taxi\" is elementary vocabulary; the blank tests the such/so construction."
+  },
+  {
+    "input": "teammate",
+    "lemma": "teammate",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"their teammate was conscious and speaking at the hospital\" is a transparent compound, and the item tests inversion after Only when."
+  },
+  {
+    "input": "tear",
+    "lemma": "tear",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"tears or yelling ..... the respect of a boss\" uses an elementary noun; the hard word there is histrionics."
+  },
+  {
+    "input": "teenager",
+    "lemma": "teenager",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 1,
+    "reason": "\"If you had told me as a teenager\" is elementary vocabulary framing a conditional-tense item."
+  },
+  {
+    "input": "teeth",
+    "lemma": "tooth",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"it blackens the teeth\" is elementary vocabulary."
+  },
+  {
+    "input": "tempests",
+    "lemma": "tempest",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "\"atmospheric storms arise in a matter of hours ... magnetic tempests develop over decades\" glosses the word by parallel with storms, and the contrast the blank tests is between timescales."
+  },
+  {
+    "input": "tempestuous",
+    "lemma": "tempestuous",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "\"The subject's tempestuous marriage\" is the topic of the sentence and nothing in it glosses the adjective, which is far outside B2 range.",
+    "gloss": "stormy and full of violent emotion"
+  },
+  {
+    "input": "temporal",
+    "lemma": "temporal",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "It is one item in the anatomical list \"(occipital, parietal, temporal, and frontal)\", which works as a set and points the blank at lobes regardless of any single member."
+  },
+  {
+    "input": "tension",
+    "lemma": "tension",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "\"served to ..... the tension in the room\" uses a common noun; the difficulty is the verb the blank wants."
+  },
+  {
+    "input": "tenure",
+    "lemma": "tenure",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "\"during the remainder of his tenure\" is a closing time adverbial, while the blank tests a verb meaning erase the black mark."
+  },
+  {
+    "input": "termites",
+    "lemma": "termite",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "\"a recent infestation of termites in the house\" is background to a structural error item about the noun clause, and the insect name is not konkour vocabulary."
+  },
+  {
+    "input": "testament",
+    "lemma": "testament",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "\"stands as a testament to this linguistic .....\" puts the blank directly under the phrase's government, so the reader must know what a testament to something is.",
+    "gloss": "something that serves as proof or evidence of a quality"
+  },
+  {
+    "input": "textbook",
+    "lemma": "textbook",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"the textbook itself needs special attention\" is elementary vocabulary; the item tests the conditional verb."
+  },
+  {
+    "input": "theoretical",
+    "lemma": "theoretical",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"old theoretical schools have bequeathed us\" uses a transparent academic derivative; the hard word in that sentence is bequeathed."
+  },
+  {
+    "input": "theorist",
+    "lemma": "theorist",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "\"not a theorist or a scholar but an essayist and a popularizer\" is a transparent -ist derivative set against its own contrast."
+  },
+  {
+    "input": "theorized",
+    "lemma": "theorize",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"theorized by astronomers Nicolaus Copernicus and Johannes Kepler\" is a transparent derivative of theory in a parenthetical, and the blank is the connector before refined."
+  },
+  {
+    "input": "thereby",
+    "lemma": "thereby",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "\"and thereby represented a sound, cooperative strategy\" trails the clause containing the blank, which asks only for the adjective before interests."
+  },
+  {
+    "input": "thesis",
+    "lemma": "thesis",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "\"no thesis that my ..... of facts had been marshaled to support\" leans on the word, but an MA candidate already knows thesis."
+  },
+  {
+    "input": "thief",
+    "lemma": "thief",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"..... the thief for stealing cars\" uses elementary vocabulary."
+  },
+  {
+    "input": "thinkers",
+    "lemma": "thinker",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"the ascent of thinkers like Noam Chomsky\" is a transparent derivative of think, as the calibration already settled."
+  },
+  {
+    "input": "thirty",
+    "lemma": "thirty",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"a woman in her thirties\" is elementary; the blank asks for a noun meaning gap in ages."
+  },
+  {
+    "input": "thoroughly",
+    "lemma": "thoroughly",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"a painter as thoroughly studied as Vermeer\" is a transparent derivative of thorough and common in academic prose."
+  },
+  {
+    "input": "thoughtlessness",
+    "lemma": "thoughtlessness",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "The blank is answered by the very next clause, \"Look at the mess your thoughtlessness has got us into\", and the noun is a transparent thought + less + ness chain."
+  },
+  {
+    "input": "threatened",
+    "lemma": "threaten",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"to turn a threatened species off the road to extinction\" uses a common verb, and extinction glosses the sense anyway."
+  },
+  {
+    "input": "thriving",
+    "lemma": "thrive",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "\"the once thriving town lost its importance\" is the reversal the blank has to name, so a reader who misses thrive misses the contrast.",
+    "gloss": "to grow strongly and prosper"
+  },
+  {
+    "input": "thunderstorms",
+    "lemma": "thunderstorm",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"for normal thunderstorms\" is a transparent compound; the blank asks for a noun meaning exaggeration."
+  },
+  {
+    "input": "tilt",
+    "lemma": "tilt",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 5,
+    "reason": "\"he takes a tilt at every windmill\" is a Quixote allusion whose weight is carried by quixotic and windmill, and the noun in this idiomatic sense is not the common meaning of tilt."
+  },
+  {
+    "input": "timber",
+    "lemma": "timber",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "\"in Asian timber camps\" is scene-setting for a cloze whose blanks are the comparative and the relative pronoun."
+  },
+  {
+    "input": "timely",
+    "lemma": "timely",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "\"Xiu's timely joke\" is transparent from time, and the blank is cued by \"tension\" and \"highly productive\" instead."
+  },
+  {
+    "input": "tire",
+    "lemma": "tire",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"a speeding ticket and a flat tire\" uses an elementary noun; the blank is the adjective before beginning."
+  },
+  {
+    "input": "toil",
+    "lemma": "toil",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "It heads the list the blank governs, \"freedom not only from toil, but from the despotism of the boss\", and nothing in the sentence glosses it.",
+    "gloss": "hard, exhausting labour"
+  },
+  {
+    "input": "tonally",
+    "lemma": "tonally",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "\"remains tonally elusive\" is a transparent derivative of tone, and the blank is cued by the explicit contrast with \"playful comedy\"."
+  },
+  {
+    "input": "tongue",
+    "lemma": "tongue",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"depends on our native tongue\" uses a fixed collocation built on an elementary noun."
+  },
+  {
+    "input": "totality",
+    "lemma": "totality",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "\"culture is a complex totality containing many different features\" explains the noun in the same breath, and it is transparent from total."
+  },
+  {
+    "input": "tragedy",
+    "lemma": "tragedy",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"such contemporary writers of dramatic tragedy as John Dryden\" uses an internationalism; the item tests the contrastive connector."
+  },
+  {
+    "input": "trainer",
+    "lemma": "trainer",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"Trainers explained that when facing a robber\" is a transparent derivative of train."
+  },
+  {
+    "input": "trait",
+    "lemma": "trait",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "The clause the cloze hangs on is \"language is a universal human trait\", and trait is not school vocabulary for a B2 candidate.",
+    "gloss": "a distinguishing characteristic or quality"
+  },
+  {
+    "input": "transmit",
+    "lemma": "transmit",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "\"events ... may be transmitted to the rest of the village almost .....\" is a common academic verb, and \"more closely integrated than ever\" already sets up the adverb."
+  },
+  {
+    "input": "tray",
+    "lemma": "tray",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"push away my tray with its uneaten food\" is a concrete everyday noun, and the blank is the adjective after \"It was more\"."
+  },
+  {
+    "input": "treasure",
+    "lemma": "treasure",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "\"buying books and treasuring them ..... reading them\" puts the blank right after it, but the verb use of treasure is obvious to anyone who knows the noun."
+  },
+  {
+    "input": "tremendous",
+    "lemma": "tremendous",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "\"let out a tremendous cheer\" is common B2 vocabulary; the blank tests the infinitive of purpose before \"his hand\"."
+  },
+  {
+    "input": "tribe",
+    "lemma": "tribe",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "\"the banners and shields of their own tribe and ..... those of the others\" uses a common noun; the hard words are chauvinism and brandish."
+  },
+  {
+    "input": "trick",
+    "lemma": "trick",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "\"the magician's ..... and sophisticated tricks\" uses elementary vocabulary."
+  },
+  {
+    "input": "trifling",
+    "lemma": "trifling",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "The blank sits one word away in \"is, after all, but trifling for a(n) ..... man who cherishes a grudge\", and the contrast between a small share and a grasping man is the whole item.",
+    "gloss": "trivially small or unimportant"
+  }
+]

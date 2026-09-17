@@ -1,0 +1,44 @@
+{
+  "examples": [],
+  "id": "utterance",
+  "lemma": "utterance",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1401-p04",
+      "part": "grammar",
+      "questionNo": 2,
+      "reach": 1,
+      "surface": "utterances",
+      "year": 1401
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1398-p04",
+      "part": "grammar",
+      "questionNo": 8,
+      "reach": 1,
+      "surface": "utterances",
+      "year": 1398
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 2,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "utterances"
+  ],
+  "synonyms": [],
+  "translations": []
+}

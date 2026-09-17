@@ -1,0 +1,35 @@
+{
+  "examples": [],
+  "id": "plaintiff",
+  "lemma": "plaintiff",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1405-p07",
+      "part": "grammar",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "plaintiffs",
+      "year": 1405
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "plaintiffs"
+  ],
+  "synonyms": [],
+  "translations": []
+}

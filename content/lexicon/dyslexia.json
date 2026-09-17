@@ -1,0 +1,44 @@
+{
+  "examples": [],
+  "id": "dyslexia",
+  "lemma": "dyslexia",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1398-p05",
+      "part": "grammar",
+      "questionNo": 39,
+      "reach": 1,
+      "surface": "dyslexia",
+      "year": 1398
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1398-p05",
+      "part": "cloze",
+      "questionNo": 40,
+      "reach": 1,
+      "surface": "dyslexia",
+      "year": 1398
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 2,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "dyslexia"
+  ],
+  "synonyms": [],
+  "translations": []
+}

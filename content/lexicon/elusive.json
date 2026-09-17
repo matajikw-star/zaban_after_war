@@ -1,0 +1,35 @@
+{
+  "examples": [],
+  "id": "elusive",
+  "lemma": "elusive",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1398-p05",
+      "part": "vocabulary",
+      "questionNo": 22,
+      "reach": 1,
+      "surface": "elusive",
+      "year": 1398
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "elusive"
+  ],
+  "synonyms": [],
+  "translations": []
+}

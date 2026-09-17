@@ -1,0 +1,40 @@
+{
+  "domain": {
+    "fieldCodes": [
+      "1121"
+    ]
+  },
+  "examples": [],
+  "id": "photoperiod",
+  "lemma": "photoperiod",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1402-p05",
+      "part": "grammar",
+      "questionNo": 26,
+      "reach": 1,
+      "surface": "photoperiod",
+      "year": 1402
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "photoperiod"
+  ],
+  "synonyms": [],
+  "translations": []
+}

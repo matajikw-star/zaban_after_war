@@ -1,0 +1,35 @@
+{
+  "examples": [],
+  "id": "simile",
+  "lemma": "simile",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1398-p03",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 30,
+      "surface": "simile",
+      "year": 1398
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "simile"
+  ],
+  "synonyms": [],
+  "translations": []
+}

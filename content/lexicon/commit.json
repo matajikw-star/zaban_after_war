@@ -5,6 +5,7 @@
   "occurrences": [
     {
       "isAnswer": true,
+      "occurrenceType": "tested",
       "optionIndex": 1,
       "paperId": "arshad-1403-p03",
       "part": "cloze",
@@ -15,6 +16,7 @@
     },
     {
       "isAnswer": true,
+      "occurrenceType": "tested",
       "optionIndex": 3,
       "paperId": "arshad-1402-p06",
       "part": "vocabulary",
@@ -39,6 +41,7 @@
     "lastYear": 1403,
     "priority": 10,
     "timesAsAnswer": 2,
+    "timesAsContext": 0,
     "timesAsDistractor": 0,
     "timesTested": 2
   },

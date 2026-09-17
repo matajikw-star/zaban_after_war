@@ -1,0 +1,1162 @@
+[
+  {
+    "input": "habitat",
+    "lemma": "habitat",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "The blank sits against it (encroach on the habitat), but habitat is standard school-biology vocabulary an Iranian B2 candidate already has."
+  },
+  {
+    "input": "hallmark",
+    "lemma": "hallmark",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The clause turns on it: the imperious frown that is the hallmark of Aeroflot is the sentence's whole characterisation, and the figurative sense is not derivable from hall or mark.",
+    "gloss": "a distinctive feature typical of something or someone"
+  },
+  {
+    "input": "hamburgers",
+    "lemma": "hamburger",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "The number of hamburgers sold is a chart caption; the word is universally known."
+  },
+  {
+    "input": "hardening",
+    "lemma": "harden",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Hardening of the arteries sits at the far end of the sentence from both blanks, and it is transparent from hard."
+  },
+  {
+    "input": "hardly",
+    "lemma": "hardly",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Hardly adequate does carry the sentence's irony, but hardly is taught in school and drilled in every konkour grammar section."
+  },
+  {
+    "input": "hardships",
+    "lemma": "hardship",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Endured great hardships is background to the blank, which asks for the title King Arthur held, and hardship reads straight off hard."
+  },
+  {
+    "input": "harsh",
+    "lemma": "harsh",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 5,
+    "difficulty": 2,
+    "reason": "The blank is the noun of exactly this adjective (tone down the harsh words she uses), so the sentence leans on it completely, but harsh is common newspaper and textbook vocabulary at B1."
+  },
+  {
+    "input": "harvest",
+    "lemma": "harvest",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Harvesting of natural resources sits in the first sentence while the blank is in the second, and harvest is school vocabulary."
+  },
+  {
+    "input": "hasty",
+    "lemma": "hasty",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The blank asks what the article did to the facts; the hasty decision is the consequence clause and could be any adjective without changing the answer."
+  },
+  {
+    "input": "havoc",
+    "lemma": "havoc",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank is the preposition governed by this very word, so wreak havoc on is the item being tested and havoc is not school vocabulary.",
+    "gloss": "widespread destruction or chaos"
+  },
+  {
+    "input": "headache",
+    "lemma": "headache",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Sinus headache is a product label in an advertisement stem; headache is elementary vocabulary."
+  },
+  {
+    "input": "hearse",
+    "lemma": "hearse",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "The blank sits directly against it, and you cannot choose what was done to the hearse with the deceased's favourite flowers unless you know a hearse is the vehicle carrying the coffin.",
+    "gloss": "the vehicle that carries a coffin at a funeral"
+  },
+  {
+    "input": "heater",
+    "lemma": "heater",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 1,
+    "reason": "Water heaters is the closing example of a long sentence whose blank is a sentence-initial connector, and heater reads off heat."
+  },
+  {
+    "input": "heavily",
+    "lemma": "heavily",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Heavily concentrated is transparent from heavy, exactly as strongly was in the calibration."
+  },
+  {
+    "input": "heliocentric",
+    "lemma": "heliocentric",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "The word is hard, but the blank is the connector before refined by Galileo, and Copernicus and Kepler theorising a view of the universe glosses it well enough for the question."
+  },
+  {
+    "input": "hemisphere",
+    "lemma": "hemisphere",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "The blank is the parallel item to two hemispheres (right and left), but hemisphere is familiar from school geography and the parenthesis names the two halves."
+  },
+  {
+    "input": "hemoglobin",
+    "lemma": "hemoglobin",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "The sentence's claim is that the blank substance stops hemoglobin releasing oxygen, but the word is the vocabulary of biochemistry rather than of konkour English.",
+    "gloss": "the oxygen-carrying protein in red blood cells"
+  },
+  {
+    "input": "hemorrhage",
+    "lemma": "hemorrhage",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "A cerebral hemorrhage is the end result the sentence builds to, and although commonly referred to as a stroke softens the blow, the word itself is common in general journalism and genuinely unknown at B2.",
+    "gloss": "heavy bleeding, especially inside the body"
+  },
+  {
+    "input": "herded",
+    "lemma": "herd",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The blank asks how the boys tried to sound at the police station, and herded the sheep into the house is recoverable from sheep and house alone."
+  },
+  {
+    "input": "herds",
+    "lemma": "herd",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Herds of elephants sits in the trailing clause, far from the blank about predators prowling around the villages."
+  },
+  {
+    "input": "heroic",
+    "lemma": "heroic",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "The heroic goals of Ulysses is transparent from hero, and the blank is the fourth infinitive in the quoted Tennyson line."
+  },
+  {
+    "input": "heterogeneous",
+    "lemma": "heterogeneous",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "The blank is the noun this adjective modifies, so a large, dense, permanent ..... of heterogeneous individuals cannot be completed without knowing the word, which is nowhere near B2 vocabulary.",
+    "gloss": "made up of parts that are unlike one another; diverse"
+  },
+  {
+    "input": "heuristic",
+    "lemma": "heuristic",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "The heuristic requirements of the scientific method is the phrase the whole sentence asserts, but the word belongs to research methodology and cognitive science, not to general English.",
+    "gloss": "using trial, discovery, or rules of thumb to reach a working solution",
+    "fieldCodes": [
+      "1110"
+    ]
+  },
+  {
+    "input": "hideout",
+    "lemma": "hideout",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "A hideout near where the attack had taken place is a transparent compound of hide and out, and police plus assailant already fix the scene."
+  },
+  {
+    "input": "hikers",
+    "lemma": "hiker",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Climbed steadily and reaching the apex of the hill tell the reader what hikers are, and the derivative is transparent."
+  },
+  {
+    "input": "hind",
+    "lemma": "hind",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "Hind limb elements closes a long list of anatomical differences while the blank is back in the ankle clause, so the word is background."
+  },
+  {
+    "input": "historian",
+    "lemma": "historian",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "A well-informed historian is transparent from history, on the pattern of instructor and observer in the calibration."
+  },
+  {
+    "input": "histrionics",
+    "lemma": "histrionics",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "Indulging in histrionics is the subject the blank predicates on; tears or yelling glosses it, but the word is wholly outside B2 range and the first clause is unreadable without it.",
+    "gloss": "exaggerated emotional display staged for effect"
+  },
+  {
+    "input": "holistic",
+    "lemma": "holistic",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "The paired and integrated hands the reader the sense, and the blank is about countries facing rapid urban growth, well away from the adjective."
+  },
+  {
+    "input": "hometown",
+    "lemma": "hometown",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "His small hometown is a transparent compound and the blank asks for the lack of employment opportunities."
+  },
+  {
+    "input": "hone",
+    "lemma": "hone",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "The blank sits immediately before it, so choosing what brain training was once ..... as the surest way to hone your mental powers depends on reading the infinitive phrase, and hone is not school vocabulary.",
+    "gloss": "to sharpen or refine a skill or ability"
+  },
+  {
+    "input": "honest",
+    "lemma": "honest",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Honestly tell our bosses is the contrast that fixes the blank, but honest is elementary vocabulary."
+  },
+  {
+    "input": "honking",
+    "lemma": "honk",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "Honking car-horns effectively glosses itself, and waving the national flag alongside it is enough to fix the wave of celebration in the blank."
+  },
+  {
+    "input": "horizon",
+    "lemma": "horizon",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "On the horizon closes the sentence while the blank asks for the adversaries' long-standing hostility; horizon is common vocabulary."
+  },
+  {
+    "input": "hormonal",
+    "lemma": "hormonal",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Hormonal changes in the pituitary and adrenal glands is transparent from hormone, which is a loanword in Persian."
+  },
+  {
+    "input": "hormone",
+    "lemma": "hormone",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "A certain hormone is the subject of the blank verb, but the word is a Persian loanword every candidate knows."
+  },
+  {
+    "input": "hospitalized",
+    "lemma": "hospitalize",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Had to be hospitalized is transparent from hospital and serves as the gloss for the blank adjective rather than needing one itself."
+  },
+  {
+    "input": "hostility",
+    "lemma": "hostility",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "It stands in the same slot as ridicule in express hostility or ridicule, which is the sentence's account of how slang is coined, and the abstract noun is a real step beyond hostile for a B2 reader.",
+    "gloss": "open enmity or aggressive ill will"
+  },
+  {
+    "input": "hotter",
+    "lemma": "hot",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Crustal rock that is hotter than 150C is an ordinary comparative of a beginner word."
+  },
+  {
+    "input": "housekeeper",
+    "lemma": "housekeeper",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "A transparent compound, and so she knows what needs to be done explains the role inside the sentence."
+  },
+  {
+    "input": "hues",
+    "lemma": "hue",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "Soft hues of orange and pink names the colours immediately after the word, and the blank concerns the full moon in the second clause."
+  },
+  {
+    "input": "humankind",
+    "lemma": "humankind",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Help humankind in overcoming language barriers is a transparent compound at the end of a very long sentence whose blank is much earlier."
+  },
+  {
+    "input": "humorous",
+    "lemma": "humorous",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "The humorous story is transparent from humor, and the blank asks for the length the story may be spun out to."
+  },
+  {
+    "input": "hung",
+    "lemma": "hang",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "The miasma that hung in the locker room uses an elementary verb; the hard word in that stem is miasma, not this one."
+  },
+  {
+    "input": "husbandry",
+    "lemma": "husbandry",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "Animal husbandry is the subject the entire definition hangs on, and although the branch of agriculture clause glosses it, the word is completely opaque at B2 and is not guessable from husband.",
+    "gloss": "the farming and care of livestock"
+  },
+  {
+    "input": "hydrogen",
+    "lemma": "hydrogen",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Hydrogen production and distribution pathways uses a word every school chemistry course gives in Persian too."
+  },
+  {
+    "input": "hygiene",
+    "lemma": "hygiene",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "The hygiene hypothesis names the topic, but the blank turns on germs and allergies, and hygiene is a familiar international word."
+  },
+  {
+    "input": "hypothalamus",
+    "lemma": "hypothalamus",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "The sentence's claim is that the hypothalamus pulls the strings when stress begins, but this is neuroanatomy vocabulary, and the stem itself supplies a small area deep in the brain.",
+    "gloss": "the brain region controlling hormones and the stress response",
+    "fieldCodes": [
+      "1148"
+    ]
+  },
+  {
+    "input": "hypothesis",
+    "lemma": "hypothesis",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Has posited that already carries the sentence; hypothesis is core academic vocabulary a konkour candidate meets constantly."
+  },
+  {
+    "input": "icy",
+    "lemma": "icy",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "The icy roads is the subject of the blank adjective, but the word reads straight off ice and the snowstorm repeats it."
+  },
+  {
+    "input": "identical",
+    "lemma": "identical",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Differentiating units identical in expression sits in a subordinate clause, and identical is standard B1-B2 vocabulary."
+  },
+  {
+    "input": "ideological",
+    "lemma": "ideological",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Their ideological quarrel follows the blank clause about relations beginning to sour, and the word is a near-cognate of the Persian term."
+  },
+  {
+    "input": "ideology",
+    "lemma": "ideology",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Its particular ideologies and particular ways of controlling power is a trailing gloss, and the word is a near-cognate in Persian."
+  },
+  {
+    "input": "idiotic",
+    "lemma": "idiotic",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "The cruel and idiotic ways of the world is transparent from idiot and is paired with cruel, which carries the sense."
+  },
+  {
+    "input": "idzal",
+    "lemma": "idzal",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 1,
+    "reason": "Dr. Idzal is a surname in the stem, not an English word; the vocabulary tested there is insincere compliments."
+  },
+  {
+    "input": "illness",
+    "lemma": "illness",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Recuperating from a severe illness uses elementary vocabulary; recuperate is the hard word in that stem."
+  },
+  {
+    "input": "illustration",
+    "lemma": "illustration",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "The linework of the illustration closes a description whose blank asks what is emphasized; illustration is common vocabulary."
+  },
+  {
+    "input": "imaginary",
+    "lemma": "imaginary",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "An imaginary city comes after the blank about fragile moments of a certain beauty, and the word is transparent from imagine."
+  },
+  {
+    "input": "imagination",
+    "lemma": "imagination",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "The blank is the adjective before imagination, but the noun itself is elementary and the fairy kingdom sentence spells it out."
+  },
+  {
+    "input": "immense",
+    "lemma": "immense",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "A demonstrably immense superiority over the novice is the condition the sentence sets, but immense is a common intensifier a B2 reader meets in ordinary journalism."
+  },
+  {
+    "input": "imparting",
+    "lemma": "impart",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "Dr. Lester's imparting of ethical instruction is the subject of the blank verb, and impart is a genuine step past teach or give for a B2 reader.",
+    "gloss": "to pass on knowledge or a quality to someone"
+  },
+  {
+    "input": "imperious",
+    "lemma": "imperious",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "The imperious frown of the cabin attendants is what sets the grudging tone the blank verb must match, and the word is far outside B2 range.",
+    "gloss": "arrogantly commanding; domineering"
+  },
+  {
+    "input": "impersonal",
+    "lemma": "impersonal",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "In intricate, impersonal and inert machine this one is the transparent member of the triple, readable straight off personal."
+  },
+  {
+    "input": "implausible",
+    "lemma": "implausible",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank is what Janet did with the implausible story, so the choice of verb follows directly from the adjective, and plausible is not reliably known at B2.",
+    "gloss": "not believable; hard to accept as true"
+  },
+  {
+    "input": "implication",
+    "lemma": "implication",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "By implication is a parenthetical connective inside a dash-clause, while the blank asks what the communities do to the threat."
+  },
+  {
+    "input": "impolite",
+    "lemma": "impolite",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Seen as impolite drives the list the blank completes, but the word is transparent from polite."
+  },
+  {
+    "input": "impositions",
+    "lemma": "imposition",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "The dictatorial impositions of the committee secretary is what the blank action opposes, but dictatorial supplies the sense and the noun is readable from impose."
+  },
+  {
+    "input": "improperly",
+    "lemma": "improperly",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "If they are used improperly is a transparent derivative of proper and sits after the blank about harmful substances."
+  },
+  {
+    "input": "inaction",
+    "lemma": "inaction",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Because inaction simply gave them a chance to rebuild is the reason clause fixing the blank, but the word is a transparent negation of action."
+  },
+  {
+    "input": "inappropriate",
+    "lemma": "inappropriate",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Inappropriate nutrition is the first half of a partly-partly pair whose second half holds the blank, and the word is transparent from appropriate."
+  },
+  {
+    "input": "incapable",
+    "lemma": "incapable",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Dickens is incapable of speaking and thinking of the poor from a higher place uses a transparent negation of capable."
+  },
+  {
+    "input": "incarnate",
+    "lemma": "incarnate",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "The blank follows immediately after the devil incarnate, and the postposed adjective is opaque to a B2 reader who will try to parse it as a verb.",
+    "gloss": "in bodily or human form; personified"
+  },
+  {
+    "input": "incidence",
+    "lemma": "incidence",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "The word is genuinely hard and easily confused with incident, but the blank is the preposition in rats ..... a low-calorie diet, far from a reduced incidence of conditions at the end."
+  },
+  {
+    "input": "incisive",
+    "lemma": "incisive",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "A talent for rapid and incisive summary is the parallel that tells you what the blank gift for weak points must be, and the word is nowhere in B2 vocabulary.",
+    "gloss": "sharply and accurately analytical; cutting to the point"
+  },
+  {
+    "input": "inconceivable",
+    "lemma": "inconceivable",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The error in this sentence is the having a computer once considered construction, not the adjective, and inconceivable reads off conceive plus a familiar negative prefix."
+  },
+  {
+    "input": "increasingly",
+    "lemma": "increasingly",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Become increasingly common in old age is the transparent derivative the calibration already judged and rejected."
+  },
+  {
+    "input": "incredibly",
+    "lemma": "incredibly",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "At incredibly low prices is a transparent intensifier from incredible, with the blank on the verb about snatching merchandise."
+  },
+  {
+    "input": "incremental",
+    "lemma": "incremental",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank is the adjective governing to incremental changes, so the collocation cannot be chosen without reading the noun phrase, and increment is not B2 vocabulary.",
+    "gloss": "happening in small successive steps"
+  },
+  {
+    "input": "incubators",
+    "lemma": "incubator",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "Poultry farms place the eggs into incubators does lead to the blank verb, but the word is a Persian loanword and eggs plus embryo make the function plain."
+  },
+  {
+    "input": "indefinable",
+    "lemma": "indefinable",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "The seemingly indefinable nature of art is a transparent build on define, and the blank is the concessive connector at the head of the sentence."
+  },
+  {
+    "input": "indication",
+    "lemma": "indication",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "An indication of the extent of their thinking is transparent from indicate in a sentence whose error is grammatical."
+  },
+  {
+    "input": "indicative",
+    "lemma": "indicative",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "Indicative of long years of practice follows the blank subject, but the adjective is readable from indicate and the of-complement spells out the relation."
+  },
+  {
+    "input": "indicted",
+    "lemma": "indict",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "Had been falsely indicted is the clause that forces the blank verdict to be guilty, and indict is opaque in both spelling and pronunciation to a B2 reader.",
+    "gloss": "to formally charge someone with a crime"
+  },
+  {
+    "input": "individually",
+    "lemma": "individually",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Both individually and collectively is a transparent derivative pair at the end of the stem."
+  },
+  {
+    "input": "indulging",
+    "lemma": "indulge",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "Indulging in histrionics is the subject the blank verb predicates on, and indulge in is a phrasal sense a B2 candidate typically does not hold.",
+    "gloss": "to allow oneself to enjoy or give way to something"
+  },
+  {
+    "input": "industrialized",
+    "lemma": "industrialize",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "The industrialized West is transparent from industry and industrial, and the blank asks what happened to levels of contentment."
+  },
+  {
+    "input": "ineffective",
+    "lemma": "ineffective",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Ineffective reading instruction is a transparent negation of effective."
+  },
+  {
+    "input": "inequalities",
+    "lemma": "inequality",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "The increasing inequalities from which our societies suffer is transparent from equal, and money and greed before people's well-being restates it."
+  },
+  {
+    "input": "inert",
+    "lemma": "inert",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "Nature as an intricate, impersonal and inert machine is Descartes' whole claim and inert is the one member of the triple a B2 reader cannot decode, so the sentence stops being readable without it.",
+    "gloss": "inactive; lacking the power to move or act by itself"
+  },
+  {
+    "input": "inevitably",
+    "lemma": "inevitably",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Will also inevitably compel them to act is a transparent adverb from inevitable, a word konkour word lists already cover."
+  },
+  {
+    "input": "inferior",
+    "lemma": "inferior",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Find them inferior to William Shakespeare carries the faulty comparison the question targets, but inferior and superior are a standard taught pair."
+  },
+  {
+    "input": "infestation",
+    "lemma": "infestation",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "The word is hard, but the tested error is the When clause used as a subject, and of termites in the house immediately explains it."
+  },
+  {
+    "input": "infill",
+    "lemma": "infill",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "It is the second of four items in drainage, infill, water diversion, pollution, so the list as a whole fixes the blank verb, and in plus fill is half-readable."
+  },
+  {
+    "input": "inflammatory",
+    "lemma": "inflammatory",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank verb is what the manager's inflammatory comments do to an already difficult situation, and the provocation sense is not derivable from flame or inflame at B2.",
+    "gloss": "likely to provoke anger or conflict"
+  },
+  {
+    "input": "inflation",
+    "lemma": "inflation",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Hit hardest by inflation uses a word Iranian candidates know better than most readers, and the sentence's error is the which-clause."
+  },
+  {
+    "input": "inflectional",
+    "lemma": "inflectional",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "Function words and inflectional affixes is the technical pair the sentence contrasts with grammatical-value labels, but it is linguistics vocabulary rather than konkour English.",
+    "gloss": "relating to the endings that mark grammatical form of a word",
+    "fieldCodes": [
+      "1110"
+    ]
+  },
+  {
+    "input": "infusion",
+    "lemma": "infusion",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank participle attaches straight to an infusion of capital, so the reader must know what an infusion is to see that the capital came largely from Spanish gold and silver.",
+    "gloss": "a large introduction of something, especially money, into a system"
+  },
+  {
+    "input": "ingrained",
+    "lemma": "ingrained",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "The tested error is the ingrained assumption in that construction rather than the adjective, and the that-clause after it states the assumption in full."
+  },
+  {
+    "input": "ingratiating",
+    "lemma": "ingratiating",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "An ingratiating story to win the sympathy of listeners is the manoeuvre the blank verb completes, and although the to-clause glosses it, the word is wholly opaque at B2.",
+    "gloss": "calculated to win someone's favour or liking"
+  },
+  {
+    "input": "inherited",
+    "lemma": "inherit",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "People who have inherited wealth is the contrast that sets up the blank, but inherit is standard school vocabulary."
+  },
+  {
+    "input": "inland",
+    "lemma": "inland",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Bring the river to inland settlements is a semi-transparent compound of in and land, and the blank is the verb about Roman plumbing."
+  },
+  {
+    "input": "inmates",
+    "lemma": "inmate",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "The phrase minority inmates in prison glosses the word on the spot, and the blank turns on reinforcing a stereotype."
+  },
+  {
+    "input": "innate",
+    "lemma": "innate",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The whole sentence is a contrast between poachers driven by innate cruelty and the majority driven by the economic pressure the blank names, so missing innate collapses the opposition.",
+    "gloss": "inborn; present from birth rather than learned"
+  },
+  {
+    "input": "innocence",
+    "lemma": "innocence",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "His sister's story about her innocence is transparent from innocent, and absolve is the hard word in that stem."
+  },
+  {
+    "input": "innocent",
+    "lemma": "innocent",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "He continued to assert that he was innocent fixes the blank verdict, but the word itself is elementary."
+  },
+  {
+    "input": "innovator",
+    "lemma": "innovator",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "The creative minority, the innovator, the brilliant few is a self-glossing apposition and the noun is transparent from innovate."
+  },
+  {
+    "input": "insects",
+    "lemma": "insect",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Bees and other insects uses elementary vocabulary in a sentence whose error is Despite of."
+  },
+  {
+    "input": "insecure",
+    "lemma": "insecure",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "The blank is the adjective coordinated with insecure, but the word is a transparent negation of secure."
+  },
+  {
+    "input": "insignificant",
+    "lemma": "insignificant",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "The factual error may be insignificant sets up the but-clause holding the blank, yet the word reads straight off significant."
+  },
+  {
+    "input": "insincere",
+    "lemma": "insincere",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Insincere compliments points to the blank adjective for the students, but it is a transparent negation of sincere."
+  },
+  {
+    "input": "insisted",
+    "lemma": "insist",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Insisted the accusation was an attempt uses a common verb; the tested item is what the reporter tried to do to his name."
+  },
+  {
+    "input": "insistent",
+    "lemma": "insistent",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "The blank is the adjective paired with insistent unanimity, but the derivative is transparent from insist."
+  },
+  {
+    "input": "insisting",
+    "lemma": "insist",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Commended for insisting that scientific knowledge cannot be separated from its uses uses an everyday verb."
+  },
+  {
+    "input": "instinct",
+    "lemma": "instinct",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Instinct as well as their sense of responsibility is the compound subject of the sentence, but instinct is common vocabulary with a familiar Persian equivalent."
+  },
+  {
+    "input": "instructional",
+    "lemma": "instructional",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "The instructional variable is transparent from instruction, on the same pattern as instructor in the calibration."
+  },
+  {
+    "input": "integrate",
+    "lemma": "integrate",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "More closely integrated than ever before leads to the blank adverb, but integrate is core academic vocabulary."
+  },
+  {
+    "input": "intent",
+    "lemma": "intent",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Groups intent on terrorism uses an adjective a reader can reach from intention, and the blank is fixed by the because inaction clause instead."
+  },
+  {
+    "input": "interchangeable",
+    "lemma": "interchangeable",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "The genres seem largely interchangeable is transparent from exchange and change, in a sentence whose error is the So much ... then structure."
+  },
+  {
+    "input": "interdependent",
+    "lemma": "interdependent",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "An interdependent system that requires widespread cooperation is a transparent compound whose sense is restated by the relative clause."
+  },
+  {
+    "input": "interdisciplinary",
+    "lemma": "interdisciplinary",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "The value of interdisciplinary approach is transparent from discipline, and the tested error is the missing article."
+  },
+  {
+    "input": "interpret",
+    "lemma": "interpret",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "The capacity to interpret target language utterances as intended uses a verb every candidate already has."
+  },
+  {
+    "input": "interrogation",
+    "lemma": "interrogation",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The stem defines the word in apposition, a questioning session between him and you, so it blocks nothing, and the blank asks what the questioning is the officer's."
+  },
+  {
+    "input": "intimidated",
+    "lemma": "intimidate",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "Refused to be intimidated even when others got angry supports the stood her ground idiom in the blank, but intimidate is a commonly taught mid-frequency verb."
+  },
+  {
+    "input": "intranet",
+    "lemma": "intranet",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Use intranets to make the sharing of information possible explains itself and is readable from internet; the blank is the quantifier before time zones."
+  },
+  {
+    "input": "intruders",
+    "lemma": "intruder",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Intruders passed near me sits in the middle of a list of discomforts, and the noun is transparent from intrude."
+  }
+]

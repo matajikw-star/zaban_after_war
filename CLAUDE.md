@@ -58,8 +58,13 @@ The rules that do not change, whatever runs them:
    cross-checked word by word, like its options — it is the example the product shows, and the
    pool a later pass picks context vocabulary from. **Which stem words earn a lexicon entry is
    never decided during extraction**; that runs afterwards over every year at once, from
-   `content/exams/`, never from the scans. See
-   `docs/adr/0010-context-vocabulary-is-a-later-pass.md`.
+   `content/exams/`, never from the scans — S7 sieves, S8 judges, and the criterion is
+   importance to the sentence crossed with difficulty, never frequency. See
+   `docs/adr/0010-context-vocabulary-is-a-later-pass.md`,
+   `docs/adr/0011-context-vocabulary-is-selected-by-importance-not-frequency.md` and
+   `extraction/JUDGING.md`. A word selected this way joins the lexicon with
+   `occurrenceType: "context"` occurrences, counted by `stats.timesAsContext` and deliberately
+   kept out of `stats.priority`.
 5. **Reading and grammar are located, never transcribed.** Part C is out of scope for the
    lexicon, but S1 writes its page range into `extraction/state/routes.jsonl`
    (`readingPages`, `grammarPages`) so a later feature never reopens the scans. Never send a

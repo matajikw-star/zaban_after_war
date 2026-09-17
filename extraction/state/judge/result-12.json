@@ -1,0 +1,1143 @@
+[
+ {
+  "input": "triple",
+  "lemma": "triple",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The clause \"urban areas ..... to triple in surface\" does lean on the verb, but triple sits beside double in ordinary school arithmetic vocabulary and blocks nobody."
+ },
+ {
+  "input": "troublesome",
+  "lemma": "troublesome",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "A transparent derivative of trouble in \"very troublesome in the 1970's\", and the calibration already settled it as a no."
+ },
+ {
+  "input": "tuition",
+  "lemma": "tuition",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "The whole point of \"they were not compulsory ..... entirely on tuition fees\" is that the schools were funded by what pupils paid, which is unreadable if tuition is only a vague noun.",
+  "gloss": "the money charged for teaching; a fee for instruction"
+ },
+ {
+  "input": "turtle",
+  "lemma": "turtle",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"Studies of longevity among turtles\" only needs the animal named, and turtle is primary-school vocabulary."
+ },
+ {
+  "input": "tutors",
+  "lemma": "tutor",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The sentence defines the word as it uses it — \"private tutors to teach their children at home\" — so nothing is blocked."
+ },
+ {
+  "input": "ubiquitous",
+  "lemma": "ubiquitous",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 5,
+  "reason": "It heads the subject of the sentence, \"the most ubiquitous findings across optimism and pessimism research\", and nothing else in the clause hints at what it means.",
+  "gloss": "found everywhere; present in all places at once"
+ },
+ {
+  "input": "ugly",
+  "lemma": "ugly",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"That ugly vacant lot\" carries the negative charge the blank needs, but ugly is elementary vocabulary."
+ },
+ {
+  "input": "umbrella",
+  "lemma": "umbrella",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"Warm gloves and umbrella she had planned\" is background detail in a concrete, everyday register."
+ },
+ {
+  "input": "unacceptably",
+  "lemma": "unacceptably",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "A fully transparent un- + acceptable + -ly derivative; \"too casual in the office\" earlier in the sentence already states the judgment it repeats."
+ },
+ {
+  "input": "unambiguously",
+  "lemma": "unambiguously",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The contrast between a literal and a figurative image turns on it, but ambiguous is standard konkour academic vocabulary and un- + -ly on top of it is transparent."
+ },
+ {
+  "input": "unanimity",
+  "lemma": "unanimity",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 5,
+  "difficulty": 4,
+  "reason": "The blank is the adjective sitting directly against it in \"with a .................... and insistent unanimity\", so a candidate who cannot read the noun cannot choose its modifier.",
+  "gloss": "complete agreement among everyone concerned"
+ },
+ {
+  "input": "unaware",
+  "lemma": "unaware",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"Wishes and memories ..... unaware\" leans on the word, but aware is core B1 vocabulary and un- does nothing surprising to it."
+ },
+ {
+  "input": "uncertainty",
+  "lemma": "uncertainty",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"A range of uncertainties and risks\" pairs it with risks and builds transparently on certain."
+ },
+ {
+  "input": "unchallenged",
+  "lemma": "unchallenged",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"The reading ... that has stood unchallenged since\" is readable from challenge, which a B2 candidate has."
+ },
+ {
+  "input": "uncle",
+  "lemma": "uncle",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"My uncle, a farmer\" is a frame for the pessimism example and uses the most basic family vocabulary."
+ },
+ {
+  "input": "unclear",
+  "lemma": "unclear",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 1,
+  "reason": "The item is built on the antonymy between \"unclear and clumsy\" and the blank, but unclear is elementary."
+ },
+ {
+  "input": "uncompromising",
+  "lemma": "uncompromising",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"A restless, uncompromising intelligence\" decomposes to \"not willing to compromise\", which is close enough to the sense the sentence needs."
+ },
+ {
+  "input": "uncontrolled",
+  "lemma": "uncontrolled",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"Lived a more uncontrolled life\" is transparent from control and is further fixed by the contrast with \"meditative and calm\"."
+ },
+ {
+  "input": "undercover",
+  "lemma": "undercover",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 3,
+  "reason": "The joke of the sentence is that the men \"in the ..... of criminals were actually undercover police officers\", so the blank is only choosable once undercover is understood as working in disguise.",
+  "gloss": "working secretly, in disguise, to investigate"
+ },
+ {
+  "input": "underestimate",
+  "lemma": "underestimate",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The same sentence supplies overestimate as its mirror, and under- + estimate is transparent."
+ },
+ {
+  "input": "underlies",
+  "lemma": "underlie",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "It sits deep in a relative clause, \"the mental processing that underlies skilled reading\", far from the blank at \"forge a .....\", so it is background."
+ },
+ {
+  "input": "understandably",
+  "lemma": "understandably",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"What understandably drove the groom away\" builds transparently on understand."
+ },
+ {
+  "input": "understood",
+  "lemma": "understand",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"Utterances are produced and understood appropriately\" uses the commonest verb in the definition."
+ },
+ {
+  "input": "undertaken",
+  "lemma": "undertake",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The clause turns on it: voyages not undertaken from the view of amusement is the sentence's whole claim.",
+  "gloss": "to begin or commit to a task"
+ },
+ {
+  "input": "undesirable",
+  "lemma": "undesirable",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"Was once considered undesirable\" reads straight off desire, and the concessive \"Although\" tells the reader its polarity anyway."
+ },
+ {
+  "input": "undisputed",
+  "lemma": "undisputed",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"His undisputed place amongst the ..... of film directors\" is readable from dispute, which a B2 candidate meets in news English."
+ },
+ {
+  "input": "uneaten",
+  "lemma": "uneaten",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"Push away my tray with its uneaten food\" is un- plus the most basic verb in the language."
+ },
+ {
+  "input": "unedifying",
+  "lemma": "unedifying",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 5,
+  "reason": "It is one of three adjectives standing immediately before the blank in \"a singularly baffling, unedifying and sad .....\", and edify is nowhere in a B2 candidate's vocabulary to decompose it from.",
+  "gloss": "offering nothing instructive or uplifting; distasteful to watch"
+ },
+ {
+  "input": "unemotional",
+  "lemma": "unemotional",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "The sentence sets it directly against \"the warm, highly emotional character\", which hands the reader its meaning."
+ },
+ {
+  "input": "unemployment",
+  "lemma": "unemployment",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"The unemployment counts exclude the millions of fully employed workers\" glosses it by contrast with employed, and the word is standard news English."
+ },
+ {
+  "input": "unfettered",
+  "lemma": "unfettered",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 5,
+  "reason": "The claim about direct assessments ends on it — \"unfettered by structured item forms or restrictive response formats\" — and fetter gives a B2 candidate nothing to build on.",
+  "gloss": "not restricted or held back by anything"
+ },
+ {
+  "input": "unfit",
+  "lemma": "unfit",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"Declare them unfit to share facilities\" is transparent from fit and is reinforced by the purpose of segregation stated in the same clause."
+ },
+ {
+  "input": "unfortunate",
+  "lemma": "unfortunate",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"His aunt's unfortunate ..... to viruses\" needs the adjective only for tone, and it is common B1 vocabulary."
+ },
+ {
+  "input": "unhealthy",
+  "lemma": "unhealthy",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"Elephants in European zoos are often unhealthy\" uses a fully transparent derivative of health."
+ },
+ {
+  "input": "unimpressive",
+  "lemma": "unimpressive",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"This new species' length is unimpressive relative to some extant whales\" is transparent from impress and is followed by the \"but still ... respectable 2.6 meters\" clarification."
+ },
+ {
+  "input": "unkempt",
+  "lemma": "unkempt",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 5,
+  "reason": "\"Sporting unkempt hair\" is one of the two concrete charges the employers make, and kempt exists nowhere else in the language for a reader to reason from.",
+  "gloss": "untidy, especially of hair; not cared for"
+ },
+ {
+  "input": "unlike",
+  "lemma": "unlike",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 1,
+  "reason": "\"Unlike some other regimes in Latin America\" sets up the whole contrast, but the word is core school grammar."
+ },
+ {
+  "input": "unlikely",
+  "lemma": "unlikely",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 1,
+  "reason": "\"The most unlikely of places\" is what makes the blank about spontaneity, yet unlikely is elementary."
+ },
+ {
+  "input": "unmanned",
+  "lemma": "unmanned",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "\"Manned and unmanned missions\" glosses itself by pairing, and the blank concerns the information the seismometers provided, not the missions."
+ },
+ {
+  "input": "unobtrusive",
+  "lemma": "unobtrusive",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 5,
+  "reason": "The sentence's finding is the contrast between \"visible equipment, such as lights\" and \"unobtrusive equipment, such as water heaters\", and obtrude gives a B2 reader no route in even though the example narrows it.",
+  "gloss": "not noticeable; staying out of attention"
+ },
+ {
+  "input": "unravelling",
+  "lemma": "unravel",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "It names the historical event the sentence reports — \"the unravelling of comparative Indo-European grammar ensued\" — and ravel is not a word a candidate can fall back on.",
+  "gloss": "to work out or disentangle something complicated"
+ },
+ {
+  "input": "unsuccessful",
+  "lemma": "unsuccessful",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"Attempts to ground moral status on a single criterion have been unsuccessful\" uses a transparent derivative of success."
+ },
+ {
+  "input": "unsurpassed",
+  "lemma": "unsurpassed",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 3,
+  "reason": "The item's contrast depends on reading \"unsurpassed action\" as praise before the \"..... script\" that undercuts it, and surpass is already past the comfortable range.",
+  "gloss": "better than anything else of its kind"
+ },
+ {
+  "input": "unusual",
+  "lemma": "unusual",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"Can tolerate unusual amounts of pain\" is elementary vocabulary in a list the blank sits outside of."
+ },
+ {
+  "input": "unwritten",
+  "lemma": "unwritten",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The sentence itself appositively glosses it — \"the unwritten rules, the protocol of that land\" — on top of being transparent from write."
+ },
+ {
+  "input": "upset",
+  "lemma": "upset",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The word appears twice in the same sentence, \"I don't get ..... about anything; I find it comical when people get upset\", and is common B1 vocabulary."
+ },
+ {
+  "input": "upstart",
+  "lemma": "upstart",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "\"The upstart music group\" is the reason the group has no sponsors, and up + start does not decompose to its real sense of a presumptuous newcomer.",
+  "gloss": "someone newly arrived who acts more important than their standing warrants"
+ },
+ {
+  "input": "urgent",
+  "lemma": "urgent",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"She urgently needs to tone down the harsh words\" uses the adverb in its plainest sense; the blank is carried by \"harsh words\"."
+ },
+ {
+  "input": "utmost",
+  "lemma": "utmost",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "\"Is of utmost importance\" is a fixed formula at the far end of the sentence from the blank, which asks for the verb before \"to global standards\"."
+ },
+ {
+  "input": "utterances",
+  "lemma": "utterance",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The definition being quoted rests on it — \"the extent to which utterances are produced and understood appropriately\" — and the noun is opaque next to the everyday verb say.",
+  "gloss": "something spoken; a spoken stretch of language"
+ },
+ {
+  "input": "uttered",
+  "lemma": "utter",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The blank is the direct object standing immediately after it in \"the child simply uttered a/an ..... to appease her parent\", so the verb governs the answer.",
+  "gloss": "to say something aloud"
+ },
+ {
+  "input": "uttering",
+  "lemma": "utter",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "\"Was ....., uttering such aphorisms as\" puts the participle directly against the blank, which has to be an adjective about how she spoke.",
+  "gloss": "to say something aloud"
+ },
+ {
+  "input": "utterly",
+  "lemma": "utterly",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "It is a bare intensifier in \"by being utterly 'other' and outside the subject\" — the sentence says the same thing without it, exactly as strongly did in the calibration."
+ },
+ {
+  "input": "vacant",
+  "lemma": "vacant",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "\"That ugly vacant lot ..... from the beauty of the neighborhood\" already carries its negative weight in ugly; drop vacant and the item is unchanged."
+ },
+ {
+  "input": "vain",
+  "lemma": "vain",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 3,
+  "reason": "\"Apparently in vain\" is the sentence's verdict on the last-ditch attempt, and the other sense of vain — conceited — actively misleads a reader who has only met that one.",
+  "gloss": "in vain: without achieving the intended result"
+ },
+ {
+  "input": "vapid",
+  "lemma": "vapid",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 5,
+  "difficulty": 5,
+  "reason": "The sentence is about this word and the blank sits directly against it: \"vapid added a broader, more figurative connotation to describe anything ----------- zest and spirit\".",
+  "gloss": "dull and lifeless; without flavour or interest"
+ },
+ {
+  "input": "vapor",
+  "lemma": "vapor",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"Emit only water vapor and warm air\" uses the school-science collocation, which the compound with water already fixes."
+ },
+ {
+  "input": "variation",
+  "lemma": "variation",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "\"The study of variation in natural speech\" is the sentence's topic, but variation is common academic vocabulary built on vary."
+ },
+ {
+  "input": "varsity",
+  "lemma": "varsity",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 5,
+  "reason": "It merely modifies \"basketball game\" — \"Ben was ..... for missing his varsity basketball game\" works identically without it, since the blank hangs on the dentist's note."
+ },
+ {
+  "input": "vast",
+  "lemma": "vast",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "\"The vast majority\" is a frozen collocation and the blank is the noun after \"out of economic .....\"."
+ },
+ {
+  "input": "vegetarian",
+  "lemma": "vegetarian",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The whole item is about vegetarians' attitude to meat, but the word is an international borrowing every candidate recognises."
+ },
+ {
+  "input": "verb",
+  "lemma": "verb",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"This verb can mean 'to make greater'\" uses the most familiar grammatical label there is."
+ },
+ {
+  "input": "verbal",
+  "lemma": "verbal",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "\"Verbal relaxation instructions\" is one listening condition in a list, and verbal is common academic vocabulary."
+ },
+ {
+  "input": "verbiage",
+  "lemma": "verbiage",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 5,
+  "difficulty": 5,
+  "reason": "The blank is the antonym of it — \"eliminate verbiage from their writing and express themselves .....\" — so the whole item collapses if the noun is unreadable.",
+  "gloss": "excessive or empty wording"
+ },
+ {
+  "input": "versatility",
+  "lemma": "versatility",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "It is the predicate that defines intelligence in \"the essence of intelligence is cleverness, is a versatility in solving novel problems\", and versatile is above the common academic core.",
+  "gloss": "the ability to adapt and do many different things well"
+ },
+ {
+  "input": "vessel",
+  "lemma": "vessel",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "It appears as the fixed compound \"blood vessels to contract\", which is school biology every candidate has in Persian and English alike."
+ },
+ {
+  "input": "vests",
+  "lemma": "vest",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "\"Bullet-proof vests\" is one of three illustrative uses of Kevlar; the blank is the adjective describing the material and does not depend on the garment."
+ },
+ {
+  "input": "veterinarian",
+  "lemma": "veterinarian",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "The relative clause glosses it outright — \"a ..... veterinarian who could treat and operate on many different kinds of animals\" — and that clause, not the noun, is what selects the blank."
+ },
+ {
+  "input": "victim",
+  "lemma": "victim",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"Pictures of the bombing victims\" is ordinary news vocabulary."
+ },
+ {
+  "input": "violin",
+  "lemma": "violin",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"A red violin with black strings\" is a concrete everyday noun and the blank concerns what the linework emphasises."
+ },
+ {
+  "input": "virtually",
+  "lemma": "virtually",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "\"Have now virtually disappeared\" would report the same event without the hedge, and the blank sits far away on the labour disruptions."
+ },
+ {
+  "input": "vocabulary",
+  "lemma": "vocabulary",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 1,
+  "reason": "The contrast of \"highly differentiated vocabulary for street crime\" with \"limited vocabulary for corporate crime\" is the item, but no language candidate is blocked by vocabulary."
+ },
+ {
+  "input": "voluminous",
+  "lemma": "voluminous",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 4,
+  "reason": "It is a droppable modifier of research, far from the blank at \"forge a .....\", and volume gives a partial route to its sense."
+ },
+ {
+  "input": "voters",
+  "lemma": "voter",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "The blank does sit against it in \"The ..... of voters was so great\", but voter is vote plus the commonest agent suffix and the sentence repeats \"eligible to vote\"."
+ },
+ {
+  "input": "voyages",
+  "lemma": "voyage",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "The sentence pairs it with its own gloss, \"when voyages and travels were not undertaken\", so travels carries the meaning for any reader who stumbles."
+ },
+ {
+  "input": "waded",
+  "lemma": "wade",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 4,
+  "reason": "\"Waded knee-deep in water\" glosses itself with knee-deep, and the blank is the separate idiom \"electricity went .....\"."
+ },
+ {
+  "input": "wage",
+  "lemma": "wage",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"Negotiate higher wages for its members\" is standard union English that a B2 candidate reads without help."
+ },
+ {
+  "input": "wand",
+  "lemma": "wand",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "It is one item in a pair of childhood transformations, \"a castle and a wand\", and the blank about her imagination is settled by \"fairy kingdom\"."
+ },
+ {
+  "input": "wander",
+  "lemma": "wander",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"She kept on wandering to various subjects\" restates \"too many digressions\" from the preceding clause, and wander is common B1-B2 vocabulary."
+ },
+ {
+  "input": "warn",
+  "lemma": "warn",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"Warning: Anyone caught stealing\" is a school-level word heading a notice."
+ },
+ {
+  "input": "warrant",
+  "lemma": "warrant",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 5,
+  "reason": "The sentence ends on \"interpretations that can lay equal claim to empirical warrant\", and a candidate who knows only the arrest-warrant sense reads the conclusion backwards.",
+  "gloss": "justification or grounds for believing something"
+ },
+ {
+  "input": "wash",
+  "lemma": "wash",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"His crops will be washed away\" is elementary vocabulary illustrating the uncle's pessimism."
+ },
+ {
+  "input": "wasteful",
+  "lemma": "wasteful",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "\"He is so wasteful; he has ..... all the money\" leans on it heavily, but it is waste plus the commonest adjective suffix."
+ },
+ {
+  "input": "wastewater",
+  "lemma": "wastewater",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"Wastewater still flowed back out into the same rivers\" is a transparent compound whose two halves the candidate already has."
+ },
+ {
+  "input": "weakened",
+  "lemma": "weaken",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"The weakened ozone .....\" is transparent from weak and is confirmed by \"restored to full strength\" later in the sentence."
+ },
+ {
+  "input": "wealthy",
+  "lemma": "wealthy",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"Wealthy families\" is contrasted in the same sentence with \"less well-off children\", and the word is common B1-B2 vocabulary."
+ },
+ {
+  "input": "weed",
+  "lemma": "weed",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "The jungle-versus-residence comparison in the same sentence tells the reader what weed growing in the front yard means."
+ },
+ {
+  "input": "wetlands",
+  "lemma": "wetland",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "A transparent compound whose sense is further fixed by the mechanisms listed against it — \"through drainage, infill, water diversion, pollution\"."
+ },
+ {
+  "input": "whale",
+  "lemma": "whale",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"Which means 'mother whale'\" names the species in school-level vocabulary."
+ },
+ {
+  "input": "whereabouts",
+  "lemma": "whereabouts",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The blank is the verb that takes it as its object — \"he must agree to ..... his accomplice's whereabouts\" — and the noun does not decompose from where and about.",
+  "gloss": "the place where someone or something is"
+ },
+ {
+  "input": "whining",
+  "lemma": "whine",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The blank is the third member of the list it sits in — \"either bragging, whining, ......\" — so the answer has to be parallel to a word the candidate can read.",
+  "gloss": "to complain in a feeble, drawn-out way"
+ },
+ {
+  "input": "wholly",
+  "lemma": "wholly",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"Cannot be wholly separated from its uses\" hedges the claim, but the adverb is whole plus -ly and the blank sits in the concessive clause far ahead of it."
+ },
+ {
+  "input": "wider",
+  "lemma": "wide",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"A wider range of students\" is a comparative of the most basic adjective."
+ },
+ {
+  "input": "widespread",
+  "lemma": "widespread",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"..... widespread cooperation to function\" places it beside the blank, but wide + spread is a transparent compound in common news English."
+ },
+ {
+  "input": "wilderness",
+  "lemma": "wilderness",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The same sentence spells out what it means by \"the habitat of wild and dangerous animals\", and the noun reads off wild."
+ },
+ {
+  "input": "wilt",
+  "lemma": "wilt",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 4,
+  "reason": "Here it is only a name handed to the reader in apposition — \"the nucleo-polyhedrosis virus, or wilt disease\" — so nothing in the item rests on knowing the verb."
+ },
+ {
+  "input": "windmill",
+  "lemma": "windmill",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "What is hard in \"takes a tilt at every windmill to be found\" is the Quixote allusion, already signalled by quixotic, not the concrete noun itself."
+ },
+ {
+  "input": "wisdom",
+  "lemma": "wisdom",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"A forceful alternative to the received wisdom\" uses a common noun built on wise."
+ },
+ {
+  "input": "wistful",
+  "lemma": "wistful",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 5,
+  "reason": "\"Replaying wistful memories\" is one of the three things his months at home consisted of, and the adjective has no base a candidate can reason from.",
+  "gloss": "sadly longing for something past or unattainable"
+ },
+ {
+  "input": "wit",
+  "lemma": "wit",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "\"Often with sharp wit\" characterises the inventive use of language the sentence says creates slang, and the noun is easily confused with wits or with witness.",
+  "gloss": "clever, quick humour in speech"
+ },
+ {
+  "input": "withstood",
+  "lemma": "withstand",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "\"Survivors who withstood the atrocities\" is the clause that defines who the sentence is about, and with + stand does not decompose to resist.",
+  "gloss": "to resist or endure something without giving way"
+ },
+ {
+  "input": "witness",
+  "lemma": "witness",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"Three witnesses giving evidence against her\" is standard courtroom English a B2 candidate reads easily."
+ },
+ {
+  "input": "wool",
+  "lemma": "wool",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"Trading in the wool goods market\" names a material every school syllabus covers."
+ },
+ {
+  "input": "wordsworth",
+  "lemma": "Wordsworth",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "It is the poet's surname in \"One of Wordsworth's well-known works is 'The Solitary Reaper'\", a proper noun rather than a vocabulary item."
+ },
+ {
+  "input": "workflow",
+  "lemma": "workflow",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"The workflow runs .....\" is a transparent compound of work and flow in everyday office English."
+ },
+ {
+  "input": "workforce",
+  "lemma": "workforce",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "It is the subject of \"The factory's workforce has ..... from over 4,000 to a few hundred\", but work + force is transparent and the numbers carry the item."
+ },
+ {
+  "input": "workmanship",
+  "lemma": "workmanship",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "\"Evidence of workmanship with an artistic purpose\" decomposes along the familiar -manship pattern, and the blank is an agreement choice rather than a meaning one."
+ },
+ {
+  "input": "worthy",
+  "lemma": "worthy",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"Worthy of the name\" is transparent from worth and echoes the blank noun it follows."
+ },
+ {
+  "input": "wound",
+  "lemma": "wound",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"The wounded man started to ..... in agony\" uses a common noun-verb a B2 candidate has from news and film."
+ },
+ {
+  "input": "wove",
+  "lemma": "weave",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "\"Members of poor peasant families spun or wove cloth and linens at home\" is the activity the whole sentence describes, and the irregular past hides the verb from a candidate who has met neither form.",
+  "gloss": "to make cloth by interlacing threads"
+ },
+ {
+  "input": "wreak",
+  "lemma": "wreak",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 5,
+  "reason": "The blank is the preposition of its own collocation, \"can easily wreak havoc ..... an otherwise blossoming career\", so the candidate answers it only by knowing the phrase wreak havoc on.",
+  "gloss": "to cause something very damaging, as in wreak havoc"
+ },
+ {
+  "input": "wrestling",
+  "lemma": "wrestling",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"The primary aim in sumo wrestling\" names a sport Iranian candidates know better than most."
+ },
+ {
+  "input": "wretched",
+  "lemma": "wretched",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 5,
+  "reason": "It is the predicate that opens the passage — \"my night was wretched, my rest broken\" — and although the colon list of damp ground and cold air illustrates it, the adjective itself is wholly opaque.",
+  "gloss": "miserable; unhappy and in poor conditions"
+ },
+ {
+  "input": "wrinkled",
+  "lemma": "wrinkle",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 3,
+  "reason": "The blank is coordinated directly with it in \"had become wrinkled and ..... from years of being out in the sun\", so the answer must match a word the candidate has to read first.",
+  "gloss": "a small line or fold in skin or cloth; to form such lines"
+ },
+ {
+  "input": "yang",
+  "lemma": "Yang",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "It is a politician's surname heading the sentence, not a vocabulary item."
+ },
+ {
+  "input": "yearbook",
+  "lemma": "yearbook",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "It only sets the scene — \"faculty advisor for the yearbook\" — while the blank hangs on \"insincere compliments\" further along."
+ },
+ {
+  "input": "yelling",
+  "lemma": "yell",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"Tears or yelling ..... the respect of a boss\" pairs it with tears, and yell is common B1 vocabulary."
+ },
+ {
+  "input": "younger",
+  "lemma": "young",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"A child younger than 10 years\" is the comparative of an elementary adjective in a grammar item."
+ },
+ {
+  "input": "youthful",
+  "lemma": "youthful",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The same sentence supplies \"the secret of perpetual youth\" just before \"this youthful .....\", making the derivative transparent."
+ },
+ {
+  "input": "zest",
+  "lemma": "zest",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 5,
+  "difficulty": 5,
+  "reason": "The blank sits directly against it in \"to describe anything ----------- zest and spirit\", so the item cannot be answered without the noun.",
+  "gloss": "keen enjoyment and energy"
+ },
+ {
+  "input": "zoo",
+  "lemma": "zoo",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"Elephants in European zoos\" uses a word every beginner has."
+ },
+ {
+  "input": "zoological",
+  "lemma": "zoological",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "\"Some aspects of zoological gardens\" is readable from zoo, and the rest of the sentence explains that animals are kept there for public entertainment."
+ },
+ {
+  "input": "zooxanthellae",
+  "lemma": "zooxanthellae",
+  "verdict": "domain-term",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 5,
+  "reason": "It is the subject of the sentence about coral symbiosis, but it is marine-biology nomenclature rather than konkour English, and the stem itself glosses it as \"symbiotic cells of algae\".",
+  "gloss": "symbiotic algae living inside coral tissue",
+  "fieldCodes": [
+   "1121"
+  ]
+ }
+]

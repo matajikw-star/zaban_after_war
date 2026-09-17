@@ -1,0 +1,1170 @@
+[
+ {
+  "input": "abbreviated",
+  "lemma": "abbreviate",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "The blank is the connective before \"rendered by grammatical-value labels\"; \"in abbreviated form\" is a trailing detail the answer does not depend on."
+ },
+ {
+  "input": "abound",
+  "lemma": "abound",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "It is the main verb of the claim — that fossilized bits and pieces of animals abound is exactly what the sentence asserts and what \"a great burst of creativity\" is inferred from.",
+  "gloss": "to exist in very large numbers"
+ },
+ {
+  "input": "accompany",
+  "lemma": "accompany",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "\"Excesses often accompany these stereotypes\" turns on the verb, but accompany is ordinary B2 academic vocabulary a konkour candidate already has."
+ },
+ {
+  "input": "accurately",
+  "lemma": "accurately",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "A transparent adverb of \"accurate\", and the sentence already spells out \"accuracy-improved readers\" beside it."
+ },
+ {
+  "input": "accusation",
+  "lemma": "accusation",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The blank is the verb done to \"his name\" and the accusation sets it up, but accusation is transparent from \"accuse\" and is common school vocabulary."
+ },
+ {
+  "input": "achievement",
+  "lemma": "achievement",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"His final achievement\" is the frame; the blank is the quixotic noun that follows, and achievement itself is known to every candidate."
+ },
+ {
+  "input": "acquire",
+  "lemma": "acquire",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"the ways we acquire them differ .....\" leans on the verb, but acquire is standard academic vocabulary at B2."
+ },
+ {
+  "input": "acrimony",
+  "lemma": "acrimony",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 5,
+  "reason": "The sentence's whole claim is that under sugar's sweetness lies \"a very great acrimony\", and the blank sits directly after it joining it to the nitric-acid comparison.",
+  "gloss": "bitterness or harshness, especially of speech or temper"
+ },
+ {
+  "input": "activate",
+  "lemma": "activate",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"did not activate the same brain regions\" carries the finding, but activate is transparent from \"active\" for a B2 reader."
+ },
+ {
+  "input": "adapt",
+  "lemma": "adapt",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"cities best adapt to their expectations\" is ordinary vocabulary; nothing in the sentence is hidden behind it."
+ },
+ {
+  "input": "additionally",
+  "lemma": "additionally",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 1,
+  "difficulty": 1,
+  "reason": "A transparent discourse adverb at the head of the sentence, far from the blank about taking what you say at face value."
+ },
+ {
+  "input": "adjacent",
+  "lemma": "adjacent",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The sentence is built on the contrast between \"adjacent countries\" discovered by war and \"distant regions\" by commerce, so a reader who misses adjacent loses the structure.",
+  "gloss": "next to or neighbouring"
+ },
+ {
+  "input": "administering",
+  "lemma": "administer",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "It only identifies which organization is meant; the blank is the \"set forth\" collocation several clauses away."
+ },
+ {
+  "input": "admired",
+  "lemma": "admire",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "The blank is the contrastive conjunction after \"Behn admired the skill of ... John Dryden\", and admire is basic vocabulary."
+ },
+ {
+  "input": "admit",
+  "lemma": "admit",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"After admitting that we do not have the ideal paradigm\" frames the sentence, but admit is school vocabulary."
+ },
+ {
+  "input": "adolescent",
+  "lemma": "adolescent",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "The blank is the idiom \"took its toll\"; \"her adolescent years\" is background and the word is widely known."
+ },
+ {
+  "input": "adrenal",
+  "lemma": "adrenal",
+  "verdict": "domain-term",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 4,
+  "reason": "\"the pituitary and adrenal glands\" is endocrinology naming, not konkour English; the blank is the subject noun phrase about crowding, not the glands.",
+  "gloss": "of the glands above the kidneys that produce adrenaline and other hormones",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "input": "adventurer",
+  "lemma": "adventurer",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "A transparent derivative of \"adventure\"; the blank is the adjective describing the mother, which \"in love with the arts and sports\" supplies."
+ },
+ {
+  "input": "adversaries",
+  "lemma": "adversary",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 5,
+  "difficulty": 4,
+  "reason": "The blank sits directly against it — \"these adversaries ... despite their long-standing ..... and mutual dislike\" is only solvable if adversary is understood as enemy.",
+  "gloss": "an opponent or enemy"
+ },
+ {
+  "input": "advise",
+  "lemma": "advise",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"The doctor has advised him\" is the frame for an adverb blank before \"adhere\"; advise is basic vocabulary."
+ },
+ {
+  "input": "affective",
+  "lemma": "affective",
+  "verdict": "domain-term",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "\"The term affective factors\" is being defined as SLA/psychology terminology, and the sentence itself supplies the definition through \"learner disposition, attitudes and motivation\".",
+  "gloss": "relating to emotions and feelings",
+  "fieldCodes": [
+   "1110",
+   "1121"
+  ]
+ },
+ {
+  "input": "affixes",
+  "lemma": "affix",
+  "verdict": "domain-term",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "\"both function words and inflectional affixes\" is morphology's own vocabulary rather than general konkour English.",
+  "gloss": "a prefix or suffix attached to a word stem",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "input": "afford",
+  "lemma": "afford",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"you can't afford the yoga classes\" is the last of three alternatives and the word is basic."
+ },
+ {
+  "input": "aggravated",
+  "lemma": "aggravate",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 5,
+  "difficulty": 4,
+  "reason": "The question is unanswerable without it: \"What aggravated his offense was the ..... attitude\" asks for an adjective that makes things worse, and only aggravate says so.",
+  "gloss": "to make something worse or more serious"
+ },
+ {
+  "input": "agony",
+  "lemma": "agony",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 3,
+  "reason": "The blank sits immediately before it — \"started to ..... in agony on the ground\" — so the verb is chosen from what agony means.",
+  "gloss": "extreme physical or mental suffering"
+ },
+ {
+  "input": "agrarian",
+  "lemma": "agrarian",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 5,
+  "reason": "\"many of these communities lead an agrarian lifestyle\" is the premise for the livestock-and-livelihood reasoning that the blank resolves.",
+  "gloss": "relating to farming and the land"
+ },
+ {
+  "input": "agua",
+  "lemma": "agua",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 1,
+  "difficulty": 5,
+  "reason": "Not an English word at all: \"agua fortis [nitric acid]\" is a Latin/Spanish chemical name that the stem itself translates in brackets."
+ },
+ {
+  "input": "airliner",
+  "lemma": "airliner",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "Transparent compound, and the same sentence glosses it with \"other aircraft\"; the blank is the drawback noun."
+ },
+ {
+  "input": "airplane",
+  "lemma": "airplane",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 1,
+  "difficulty": 1,
+  "reason": "\"airplane wings\" is one item in a list of Kevlar uses and the word is known to everyone."
+ },
+ {
+  "input": "alfred",
+  "lemma": "alfred",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 1,
+  "difficulty": 1,
+  "reason": "A proper name — the first half of \"Alfred Hitchcock\" — not vocabulary."
+ },
+ {
+  "input": "algae",
+  "lemma": "alga",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "\"Symbiotic cells of algae known as zooxanthellae\" glosses itself in apposition, and the blank is about what the wastes provide for the coral hosts."
+ },
+ {
+  "input": "alien",
+  "lemma": "alien",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"Debating that aliens exist\" uses the everyday sense of the word, which any candidate knows."
+ },
+ {
+  "input": "alleges",
+  "lemma": "allege",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "\"alleges the RSPCA\" is the reporting verb that makes the RSPCA the subject the following relative-pronoun blank must attach to.",
+  "gloss": "to claim something without proving it"
+ },
+ {
+  "input": "allergy",
+  "lemma": "allergy",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"developing allergies\" is the object of the blank verb, but allergy is an everyday loanword for Persian speakers."
+ },
+ {
+  "input": "allotted",
+  "lemma": "allot",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The adjective in the blank is inferred entirely from \"each sailor was allotted only a tiny locker\", so the result clause is where the question is decided.",
+  "gloss": "to give out as a share or portion"
+ },
+ {
+  "input": "alternate",
+  "lemma": "alternate",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"an alternate route\" is near-identical to \"alternative\", which every candidate knows; the blank is the verb meaning avoid."
+ },
+ {
+  "input": "amongst",
+  "lemma": "amongst",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "A spelling variant of \"among\" in \"his undisputed place amongst the ..... of film directors\"; the blank is the noun, not the preposition."
+ },
+ {
+  "input": "amusement",
+  "lemma": "amusement",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "Transparent from \"amuse\", and it is one of four listed motives for travel in the sentence."
+ },
+ {
+  "input": "analytic",
+  "lemma": "analytic",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "The blank is the wh-word before \"morphology is made use of\"; \"analytic and synthetic\" are named as terms, and the form is transparent from \"analysis\"."
+ },
+ {
+  "input": "analyze",
+  "lemma": "analyze",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "The blank is the particle in \"carried ..... \"; analyze is basic academic vocabulary."
+ },
+ {
+  "input": "ancestors",
+  "lemma": "ancestor",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"our primate ancestors' need to stoke the energy-consuming organ\" leans on the possessor, but ancestor is standard intermediate vocabulary."
+ },
+ {
+  "input": "anecdotes",
+  "lemma": "anecdote",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The blank verb is chosen from the move \"from science into personal anecdotes\", so digressing is only visible if anecdote is understood.",
+  "gloss": "a short, often amusing account of a real incident"
+ },
+ {
+  "input": "anger",
+  "lemma": "anger",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"he had an anger problem\" is the object of the blank verb, and anger is elementary vocabulary."
+ },
+ {
+  "input": "angry",
+  "lemma": "angry",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"an angry reporter\" motivates the blank verb aimed at his name, but the word itself is elementary."
+ },
+ {
+  "input": "animated",
+  "lemma": "animated",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The sentence turns on the contrast between the \"non-stop, animated conversation\" and the exchange becoming flaccid, and the cartoon sense a B2 reader knows does not give this one.",
+  "gloss": "lively, full of energy and interest"
+ },
+ {
+  "input": "animosity",
+  "lemma": "animosity",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "It is the last of the three feelings the blank verb must govern in \"a sense of ill will, deception or animosity\", though \"ill will\" beside it softens the blow.",
+  "gloss": "strong hostility or ill feeling"
+ },
+ {
+  "input": "ankle",
+  "lemma": "ankle",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "A body part in a list of anatomical differences; the blank is the noun for the ankle feature, not the word itself."
+ },
+ {
+  "input": "anl",
+  "lemma": "anl",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 1,
+  "difficulty": 1,
+  "reason": "An acronym defined in the sentence itself — \"Argonne National Laboratory's (ANL)\" — not a lexical item."
+ },
+ {
+  "input": "announce",
+  "lemma": "announce",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"The president announced\" is the reporting frame; the blank is the policy adjective contrasted with \"offensive\"."
+ },
+ {
+  "input": "antagonism",
+  "lemma": "antagonism",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "\"ripened by decades of antagonism\" is the half of the metaphor that the blank participle must pair with in \"enmity ..... in blood\".",
+  "gloss": "active hostility or opposition"
+ },
+ {
+  "input": "anthropological",
+  "lemma": "anthropological",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "\"studied directly, by anthropological observation\" is background; the blank, about reasoning from modern foragers to ancient ones, sits in the next sentence."
+ },
+ {
+  "input": "anthropologists",
+  "lemma": "anthropologist",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "A transparent agent noun from \"anthropology\"; the blank depends on 'field blindness' and \"scientific detachment\", not on who the researchers are."
+ },
+ {
+  "input": "anthropology",
+  "lemma": "anthropology",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "It is one of two disciplines named beside \"sociology\", and the sentence would read the same without it."
+ },
+ {
+  "input": "antics",
+  "lemma": "antic",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "The appositive in the blank has to describe the man whose \"antics\" the book captured, and the Merry Pranksters only make sense once antics is understood.",
+  "gloss": "wild, silly or attention-seeking behaviour"
+ },
+ {
+  "input": "anxiety",
+  "lemma": "anxiety",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"not just during panic attacks but from everyday anxiety\" is the contrast, but anxiety is common academic and everyday vocabulary."
+ },
+ {
+  "input": "anxious",
+  "lemma": "anxious",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"Anxious to reduce fares\" opens a participial clause whose subject the blank supplies, but the word is ordinary B2 vocabulary."
+ },
+ {
+  "input": "anybody",
+  "lemma": "anybody",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 1,
+  "difficulty": 1,
+  "reason": "An elementary pronoun in \"he can ask you or anybody any questions\"; the blank is the noun meaning prerogative."
+ },
+ {
+  "input": "anymore",
+  "lemma": "anymore",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "A common adverb closing the sentence, far from the blank adjective before \"career choice\"."
+ },
+ {
+  "input": "apex",
+  "lemma": "apex",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "\"reaching the apex of the hill just in time .....\" makes the summit the event the blank clause completes, and apex is not school vocabulary.",
+  "gloss": "the highest point or top of something"
+ },
+ {
+  "input": "aphorisms",
+  "lemma": "aphorism",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 5,
+  "reason": "The blank adjective describing her speech is inferred from \"uttering such aphorisms as ...\", though the quoted proverb does hand the reader a clue.",
+  "gloss": "a short saying that states a general truth"
+ },
+ {
+  "input": "apologized",
+  "lemma": "apologize",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"She apologized for ..... late\" is a gerund-form grammar item on an elementary verb."
+ },
+ {
+  "input": "apology",
+  "lemma": "apology",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"issue a full apology live on air\" supports the blank verb about the accusation, but apology is elementary vocabulary."
+ },
+ {
+  "input": "apparent",
+  "lemma": "apparent",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"unambiguously apparent to sensory perception\" carries the literal/figurative contrast, but apparent is ordinary academic vocabulary."
+ },
+ {
+  "input": "appetites",
+  "lemma": "appetite",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"brutish appetites for violence\" sets the tone of the stereotype list, but appetite is common intermediate vocabulary."
+ },
+ {
+  "input": "applauded",
+  "lemma": "applaud",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "\"was wildly applauded\" tells the reader the blank noun is a virtue, but applaud itself is well within B2."
+ },
+ {
+  "input": "applicational",
+  "lemma": "applicational",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "An awkward but transparent derivative of \"application\" in \"the applicational relation between linguistics and literary studies\"."
+ },
+ {
+  "input": "appropriation",
+  "lemma": "appropriation",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "The blank verb about governments and their responsibilities is read off the consequence — the market's \"private appropriation of urban spaces\" — and the noun is not guessable from \"appropriate\".",
+  "gloss": "the act of taking something for one's own use, often without right"
+ },
+ {
+  "input": "aptitude",
+  "lemma": "aptitude",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 4,
+  "reason": "It is the third item in a list illustrating \"hidden construct\", and the sentence reads the same without it; the blank is the adjective before \"but hidden\"."
+ },
+ {
+  "input": "aquarium",
+  "lemma": "aquarium",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 1,
+  "difficulty": 2,
+  "reason": "One of three named attractions; the blank is the noun in \"in close ..... to\", meaning proximity."
+ },
+ {
+  "input": "argonne",
+  "lemma": "argonne",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 1,
+  "difficulty": 1,
+  "reason": "Part of the proper name \"Argonne National Laboratory\", not vocabulary."
+ },
+ {
+  "input": "argue",
+  "lemma": "argue",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"As the students argued\" motivates the blank verb about silencing them, but argue is elementary."
+ },
+ {
+  "input": "argumentative",
+  "lemma": "argumentative",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Transparent from \"argument\", and the sentence explains it immediately with \"no thesis ... marshaled to support\"."
+ },
+ {
+  "input": "aristotelian",
+  "lemma": "aristotelian",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 1,
+  "difficulty": 3,
+  "reason": "A proper adjective from Aristotle; the three blanks in this cloze are a connective, a preposition after \"steeped\", and a participle."
+ },
+ {
+  "input": "arose",
+  "lemma": "arise",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "\"the division of labor ... arose because it promoted\" states the causal claim, but arise is common academic vocabulary a B2 reader has."
+ },
+ {
+  "input": "arrest",
+  "lemma": "arrest",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "The word appears twice in the sentence and the question is about tense, not meaning."
+ },
+ {
+  "input": "artefacts",
+  "lemma": "artifact",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "\"A reliance on artefacts will thus bias an account of ancient hunter-gatherer life\" is the premise the whole blank about reasoning from modern foragers rests on.",
+  "gloss": "an object made by a human, especially one of historical interest"
+ },
+ {
+  "input": "arteries",
+  "lemma": "artery",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "\"hardening of the arteries\" is the end-point of the chain; the two blanks are the substance in the bloodstream and the effect on circulation."
+ },
+ {
+  "input": "arthritis",
+  "lemma": "arthritis",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 4,
+  "reason": "It merely names which medicine is meant; the blank verb about the advertising claim is decided by \"isn't effective\"."
+ },
+ {
+  "input": "artistic",
+  "lemma": "artistic",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "A transparent derivative of \"art\", and the blank here is the verb agreeing with \"artifacts\"."
+ },
+ {
+  "input": "ascent",
+  "lemma": "ascent",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 4,
+  "reason": "The blank beside it is the preposition in \"..... the ascent of thinkers like Noam Chomsky\", which makes the noun background to a grammar item."
+ },
+ {
+  "input": "aside",
+  "lemma": "aside",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"Setting time aside\" is a common phrasal use; the blank is the verb before \"professional boundaries\"."
+ },
+ {
+  "input": "aspiration",
+  "lemma": "aspiration",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 3,
+  "reason": "The blank verb is chosen from the fall from \"artistic aspiration\" to \"office drudgery\", so the noun is one pole of the contrast.",
+  "gloss": "a strong desire or ambition to achieve something"
+ },
+ {
+  "input": "assailant",
+  "lemma": "assailant",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "\"The assailant was ---------- by police in a hideout\" makes him the subject of the blank verb, and a reader who does not know the word cannot see why police are hunting him.",
+  "gloss": "a person who physically attacks another"
+ },
+ {
+  "input": "assertion",
+  "lemma": "assertion",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "\"the dealer's preposterous assertion\" drives the blank, but the load sits on \"preposterous\" and assertion is standard academic vocabulary."
+ },
+ {
+  "input": "assumption",
+  "lemma": "assumption",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "\"expectations and assumptions formed as a result of life experiences\" is ordinary academic phrasing; the blank is the second half of \"not only ... but\"."
+ },
+ {
+  "input": "assure",
+  "lemma": "assure",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "The question is the conditional verb form before \"steadfast in assuring you\"; assure itself is common."
+ },
+ {
+  "input": "astronomers",
+  "lemma": "astronomer",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "A transparent agent noun from \"astronomy\", and the blank is the connective before \"refined by Galileo\"."
+ },
+ {
+  "input": "athlete",
+  "lemma": "athlete",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"consulted a professional athlete\" is everyday vocabulary; the blank is the adjective meaning realistic."
+ },
+ {
+  "input": "athleticism",
+  "lemma": "athleticism",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Transparent from \"athlete\"; the contrast it sets up with the blank adjective before \"prowess\" is carried by \"peculiar choice of clothing\"."
+ },
+ {
+  "input": "atmospheric",
+  "lemma": "atmospheric",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "Transparent from \"atmosphere\", and the blank is the concessive connective contrasting atmospheric storms with magnetic tempests."
+ },
+ {
+  "input": "atrocities",
+  "lemma": "atrocity",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "\"survivors who withstood the atrocities committed in the occupied Palestine\" is the fact the blank clause about the dead is built on.",
+  "gloss": "an extremely cruel and violent act, especially in war"
+ },
+ {
+  "input": "attainable",
+  "lemma": "attainable",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "\"the maximum life span (the oldest attainable age)\" is the distinction the whole sentence rests on, and attainable is not transparent from attain for this reader.",
+  "gloss": "able to be achieved or reached"
+ },
+ {
+  "input": "attendants",
+  "lemma": "attendant",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "\"cabin attendants\" is a familiar collocation; the blank is the verb about how the single cup of water was given out."
+ },
+ {
+  "input": "attitude",
+  "lemma": "attitude",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"her ..... attitude\" puts the blank on the adjective; attitude itself is elementary."
+ },
+ {
+  "input": "attract",
+  "lemma": "attract",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"attracting the level of talent it needs\" closes the sentence, far from the blank about benefits available through a competitor."
+ },
+ {
+  "input": "attraction",
+  "lemma": "attraction",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"many area attractions\" is listed out immediately afterwards; the blank is the noun meaning proximity."
+ },
+ {
+  "input": "attractive",
+  "lemma": "attractive",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"the 140 most attractive cities\" is ordinary vocabulary in a sentence tested for its relative clause."
+ },
+ {
+  "input": "authoritative",
+  "lemma": "authoritative",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The blank adjective before \"criticism\" is chosen from the reversal — once \"regarded as authoritative\", now of mainly historical interest — and the word is easily confused with authoritarian.",
+  "gloss": "accepted as reliable and definitive"
+ },
+ {
+  "input": "autobiographical",
+  "lemma": "autobiographical",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The sentence pairs it with \"the autobiography fictionalized\", which makes the transparent derivative plainer still."
+ },
+ {
+  "input": "autobiography",
+  "lemma": "autobiography",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Built from \"biography\" beside \"modern fiction\" in the same sentence; a B2 reader assembles it."
+ },
+ {
+  "input": "autochthonous",
+  "lemma": "autochthonous",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 5,
+  "reason": "The whole question is the either/or it anchors — whether the clot was autochthonous or had travelled through the bloodstream — so the word is the item under test.",
+  "gloss": "originating in the place where it is found; native"
+ },
+ {
+  "input": "automakers",
+  "lemma": "automaker",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "A transparent compound; the blank is the verb about noise inside a car."
+ },
+ {
+  "input": "automobile",
+  "lemma": "automobile",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"the kinds of automobiles they drove\" is one item in a list of household details, and the word is elementary."
+ },
+ {
+  "input": "autonomous",
+  "lemma": "autonomous",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "\"Autonomous learners\" is the subject the entire sentence elaborates, and the word is not recoverable from school vocabulary even though the clauses that follow describe it.",
+  "gloss": "acting independently, self-governing"
+ },
+ {
+  "input": "avid",
+  "lemma": "avid",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The blank is the opposite pole of \"an avid party host with hundreds of acquaintances\", so the missing noun cannot be found without it.",
+  "gloss": "extremely eager or enthusiastic"
+ },
+ {
+  "input": "avocation",
+  "lemma": "avocation",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 5,
+  "difficulty": 5,
+  "reason": "The blank sits directly against it — \"A ..... by avocation\" — and picking the coin-collector noun depends on knowing avocation means a hobby rather than a job.",
+  "gloss": "a hobby or secondary occupation"
+ },
+ {
+  "input": "awful",
+  "lemma": "awful",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"this awful activity\" refers back to poaching already described; the blank is the noun after \"economic\"."
+ },
+ {
+  "input": "awkward",
+  "lemma": "awkward",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "\"his awkward mannerisms\" is what makes the assemblies laugh rather than fear him, but awkward is ordinary B2 vocabulary."
+ },
+ {
+  "input": "babysitters",
+  "lemma": "babysitter",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "A transparent compound; the blank is the guilt noun before \"feeling\"."
+ },
+ {
+  "input": "backstroke",
+  "lemma": "backstroke",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "A transparent compound named as one of the strokes already mentioned; the blank is the verb about how the coach treated the specifics."
+ },
+ {
+  "input": "bacteria",
+  "lemma": "bacterium",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"E. coli bacteria\" is an everyday loanword for Persian speakers; the blank is the verb about the water supply."
+ },
+ {
+  "input": "badly",
+  "lemma": "badly",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "A transparent adverb of \"bad\" in \"has badly affected the spirit of sports\"."
+ },
+ {
+  "input": "baffling",
+  "lemma": "baffle",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "It is the first of the three adjectives that the blank noun for the trial must fit, and nothing else in the sentence explains it.",
+  "gloss": "to confuse or puzzle someone completely"
+ },
+ {
+  "input": "barely",
+  "lemma": "barely",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "\"barely able to do more than reach toward her bedside table\" is what fixes the blank as exhaustion, but barely is common B2 vocabulary."
+ },
+ {
+  "input": "barrier",
+  "lemma": "barrier",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "\"overcoming language barriers\" is a familiar collocation at the far end of a long sentence whose blank is a verb phrase about becoming history."
+ },
+ {
+  "input": "basement",
+  "lemma": "basement",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "\"bulging museum basements\" is ordinary vocabulary; the blank is the comparative complement after \"more accessible than\"."
+ },
+ {
+  "input": "basking",
+  "lemma": "bask",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "The blank subject must be something that pleased instructors and parents \"basking in the glory of the rising star's success\", and that idiom is opaque to a B2 reader.",
+  "gloss": "to take great pleasure in warmth, attention or glory"
+ },
+ {
+  "input": "bedside",
+  "lemma": "bedside",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "A transparent compound in \"reach toward her bedside table\"."
+ },
+ {
+  "input": "bee",
+  "lemma": "bee",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"if bees and other insects can feel\" uses elementary vocabulary; the tested item is \"Despite of\"."
+ },
+ {
+  "input": "beggars",
+  "lemma": "beggar",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "A transparent agent noun from \"beg\", and the sentence already describes them winning sympathy for money."
+ },
+ {
+  "input": "begged",
+  "lemma": "beg",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "\"begged forgiveness\" is paired with the blank verb before \"contrition\", but beg is elementary vocabulary."
+ },
+ {
+  "input": "beguiled",
+  "lemma": "beguile",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 5,
+  "reason": "It is the main verb of the anecdote — \"Rasheen beguiled the server with a bright smile and a shrug\" — and the opening participial blank has to fit that act of charming her way out.",
+  "gloss": "to charm or win over, often deceptively"
+ },
+ {
+  "input": "begun",
+  "lemma": "begin",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "An irregular form of an elementary verb; the blank is the preposition introducing \"an intricate, impersonal and inert machine\"."
+ },
+ {
+  "input": "behaviorists",
+  "lemma": "behaviorist",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "The blank beside it is the connective \"Unlike\", so the noun — a transparent derivative of \"behavior\" — is background to a grammar item."
+ },
+ {
+  "input": "belief",
+  "lemma": "belief",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "\"Beliefs established early on in life\" is elementary vocabulary in a sentence tested for \"even to the face of\"."
+ }
+]

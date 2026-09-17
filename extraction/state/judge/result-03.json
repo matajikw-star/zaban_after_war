@@ -1,0 +1,1169 @@
+[
+  {
+    "input": "comb",
+    "lemma": "comb",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "An everyday object any candidate knows, and the Gift of the Magi stem would read the same with any small gift in its place."
+  },
+  {
+    "input": "comey",
+    "lemma": "comey",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 1,
+    "reason": "A proper name — Mr. Comey is the subject of the video statement, not vocabulary."
+  },
+  {
+    "input": "comical",
+    "lemma": "comical",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "The stem supplies comic effect in the same breath, and comical is transparent from comedy to any B2 reader."
+  },
+  {
+    "input": "commander",
+    "lemma": "commander",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "School vocabulary, and the blank in more troops were available ..... the commander needed them is a conjunction, not the noun."
+  },
+  {
+    "input": "commended",
+    "lemma": "commend",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank is the concessive verb set against commended — a reader who cannot read Tucker is surely to be commended as praise cannot pick the contrasting verb.",
+    "gloss": "to praise formally or officially"
+  },
+  {
+    "input": "commentator",
+    "lemma": "commentator",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Transparent from comment, and it is only the attribution frame for a claim whose blank is a conjunction."
+  },
+  {
+    "input": "commonly",
+    "lemma": "commonly",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "A transparent adverb from common; the item turns on referred to as, not on commonly."
+  },
+  {
+    "input": "communicate",
+    "lemma": "communicate",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "A near-cognate every candidate knows; interest in communicating carries no load a B2 reader cannot bear."
+  },
+  {
+    "input": "communicative",
+    "lemma": "communicative",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "A transparent derivative of communicate, and the blank in that fact is ..... communicative competence is the preposition, so the term sits as background."
+  },
+  {
+    "input": "comparative",
+    "lemma": "comparative",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Transparent from compare and already familiar as a grammar label; the sentence about Sanskrit and Indo-European grammar does not lean on it."
+  },
+  {
+    "input": "compel",
+    "lemma": "compel",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "It is the main verb of the sentence's central claim — instinct and responsibility will compel farmers to hunt and kill — and it is not decodable from any word a B2 reader already has.",
+    "gloss": "to force or strongly oblige someone to do something"
+  },
+  {
+    "input": "compete",
+    "lemma": "compete",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Basic vocabulary; the difficulty of tried to ..... Gary Paulsen from competing lies in the blank verb, not in competing."
+  },
+  {
+    "input": "competence",
+    "lemma": "competence",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Common academic vocabulary, and the stem itself defines sociolinguistic competence at length before the reader needs it."
+  },
+  {
+    "input": "competitor",
+    "lemma": "competitor",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Transparent from compete; benefits available through a competitor would read the same to anyone who knows the verb."
+  },
+  {
+    "input": "composed",
+    "lemma": "compose",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Be composed of is standard B2 scientific phrasing, and the blank here is the subject noun, not the participle."
+  },
+  {
+    "input": "compositional",
+    "lemma": "compositional",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "A transparent derivative of composition, paired with medium in a list the reader can follow without it."
+  },
+  {
+    "input": "comprehension",
+    "lemma": "comprehension",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Every konkour candidate meets the word on the test paper itself; poor readers who lack speed and comprehension needs no teaching."
+  },
+  {
+    "input": "compulsory",
+    "lemma": "compulsory",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "The whole claim about Roman primary schools is that they were not compulsory, and the word is not decodable from compel for a reader who has only met that verb rarely.",
+    "gloss": "required by rule or law; obligatory"
+  },
+  {
+    "input": "computational",
+    "lemma": "computational",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Transparent from compute, and the same sentence spells out computerized or mechanical translation as the gloss."
+  },
+  {
+    "input": "computerized",
+    "lemma": "computerize",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Fully transparent from computer, and it sits in a paraphrase pair with mechanical."
+  },
+  {
+    "input": "concentrate",
+    "lemma": "concentrate",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Common school vocabulary; growth heavily concentrated in Latin America blocks nobody."
+  },
+  {
+    "input": "conception",
+    "lemma": "conception",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "A conception of language reads as concept to any B2 reader, and the blank sits in the relative clause about first-order logic."
+  },
+  {
+    "input": "conclude",
+    "lemma": "conclude",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Standard academic reporting verb; the item turns on the quoted blank about joining letters into words."
+  },
+  {
+    "input": "concurred",
+    "lemma": "concur",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "So I concurred and received the new medicine is what resolves the sentence, and concur is opaque to a reader who knows only agree.",
+    "gloss": "to agree with someone or something"
+  },
+  {
+    "input": "condenser",
+    "lemma": "condenser",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "The sentence is about Watt cutting the engine's energy waste by adding a separate condenser, so the device is the substance of it — but it is mechanical-engineering vocabulary rather than konkour English.",
+    "gloss": "a device that cools vapour back into liquid, as in a steam engine",
+    "fieldCodes": [
+      "1148"
+    ]
+  },
+  {
+    "input": "condiment",
+    "lemma": "condiment",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank sits directly against it — its ..... as a condiment and preservative — so a reader who does not know the word cannot see what is being predicated of salt.",
+    "gloss": "a seasoning such as salt or sauce added to food"
+  },
+  {
+    "input": "confess",
+    "lemma": "confess",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "I have to confess is only the discourse frame; the item turns on what the investment has done to its value."
+  },
+  {
+    "input": "confrontation",
+    "lemma": "confrontation",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Transparent from confront and near-international in form; the hard work in the sentence is the blank verb before the frowning brow."
+  },
+  {
+    "input": "connectivity",
+    "lemma": "connectivity",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "A transparent derivative of connect, and social connectivity is further glossed by sustainable communities and quality of life."
+  },
+  {
+    "input": "connexions",
+    "lemma": "connexion",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Only a variant spelling of connection, which the same sentence uses in full a few words earlier."
+  },
+  {
+    "input": "connotation",
+    "lemma": "connotation",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The clause is built on it — vapid added a broader, more figurative connotation — and nothing in the word's shape hands a B2 reader its meaning.",
+    "gloss": "an idea or feeling a word suggests beyond its literal meaning"
+  },
+  {
+    "input": "conscience",
+    "lemma": "conscience",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "The sentence opens on a straight choice between survival and an environmental conscience, so the whole trade-off collapses if the word is unknown or read as conscious.",
+    "gloss": "an inner sense of what is morally right or wrong"
+  },
+  {
+    "input": "conscious",
+    "lemma": "conscious",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "A common B2 adjective; a conscious attempt to criticize is not where this item's difficulty lies."
+  },
+  {
+    "input": "consciousness",
+    "lemma": "consciousness",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "The blank does sit against it, but consciousness is a transparent nominalisation of a word every candidate has."
+  },
+  {
+    "input": "consequence",
+    "lemma": "consequence",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Consider the consequences next time is school vocabulary; the blank is the adjective describing thoughtlessness."
+  },
+  {
+    "input": "considerable",
+    "lemma": "considerable",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Common academic quantifier; considerable stress would read the same as great stress in this cloze."
+  },
+  {
+    "input": "consist",
+    "lemma": "consist",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Basic academic verb; the blank asks for the noun naming the sniping and undermining, not for consists."
+  },
+  {
+    "input": "constantly",
+    "lemma": "constantly",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Transparent from constant; the load in this stem is carried by denouncing, not by the adverb."
+  },
+  {
+    "input": "construct",
+    "lemma": "construct",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Constructing shallow ponds for shrimp farming is plain B1 vocabulary."
+  },
+  {
+    "input": "constructive",
+    "lemma": "constructive",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "The stem sets it directly against harmful thought patterns, which hands the reader the meaning."
+  },
+  {
+    "input": "consult",
+    "lemma": "consult",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Common B2 verb; consulted a professional athlete supports the blank but teaches nothing new."
+  },
+  {
+    "input": "consume",
+    "lemma": "consume",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Think now about what you can do to consume less is well within school vocabulary."
+  },
+  {
+    "input": "consumerism",
+    "lemma": "consumerism",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "The blank sits against it in a perfect ..... of consumerism, but consumer plus the productive -ism suffix makes the word decodable, and dystopian frames it."
+  },
+  {
+    "input": "contended",
+    "lemma": "contend",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "Contended governs the whole defence — he did not ..... the murder of the civilians — and the word is easily misread as connected to content.",
+    "gloss": "to assert or argue that something is the case"
+  },
+  {
+    "input": "contends",
+    "lemma": "contend",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "Carnell contends that Behn may have turned to the novel is the frame the entire long item hangs from, and contend is not inferable from any commoner word.",
+    "gloss": "to assert or argue that something is the case"
+  },
+  {
+    "input": "contentment",
+    "lemma": "contentment",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "It is the subject the blank predicates — levels of human contentment have remained ..... — and the everyday sense of content as subject matter misleads a reader straight past it.",
+    "gloss": "a state of quiet satisfaction"
+  },
+  {
+    "input": "contextual",
+    "lemma": "contextual",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Transparent from context, and the stem lists the contextual factors it means straight afterwards."
+  },
+  {
+    "input": "continually",
+    "lemma": "continually",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "A transparent adverb from continue; use your past to continually create a bigger future does not lean on it."
+  },
+  {
+    "input": "continuum",
+    "lemma": "continuum",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "The sentence is about nothing but this continuum concept and its Greek origins, and the Latin form gives a B2 reader no foothold even though the blank is only the verb.",
+    "gloss": "an unbroken range in which parts shade into one another"
+  },
+  {
+    "input": "contradictory",
+    "lemma": "contradictory",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Transparent from contradict, and resistant to change already tells the reader what contradictory evidence must be."
+  },
+  {
+    "input": "contrition",
+    "lemma": "contrition",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 5,
+    "reason": "The blank sits directly on it — had he ..... contrition and begged forgiveness — and the word is opaque to anyone who has not read widely.",
+    "gloss": "deep and sincere remorse for having done wrong"
+  },
+  {
+    "input": "convergence",
+    "lemma": "convergence",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The claim is that the convergence of Saussurean linguistics and information theory suggests the constraints, so the word carries the sentence's only argument.",
+    "gloss": "the coming together of separate things toward one point"
+  },
+  {
+    "input": "conversational",
+    "lemma": "conversational",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Transparent from conversation; the item is a reduced-clause question about the eight poems, not about the genre label."
+  },
+  {
+    "input": "cookie",
+    "lemma": "cookie",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Everyday vocabulary, and the last cookie is only an example of what the children squabbled over."
+  },
+  {
+    "input": "coordinate",
+    "lemma": "coordinate",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "The verb does carry the first half of the claim, but coordinates an animal's daily rhythms with the solar day is common B2 vocabulary."
+  },
+  {
+    "input": "coral",
+    "lemma": "coral",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "The passage is about corals and their reef community, but coral is a concrete everyday noun of the same order as soil or coal, familiar from any nature programme."
+  },
+  {
+    "input": "cortex",
+    "lemma": "cortex",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The cerebral cortex is the subject of the whole sentence and its hemispheres and lobes are the point, but the word is anatomy vocabulary rather than konkour English.",
+    "gloss": "the outer layer of the brain",
+    "fieldCodes": [
+      "1110"
+    ]
+  },
+  {
+    "input": "cosmetics",
+    "lemma": "cosmetic",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "A near-international word, and pharmaceutical and cosmetics companies is only the subject of a reduced-clause item."
+  },
+  {
+    "input": "couch",
+    "lemma": "couch",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Basic household vocabulary; sprawling on the couch cues the blank, but no candidate needs teaching on it."
+  },
+  {
+    "input": "counterparts",
+    "lemma": "counterpart",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The comparison that closes the passage rests on it — zoo elephants live shorter lives than their counterparts in the wild — and neither counter nor part gives the meaning away.",
+    "gloss": "a person or thing corresponding to another in a different place or situation"
+  },
+  {
+    "input": "courteous",
+    "lemma": "courteous",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "The stem sets courteous treatment directly against the rude behavior of the clerk, so the sentence hands over the meaning, and the blank is solved from rude."
+  },
+  {
+    "input": "courtroom",
+    "lemma": "courtroom",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "A transparent compound, and before the jury in the courtroom is setting rather than substance."
+  },
+  {
+    "input": "covariance",
+    "lemma": "covariance",
+    "verdict": "domain-term",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 5,
+    "reason": "The blank sits between two occurrences of it — covariance across individuals need not ..... covariance within individuals — but it is statistics vocabulary, not general English.",
+    "gloss": "a statistical measure of how two variables vary together",
+    "fieldCodes": [
+      "1121"
+    ]
+  },
+  {
+    "input": "coworkers",
+    "lemma": "coworker",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "A transparent compound of co- and worker; the respect of a boss or coworkers needs no gloss."
+  },
+  {
+    "input": "credentials",
+    "lemma": "credential",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The sentence's punchline is that without real superiority there are only laypeople with imposing credentials, and the word is not recoverable from credit or credible.",
+    "gloss": "a qualification or document proving someone's competence or status"
+  },
+  {
+    "input": "criminality",
+    "lemma": "criminality",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "A transparent nominalisation of criminal, listed among brutish appetites the reader already understands."
+  },
+  {
+    "input": "criterion",
+    "lemma": "criterion",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "The thesis does turn on grounding moral status on a single criterion, but criterion and criteria are standard vocabulary for anyone sitting a graduate entrance exam."
+  },
+  {
+    "input": "critic",
+    "lemma": "critic",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Common vocabulary, and literary critic Rachel Carnell is only the source attribution for the claim."
+  },
+  {
+    "input": "criticism",
+    "lemma": "criticism",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "School vocabulary; the blank is the adjective grading the criticism, not the noun."
+  },
+  {
+    "input": "criticize",
+    "lemma": "criticize",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Common B1 verb; he never criticized us directly only sets up the blank about Gerry's expression."
+  },
+  {
+    "input": "critics",
+    "lemma": "critic",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Common vocabulary; most contemporary critics find them inferior is an error-identification item turning on inferior to, not on critics."
+  },
+  {
+    "input": "crop",
+    "lemma": "crop",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Basic agricultural vocabulary; his crops will be washed away is one of two weather examples illustrating the blank adjective."
+  },
+  {
+    "input": "crowd",
+    "lemma": "crowd",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Crowded cities is B1 vocabulary; the item is the so ..... that structure."
+  },
+  {
+    "input": "cruelty",
+    "lemma": "cruelty",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Transparent from cruel, and it appears only inside the RSPCA's name."
+  },
+  {
+    "input": "crust",
+    "lemma": "crust",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Plates in the Earth's crust is school science that any candidate has met in Persian as well as English."
+  },
+  {
+    "input": "crustal",
+    "lemma": "crustal",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "Crustal rock hotter than 150 degrees is decodable the moment the reader has crust, and the item is a parallel-structure question rather than a vocabulary one."
+  },
+  {
+    "input": "cry",
+    "lemma": "cry",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "The proverb no use crying over spilt milk is illustration; the blank is the adjective describing how she spoke."
+  },
+  {
+    "input": "cue",
+    "lemma": "cue",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The external cue is the subject of both halves of the sentence including the blank verb about Earth's rotation, and the word looks like nothing a B2 reader already knows.",
+    "gloss": "a signal that prompts an action or response"
+  },
+  {
+    "input": "cultivation",
+    "lemma": "cultivation",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "Land is also required for the cultivation of crops effectively defines the word from grazing and land in the clause before it."
+  },
+  {
+    "input": "cupcake",
+    "lemma": "cupcake",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "A transparent compound; the extra cupcake is merely what Rasheen was caught taking."
+  },
+  {
+    "input": "curiosities",
+    "lemma": "curiosity",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "The phrase curiosities of literature does cue the blank, but the lemma itself is a word every candidate holds, only in its commoner sense."
+  },
+  {
+    "input": "curl",
+    "lemma": "curl",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Curl up by the fireside is everyday vocabulary and the blank is the verb taken with a cup of hot chocolate."
+  },
+  {
+    "input": "cutbacks",
+    "lemma": "cutback",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "Forcing cutbacks in the operations of local governments is transparent from the phrasal verb cut back, and the blank is the adjective on insurance rates."
+  },
+  {
+    "input": "damp",
+    "lemma": "damp",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The ground was damp, the air cold is one item in a list of discomforts, and the parallel with cold supplies the sense; the blank is far away at the end."
+  },
+  {
+    "input": "dare",
+    "lemma": "dare",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "The blank sits right against it, but dare to use them clumsily uses a verb every candidate has met since school."
+  },
+  {
+    "input": "darkness",
+    "lemma": "darkness",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "A transparent noun from dark; climbed steadily in near darkness is scene-setting for an infinitive-clause item."
+  },
+  {
+    "input": "dash",
+    "lemma": "dashing",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "His dashing flattery faded would read the same with any flattering adjective — the sentence's weight is on mountebank and on the blank naming the bad car."
+  },
+  {
+    "input": "dawn",
+    "lemma": "dawn",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "The first light of dawn is glossed by its own phrase and by the sky's orange and pink; the blank is the verb under the full moon."
+  },
+  {
+    "input": "deaf",
+    "lemma": "deaf",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 1,
+    "reason": "Struck deaf by disease cues the blank about what he overcomes, but deaf is elementary vocabulary."
+  },
+  {
+    "input": "deafening",
+    "lemma": "deafening",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 5,
+    "difficulty": 3,
+    "reason": "The blank sits directly against it in the ..... was deafening, yet -en on deaf is a regular and productive pattern a B2 reader can resolve unaided."
+  },
+  {
+    "input": "dealt",
+    "lemma": "deal",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Deal with is one of the commonest phrasal verbs in English; the item asks for the adverb before it."
+  },
+  {
+    "input": "debase",
+    "lemma": "debase",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 5,
+    "reason": "The blank is coordinated straight onto it — you have to ..... and debase yourself — so the answer is a synonym of a word most candidates have never seen.",
+    "gloss": "to lower in dignity, quality, or value"
+  },
+  {
+    "input": "decade",
+    "lemma": "decade",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Common time vocabulary; by the second decade of this century is only a date in a long relative clause."
+  },
+  {
+    "input": "decimate",
+    "lemma": "decimate",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The theory stands or falls on catastrophes that decimate populations, and the word's resemblance to decimal actively misleads a B2 reader.",
+    "gloss": "to destroy a large proportion of something"
+  },
+  {
+    "input": "decisive",
+    "lemma": "decisive",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 5,
+    "difficulty": 2,
+    "reason": "It is the whole cue for the blank describing the predecessor, but decisive is a transparent derivative of decide."
+  },
+  {
+    "input": "declare",
+    "lemma": "declare",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Common B2 verb; declare them unfit to share facilities is parallel to the blank rather than the difficulty in it."
+  },
+  {
+    "input": "decompression",
+    "lemma": "decompression",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "The stem glosses it in apposition as a sometimes lethal condition, and de- plus compression is readable for anyone who has press."
+  },
+  {
+    "input": "decor",
+    "lemma": "decor",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "The blank is predicated of it, but decor is a word Persian already carries as a loan and the clause it screamed five-star settles the sense anyway."
+  },
+  {
+    "input": "decoration",
+    "lemma": "decoration",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Transparent from decorate; the reason for their decoration sits in a long error-identification sentence about painted caves."
+  },
+  {
+    "input": "decorative",
+    "lemma": "decorative",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Transparent from decorate, and the item is the inversion after Only when European decorative themes were introduced."
+  },
+  {
+    "input": "decorum",
+    "lemma": "decorum",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "Conducted himself with proper decorum is the whole second clause, and the word is a false friend of decor and decoration for exactly this audience.",
+    "gloss": "behaviour that is proper, dignified, and socially correct"
+  },
+  {
+    "input": "decrepit",
+    "lemma": "decrepit",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "Growing older and more decrepit is the subject the blank adjective qualifies, and the word gives a B2 reader no morphological foothold at all.",
+    "gloss": "worn out or weakened by age or long use"
+  },
+  {
+    "input": "deemed",
+    "lemma": "deem",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "The blank is the complement of the verb — cannot be deemed an ..... truth — so a reader who does not know deem cannot see that a judgement is being reported.",
+    "gloss": "to consider or judge something to be a certain way"
+  },
+  {
+    "input": "deeper",
+    "lemma": "deep",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "The deeper you are is elementary; the item is the comparative correlative, not the word."
+  },
+  {
+    "input": "deeply",
+    "lemma": "deeply",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "A transparent adverb from deep; misleading, sometimes deeply so is an intensifier at the tail of the sentence."
+  },
+  {
+    "input": "defamation",
+    "lemma": "defamation",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The live defamation trial is what the blank noun has to characterise, and the word is common in journalism without being decodable from anything a B2 reader holds.",
+    "gloss": "the act of damaging someone's reputation with false statements"
+  },
+  {
+    "input": "defective",
+    "lemma": "defective",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "His defective stock is what the blank verb acts on, but defect is familiar enough and packing it in new and fancy boxes already tells the reader the goods are bad."
+  },
+  {
+    "input": "defendant",
+    "lemma": "defendant",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Transparent from defend, and the blank is glossed outright by in other words, documents that were top-secret."
+  },
+  {
+    "input": "definitional",
+    "lemma": "definitional",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "A transparent derivative of definition; the blank is the adjective judging whether resisting closure is wise."
+  },
+  {
+    "input": "demonstrably",
+    "lemma": "demonstrably",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "The sentence would make the same claim with immense superiority alone — the adverb is decoration on the phrase the error-identification item actually targets."
+  },
+  {
+    "input": "denouncing",
+    "lemma": "denounce",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 4,
+    "reason": "Denouncing one another for all manner of faults is the sole cue for the blank verb the couple do to each other, and the word is opaque to a B2 reader.",
+    "gloss": "to condemn or criticise someone publicly and harshly"
+  },
+  {
+    "input": "dense",
+    "lemma": "dense",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "A dense population is standard B2 vocabulary; the item is the past modal about the parking lots."
+  },
+  {
+    "input": "dentaries",
+    "lemma": "dentary",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 5,
+    "reason": "The stem glosses it on the spot as lower jaws, and it is one item in a list of skeletal differences the blank does not touch."
+  },
+  {
+    "input": "dentist",
+    "lemma": "dentist",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Elementary vocabulary; a note from his dentist is the evidence, and the blank is the adjective describing Ben's position."
+  },
+  {
+    "input": "deny",
+    "lemma": "deny",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Common B1 verb; signs of the system's failure, denied or not taken turns on the structure, not the word."
+  },
+  {
+    "input": "depend",
+    "lemma": "depend",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Depending on contextual factors is elementary; the sentence's difficulty lies entirely elsewhere."
+  },
+  {
+    "input": "dependable",
+    "lemma": "dependable",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "A transparent derivative of depend, and regardless of the amount of rainfall spells out what a dependable water supply means."
+  },
+  {
+    "input": "depictions",
+    "lemma": "depiction",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "Their depictions of violence is the subject of the claim, but television programs and movies in the clause before make the word readable, and the blank is the opening participle."
+  },
+  {
+    "input": "deployed",
+    "lemma": "deploy",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "Missions deployed seismometers, which provided information stays comprehensible with only a vague sense of the verb, and the blank is the adjective on information."
+  },
+  {
+    "input": "deregulation",
+    "lemma": "deregulation",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "De- plus regulation is readable, and the stem itself says the result was a highly competitive market."
+  },
+  {
+    "input": "deride",
+    "lemma": "deride",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 4,
+    "reason": "Use class time to deride these media is the only signal that the blank adjective must be negative, and the verb is not inferable from anything commoner.",
+    "gloss": "to mock or ridicule something contemptuously"
+  },
+  {
+    "input": "dermis",
+    "lemma": "dermis",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "Follicles deep within the dermis fixes where the blank subject grows from, but the word is dermatological vocabulary rather than konkour English.",
+    "gloss": "the inner layer of the skin, beneath the epidermis",
+    "fieldCodes": [
+      "1121"
+    ]
+  },
+  {
+    "input": "descendants",
+    "lemma": "descendant",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "The entire claim is that nobody foresaw what their descendants would do, and the word is not recoverable from descend for a reader who knows only the going-down sense.",
+    "gloss": "a person descended from a particular ancestor"
+  },
+  {
+    "input": "descent",
+    "lemma": "descent",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "A person of common descent and ordinary connexions is what the blank verb would make the prince, and the ancestry sense is hidden behind the far commoner going-down one.",
+    "gloss": "a person's family origin or ancestry"
+  },
+  {
+    "input": "descriptively",
+    "lemma": "descriptively",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Transparent from describe, and the item is the embedded-question word order in how can we handle such variation descriptively."
+  }
+]

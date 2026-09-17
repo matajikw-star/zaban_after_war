@@ -65,6 +65,7 @@ def collect(exam_files: list) -> dict[str, dict]:
                 seen.add(wid)
                 acc[wid]["lemmas"].add(lemma)
                 acc[wid]["occ"].append({
+                    "occurrenceType": "tested",
                     "paperId": paper_id,
                     "year": year,
                     "questionNo": q.get("no"),
@@ -77,7 +78,7 @@ def collect(exam_files: list) -> dict[str, dict]:
     return acc
 
 
-def build_stats(occ: list[dict]) -> dict:
+def build_stats(occ: list[dict], context: list[dict] | None = None) -> dict:
     by_year: dict[str, int] = defaultdict(int)
     answers_by_year: dict[str, int] = defaultdict(int)
     for o in occ:
@@ -95,6 +96,11 @@ def build_stats(occ: list[dict]) -> dict:
         "lastYear": years[-1] if years else None,
         "byYear": dict(sorted(by_year.items(), reverse=True)),
         "answersByYear": dict(sorted(answers_by_year.items(), reverse=True)),
+        # A word can also appear in a question's stem without ever being tested.
+        # It is counted separately and deliberately kept out of `priority`: how
+        # often a word turns up in prose is not how much study time it is worth,
+        # which is the distinction ADR-0011 exists to enforce.
+        "timesAsContext": len(context or []),
         # Study priority: being the correct answer counts triple, and breadth
         # across years counts more than repetition inside one year.
         "priority": times_answer * 3 + (len(occ) - times_answer) + len(years) * 2,
@@ -125,6 +131,12 @@ def main() -> int:
             frozen_conflicts.append((wid, prev.get("id")))
             continue
 
+        # Context occurrences come from S8, not from the options, so this fold
+        # cannot re-derive them. Carry them through, or re-running S6 would
+        # silently delete the whole context-vocabulary pass.
+        context = [o for o in (prev or {}).get("occurrences", [])
+                   if o.get("occurrenceType") == "context"]
+
         entry = {
             "id": wid,                                  # frozen forever
             "lemma": prev.get("lemma") if prev else lemma,
@@ -132,11 +144,15 @@ def main() -> int:
             "translations": (prev or {}).get("translations", []),
             "synonyms": (prev or {}).get("synonyms", []),
             "examples": (prev or {}).get("examples", []),
-            "surfaceForms": sorted({o["surface"] for o in occ if o["surface"]}),
-            "occurrences": occ,
-            "stats": build_stats(occ),
+            "surfaceForms": sorted({o["surface"] for o in occ + context if o.get("surface")}),
+            "occurrences": occ + context,
+            "stats": build_stats(occ, context),
             "status": (prev or {}).get("status", "draft"),
         }
+        # Set by S8 for a domain term, and no more re-derivable here than the
+        # context occurrences are.
+        if prev and "domain" in prev:
+            entry["domain"] = prev["domain"]
         if prev == entry:
             continue
         if not a.dry_run:

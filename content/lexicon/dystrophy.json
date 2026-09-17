@@ -1,0 +1,40 @@
+{
+  "domain": {
+    "fieldCodes": [
+      "1148"
+    ]
+  },
+  "examples": [],
+  "id": "dystrophy",
+  "lemma": "dystrophy",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p11",
+      "part": "grammar",
+      "questionNo": 13,
+      "reach": 1,
+      "surface": "dystrophy",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "dystrophy"
+  ],
+  "synonyms": [],
+  "translations": []
+}

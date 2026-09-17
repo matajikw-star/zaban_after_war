@@ -119,6 +119,14 @@ Run after any bulk change. Implemented as `pnpm content:lint`, and by Claude on 
    probably needs splitting into `word-1` / `word-2` (do this *before* users have progress on it).
 9. `uncertain[]` items still open.
 10. Orphans: exam questions whose `testedWord` is `null`.
+11. Context-only entries: a lexicon file whose every occurrence is
+    `occurrenceType: "context"`. Legitimate — it is what S8 produces — but it
+    means the word was never actually tested, so it must never be counted as
+    exam frequency, and a run of them appearing unexpectedly is a sign S8 was
+    re-run with a changed criterion.
+12. A context occurrence carrying an `optionIndex` or an `isAnswer`. Those
+    belong to a tested occurrence only; their presence means the two kinds have
+    been conflated somewhere.
 
 Report findings ranked by severity, with file paths. Fix nothing silently — a lint that
 auto-repairs hides the extraction problems this pipeline exists to surface.

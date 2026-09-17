@@ -1,0 +1,45 @@
+{
+  "examples": [],
+  "id": "exclude",
+  "lemma": "exclude",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p11",
+      "part": "grammar",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "excluded",
+      "year": 1400
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1398-p07",
+      "part": "grammar",
+      "questionNo": 158,
+      "reach": 1,
+      "surface": "exclude",
+      "year": 1398
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 2,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "exclude",
+    "excluded"
+  ],
+  "synonyms": [],
+  "translations": []
+}

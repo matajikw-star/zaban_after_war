@@ -1,0 +1,40 @@
+{
+  "domain": {
+    "fieldCodes": [
+      "1110"
+    ]
+  },
+  "examples": [],
+  "id": "morphology",
+  "lemma": "morphology",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1402-p04",
+      "part": "grammar",
+      "questionNo": 1,
+      "reach": 1,
+      "surface": "morphology",
+      "year": 1402
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "morphology"
+  ],
+  "synonyms": [],
+  "translations": []
+}

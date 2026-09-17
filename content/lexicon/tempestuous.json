@@ -1,0 +1,35 @@
+{
+  "examples": [],
+  "id": "tempestuous",
+  "lemma": "tempestuous",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1404-p05",
+      "part": "vocabulary",
+      "questionNo": 16,
+      "reach": 1,
+      "surface": "tempestuous",
+      "year": 1404
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "tempestuous"
+  ],
+  "synonyms": [],
+  "translations": []
+}

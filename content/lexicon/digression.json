@@ -1,0 +1,53 @@
+{
+  "examples": [],
+  "id": "digression",
+  "lemma": "digression",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 20,
+      "surface": "digressions",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 9,
+      "surface": "digressions",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 1,
+      "surface": "digressions",
+      "year": 1399
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 3,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "digressions"
+  ],
+  "synonyms": [],
+  "translations": []
+}

@@ -1,0 +1,35 @@
+{
+  "examples": [],
+  "id": "testament",
+  "lemma": "testament",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1405-p04",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 1,
+      "surface": "testament",
+      "year": 1405
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "testament"
+  ],
+  "synonyms": [],
+  "translations": []
+}

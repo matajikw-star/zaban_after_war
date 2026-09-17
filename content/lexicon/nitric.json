@@ -1,0 +1,40 @@
+{
+  "domain": {
+    "fieldCodes": [
+      "1121"
+    ]
+  },
+  "examples": [],
+  "id": "nitric",
+  "lemma": "nitric",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1398-p05",
+      "part": "grammar",
+      "questionNo": 3,
+      "reach": 1,
+      "surface": "nitric",
+      "year": 1398
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "nitric"
+  ],
+  "synonyms": [],
+  "translations": []
+}

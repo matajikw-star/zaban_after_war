@@ -1,0 +1,35 @@
+{
+  "examples": [],
+  "id": "husbandry",
+  "lemma": "husbandry",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1398-p02",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 33,
+      "surface": "husbandry",
+      "year": 1398
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "husbandry"
+  ],
+  "synonyms": [],
+  "translations": []
+}

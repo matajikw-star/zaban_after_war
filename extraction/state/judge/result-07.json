@@ -1,0 +1,1162 @@
+[
+  {
+    "input": "intrusive",
+    "lemma": "intrusive",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 3,
+    "reason": "The blank is coordinated directly with it — behavior can be ..... and intrusive — so the option cannot be chosen without knowing what intrusive means.",
+    "gloss": "unwelcomely interfering, especially with privacy"
+  },
+  {
+    "input": "intuition",
+    "lemma": "intuition",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Intuition is ordinary academic vocabulary and the blank here is a discourse connector sitting between two sentences, not against the word."
+  },
+  {
+    "input": "inuus",
+    "lemma": "inuus",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 5,
+    "reason": "It is the Latin species epithet in Maiacetus inuus, glossed in the sentence itself as \"mother whale\", not an English word anyone can be taught."
+  },
+  {
+    "input": "invasive",
+    "lemma": "invasive",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The set phrase invasive species closes the sentence well away from the blank, which asks what urban development should avoid doing to wetlands."
+  },
+  {
+    "input": "invented",
+    "lemma": "invent",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Every mode of communication ever invented is school vocabulary; the difficulty of the question is entirely in the missing verb."
+  },
+  {
+    "input": "inventors",
+    "lemma": "inventor",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "A transparent agent noun from invent, and the sentence names Edison immediately after it."
+  },
+  {
+    "input": "invest",
+    "lemma": "invest",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Investing their money in it is common B1 vocabulary and merely restates the context of the survey."
+  },
+  {
+    "input": "investigate",
+    "lemma": "investigate",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Researchers investigated is common academic phrasing; the blank is the preposition after effect."
+  },
+  {
+    "input": "irradiation",
+    "lemma": "irradiation",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "Food irradiation is reachable from radiation, and the sentence spells out the process and its supposed effects on vitamins and carcinogens."
+  },
+  {
+    "input": "issuance",
+    "lemma": "issuance",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The issuance of a summons sits at the far end of the sentence from the blank, and the nominalisation is reachable from issue."
+  },
+  {
+    "input": "jam",
+    "lemma": "james",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 1,
+    "reason": "The surface token is the personal name James Jackson, which the lemmatiser wrongly reduced to jam; it carries no meaning to teach."
+  },
+  {
+    "input": "jaws",
+    "lemma": "jaw",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "It appears only as the parenthetical gloss of dentaries (lower jaws), which hands the reader the meaning rather than demanding it."
+  },
+  {
+    "input": "jen",
+    "lemma": "jen",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 1,
+    "reason": "Jen is the personal name contrasted with Lin in the sentence, not vocabulary."
+  },
+  {
+    "input": "jeremey",
+    "lemma": "jeremey",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 1,
+    "reason": "A personal name as transcribed from the paper; the question turns on the noun after youthful, not on it."
+  },
+  {
+    "input": "jess",
+    "lemma": "jess",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 1,
+    "reason": "Jess is the personal name of the exhausted student, not a word with meaning to learn."
+  },
+  {
+    "input": "jest",
+    "lemma": "jest",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "In jest frames the quotation but the blank asks for the quality needed to dare to use languages clumsily, which the rest of the sentence supplies on its own."
+  },
+  {
+    "input": "joan",
+    "lemma": "joan",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 1,
+    "reason": "A personal name; the question turns on the adjective before attitude."
+  },
+  {
+    "input": "joke",
+    "lemma": "joke",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Xiu's timely joke is elementary vocabulary even though the blank verb depends on it."
+  },
+  {
+    "input": "journalist",
+    "lemma": "journalist",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "A transparent agent noun introducing McDougall's name in a sentence whose difficulty is the faulty there are debates construction."
+  },
+  {
+    "input": "jovial",
+    "lemma": "jovial",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 4,
+    "reason": "The blank is the concessive opposite of jovial — Although Mr. Jackson was ....., he attempted to be jovial — so the whole item is unanswerable without the word.",
+    "gloss": "cheerful and good-humoured"
+  },
+  {
+    "input": "juncture",
+    "lemma": "juncture",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "At this juncture sits immediately after the blank and carries the contrast the missing connector has to match.",
+    "gloss": "a particular point in time, especially a critical one"
+  },
+  {
+    "input": "jungle",
+    "lemma": "jungle",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Common word, and the deserted property and growing weeds explain it before the blank about how the weed grew."
+  },
+  {
+    "input": "jury",
+    "lemma": "jury",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Judge or jury is a familiar pairing at the end of the sentence, far from the blank about what the attorney shares."
+  },
+  {
+    "input": "keratin",
+    "lemma": "keratin",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "The blank subject is identified by being composed of keratin, but keratin is biochemistry vocabulary and the sentence glosses it as a protein.",
+    "gloss": "the fibrous protein that forms hair, nails and horn",
+    "fieldCodes": [
+      "1121"
+    ]
+  },
+  {
+    "input": "kevlar",
+    "lemma": "kevlar",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "A trade name for a material, and the sentence defines it by listing airplane wings, vests and hockey sticks."
+  },
+  {
+    "input": "kilometers",
+    "lemma": "kilometer",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 1,
+    "reason": "A unit of measurement in the depth clause; nothing in the sentence depends on learning it."
+  },
+  {
+    "input": "knave",
+    "lemma": "knave",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "The epigram balances fool against knave and the blank completes the second half of that balance, so the sentence collapses without the word.",
+    "gloss": "a dishonest, unscrupulous man; a rogue"
+  },
+  {
+    "input": "knight",
+    "lemma": "knight",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Camelot, quests and King Arthur make knights familiar and self-explaining for the blank about their beloved ruler."
+  },
+  {
+    "input": "knock",
+    "lemma": "knock",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Knock your opponent out of the ring is elementary vocabulary; the blank is the noun for the opponent."
+  },
+  {
+    "input": "lain",
+    "lemma": "lie",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The foundations were lain is the paper's own misuse of lay, and the clause reads as the familiar foundations-were-laid idiom regardless; the true dictionary form of the printed participle is lie."
+  },
+  {
+    "input": "landlord",
+    "lemma": "landlord",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Rent in the same clause makes landlord transparent, and the item hinges on the missing verb evicted."
+  },
+  {
+    "input": "largely",
+    "lemma": "largely",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "A transparent adverb from large modifying government-controlled, well away from the blank about the United Kingdom since 1979."
+  },
+  {
+    "input": "laugh",
+    "lemma": "laugh",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Elementary vocabulary; the blank asks for what the assemblies did rather than laugh."
+  },
+  {
+    "input": "laughter",
+    "lemma": "laughter",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "A transparent noun from laugh, and the sentence repeats laughing at the end anyway."
+  },
+  {
+    "input": "laypeople",
+    "lemma": "layperson",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The whole claim is the contrast between true experts and laypeople with imposing credentials, and lay in this sense is not reachable from the everyday word.",
+    "gloss": "a person without professional or specialist knowledge of a subject"
+  },
+  {
+    "input": "learner",
+    "lemma": "learner",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Foreign language learners is a transparent agent noun from learn and standard in this register."
+  },
+  {
+    "input": "lecturer",
+    "lemma": "lecturer",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "A transparent derivative of lecture, and spoke for over an hour in the same sentence fixes the meaning."
+  },
+  {
+    "input": "legitimate",
+    "lemma": "legitimate",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Other legitimate reasons is common administrative English and the sentence's difficulty is the misplaced for instance."
+  },
+  {
+    "input": "lent",
+    "lemma": "lend",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "The man lent me copies is school vocabulary; the blank is the opening subordinator."
+  },
+  {
+    "input": "lethal",
+    "lemma": "lethal",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "A sometimes lethal condition is an appositive aside; the blank verb is cued by decompression sickness itself, not by lethal."
+  },
+  {
+    "input": "lexical",
+    "lemma": "lexical",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The sentence is built on the technical category lexical words, glossing it as nouns signifying things and contrasting it with proper nouns — linguistics vocabulary rather than konkour English.",
+    "gloss": "relating to the words or vocabulary of a language",
+    "fieldCodes": [
+      "1110"
+    ]
+  },
+  {
+    "input": "liars",
+    "lemma": "liar",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "A transparent noun from lie, further explained by are great at deception in the same clause."
+  },
+  {
+    "input": "lifespan",
+    "lemma": "lifespan",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "The blank describes it directly, but the compound is transparent and lasting from a few hours to a couple of days defines it outright."
+  },
+  {
+    "input": "lightning",
+    "lemma": "lightning",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "At lightning speed is a familiar idiom built on a school word, and it merely echoes the adjective the blank wants."
+  },
+  {
+    "input": "limb",
+    "lemma": "limb",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Hind limb elements closes a list of anatomical differences well away from the blank about the ankle."
+  },
+  {
+    "input": "linen",
+    "lemma": "linen",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Smell like clean linen is a closing simile; the question is the faulty spring's days, and nothing hangs on the fabric."
+  },
+  {
+    "input": "linework",
+    "lemma": "linework",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "A transparent compound of line and work, described in the sentence as simple yet expressive, and sitting after the blank."
+  },
+  {
+    "input": "linguist",
+    "lemma": "linguist",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "The blank is the subject linguists, but the word is transparent and the sentence repeats linguistics and forensic linguist twice more."
+  },
+  {
+    "input": "linguistic",
+    "lemma": "linguistic",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Inherent objective linguistic features uses an adjective transparent from language and standard in academic prose."
+  },
+  {
+    "input": "linguistics",
+    "lemma": "linguistics",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "The name of the discipline, used three times over in the same sentence with linguist and forensic context."
+  },
+  {
+    "input": "literacy",
+    "lemma": "literacy",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Abilities in literacy and numeracy is a fixed educational pairing sitting between the two blanks, which are structural rather than lexical."
+  },
+  {
+    "input": "literal",
+    "lemma": "literal",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "The sentence exists to oppose a literal image to a figurative one, and learners routinely confuse the pair even though the clause glosses it.",
+    "gloss": "taking words in their basic sense, without metaphor"
+  },
+  {
+    "input": "livable",
+    "lemma": "livable",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 4,
+    "reason": "The blank is the parallel term to livable in but it may not even be a livable one anymore, and this sense of the derivative is not reachable from live.",
+    "gloss": "providing enough income to live on"
+  },
+  {
+    "input": "livelihood",
+    "lemma": "livelihood",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The causal chain that licenses the blank runs livestock threatened, so by implication livelihood threatened, so they act — and the word is not transparent from live.",
+    "gloss": "the means by which someone earns a living"
+  },
+  {
+    "input": "livestock",
+    "lemma": "livestock",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "Agrarian lifestyle and predation in the same clause make livestock recoverable, and livelihood beside it carries the sentence's actual weight."
+  },
+  {
+    "input": "lobby",
+    "lemma": "lobby",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Stepped into the lobby of a hotel is everyday vocabulary and only restates the setting the blank adjective describes."
+  },
+  {
+    "input": "lobes",
+    "lemma": "lobe",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "The temporal lobes is immediately glossed as on the left and right sides of the brain, and the sentence's point is the blood flow finding."
+  },
+  {
+    "input": "logan",
+    "lemma": "logan",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 1,
+    "reason": "A personal name; the item turns on the adjective describing how he treats customers."
+  },
+  {
+    "input": "logical",
+    "lemma": "logical",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Through logical analysis is common academic phrasing and the sentence repeats first-order logic later."
+  },
+  {
+    "input": "longitudinal",
+    "lemma": "longitudinal",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "A longitudinal study of changes in the practices of four teachers names the design the whole sentence reports, and the research sense is unguessable from long.",
+    "gloss": "(of a study) following the same subjects over a long period"
+  },
+  {
+    "input": "looksay",
+    "lemma": "looksay",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "It appears in quotation marks as a label for whole-word instruction, which the sentence has already named and explained."
+  },
+  {
+    "input": "loosened",
+    "lemma": "loosen",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Soil that has never been loosened or fertilized uses a transparent derivative of loose, and fertilized carries the metaphor alongside it."
+  },
+  {
+    "input": "lumps",
+    "lemma": "lump",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Coalesced into lumps called planetesimals is glossed by the naming construction, and the item is the faulty was a chaotic and violent process."
+  },
+  {
+    "input": "lung",
+    "lemma": "lung",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "The blood clot on Henry's lung uses a school word; the difficulty of the sentence is autochthonous, not lung."
+  },
+  {
+    "input": "luster",
+    "lemma": "luster",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank is the participle governing it — the luster ..... on him by being a member of this group — so the missing verb cannot be chosen without the noun.",
+    "gloss": "a soft sheen; by extension, reflected prestige or glamour"
+  },
+  {
+    "input": "machinery",
+    "lemma": "machinery",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "The secretory machinery is transparent from machine, and the blank is the correlative adverb after not only."
+  },
+  {
+    "input": "maggots",
+    "lemma": "maggot",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "The maggots produced by long-lived flies is the subject of the very clause the blank completes, and nothing in the sentence says what a maggot is.",
+    "gloss": "the soft legless larva of a fly"
+  },
+  {
+    "input": "magnificent",
+    "lemma": "magnificent",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Magnificently depicted animals is a descriptive aside at the very end of a long sentence whose difficulty is grammatical."
+  },
+  {
+    "input": "mainstream",
+    "lemma": "mainstream",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Outside the mainstream is common journalistic idiom and the blank asks for the subject that tells the student so."
+  },
+  {
+    "input": "manga",
+    "lemma": "manga",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Drawing horror manga names a genre that is internationally familiar, and the blank is the adjective about the speaker's self-understanding."
+  },
+  {
+    "input": "mangroves",
+    "lemma": "mangrove",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "The sentence defines it in apposition as salt-tolerant trees, and the blank falls after that gloss."
+  },
+  {
+    "input": "mannerisms",
+    "lemma": "mannerism",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "His awkward mannerisms is reachable from manner, and awkward already supplies the reason the assemblies laughed."
+  },
+  {
+    "input": "manuscript",
+    "lemma": "manuscript",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The blank describes the editor's comments; manuscript is the object at the end and is standard vocabulary in an academic register."
+  },
+  {
+    "input": "marathon",
+    "lemma": "marathon",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "An internationally known word, and the item is the noun for what one needs to finish one."
+  },
+  {
+    "input": "marshaled",
+    "lemma": "marshal",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "The blank is the noun the verb takes — my ..... of facts had been marshaled to support — and this sense of marshal is unreachable from the military noun.",
+    "gloss": "to gather and arrange facts or forces in good order"
+  },
+  {
+    "input": "masse",
+    "lemma": "en masse",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "The token is the second half of the borrowed phrase emigrate en masse, which closes the sentence far from the blank about new trade routes."
+  },
+  {
+    "input": "matchboxes",
+    "lemma": "matchbox",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "A transparent compound, and has collected matchboxes from all over the world hands the reader the collector the blank wants."
+  },
+  {
+    "input": "mathematical",
+    "lemma": "mathematical",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Mathematical is school vocabulary; the blank is the noun it modifies."
+  },
+  {
+    "input": "mattress",
+    "lemma": "mattress",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The sentence explains it as made of high-density foam and a surface to move on, and the question is the faulty someone is with clause."
+  },
+  {
+    "input": "mayfly",
+    "lemma": "mayfly",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Lasting from a few hours to a couple of days gives the blank its answer whether or not the reader knows the insect."
+  },
+  {
+    "input": "meal",
+    "lemma": "meal",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Take my meals in bed is elementary vocabulary and the blank is the adjective about comfort."
+  },
+  {
+    "input": "meanwhile",
+    "lemma": "meanwhile",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "A common connector opening the second sentence; the item is the noun for the situational reversal it sets up."
+  },
+  {
+    "input": "mechanics",
+    "lemma": "mechanics",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Quantum mechanics is a fixed phrase used as a comparison, and the blank is the clause about consciousness before it."
+  },
+  {
+    "input": "meditative",
+    "lemma": "meditative",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The missing connector marks the contrast between a meditative and calm Wordsworth and an uncontrolled Coleridge, so the word carries the comparison.",
+    "gloss": "given to deep, quiet thought"
+  },
+  {
+    "input": "mellifluous",
+    "lemma": "mellifluous",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "The singer's mellifluous voice is the only cue for what kept the audience in the state the blank names, and the word is opaque to a B2 reader.",
+    "gloss": "(of a voice or music) sweet and smooth to hear"
+  },
+  {
+    "input": "melts",
+    "lemma": "melt",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Slowly melts is elementary vocabulary sitting right beside the blank and effectively glossing it."
+  },
+  {
+    "input": "merely",
+    "lemma": "merely",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Not merely the average life span is standard academic phrasing well after the sentence-initial blank."
+  },
+  {
+    "input": "mess",
+    "lemma": "mess",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Look at the mess your thoughtlessness has got us into is everyday vocabulary and thoughtlessness already names the blank's quality."
+  },
+  {
+    "input": "metabolic",
+    "lemma": "metabolic",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The metabolic wastes of the corals is background to the blank about what the algae provide for their hosts, and metabolism is a widely borrowed word."
+  },
+  {
+    "input": "metalanguage",
+    "lemma": "metalanguage",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "A humanly-assigned metalanguage is the subject the whole sentence predicates of, but the term belongs to linguistics and indexing theory rather than general English.",
+    "gloss": "a language or set of terms used to describe another language or system",
+    "fieldCodes": [
+      "1110"
+    ]
+  },
+  {
+    "input": "meteorological",
+    "lemma": "meteorological",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Natural meteorological processes is anchored by climate change earlier in the sentence, and the blank is the adverb before capture."
+  },
+  {
+    "input": "methodology",
+    "lemma": "methodology",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Understood the methodology and arguments is routine academic vocabulary in a long sentence with no blank against it."
+  },
+  {
+    "input": "miasma",
+    "lemma": "miasma",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "The miasma of failure that hung in the locker room is the subject of the blank predicate, and the word is opaque without its metaphorical sense.",
+    "gloss": "an oppressive, pervading atmosphere or vapour"
+  },
+  {
+    "input": "mice",
+    "lemma": "mouse",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Rats, mice and monkeys is elementary vocabulary in the sentence preceding the blank."
+  },
+  {
+    "input": "midsized",
+    "lemma": "midsized",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 2,
+    "reason": "A transparent compound describing the firm in Cyprus; the item is the conditional verb form."
+  },
+  {
+    "input": "migrating",
+    "lemma": "migrate",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Began migrating northward is common vocabulary in a sentence whose question is the faulty the first humans had left Africa."
+  },
+  {
+    "input": "migration",
+    "lemma": "migration",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "The sentence defines the Latin source word itself, and immigration beside it makes the meaning plain."
+  },
+  {
+    "input": "mindset",
+    "lemma": "mindset",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "A shift in mindset is a transparent compound, explained by the that-clause about life being ever-changing."
+  },
+  {
+    "input": "misconceived",
+    "lemma": "misconceive",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "Misconceived laws is reachable through the familiar misconception, and the blank sits in the earlier clause beside intrusive."
+  },
+  {
+    "input": "misplaced",
+    "lemma": "misplace",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "Senseless and misplaced stands right against the blank, but mis- plus place is transparent and senseless carries most of the cue."
+  },
+  {
+    "input": "mistake",
+    "lemma": "mistake",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "They learn from their mistakes is elementary vocabulary; the blank is the sentence-initial connector."
+  },
+  {
+    "input": "misunderstandings",
+    "lemma": "misunderstanding",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Deeper misunderstandings about how language works is a transparent derivative of understand."
+  },
+  {
+    "input": "misuse",
+    "lemma": "misuse",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "The prevalence and sometimes misuse of cell phones is transparent from use, and the blank is the noun about attitudes to technology."
+  },
+  {
+    "input": "mnemonics",
+    "lemma": "mnemonic",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "Use mnemonics to help you ..... important items of information puts the blank directly in its scope, and the opaque spelling gives the reader nothing to infer from.",
+    "gloss": "a device or pattern that aids memory"
+  },
+  {
+    "input": "mold",
+    "lemma": "mold",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "Fit diverse values into a single mold is a familiar idiom, and single already signals the reductiveness the blank adjective names."
+  },
+  {
+    "input": "molecules",
+    "lemma": "molecule",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "A widely borrowed scientific word; the item is the comparison completing smaller and simpler than."
+  },
+  {
+    "input": "monarchy",
+    "lemma": "monarchy",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The reigning Stuart monarchy is glossed by reigning and sits at the far end of a long sentence whose blank is a connector."
+  },
+  {
+    "input": "monkey",
+    "lemma": "monkey",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Rats, mice and monkeys is elementary vocabulary in the sentence before the blank."
+  },
+  {
+    "input": "monolingual",
+    "lemma": "monolingual",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Monolingual nation-states is transparent from mono- and lingual, and the relative clause about foreign language skills spells it out."
+  },
+  {
+    "input": "monumental",
+    "lemma": "monumental",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "His monumental work stands as a testament to this linguistic ..... — the blank noun takes its scale directly from the adjective, whose figurative sense goes beyond monument.",
+    "gloss": "enormous in scale or importance"
+  },
+  {
+    "input": "mood",
+    "lemma": "mood",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "One's mood quickly perks up is common vocabulary and the item is the such/so correlative before a great city."
+  },
+  {
+    "input": "moot",
+    "lemma": "moot",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "Remains moot is the premise from which the blank adjective about resisting definitional closure follows, and the word offers no morphological clue.",
+    "gloss": "unsettled; open to argument"
+  },
+  {
+    "input": "morality",
+    "lemma": "morality",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Nature, man, and morality closes a list far from the blank, and the noun is transparent from moral."
+  },
+  {
+    "input": "morphology",
+    "lemma": "morphology",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The clause is about how morphology is made use of in a language, contrasted with analytic and synthetic — the technical vocabulary of linguistics, not general English.",
+    "gloss": "the study of word structure and the forms words take",
+    "fieldCodes": [
+      "1110"
+    ]
+  },
+  {
+    "input": "morsels",
+    "lemma": "morsel",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "Savor the morsels sits in the clause before the blank, which asks what the chocolate does as it slowly melts."
+  },
+  {
+    "input": "mortal",
+    "lemma": "mortal",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "He was a mortal is unpacked by nature was much more powerful than him, and the blank adjective describes the lesson rather than the word."
+  },
+  {
+    "input": "moth",
+    "lemma": "moth",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "The gypsy moth is named as a species and caterpillars later in the sentence identifies it; the blank is the relative clause about the virus."
+  },
+  {
+    "input": "motherland",
+    "lemma": "motherland",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "A transparent compound, and our country in the next sentence restates it exactly."
+  },
+  {
+    "input": "motives",
+    "lemma": "motive",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Political or commercial motives is transparent from the familiar motivation and parallels the amusement or instruction phrase beside it."
+  },
+  {
+    "input": "motorists",
+    "lemma": "motorist",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "A transparent agent noun from motor, fixed by park, streets and clogging its roads in the same sentence."
+  },
+  {
+    "input": "mountebank",
+    "lemma": "mountebank",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "The blank describes the car precisely because the salesman was a mountebank, and nothing but dashing flattery hints at the meaning.",
+    "gloss": "a swindler or charlatan who wins trust by showy talk"
+  },
+  {
+    "input": "mug",
+    "lemma": "mug",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Her mug of cocoa is everyday vocabulary illustrating the exhaustion the blank names."
+  },
+  {
+    "input": "multiply",
+    "lemma": "multiply",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Let our numbers multiply unchecked uses a school word in the second sentence, away from the blank about the need of the hour."
+  },
+  {
+    "input": "municipality",
+    "lemma": "municipality",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "The sentence already says municipal management team, so the noun is recoverable from its own context."
+  },
+  {
+    "input": "muscular",
+    "lemma": "muscular",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Muscular dystrophy is a transparent derivative of muscle, and the question is the faulty someone is with construction."
+  }
+]

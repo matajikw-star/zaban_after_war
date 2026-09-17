@@ -5,6 +5,7 @@
   "occurrences": [
     {
       "isAnswer": false,
+      "occurrenceType": "tested",
       "optionIndex": 1,
       "paperId": "arshad-1398-p05",
       "part": "vocabulary",
@@ -12,6 +13,15 @@
       "reach": 1,
       "surface": "histroinic",
       "year": 1398
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p08",
+      "part": "grammar",
+      "questionNo": 9,
+      "reach": 1,
+      "surface": "histrionics",
+      "year": 1399
     }
   ],
   "pos": [],
@@ -25,11 +35,13 @@
     "lastYear": 1398,
     "priority": 3,
     "timesAsAnswer": 0,
+    "timesAsContext": 1,
     "timesAsDistractor": 1,
     "timesTested": 1
   },
   "status": "draft",
   "surfaceForms": [
+    "histrionics",
     "histroinic"
   ],
   "synonyms": [],

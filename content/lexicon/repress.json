@@ -1,0 +1,35 @@
+{
+  "examples": [],
+  "id": "repress",
+  "lemma": "repress",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p11",
+      "part": "grammar",
+      "questionNo": 7,
+      "reach": 1,
+      "surface": "repress",
+      "year": 1400
+    }
+  ],
+  "pos": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "repress"
+  ],
+  "synonyms": [],
+  "translations": []
+}

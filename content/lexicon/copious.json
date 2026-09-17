@@ -1,0 +1,119 @@
+{
+  "confusables": [
+    {
+      "note": "در گزینه‌های همین آزمون آمده است؛ یعنی غلیظ و چسبناک، نه فراوان.",
+      "word": "viscous"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "copious",
+  "lemma": "copious",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p08",
+      "part": "vocabulary",
+      "questionNo": 19,
+      "reach": 1,
+      "surface": "copiously",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p07",
+      "part": "vocabulary",
+      "questionNo": 22,
+      "reach": 1,
+      "surface": "copious",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p05",
+      "part": "vocabulary",
+      "questionNo": 11,
+      "reach": 1,
+      "surface": "copious",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "scanty",
+        "meager"
+      ],
+      "definition": "produced or existing in large amounts",
+      "examples": [
+        {
+          "en": "The student took copious notes during the two-hour lecture.",
+          "fa": "دانشجو در طول سخنرانی دوساعته یادداشت‌های فراوانی برداشت."
+        }
+      ],
+      "ipa": "/ˈkəʊpiəs/",
+      "pos": "adj",
+      "synonyms": [
+        "abundant",
+        "plentiful",
+        "ample"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p08",
+          "questionNo": 19
+        },
+        {
+          "paperId": "arshad-1399-p07",
+          "questionNo": 22
+        },
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 11
+        }
+      ],
+      "translations": [
+        "فراوان",
+        "پرشمار",
+        "سرشار"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1398": 1,
+      "1399": 1,
+      "1400": 1
+    },
+    "distinctYears": 3,
+    "firstYear": 1398,
+    "lastYear": 1400,
+    "priority": 11,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "copious",
+    "copiously"
+  ]
+}

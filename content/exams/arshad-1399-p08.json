@@ -1,0 +1,885 @@
+{
+  "paperId": "arshad-1399-p08",
+  "degree": "arshad",
+  "year": 1399,
+  "groupCodes": [
+    "1121"
+  ],
+  "bookletCount": 1,
+  "source": {
+    "file": "1121-1399.pdf",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "extractedBy": {
+    "model": "claude-sonnet-5",
+    "at": "2026-09-15"
+  },
+  "questions": [
+    {
+      "no": 1,
+      "part": "grammar",
+      "stem": "Scott hasn't heard the committee's response to his proposal yet, but he thinks he sowed ..... .",
+      "options": [
+        "on fertile ground the seed of idea",
+        "the idea's seed in the fertile ground",
+        "on the fertile ground the idea's seed",
+        "the seed of the idea on fertile ground"
+      ],
+      "optionLemmas": [
+        "seed",
+        "seed",
+        "seed",
+        "seed"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "seed",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "grammar",
+      "stem": "The miasma of failure that hung in the locker room after the boys lost the football game was ..... without launching into a pep talk.",
+      "options": [
+        "too much for the coach to bear",
+        "so much as to bear for the coach",
+        "as much for the coach to bear as",
+        "for the coach as much to bear so"
+      ],
+      "optionLemmas": [
+        "bear",
+        "bear",
+        "bear",
+        "bear"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "bear",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "grammar",
+      "stem": "The most famous Shakespearean soliloquy is probably ..... the words, \"To be or not to be, that is the question.\"",
+      "options": [
+        "with Hamlet's speech to begin",
+        "Hamlet's speech beginning with",
+        "begun with the Hamlet's speech of",
+        "the speech by Hamlet having begun"
+      ],
+      "optionLemmas": [
+        "speech",
+        "speech",
+        "speech",
+        "speech"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "speech",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "grammar",
+      "stem": "After a day of gardening without gloves, Emilia rubbed a special emollient ..... the blisters and chafes on her fingers.",
+      "options": [
+        "she purchased online over her hands to ease",
+        "on her hands she purchased online and eased",
+        "which she purchased online to ease over her hands",
+        "on her hands which she had purchased online for the ease of"
+      ],
+      "optionLemmas": [
+        "purchase",
+        "purchase",
+        "purchase",
+        "purchase"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "purchase",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "grammar",
+      "stem": "Knowing their parents would forbid their union, ....., who saw in their love the possibility of ending the age-old feud between the Capulets and the Montagues.",
+      "options": [
+        "Romeo and Juliet were arranged by Friar Lawrence the clandestine marriage",
+        "Friar Lawrence arranged between Romeo and Juliet clandestine marriage",
+        "Friar Lawrence arranged Romeo's and Juliet's a clandestine marriage",
+        "Romeo and Juliet arranged a clandestine marriage by Friar Lawrence"
+      ],
+      "optionLemmas": [
+        "arrange",
+        "arrange",
+        "arrange",
+        "arrange"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "arrange",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "grammar",
+      "stem": "The gray sky and cold wind fed into Annette's sense of ennui, and warm gloves and umbrella she had planned ..... .",
+      "options": [
+        "that afternoon remained on the shelves of the store for her to purchase",
+        "remained on the shelves of the store she purchased that afternoon",
+        "to purchase that afternoon remained on the shelves of the store",
+        "to remain on the shelves of the store to purchase that afternoon"
+      ],
+      "optionLemmas": [
+        "remain",
+        "remain",
+        "remain",
+        "remain"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "remain",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "grammar",
+      "stem": "Driving cross-country together, Grace and Emily kept up a non-stop, animated conversation about childhood, books, men, cats, careers, and life in general; the exchange became flaccid only when ..... .",
+      "options": [
+        "physical fatigue set in",
+        "set in physical fatigue",
+        "did set in physical fatigue",
+        "did physical fatigue set in"
+      ],
+      "optionLemmas": [
+        "set in",
+        "set in",
+        "set in",
+        "set in"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "set in",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "Ralph has always longed to be a dictator, but his awkward mannerisms caused assemblies to laugh at his brutal, fascist harangues rather than ..... .",
+      "options": [
+        "for them to frighten",
+        "their being frightened",
+        "be frightened by them",
+        "to be frightened by them"
+      ],
+      "optionLemmas": [
+        "frighten",
+        "frighten",
+        "frighten",
+        "frighten"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "frighten",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "grammar",
+      "stem": "Indulging in histrionics in the workplace is never a good idea; tears or yelling ..... the respect of a boss or coworkers.",
+      "options": [
+        "will likely win",
+        "isn't likely to win",
+        "are likely that they",
+        "aren't likely to win"
+      ],
+      "optionLemmas": [
+        "win",
+        "win",
+        "likely",
+        "win"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "win",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "grammar",
+      "stem": "The hikers climbed steadily in near darkness for over an hour, reaching the apex of the hill just in time ..... .",
+      "options": [
+        "then awarded by the beautiful sunrise",
+        "to be rewarded by the beautiful sunrise",
+        "with the beautiful sunrise awarding them",
+        "for the award by the beautiful sunrise toward them"
+      ],
+      "optionLemmas": [
+        "award",
+        "reward",
+        "award",
+        "award"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "reward",
+      "uncertain": []
+    },
+    {
+      "no": 11,
+      "part": "vocabulary",
+      "stem": "When she is nervous, the singer's stomach always feels like a ..... mass of tangled nerves.",
+      "options": [
+        "cadaverous",
+        "cavalier",
+        "disentangled",
+        "knotty"
+      ],
+      "optionLemmas": [
+        "cadaverous",
+        "cavalier",
+        "disentangle",
+        "knotty"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "knotty",
+      "uncertain": []
+    },
+    {
+      "no": 12,
+      "part": "vocabulary",
+      "stem": "When the editor realized the article did nothing but ..... the facts about the trial, he made a hasty decision to replace the piece with an article that was more authentic.",
+      "options": [
+        "cede",
+        "evince",
+        "belie",
+        "devolve"
+      ],
+      "optionLemmas": [
+        "cede",
+        "evince",
+        "belie",
+        "devolve"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "belie",
+      "uncertain": []
+    },
+    {
+      "no": 13,
+      "part": "vocabulary",
+      "stem": "While most teaching is done to children that are often students of a school, with ..... the students are adult learners.",
+      "options": [
+        "pedagogy",
+        "anagogy",
+        "demagogy",
+        "andragogy"
+      ],
+      "optionLemmas": [
+        "pedagogy",
+        "anagogy",
+        "demagogy",
+        "andragogy"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "andragogy",
+      "uncertain": []
+    },
+    {
+      "no": 14,
+      "part": "vocabulary",
+      "stem": "When the parent required her 10-year old to say something nice to the mean neighbor, the child simply uttered a/an ..... to appease her parent.",
+      "options": [
+        "epithet",
+        "invective",
+        "flummery",
+        "gesticulation"
+      ],
+      "optionLemmas": [
+        "epithet",
+        "invective",
+        "flummery",
+        "gesticulation"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "flummery",
+      "uncertain": []
+    },
+    {
+      "no": 15,
+      "part": "vocabulary",
+      "stem": "Trainers explained that when facing a robber, store clerks should give into demands and never ..... to release the money.",
+      "options": [
+        "kneel",
+        "decline",
+        "accede",
+        "glare"
+      ],
+      "optionLemmas": [
+        "kneel",
+        "decline",
+        "accede",
+        "glare"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "decline",
+      "uncertain": []
+    },
+    {
+      "no": 16,
+      "part": "vocabulary",
+      "stem": "Everyone seemed to have a specific role except me. I felt like a fifth ..... .",
+      "options": [
+        "wheel",
+        "screw",
+        "valve",
+        "bolt"
+      ],
+      "optionLemmas": [
+        "wheel",
+        "screw",
+        "valve",
+        "bolt"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "wheel",
+      "uncertain": []
+    },
+    {
+      "no": 17,
+      "part": "vocabulary",
+      "stem": "Using an ingratiating story to win the sympathy of those who stopped to listen, the beggars ..... at their feet for money.",
+      "options": [
+        "fixated",
+        "snarled",
+        "drooped",
+        "groveled"
+      ],
+      "optionLemmas": [
+        "fixate",
+        "snarl",
+        "droop",
+        "grovel"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "grovel",
+      "uncertain": []
+    },
+    {
+      "no": 18,
+      "part": "vocabulary",
+      "stem": "While the author created exciting plots, his characters were usually written in such ..... terms that his stories were not appropriate for young people.",
+      "options": [
+        "elocutionary",
+        "outright",
+        "unimpeachable",
+        "lurid"
+      ],
+      "optionLemmas": [
+        "elocutionary",
+        "outright",
+        "unimpeachable",
+        "lurid"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "lurid",
+      "uncertain": []
+    },
+    {
+      "no": 19,
+      "part": "vocabulary",
+      "stem": "Professor Weiss told a familiar tale: although my paper was chock-full of information and even interesting ideas, there was no argumentative structure, no thesis that my ..... of facts had been marshaled to support.",
+      "options": [
+        "iota",
+        "congruity",
+        "litany",
+        "withdrawal"
+      ],
+      "optionLemmas": [
+        "iota",
+        "congruity",
+        "litany",
+        "withdrawal"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "litany",
+      "uncertain": []
+    },
+    {
+      "no": 20,
+      "part": "vocabulary",
+      "stem": "They wanted to ..... the thief for stealing cars on the same day he was arrested.",
+      "options": [
+        "induct",
+        "arraign",
+        "mete out",
+        "reimburse"
+      ],
+      "optionLemmas": [
+        "induct",
+        "arraign",
+        "mete",
+        "reimburse"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "arraign",
+      "uncertain": []
+    },
+    {
+      "no": 21,
+      "part": "vocabulary",
+      "stem": "When the patient got on the table, he was asked by the nurse to assume a ..... posture so the doctor could look at the rash on his stomach.",
+      "options": [
+        "supine",
+        "slouched",
+        "posterior",
+        "arabesque"
+      ],
+      "optionLemmas": [
+        "supine",
+        "slouch",
+        "posterior",
+        "arabesque"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "supine",
+      "uncertain": []
+    },
+    {
+      "no": 22,
+      "part": "vocabulary",
+      "stem": "Nobody, least of all humans themselves, had any ..... that their descendants would one day walk on the moon, split the atom, fathom the genetic code and write history books.",
+      "options": [
+        "inkling",
+        "ingenuity",
+        "peregrination",
+        "skullduggery"
+      ],
+      "optionLemmas": [
+        "inkling",
+        "ingenuity",
+        "peregrination",
+        "skullduggery"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "inkling",
+      "uncertain": []
+    },
+    {
+      "no": 23,
+      "part": "vocabulary",
+      "stem": "One of the most common uses of early stone tools was to ..... open bones in order to get to the marrow.",
+      "options": [
+        "hurl",
+        "crack",
+        "incise",
+        "exert"
+      ],
+      "optionLemmas": [
+        "hurl",
+        "crack",
+        "incise",
+        "exert"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "crack",
+      "uncertain": []
+    },
+    {
+      "no": 24,
+      "part": "vocabulary",
+      "stem": "A reliance on artefacts will thus bias an account of ancient hunter-gatherer life. One way to remedy this is to look at modern forager societies. These can be studied directly, by anthropological observation. But there are good reasons to be very careful in ..... from modern forager societies to ancient ones.",
+      "options": [
+        "probing",
+        "reverting",
+        "denoting",
+        "extrapolating"
+      ],
+      "optionLemmas": [
+        "probe",
+        "revert",
+        "denote",
+        "extrapolate"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "extrapolate",
+      "uncertain": []
+    },
+    {
+      "no": 25,
+      "part": "vocabulary",
+      "stem": "Joan needs to take her ..... attitude elsewhere and realize that she is not queen of the world.",
+      "options": [
+        "fickle",
+        "puerile",
+        "protean",
+        "condescending"
+      ],
+      "optionLemmas": [
+        "fickle",
+        "puerile",
+        "protean",
+        "condescend"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "condescend",
+      "uncertain": []
+    },
+    {
+      "no": 26,
+      "part": "vocabulary",
+      "stem": "The phrase \"sibling rivalry\" is hardly adequate to describe the ..... between J R and Colin, whose interaction consists of almost nonstop sniping, undermining and other forms of verbal abuse.",
+      "options": [
+        "frenzy",
+        "bulwark",
+        "animus",
+        "oscillation"
+      ],
+      "optionLemmas": [
+        "frenzy",
+        "bulwark",
+        "animus",
+        "oscillation"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "animus",
+      "uncertain": []
+    },
+    {
+      "no": 27,
+      "part": "vocabulary",
+      "stem": "At the trial, the general, accused of genocide, contended he did not ..... the murder of the civilians and thus pleaded not guilty.",
+      "options": [
+        "besmirch",
+        "sanction",
+        "inculpate",
+        "brag about"
+      ],
+      "optionLemmas": [
+        "besmirch",
+        "sanction",
+        "inculpate",
+        "brag"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "sanction",
+      "uncertain": []
+    },
+    {
+      "no": 28,
+      "part": "vocabulary",
+      "stem": "It seemed that the plane was going to swoop down and ..... the town, so we dived for cover.",
+      "options": [
+        "strafe",
+        "fritter away",
+        "recoil at",
+        "billow"
+      ],
+      "optionLemmas": [
+        "strafe",
+        "fritter",
+        "recoil",
+        "billow"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "strafe",
+      "uncertain": []
+    },
+    {
+      "no": 29,
+      "part": "vocabulary",
+      "stem": "The local union is a ..... organization that lacks the power to negotiate higher wages for its members.",
+      "options": [
+        "portly",
+        "gossamer",
+        "wizardly",
+        "flaccid"
+      ],
+      "optionLemmas": [
+        "portly",
+        "gossamer",
+        "wizardly",
+        "flaccid"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "flaccid",
+      "uncertain": []
+    },
+    {
+      "no": 30,
+      "part": "vocabulary",
+      "stem": "During the funeral procession, the hearse was ..... with the deceased's favorite flowers.",
+      "options": [
+        "dispelled",
+        "disseminated",
+        "palpated",
+        "festooned"
+      ],
+      "optionLemmas": [
+        "dispel",
+        "disseminate",
+        "palpate",
+        "festoon"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "festoon",
+      "uncertain": []
+    },
+    {
+      "no": 31,
+      "part": "cloze",
+      "stem": "Most of us are a little fuzzy on how we learned to read, much as we cannot ..... anything special about learning to talk.",
+      "options": [
+        "operate",
+        "recall",
+        "recant",
+        "concede"
+      ],
+      "optionLemmas": [
+        "operate",
+        "recall",
+        "recant",
+        "concede"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "recall",
+      "uncertain": []
+    },
+    {
+      "no": 32,
+      "part": "cloze",
+      "stem": "Although these skills are related, the ways we acquire them differ ..... .",
+      "options": [
+        "iconoclastically",
+        "extrinsically",
+        "deferentially",
+        "profoundly"
+      ],
+      "optionLemmas": [
+        "iconoclastic",
+        "extrinsic",
+        "deferential",
+        "profound"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "profound",
+      "uncertain": []
+    },
+    {
+      "no": 33,
+      "part": "grammar",
+      "stem": "Reading this page ..... should bring back some of the struggles of early childhood, when working through even a simple passage was a (34) ..... .",
+      "options": [
+        "and turning upside down the magazine",
+        "with the magazine turned upside down",
+        "of the magazine that turned upside down",
+        "to turn upside down with the magazine"
+      ],
+      "optionLemmas": [
+        "turn",
+        "turn",
+        "turn",
+        "turn"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "turn",
+      "uncertain": []
+    },
+    {
+      "no": 34,
+      "part": "cloze",
+      "stem": "Reading this page (33) ..... should bring back some of the struggles of early childhood, when working through even a simple passage was a ..... .",
+      "options": [
+        "forte",
+        "slog",
+        "debut",
+        "blemish"
+      ],
+      "optionLemmas": [
+        "forte",
+        "slog",
+        "debut",
+        "blemish"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "slog",
+      "uncertain": []
+    },
+    {
+      "no": 35,
+      "part": "grammar",
+      "stem": "Well aware of the difficulties, educators ..... how they can best help children learn to read.",
+      "options": [
+        "to give thought a great deal of",
+        "have given a great deal of thought to",
+        "give a great deal of thinking about",
+        "are given a great deal for thinking over"
+      ],
+      "optionLemmas": [
+        "give",
+        "give",
+        "give",
+        "give"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "give",
+      "uncertain": []
+    },
+    {
+      "no": 36,
+      "part": "grammar",
+      "stem": "No single method has triumphed. Indeed, heated arguments about the most appropriate form ..... continue to polarize the teaching community.",
+      "options": [
+        "of reading instruction",
+        "to read and instruct",
+        "instructing to read",
+        "for the instruction of the reading"
+      ],
+      "optionLemmas": [
+        "instruct",
+        "instruct",
+        "instruct",
+        "instruct"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "instruct",
+      "uncertain": []
+    },
+    {
+      "no": 37,
+      "part": "cloze",
+      "stem": "To help bridge the gap between the scholars and forge a ....., we recently came together to review the voluminous research on the mental processing that underlies skilled reading and on how reading should be taught.",
+      "options": [
+        "novelty",
+        "consort",
+        "consensus",
+        "jurisprudence"
+      ],
+      "optionLemmas": [
+        "novelty",
+        "consort",
+        "consensus",
+        "jurisprudence"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "consensus",
+      "uncertain": []
+    },
+    {
+      "no": 38,
+      "part": "grammar",
+      "stem": "The results ..... may disturb some parents.",
+      "options": [
+        "point strongly in directions that",
+        "point in directions strongly that",
+        "in directions strongly point that",
+        "strongly point that the directions"
+      ],
+      "optionLemmas": [
+        "point",
+        "point",
+        "point",
+        "point"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "point",
+      "uncertain": []
+    },
+    {
+      "no": 39,
+      "part": "cloze",
+      "stem": "In one, called whole-word instruction (also known as the \"looksay\" method), children learn by rote how to ..... at a glance a vocabulary of 50 to 100 words.",
+      "options": [
+        "portend",
+        "aver",
+        "recognize",
+        "hamstring"
+      ],
+      "optionLemmas": [
+        "portend",
+        "aver",
+        "recognize",
+        "hamstring"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "recognize",
+      "uncertain": []
+    }
+  ],
+  "uncertain": [
+    "q40: the passage contains a blank numbered (40) whose four options are printed on a page outside this image set; not transcribed."
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "perk",
+  "lemma": "perk",
+  "level": null,
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1403-p04",
+      "part": "grammar",
+      "questionNo": 1,
+      "reach": 1,
+      "surface": "perks",
+      "year": 1403
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1401-p05",
+      "part": "vocabulary",
+      "questionNo": 12,
+      "reach": 1,
+      "surface": "perk",
+      "year": 1401
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 2,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "perk",
+    "perks"
+  ]
+}

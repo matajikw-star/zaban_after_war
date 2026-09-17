@@ -1,0 +1,90 @@
+{
+  "confusables": [
+    {
+      "note": "presumptuous یعنی گستاخ و پررو؛ با وجود شباهت املایی هیچ ربطی به مجلل بودن ندارد.",
+      "word": "presumptuous"
+    },
+    {
+      "note": "scrumptious یعنی بسیار خوشمزه، نه مجلل و پرزرق‌وبرق.",
+      "word": "scrumptious"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "sumptuous",
+  "lemma": "sumptuous",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p09",
+      "part": "vocabulary",
+      "questionNo": 23,
+      "reach": 1,
+      "surface": "sumptuous",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "plain",
+        "austere"
+      ],
+      "definition": "very expensive and impressive, in a way that shows luxury",
+      "examples": [
+        {
+          "en": "They were served a sumptuous dinner in the great hall.",
+          "fa": "در تالار بزرگ شامی مجلل برایشان سرو شد."
+        }
+      ],
+      "ipa": "/ˈsʌmptʃuəs/",
+      "pos": "adj",
+      "synonyms": [
+        "lavish",
+        "opulent",
+        "luxurious"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 23
+        }
+      ],
+      "translations": [
+        "مجلل",
+        "پرزرق‌وبرق",
+        "شاهانه"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "sumptuous"
+  ]
+}

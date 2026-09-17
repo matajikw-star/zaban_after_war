@@ -1,0 +1,111 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "obsolete",
+  "lemma": "obsolete",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 20,
+      "surface": "obsolete",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 9,
+      "surface": "obsolete",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "obsolete",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "current",
+        "up-to-date"
+      ],
+      "definition": "no longer used or needed, because something newer and better has replaced it",
+      "examples": [
+        {
+          "en": "Video tapes became obsolete once cheap digital storage arrived.",
+          "fa": "نوارهای ویدئویی با آمدن حافظهٔ دیجیتال ارزان منسوخ شدند."
+        }
+      ],
+      "ipa": "/ˈɒbsəliːt/",
+      "pos": "adj",
+      "synonyms": [
+        "outdated",
+        "outmoded",
+        "antiquated"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "منسوخ",
+        "از رده خارج",
+        "کهنه و بی‌استفاده"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 3
+    },
+    "byYear": {
+      "1399": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 11,
+    "timesAsAnswer": 3,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "obsolete"
+  ]
+}

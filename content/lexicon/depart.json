@@ -1,0 +1,111 @@
+{
+  "confusables": [
+    {
+      "note": "شباهت ظاهری؛ deport یعنی اخراج کردن کسی از یک کشور",
+      "word": "deport"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "depart",
+  "lemma": "depart",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1405-p04",
+      "part": "vocabulary",
+      "questionNo": 11,
+      "reach": 1,
+      "surface": "departed",
+      "year": 1405
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "conform",
+        "follow"
+      ],
+      "definition": "in the phrase \"depart from\": to behave or be different from what is usual, expected or agreed",
+      "examples": [
+        {
+          "en": "The new director departed sharply from the methods of her predecessor.",
+          "fa": "مدیر جدید به‌شدت از روش‌های مدیر پیشین فاصله گرفت."
+        }
+      ],
+      "ipa": "/dɪˈpɑːt/",
+      "pos": "v",
+      "synonyms": [
+        "deviate",
+        "diverge",
+        "stray"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p04",
+          "questionNo": 11
+        }
+      ],
+      "translations": [
+        "فاصله گرفتن از",
+        "منحرف شدن از",
+        "عدول کردن"
+      ]
+    },
+    {
+      "antonyms": [
+        "arrive",
+        "return"
+      ],
+      "definition": "to leave a place, especially at the start of a journey",
+      "examples": [
+        {
+          "en": "The train departs from platform six at a quarter past seven.",
+          "fa": "قطار ساعت هفت و ربع از سکوی شش حرکت می‌کند."
+        }
+      ],
+      "ipa": "/dɪˈpɑːt/",
+      "pos": "v",
+      "synonyms": [
+        "leave",
+        "set off"
+      ],
+      "testedIn": [],
+      "translations": [
+        "عزیمت کردن",
+        "حرکت کردن",
+        "ترک کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1405": 1
+    },
+    "byYear": {
+      "1405": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1405,
+    "lastYear": 1405,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "departed"
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "paperId": "arshad-1404-p04",
+  "degree": "arshad",
+  "year": 1404,
+  "groupCodes": ["1110"],
+  "bookletCount": 1,
+  "source": { "file": "1110-1404.pdf", "pages": [2, 3] },
+  "extractedBy": { "model": "claude-sonnet-5", "at": "2026-09-14" },
+  "questions": [
+    {
+      "no": 1,
+      "part": "grammar",
+      "stem": "Radical empiricism of the Quine-Kuhn variety starts at such an early stage in the process of sensory cognition ..... no effective limit on the range of interpretations that can lay equal claim to empirical warrant.",
+      "options": ["that it places", "which it places", "and placing", "to placing"],
+      "optionLemmas": ["place", "place", "place", "place"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "place",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "grammar",
+      "stem": "\"Grammar\" is the system that relates sound to meaning; it can include syntactic tools, ..... : less complex grammars may be direct mappings of sound to meaning, without syntactic intervention.",
+      "options": ["however it needs not", "despite it does not need", "but it need not", "do not need though"],
+      "optionLemmas": ["need", "need", "need", "need"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "need",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "grammar",
+      "stem": "Language may be characterized as a form that proceeds ..... place within it.",
+      "options": ["setting conditions for the speech which to take", "and sets conditions for the speech that takes", "and to set conditions for the speech taking", "setting conditions for the speech is taken"],
+      "optionLemmas": ["set", "set", "set", "set"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "set",
+      "uncertain": ["q3: correct option is ambiguous among options 2 and 3; picked option 2 as most grammatical"]
+    },
+    {
+      "no": 4,
+      "part": "grammar",
+      "stem": "This continuum concept, which originates with the Greeks, ..... still widely held today by many people.",
+      "options": [
+        "seemingly corresponds very much with lay linguistic assumptions which",
+        "seemingly corresponds very much to lie linguistic assumptions",
+        "seems to correspond very much which lie in linguistic assumptions",
+        "seems to correspond very much to lay linguistic assumptions which are"
+      ],
+      "optionLemmas": ["correspond", "correspond", "correspond", "correspond"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "correspond",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "grammar",
+      "stem": "Like every other notion, that of belonging is not a natural idea with which all of us come into the world but one constructed socially, and therefore ultimate historical.",
+      "options": ["every other", "idea with which", "but one", "ultimate historical"],
+      "optionLemmas": ["other", "idea", "one", "historical"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "ultimately",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "grammar",
+      "stem": "As Jameson points out, their dismissal of the problem is itself an indication of the extent of their thinking is dominated by their basic assumption that languages must be fixed codes.",
+      "options": ["As Jameson points out", "the extent of", "dominated by", "languages must be fixed"],
+      "optionLemmas": ["point out", "extent", "dominate", "fix"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "extent",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "grammar",
+      "stem": "In his famous review of 1923, Bloomfield does not even mention, lets alone comment on, Saussure's position on dialects.",
+      "options": ["review of 1923", "not even mention", "lets alone", "position on dialects"],
+      "optionLemmas": ["review", "mention", "let alone", "position"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "let alone",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "vocabulary",
+      "stem": "When signifier and signified are joined together, they produce a sign which is of a positive order, and ..... rather than abstract.",
+      "options": ["haphazard", "ominous", "concrete", "relevant"],
+      "optionLemmas": ["haphazard", "ominous", "concrete", "relevant"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "concrete",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "vocabulary",
+      "stem": "Roger Chartier is a well-informed historian who has a talent for rapid and incisive summary and a gift for ..... weak points in any argument.",
+      "options": ["zeroing in on", "zoning out", "putting off", "bailing out of"],
+      "optionLemmas": ["zero in on", "zone out", "put off", "bail out of"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "zero in on",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "vocabulary",
+      "stem": "Merleau-Ponty held that meaning is sedimented in the institution of language, which limits and ..... the speaking subject by being utterly \"other\" and outside the subject.",
+      "options": ["strives", "contemplates", "derives", "constrains"],
+      "optionLemmas": ["strive", "contemplate", "derive", "constrain"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "constrain",
+      "uncertain": []
+    },
+    {
+      "no": 11,
+      "part": "vocabulary",
+      "stem": "Part of the ..... of sign theory for Saussure is that it offered a solution to problems he saw with the ordinary conception of language as consisting of words and their meanings.",
+      "options": ["appeal", "resolution", "alienation", "remainder"],
+      "optionLemmas": ["appeal", "resolution", "alienation", "remainder"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "appeal",
+      "uncertain": []
+    },
+    {
+      "no": 12,
+      "part": "vocabulary",
+      "stem": "While one might ..... over the amount of attention that he accords the neo-Nazi organizations, William Tucker is surely to be commended for insisting that the production of scientific knowledge cannot be wholly separated from its uses.",
+      "options": ["galvanize", "quibble", "oscillate", "pester"],
+      "optionLemmas": ["galvanize", "quibble", "oscillate", "pester"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "quibble",
+      "uncertain": []
+    },
+    {
+      "no": 13,
+      "part": "vocabulary",
+      "stem": "The question of linguistic innovation tends to get short ..... in Saussure because he did not consider this part of the linguistic enterprise.",
+      "options": ["concentration", "shrift", "attentiveness", "brim"],
+      "optionLemmas": ["concentration", "shrift", "attentiveness", "brim"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "shrift",
+      "uncertain": []
+    },
+    {
+      "no": 14,
+      "part": "vocabulary",
+      "stem": "Despite their failure, old theoretical schools have bequeathed us a curious ..... of prescriptions and proscriptions about how we should and should not speak and a deep-seated mistrust that everyday speaking is not \"correct\" or \"grammatical\".",
+      "options": ["detritus", "serendipity", "ostracism", "mollification"],
+      "optionLemmas": ["detritus", "serendipity", "ostracism", "mollification"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "detritus",
+      "uncertain": []
+    }
+  ],
+  "uncertain": [
+    "This paper's actual structure is PART A: Structure, PART B: Written Expression, PART C: Vocabulary, not the Vocabulary/Cloze/Reading layout assumed for routing. No cloze test and no reading passage appear on pages 2-3; Part C here is vocabulary, not reading, so it was transcribed in full rather than skipped.",
+    "q3: correct option chosen with low confidence; the sentence's intended parallel structure could not be fully verified."
+  ]
+}

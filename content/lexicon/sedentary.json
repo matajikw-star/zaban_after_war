@@ -1,0 +1,85 @@
+{
+  "confusables": [
+    {
+      "note": "sedimentary در زمین‌شناسی یعنی رسوبی و ربطی به کم‌تحرکی ندارد",
+      "word": "sedimentary"
+    }
+  ],
+  "homograph": {
+    "note": "",
+    "suspected": false
+  },
+  "id": "sedentary",
+  "lemma": "sedentary",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p08",
+      "part": "vocabulary",
+      "questionNo": 22,
+      "reach": 1,
+      "surface": "sedentary",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "active",
+        "mobile"
+      ],
+      "definition": "involving a lot of sitting and very little physical movement",
+      "examples": [
+        {
+          "en": "Many office workers lead a sedentary life during the week.",
+          "fa": "بسیاری از کارمندان اداری در طول هفته زندگی کم‌تحرکی دارند."
+        }
+      ],
+      "ipa": "/ˈsedntri/",
+      "pos": "adj",
+      "synonyms": [
+        "inactive",
+        "desk-bound"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p08",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "کم‌تحرک",
+        "بی‌تحرک",
+        "نشسته"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "sedentary"
+  ]
+}

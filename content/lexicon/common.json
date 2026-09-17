@@ -1,0 +1,106 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "common",
+  "lemma": "common",
+  "level": "A2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p07",
+      "part": "cloze",
+      "questionNo": 185,
+      "reach": 1,
+      "surface": "common",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "rare",
+        "unusual"
+      ],
+      "definition": "happening often, or found in large numbers, so that it is not unusual",
+      "examples": [
+        {
+          "en": "Heavy traffic is common in this city on Thursday afternoons.",
+          "fa": "ترافیک سنگین در این شهر عصرهای پنجشنبه رایج است."
+        }
+      ],
+      "ipa": "/ˈkɒmən/",
+      "pos": "adj",
+      "synonyms": [
+        "frequent",
+        "widespread",
+        "ordinary"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 185
+        }
+      ],
+      "translations": [
+        "رایج",
+        "معمول",
+        "متداول"
+      ]
+    },
+    {
+      "antonyms": [
+        "individual",
+        "separate"
+      ],
+      "definition": "shared by two or more people, groups or things",
+      "examples": [
+        {
+          "en": "The two countries share a common border and a common language.",
+          "fa": "آن دو کشور مرزی مشترک و زبانی مشترک دارند."
+        }
+      ],
+      "ipa": "/ˈkɒmən/",
+      "pos": "adj",
+      "synonyms": [
+        "shared",
+        "mutual",
+        "joint"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مشترک",
+        "همگانی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "common"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "confusables": [
+    {
+      "note": "dictum یعنی گفته یا اصلِ کوتاه و قصار، نه فرمان رسمیِ یک مقام یا حکومت",
+      "word": "dictum"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "edict",
+  "lemma": "edict",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p09",
+      "part": "vocabulary",
+      "questionNo": 21,
+      "reach": 1,
+      "surface": "edict",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "an official order issued by a person or body that holds power",
+      "examples": [
+        {
+          "en": "A royal edict closed every theatre in the city for a year.",
+          "fa": "فرمانی سلطنتی همه‌ی تئاترهای شهر را برای یک سال تعطیل کرد."
+        }
+      ],
+      "ipa": "/ˈiːdɪkt/",
+      "pos": "n",
+      "synonyms": [
+        "decree",
+        "proclamation"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 21
+        }
+      ],
+      "translations": [
+        "فرمان",
+        "حکم رسمی",
+        "بخشنامه"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "edict"
+  ]
+}

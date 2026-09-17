@@ -1,0 +1,98 @@
+{
+  "confusables": [
+    {
+      "note": "املای بسیار نزدیک؛ electric یعنی برقی و ربطی به «التقاطی» ندارد",
+      "word": "electric"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "eclectic",
+  "lemma": "eclectic",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 12,
+      "surface": "eclectic",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 10,
+      "surface": "eclectic",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "uniform",
+        "narrow"
+      ],
+      "definition": "made up of things chosen from many different sources, styles or ideas",
+      "examples": [
+        {
+          "en": "Her bookshelf shows an eclectic taste, from poetry to physics.",
+          "fa": "قفسهٔ کتاب‌هایش سلیقه‌ای التقاطی را نشان می‌دهد، از شعر تا فیزیک."
+        }
+      ],
+      "ipa": "/ɪˈklektɪk/",
+      "pos": "adj",
+      "synonyms": [
+        "varied",
+        "wide-ranging"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "التقاطی",
+        "گزینشی از منابع گوناگون",
+        "چندگانه و متنوع"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "eclectic"
+  ]
+}

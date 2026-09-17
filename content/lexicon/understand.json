@@ -1,0 +1,96 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "understand",
+  "lemma": "understand",
+  "level": "A2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1401-p05",
+      "part": "vocabulary",
+      "questionNo": 19,
+      "reach": 1,
+      "surface": "understands",
+      "year": 1401
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to know what something means, or to know why or how something happens",
+      "examples": [
+        {
+          "en": "She understands enough Persian to follow a simple conversation.",
+          "fa": "او آن‌قدر فارسی می‌فهمد که گفت‌وگویی ساده را دنبال کند."
+        }
+      ],
+      "ipa": "/ˌʌndəˈstænd/",
+      "pos": "v",
+      "synonyms": [
+        "grasp",
+        "comprehend"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 19
+        }
+      ],
+      "translations": [
+        "فهمیدن",
+        "درک کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to believe that something is true because you have been told it",
+      "examples": [
+        {
+          "en": "I understand that the meeting has been moved to Monday morning.",
+          "fa": "چنین شنیده‌ام که جلسه به صبح دوشنبه موکول شده است."
+        }
+      ],
+      "ipa": "/ˌʌndəˈstænd/",
+      "pos": "v",
+      "synonyms": [
+        "gather"
+      ],
+      "testedIn": [],
+      "translations": [
+        "چنین شنیدن",
+        "این‌طور برداشت کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1401": 1
+    },
+    "byYear": {
+      "1401": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1401,
+    "lastYear": 1401,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "understands"
+  ]
+}

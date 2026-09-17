@@ -1,0 +1,98 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "camouflage",
+  "lemma": "camouflage",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1405-p07",
+      "part": "vocabulary",
+      "questionNo": 13,
+      "reach": 1,
+      "surface": "camouflaged",
+      "year": 1405
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "expose",
+        "reveal"
+      ],
+      "definition": "to hide something by making it look like the things around it",
+      "examples": [
+        {
+          "en": "Soldiers camouflaged the trucks with branches cut from nearby trees.",
+          "fa": "سربازان کامیون‌ها را با شاخه‌هایی که از درختان نزدیک بریده بودند استتار کردند."
+        }
+      ],
+      "ipa": "/ˈkæməflɑːʒ/",
+      "pos": "verb",
+      "synonyms": [
+        "disguise",
+        "conceal"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p07",
+          "questionNo": 13
+        }
+      ],
+      "translations": [
+        "استتار کردن",
+        "پنهان کردن",
+        "مخفی کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "the way an animal's color or shape hides it, or the material used to hide soldiers and equipment",
+      "examples": [
+        {
+          "en": "The insect's green camouflage makes it almost invisible among leaves.",
+          "fa": "استتار سبز آن حشره، آن را در میان برگ‌ها تقریباً نامرئی می‌کند."
+        }
+      ],
+      "ipa": "/ˈkæməflɑːʒ/",
+      "pos": "noun",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "استتار",
+        "پوشش استتاری"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1405": 1
+    },
+    "byYear": {
+      "1405": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1405,
+    "lastYear": 1405,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "camouflaged"
+  ]
+}

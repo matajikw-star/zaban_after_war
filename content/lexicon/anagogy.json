@@ -1,0 +1,88 @@
+{
+  "confusables": [
+    {
+      "note": "andragogy یعنی آموزشِ بزرگ‌سالان؛ فقط چند حرف با anagogy فرق دارد",
+      "word": "andragogy"
+    },
+    {
+      "note": "pedagogy یعنی فنِ آموزش و تعلیم‌وتربیت، به‌ویژه آموزش کودکان",
+      "word": "pedagogy"
+    },
+    {
+      "note": "demagogy یعنی عوام‌فریبی در سیاست",
+      "word": "demagogy"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "anagogy",
+  "lemma": "anagogy",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 13,
+      "reach": 1,
+      "surface": "anagogy",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "literal reading"
+      ],
+      "definition": "a spiritual or mystical reading of a text, which looks for a hidden higher meaning beyond the literal one",
+      "examples": [
+        {
+          "en": "Medieval readers used anagogy to find heavenly meanings in very simple stories.",
+          "fa": "خوانندگان سده‌های میانه با تأویل عرفانی، معناهای آسمانی را در داستان‌هایی بسیار ساده می‌جستند."
+        }
+      ],
+      "ipa": "/ˈænəɡəʊdʒi/",
+      "pos": "n",
+      "synonyms": [
+        "mystical interpretation"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 13
+        }
+      ],
+      "translations": [
+        "تأویل عرفانی",
+        "معنای باطنی متن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "anagogy"
+  ]
+}

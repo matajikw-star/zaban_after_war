@@ -1,0 +1,234 @@
+{
+  "confusables": [
+    {
+      "note": "شباهت ظاهری؛ deprive یعنی محروم کردن و هم‌ریشهٔ derive نیست",
+      "word": "deprive"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "derive",
+  "lemma": "derive",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1404-p04",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 1,
+      "surface": "derives",
+      "year": 1404
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1402-p01",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 56,
+      "surface": "derived",
+      "year": 1402
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1402-p03",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 29,
+      "surface": "derives",
+      "year": 1402
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1401-p02",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 34,
+      "surface": "derive",
+      "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p02",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 30,
+      "surface": "derives",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p07",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 2,
+      "surface": "derives",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p13",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 1,
+      "surface": "derives",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 12,
+      "surface": "derive",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 10,
+      "surface": "derive",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to get or obtain something from a particular source",
+      "examples": [
+        {
+          "en": "Chemists derive many useful drugs from ordinary plants.",
+          "fa": "شیمی‌دان‌ها بسیاری از داروهای مفید را از گیاهان معمولی به دست می‌آورند."
+        }
+      ],
+      "ipa": "/dɪˈraɪv/",
+      "pos": "v",
+      "synonyms": [
+        "obtain",
+        "gain",
+        "draw"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p02",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1404-p04",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1402-p01",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "به دست آوردن از",
+        "گرفتن از",
+        "کسب کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to have something as its origin; to come from something",
+      "examples": [
+        {
+          "en": "The English word \"salary\" derives from the Latin word for salt.",
+          "fa": "واژهٔ انگلیسی «salary» از واژهٔ لاتین به معنای نمک ریشه گرفته است."
+        }
+      ],
+      "ipa": "/dɪˈraɪv/",
+      "pos": "v",
+      "synonyms": [
+        "originate",
+        "stem",
+        "spring"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p03",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "ریشه گرفتن از",
+        "برگرفته شدن از",
+        "نشئت گرفتن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1401": 1,
+      "1402": 1
+    },
+    "byYear": {
+      "1399": 2,
+      "1400": 3,
+      "1401": 1,
+      "1402": 2,
+      "1404": 1
+    },
+    "distinctYears": 5,
+    "firstYear": 1399,
+    "lastYear": 1404,
+    "priority": 23,
+    "timesAsAnswer": 2,
+    "timesAsContext": 0,
+    "timesAsDistractor": 7,
+    "timesTested": 9
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "derive",
+    "derived",
+    "derives"
+  ]
+}

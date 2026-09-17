@@ -1,0 +1,101 @@
+{
+  "confusables": [
+    {
+      "note": "یک حرف تفاوت؛ extend یعنی گسترش دادن یا تمدید کردن، نه ورم کردن",
+      "word": "extend"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "distend",
+  "lemma": "distend",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1403-p04",
+      "part": "vocabulary",
+      "questionNo": 14,
+      "reach": 1,
+      "surface": "distending",
+      "year": 1403
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p07",
+      "part": "vocabulary",
+      "questionNo": 20,
+      "reach": 1,
+      "surface": "distend",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "contract",
+        "shrink"
+      ],
+      "definition": "to swell outwards, or to make something swell, because of pressure from inside",
+      "examples": [
+        {
+          "en": "Gas from the fermenting juice slowly distended the plastic bottle.",
+          "fa": "گازِ آب‌میوهٔ در حال تخمیر به‌آرامی بطری پلاستیکی را باد کرد."
+        }
+      ],
+      "ipa": "/dɪˈstend/",
+      "pos": "v",
+      "synonyms": [
+        "swell",
+        "bloat",
+        "inflate"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p04",
+          "questionNo": 14
+        },
+        {
+          "paperId": "arshad-1399-p07",
+          "questionNo": 20
+        }
+      ],
+      "translations": [
+        "متورم شدن",
+        "باد کردن",
+        "گشاد کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 1,
+      "1403": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1403,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "distend",
+    "distending"
+  ]
+}

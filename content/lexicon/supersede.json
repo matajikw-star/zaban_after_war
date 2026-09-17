@@ -1,0 +1,83 @@
+{
+  "confusables": [
+    {
+      "note": "precede یعنی پیش از چیزی آمدن، اما supersede یعنی جای چیزی را گرفتن و آن را منسوخ کردن.",
+      "word": "precede"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "supersede",
+  "lemma": "supersede",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1402-p02",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 32,
+      "surface": "superseded",
+      "year": 1402
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to take the place of something older or less effective, so that it is no longer used",
+      "examples": [
+        {
+          "en": "Streaming services have superseded the video rental shop.",
+          "fa": "سرویس‌های پخش آنلاین جای مغازه‌های کرایه فیلم را گرفته‌اند."
+        }
+      ],
+      "ipa": "/ˌsuːpəˈsiːd/",
+      "pos": "v",
+      "synonyms": [
+        "replace",
+        "supplant",
+        "displace"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p02",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "جایگزین شدن",
+        "جای چیزی را گرفتن",
+        "منسوخ کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1402": 1
+    },
+    "byYear": {
+      "1402": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1402,
+    "lastYear": 1402,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "superseded"
+  ]
+}

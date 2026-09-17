@@ -1,0 +1,152 @@
+{
+  "confusables": [
+    {
+      "note": "شباهت آوایی و املایی؛ tentative یعنی آزمایشی و مردد، نه بادقت",
+      "word": "tentative"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "attentive",
+  "lemma": "attentive",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 23,
+      "surface": "attentive",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 5,
+      "surface": "attentive",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 1,
+      "surface": "attentive",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 1,
+      "surface": "attentive",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "inattentive",
+        "distracted"
+      ],
+      "definition": "listening or watching carefully and giving close attention to what is happening",
+      "examples": [
+        {
+          "en": "The children stayed attentive throughout the long museum tour.",
+          "fa": "بچه‌ها در سراسر آن بازدید طولانی از موزه بادقت گوش می‌دادند."
+        }
+      ],
+      "ipa": "/əˈtentɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "alert",
+        "observant",
+        "focused"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "بادقت",
+        "حواس‌جمع",
+        "متوجه"
+      ]
+    },
+    {
+      "antonyms": [
+        "neglectful"
+      ],
+      "definition": "making sure that someone has what they need; thoughtful towards other people",
+      "examples": [
+        {
+          "en": "The hotel staff were attentive without ever seeming intrusive.",
+          "fa": "کارکنان هتل مراقب بودند بی‌آنکه هرگز مزاحم به نظر برسند."
+        }
+      ],
+      "ipa": "/əˈtentɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "considerate",
+        "caring"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مراقب",
+        "خدمت‌رسان"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 4
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "attentive"
+  ]
+}

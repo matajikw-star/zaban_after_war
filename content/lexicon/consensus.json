@@ -1,0 +1,89 @@
+{
+  "confusables": [
+    {
+      "note": "شباهت ظاهری؛ census یعنی سرشماری جمعیت، نه توافق",
+      "word": "census"
+    },
+    {
+      "note": "هم‌ریشه اما متفاوت؛ consent یعنی رضایت و اجازه‌ی یک نفر، نه توافق یک گروه",
+      "word": "consent"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "consensus",
+  "lemma": "consensus",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p08",
+      "part": "cloze",
+      "questionNo": 37,
+      "reach": 1,
+      "surface": "consensus",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "disagreement",
+        "dissent"
+      ],
+      "definition": "an opinion that all the members of a group accept, or the process of reaching it",
+      "examples": [
+        {
+          "en": "After a long debate the council finally reached a consensus on the budget.",
+          "fa": "پس از بحثی طولانی، شورا سرانجام درباره‌ی بودجه به اجماع رسید."
+        }
+      ],
+      "ipa": "/kənˈsensəs/",
+      "pos": "n",
+      "synonyms": [
+        "agreement",
+        "accord"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 37
+        }
+      ],
+      "translations": [
+        "اجماع",
+        "توافق جمعی",
+        "هم‌رأیی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "consensus"
+  ]
+}

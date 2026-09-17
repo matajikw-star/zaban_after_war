@@ -1,0 +1,128 @@
+{
+  "confusables": [
+    {
+      "note": "هم‌ریشه‌اند و اشتباه گرفته می‌شوند؛ referral یعنی ارجاع دادن کسی به پزشک یا نهاد دیگر، نه داور بازی.",
+      "word": "referral"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "referee",
+  "lemma": "referee",
+  "level": "B1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p01",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 48,
+      "surface": "referee",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p04",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 6,
+      "surface": "referee",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 3,
+      "surface": "referee",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "an official who watches a game such as football or boxing and makes sure the players obey the rules",
+      "examples": [
+        {
+          "en": "The referee stopped the match after a foul near the goal.",
+          "fa": "داور پس از خطایی نزدیک دروازه بازی را متوقف کرد."
+        }
+      ],
+      "ipa": "/ˌrefəˈriː/",
+      "pos": "n",
+      "synonyms": [
+        "umpire",
+        "official"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "داور (ورزشی)"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a person who writes a letter about your character or abilities when you apply for a job or a place of study",
+      "examples": [
+        {
+          "en": "Please give the names of two referees at the end of your application.",
+          "fa": "لطفاً نام دو معرف را در پایان فرم درخواست خود بنویسید."
+        }
+      ],
+      "ipa": "/ˌrefəˈriː/",
+      "pos": "n",
+      "synonyms": [
+        "reviewer"
+      ],
+      "testedIn": [],
+      "translations": [
+        "معرِّف (نویسنده توصیه‌نامه)",
+        "داورِ مقاله (در نشر علمی)"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "referee"
+  ]
+}

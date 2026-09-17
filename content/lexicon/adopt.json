@@ -1,0 +1,105 @@
+{
+  "confusables": [
+    {
+      "note": "adapt یعنی وفق دادن یا اقتباس کردن، اما adopt یعنی اتخاذ کردن یا به فرزندی پذیرفتن.",
+      "word": "adapt"
+    },
+    {
+      "note": "adept صفت است و یعنی چیره‌دست و ماهر؛ فقط ظاهرش به adopt نزدیک است.",
+      "word": "adept"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "adopt",
+  "lemma": "adopt",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p10",
+      "part": "vocabulary",
+      "questionNo": 34,
+      "reach": 1,
+      "surface": "adopted",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "abandon",
+        "reject"
+      ],
+      "definition": "to start using a particular method, idea, plan or attitude",
+      "examples": [
+        {
+          "en": "The council adopted a new plan for reducing traffic downtown.",
+          "fa": "شورا طرح تازه‌ای برای کاهش ترافیک مرکز شهر اتخاذ کرد."
+        }
+      ],
+      "ipa": "/əˈdɒpt/",
+      "pos": "v",
+      "synonyms": [
+        "take up",
+        "embrace"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 34
+        }
+      ],
+      "translations": [
+        "اتخاذ کردن",
+        "در پیش گرفتن",
+        "به کار گرفتن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to take another person's child into your family legally and raise it as your own",
+      "examples": [
+        {
+          "en": "They adopted two children after living abroad for many years.",
+          "fa": "آنها پس از سال‌ها زندگی در خارج، دو کودک را به فرزندی پذیرفتند."
+        }
+      ],
+      "ipa": "/əˈdɒpt/",
+      "pos": "v",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "به فرزندی پذیرفتن",
+        "فرزندخوانده کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "adopted"
+  ]
+}

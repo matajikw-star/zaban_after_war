@@ -1,0 +1,84 @@
+{
+  "confusables": [
+    {
+      "note": "در همان سؤال رقیب بود: visibility یعنی میزان دید یا دیده‌شدن، نه عملی بودن.",
+      "word": "visibility"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "feasibility",
+  "lemma": "feasibility",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1398-p01",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 58,
+      "surface": "feasibility",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "impracticability"
+      ],
+      "definition": "the degree to which a plan or an idea can actually be done with the money, time and means available",
+      "examples": [
+        {
+          "en": "Engineers spent six months testing the feasibility of a tunnel here.",
+          "fa": "مهندسان شش ماه امکان‌پذیری ساخت تونل در اینجا را بررسی کردند."
+        }
+      ],
+      "ipa": "/ˌfiːzəˈbɪləti/",
+      "pos": "noun",
+      "synonyms": [
+        "practicability",
+        "viability"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p01",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "امکان‌سنجی",
+        "امکان‌پذیری",
+        "عملی بودن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "feasibility"
+  ]
+}

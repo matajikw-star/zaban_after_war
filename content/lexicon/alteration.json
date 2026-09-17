@@ -1,0 +1,85 @@
+{
+  "confusables": [
+    {
+      "note": "املای بسیار نزدیک اما بی‌ربط؛ altercation یعنی مشاجره و بگومگو",
+      "word": "altercation"
+    },
+    {
+      "note": "alternation یعنی تناوب و پی‌درپی آمدن دو چیز، نه تغییر",
+      "word": "alternation"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "alteration",
+  "lemma": "alteration",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1398-p03",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 30,
+      "surface": "alteration",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a change, usually a small one, made to something, or the act of changing it",
+      "examples": [
+        {
+          "en": "A few small alterations to the design made the room feel much larger.",
+          "fa": "چند تغییر کوچک در طراحی باعث شد اتاق بسیار بزرگ‌تر به نظر برسد."
+        }
+      ],
+      "ipa": "/ˌɔːltəˈreɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "modification",
+        "adjustment",
+        "change"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p03",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "تغییر",
+        "دگرگونی جزئی",
+        "اصلاح"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "alteration"
+  ]
+}

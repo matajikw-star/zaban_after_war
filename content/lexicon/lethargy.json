@@ -1,0 +1,81 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "lethargy",
+  "lemma": "lethargy",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p04",
+      "part": "vocabulary",
+      "questionNo": 14,
+      "reach": 1,
+      "surface": "lethargy",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "vigor",
+        "energy"
+      ],
+      "definition": "a state of having no energy and no interest in doing anything",
+      "examples": [
+        {
+          "en": "A week of fever left him in a lethargy he could not shake off.",
+          "fa": "یک هفته تب او را در رخوتی فرو برد که نمی‌توانست از آن بیرون بیاید."
+        }
+      ],
+      "ipa": "/ˈleθədʒi/",
+      "pos": "n",
+      "synonyms": [
+        "torpor",
+        "sluggishness",
+        "apathy"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p04",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "بی‌حالی",
+        "رخوت",
+        "سستی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "lethargy"
+  ]
+}

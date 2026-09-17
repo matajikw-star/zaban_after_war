@@ -1,0 +1,137 @@
+{
+  "confusables": [
+    {
+      "note": "شباهت ظاهری؛ concur یعنی هم‌نظر بودن و موافقت کردن",
+      "word": "concur"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "conquer",
+  "lemma": "conquer",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 20,
+      "surface": "conquer",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 9,
+      "surface": "conquer",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 1,
+      "surface": "conquer",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "surrender",
+        "lose"
+      ],
+      "definition": "to take control of a country or people by force, after defeating them in war",
+      "examples": [
+        {
+          "en": "The empire conquered most of the coast within a single summer.",
+          "fa": "آن امپراتوری بیشتر نوار ساحلی را تنها در یک تابستان فتح کرد."
+        }
+      ],
+      "ipa": "/ˈkɒŋkə(r)/",
+      "pos": "v",
+      "synonyms": [
+        "defeat",
+        "subdue",
+        "vanquish"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "فتح کردن",
+        "تسخیر کردن",
+        "شکست دادن"
+      ]
+    },
+    {
+      "antonyms": [
+        "succumb"
+      ],
+      "definition": "to succeed in dealing with a problem, a fear or a bad habit",
+      "examples": [
+        {
+          "en": "It took her two years to conquer her fear of flying.",
+          "fa": "دو سال طول کشید تا او بر ترسش از پرواز غلبه کند."
+        }
+      ],
+      "ipa": "/ˈkɒŋkə(r)/",
+      "pos": "v",
+      "synonyms": [
+        "overcome",
+        "master"
+      ],
+      "testedIn": [],
+      "translations": [
+        "غلبه کردن بر",
+        "چیره شدن بر"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "conquer"
+  ]
+}

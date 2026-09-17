@@ -1,0 +1,104 @@
+{
+  "confusables": [
+    {
+      "note": "impetuous صفت است و یعنی شتاب‌زده و بی‌پروا، نه نیروی محرک",
+      "word": "impetuous"
+    },
+    {
+      "note": "impact یعنی تأثیر یا برخورد؛ impetus نیرویی است که کاری را به راه می‌اندازد",
+      "word": "impact"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "impetus",
+  "lemma": "impetus",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 12,
+      "surface": "impetus",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 10,
+      "surface": "impetus",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "deterrent"
+      ],
+      "definition": "something that encourages a process or activity to start or to develop faster",
+      "examples": [
+        {
+          "en": "The new railway gave fresh impetus to trade across the region.",
+          "fa": "راه‌آهن جدید به تجارت در سراسر منطقه انگیزه و شتاب تازه‌ای داد."
+        }
+      ],
+      "ipa": "/ˈɪmpɪtəs/",
+      "pos": "n",
+      "synonyms": [
+        "stimulus",
+        "incentive",
+        "momentum"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "انگیزه",
+        "محرک",
+        "نیروی پیش‌برنده"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 2
+    },
+    "byYear": {
+      "1399": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 8,
+    "timesAsAnswer": 2,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "impetus"
+  ]
+}

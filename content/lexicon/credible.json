@@ -1,0 +1,106 @@
+{
+  "confusables": [
+    {
+      "note": "credulous یعنی زودباور و صفت شخص است، اما credible یعنی باورپذیر",
+      "word": "credulous"
+    },
+    {
+      "note": "creditable یعنی شایستهٔ تحسین، نه باورپذیر",
+      "word": "creditable"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "credible",
+  "lemma": "credible",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1402-p02",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 32,
+      "surface": "credible",
+      "year": 1402
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1401-p03",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 31,
+      "surface": "credible",
+      "year": 1401
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "implausible",
+        "dubious"
+      ],
+      "definition": "able to be believed or trusted because it seems true or reasonable",
+      "examples": [
+        {
+          "en": "The police found no credible evidence against the young driver.",
+          "fa": "پلیس هیچ مدرک باورپذیری علیه آن رانندهٔ جوان نیافت."
+        }
+      ],
+      "ipa": "/ˈkredəbl/",
+      "pos": "adj",
+      "synonyms": [
+        "believable",
+        "plausible",
+        "trustworthy"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p03",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1402-p02",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "باورپذیر",
+        "قابل اعتماد",
+        "موجه"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1401": 1
+    },
+    "byYear": {
+      "1401": 1,
+      "1402": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1401,
+    "lastYear": 1402,
+    "priority": 8,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "credible"
+  ]
+}

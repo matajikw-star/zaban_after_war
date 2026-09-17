@@ -1,0 +1,96 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "insouciance",
+  "lemma": "insouciance",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1405-p05",
+      "part": "vocabulary",
+      "questionNo": 22,
+      "reach": 1,
+      "surface": "insouciance",
+      "year": 1405
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1402-p05",
+      "part": "vocabulary",
+      "questionNo": 15,
+      "reach": 1,
+      "surface": "insouciance",
+      "year": 1402
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "anxiety",
+        "solicitude"
+      ],
+      "definition": "a relaxed lack of worry about something that would usually make people anxious",
+      "examples": [
+        {
+          "en": "She answered the interviewer's hardest question with complete insouciance.",
+          "fa": "او سخت‌ترین پرسش مصاحبه‌کننده را با بی‌خیالی تمام پاسخ داد."
+        }
+      ],
+      "ipa": "/ɪnˈsuːsiəns/",
+      "pos": "n",
+      "synonyms": [
+        "nonchalance",
+        "unconcern"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 22
+        },
+        {
+          "paperId": "arshad-1402-p05",
+          "questionNo": 15
+        }
+      ],
+      "translations": [
+        "بی‌خیالی",
+        "خونسردی و لاقیدی",
+        "بی‌تفاوتی آسوده"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1405": 1
+    },
+    "byYear": {
+      "1402": 1,
+      "1405": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1402,
+    "lastYear": 1405,
+    "priority": 8,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "insouciance"
+  ]
+}

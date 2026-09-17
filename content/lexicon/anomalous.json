@@ -1,0 +1,133 @@
+{
+  "confusables": [
+    {
+      "note": "املای بسیار نزدیک؛ anonymous یعنی بی‌نام و ناشناس، نه غیرعادی",
+      "word": "anonymous"
+    },
+    {
+      "note": "شباهت آوایی فریبنده؛ unanimous یعنی به اتفاق آرا",
+      "word": "unanimous"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "anomalous",
+  "lemma": "anomalous",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 23,
+      "surface": "anomalous",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 5,
+      "surface": "anomalous",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 1,
+      "surface": "anomalous",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 1,
+      "surface": "anomalous",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "normal",
+        "typical"
+      ],
+      "definition": "different from what is normal or expected, in a way that is difficult to explain",
+      "examples": [
+        {
+          "en": "The team repeated the experiment after one anomalous reading appeared.",
+          "fa": "تیم پس از آنکه یک قرائت غیرعادی ظاهر شد، آزمایش را تکرار کرد."
+        }
+      ],
+      "ipa": "/əˈnɒmələs/",
+      "pos": "adj",
+      "synonyms": [
+        "abnormal",
+        "irregular",
+        "atypical"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "نابهنجار",
+        "غیرعادی",
+        "استثنایی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 4
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "anomalous"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": "The verb (to approve officially) and the plural noun (penalties imposed on a country) point in opposite directions, so a learner who knows one cannot guess the other. A hint must say which sense it targets; the exam tested the approval sense.",
+    "suspected": true
+  },
+  "id": "sanction",
+  "lemma": "sanction",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 27,
+      "reach": 1,
+      "surface": "sanction",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "forbid",
+        "prohibit"
+      ],
+      "definition": "to give official permission or approval for an action or a plan",
+      "examples": [
+        {
+          "en": "The council refused to sanction the building of a second road.",
+          "fa": "شورا از تأیید رسمیِ ساخت جادهٔ دوم خودداری کرد."
+        }
+      ],
+      "ipa": "/ˈsæŋkʃn/",
+      "pos": "v",
+      "synonyms": [
+        "authorize",
+        "approve",
+        "endorse"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 27
+        }
+      ],
+      "translations": [
+        "مجاز شمردن",
+        "تأیید رسمی کردن",
+        "اجازه دادن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "an official order that limits trade with a country in order to force it to change, usually used in the plural",
+      "examples": [
+        {
+          "en": "The country lived under economic sanctions for almost a decade.",
+          "fa": "آن کشور نزدیک به یک دهه زیر تحریم‌های اقتصادی زندگی کرد."
+        }
+      ],
+      "ipa": "/ˈsæŋkʃn/",
+      "pos": "n",
+      "synonyms": [
+        "penalty",
+        "embargo"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تحریم",
+        "مجازات رسمی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "sanction"
+  ]
+}

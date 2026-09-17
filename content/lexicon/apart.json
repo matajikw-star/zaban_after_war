@@ -1,0 +1,104 @@
+{
+  "confusables": [
+    {
+      "note": "a part دو واژه و به معنی «بخشی از» است، اما apart یک واژه و به معنی «جدا» است.",
+      "word": "a part"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "apart",
+  "lemma": "apart",
+  "level": "B1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p10",
+      "part": "vocabulary",
+      "questionNo": 26,
+      "reach": 1,
+      "surface": "Apart",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "used in the phrase \"apart from\" to mean \"besides\" or \"in addition to\" something already mentioned",
+      "examples": [
+        {
+          "en": "Apart from teaching, she writes textbooks for high school students.",
+          "fa": "او جدا از تدریس، برای دانش‌آموزان دبیرستانی کتاب درسی می‌نویسد."
+        }
+      ],
+      "ipa": "/əˈpɑːt/",
+      "pos": "adv",
+      "synonyms": [
+        "besides"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 26
+        }
+      ],
+      "translations": [
+        "جدا از",
+        "علاوه بر",
+        "به‌غیر از"
+      ]
+    },
+    {
+      "antonyms": [
+        "together"
+      ],
+      "definition": "separated from each other by a distance or by a period of time, or into separate pieces",
+      "examples": [
+        {
+          "en": "The two villages lie about ten kilometers apart in the valley.",
+          "fa": "آن دو روستا در دره حدود ده کیلومتر از هم فاصله دارند."
+        }
+      ],
+      "ipa": "/əˈpɑːt/",
+      "pos": "adv",
+      "synonyms": [
+        "separately"
+      ],
+      "testedIn": [],
+      "translations": [
+        "از هم جدا",
+        "به فاصلهٔ",
+        "از هم"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "Apart"
+  ]
+}

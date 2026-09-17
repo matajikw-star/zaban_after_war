@@ -1,0 +1,140 @@
+{
+  "confusables": [
+    {
+      "note": "نقطهٔ مقابل آن است: صریح و به‌روشنی بیان‌شده.",
+      "word": "explicit"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "implicit",
+  "lemma": "implicit",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1402-p03",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 29,
+      "surface": "implicit",
+      "year": 1402
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p01",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 42,
+      "surface": "implicit",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p03",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 16,
+      "surface": "implicit",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "explicit",
+        "overt"
+      ],
+      "definition": "suggested or understood without being stated directly",
+      "examples": [
+        {
+          "en": "There was an implicit warning in the manager's short reply.",
+          "fa": "در پاسخ کوتاه مدیر هشداری ضمنی وجود داشت."
+        }
+      ],
+      "ipa": "/ɪmˈplɪsɪt/",
+      "pos": "adj",
+      "synonyms": [
+        "implied",
+        "tacit",
+        "unspoken"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1402-p03",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "ضمنی",
+        "تلویحی",
+        "نهفته"
+      ]
+    },
+    {
+      "antonyms": [
+        "qualified"
+      ],
+      "definition": "complete and without any doubt, said of trust, faith or obedience",
+      "examples": [
+        {
+          "en": "The soldiers showed implicit obedience to every order they received.",
+          "fa": "سربازان نسبت به هر دستوری که می‌گرفتند اطاعت مطلق نشان می‌دادند."
+        }
+      ],
+      "ipa": "/ɪmˈplɪsɪt/",
+      "pos": "adj",
+      "synonyms": [
+        "absolute",
+        "unquestioning"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مطلق",
+        "بی‌چون‌وچرا"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 2
+    },
+    "byYear": {
+      "1399": 2,
+      "1402": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1402,
+    "priority": 11,
+    "timesAsAnswer": 2,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "implicit"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "trait",
+  "lemma": "trait",
+  "level": null,
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1401-p01",
+      "part": "grammar",
+      "questionNo": 12,
+      "reach": 58,
+      "surface": "trait",
+      "year": 1401
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1401-p01",
+      "part": "grammar",
+      "questionNo": 13,
+      "reach": 58,
+      "surface": "trait",
+      "year": 1401
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1401-p01",
+      "part": "grammar",
+      "questionNo": 14,
+      "reach": 58,
+      "surface": "trait",
+      "year": 1401
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1401-p01",
+      "part": "grammar",
+      "questionNo": 15,
+      "reach": 58,
+      "surface": "trait",
+      "year": 1401
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 4,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "trait"
+  ]
+}

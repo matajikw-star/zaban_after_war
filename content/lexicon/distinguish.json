@@ -1,0 +1,139 @@
+{
+  "confusables": [
+    {
+      "note": "فقط شباهت املایی دارد؛ یعنی خاموش کردن آتش.",
+      "word": "extinguish"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "distinguish",
+  "lemma": "distinguish",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1405-p04",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 1,
+      "surface": "distinguish",
+      "year": 1405
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1403-p02",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 53,
+      "surface": "distinguish",
+      "year": 1403
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1398-p02",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 33,
+      "surface": "distinguishes",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "confuse",
+        "conflate"
+      ],
+      "definition": "to recognize the difference between two things, often in the pattern \"distinguish between A and B\"",
+      "examples": [
+        {
+          "en": "Young children cannot always distinguish fantasy from reality.",
+          "fa": "کودکان خردسال همیشه نمی‌توانند خیال را از واقعیت تشخیص دهند."
+        }
+      ],
+      "ipa": "/dɪˈstɪŋɡwɪʃ/",
+      "pos": "v",
+      "synonyms": [
+        "differentiate",
+        "tell apart",
+        "discriminate"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p02",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1405-p04",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1398-p02",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "تمایز قائل شدن",
+        "تشخیص دادن",
+        "فرق گذاشتن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to do something so well that people notice and admire you, in the pattern \"distinguish yourself\"",
+      "examples": [
+        {
+          "en": "She distinguished herself as a surgeon before she turned thirty.",
+          "fa": "او پیش از سی‌سالگی در مقام یک جراح برجسته شد."
+        }
+      ],
+      "ipa": "/dɪˈstɪŋɡwɪʃ/",
+      "pos": "v",
+      "synonyms": [
+        "excel"
+      ],
+      "testedIn": [],
+      "translations": [
+        "برجسته شدن",
+        "نام درآوردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1403": 1
+    },
+    "byYear": {
+      "1398": 1,
+      "1403": 1,
+      "1405": 1
+    },
+    "distinctYears": 3,
+    "firstYear": 1398,
+    "lastYear": 1405,
+    "priority": 11,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "distinguish",
+    "distinguishes"
+  ]
+}

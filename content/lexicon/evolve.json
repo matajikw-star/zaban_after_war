@@ -1,0 +1,147 @@
+{
+  "confusables": [
+    {
+      "note": "املای نزدیک، اما revolve یعنی چرخیدن به دور چیزی",
+      "word": "revolve"
+    },
+    {
+      "note": "involve یعنی در بر داشتن یا درگیر کردن، نه تحول یافتن",
+      "word": "involve"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "evolve",
+  "lemma": "evolve",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 23,
+      "surface": "evolved",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 5,
+      "surface": "evolved",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 1,
+      "surface": "evolved",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 1,
+      "surface": "evolved",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to develop gradually into a different or more advanced form over a long time",
+      "examples": [
+        {
+          "en": "The small workshop slowly evolved into a large publishing company.",
+          "fa": "آن کارگاه کوچک به تدریج به یک شرکت بزرگ انتشاراتی تبدیل شد."
+        }
+      ],
+      "ipa": "/ɪˈvɒlv/",
+      "pos": "verb",
+      "synonyms": [
+        "develop",
+        "progress"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "به تدریج تحول یافتن",
+        "تکامل یافتن",
+        "پدید آمدن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "in biology, to change over many generations so that a species becomes better suited to its surroundings",
+      "examples": [
+        {
+          "en": "Birds evolved from small feathered dinosaurs millions of years ago.",
+          "fa": "پرندگان میلیون‌ها سال پیش از دایناسورهای کوچک پردار تکامل یافتند."
+        }
+      ],
+      "ipa": "/ɪˈvɒlv/",
+      "pos": "verb",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "تکامل یافتن (زیست‌شناسی)",
+        "دگرگون شدن نسل به نسل"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 4
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "evolved"
+  ]
+}

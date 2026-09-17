@@ -1,0 +1,116 @@
+{
+  "confusables": [
+    {
+      "note": "صفتِ هم‌ریشه است؛ acerbic یعنی تند و گزنده، و acerbity حالتِ اسمیِ همان است",
+      "word": "acerbic"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "acerbity",
+  "lemma": "acerbity",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 20,
+      "surface": "acerbity",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 9,
+      "surface": "acerbity",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 1,
+      "surface": "acerbity",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "gentleness",
+        "mildness"
+      ],
+      "definition": "harshness and sharpness in the way someone speaks or writes, which can hurt or offend people",
+      "examples": [
+        {
+          "en": "There was a note of acerbity in her reply to the young reporter.",
+          "fa": "در پاسخ او به آن خبرنگار جوان رگه‌ای از تندی و گزندگی بود."
+        }
+      ],
+      "ipa": "/əˈsɜːbəti/",
+      "pos": "n",
+      "synonyms": [
+        "asperity",
+        "harshness",
+        "sharpness"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "تندی و گزندگی (کلام)",
+        "تلخی لحن",
+        "زنندگی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 3
+    },
+    "byYear": {
+      "1399": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 11,
+    "timesAsAnswer": 3,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "acerbity"
+  ]
+}

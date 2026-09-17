@@ -1,0 +1,107 @@
+{
+  "confusables": [
+    {
+      "note": "livid یعنی به‌شدت خشمگین یا کبود، نه زنده و روشن",
+      "word": "livid"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "vivid",
+  "lemma": "vivid",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p01",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 58,
+      "surface": "vivid",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "vague"
+      ],
+      "definition": "producing pictures in the mind that are clear, strong and full of detail",
+      "examples": [
+        {
+          "en": "He gave a vivid account of his first week in the desert.",
+          "fa": "او شرحی زنده و پرجزئیات از نخستین هفته‌اش در بیابان داد."
+        }
+      ],
+      "ipa": "/ˈvɪvɪd/",
+      "pos": "adj",
+      "synonyms": [
+        "graphic",
+        "lifelike"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p01",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "زنده و روشن",
+        "پرجزئیات",
+        "واضح"
+      ]
+    },
+    {
+      "antonyms": [
+        "dull"
+      ],
+      "definition": "very bright and strong in colour",
+      "examples": [
+        {
+          "en": "The walls were painted a vivid orange that hurt your eyes.",
+          "fa": "دیوارها به نارنجی تندی رنگ شده بودند که چشم را می‌زد."
+        }
+      ],
+      "ipa": "/ˈvɪvɪd/",
+      "pos": "adj",
+      "synonyms": [
+        "bright",
+        "intense"
+      ],
+      "testedIn": [],
+      "translations": [
+        "پررنگ",
+        "تند (رنگ)"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "vivid"
+  ]
+}

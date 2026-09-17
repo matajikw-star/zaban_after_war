@@ -1,0 +1,120 @@
+{
+  "confusables": [
+    {
+      "note": "شکل نزدیک، اما deduce یعنی استنتاج کردن و نتیجه گرفتن",
+      "word": "deduce"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "reduce",
+  "lemma": "reduce",
+  "level": "A2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1405-p06",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "reduce",
+      "year": 1405
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p10",
+      "part": "vocabulary",
+      "questionNo": 22,
+      "reach": 1,
+      "surface": "reduces",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "increase",
+        "enhance"
+      ],
+      "definition": "to make something smaller in size, amount, number or degree",
+      "examples": [
+        {
+          "en": "The factory reduced its water use by nearly a third.",
+          "fa": "کارخانه مصرف آب خود را تقریباً یک‌سوم کاهش داد."
+        }
+      ],
+      "ipa": "/rɪˈdjuːs/",
+      "pos": "v",
+      "synonyms": [
+        "cut",
+        "lower",
+        "diminish"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p06",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "کاهش دادن",
+        "کم کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to force someone or something into a much worse state, as in \"reduce to tears\"",
+      "examples": [
+        {
+          "en": "The bombing reduced the old library to a heap of rubble.",
+          "fa": "بمباران آن کتابخانهٔ قدیمی را به تلی از آوار تبدیل کرد."
+        }
+      ],
+      "ipa": "/rɪˈdjuːs/",
+      "pos": "v",
+      "synonyms": [
+        "degrade"
+      ],
+      "testedIn": [],
+      "translations": [
+        "به وضع بدتری رساندن",
+        "تبدیل کردن به"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 1,
+      "1405": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1405,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "reduce",
+    "reduces"
+  ]
+}

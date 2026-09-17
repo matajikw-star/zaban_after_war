@@ -1,0 +1,84 @@
+{
+  "confusables": [
+    {
+      "note": "املای بسیار نزدیک اما تقریباً متضاد؛ apostle یعنی حواری و مبلّغِ وفادار",
+      "word": "apostle"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "apostate",
+  "lemma": "apostate",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p07",
+      "part": "vocabulary",
+      "questionNo": 21,
+      "reach": 1,
+      "surface": "apostate",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "adherent",
+        "loyalist"
+      ],
+      "definition": "a person who has abandoned the religion, party or set of beliefs they used to hold",
+      "examples": [
+        {
+          "en": "Once seen as a leader, he was branded an apostate by his former allies.",
+          "fa": "او که زمانی رهبر شمرده می‌شد، از سوی متحدان پیشینش مرتد خوانده شد."
+        }
+      ],
+      "ipa": "/əˈpɒsteɪt/",
+      "pos": "n",
+      "synonyms": [
+        "renegade",
+        "defector",
+        "deserter"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p07",
+          "questionNo": 21
+        }
+      ],
+      "translations": [
+        "مرتد",
+        "از دین برگشته",
+        "بریده از حزب"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "apostate"
+  ]
+}

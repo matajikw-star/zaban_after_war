@@ -1,0 +1,103 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": "The everyday sense a learner knows is \"contest winner\"; the tested sense is \"advocate who fights for a cause\". Historically the same word, but a reader who knows one does not arrive at the other, and the exam question turns entirely on the advocate sense.",
+    "suspected": true
+  },
+  "id": "champion",
+  "lemma": "champion",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p05",
+      "part": "cloze",
+      "questionNo": 37,
+      "reach": 1,
+      "surface": "Champions",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "detractor",
+        "opponent"
+      ],
+      "definition": "a person who publicly defends and fights for a cause, a belief or a group of people",
+      "examples": [
+        {
+          "en": "She became a tireless champion of free schooling for village girls.",
+          "fa": "او به مدافعی خستگی‌ناپذیر برای آموزش رایگان دختران روستایی بدل شد."
+        }
+      ],
+      "ipa": "/ˈtʃæmpiən/",
+      "pos": "noun",
+      "synonyms": [
+        "advocate",
+        "proponent"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 37
+        }
+      ],
+      "translations": [
+        "مدافع",
+        "طرفدار سرسخت",
+        "حامی"
+      ]
+    },
+    {
+      "antonyms": [
+        "loser"
+      ],
+      "definition": "a person or team that has won a competition, especially a sporting one",
+      "examples": [
+        {
+          "en": "The young swimmer became national champion at only sixteen.",
+          "fa": "آن شناگر جوان تنها در شانزده‌سالگی قهرمان ملی شد."
+        }
+      ],
+      "ipa": "/ˈtʃæmpiən/",
+      "pos": "noun",
+      "synonyms": [
+        "winner",
+        "titleholder"
+      ],
+      "testedIn": [],
+      "translations": [
+        "قهرمان",
+        "برنده"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "Champions"
+  ]
+}

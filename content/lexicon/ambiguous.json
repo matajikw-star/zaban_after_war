@@ -1,0 +1,100 @@
+{
+  "confusables": [
+    {
+      "note": "ambivalent دربارهٔ احساس دودلانهٔ آدم‌هاست، اما ambiguous دربارهٔ معنای مبهم یک عبارت",
+      "word": "ambivalent"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "ambiguous",
+  "lemma": "ambiguous",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1403-p03",
+      "part": "vocabulary",
+      "questionNo": 11,
+      "reach": 1,
+      "surface": "ambiguous",
+      "year": 1403
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1402-p02",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 32,
+      "surface": "ambiguous",
+      "year": 1402
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "clear",
+        "unambiguous"
+      ],
+      "definition": "having more than one possible meaning, so that it is not clear which one is meant",
+      "examples": [
+        {
+          "en": "His answer was so ambiguous that both sides claimed victory.",
+          "fa": "پاسخ او چنان دوپهلو بود که هر دو طرف ادعای پیروزی کردند."
+        }
+      ],
+      "ipa": "/æmˈbɪɡjuəs/",
+      "pos": "adj",
+      "synonyms": [
+        "unclear",
+        "equivocal",
+        "vague"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p03",
+          "questionNo": 11
+        },
+        {
+          "paperId": "arshad-1402-p02",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "مبهم",
+        "دوپهلو",
+        "چندمعنا"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1402": 1,
+      "1403": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1402,
+    "lastYear": 1403,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "ambiguous"
+  ]
+}

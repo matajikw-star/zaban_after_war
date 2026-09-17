@@ -1,0 +1,123 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "entertainment",
+  "lemma": "entertainment",
+  "level": "B1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 23,
+      "surface": "entertainments",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 5,
+      "surface": "entertainments",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 1,
+      "surface": "entertainments",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 1,
+      "surface": "entertainments",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "boredom"
+      ],
+      "definition": "films, shows, music and other activities that people enjoy watching or taking part in",
+      "examples": [
+        {
+          "en": "The hotel provides live entertainment every Friday evening.",
+          "fa": "هتل هر عصر جمعه برنامهٔ سرگرم‌کنندهٔ زنده ارائه می‌دهد."
+        }
+      ],
+      "ipa": "/ˌentəˈteɪnmənt/",
+      "pos": "n",
+      "synonyms": [
+        "amusement",
+        "diversion",
+        "show"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "سرگرمی",
+        "تفریح",
+        "برنامهٔ سرگرم‌کننده"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 4
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "entertainments"
+  ]
+}

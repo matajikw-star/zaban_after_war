@@ -1,0 +1,110 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "gist",
+  "lemma": "gist",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 20,
+      "surface": "gist",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 9,
+      "surface": "gist",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 1,
+      "surface": "gist",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "details"
+      ],
+      "definition": "the main point or general meaning of what someone has said or written, without the details",
+      "examples": [
+        {
+          "en": "I missed the details, but I got the gist of his argument.",
+          "fa": "جزئیات را از دست دادم، اما لب مطلب استدلال او را گرفتم."
+        }
+      ],
+      "ipa": "/dʒɪst/",
+      "pos": "n",
+      "synonyms": [
+        "essence",
+        "substance",
+        "main idea"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "لب مطلب",
+        "چکیده",
+        "جان کلام"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 3
+    },
+    "byYear": {
+      "1399": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 11,
+    "timesAsAnswer": 3,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "gist"
+  ]
+}

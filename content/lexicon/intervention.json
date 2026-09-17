@@ -1,0 +1,129 @@
+{
+  "confusables": [
+    {
+      "note": "آغاز یکسان و ظاهر نزدیک؛ اما interval یعنی فاصلهٔ زمانی میان دو رویداد، نه دخالت",
+      "word": "interval"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "intervention",
+  "lemma": "intervention",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1402-p02",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 32,
+      "surface": "interventions",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p02",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 30,
+      "surface": "intervention",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p07",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 2,
+      "surface": "intervention",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p13",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 1,
+      "surface": "intervention",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "inaction"
+      ],
+      "definition": "the act of becoming involved in a situation in order to change what is happening",
+      "examples": [
+        {
+          "en": "Early intervention by the teacher stopped the argument from spreading.",
+          "fa": "مداخلهٔ به‌موقع معلم مانع از گسترش آن مشاجره شد."
+        }
+      ],
+      "ipa": "/ˌɪntəˈvenʃn/",
+      "pos": "n",
+      "synonyms": [
+        "interference",
+        "involvement"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p02",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "مداخله",
+        "دخالت",
+        "وساطت"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 3,
+      "1402": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1400,
+    "lastYear": 1402,
+    "priority": 8,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "intervention",
+    "interventions"
+  ]
+}

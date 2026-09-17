@@ -1,0 +1,95 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "burgeoning",
+  "lemma": "burgeoning",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1403-p05",
+      "part": "vocabulary",
+      "questionNo": 28,
+      "reach": 1,
+      "surface": "burgeoning",
+      "year": 1403
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1398-p07",
+      "part": "vocabulary",
+      "questionNo": 167,
+      "reach": 1,
+      "surface": "burgeoning",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "shrinking",
+        "declining"
+      ],
+      "definition": "growing or developing very quickly",
+      "examples": [
+        {
+          "en": "The city's burgeoning tech sector has doubled in five years.",
+          "fa": "بخش فناوری رو به رشد این شهر در پنج سال دو برابر شده است."
+        }
+      ],
+      "ipa": "/ˈbɜːdʒənɪŋ/",
+      "pos": "adj",
+      "synonyms": [
+        "flourishing",
+        "expanding",
+        "thriving"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p05",
+          "questionNo": 28
+        },
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 167
+        }
+      ],
+      "translations": [
+        "رو به رشد",
+        "در حال شکوفایی",
+        "فزاینده"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1,
+      "1403": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1398,
+    "lastYear": 1403,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "burgeoning"
+  ]
+}

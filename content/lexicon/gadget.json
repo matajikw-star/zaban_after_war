@@ -1,0 +1,111 @@
+{
+  "confusables": [
+    {
+      "note": "هم‌معنا اما عام‌تر: device هر دستگاهی است، اما gadget کوچک، تازه و اغلب غیرضروری است.",
+      "word": "device"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "gadget",
+  "lemma": "gadget",
+  "level": "B1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p01",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 48,
+      "surface": "gadgets",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p04",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 6,
+      "surface": "gadgets",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 3,
+      "surface": "gadgets",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a small tool or device that does something useful, especially one that seems new or clever",
+      "examples": [
+        {
+          "en": "His kitchen is full of gadgets he has used only once.",
+          "fa": "آشپزخانه‌اش پر از وسیله‌های کوچکی است که فقط یک بار از آن‌ها استفاده کرده است."
+        }
+      ],
+      "ipa": "/ˈɡædʒɪt/",
+      "pos": "noun",
+      "synonyms": [
+        "device",
+        "gizmo",
+        "appliance"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "وسیله‌ی کوچک و کاربردی",
+        "ابزارک",
+        "دستگاه کوچک"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "gadgets"
+  ]
+}

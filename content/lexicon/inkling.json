@@ -1,0 +1,78 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "inkling",
+  "lemma": "inkling",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 22,
+      "reach": 1,
+      "surface": "inkling",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a slight idea or suspicion that something is true or is about to happen",
+      "examples": [
+        {
+          "en": "We had no inkling that the company was about to close.",
+          "fa": "کوچک‌ترین تصوری نداشتیم که شرکت در آستانه‌ی تعطیلی است."
+        }
+      ],
+      "ipa": "/ˈɪŋklɪŋ/",
+      "pos": "n",
+      "synonyms": [
+        "hint",
+        "suspicion",
+        "intimation"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "ظن",
+        "حدس مبهم",
+        "کوچک‌ترین تصور"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "inkling"
+  ]
+}

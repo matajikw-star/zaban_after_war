@@ -1,0 +1,83 @@
+{
+  "confusables": [
+    {
+      "note": "املای نزدیکی دارند؛ accuse یعنی متهم کردن، اما accrue یعنی انباشته شدن.",
+      "word": "accuse"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "accrue",
+  "lemma": "accrue",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p07",
+      "part": "cloze",
+      "questionNo": 178,
+      "reach": 1,
+      "surface": "accrued",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "diminish",
+        "dwindle"
+      ],
+      "definition": "to increase in amount over a period of time, especially money, interest or benefits",
+      "examples": [
+        {
+          "en": "Interest accrues on the loan from the very first day.",
+          "fa": "سود وام از همان روز نخست روی هم انباشته می‌شود."
+        }
+      ],
+      "ipa": "/əˈkruː/",
+      "pos": "v",
+      "synonyms": [
+        "accumulate",
+        "build up"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 178
+        }
+      ],
+      "translations": [
+        "انباشته شدن",
+        "روی هم جمع شدن",
+        "تعلق گرفتن (سود)"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "accrued"
+  ]
+}

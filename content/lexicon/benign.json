@@ -1,0 +1,131 @@
+{
+  "confusables": [
+    {
+      "note": "benevolent یعنی نیکوکار و خیرخواه، اما benign یعنی بی‌ضرر یا خوش‌خیم",
+      "word": "benevolent"
+    },
+    {
+      "note": "شباهت ظاهری و معنای مخالف؛ malign یعنی بدخواه یا بدگویی کردن",
+      "word": "malign"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "benign",
+  "lemma": "benign",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p09",
+      "part": "vocabulary",
+      "questionNo": 29,
+      "reach": 1,
+      "surface": "benign",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p07",
+      "part": "vocabulary",
+      "questionNo": 19,
+      "reach": 1,
+      "surface": "benign",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "malignant",
+        "harmful"
+      ],
+      "definition": "not harmful or dangerous, and in medicine, not likely to spread or cause death",
+      "examples": [
+        {
+          "en": "The doctor said the lump was benign and needed no treatment.",
+          "fa": "پزشک گفت آن غده خوش‌خیم است و نیازی به درمان ندارد."
+        }
+      ],
+      "ipa": "/bɪˈnaɪn/",
+      "pos": "adj",
+      "synonyms": [
+        "harmless",
+        "innocuous"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p07",
+          "questionNo": 19
+        }
+      ],
+      "translations": [
+        "بی‌خطر",
+        "بی‌ضرر",
+        "خوش‌خیم"
+      ]
+    },
+    {
+      "antonyms": [
+        "harsh",
+        "severe"
+      ],
+      "definition": "kind and gentle, and not wanting to hurt anyone",
+      "examples": [
+        {
+          "en": "Our benign old teacher never raised his voice at anyone.",
+          "fa": "معلم پیر و مهربان ما هرگز سر کسی صدایش را بلند نکرد."
+        }
+      ],
+      "ipa": "/bɪˈnaɪn/",
+      "pos": "adj",
+      "synonyms": [
+        "kindly",
+        "gentle"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 29
+        }
+      ],
+      "translations": [
+        "مهربان",
+        "ملایم",
+        "خوش‌خو"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1,
+      "1400": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1400,
+    "priority": 8,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "benign"
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "confusables": [
+    {
+      "note": "spectacular صفت است به معنای چشمگیر و تماشایی، در حالی که spectacle اسم است",
+      "word": "spectacular"
+    }
+  ],
+  "homograph": {
+    "note": "The plural \"spectacles\" meaning eyeglasses is not guessable from the singular sense of an impressive public sight, and only the plural carries it. A hint must say which sense it targets; the exam tested the public-sight sense.",
+    "suspected": true
+  },
+  "id": "spectacle",
+  "lemma": "spectacle",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1405-p05",
+      "part": "vocabulary",
+      "questionNo": 11,
+      "reach": 1,
+      "surface": "spectacle",
+      "year": 1405
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "an unusual or impressive sight or public event that many people watch",
+      "examples": [
+        {
+          "en": "The opening ceremony was a spectacle that no one could forget.",
+          "fa": "مراسم افتتاحیه نمایشی بود که هیچ‌کس نمی‌توانست فراموشش کند."
+        }
+      ],
+      "ipa": "/ˈspektəkl/",
+      "pos": "n",
+      "synonyms": [
+        "display",
+        "show",
+        "scene"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 11
+        }
+      ],
+      "translations": [
+        "نمایش",
+        "منظرهٔ تماشایی",
+        "صحنهٔ جنجالی"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a pair of glasses worn to help someone see better, used only in the plural \"spectacles\"",
+      "examples": [
+        {
+          "en": "He cleaned his spectacles carefully before reading the letter.",
+          "fa": "پیش از خواندن نامه، عینکش را با دقت تمیز کرد."
+        }
+      ],
+      "ipa": "/ˈspektəklz/",
+      "pos": "n",
+      "synonyms": [
+        "glasses",
+        "eyeglasses"
+      ],
+      "testedIn": [],
+      "translations": [
+        "عینک"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1405": 1
+    },
+    "byYear": {
+      "1405": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1405,
+    "lastYear": 1405,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "spectacle"
+  ]
+}

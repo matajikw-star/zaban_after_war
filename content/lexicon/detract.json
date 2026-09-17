@@ -1,0 +1,132 @@
+{
+  "confusables": [
+    {
+      "note": "شکل نزدیک، اما distract یعنی حواس کسی را پرت کردن",
+      "word": "distract"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "detract",
+  "lemma": "detract",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p02",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 30,
+      "surface": "detracts",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p07",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 2,
+      "surface": "detracts",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p13",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 1,
+      "surface": "detracts",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p05",
+      "part": "vocabulary",
+      "questionNo": 24,
+      "reach": 1,
+      "surface": "detract",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "enhance",
+        "add to"
+      ],
+      "definition": "to make something seem less good or less valuable than it really is, usually in the phrase \"detract from\"",
+      "examples": [
+        {
+          "en": "The ugly fence detracts from the charm of the old house.",
+          "fa": "آن نردهٔ زشت از دلربایی خانهٔ قدیمی می‌کاهد."
+        }
+      ],
+      "ipa": "/dɪˈtrækt/",
+      "pos": "v",
+      "synonyms": [
+        "diminish",
+        "reduce",
+        "take away from"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 24
+        }
+      ],
+      "translations": [
+        "کاستن از (ارزش یا زیبایی)",
+        "لطمه زدن به"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 3
+    },
+    "byYear": {
+      "1398": 1,
+      "1400": 3
+    },
+    "distinctYears": 2,
+    "firstYear": 1398,
+    "lastYear": 1400,
+    "priority": 14,
+    "timesAsAnswer": 3,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "detract",
+    "detracts"
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "confusables": [
+    {
+      "note": "شکل نزدیک، اما covert یعنی پنهانی و سرّی",
+      "word": "covert"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "convert",
+  "lemma": "convert",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1402-p06",
+      "part": "vocabulary",
+      "questionNo": 19,
+      "reach": 1,
+      "surface": "convert",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1401-p03",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 31,
+      "surface": "converted",
+      "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 23,
+      "surface": "converted",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 5,
+      "surface": "converted",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 1,
+      "surface": "converted",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 1,
+      "surface": "converted",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "preserve"
+      ],
+      "definition": "to change something into a different form, or to change it so that it can be used for a different purpose",
+      "examples": [
+        {
+          "en": "They converted the old factory into a set of small flats.",
+          "fa": "آنها آن کارخانهٔ قدیمی را به مجموعه‌ای از آپارتمان‌های کوچک تبدیل کردند."
+        }
+      ],
+      "ipa": "/kənˈvɜːt/",
+      "pos": "v",
+      "synonyms": [
+        "change",
+        "transform",
+        "turn"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p06",
+          "questionNo": 19
+        },
+        {
+          "paperId": "arshad-1401-p03",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "تبدیل کردن",
+        "تغییر دادن (شکل یا کاربرد)"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to change your religion or your strong beliefs, or to persuade someone else to do so",
+      "examples": [
+        {
+          "en": "He converted to Islam after living in the country for many years.",
+          "fa": "او پس از سال‌ها زندگی در آن کشور به اسلام گروید."
+        }
+      ],
+      "ipa": "/kənˈvɜːt/",
+      "pos": "v",
+      "synonyms": [
+        "change faith"
+      ],
+      "testedIn": [],
+      "translations": [
+        "گرویدن (به دین یا باور)",
+        "دین عوض کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 4,
+      "1401": 1,
+      "1402": 1
+    },
+    "distinctYears": 3,
+    "firstYear": 1400,
+    "lastYear": 1402,
+    "priority": 12,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 6,
+    "timesTested": 6
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "convert",
+    "converted"
+  ]
+}

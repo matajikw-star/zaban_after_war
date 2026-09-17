@@ -1,0 +1,83 @@
+{
+  "confusables": [
+    {
+      "note": "هر دو به «پیش‌گیری» ترجمه می‌شوند؛ اما preemptive یعنی پیش‌دستی کردن بر حریف، در حالی که preventive یعنی جلوگیری کلی از وقوع چیزی.",
+      "word": "preventive"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "preemptive",
+  "lemma": "preemptive",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1405-p07",
+      "part": "vocabulary",
+      "questionNo": 14,
+      "reach": 1,
+      "surface": "preemptive",
+      "year": 1405
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "retaliatory"
+      ],
+      "definition": "done before someone else can act, in order to stop them from acting or to gain an advantage",
+      "examples": [
+        {
+          "en": "The company made a preemptive offer before its rival could bid.",
+          "fa": "شرکت پیش از آنکه رقیبش پیشنهاد بدهد، پیش‌دستانه پیشنهاد خود را ارائه کرد."
+        }
+      ],
+      "ipa": "/priˈemptɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "anticipatory"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p07",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "پیش‌دستانه",
+        "پیش‌گیرانه (با اقدام زودهنگام)",
+        "بازدارنده"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1405": 1
+    },
+    "byYear": {
+      "1405": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1405,
+    "lastYear": 1405,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "preemptive"
+  ]
+}

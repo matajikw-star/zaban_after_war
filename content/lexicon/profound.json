@@ -1,0 +1,124 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "profound",
+  "lemma": "profound",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p08",
+      "part": "cloze",
+      "questionNo": 32,
+      "reach": 1,
+      "surface": "profoundly",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1398-p01",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 58,
+      "surface": "profound",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "slight",
+        "superficial"
+      ],
+      "definition": "very great in degree, and felt or experienced very strongly; as the adverb \"profoundly\", to a very great degree",
+      "examples": [
+        {
+          "en": "The new medicine had a profound effect on her daily life.",
+          "fa": "داروی جدید تأثیری عمیق بر زندگی روزمرهٔ او گذاشت."
+        }
+      ],
+      "ipa": "/prəˈfaʊnd/",
+      "pos": "adj",
+      "synonyms": [
+        "deep",
+        "intense",
+        "far-reaching"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 32
+        }
+      ],
+      "translations": [
+        "عمیق",
+        "شدید",
+        "چشمگیر"
+      ]
+    },
+    {
+      "antonyms": [
+        "simplistic",
+        "shallow"
+      ],
+      "definition": "showing great knowledge or serious thought, and not easy to understand",
+      "examples": [
+        {
+          "en": "Her lecture raised profound questions about what memory really is.",
+          "fa": "سخنرانی او پرسش‌هایی ژرف دربارهٔ این‌که حافظه واقعاً چیست مطرح کرد."
+        }
+      ],
+      "ipa": "/prəˈfaʊnd/",
+      "pos": "adj",
+      "synonyms": [
+        "thoughtful",
+        "weighty",
+        "philosophical"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p01",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "ژرف",
+        "عمیق و اندیشمندانه"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1398": 1,
+      "1399": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1398,
+    "lastYear": 1399,
+    "priority": 8,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "profound",
+    "profoundly"
+  ]
+}

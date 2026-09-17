@@ -1,0 +1,102 @@
+{
+  "confusables": [
+    {
+      "note": "adapt یعنی خود را با شرایط تازه وفق دادن یا اثری را اقتباس کردن، اما adjust بیشتر تغییری جزئی برای میزان کردن است.",
+      "word": "adapt"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "adjust",
+  "lemma": "adjust",
+  "level": "B1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1402-p03",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 29,
+      "surface": "adjust",
+      "year": 1402
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to change something slightly so that it works better or fits better",
+      "examples": [
+        {
+          "en": "He adjusted the mirror before pulling out of the parking space.",
+          "fa": "پیش از بیرون آمدن از جای پارک، آینه را تنظیم کرد."
+        }
+      ],
+      "ipa": "/əˈdʒʌst/",
+      "pos": "v",
+      "synonyms": [
+        "modify",
+        "fine-tune",
+        "regulate"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p03",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "تنظیم کردن",
+        "میزان کردن",
+        "اصلاح جزئی کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to get used to a new situation by changing the way you behave or think",
+      "examples": [
+        {
+          "en": "It took the family a year to adjust to life in a new country.",
+          "fa": "یک سال طول کشید تا خانواده با زندگی در کشوری تازه خو بگیرد."
+        }
+      ],
+      "ipa": "/əˈdʒʌst/",
+      "pos": "v",
+      "synonyms": [
+        "adapt",
+        "acclimatize"
+      ],
+      "testedIn": [],
+      "translations": [
+        "خو گرفتن",
+        "سازگار شدن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1402": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1402,
+    "lastYear": 1402,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "adjust"
+  ]
+}

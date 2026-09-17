@@ -1,0 +1,116 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "involved",
+  "lemma": "involved",
+  "level": "B1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p01",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 48,
+      "surface": "involved",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 3,
+      "surface": "involved",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "uninvolved",
+        "detached"
+      ],
+      "definition": "taking part in an activity or closely connected with a situation",
+      "examples": [
+        {
+          "en": "Every teacher involved in the project received extra training.",
+          "fa": "هر معلمی که در این طرح دخیل بود آموزش اضافی دریافت کرد."
+        }
+      ],
+      "ipa": "/ɪnˈvɒlvd/",
+      "pos": "adj",
+      "synonyms": [
+        "engaged",
+        "concerned"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "درگیر",
+        "دخیل",
+        "شرکت‌داشته"
+      ]
+    },
+    {
+      "antonyms": [
+        "simple"
+      ],
+      "definition": "complicated and difficult to follow",
+      "examples": [
+        {
+          "en": "He gave an involved explanation that nobody in the room followed.",
+          "fa": "توضیحی پیچیده داد که هیچ‌کس در اتاق آن را دنبال نکرد."
+        }
+      ],
+      "ipa": "/ɪnˈvɒlvd/",
+      "pos": "adj",
+      "synonyms": [
+        "complex",
+        "convoluted"
+      ],
+      "testedIn": [],
+      "translations": [
+        "پیچیده",
+        "درهم‌وبرهم"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "involved"
+  ]
+}

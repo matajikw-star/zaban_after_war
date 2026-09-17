@@ -1,0 +1,99 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "arrive",
+  "lemma": "arrive",
+  "level": "A1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1405-p03",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 22,
+      "surface": "arrived",
+      "year": 1405
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "depart",
+        "leave"
+      ],
+      "definition": "to reach a place at the end of a journey",
+      "examples": [
+        {
+          "en": "We arrived at the station just as the last train was leaving.",
+          "fa": "درست وقتی آخرین قطار داشت می‌رفت، به ایستگاه رسیدیم."
+        }
+      ],
+      "ipa": "/əˈraɪv/",
+      "pos": "v",
+      "synonyms": [
+        "reach",
+        "get to",
+        "turn up"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p03",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "رسیدن",
+        "وارد شدن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "in the phrase \"arrive at\", to reach a decision or a conclusion after thinking or discussing",
+      "examples": [
+        {
+          "en": "After hours of debate the committee arrived at a workable decision.",
+          "fa": "پس از ساعت‌ها بحث، کمیته به تصمیمی عملی رسید."
+        }
+      ],
+      "ipa": "/əˈraɪv/",
+      "pos": "v",
+      "synonyms": [
+        "reach",
+        "attain"
+      ],
+      "testedIn": [],
+      "translations": [
+        "به (نتیجه یا تصمیم) رسیدن",
+        "دست یافتن به"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1405": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1405,
+    "lastYear": 1405,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "arrived"
+  ]
+}

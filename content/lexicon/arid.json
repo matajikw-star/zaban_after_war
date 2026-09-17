@@ -1,0 +1,100 @@
+{
+  "confusables": [
+    {
+      "note": "شباهت ظاهری؛ acrid یعنی تند و گزنده (دربارهٔ بو یا مزه)",
+      "word": "acrid"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "arid",
+  "lemma": "arid",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p01",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 42,
+      "surface": "arid",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p03",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 16,
+      "surface": "arid",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "humid",
+        "fertile"
+      ],
+      "definition": "getting very little rain, and therefore very dry and bare",
+      "examples": [
+        {
+          "en": "Few crops will grow in the arid land beyond those mountains.",
+          "fa": "در زمین خشک آن‌سوی آن کوه‌ها محصول کمی می‌روید."
+        }
+      ],
+      "ipa": "/ˈærɪd/",
+      "pos": "adj",
+      "synonyms": [
+        "parched",
+        "barren"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "خشک",
+        "کم‌باران",
+        "بی‌آب و علف"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 2
+    },
+    "byYear": {
+      "1399": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 8,
+    "timesAsAnswer": 2,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "arid"
+  ]
+}

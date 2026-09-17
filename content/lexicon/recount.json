@@ -1,0 +1,109 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": "Two unrelated words with the same spelling: /rɪˈkaʊnt/ 'to narrate' (from Old French conter, to tell) and /ˌriːˈkaʊnt/ re- + count, 'to count again', which is also a noun (a recount of the votes). Different stress and different etymology; a learner meeting one would not guess the other.",
+    "suspected": true
+  },
+  "id": "recount",
+  "lemma": "recount",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p01",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 42,
+      "surface": "recount",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p03",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 16,
+      "surface": "recount",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to tell someone about something that happened, describing it in detail",
+      "examples": [
+        {
+          "en": "The old sailor liked to recount his voyages to anyone who listened.",
+          "fa": "آن ملوان پیر دوست داشت سفرهایش را برای هر شنونده‌ای بازگو کند."
+        }
+      ],
+      "ipa": "/rɪˈkaʊnt/",
+      "pos": "v",
+      "synonyms": [
+        "narrate",
+        "relate",
+        "describe"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "بازگو کردن",
+        "شرح دادن",
+        "نقل کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to count something again, especially votes in an election",
+      "examples": [
+        {
+          "en": "The losing party demanded that officials recount the ballots.",
+          "fa": "حزب بازنده خواستار بازشماری آرا توسط مسئولان شد."
+        }
+      ],
+      "ipa": "/ˌriːˈkaʊnt/",
+      "pos": "v",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "دوباره شمردن",
+        "بازشماری کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "recount"
+  ]
+}

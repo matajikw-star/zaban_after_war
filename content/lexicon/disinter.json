@@ -1,0 +1,85 @@
+{
+  "confusables": [
+    {
+      "note": "inter یعنی به خاک سپردن؛ disinter دقیقاً عکس آن است و یعنی از خاک درآوردن",
+      "word": "inter"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "disinter",
+  "lemma": "disinter",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1398-p05",
+      "part": "vocabulary",
+      "questionNo": 24,
+      "reach": 1,
+      "surface": "disinter",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "bury",
+        "inter"
+      ],
+      "definition": "to dig something up out of the ground, especially a buried body, and by extension to bring a forgotten thing back to notice",
+      "examples": [
+        {
+          "en": "Archaeologists disinterred several clay jars beneath the ruined temple.",
+          "fa": "باستان‌شناسان چند کوزه‌ی سفالی را از زیر معبد ویران بیرون آوردند."
+        }
+      ],
+      "ipa": "/ˌdɪsɪnˈtɜː(r)/",
+      "pos": "v",
+      "synonyms": [
+        "exhume",
+        "unearth"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 24
+        }
+      ],
+      "translations": [
+        "نبش قبر کردن",
+        "از خاک درآوردن",
+        "از فراموشی بیرون کشیدن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "disinter"
+  ]
+}

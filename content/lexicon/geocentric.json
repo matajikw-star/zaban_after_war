@@ -1,0 +1,87 @@
+{
+  "confusables": [],
+  "domain": {
+    "fieldCodes": []
+  },
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "geocentric",
+  "lemma": "geocentric",
+  "level": null,
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p01",
+      "part": "grammar",
+      "questionNo": 13,
+      "reach": 42,
+      "surface": "geocentric",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p01",
+      "part": "grammar",
+      "questionNo": 14,
+      "reach": 42,
+      "surface": "geocentric",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p01",
+      "part": "grammar",
+      "questionNo": 15,
+      "reach": 42,
+      "surface": "geocentric",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p03",
+      "part": "grammar",
+      "questionNo": 13,
+      "reach": 16,
+      "surface": "geocentric",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p03",
+      "part": "grammar",
+      "questionNo": 14,
+      "reach": 16,
+      "surface": "geocentric",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p03",
+      "part": "grammar",
+      "questionNo": 15,
+      "reach": 16,
+      "surface": "geocentric",
+      "year": 1399
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 6,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "geocentric"
+  ]
+}

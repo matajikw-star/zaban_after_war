@@ -1,0 +1,161 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "run",
+  "lemma": "run",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1401-p01",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 58,
+      "surface": "runs",
+      "year": 1401
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p07",
+      "part": "cloze",
+      "questionNo": 177,
+      "reach": 1,
+      "surface": "running",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to be in a situation where something bad could happen to you, as in \"run a risk\" or \"run the risk of\"",
+      "examples": [
+        {
+          "en": "If you skip the backup, you run the risk of losing everything.",
+          "fa": "اگر از پشتیبان‌گیری صرف‌نظر کنی، در معرض خطرِ از دست دادن همه چیز قرار می‌گیری."
+        }
+      ],
+      "ipa": "/rʌn/",
+      "pos": "v",
+      "synonyms": [
+        "risk",
+        "incur"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p01",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "در معرض خطر بودن",
+        "خطر کردن",
+        "ریسک کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to be at a particular level, rate or amount",
+      "examples": [
+        {
+          "en": "Inflation was running at nearly forty percent that year.",
+          "fa": "تورم در آن سال نزدیک به چهل درصد بود."
+        }
+      ],
+      "ipa": "/rʌn/",
+      "pos": "v",
+      "synonyms": [
+        "stand at",
+        "amount to"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 177
+        }
+      ],
+      "translations": [
+        "بالغ بودن بر",
+        "در سطحِ ... بودن",
+        "رسیدن به (میزان)"
+      ]
+    },
+    {
+      "antonyms": [
+        "walk"
+      ],
+      "definition": "to move quickly on foot, faster than walking",
+      "examples": [
+        {
+          "en": "He runs five kilometres every morning before work.",
+          "fa": "او هر روز صبح پیش از کار پنج کیلومتر می‌دود."
+        }
+      ],
+      "ipa": "/rʌn/",
+      "pos": "v",
+      "synonyms": [
+        "sprint",
+        "dash"
+      ],
+      "testedIn": [],
+      "translations": [
+        "دویدن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to manage or be in charge of a business or organization",
+      "examples": [
+        {
+          "en": "Her sister runs a small bakery near the station.",
+          "fa": "خواهرش نانوایی کوچکی نزدیک ایستگاه اداره می‌کند."
+        }
+      ],
+      "ipa": "/rʌn/",
+      "pos": "v",
+      "synonyms": [
+        "manage",
+        "operate"
+      ],
+      "testedIn": [],
+      "translations": [
+        "اداره کردن",
+        "گرداندن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1,
+      "1401": 1
+    },
+    "byYear": {
+      "1398": 1,
+      "1401": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1398,
+    "lastYear": 1401,
+    "priority": 10,
+    "timesAsAnswer": 2,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "running",
+    "runs"
+  ]
+}

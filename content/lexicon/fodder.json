@@ -1,0 +1,98 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "fodder",
+  "lemma": "fodder",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1398-p05",
+      "part": "cloze",
+      "questionNo": 31,
+      "reach": 1,
+      "surface": "fodder",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "material that supplies an endless demand for something, especially subject matter for talk, argument or writing",
+      "examples": [
+        {
+          "en": "The scandal became fodder for every talk show in the country.",
+          "fa": "آن رسوایی به دست‌مایه‌ی هر برنامه‌ی گفت‌وگومحور در کشور بدل شد."
+        }
+      ],
+      "ipa": "/ˈfɒdə(r)/",
+      "pos": "noun",
+      "synonyms": [
+        "material",
+        "grist"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 31
+        }
+      ],
+      "translations": [
+        "دست‌مایه",
+        "خوراک (بحث و جدل)",
+        "مایه"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "dried food such as hay that is given to farm animals",
+      "examples": [
+        {
+          "en": "The farmer stores enough fodder to last the herd all winter.",
+          "fa": "کشاورز آن‌قدر علوفه انبار می‌کند که تمام زمستان گله را کفاف دهد."
+        }
+      ],
+      "ipa": "/ˈfɒdə(r)/",
+      "pos": "noun",
+      "synonyms": [
+        "feed",
+        "forage"
+      ],
+      "testedIn": [],
+      "translations": [
+        "علوفه",
+        "خوراک دام"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "fodder"
+  ]
+}

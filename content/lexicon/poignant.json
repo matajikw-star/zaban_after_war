@@ -1,0 +1,101 @@
+{
+  "confusables": [
+    {
+      "note": "ظاهر و آهنگ نزدیک؛ اما pungent یعنی تند و زننده (دربارهٔ بو یا مزه)",
+      "word": "pungent"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "poignant",
+  "lemma": "poignant",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p08",
+      "part": "vocabulary",
+      "questionNo": 22,
+      "reach": 1,
+      "surface": "poignant",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p07",
+      "part": "vocabulary",
+      "questionNo": 18,
+      "reach": 1,
+      "surface": "poignant",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "unmoving"
+      ],
+      "definition": "causing a sharp feeling of sadness, pity or regret",
+      "examples": [
+        {
+          "en": "The last letter she wrote to her brother is painfully poignant.",
+          "fa": "آخرین نامه‌ای که برای برادرش نوشت به‌شکلی دردناک غم‌انگیز است."
+        }
+      ],
+      "ipa": "/ˈpɔɪnjənt/",
+      "pos": "adj",
+      "synonyms": [
+        "moving",
+        "touching",
+        "affecting"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p07",
+          "questionNo": 18
+        },
+        {
+          "paperId": "arshad-1400-p08",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "تأثیرگذار و غم‌انگیز",
+        "دلخراش",
+        "سوزناک"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1,
+      "1400": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1400,
+    "priority": 8,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "poignant"
+  ]
+}

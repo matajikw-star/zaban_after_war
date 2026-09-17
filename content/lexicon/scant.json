@@ -1,0 +1,39 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "scant",
+  "lemma": "scant",
+  "level": null,
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1402-p06",
+      "part": "vocabulary",
+      "questionNo": 16,
+      "reach": 1,
+      "surface": "scant",
+      "year": 1402
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "scant"
+  ]
+}

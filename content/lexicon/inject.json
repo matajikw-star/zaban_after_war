@@ -1,0 +1,128 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "inject",
+  "lemma": "inject",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p01",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 48,
+      "surface": "injects",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p04",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 6,
+      "surface": "injects",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 3,
+      "surface": "injects",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "extract"
+      ],
+      "definition": "to force a liquid, especially a medicine, into a person's body with a needle",
+      "examples": [
+        {
+          "en": "The nurse injected the vaccine into his upper arm.",
+          "fa": "پرستار واکسن را در بازوی او تزریق کرد."
+        }
+      ],
+      "ipa": "/ɪnˈdʒekt/",
+      "pos": "v",
+      "synonyms": [
+        "administer"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "تزریق کردن",
+        "با سرنگ وارد کردن"
+      ]
+    },
+    {
+      "antonyms": [
+        "withdraw"
+      ],
+      "definition": "to add a new quality, or new money, to something in order to improve it",
+      "examples": [
+        {
+          "en": "The government injected fresh funds into the railway network.",
+          "fa": "دولت سرمایه‌ی تازه‌ای به شبکه‌ی راه‌آهن وارد کرد."
+        }
+      ],
+      "ipa": "/ɪnˈdʒekt/",
+      "pos": "v",
+      "synonyms": [
+        "introduce",
+        "infuse"
+      ],
+      "testedIn": [],
+      "translations": [
+        "وارد کردن (روحیه یا سرمایه)",
+        "دمیدن به"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "injects"
+  ]
+}

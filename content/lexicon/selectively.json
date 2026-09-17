@@ -1,0 +1,91 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "selectively",
+  "lemma": "selectively",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 20,
+      "surface": "selectively",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 1,
+      "surface": "selectively",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "indiscriminately"
+      ],
+      "definition": "in a way that involves choosing only some things or people and leaving out others",
+      "examples": [
+        {
+          "en": "He quoted the report selectively, leaving out its main warning.",
+          "fa": "او گزارش را گزینشی نقل کرد و هشدار اصلی آن را حذف کرد."
+        }
+      ],
+      "ipa": "/sɪˈlektɪvli/",
+      "pos": "adv",
+      "synonyms": [
+        "discriminatingly"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "به‌طور گزینشی",
+        "انتخابی",
+        "دست‌چین‌شده"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "selectively"
+  ]
+}

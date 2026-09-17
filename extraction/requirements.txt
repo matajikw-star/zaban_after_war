@@ -1,0 +1,3 @@
+# Offline, CPU-only, no CDN and no API - see docs/adr/0005-no-runtime-cdn.md.
+pymupdf>=1.24            # PDF page counts, rendering, no external binary
+rapidocr-onnxruntime>=1.3  # local English OCR for routing, dedup and cross-check

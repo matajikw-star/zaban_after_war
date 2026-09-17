@@ -1,0 +1,514 @@
+{
+  "paperId": "arshad-1400-p08",
+  "degree": "arshad",
+  "year": 1400,
+  "groupCodes": [
+    "1110"
+  ],
+  "bookletCount": 1,
+  "source": {
+    "file": "1110-1400.pdf",
+    "pages": [
+      2,
+      3,
+      4
+    ]
+  },
+  "extractedBy": {
+    "model": "claude-sonnet-5",
+    "at": "2026-09-15"
+  },
+  "questions": [
+    {
+      "no": 1,
+      "part": "grammar",
+      "stem": "..... are often heard to say that what they do is linguistics that happens to be in a forensic context, and that a forensic linguist must first be a good linguist.",
+      "options": [
+        "That did much of the ground-breaking work in forensic linguistics",
+        "Linguists did much of the ground-breaking work in forensic linguistics who",
+        "Linguists did much of the ground-breaking work which is in forensic linguistics",
+        "Linguists who did much of the ground-breaking work in forensic linguistics"
+      ],
+      "optionLemmas": [
+        "linguistics",
+        "linguistics",
+        "linguistics",
+        "linguistics"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "who",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "grammar",
+      "stem": "By the 17th century, European scholars realized ..... difficult to capture accurately the characteristics of their own languages as well as of languages discovered in explorations of the New World.",
+      "options": [
+        "fitting languages into the structure of Greek and Latin which was made",
+        "that fitting languages into the structure of Greek and Latin made it",
+        "how fitting languages into the structure of Greek and Latin have made it",
+        "that having fit languages into the structure of Greek and Latin would be made"
+      ],
+      "optionLemmas": [
+        "fit",
+        "fit",
+        "fit",
+        "fit"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "fit",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "grammar",
+      "stem": "..... all the way from its beginning to its present form is appreciating the difference between vision and hearing.",
+      "options": [
+        "Essential for finding the track of language",
+        "It is essential for finding the track of language",
+        "Essential for finding the track of language has",
+        "Since it is essential for finding the track of language"
+      ],
+      "optionLemmas": [
+        "essential",
+        "essential",
+        "essential",
+        "essential"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "essential",
+      "uncertain": [
+        "q3: fronted-complement inversion (\"Essential ... is appreciating ...\") judged correct, but the sentence is awkward enough that another option cannot be fully ruled out."
+      ]
+    },
+    {
+      "no": 4,
+      "part": "grammar",
+      "stem": "While semiology might have seemed to be, in some limited twentieth-century intellectual circles, the final word on the sign and, especially, the human phenomenon of language, ..... .",
+      "options": [
+        "work from two other perspectives thrived",
+        "work from two other perspectives which thrived",
+        "whose work from two other perspectives thrived",
+        "so work from two other perspectives that thrived"
+      ],
+      "optionLemmas": [
+        "thrive",
+        "thrive",
+        "thrive",
+        "thrive"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "thrive",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "grammar",
+      "stem": "The period of greatest interest in computational linguistics was from about 1955 to 1965, ..... would lead to computerized or mechanical translation involving grammatical and semantic analysis of sentences.",
+      "options": [
+        "that researchers undertook projects that they",
+        "when researchers that have undertaken projects",
+        "when researchers undertook projects that",
+        "during which researchers who undertook projects that"
+      ],
+      "optionLemmas": [
+        "undertake",
+        "undertake",
+        "undertake",
+        "undertake"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "undertake",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "grammar",
+      "stem": "It is natural for people to view their own first language as having intrinsic advantages over languages that are foreign to them. ..... combined with a consideration of history reminds us that no language acquires importance because of what are assumed to be purely internal advantages.",
+      "options": [
+        "Therefore, a scientific approach to linguistic study which",
+        "Moreover, a scientific approach from linguistic study is",
+        "However, a scientific approach to linguistic study",
+        "Otherwise, a scientific approach of linguistic study has"
+      ],
+      "optionLemmas": [
+        "approach",
+        "approach",
+        "approach",
+        "approach"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "however",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "grammar",
+      "stem": "Recent changes in the criteria for scientific evidences have emphasized the heuristic requirements of the scientific method traditionally used in the natural sciences.",
+      "options": [
+        "criteria for",
+        "evidences",
+        "traditionally used",
+        "in the"
+      ],
+      "optionLemmas": [
+        "criterion",
+        "evidence",
+        "use",
+        "the"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "evidence",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "Although it has been fairly satisfactorily determined that the language center is in the left hemisphere of the brain in right-handed people, but controversy remains concerning whether individual aspects of language are correlated with different specialized areas of the brain.",
+      "options": [
+        "satisfactorily determined",
+        "but",
+        "whether",
+        "are correlated with"
+      ],
+      "optionLemmas": [
+        "determine",
+        "but",
+        "whether",
+        "correlate"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "but",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "grammar",
+      "stem": "Many modern schools of linguistics that have been very much concerned with the role of language in society would tend to relate linguistics more closely to sociology and anthropology that to any other discipline.",
+      "options": [
+        "concerned with",
+        "to relate",
+        "more closely",
+        "that"
+      ],
+      "optionLemmas": [
+        "concern",
+        "relate",
+        "close",
+        "that"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "than",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "grammar",
+      "stem": "As soon as Sanskrit became known to the Western learned world, the unravelling of comparative Indo-European grammar ensued, and the foundations were lain for the whole 19th-century edifice of comparative philology and historical linguistics.",
+      "options": [
+        "As soon as",
+        "learned world",
+        "ensued",
+        "were lain"
+      ],
+      "optionLemmas": [
+        "soon",
+        "learn",
+        "ensue",
+        "lie"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "lay",
+      "uncertain": []
+    },
+    {
+      "no": 11,
+      "part": "grammar",
+      "stem": "When an individual applies language in a new way to express hostility or ridicule, often with sharp wit, he may be creating slang, but the new expression will perish unless it is not picked up by others.",
+      "options": [
+        "When",
+        "slang",
+        "will perish",
+        "unless it is not"
+      ],
+      "optionLemmas": [
+        "when",
+        "slang",
+        "perish",
+        "unless"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "unless",
+      "uncertain": []
+    },
+    {
+      "no": 12,
+      "part": "grammar",
+      "stem": "Language is a part of culture, but culture is a complex totality containing many different features, and the boundaries between cultural features are not clear-cut, nor they all coincide.",
+      "options": [
+        "complex totality",
+        "containing",
+        "are not",
+        "nor they all coincide"
+      ],
+      "optionLemmas": [
+        "totality",
+        "contain",
+        "be",
+        "nor"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "nor",
+      "uncertain": []
+    },
+    {
+      "no": 13,
+      "part": "vocabulary",
+      "stem": "When I looked at the sculpture up close, I saw a few ..... blemishes and realized the art was not perfect.",
+      "options": [
+        "invincible",
+        "compatible",
+        "discernible",
+        "convertible"
+      ],
+      "optionLemmas": [
+        "invincible",
+        "compatible",
+        "discernible",
+        "convertible"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "discernible",
+      "uncertain": []
+    },
+    {
+      "no": 14,
+      "part": "vocabulary",
+      "stem": "There is no doubt that most of the billionaire's ..... comes from people who are simply after his money.",
+      "options": [
+        "saturation",
+        "coronation",
+        "adulation",
+        "trepidation"
+      ],
+      "optionLemmas": [
+        "saturation",
+        "coronation",
+        "adulation",
+        "trepidation"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "adulation",
+      "uncertain": []
+    },
+    {
+      "no": 15,
+      "part": "vocabulary",
+      "stem": "Jeremey seems to have found the secret of perpetual youth, and we all hope that he will long continue to demonstrate this youthful ..... .",
+      "options": [
+        "vivacity",
+        "sagacity",
+        "tenacity",
+        "perplexity"
+      ],
+      "optionLemmas": [
+        "vivacity",
+        "sagacity",
+        "tenacity",
+        "perplexity"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "vivacity",
+      "uncertain": []
+    },
+    {
+      "no": 16,
+      "part": "vocabulary",
+      "stem": "The very purpose of segregation was to ..... people of color and to declare them unfit to share facilities with whites.",
+      "options": [
+        "stigmatize",
+        "epitomize",
+        "subsidize",
+        "tantalize"
+      ],
+      "optionLemmas": [
+        "stigmatize",
+        "epitomize",
+        "subsidize",
+        "tantalize"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "stigmatize",
+      "uncertain": []
+    },
+    {
+      "no": 17,
+      "part": "vocabulary",
+      "stem": "His share of what we have obtained is, after all, but trifling for a(n) ..... man who cherishes a grudge against you, and desires the whole.",
+      "options": [
+        "salubrious",
+        "ludicrous",
+        "avaricious",
+        "obsequious"
+      ],
+      "optionLemmas": [
+        "salubrious",
+        "ludicrous",
+        "avaricious",
+        "obsequious"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "avaricious",
+      "uncertain": []
+    },
+    {
+      "no": 18,
+      "part": "vocabulary",
+      "stem": "As a nation's wealth is the social worth of its capital assets, it is a measure of the nation's ..... .",
+      "options": [
+        "reticence",
+        "opulence",
+        "adherence",
+        "quintessence"
+      ],
+      "optionLemmas": [
+        "reticence",
+        "opulence",
+        "adherence",
+        "quintessence"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "opulence",
+      "uncertain": []
+    },
+    {
+      "no": 19,
+      "part": "vocabulary",
+      "stem": "This book offers a distillation of that research, within a cogently constructed and ..... documented overall argument.",
+      "options": [
+        "viscously",
+        "zealously",
+        "copiously",
+        "ominously"
+      ],
+      "optionLemmas": [
+        "viscous",
+        "zealous",
+        "copious",
+        "ominous"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "copious",
+      "uncertain": []
+    },
+    {
+      "no": 20,
+      "part": "vocabulary",
+      "stem": "If the criminal wants to get his sentence reduced, he must agree to ..... his accomplice's whereabouts.",
+      "options": [
+        "hoard",
+        "divulge",
+        "capsize",
+        "enervate"
+      ],
+      "optionLemmas": [
+        "hoard",
+        "divulge",
+        "capsize",
+        "enervate"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "divulge",
+      "uncertain": []
+    },
+    {
+      "no": 21,
+      "part": "vocabulary",
+      "stem": "The prime minister's proposal for new taxes created such a(n) ..... that his government fell.",
+      "options": [
+        "upheaval",
+        "protrusion",
+        "allegiance",
+        "congregation"
+      ],
+      "optionLemmas": [
+        "upheaval",
+        "protrusion",
+        "allegiance",
+        "congregation"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "upheaval",
+      "uncertain": []
+    },
+    {
+      "no": 22,
+      "part": "vocabulary",
+      "stem": "Obesity is partly due to inappropriate nutrition and partly to a ..... lifestyle that does not involve any physical effort.",
+      "options": [
+        "tractable",
+        "poignant",
+        "sedentary",
+        "prodigious"
+      ],
+      "optionLemmas": [
+        "tractable",
+        "poignant",
+        "sedentary",
+        "prodigious"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "sedentary",
+      "uncertain": []
+    }
+  ],
+  "uncertain": [
+    "Layout mismatch: this booklet's page 4 is headed \"PART C: Vocabulary\" (word-choice items 13-22), not a reading-comprehension passage. No genuine Part C reading text exists in this paper's page range, so the standard 'skip Part C reading' rule did not apply here; Part C was transcribed as vocabulary per the task's explicit instruction to check the printed header.",
+    "This booklet's overall section layout differs from the standard corpus pattern: Part A here is 'Structure' (sentence-completion grammar, qq 1-6), Part B is 'Written Expression' (error-identification grammar, qq 7-12), and Part C is 'Vocabulary' (qq 13-22). There is no cloze-test section in this paper.",
+    "q3: sentence completion is grammatically awkward regardless of chosen option; answer inferred as the fronted-complement inversion pattern but flagged low confidence."
+  ]
+}

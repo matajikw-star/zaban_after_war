@@ -1,0 +1,140 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "fascinate",
+  "lemma": "fascinate",
+  "level": "B1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1401-p01",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 58,
+      "surface": "fascinates",
+      "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 23,
+      "surface": "fascinate",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 5,
+      "surface": "fascinate",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "fascinate",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "fascinate",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "bore"
+      ],
+      "definition": "to attract someone strongly and hold their interest completely",
+      "examples": [
+        {
+          "en": "Deep-sea creatures have fascinated scientists for more than a century.",
+          "fa": "موجودات اعماق دریا بیش از یک قرن دانشمندان را مجذوب کرده‌اند."
+        }
+      ],
+      "ipa": "/ˈfæsɪneɪt/",
+      "pos": "v",
+      "synonyms": [
+        "captivate",
+        "enthral",
+        "intrigue"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p01",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "مجذوب کردن",
+        "شیفته کردن",
+        "سخت جلب کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 4,
+      "1401": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1400,
+    "lastYear": 1401,
+    "priority": 9,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 5,
+    "timesTested": 5
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "fascinate",
+    "fascinates"
+  ]
+}

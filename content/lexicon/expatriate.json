@@ -1,0 +1,130 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "expatriate",
+  "lemma": "expatriate",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1402-p04",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 1,
+      "surface": "expatriated",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1402-p05",
+      "part": "vocabulary",
+      "questionNo": 12,
+      "reach": 1,
+      "surface": "expatriated",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p09",
+      "part": "cloze",
+      "questionNo": 40,
+      "reach": 1,
+      "surface": "expatriated",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "repatriate"
+      ],
+      "definition": "to send someone away from their own country, or to leave your own country in order to live somewhere else",
+      "examples": [
+        {
+          "en": "Many writers were expatriated during those years of censorship.",
+          "fa": "در آن سال‌های سانسور، بسیاری از نویسندگان از وطن رانده شدند."
+        }
+      ],
+      "ipa": "/eksˈpætrieɪt/",
+      "pos": "v",
+      "synonyms": [
+        "banish",
+        "exile"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p04",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1402-p05",
+          "questionNo": 12
+        },
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 40
+        }
+      ],
+      "translations": [
+        "از وطن راندن",
+        "تبعید کردن",
+        "ترک وطن کردن"
+      ]
+    },
+    {
+      "antonyms": [
+        "native"
+      ],
+      "definition": "a person who lives and works in a country that is not their own",
+      "examples": [
+        {
+          "en": "A small community of expatriates meets at the cafe every Friday.",
+          "fa": "جمع کوچکی از ایرانیان مقیم خارج هر جمعه در آن کافه گرد هم می‌آیند."
+        }
+      ],
+      "ipa": "/eksˈpætriət/",
+      "pos": "n",
+      "synonyms": [
+        "emigrant"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مقیم خارج",
+        "خارج‌نشین"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 1,
+      "1402": 2
+    },
+    "distinctYears": 2,
+    "firstYear": 1400,
+    "lastYear": 1402,
+    "priority": 7,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "expatriated"
+  ]
+}

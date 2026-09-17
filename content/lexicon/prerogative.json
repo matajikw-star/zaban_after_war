@@ -1,0 +1,84 @@
+{
+  "confusables": [
+    {
+      "note": "هر دو درباره امتیاز مقام‌اند؛ اما perquisite یعنی مزایای جانبی شغل (مثل خودرو یا خانه سازمانی)، نه حق و اختیار قانونی.",
+      "word": "perquisite"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "prerogative",
+  "lemma": "prerogative",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p05",
+      "part": "vocabulary",
+      "questionNo": 26,
+      "reach": 1,
+      "surface": "prerogative",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "obligation"
+      ],
+      "definition": "a right or a special advantage that belongs to a particular person or group because of their position",
+      "examples": [
+        {
+          "en": "Choosing the members of the cabinet is the prerogative of the president.",
+          "fa": "انتخاب اعضای کابینه از اختیارات ویژه رئیس‌جمهور است."
+        }
+      ],
+      "ipa": "/prɪˈrɒɡətɪv/",
+      "pos": "n",
+      "synonyms": [
+        "privilege",
+        "entitlement"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 26
+        }
+      ],
+      "translations": [
+        "اختیار ویژه",
+        "حق انحصاری",
+        "امتیاز مقام"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "prerogative"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "confusables": [
+    {
+      "note": "فقط یک حرف فرق دارد اما معنا کاملاً جداست؛ opposite یعنی مقابل یا متضاد",
+      "word": "opposite"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "apposite",
+  "lemma": "apposite",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1402-p03",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 29,
+      "surface": "apposite",
+      "year": 1402
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "irrelevant",
+        "inappropriate"
+      ],
+      "definition": "very suitable for the situation or for what is being discussed",
+      "examples": [
+        {
+          "en": "Her closing remark was short, apposite and impossible to argue with.",
+          "fa": "سخن پایانی او کوتاه، بجا و غیرقابل‌مناقشه بود."
+        }
+      ],
+      "ipa": "/ˈæpəzɪt/",
+      "pos": "adj",
+      "synonyms": [
+        "apt",
+        "pertinent",
+        "fitting"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p03",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "بجا",
+        "مناسب",
+        "درخور"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1402": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1402,
+    "lastYear": 1402,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "apposite"
+  ]
+}

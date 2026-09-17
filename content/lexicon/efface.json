@@ -1,0 +1,102 @@
+{
+  "confusables": [
+    {
+      "note": "deface یعنی ظاهر چیزی را خراب و بدنما کردن، نه محو و پاک کردن آن",
+      "word": "deface"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "efface",
+  "lemma": "efface",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p10",
+      "part": "vocabulary",
+      "questionNo": 31,
+      "reach": 1,
+      "surface": "efface",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "restore"
+      ],
+      "definition": "to rub out or remove a mark, a memory or a sign so that it can no longer be seen",
+      "examples": [
+        {
+          "en": "Time had effaced the names carved into the old stone.",
+          "fa": "زمان نام‌های کنده‌شده بر آن سنگ کهن را محو کرده بود."
+        }
+      ],
+      "ipa": "/ɪˈfeɪs/",
+      "pos": "v",
+      "synonyms": [
+        "erase",
+        "obliterate"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 31
+        }
+      ],
+      "translations": [
+        "محو کردن",
+        "زدودن",
+        "پاک کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to behave so modestly that people do not notice you, as in \"efface oneself\"",
+      "examples": [
+        {
+          "en": "He effaced himself completely and let his students take the credit.",
+          "fa": "او کاملاً خود را کنار کشید و اعتبار کار را به شاگردانش داد."
+        }
+      ],
+      "ipa": "/ɪˈfeɪs/",
+      "pos": "v",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "خود را کنار کشیدن",
+        "فروتنی کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "efface"
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "confusables": [
+    {
+      "note": "شکل بسیار نزدیک، اما perceptive یعنی تیزبین و نکته‌سنج، نه پذیرا",
+      "word": "perceptive"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "receptive",
+  "lemma": "receptive",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 23,
+      "surface": "receptive",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 5,
+      "surface": "receptive",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 1,
+      "surface": "receptive",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 1,
+      "surface": "receptive",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "resistant"
+      ],
+      "definition": "willing to listen to and accept new ideas or suggestions",
+      "examples": [
+        {
+          "en": "The new manager was receptive to suggestions from junior staff.",
+          "fa": "مدیر جدید پذیرای پیشنهادهای کارکنان تازه‌کار بود."
+        }
+      ],
+      "ipa": "/rɪˈseptɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "open-minded",
+        "responsive"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "پذیرا",
+        "گشوده به ایده‌های تازه"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 4
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "receptive"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "allege",
+  "lemma": "allege",
+  "level": null,
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p04",
+      "part": "grammar",
+      "questionNo": 13,
+      "reach": 12,
+      "surface": "alleges",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p04",
+      "part": "grammar",
+      "questionNo": 14,
+      "reach": 12,
+      "surface": "alleges",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p04",
+      "part": "grammar",
+      "questionNo": 15,
+      "reach": 12,
+      "surface": "alleges",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p05",
+      "part": "grammar",
+      "questionNo": 13,
+      "reach": 10,
+      "surface": "alleges",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p05",
+      "part": "grammar",
+      "questionNo": 14,
+      "reach": 10,
+      "surface": "alleges",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p05",
+      "part": "grammar",
+      "questionNo": 15,
+      "reach": 10,
+      "surface": "alleges",
+      "year": 1399
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 6,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "alleges"
+  ]
+}

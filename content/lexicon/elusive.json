@@ -1,0 +1,97 @@
+{
+  "confusables": [
+    {
+      "note": "تلفظ تقریباً یکسان؛ اما illusive یعنی توهمی و خیالی، نه دیریاب",
+      "word": "illusive"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "elusive",
+  "lemma": "elusive",
+  "level": "C1",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1398-p05",
+      "part": "vocabulary",
+      "questionNo": 22,
+      "reach": 1,
+      "surface": "elusive",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "obvious",
+        "clear-cut"
+      ],
+      "definition": "hard to describe, define or remember exactly",
+      "examples": [
+        {
+          "en": "The charm of the old city is real but elusive.",
+          "fa": "جذابیت شهر قدیمی واقعی است اما توصیفش دشوار است."
+        }
+      ],
+      "ipa": "/iˈluːsɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "indefinable",
+        "intangible"
+      ],
+      "testedIn": [],
+      "translations": [
+        "توصیف‌ناپذیر",
+        "مبهم",
+        "دیریاب"
+      ]
+    },
+    {
+      "antonyms": [
+        "attainable"
+      ],
+      "definition": "difficult to find, catch or achieve",
+      "examples": [
+        {
+          "en": "A cure for the disease has remained elusive for decades.",
+          "fa": "درمان این بیماری دهه‌هاست دست‌نیافتنی مانده است."
+        }
+      ],
+      "ipa": "/iˈluːsɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "evasive",
+        "slippery"
+      ],
+      "testedIn": [],
+      "translations": [
+        "دست‌نیافتنی",
+        "گریزپا"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "elusive"
+  ]
+}

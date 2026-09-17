@@ -1,0 +1,91 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "arabesque",
+  "lemma": "arabesque",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 21,
+      "reach": 1,
+      "surface": "arabesque",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a position in ballet in which the dancer stands on one leg with the other stretched straight out behind",
+      "examples": [
+        {
+          "en": "The dancer held a perfect arabesque for several long seconds.",
+          "fa": "رقصنده چند ثانیهٔ طولانی، حالت آرابسک را بی‌نقص نگه داشت."
+        }
+      ],
+      "ipa": "/ˌærəˈbesk/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 21
+        }
+      ],
+      "translations": [
+        "آرابسک (حالتی در باله)",
+        "حالت باله با یک پای کشیده به عقب"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a decorative design made of flowing lines, leaves and geometric shapes",
+      "examples": [
+        {
+          "en": "The old tiles were covered with delicate arabesques in blue and gold.",
+          "fa": "کاشی‌های کهنه پوشیده از نقش‌های اسلیمیِ ظریفِ آبی و طلایی بودند."
+        }
+      ],
+      "ipa": "/ˌærəˈbesk/",
+      "pos": "n",
+      "synonyms": [
+        "ornament"
+      ],
+      "testedIn": [],
+      "translations": [
+        "نقش اسلیمی",
+        "تزیین گره‌چینی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "arabesque"
+  ]
+}

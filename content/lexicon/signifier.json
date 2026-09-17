@@ -1,0 +1,44 @@
+{
+  "confusables": [],
+  "domain": {
+    "fieldCodes": [
+      "1110"
+    ]
+  },
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "signifier",
+  "lemma": "signifier",
+  "level": null,
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1404-p04",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 1,
+      "surface": "signifier",
+      "year": 1404
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "signifier"
+  ]
+}

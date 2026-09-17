@@ -1,0 +1,110 @@
+{
+  "confusables": [
+    {
+      "note": "resolute صفت است به معنای مصمم و استوار، در حالی که resolve فعلِ حل کردن است",
+      "word": "resolute"
+    },
+    {
+      "note": "dissolve یعنی حل شدن در مایع یا منحل کردن، نه حل و فصل کردنِ اختلاف",
+      "word": "dissolve"
+    }
+  ],
+  "homograph": {
+    "note": "",
+    "suspected": false
+  },
+  "id": "resolve",
+  "lemma": "resolve",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1403-p05",
+      "part": "vocabulary",
+      "questionNo": 16,
+      "reach": 1,
+      "surface": "resolve",
+      "year": 1403
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "aggravate"
+      ],
+      "definition": "to find a satisfactory answer to a problem or an end to a disagreement",
+      "examples": [
+        {
+          "en": "Talks went on all night until the two sides resolved the dispute.",
+          "fa": "گفت‌وگوها تا صبح ادامه یافت تا اینکه دو طرف اختلاف را حل و فصل کردند."
+        }
+      ],
+      "ipa": "/rɪˈzɒlv/",
+      "pos": "v",
+      "synonyms": [
+        "settle",
+        "sort out",
+        "reconcile"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p05",
+          "questionNo": 16
+        }
+      ],
+      "translations": [
+        "حل و فصل کردن",
+        "فیصله دادن",
+        "رفع کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to make a firm decision to do something",
+      "examples": [
+        {
+          "en": "He resolved to study for two hours every night before the exam.",
+          "fa": "او تصمیم گرفت پیش از امتحان هر شب دو ساعت درس بخواند."
+        }
+      ],
+      "ipa": "/rɪˈzɒlv/",
+      "pos": "v",
+      "synonyms": [
+        "determine",
+        "decide"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تصمیم قاطع گرفتن",
+        "عزم کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1403": 1
+    },
+    "byYear": {
+      "1403": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1403,
+    "lastYear": 1403,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "resolve"
+  ]
+}

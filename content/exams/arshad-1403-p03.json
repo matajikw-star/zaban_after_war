@@ -1,0 +1,514 @@
+{
+  "paperId": "arshad-1403-p03",
+  "degree": "arshad",
+  "year": 1403,
+  "groupCodes": [
+    "1110"
+  ],
+  "bookletCount": 1,
+  "source": {
+    "file": "1110-1403.pdf",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "extractedBy": {
+    "model": "claude-sonnet-5",
+    "at": "2026-09-14"
+  },
+  "questions": [
+    {
+      "no": 1,
+      "part": "grammar",
+      "stem": "..... the texts in terms of the content constructed through particular linguistic choices, students can develop an awareness of how the language operates as a resource for making meaning.",
+      "options": [
+        "Given that by analyzing",
+        "The fact that analyzing",
+        "By analyzing",
+        "They analyze"
+      ],
+      "optionLemmas": [
+        "analyze",
+        "analyze",
+        "analyze",
+        "analyze"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "analyze",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "grammar",
+      "stem": "Constraints on deterministic selection from written language, relevant to information retrieval, are suggested by the convergence of Saussurean linguistics and information theory, ..... an understanding of the primitive computational operations.",
+      "options": [
+        "informed by",
+        "were informed",
+        "informs",
+        "to inform by"
+      ],
+      "optionLemmas": [
+        "inform",
+        "inform",
+        "inform",
+        "inform"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "inform",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "grammar",
+      "stem": "In history, the textbook itself needs special attention if students ..... independent readers.",
+      "options": [
+        "are learning become",
+        "are to learn to be",
+        "learn that to be",
+        "learning to be"
+      ],
+      "optionLemmas": [
+        "learn",
+        "learn",
+        "learn",
+        "learn"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "learn",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "grammar",
+      "stem": "A humanly-assigned metalanguage could be regarded ..... generic power, or, in some applications, differentiating units identical in expression, enhancing the possibilities of specificity in searching.",
+      "options": [
+        "of that would gather together different units from the syntagm, yields",
+        "gathering together different units from the syntagm, which yields to",
+        "as gathering together different units from the syntagm, yielding",
+        "as gathering different units from the syntagm, yielded"
+      ],
+      "optionLemmas": [
+        "gather",
+        "gather",
+        "gather",
+        "gather"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "gather",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "grammar",
+      "stem": "There have been criticisms of Morton's work for his failure to apply more than a small number of tests to a set of data ..... statistically-questionable data.",
+      "options": [
+        "and the assumptions was made about authorship on which the basis of",
+        "and for the assumptions made about authorship on the basis of",
+        "and that of the assumptions to be made about authorship basing",
+        "with the assumptions made about authorship that basing on"
+      ],
+      "optionLemmas": [
+        "assumption",
+        "assumption",
+        "assumption",
+        "assumption"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "assumption",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "grammar",
+      "stem": "After admitting that we do not have the ideal paradigm for the study of variation in natural speech, let us now turn to the question how, under these circumstances, can we handle such variation descriptively.",
+      "options": [
+        "After admitting that",
+        "the study of variation",
+        "let us now turn to",
+        "can we handle"
+      ],
+      "optionLemmas": [
+        "admit",
+        "study",
+        "turn",
+        "handle"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "handle",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "grammar",
+      "stem": "A number of linguists concerned with literary texts seem to take it granted that their endeavors are one type of applied linguistics, in that they often speak of the application of linguistics to literature.",
+      "options": [
+        "concerned with",
+        "to take it granted",
+        "in that",
+        "linguistics to literature"
+      ],
+      "optionLemmas": [
+        "concern",
+        "grant",
+        "in-that",
+        "linguistics"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "grant",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "That the notion of making criticism more ‘objective’ calls for clarification, but the attempt to explicate this notion cannot adequately be carried out in terms of the applicational relation between linguistics and literary studies.",
+      "options": [
+        "That the notion of making",
+        "for clarification",
+        "explicate this notion",
+        "in terms of"
+      ],
+      "optionLemmas": [
+        "notion",
+        "clarification",
+        "explicate",
+        "in-terms-of"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "notion",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "grammar",
+      "stem": "The author seriously questions the elevation of the so-called standard languages because the ingrained assumption in that the variability of language behavior is not the ideal basis for a theory of grammar.",
+      "options": [
+        "seriously questions",
+        "the so-called",
+        "in that the variability",
+        "ideal basis for a"
+      ],
+      "optionLemmas": [
+        "question",
+        "so-called",
+        "variability",
+        "basis"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "variability",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "vocabulary",
+      "stem": "Why is legal writing so awful? Do lawyers write that way to impress, to ..... —or perhaps because they must?",
+      "options": [
+        "bewilder",
+        "narrate",
+        "celebrate",
+        "malinger"
+      ],
+      "optionLemmas": [
+        "bewilder",
+        "narrate",
+        "celebrate",
+        "malinger"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "bewilder",
+      "uncertain": []
+    },
+    {
+      "no": 11,
+      "part": "vocabulary",
+      "stem": "Over millions of years, rivulets have carved into the stone, creating networks of caves and ..... sinkholes.",
+      "options": [
+        "treacherous",
+        "ambivalent",
+        "ambiguous",
+        "blithe"
+      ],
+      "optionLemmas": [
+        "treacherous",
+        "ambivalent",
+        "ambiguous",
+        "blithe"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "treacherous",
+      "uncertain": []
+    },
+    {
+      "no": 12,
+      "part": "vocabulary",
+      "stem": "You may choose between an avid party host with hundreds of acquaintances and a grumpy ....., who may have only one or two friends.",
+      "options": [
+        "luminary",
+        "misanthrope",
+        "acolyte",
+        "aficionado"
+      ],
+      "optionLemmas": [
+        "luminary",
+        "misanthrope",
+        "acolyte",
+        "aficionado"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "misanthrope",
+      "uncertain": []
+    },
+    {
+      "no": 13,
+      "part": "vocabulary",
+      "stem": "While she seeks the answer in a situation whose narratives are so familiar as to feel .....—romantic love, desperate to cross socioeconomic class—the novel's setting may yet have something surprisingly new to say.",
+      "options": [
+        "ligneous",
+        "nefarious",
+        "foppish",
+        "quotidian"
+      ],
+      "optionLemmas": [
+        "ligneous",
+        "nefarious",
+        "foppish",
+        "quotidian"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "quotidian",
+      "uncertain": []
+    },
+    {
+      "no": 14,
+      "part": "vocabulary",
+      "stem": "Integrity and moral ..... are among characteristics that every person should have to be considered a human, worthy of the name.",
+      "options": [
+        "harangue",
+        "mendacity",
+        "finicality",
+        "probity"
+      ],
+      "optionLemmas": [
+        "harangue",
+        "mendacity",
+        "finicality",
+        "probity"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "probity",
+      "uncertain": []
+    },
+    {
+      "no": 15,
+      "part": "vocabulary",
+      "stem": "While we must not ..... before the frowning brow of any nation, or of all combined, we do remember that reckless confrontation is the first priority of dunces.",
+      "options": [
+        "quail",
+        "vindicate",
+        "tout",
+        "conciliate"
+      ],
+      "optionLemmas": [
+        "quail",
+        "vindicate",
+        "tout",
+        "conciliate"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "quail",
+      "uncertain": []
+    },
+    {
+      "no": 16,
+      "part": "vocabulary",
+      "stem": "To be told you are in favor of a notorious private enterprise is the same as having a/an ..... epithet applied to you.",
+      "options": [
+        "unctuous",
+        "opprobrious",
+        "encomiastic",
+        "euphuistic"
+      ],
+      "optionLemmas": [
+        "unctuous",
+        "opprobrious",
+        "encomiastic",
+        "euphuistic"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "opprobrious",
+      "uncertain": []
+    },
+    {
+      "no": 17,
+      "part": "vocabulary",
+      "stem": "He must be an avid ....., as he has collected matchboxes from all over the world and has a rather comprehensive collection of them.",
+      "options": [
+        "cruciverbalist",
+        "brolliologist",
+        "phillumenist",
+        "ailurophile"
+      ],
+      "optionLemmas": [
+        "cruciverbalist",
+        "brolliologist",
+        "phillumenist",
+        "ailurophile"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "phillumenist",
+      "uncertain": []
+    },
+    {
+      "no": 18,
+      "part": "cloze",
+      "stem": "With the growth of international contacts in the course of establishing capitalist relations in the 19th century, the division of the world into monolingual nation-states, in which foreign language skills were the privilege of upper classes, became ..... for further development.",
+      "options": [
+        "an obstacle",
+        "a motivation",
+        "a patrimony",
+        "an obligation"
+      ],
+      "optionLemmas": [
+        "obstacle",
+        "motivation",
+        "patrimony",
+        "obligation"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "obstacle",
+      "uncertain": []
+    },
+    {
+      "no": 19,
+      "part": "grammar",
+      "stem": "During the 19th century, the search for a universal language brought about the development of scores of language projects, ..... were proposed as languages for communication of all those interested in establishment and support of international connections.",
+      "options": [
+        "which were unlike the philosophical languages of the past epochs, they",
+        "which, unlike the philosophical languages of the past epochs,",
+        "unlike the philosophical languages of the past epochs, which",
+        "unlike the philosophical languages of the past epochs that"
+      ],
+      "optionLemmas": [
+        "language",
+        "language",
+        "language",
+        "language"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "language",
+      "uncertain": []
+    },
+    {
+      "no": 20,
+      "part": "grammar",
+      "stem": "The notes in Solresol could be used in different ways, ..... their international names or musical signs, singing or playing a musical instrument or presentation with the seven colors of the rainbow.",
+      "options": [
+        "they include writing down",
+        "inclusive be writing of",
+        "including writing down",
+        "includes writing of"
+      ],
+      "optionLemmas": [
+        "write",
+        "write",
+        "write",
+        "write"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "write",
+      "uncertain": []
+    },
+    {
+      "no": 21,
+      "part": "cloze",
+      "stem": "Despite the numerous enthusiastic responses of the educated circles of Europe throughout the period of the author's work to put his ideas into practice, the project has never been ..... due to the complexity of remembering all the classes and subclasses as well as rules for creating new words typical of all a priori languages.",
+      "options": [
+        "patronized",
+        "construed",
+        "eulogized",
+        "realized"
+      ],
+      "optionLemmas": [
+        "patronize",
+        "construe",
+        "eulogize",
+        "realize"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "realize",
+      "uncertain": []
+    },
+    {
+      "no": 22,
+      "part": "cloze",
+      "stem": "Therefore, as soon as the first projects of a posteriori universal languages emerged that could be used in practice and not only for demonstration before learned societies, the Solresol clubs ceased to exist and the “musical language” was ..... history, having failed to reach its aim to help humankind in overcoming language barriers.",
+      "options": [
+        "dismissed out",
+        "committed to",
+        "called for",
+        "waned to"
+      ],
+      "optionLemmas": [
+        "dismiss",
+        "commit",
+        "call",
+        "wane"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "commit",
+      "uncertain": [
+        "q22: four odd phrasal options ('dismissed out', 'committed to', 'called for', 'waned to') for 'was ..... history'; 'committed to' chosen as the most idiomatic fit but none is a clean standard collocation"
+      ]
+    }
+  ],
+  "uncertain": [
+    "Routing gave partA pages [2,3,6,7] and partB (cloze) page [4]; the booklet's actual layout is: PART A Structure (Q1-5) on page 2, B: Written Expression (Q6-9) and C: Vocabulary (Q10-13) on page 3, C: Vocabulary continued (Q14-17) and PART D Cloze Test passage with options for Q18-19 on page 4, cloze options Q20-22 on page 5, then PART E Reading Comprehension (two passages, Q23-30) on pages 5-7 and PART F Linguistics (subject-matter questions, Q31-32) on page 7. PART E and PART F are out of scope and are not transcribed here.",
+    "q8: no answer key exists; the judged error ('That the notion of making' — the sentence reads better as two independent clauses joined by 'but' without the leading 'That') is inferred from structural reasoning, not a printed key."
+  ]
+}

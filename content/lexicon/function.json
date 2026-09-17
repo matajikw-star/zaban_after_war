@@ -1,0 +1,104 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "function",
+  "lemma": "function",
+  "level": "B1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1405-p01",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 29,
+      "surface": "function",
+      "year": 1405
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "the special purpose or job that a thing, a part or a person is there to do",
+      "examples": [
+        {
+          "en": "The main function of the heart is to pump blood around the body.",
+          "fa": "کارکرد اصلی قلب پمپاژ خون در سراسر بدن است."
+        }
+      ],
+      "ipa": "/ˈfʌŋkʃn/",
+      "pos": "noun",
+      "synonyms": [
+        "role",
+        "purpose",
+        "job"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p01",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "کارکرد",
+        "وظیفه",
+        "نقش"
+      ]
+    },
+    {
+      "antonyms": [
+        "fail",
+        "break down"
+      ],
+      "definition": "to work in the right way, or to act in a particular role",
+      "examples": [
+        {
+          "en": "The old pump still functions, though it makes a terrible noise.",
+          "fa": "پمپ قدیمی هنوز کار می‌کند، هرچند صدای وحشتناکی می‌دهد."
+        }
+      ],
+      "ipa": "/ˈfʌŋkʃn/",
+      "pos": "verb",
+      "synonyms": [
+        "operate",
+        "work",
+        "serve"
+      ],
+      "testedIn": [],
+      "translations": [
+        "کار کردن",
+        "عمل کردن",
+        "در نقش چیزی بودن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1405": 1
+    },
+    "byYear": {
+      "1405": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1405,
+    "lastYear": 1405,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "function"
+  ]
+}

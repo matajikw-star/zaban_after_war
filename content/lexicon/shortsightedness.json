@@ -1,0 +1,131 @@
+{
+  "confusables": [
+    {
+      "note": "همان واژه است؛ گاهی با خط تیره نوشته می‌شود و تفاوت معنایی ندارد",
+      "word": "short-sightedness"
+    }
+  ],
+  "homograph": {
+    "note": "",
+    "suspected": false
+  },
+  "id": "shortsightedness",
+  "lemma": "shortsightedness",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 20,
+      "surface": "shortsightedness",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 9,
+      "surface": "shortsightedness",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 1,
+      "surface": "shortsightedness",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "foresight"
+      ],
+      "definition": "a failure to think carefully about what will happen in the future",
+      "examples": [
+        {
+          "en": "The shortsightedness of the plan became clear within a single year.",
+          "fa": "کوته‌بینی آن طرح ظرف تنها یک سال آشکار شد."
+        }
+      ],
+      "ipa": "/ˌʃɔːtˈsaɪtɪdnəs/",
+      "pos": "n",
+      "synonyms": [
+        "myopia",
+        "improvidence"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "کوته‌بینی",
+        "نداشتن آینده‌نگری",
+        "بی‌تدبیری"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a condition of the eyes that makes distant things look blurred",
+      "examples": [
+        {
+          "en": "Her shortsightedness was easily corrected with a pair of glasses.",
+          "fa": "نزدیک‌بینی او به‌راحتی با یک عینک اصلاح شد."
+        }
+      ],
+      "ipa": "/ˌʃɔːtˈsaɪtɪdnəs/",
+      "pos": "n",
+      "synonyms": [
+        "myopia"
+      ],
+      "testedIn": [],
+      "translations": [
+        "نزدیک‌بینی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "shortsightedness"
+  ]
+}

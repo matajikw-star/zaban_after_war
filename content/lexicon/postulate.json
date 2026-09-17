@@ -1,0 +1,132 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "postulate",
+  "lemma": "postulate",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1403-p04",
+      "part": "vocabulary",
+      "questionNo": 14,
+      "reach": 1,
+      "surface": "postulating",
+      "year": 1403
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p01",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 42,
+      "surface": "postulate",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p03",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 16,
+      "surface": "postulate",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "prove",
+        "demonstrate"
+      ],
+      "definition": "to suggest that something is true as the starting point of an argument, without proving it first",
+      "examples": [
+        {
+          "en": "Early astronomers postulated that the planets moved in perfect circles.",
+          "fa": "ستاره‌شناسان نخستین فرض می‌کردند که سیارات در دایره‌هایی کامل حرکت می‌کنند."
+        }
+      ],
+      "ipa": "/ˈpɒstjuleɪt/",
+      "pos": "v",
+      "synonyms": [
+        "posit",
+        "hypothesize",
+        "assume"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p04",
+          "questionNo": 14
+        },
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "فرض کردن",
+        "مسلم انگاشتن",
+        "پیش‌فرض قرار دادن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a statement that is accepted as true so that an argument or theory can be built on it",
+      "examples": [
+        {
+          "en": "The whole theory rests on a single unproven postulate.",
+          "fa": "تمام این نظریه بر یک پیش‌فرض اثبات‌نشده استوار است."
+        }
+      ],
+      "ipa": "/ˈpɒstjulət/",
+      "pos": "n",
+      "synonyms": [
+        "premise",
+        "axiom"
+      ],
+      "testedIn": [],
+      "translations": [
+        "اصل موضوع",
+        "پیش‌فرض"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 2,
+      "1403": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1403,
+    "priority": 7,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "postulate",
+    "postulating"
+  ]
+}

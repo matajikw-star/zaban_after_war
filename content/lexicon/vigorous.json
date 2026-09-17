@@ -1,0 +1,129 @@
+{
+  "confusables": [
+    {
+      "note": "تنها یک حرف تفاوت؛ اما rigorous یعنی سخت‌گیرانه و دقیق، نه پرقدرت",
+      "word": "rigorous"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "vigorous",
+  "lemma": "vigorous",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1403-p01",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 60,
+      "surface": "vigorous",
+      "year": 1403
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1401-p02",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 34,
+      "surface": "vigorous",
+      "year": 1401
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "feeble",
+        "half-hearted"
+      ],
+      "definition": "done with great force, energy and determination",
+      "examples": [
+        {
+          "en": "The proposal met vigorous opposition from the older members.",
+          "fa": "آن پیشنهاد با مخالفت شدید اعضای قدیمی‌تر روبه‌رو شد."
+        }
+      ],
+      "ipa": "/ˈvɪɡərəs/",
+      "pos": "adj",
+      "synonyms": [
+        "forceful",
+        "strenuous",
+        "intense"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p02",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "شدید",
+        "پرقدرت",
+        "سرسختانه"
+      ]
+    },
+    {
+      "antonyms": [
+        "frail",
+        "listless"
+      ],
+      "definition": "strong, healthy and full of physical energy",
+      "examples": [
+        {
+          "en": "At eighty he was still vigorous enough to climb the hill each morning.",
+          "fa": "در هشتادسالگی هنوز آن‌قدر پرانرژی بود که هر صبح از آن تپه بالا برود."
+        }
+      ],
+      "ipa": "/ˈvɪɡərəs/",
+      "pos": "adj",
+      "synonyms": [
+        "energetic",
+        "robust",
+        "hearty"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p01",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "پرانرژی",
+        "قبراق",
+        "سرزنده"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1401": 1
+    },
+    "byYear": {
+      "1401": 1,
+      "1403": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1401,
+    "lastYear": 1403,
+    "priority": 8,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "vigorous"
+  ]
+}

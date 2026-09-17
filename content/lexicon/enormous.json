@@ -1,0 +1,124 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "enormous",
+  "lemma": "enormous",
+  "level": "B1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 23,
+      "surface": "enormous",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 5,
+      "surface": "enormous",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 1,
+      "surface": "enormous",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 1,
+      "surface": "enormous",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "tiny",
+        "minute"
+      ],
+      "definition": "extremely large in size, amount or degree",
+      "examples": [
+        {
+          "en": "An enormous crowd waited outside the stadium in the rain.",
+          "fa": "جمعیتی عظیم زیر باران بیرون ورزشگاه منتظر ماندند."
+        }
+      ],
+      "ipa": "/ɪˈnɔːməs/",
+      "pos": "adj",
+      "synonyms": [
+        "huge",
+        "immense",
+        "vast"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "عظیم",
+        "بسیار بزرگ",
+        "هنگفت"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 4
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "enormous"
+  ]
+}

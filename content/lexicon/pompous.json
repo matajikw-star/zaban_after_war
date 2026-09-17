@@ -1,0 +1,43 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "pompous",
+  "lemma": "pompous",
+  "level": null,
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1401-p05",
+      "part": "vocabulary",
+      "questionNo": 24,
+      "reach": 1,
+      "surface": "pompously",
+      "year": 1401
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1401": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1401,
+    "lastYear": 1401,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "pompously"
+  ]
+}

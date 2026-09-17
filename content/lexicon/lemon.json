@@ -1,0 +1,94 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": "The exam sense (a faulty product, especially a car) is informal American slang and gives a reader no way to reach it from the fruit; a card that shows only the fruit teaches the wrong thing.",
+    "suspected": true
+  },
+  "id": "lemon",
+  "lemma": "lemon",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p09",
+      "part": "vocabulary",
+      "questionNo": 20,
+      "reach": 1,
+      "surface": "lemon",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "something, especially a car, that turns out to be badly made or faulty after you have bought it",
+      "examples": [
+        {
+          "en": "The laptop he ordered online turned out to be a complete lemon.",
+          "fa": "لپ‌تاپی که آنلاین سفارش داد کاملاً معیوب از آب درآمد."
+        }
+      ],
+      "ipa": "/ˈlemən/",
+      "pos": "n",
+      "synonyms": [
+        "dud"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 20
+        }
+      ],
+      "translations": [
+        "جنس معیوب",
+        "خرید خراب از آب درآمده",
+        "بنجل"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a yellow citrus fruit with sour juice, used in cooking and drinks",
+      "examples": [
+        {
+          "en": "She squeezed half a lemon over the grilled fish.",
+          "fa": "نصف یک لیمو را روی ماهی کبابی چلاند."
+        }
+      ],
+      "ipa": "/ˈlemən/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "لیمو",
+        "لیمو ترش"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "lemon"
+  ]
+}

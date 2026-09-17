@@ -1,0 +1,43 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "extroversion",
+  "lemma": "extroversion",
+  "level": null,
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1401-p01",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 58,
+      "surface": "extroversion",
+      "year": 1401
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1401": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1401,
+    "lastYear": 1401,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "extroversion"
+  ]
+}

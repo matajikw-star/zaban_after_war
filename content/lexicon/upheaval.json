@@ -1,0 +1,80 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "upheaval",
+  "lemma": "upheaval",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p08",
+      "part": "vocabulary",
+      "questionNo": 21,
+      "reach": 1,
+      "surface": "upheaval",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "stability"
+      ],
+      "definition": "a big change that causes a lot of trouble, worry and confusion",
+      "examples": [
+        {
+          "en": "The new law caused months of upheaval in the banking sector.",
+          "fa": "قانون جدید ماه‌ها آشوب در بخش بانکی به بار آورد."
+        }
+      ],
+      "ipa": "/ʌpˈhiːvl/",
+      "pos": "n",
+      "synonyms": [
+        "turmoil",
+        "disruption",
+        "upset"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p08",
+          "questionNo": 21
+        }
+      ],
+      "translations": [
+        "تحول شدید",
+        "آشوب",
+        "زیر و رو شدن اوضاع"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "upheaval"
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "toll",
+  "lemma": "toll",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p11",
+      "part": "vocabulary",
+      "questionNo": 22,
+      "reach": 1,
+      "surface": "toll",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "the damage or suffering that something slowly causes, used in the phrase \"take its toll on\"",
+      "examples": [
+        {
+          "en": "Years of night shifts took their toll on his health.",
+          "fa": "سال‌ها شیفت شب بر سلامتی او اثر مخرب گذاشت."
+        }
+      ],
+      "ipa": "/təʊl/",
+      "pos": "n",
+      "synonyms": [
+        "cost",
+        "damage"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p11",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "اثر مخرب",
+        "خسارت تدریجی",
+        "فرسایش"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "money that you pay to use a road, a bridge or a tunnel",
+      "examples": [
+        {
+          "en": "Drivers pay a toll to cross the new bridge.",
+          "fa": "رانندگان برای عبور از پل جدید عوارض می‌پردازند."
+        }
+      ],
+      "ipa": "/təʊl/",
+      "pos": "n",
+      "synonyms": [
+        "charge",
+        "fee"
+      ],
+      "testedIn": [],
+      "translations": [
+        "عوارض راه",
+        "باج عبور"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "the number of people killed or injured in an accident or a disaster",
+      "examples": [
+        {
+          "en": "The death toll from the earthquake rose overnight.",
+          "fa": "شمار تلفات زلزله در طول شب بالا رفت."
+        }
+      ],
+      "ipa": "/təʊl/",
+      "pos": "n",
+      "synonyms": [
+        "casualties"
+      ],
+      "testedIn": [],
+      "translations": [
+        "شمار تلفات",
+        "آمار کشته‌شدگان"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "toll"
+  ]
+}

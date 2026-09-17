@@ -1,0 +1,105 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "generous",
+  "lemma": "generous",
+  "level": "B1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1404-p01",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 54,
+      "surface": "generous",
+      "year": 1404
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "stingy",
+        "mean"
+      ],
+      "definition": "willing to give money, help or time freely, more than is usual or expected",
+      "examples": [
+        {
+          "en": "Her uncle was generous with both his advice and his money.",
+          "fa": "عمویش هم در نصیحت و هم در پول سخاوتمند بود."
+        }
+      ],
+      "ipa": "/ˈdʒenərəs/",
+      "pos": "adj",
+      "synonyms": [
+        "giving",
+        "open-handed",
+        "liberal"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p01",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "سخاوتمند",
+        "بخشنده",
+        "دست‌ودل‌باز"
+      ]
+    },
+    {
+      "antonyms": [
+        "meagre",
+        "scanty"
+      ],
+      "definition": "larger or more plentiful than usual",
+      "examples": [
+        {
+          "en": "The recipe calls for a generous amount of butter and cream.",
+          "fa": "این دستور پخت مقدار فراوانی کره و خامه می‌طلبد."
+        }
+      ],
+      "ipa": "/ˈdʒenərəs/",
+      "pos": "adj",
+      "synonyms": [
+        "ample",
+        "lavish"
+      ],
+      "testedIn": [],
+      "translations": [
+        "فراوان",
+        "دست‌ودل‌بازانه (مقدار)"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1404": 1
+    },
+    "byYear": {
+      "1404": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1404,
+    "lastYear": 1404,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "generous"
+  ]
+}

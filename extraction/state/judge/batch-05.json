@@ -1,0 +1,1592 @@
+[
+ {
+  "lemma": "exploitation",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1401-p01",
+  "questionNo": 10,
+  "stem": "If exploitation of the planet's resources continues as at present, then the lifestyle we currently enjoy ..... the risk of causing significant damage to the world."
+ },
+ {
+  "lemma": "exploration",
+  "band": "mid",
+  "generalRank": 5765,
+  "distinctYears": 3,
+  "occurrences": 3,
+  "paperId": "arshad-1400-p08",
+  "questionNo": 2,
+  "stem": "By the 17th century, European scholars realized ..... difficult to capture accurately the characteristics of their own languages as well as of languages discovered in explorations of the New World.",
+  "surfaces": [
+   "exploration",
+   "explorations"
+  ]
+ },
+ {
+  "lemma": "expressive",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1402-p06",
+  "questionNo": 19,
+  "stem": "Expressive ties are social links formed when we emotionally invest ourselves in and ..... ourselves to other people.",
+  "fieldCodes": [
+   "1121",
+   "1148"
+  ]
+ },
+ {
+  "lemma": "extant",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p01",
+  "questionNo": 10,
+  "stem": "The fossils show ..... this new species' length is unimpressive relative to some extant (living) whales, but still, Maiacetus inuus measures a respectable 2.6 meters."
+ },
+ {
+  "lemma": "extinction",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p02",
+  "questionNo": 10,
+  "stem": "The African elephant has become the object of one of the biggest, broadest international efforts yet ..... to turn a threatened species off the road to extinction."
+ },
+ {
+  "lemma": "extraneous",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 3,
+  "paperId": "arshad-1399-p02",
+  "questionNo": 1,
+  "stem": "I omitted all the extraneous details while explaining the ..... of the matter to him.",
+  "lemmaUncertain": true
+ },
+ {
+  "lemma": "extraordinary",
+  "band": "mid",
+  "generalRank": 6899,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1401-p04",
+  "questionNo": 9,
+  "stem": "Any civilized human being in this nineteenth century should not be aware that the earth traveled round the sun appeared to me to be such an extraordinary fact that I could hardly realize it."
+ },
+ {
+  "lemma": "exuding",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p05",
+  "questionNo": 26,
+  "stem": "His favorite subject remains the subtle human presence exuding out of urban landscapes, and his obsession to encapsulate enough fragile moments of ..... beauty as to create with them an imaginary city where every single moment would be beautiful.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "eyewitness",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 3,
+  "paperId": "arshad-1400-p01",
+  "questionNo": 1,
+  "stem": "The police only believed me after an eyewitness ..... my account of the accident.",
+  "lemmaUncertain": true
+ },
+ {
+  "lemma": "facilitator",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p09",
+  "questionNo": 19,
+  "stem": "The facilitator made the effort of running a workshop look ....., although it was very demanding.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "factual",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p02",
+  "questionNo": 4,
+  "stem": "The factual error may be insignificant; but it is surprising in a book put out by a/an ..... academic publisher."
+ },
+ {
+  "lemma": "faded",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p09",
+  "questionNo": 20,
+  "stem": "That used car salesman turned out to be a bit of a mountebank; his dashing flattery faded when I realized the car I bought was a .....",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "faintly",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p05",
+  "questionNo": 17,
+  "stem": "The first light of dawn painted the sky with soft hues of orange and pink, while a full moon .................... faintly above.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "fairy",
+  "band": "mid",
+  "generalRank": 8420,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p01",
+  "questionNo": 3,
+  "stem": "My niece has a ..... imagination. She can turn a tree and a stick into a castle and a wand and spend hours in her fairy kingdom."
+ },
+ {
+  "lemma": "fallen",
+  "band": "mid",
+  "generalRank": 7393,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p09",
+  "questionNo": 16,
+  "stem": "Portable CD players have fallen into ..... since the advent of the MP3 player.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "fancy",
+  "band": "mid",
+  "generalRank": 6742,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 15,
+  "stem": "The retailer tried to ..... his defective stock on his customers by packing it in new and fancy boxes.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "fare",
+  "band": "mid",
+  "generalRank": 8865,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 9,
+  "stem": "Anxious to reduce fares in what has, as a result of deregulation, become a highly competitive market, ..... safety inspections and routine maintenance of aircraft.",
+  "surfaces": [
+   "fares"
+  ],
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "farmer",
+  "band": "mid",
+  "generalRank": 5802,
+  "distinctYears": 2,
+  "occurrences": 4,
+  "paperId": "arshad-1398-p03",
+  "questionNo": 5,
+  "stem": "My uncle, a farmer, is an ..... pessimist when he discusses the weather. For example, if the sun is shining, he's sure a drought is beginning; if it's raining, he's sure his crops will be washed away.",
+  "surfaces": [
+   "farmer",
+   "farmers"
+  ]
+ },
+ {
+  "lemma": "fascist",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 8,
+  "stem": "Ralph has always longed to be a dictator, but his awkward mannerisms caused assemblies to laugh at his brutal, fascist harangues rather than ..... .",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "fastest",
+  "band": "mid",
+  "generalRank": 6954,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p05",
+  "questionNo": 19,
+  "stem": "It's the fastest download ever, like it's some sentient being who ..... the whole point of its existence is that time is running out for someone.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "fatal",
+  "band": "mid",
+  "generalRank": 8092,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p05",
+  "questionNo": 20,
+  "stem": "The markets have exposed the fatal ..... in the government's economic policy.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "fatigues",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p11",
+  "questionNo": 2,
+  "stem": "Research shows that ---------- actually burns more calories and fatigues your brain, reducing your overall capacity for productive thought and work.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "faucet",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p05",
+  "questionNo": 14,
+  "stem": "The price of a bottle of water these days is simply .....; how could anyone ever justify paying €2.50 for something you can get free from a faucet?",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "fed",
+  "band": "mid",
+  "generalRank": 5347,
+  "distinctYears": 3,
+  "occurrences": 3,
+  "paperId": "arshad-1398-p02",
+  "questionNo": 12,
+  "stem": "Scientists first recognized the value of the practice more than 60 years ago, when they found that rats fed a low-calorie diet lived longer on average than free-feeding rats and ..... incidence of conditions that become increasingly common in old age."
+ },
+ {
+  "lemma": "feedstocks",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p03",
+  "questionNo": 12,
+  "stem": "These feedstocks and production methods should be considered when (12) .....",
+  "lemmaUncertain": true
+ },
+ {
+  "lemma": "fence",
+  "band": "mid",
+  "generalRank": 8075,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 18,
+  "stem": "One day in early 2009, almost a year to the day since I'd committed myself to fencing, something happened that would completely change the ..... of my career.",
+  "surfaces": [
+   "fencing"
+  ],
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "fertilized",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p05",
+  "questionNo": 16,
+  "stem": "Prejudices are most difficult to ..... from the heart whose soil has never been loosened or fertilized by education.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "feud",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 5,
+  "stem": "Knowing their parents would forbid their union, ....., who saw in their love the possibility of ending the age-old feud between the Capulets and the Montagues.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "fewer",
+  "band": "mid",
+  "generalRank": 5767,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p05",
+  "questionNo": 4,
+  "stem": "Fewer than a third of those surveyed want any trial to be moved to Kenya, and 91% are opposed ..... held elsewhere in Africa.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "fictionalized",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p10",
+  "questionNo": 13,
+  "stem": "So much of modern fiction in modern literature is autobiographical, and so much of the autobiography fictionalized, then the genres sometimes seem largely interchangeable.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "figurative",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1401-p04",
+  "questionNo": 6,
+  "stem": "Over time vapid added a broader, more figurative connotation to describe anything ----------- zest and spirit.",
+  "fieldCodes": [
+   "1110",
+   "1148"
+  ]
+ },
+ {
+  "lemma": "finesse",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p04",
+  "questionNo": 8,
+  "stem": "Having drawn a unique picture with a finesse characteristic of the genius, ..... .",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "finite",
+  "band": "mid",
+  "generalRank": 7533,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1399-p01",
+  "questionNo": 5,
+  "stem": "The world's coal, oil and gas ..... are finite; one day they will run out, so think now about what you can do to consume less."
+ },
+ {
+  "lemma": "fireside",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 4,
+  "paperId": "arshad-1400-p03",
+  "questionNo": 6,
+  "stem": "On a chilly night, you might like to curl up by the fireside and ..... a cup of hot chocolate while reading one of Thurber's books."
+ },
+ {
+  "lemma": "fjords",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p07",
+  "questionNo": 11,
+  "stem": "William II Johnson's artistic debt to Scandinavia is evident in paintings that range from sensitive portraits of citizens in his wife's Danish home Kerteminde and awe-inspiring views of fjords and mountain peaks in the western and northern regions of Norway.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "flattery",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p09",
+  "questionNo": 20,
+  "stem": "That used car salesman turned out to be a bit of a mountebank; his dashing flattery faded when I realized the car I bought was a .....",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "flavor",
+  "band": "mid",
+  "generalRank": 8602,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p05",
+  "questionNo": 9,
+  "stem": "As with most gifts, you don't ask questions; you just savor the morsels, as the chocolate .................... and slowly melts, releasing buttery, subtly fruity flavors across your tongue.",
+  "surfaces": [
+   "flavors"
+  ],
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "flexibility",
+  "band": "mid",
+  "generalRank": 5114,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p02",
+  "questionNo": 9,
+  "stem": "There are many benefits to online learning, ..... accessibility and flexibility."
+ },
+ {
+  "lemma": "flu",
+  "band": "mid",
+  "generalRank": 5780,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p03",
+  "questionNo": 1,
+  "stem": "The rising death toll is ..... largely to the growing number of elderly people, who are especially vulnerable to the flu."
+ },
+ {
+  "lemma": "fluctuate",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p05",
+  "questionNo": 24,
+  "stem": "Although numbers of animals in a given region may fluctuate from year to year, the fluctuations are often temporary and, over long periods, ......",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "fluctuations",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p05",
+  "questionNo": 24,
+  "stem": "Although numbers of animals in a given region may fluctuate from year to year, the fluctuations are often temporary and, over long periods, ......",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "foam",
+  "band": "mid",
+  "generalRank": 6664,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p11",
+  "questionNo": 13,
+  "stem": "In my bedroom in Mumbai, my mattress is made of high-density foam, a better surface to move on for someone like me, someone is with muscular dystrophy.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "follicles",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p05",
+  "questionNo": 5,
+  "stem": "..... is primarily composed of keratin, a protein, which grows out through the skin from follicles deep within the dermis.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "fond",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p06",
+  "questionNo": 24,
+  "stem": "Advertisements for breakfast cereals have, for many years, been found to be especially fond of fantasy techniques, with almost nine out of ten including such ..... .",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "fondness",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p05",
+  "questionNo": 21,
+  "stem": "The ..... fondness she displayed was what understandably drove the groom away.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "fool",
+  "band": "mid",
+  "generalRank": 7489,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1405-p05",
+  "questionNo": 8,
+  "stem": "No man is so much a fool as not to have wit enough sometimes to be a knave; nor ..... as not to have the weakness sometimes to play the fool.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "foolish",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p09",
+  "questionNo": 29,
+  "stem": "\"Don't be so .....,\" advised the Millers' stockbroker. \"It's foolish to put all of your money in high-tech stocks because they are popular right now. You've got to think about which industries will be successful in the years to come.\"",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "forager",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 24,
+  "stem": "A reliance on artefacts will thus bias an account of ancient hunter-gatherer life. One way to remedy this is to look at modern forager societies. These can be studied directly, by anthropological observation. But there are good reasons to be very careful in ..... from modern forager societies to ancient ones.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "forbid",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 5,
+  "stem": "Knowing their parents would forbid their union, ....., who saw in their love the possibility of ending the age-old feud between the Capulets and the Montagues.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "forceful",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p04",
+  "questionNo": 4,
+  "stem": "..... and drawing on cutting-edge research, The Language Myth sets out a forceful alternative to the received wisdom, showing how language and the mind really work.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "forefathers",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p02",
+  "questionNo": 1,
+  "stem": "One theory holds that humans became highly ..... because evolution selected those of our forefathers who were especially good at solving problems.",
+  "lemmaUncertain": true
+ },
+ {
+  "lemma": "foremost",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p02",
+  "questionNo": 10,
+  "stem": "In 1924, the Winter Games were sanctioned for winter sports. ..... regarded as the world's foremost sports competition."
+ },
+ {
+  "lemma": "forensic",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1400-p08",
+  "questionNo": 1,
+  "stem": "..... are often heard to say that what they do is linguistics that happens to be in a forensic context, and that a forensic linguist must first be a good linguist.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "foretell",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p04",
+  "questionNo": 9,
+  "stem": "Computers cannot precisely foretell climate change unless the mathematical equations fed into them ..... capture the natural meteorological processes they are aimed to simulate.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "forge",
+  "band": "mid",
+  "generalRank": 9654,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 37,
+  "stem": "To help bridge the gap between the scholars and forge a ....., we recently came together to review the voluminous research on the mental processing that underlies skilled reading and on how reading should be taught.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "forgiveness",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p04",
+  "questionNo": 3,
+  "stem": "I would not have minded if Mike had gotten off relatively lightly— ..... contrition and begged forgiveness.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "formalism",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 9,
+  "paperId": "arshad-1400-p01",
+  "questionNo": 13,
+  "stem": "Formalism is a concept in art theory ..... an artwork's artistic value is determined solely by its form, or the way it is made."
+ },
+ {
+  "lemma": "formulate",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 3,
+  "paperId": "arshad-1399-p01",
+  "questionNo": 12,
+  "stem": "Philosopher René Descartes had begun to formulate a new concept of nature ..... an intricate, impersonal and inert machine.",
+  "surfaces": [
+   "formulate",
+   "formulated"
+  ]
+ },
+ {
+  "lemma": "fortis",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 3,
+  "stem": "To doctors, sugar hides a great blackness; it blackens the teeth, and under its sweetness it is nothing but a very great acrimony, ..... it equals agua fortis [nitric acid].",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "fortunately",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1399-p04",
+  "questionNo": 5,
+  "stem": "Two days after the flood, fortunately the seawater finally began to ..... from our house."
+ },
+ {
+  "lemma": "fossil",
+  "band": "mid",
+  "generalRank": 9583,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p01",
+  "questionNo": 10,
+  "stem": "The fossils show ..... this new species' length is unimpressive relative to some extant (living) whales, but still, Maiacetus inuus measures a respectable 2.6 meters.",
+  "surfaces": [
+   "fossils"
+  ]
+ },
+ {
+  "lemma": "fossilized",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1400-p11",
+  "questionNo": 18,
+  "stem": "The next year, during paleontological excavations, primitive stone tools came to light, bringing with themselves the tantalizing possibility that fossilized human remains might eventually follow.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "founder",
+  "band": "mid",
+  "generalRank": 5609,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p06",
+  "questionNo": 26,
+  "stem": "The founder of the Children's Defense Fund strongly has ..... the lack of financial and moral support for children in today's world.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "fourteen",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p05",
+  "questionNo": 8,
+  "stem": "..... illustrated by a study of fourteen such models.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "fragile",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p05",
+  "questionNo": 26,
+  "stem": "His favorite subject remains the subtle human presence exuding out of urban landscapes, and his obsession to encapsulate enough fragile moments of ..... beauty as to create with them an imaginary city where every single moment would be beautiful.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "freely",
+  "band": "mid",
+  "generalRank": 8060,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1399-p07",
+  "questionNo": 8,
+  "stem": "Direct assessments involve open-ended tasks in which the respondent can freely perform the complex skill at issue, are unfettered by structured item forms or restrictive response formats.",
+  "fieldCodes": [
+   "1110",
+   "1148"
+  ]
+ },
+ {
+  "lemma": "freeman",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p05",
+  "questionNo": 7,
+  "stem": "Freeman (1993) conducted a longitudinal study of changes in the practices of four foreign language teachers doing an in-service masters' degree ..... aims the development of teachers' understanding of the professional discourse of education.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "frequent",
+  "band": "mid",
+  "generalRank": 5931,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p05",
+  "questionNo": 6,
+  "stem": "It is perhaps not surprising that anthropologists are notorious for their frequent bouts of 'field blindness'—becoming ..... that they fail to maintain the necessary scientific detachment.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "friendship",
+  "band": "mid",
+  "generalRank": 6518,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p04",
+  "questionNo": 14,
+  "stem": "The ----------- of the two families, who were neighbors for over twenty years, led to some close friendships as well as a few disagreements.",
+  "surfaces": [
+   "friendships"
+  ],
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "fringe",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p07",
+  "questionNo": 219,
+  "stem": "By offering fringe benefits, especially ..... available through a competitor, an employer stands a greater chance of attracting the level of talent it needs or wants.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "frog",
+  "band": "mid",
+  "generalRank": 7202,
+  "distinctYears": 1,
+  "occurrences": 6,
+  "paperId": "arshad-1400-p02",
+  "questionNo": 12,
+  "stem": "These programs have presented ..... such as counting and recognition of letters as nothing but fun, ..... by such things as rainbows and jumping frogs.",
+  "surfaces": [
+   "frogs"
+  ]
+ },
+ {
+  "lemma": "frontal",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p07",
+  "questionNo": 1,
+  "stem": "The cerebral cortex has two hemispheres (right and left), ..... (occipital, parietal, temporal, and frontal).",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "frown",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1403-p03",
+  "questionNo": 15,
+  "stem": "While we must not ..... before the frowning brow of any nation, or of all combined, we do remember that reckless confrontation is the first priority of dunces.",
+  "surfaces": [
+   "frown",
+   "frowning"
+  ],
+  "fieldCodes": [
+   "1110",
+   "1121"
+  ]
+ },
+ {
+  "lemma": "fruity",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p05",
+  "questionNo": 9,
+  "stem": "As with most gifts, you don't ask questions; you just savor the morsels, as the chocolate .................... and slowly melts, releasing buttery, subtly fruity flavors across your tongue.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "funeral",
+  "band": "mid",
+  "generalRank": 5075,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 30,
+  "stem": "During the funeral procession, the hearse was ..... with the deceased's favorite flowers.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "furtively",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p09",
+  "questionNo": 4,
+  "stem": "....., Olivia glanced furtively at her neighbor's paper and was immediately caught by the teacher and accused of cheating.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "fuzzy",
+  "band": "mid",
+  "generalRank": 9634,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 31,
+  "stem": "Most of us are a little fuzzy on how we learned to read, much as we cannot ..... anything special about learning to talk.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "garbage",
+  "band": "mid",
+  "generalRank": 8244,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p06",
+  "questionNo": 4,
+  "stem": "If residents want the garbage to be collected regularly, they’d better ..... the municipal cleaners sufficient money.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "garrulous",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p04",
+  "questionNo": 15,
+  "stem": "Regardless of the long-winded answers Michael ..... gave in class, his teachers remember him as succinct student, rather than a garrulous one, because he generally kept to himself.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "gaseous",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p03",
+  "questionNo": 14,
+  "stem": "ANL found that gaseous hydrogen produces (14) ..... GHGs than liquid hydrogen in most cases.",
+  "lemmaUncertain": true
+ },
+ {
+  "lemma": "gavel",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1405-p05",
+  "questionNo": 11,
+  "stem": "The famous couple's live defamation trial was, from gavel to gavel, a singularly baffling, unedifying and sad ..... .",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "genetically",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p04",
+  "questionNo": 26,
+  "stem": "For example, several recent lines of ..... that tendencies to experience positive and negative affect are genetically influenced and have distinct biological substrates.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "genetics",
+  "band": "mid",
+  "generalRank": 5250,
+  "distinctYears": 1,
+  "occurrences": 4,
+  "paperId": "arshad-1401-p01",
+  "questionNo": 12,
+  "stem": "Since the 1960s, however, ..... the ascent of thinkers like Noam Chomsky, and a host of cognitive scientists, ..... that linguistic differences don't really matter, ..... language is a universal human trait, and that our ability to talk to one another owes more to our shared genetics ......"
+ },
+ {
+  "lemma": "genius",
+  "band": "mid",
+  "generalRank": 8100,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p04",
+  "questionNo": 8,
+  "stem": "Having drawn a unique picture with a finesse characteristic of the genius, ..... .",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "genocide",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 27,
+  "stem": "At the trial, the general, accused of genocide, contended he did not ..... the murder of the civilians and thus pleaded not guilty.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "gently",
+  "band": "mid",
+  "generalRank": 9401,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p07",
+  "questionNo": 17,
+  "stem": "When Martin went to the administration of his school to protest the absence of a soft drinks machine, the principal said gently, \"Martin, I don't think that going without a cola for six hours ranks as one of the great ..... of all time.\"",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "geocentric",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 6,
+  "paperId": "arshad-1399-p01",
+  "questionNo": 13,
+  "stem": "....., like most universities in Europe, Cambridge was steeped ..... Aristotelian philosophy and a view of nature resting on a geocentric view of the universe, ..... with nature in qualitative rather than quantitative terms."
+ },
+ {
+  "lemma": "geometric",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1401-p04",
+  "questionNo": 11,
+  "stem": "By incorporating Pueblo figures into her strongly geometric and abstract works the Pueblo artist Helen Hardin has had a significant impact on the country's contemporary Native art.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "germs",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p03",
+  "questionNo": 5,
+  "stem": "For decades, the hygiene hypothesis has posited that the germs we are exposed to in early childhood can ..... us from developing allergies.",
+  "lemmaUncertain": true
+ },
+ {
+  "lemma": "ghg",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1401-p03",
+  "questionNo": 13,
+  "stem": "Argonne National Laboratory's (ANL) report, Fuel Choices for Fuel Cell Vehicles: Well-to-Wheels Energy and Emission Impacts, analyzed greenhouse gas (GHG) (13) ..... 10 of the most common hydrogen production and distribution pathways.",
+  "surfaces": [
+   "ghg",
+   "ghgs"
+  ]
+ },
+ {
+  "lemma": "gladiators",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p03",
+  "questionNo": 8,
+  "stem": "An ..... is often expressed as a simile, as in \"The football game was like a battle between gladiators.\"",
+  "lemmaUncertain": true
+ },
+ {
+  "lemma": "glands",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p05",
+  "questionNo": 30,
+  "stem": "Other regulators include physiological control mechanisms: for example, Christian and Davis have demonstrated ..... may bring about hormonal changes in the pituitary and adrenal glands that in turn may regulate population.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "glitches",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p10",
+  "questionNo": 32,
+  "stem": "Technical glitches are ....., frustrating as it is for everyone.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "glitter",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p01",
+  "questionNo": 7,
+  "stem": "He liked the ease and glitter of the life, and the luster ..... on him by being a member of this group of rich and conspicuous people."
+ },
+ {
+  "lemma": "gloves",
+  "band": "mid",
+  "generalRank": 5554,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1399-p08",
+  "questionNo": 4,
+  "stem": "After a day of gardening without gloves, Emilia rubbed a special emollient ..... the blisters and chafes on her fingers.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "glow",
+  "band": "mid",
+  "generalRank": 9537,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1399-p04",
+  "questionNo": 7,
+  "stem": "The audience clearly loved the play—the ..... was deafening. So it's not surprising that it got glowing reviews.",
+  "surfaces": [
+   "glowing"
+  ]
+ },
+ {
+  "lemma": "god",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p09",
+  "questionNo": 22,
+  "stem": "God has showered His ..... upon our motherland. Our country is blessed with immense natural wealth, with mountains and plains and forests and rivers and oceans and snow and sun.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "goodies",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p05",
+  "questionNo": 2,
+  "stem": "It's strange—buying books and treasuring them ................... reading them, splurging on clothing too beautiful to wear, and piling pantry shelves with goodies to reserve until past the use-by date.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "gotten",
+  "band": "mid",
+  "generalRank": 7557,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p04",
+  "questionNo": 3,
+  "stem": "I would not have minded if Mike had gotten off relatively lightly— ..... contrition and begged forgiveness.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "govern",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p05",
+  "questionNo": 26,
+  "stem": "In the case of small organisms with short life cycles, climatic changes need not be catastrophic: ..... in photoperiod (daily amount of sunlight), for example, can govern population growth.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "gracefully",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1404-p05",
+  "questionNo": 8,
+  "stem": "The most important thing in an argument, next to .................... that he can gracefully swing over to your side without too much apparent loss of face.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "gradually",
+  "band": "mid",
+  "generalRank": 8926,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p06",
+  "questionNo": 13,
+  "stem": "This material gradually coalesced into lumps called planetesimals as gravity and chance smashed smaller pieces together, was a chaotic and violent process that became more so as planetesimals grew in size and gravitational pull.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "graduation",
+  "band": "mid",
+  "generalRank": 6429,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p05",
+  "questionNo": 16,
+  "stem": "The valedictorian's rancid remarks about the school's curriculum ..... the principal at the graduation ceremony.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "grammar",
+  "band": "mid",
+  "generalRank": 7203,
+  "distinctYears": 5,
+  "occurrences": 7,
+  "paperId": "arshad-1400-p08",
+  "questionNo": 10,
+  "stem": "As soon as Sanskrit became known to the Western learned world, the unravelling of comparative Indo-European grammar ensued, and the foundations were lain for the whole 19th-century edifice of comparative philology and historical linguistics.",
+  "surfaces": [
+   "grammar",
+   "grammars"
+  ],
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "grammatical",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 3,
+  "occurrences": 3,
+  "paperId": "arshad-1400-p08",
+  "questionNo": 5,
+  "stem": "The period of greatest interest in computational linguistics was from about 1955 to 1965, ..... would lead to computerized or mechanical translation involving grammatical and semantic analysis of sentences.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "grandson",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p11",
+  "questionNo": 27,
+  "stem": "His holiday was ----------------- short by two days on account of his having to rush back home in time for the birth of his third grandson.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "grappling",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p10",
+  "questionNo": 29,
+  "stem": "I have to confess due to the problems we are grappling with the investment has ..... to almost half of its original value.",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "grave",
+  "band": "mid",
+  "generalRank": 7966,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p05",
+  "questionNo": 24,
+  "stem": "Left with no other option, the court made the rather unusual decision to ..... the dead body from its grave and have a DNA test conducted on it to firmly establish its identity.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "gravitational",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p06",
+  "questionNo": 13,
+  "stem": "This material gradually coalesced into lumps called planetesimals as gravity and chance smashed smaller pieces together, was a chaotic and violent process that became more so as planetesimals grew in size and gravitational pull.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "gravity",
+  "band": "mid",
+  "generalRank": 7699,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p06",
+  "questionNo": 13,
+  "stem": "This material gradually coalesced into lumps called planetesimals as gravity and chance smashed smaller pieces together, was a chaotic and violent process that became more so as planetesimals grew in size and gravitational pull.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "graze",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p09",
+  "questionNo": 38,
+  "stem": "And there are other considerations, too; after all, livestock needs a place to graze and land is also required for the cultivation of crops. And ....., the only logical solution is to claim more of the land for agricultural purposes.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "greatly",
+  "band": "mid",
+  "generalRank": 5455,
+  "distinctYears": 1,
+  "occurrences": 4,
+  "paperId": "arshad-1400-p01",
+  "questionNo": 2,
+  "stem": "The plan is to our ..... advantage; we will all benefit greatly from it."
+ },
+ {
+  "lemma": "greed",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1400-p09",
+  "questionNo": 31,
+  "stem": "While there will always be a minority of poachers motivated by their innate cruelty and greed, it is probably fair to say that the vast majority are caught up in this awful activity out of economic .....",
+  "lemmaUncertain": true,
+  "fieldCodes": [
+   "1121",
+   "1148"
+  ]
+ },
+ {
+  "lemma": "greenhouse",
+  "band": "mid",
+  "generalRank": 9467,
+  "distinctYears": 2,
+  "occurrences": 2,
+  "paperId": "arshad-1401-p03",
+  "questionNo": 13,
+  "stem": "Argonne National Laboratory's (ANL) report, Fuel Choices for Fuel Cell Vehicles: Well-to-Wheels Energy and Emission Impacts, analyzed greenhouse gas (GHG) (13) ..... 10 of the most common hydrogen production and distribution pathways."
+ },
+ {
+  "lemma": "grew",
+  "band": "mid",
+  "generalRank": 5806,
+  "distinctYears": 2,
+  "occurrences": 3,
+  "paperId": "arshad-1399-p01",
+  "questionNo": 2,
+  "stem": "Deserted for six months, the property began to look more like a jungle and less like a residence—weed grew ..... in the front yard."
+ },
+ {
+  "lemma": "grief",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1399-p07",
+  "questionNo": 14,
+  "stem": "\"Clarissa became quite ..... after her husband died,\" explained the doctor. \"Her grief was so extreme that she could no longer take care of her basic needs and had to be hospitalized.\"",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "grind",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p01",
+  "questionNo": 7,
+  "stem": "When plates in the Earth's crust slide or grind against one another, an earthquake with devastating consequences may be ..... ."
+ },
+ {
+  "lemma": "grinder",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p04",
+  "questionNo": 5,
+  "stem": "..... this controversial stop-motion oddity from Spain centers on a sausage-making contest and the pet chicken destined for the meat grinder.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "groom",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1405-p05",
+  "questionNo": 21,
+  "stem": "The ..... fondness she displayed was what understandably drove the groom away.",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "lemma": "grudge",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1400-p08",
+  "questionNo": 17,
+  "stem": "His share of what we have obtained is, after all, but trifling for a(n) ..... man who cherishes a grudge against you, and desires the whole.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "grueling",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 2,
+  "paperId": "arshad-1399-p04",
+  "questionNo": 8,
+  "stem": "Experienced Iditarod runners tried to ..... Gary Paulsen from competing in the grueling Alaska race, but they were not successful. The writer and his team of sled dogs nearly perished during the race.",
+  "lemmaUncertain": true
+ },
+ {
+  "lemma": "grumpy",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1403-p03",
+  "questionNo": 12,
+  "stem": "You may choose between an avid party host with hundreds of acquaintances and a grumpy ....., who may have only one or two friends.",
+  "fieldCodes": [
+   "1110"
+  ]
+ },
+ {
+  "lemma": "guild",
+  "band": "mid",
+  "generalRank": 7264,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1398-p07",
+  "questionNo": 166,
+  "stem": "Writing has never been a ..... career choice, but a recent study by the Authors' Guild, a professional organization for book writers, shows that it may not even be a livable one anymore.",
+  "fieldCodes": [
+   "1148"
+  ]
+ },
+ {
+  "lemma": "gym",
+  "band": "mid",
+  "generalRank": 6176,
+  "distinctYears": 1,
+  "occurrences": 3,
+  "paperId": "arshad-1399-p02",
+  "questionNo": 12,
+  "stem": "They talk with others, read more, study more and carry around when they don't understand, ..... about it before they go to sleep, at the gym, on the bus."
+ },
+ {
+  "lemma": "gypsy",
+  "band": "rare",
+  "generalRank": null,
+  "distinctYears": 1,
+  "occurrences": 1,
+  "paperId": "arshad-1402-p06",
+  "questionNo": 5,
+  "stem": "The gypsy moth is also subject to attack by the nucleo-polyhedrosis virus, or wilt disease, ..... the caterpillars in outbreak years.",
+  "fieldCodes": [
+   "1148"
+  ]
+ }
+]

@@ -1,0 +1,57 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "implausible",
+  "lemma": "implausible",
+  "level": null,
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 20,
+      "surface": "implausible",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 9,
+      "surface": "implausible",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 1,
+      "surface": "implausible",
+      "year": 1399
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 3,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "implausible"
+  ]
+}

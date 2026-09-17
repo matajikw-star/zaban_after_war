@@ -1,0 +1,111 @@
+{
+  "confusables": [
+    {
+      "note": "benefactor کسی است که کمک می‌کند، اما beneficiary کسی است که کمک را می‌گیرد.",
+      "word": "benefactor"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "beneficiary",
+  "lemma": "beneficiary",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p01",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 48,
+      "surface": "beneficiary",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p04",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 6,
+      "surface": "beneficiary",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 3,
+      "surface": "beneficiary",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "benefactor"
+      ],
+      "definition": "a person or group that receives money, help or an advantage from something, especially from a will or an insurance policy",
+      "examples": [
+        {
+          "en": "His younger sister was named the sole beneficiary of the will.",
+          "fa": "خواهر کوچک‌ترش تنها ذی‌نفع آن وصیت‌نامه تعیین شد."
+        }
+      ],
+      "ipa": "/ˌbenɪˈfɪʃəri/",
+      "pos": "noun",
+      "synonyms": [
+        "recipient"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "ذی‌نفع",
+        "بهره‌مند",
+        "وارث (در وصیت‌نامه)"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "beneficiary"
+  ]
+}

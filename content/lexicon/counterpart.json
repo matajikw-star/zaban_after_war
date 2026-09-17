@@ -1,0 +1,66 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "counterpart",
+  "lemma": "counterpart",
+  "level": null,
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p04",
+      "part": "grammar",
+      "questionNo": 11,
+      "reach": 12,
+      "surface": "counterparts",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p04",
+      "part": "grammar",
+      "questionNo": 12,
+      "reach": 12,
+      "surface": "counterparts",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p05",
+      "part": "grammar",
+      "questionNo": 11,
+      "reach": 10,
+      "surface": "counterparts",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p05",
+      "part": "grammar",
+      "questionNo": 12,
+      "reach": 10,
+      "surface": "counterparts",
+      "year": 1399
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 4,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "counterparts"
+  ]
+}

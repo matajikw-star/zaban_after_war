@@ -1,0 +1,1170 @@
+[
+  {
+    "input": "plumbing",
+    "lemma": "plumbing",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "It is the subject the blank verb attaches to — plumbing ..... to bring the river to inland settlements — so the whole clause is unreadable without it.",
+    "gloss": "the system of pipes that carries water in and out of a building"
+  },
+  {
+    "input": "poachers",
+    "lemma": "poacher",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The sentence contrasts a cruel minority of poachers with a majority driven by economic need, so the blank cannot be filled without knowing that poaching is the awful activity in question.",
+    "gloss": "someone who hunts or catches animals illegally"
+  },
+  {
+    "input": "poem",
+    "lemma": "poem",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Tennyson's famous poem is school vocabulary and the blank is the fourth item in the quoted infinitive series, not anything the noun governs."
+  },
+  {
+    "input": "poet",
+    "lemma": "poet",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Persian poets such as Hafez, Mowlana is the most familiar possible framing for an Iranian candidate, and the blank tests the verb, not the noun."
+  },
+  {
+    "input": "poetic",
+    "lemma": "poetic",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Transparent from poet, and in formal poetic diction the load is carried by diction, not by the adjective."
+  },
+  {
+    "input": "politicians",
+    "lemma": "politician",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Liberal politicians is ordinary newspaper vocabulary; what decides the blank in this sentence is procrastinating, not the noun."
+  },
+  {
+    "input": "polyglot",
+    "lemma": "polyglot",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "Becoming a polyglot is the subject of the whole claim and the two things it requires, one of them the blank, are predicated on it; the clause about extra languages glosses it only partly.",
+    "gloss": "someone who speaks several languages"
+  },
+  {
+    "input": "pond",
+    "lemma": "pond",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Shallow ponds for shrimp farming is scene-setting, and the blank sits at the far end of the sentence against mangroves, which the stem itself glosses as salt-tolerant trees."
+  },
+  {
+    "input": "popularizer",
+    "lemma": "popularizer",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "An agent noun from popularize in the same shape as the calibration's observer and instructor, and the not a theorist or a scholar but frame already tells the reader which side of the contrast she is on."
+  },
+  {
+    "input": "portrait",
+    "lemma": "portrait",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Sensitive portraits of citizens sits inside a list of paintings, and the item tests the sentence's structure rather than anything the noun decides."
+  },
+  {
+    "input": "posited",
+    "lemma": "posit",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "It is the reporting verb of the hygiene hypothesis, so the that-clause containing the blank exists only as what the hypothesis posits.",
+    "gloss": "to put forward an idea as true, as a basis for argument"
+  },
+  {
+    "input": "possess",
+    "lemma": "possess",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "It now possesses mainly a historical interest uses a common academic verb, while the blank asks for the adjective before criticism."
+  },
+  {
+    "input": "posteriori",
+    "lemma": "posteriori",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "A posteriori universal languages is the subject whose emergence killed the Solresol clubs, but the term is Latin philosophy-of-language vocabulary rather than konkour English.",
+    "gloss": "derived from experience or from existing material rather than constructed from first principles",
+    "fieldCodes": ["1110"]
+  },
+  {
+    "input": "posture",
+    "lemma": "posture",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 3,
+    "reason": "The blank sits directly against it — assume a ..... posture — so the option can only be chosen by someone who knows posture means the position of the body.",
+    "gloss": "the position in which someone holds their body"
+  },
+  {
+    "input": "pot",
+    "lemma": "pot",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "Rand's potted version is a rare British idiom far from the blank, which asks for the adverb before impatient, and a lexicon entry on pot would not unlock it."
+  },
+  {
+    "input": "poultry",
+    "lemma": "poultry",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "Eggs, incubators and the growth of the embryo into chicken gloss it completely, and the blank is the verb that acts on the growth, not on the farms."
+  },
+  {
+    "input": "practicality",
+    "lemma": "practicality",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Far removed from practicality is a transparent derivative of practical, which a B2 reader already has."
+  },
+  {
+    "input": "prairie",
+    "lemma": "prairie",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The answer is decided by it had not rained for several months and because of the drought; the prairie is only where this happened."
+  },
+  {
+    "input": "preaches",
+    "lemma": "preach",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "Practicing what she preaches is the object of the missing opening verb, and the fixed phrase collapses for a reader who does not know preach.",
+    "gloss": "to urge others to accept a belief or way of behaving"
+  },
+  {
+    "input": "precepts",
+    "lemma": "precept",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "Had put forth its major precepts is what identifies the missing subject as the origin of the orthodox view of a single intelligence.",
+    "gloss": "a rule or principle laid down as a guide"
+  },
+  {
+    "input": "precisely",
+    "lemma": "precisely",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Cannot precisely foretell is a transparent adverb from precise, and the blank is the adverb in the unless-clause instead."
+  },
+  {
+    "input": "predation",
+    "lemma": "predation",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The threat the blank verb acts on is predation itself, so the abstract noun is the pivot of the clause.",
+    "gloss": "the killing of one animal by another for food"
+  },
+  {
+    "input": "predators",
+    "lemma": "predator",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Natural predators and wild animals pairs it with its own gloss, and the blank is the adverb in would not ..... be in the line of fire."
+  },
+  {
+    "input": "predecessor",
+    "lemma": "predecessor",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "The blank is the relative clause describing the predecessor, and the in stark contrast frame only works once the reader knows the predecessor is the previous holder of the post.",
+    "gloss": "the person who held a job or position before the current one"
+  },
+  {
+    "input": "prediction",
+    "lemma": "prediction",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Predictions without an accompanying analysis uses a transparent derivative of predict; the blank is the verb governing empirical support."
+  },
+  {
+    "input": "preference",
+    "lemma": "preference",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Their expectations and preferences is everyday vocabulary and the item is a structure question about the cities clause."
+  },
+  {
+    "input": "prejudices",
+    "lemma": "prejudice",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "Prejudices is the subject the blank verb removes from the heart, but it is standard academic and newspaper vocabulary an Iranian B2 candidate already carries."
+  },
+  {
+    "input": "preposterous",
+    "lemma": "preposterous",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 4,
+    "reason": "The adverb in the blank describes how we looked at the assertion, and only preposterous tells the reader the assertion was absurd.",
+    "gloss": "completely unreasonable or absurd"
+  },
+  {
+    "input": "presently",
+    "lemma": "presently",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Presently available equipment reads as currently available to any B2 reader who knows present."
+  },
+  {
+    "input": "preservative",
+    "lemma": "preservative",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "As a condiment and preservative names two roles of salt, but preservative is a transparent agentive from preserve and condiment is the genuinely opaque half of the pair."
+  },
+  {
+    "input": "prevailing",
+    "lemma": "prevailing",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The prevailing wisdom is the subject of the claim the second clause, containing the blank, reacts to, and the adjectival sense is not recoverable from prevail alone.",
+    "gloss": "most common or widely accepted at a particular time"
+  },
+  {
+    "input": "prevails",
+    "lemma": "prevail",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "We can only hope that common sense prevails again is the contrast that fixes the blank in the first sentence as a worsening of relations.",
+    "gloss": "to win out or become dominant in the end"
+  },
+  {
+    "input": "primate",
+    "lemma": "primate",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "Our primate ancestors and features now characteristic of primates frame the whole evolutionary claim, and the word is common in general science journalism rather than confined to zoology.",
+    "gloss": "a mammal of the group that includes monkeys, apes and humans"
+  },
+  {
+    "input": "primitive",
+    "lemma": "primitive",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "The use to which primitive people put the caves sits in a long list of unknowns, and primitive is familiar school vocabulary."
+  },
+  {
+    "input": "priori",
+    "lemma": "priori",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "All a priori languages names the class of constructed languages whose complexity is given as the reason the project failed, but the Latin tag belongs to philosophy and linguistics rather than to konkour English.",
+    "gloss": "reasoned from first principles rather than from experience",
+    "fieldCodes": ["1110"]
+  },
+  {
+    "input": "privatization",
+    "lemma": "privatization",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The stem defines it outright — privatization, in which state-owned industries are sold to private companies — so it blocks nothing."
+  },
+  {
+    "input": "privatized",
+    "lemma": "privatize",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The newly privatized companies follows the same passage's explicit definition of privatization, and the blank asks for the noun after tax."
+  },
+  {
+    "input": "privilege",
+    "lemma": "privilege",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "The privilege of upper classes is ordinary academic vocabulary, and the blank turns on the became ..... for further development frame rather than on this noun."
+  },
+  {
+    "input": "probable",
+    "lemma": "probable",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Probable cause is a legal collocation but the adjective itself is transparent from probably, and the blank is the verb before closely."
+  },
+  {
+    "input": "procession",
+    "lemma": "procession",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "The blank is the verb applied to the hearse, and funeral plus hearse plus favorite flowers already fix the scene without the noun."
+  },
+  {
+    "input": "procrastinating",
+    "lemma": "procrastinate",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The accusation of procrastinating is the evidence that decides what relations became increasingly, so the blank cannot be filled without it.",
+    "gloss": "to keep delaying something that should be done"
+  },
+  {
+    "input": "productive",
+    "lemma": "productive",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Highly productive is the transparent result clause after the joke, and every B2 candidate has produce and productive."
+  },
+  {
+    "input": "professionalism",
+    "lemma": "professionalism",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "An accurate representation of your professionalism is transparent from professional and sits after the blank, which asks how comments are taken."
+  },
+  {
+    "input": "programmer",
+    "lemma": "programmer",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "The programmer is the subject of a one-clause sentence whose only test is the verb collocating with an analogy."
+  },
+  {
+    "input": "promoters",
+    "lemma": "promoter",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The promoters conducted a survey puts a transparent agent noun in subject position while the blank asks what a survey studies before investment."
+  },
+  {
+    "input": "prone",
+    "lemma": "prone",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank is the item coordinated with prone to criminality, so the parallel cannot be read at all without the adjective.",
+    "gloss": "likely to suffer from or do something bad"
+  },
+  {
+    "input": "propelled",
+    "lemma": "propel",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "Propelled into orbit at the second attempt is what establishes that the first launch failed, which is what the blank about bad weather describes.",
+    "gloss": "to drive or push something forward with force"
+  },
+  {
+    "input": "proscriptions",
+    "lemma": "proscription",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "The blank is the noun governing prescriptions and proscriptions, and although how we should and should not speak glosses the pair, the word itself is opaque and is the classic trap against prescription.",
+    "gloss": "a rule forbidding something"
+  },
+  {
+    "input": "prose",
+    "lemma": "prose",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Other types of prose genres would read the same as other types of writing, and both blanks are decided by the money argument around it."
+  },
+  {
+    "input": "prosecution",
+    "lemma": "prosecution",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 4,
+    "reason": "The whole item is the main witness for the prosecution was not ....., so the missing adjective is chosen entirely from what a prosecution witness is for.",
+    "gloss": "the side in a criminal trial that argues the accused is guilty"
+  },
+  {
+    "input": "prospect",
+    "lemma": "prospect",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "The blank is the adjective predicated directly of the prospects of discovering new aspects, so the noun carries the sentence.",
+    "gloss": "the likelihood or outlook that something will happen"
+  },
+  {
+    "input": "prosperity",
+    "lemma": "prosperity",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "Economic prosperity is a fixed newspaper collocation and the item tests the if-clause pattern about digitalization rather than the noun."
+  },
+  {
+    "input": "protocetid",
+    "lemma": "protocetid",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "The justification for a new species rests on critical differences from other protocetid whales, but the word is palaeontological taxonomy and can never be konkour vocabulary.",
+    "gloss": "belonging to the Protocetidae, an extinct family of early whales"
+  },
+  {
+    "input": "prototypical",
+    "lemma": "prototypical",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "The prototypical excuse reads as the typical excuse for anyone who has typical, and the blank is the participle after caught."
+  },
+  {
+    "input": "prowess",
+    "lemma": "prowess",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 5,
+    "reason": "The blank sits directly against it in his ..... prowess, so the adjective can only be chosen by a reader who knows prowess is outstanding skill.",
+    "gloss": "outstanding skill or ability in an activity"
+  },
+  {
+    "input": "psychoanalysis",
+    "lemma": "psychoanalysis",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "The stem defines it in apposition — which is both a theory of personality and a method of treating people — and the blank is the verb form after began his career."
+  },
+  {
+    "input": "psychological",
+    "lemma": "psychological",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "A psychological approach designed to help individuals change thought patterns is ordinary vocabulary; the blank is the name of the therapy."
+  },
+  {
+    "input": "psychologist",
+    "lemma": "psychologist",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "As modern psychologists call the behavior is a parenthetical aside and the agent noun is transparent from psychology."
+  },
+  {
+    "input": "puberty",
+    "lemma": "puberty",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "Calorie restriction delays puberty is the first of two independent sentences, while the blank sits in the second one about maggots dying in greater numbers."
+  },
+  {
+    "input": "qualitative",
+    "lemma": "qualitative",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "In qualitative rather than quantitative terms is the research-methods pair every MA candidate already meets in Persian, and all three blanks lie elsewhere in the sentence."
+  },
+  {
+    "input": "quantitative",
+    "lemma": "quantitative",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "It appears only as the second half of the qualitative-quantitative contrast at the tail of the sentence, far from every blank."
+  },
+  {
+    "input": "quantum",
+    "lemma": "quantum",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Like quantum mechanics is for monkeys works as an analogy on the strength of the whole phrase, which is familiar to any candidate from popular science."
+  },
+  {
+    "input": "quarrel",
+    "lemma": "quarrel",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "Their ideological quarrel is what the blank verb says has begun again, so the missing verb is chosen from this noun.",
+    "gloss": "an angry disagreement or dispute"
+  },
+  {
+    "input": "quit",
+    "lemma": "quit",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Quit your job is basic vocabulary and appears in the stem as the model for the blank rather than as an obstacle."
+  },
+  {
+    "input": "quixotic",
+    "lemma": "quixotic",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 5,
+    "reason": "The blank sits directly after it in a quixotic ..... of the whole of psychology, and the windmill allusion only helps a reader who already has the Don Quixote reference.",
+    "gloss": "idealistic and impractical, chasing hopeless causes"
+  },
+  {
+    "input": "rabid",
+    "lemma": "rabid",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "A chronic case of rabid chauvinism sets the violent tone that decides what they do to the banners of the others in the blank.",
+    "gloss": "extreme and fanatical in one's opinions"
+  },
+  {
+    "input": "racial",
+    "lemma": "racial",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "A viciously enforced racial order is one of three parallel phrases after the blank, and racial is transparent from race."
+  },
+  {
+    "input": "racquet",
+    "lemma": "racquet",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Tennis racquet is a loanword an Iranian candidate already uses, and the blank is the reflexive verb about what Josh did to make amends."
+  },
+  {
+    "input": "radiating",
+    "lemma": "radiate",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "Cabin attendants radiating the imperious frown is a closing flourish; the blank is the verb about a single cup of water given to each passenger."
+  },
+  {
+    "input": "radical",
+    "lemma": "radical",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "A radical minority still refuses to play by the rules is familiar news vocabulary and the blank is the participle after caught."
+  },
+  {
+    "input": "rainbow",
+    "lemma": "rainbow",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Such things as rainbows and jumping frogs is an illustrative pair of school words."
+  },
+  {
+    "input": "rainfall",
+    "lemma": "rainfall",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Regardless of the amount of rainfall is a transparent compound of rain and fall at the end of the sentence."
+  },
+  {
+    "input": "ralph",
+    "lemma": "ralph",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 1,
+    "reason": "Ralph is the proper name of the subject of the sentence, not a vocabulary item at all."
+  },
+  {
+    "input": "ramification",
+    "lemma": "ramification",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 4,
+    "reason": "The ramification of committing a murder is the subject of the whole sentence and states the relation between the crime and the prison sentence that the blank turns on.",
+    "gloss": "a consequence of an action, usually an unwelcome one"
+  },
+  {
+    "input": "rancid",
+    "lemma": "rancid",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 5,
+    "reason": "The blank is the verb whose object is the principal, and only rancid remarks tells the reader the effect was offence rather than praise.",
+    "gloss": "rotten and unpleasant, said of a smell, taste or remark"
+  },
+  {
+    "input": "rap",
+    "lemma": "rap",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Rap musicians is globally familiar; the obstacle in this stem is vernacular, which the blank depends on."
+  },
+  {
+    "input": "rapidly",
+    "lemma": "rapidly",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Rapidly increased the production rate is transparent from rapid, and the blank is the opening adverbial phrase."
+  },
+  {
+    "input": "rash",
+    "lemma": "rash",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "The rash on his stomach is the reason the patient is asked to assume the posture named in the blank, and the noun sense is unrelated to the adjective rash a candidate may know.",
+    "gloss": "an area of red spots on the skin caused by illness or irritation"
+  },
+  {
+    "input": "ratification",
+    "lemma": "ratification",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "The reading offered at the time of ratification is legal background at the tail of the sentence; the blank is the participle after the unjustified position."
+  },
+  {
+    "input": "rauscher",
+    "lemma": "rauscher",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 1,
+    "difficulty": 1,
+    "reason": "Rauscher et al. is a cited author's surname, not a word."
+  },
+  {
+    "input": "readjust",
+    "lemma": "readjust",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "To readjust himself to routine life is transparent for any reader who has adjust, and the blank is the relative pronoun in the following clause."
+  },
+  {
+    "input": "realism",
+    "lemma": "realism",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Any reference to realism, context, or content is one item in a list, and the noun reads straight off real for a B2 reader."
+  },
+  {
+    "input": "realm",
+    "lemma": "realm",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "Dropped into a foreign realm is the situation the blank describes, and realm is a genuinely opaque formal noun rather than a derivative of anything the candidate has.",
+    "gloss": "a domain or sphere of activity; a kingdom"
+  },
+  {
+    "input": "reasonably",
+    "lemma": "reasonably",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "Very reasonably priced is what sets up the contrast in the blank, but the adverb is transparent from reasonable and the collocation with priced is guessable from context."
+  },
+  {
+    "input": "rebuild",
+    "lemma": "rebuild",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Rebuild their capabilities is a transparent re- compound of build."
+  },
+  {
+    "input": "recess",
+    "lemma": "recess",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "Keep her in at recess is the threatened punishment that reveals what Kate was doing with her schoolwork in the blank, and this school sense is not available from recess meaning an alcove.",
+    "gloss": "a short break between school lessons"
+  },
+  {
+    "input": "recession",
+    "lemma": "recession",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "Although the recession may technically be over frames the vicious circle, but recession is everyday economic-news vocabulary for a candidate who follows the subject in Persian."
+  },
+  {
+    "input": "recreational",
+    "lemma": "recreational",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Recreational facilities closes a list of institutions and is transparent from recreation; the blank is the adjective before rates."
+  },
+  {
+    "input": "recuperating",
+    "lemma": "recuperate",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 4,
+    "reason": "The adjective in the blank is recommended precisely for people who are recuperating from a severe illness, so the verb decides the answer.",
+    "gloss": "to recover one's health after illness"
+  },
+  {
+    "input": "redevelopment",
+    "lemma": "redevelopment",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Scare-quoted redevelopment of the city is a transparent re- compound of development at the end of the sentence."
+  },
+  {
+    "input": "reef",
+    "lemma": "reef",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Other members of the reef community comes after corals and coral hosts have already located the scene, and the blank is the participial phrase about the wastes."
+  },
+  {
+    "input": "referents",
+    "lemma": "referent",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "The contrast between abstract concepts in the blank and the specific and unique referents of proper nouns is the sentence's entire claim, but referent is semantics jargon rather than general English.",
+    "gloss": "the thing in the world that a word stands for",
+    "fieldCodes": ["1110"]
+  },
+  {
+    "input": "refine",
+    "lemma": "refine",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The blank is the connector before refined by Galileo, so the verb is background to a coordination test."
+  },
+  {
+    "input": "refinishing",
+    "lemma": "refinish",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "Refinishing furniture is one of five hobbies whose combined variety, not any single item, decides the blank about the couple's interests."
+  },
+  {
+    "input": "reflection",
+    "lemma": "reflection",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Teacher empowerment through teacher reflection is transparent from reflect, and the blank is the concessive preposition before all of the talk."
+  },
+  {
+    "input": "reflective",
+    "lemma": "reflective",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Reflective teaching is explained by the reflecting about in the same sentence, and the adjective is transparent from reflect."
+  },
+  {
+    "input": "refreshingly",
+    "lemma": "refreshingly",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Refreshingly unsentimental describes the book's manner, while the blank is what the deaf boy must overcome, fixed by struck deaf by disease."
+  },
+  {
+    "input": "refrigerator",
+    "lemma": "refrigerator",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Eating out of our refrigerator is one of four everyday intrusions listed before the blank."
+  },
+  {
+    "input": "refuse",
+    "lemma": "refuse",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "He refused to do so is basic vocabulary and appears as the contrast to the blank verb, which is the harder word here."
+  },
+  {
+    "input": "regime",
+    "lemma": "regime",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Access to this regime in the laboratory refers back to conditions already described, and the item tests the inversion after only in the mid-1980s."
+  },
+  {
+    "input": "regimen",
+    "lemma": "regimen",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "The adverb in the blank modifies adhere to the prescribed regimen, so the noun is what the whole instruction is about, and it is easily confused with regime.",
+    "gloss": "a prescribed course of treatment, diet or exercise"
+  },
+  {
+    "input": "regrouping",
+    "lemma": "regrouping",
+    "verdict": "domain-term",
+    "confidence": "low",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "Difficulty with regrouping in subtraction is the whole subject of the sentence, but this is arithmetic-teaching jargon for borrowing, not the general sense a reader would derive from group.",
+    "gloss": "in arithmetic, carrying or borrowing between place-value columns",
+    "fieldCodes": ["1110"]
+  },
+  {
+    "input": "regulate",
+    "lemma": "regulate",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "May regulate population is common academic vocabulary at the end of the sentence, after the blank that names what Christian and Davis demonstrated."
+  },
+  {
+    "input": "regulators",
+    "lemma": "regulator",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Other regulators include physiological control mechanisms is a transparent agent noun that the same sentence explains with regulate population."
+  },
+  {
+    "input": "rehearsal",
+    "lemma": "rehearsal",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Long years of practice and rehearsal pairs it with practice, which glosses it, and the blank is the whole missing subject clause."
+  },
+  {
+    "input": "reigning",
+    "lemma": "reigning",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "The reigning Stuart monarchy sits at the far end of a long sentence whose blank is the connector after John Dryden, and monarchy already carries the sense."
+  },
+  {
+    "input": "relapse",
+    "lemma": "relapse",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The danger of relapse of the illness is the consequence that forces the strength of the adverb in the blank before adhere.",
+    "gloss": "a return of an illness after a period of improvement"
+  },
+  {
+    "input": "relate",
+    "lemma": "relate",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "Social distance and power relationships are related is basic vocabulary; the blank is the concessive conjunction opening the sentence."
+  },
+  {
+    "input": "relatedness",
+    "lemma": "relatedness",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "Autonomy, competence, and relatedness is a list of theory constructs, and relatedness reads straight off related; the item tests the sentence fragment, not the noun."
+  },
+  {
+    "input": "relativity",
+    "lemma": "relativity",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "Linguistic relativity is spelled out by the rest of the sentence — doubting one's own ability to describe reality — and relativity itself is familiar from physics."
+  },
+  {
+    "input": "relax",
+    "lemma": "relax",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "In a relaxed manner is school vocabulary; the blank asks for the opposite of elaborate language."
+  },
+  {
+    "input": "relaxation",
+    "lemma": "relaxation",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Verbal relaxation instructions is one of three listening conditions and is transparent from relax."
+  },
+  {
+    "input": "relocate",
+    "lemma": "relocate",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "People who relocate frequently governs the blank, but the verb is transparent from locate and the stem glosses it with pulling up stakes and never putting down roots."
+  },
+  {
+    "input": "remark",
+    "lemma": "remark",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "The remarks a child younger than 10 years makes is common vocabulary in a sentence testing the opening participle."
+  },
+  {
+    "input": "remarkable",
+    "lemma": "remarkable",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "No less remarkable than the development of the compact disc is a familiar adjective; the blank is the verb about reissuing classic recordings."
+  },
+  {
+    "input": "render",
+    "lemma": "render",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "The not translated directly, ..... rendered contrast only parses for a reader who knows that rendered here means represented or converted, and the verb is opaque beyond its everyday senses.",
+    "gloss": "to represent or express something in another form"
+  },
+  {
+    "input": "reneged",
+    "lemma": "renege",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 5,
+    "reason": "He dramatically reneged by his promises is the main verb of the sentence and the site of the tested error, so the item is unanswerable without the word.",
+    "gloss": "to go back on a promise or agreement"
+  },
+  {
+    "input": "replaying",
+    "lemma": "replay",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "Replaying wistful memories is a transparent re- compound, and the blank is the participle before in gloomy thoughts."
+  },
+  {
+    "input": "repress",
+    "lemma": "repress",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "Unable to repress their excitement is what explains the cheer and the gathering the blank completes, and the verb is not derivable from press.",
+    "gloss": "to hold back or suppress a feeling"
+  },
+  {
+    "input": "reproduce",
+    "lemma": "reproduce",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Long enough for the parasite to reproduce is standard biology-in-general vocabulary; the blank tests the so ..... inversion."
+  },
+  {
+    "input": "reputation",
+    "lemma": "reputation",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "A well-deserved reputation for ..... is the frame of the item, but the noun itself is school vocabulary and the difficulty lies in the missing quality."
+  },
+  {
+    "input": "researcher",
+    "lemma": "researcher",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Some researchers investigated is a transparent agent noun and the blank is the preposition before spatial reasoning."
+  },
+  {
+    "input": "reside",
+    "lemma": "reside",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "68% of the population will reside in cities is fixed by the percentage and the cities, and the blank is in the earlier clause about urban areas tripling."
+  },
+  {
+    "input": "resist",
+    "lemma": "resist",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Lin resists taking medicine even when she's really sick is common vocabulary supplying the contrast for the blank adjective before headache."
+  },
+  {
+    "input": "respectable",
+    "lemma": "respectable",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "A respectable 2.6 meters sits after the blank, which is the connector following The fossils show, and unimpressive relative to some extant whales already frames the size judgement."
+  }
+]

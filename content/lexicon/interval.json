@@ -1,0 +1,134 @@
+{
+  "confusables": [
+    {
+      "note": "در گزینه‌های همین آزمون آمده بود؛ یعنی مداخله، نه فاصلهٔ زمانی.",
+      "word": "intervention"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "interval",
+  "lemma": "interval",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p02",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 30,
+      "surface": "interval",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p07",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 2,
+      "surface": "interval",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p13",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 1,
+      "surface": "interval",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a period of time between two events or two points in time",
+      "examples": [
+        {
+          "en": "The buses run at regular intervals of about fifteen minutes.",
+          "fa": "اتوبوس‌ها با فاصله‌های زمانی منظم حدود پانزده دقیقه حرکت می‌کنند."
+        }
+      ],
+      "ipa": "/ˈɪntəvl/",
+      "pos": "n",
+      "synonyms": [
+        "gap",
+        "span",
+        "period"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "فاصلهٔ زمانی",
+        "بازهٔ زمانی",
+        "وقفه"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a short break between the parts of a play, a concert or a film, in British use",
+      "examples": [
+        {
+          "en": "We bought coffee during the interval between the two acts.",
+          "fa": "در فاصلهٔ میان دو پرده قهوه خریدیم."
+        }
+      ],
+      "ipa": "/ˈɪntəvl/",
+      "pos": "n",
+      "synonyms": [
+        "intermission",
+        "break"
+      ],
+      "testedIn": [],
+      "translations": [
+        "میان‌پرده",
+        "استراحت بین دو پرده"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 3
+    },
+    "byYear": {
+      "1400": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 11,
+    "timesAsAnswer": 3,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "interval"
+  ]
+}

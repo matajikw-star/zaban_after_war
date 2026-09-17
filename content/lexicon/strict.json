@@ -1,0 +1,101 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "strict",
+  "lemma": "strict",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 9,
+      "surface": "strictly",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "lax",
+        "lenient"
+      ],
+      "definition": "demanding that a rule or an instruction be followed exactly, with no exception allowed; the adverb \"strictly\" means exactly and without any departure from what is required",
+      "examples": [
+        {
+          "en": "The laboratory has strict rules about storing chemicals.",
+          "fa": "آزمایشگاه قوانین سخت‌گیرانه‌ای برای نگهداری مواد شیمیایی دارد."
+        }
+      ],
+      "ipa": "/strɪkt/",
+      "pos": "adj",
+      "synonyms": [
+        "rigorous",
+        "stringent"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "سخت‌گیرانه",
+        "دقیق و بی‌کم‌وکاست",
+        "سخت‌گیر"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "in the pattern \"strictly for\" or \"strictly to\": only that and nothing wider",
+      "examples": [
+        {
+          "en": "The car park is strictly for hospital staff.",
+          "fa": "این پارکینگ منحصراً برای کارکنان بیمارستان است."
+        }
+      ],
+      "ipa": "/ˈstrɪktli/",
+      "pos": "adv",
+      "synonyms": [
+        "solely",
+        "exclusively"
+      ],
+      "testedIn": [],
+      "translations": [
+        "منحصراً",
+        "فقط"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "strictly"
+  ]
+}

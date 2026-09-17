@@ -1,0 +1,98 @@
+{
+  "confusables": [
+    {
+      "note": "شباهت ظاهری دارند، اما pragmatic یعنی عمل‌گرا و واقع‌بین، نه جزم‌اندیش",
+      "word": "pragmatic"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "dogmatic",
+  "lemma": "dogmatic",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p01",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 42,
+      "surface": "dogmatic",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p03",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 16,
+      "surface": "dogmatic",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "open-minded",
+        "flexible"
+      ],
+      "definition": "stating your opinions as if they were certainly true and refusing to consider that anyone else could be right",
+      "examples": [
+        {
+          "en": "He is too dogmatic to admit that another method might work better.",
+          "fa": "او آن‌قدر جزم‌اندیش است که نمی‌پذیرد شاید روشی دیگر بهتر جواب بدهد."
+        }
+      ],
+      "ipa": "/dɒɡˈmætɪk/",
+      "pos": "adj",
+      "synonyms": [
+        "opinionated",
+        "doctrinaire"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "جزم‌اندیش",
+        "متعصب در عقیده",
+        "قاطع و انعطاف‌ناپذیر"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "dogmatic"
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "extravagant",
+  "lemma": "extravagant",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p02",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 30,
+      "surface": "extravagant",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p07",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 2,
+      "surface": "extravagant",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p13",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 1,
+      "surface": "extravagant",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "frugal",
+        "thrifty"
+      ],
+      "definition": "spending much more money than is reasonable or than you can afford",
+      "examples": [
+        {
+          "en": "Buying a second car would be extravagant on our small salary.",
+          "fa": "خریدن خودروی دوم با حقوق اندک ما ولخرجی خواهد بود."
+        }
+      ],
+      "ipa": "/ɪkˈstrævəɡənt/",
+      "pos": "adj",
+      "synonyms": [
+        "wasteful",
+        "lavish",
+        "profligate"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "ولخرجانه",
+        "اسراف‌آمیز",
+        "پرخرج"
+      ]
+    },
+    {
+      "antonyms": [
+        "restrained"
+      ],
+      "definition": "going far beyond what is reasonable or believable, said of claims, praise or behaviour",
+      "examples": [
+        {
+          "en": "The advertisement makes extravagant claims about what the cream can do.",
+          "fa": "آن آگهی دربارهٔ کاری که کرم انجام می‌دهد ادعاهای اغراق‌آمیزی مطرح می‌کند."
+        }
+      ],
+      "ipa": "/ɪkˈstrævəɡənt/",
+      "pos": "adj",
+      "synonyms": [
+        "exaggerated",
+        "excessive"
+      ],
+      "testedIn": [],
+      "translations": [
+        "اغراق‌آمیز",
+        "گزاف"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 3
+    },
+    "byYear": {
+      "1400": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 11,
+    "timesAsAnswer": 3,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "extravagant"
+  ]
+}

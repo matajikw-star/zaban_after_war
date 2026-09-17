@@ -1,0 +1,108 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "accumulate",
+  "lemma": "accumulate",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 20,
+      "surface": "accumulated",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 9,
+      "surface": "accumulated",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 1,
+      "surface": "accumulated",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "deplete",
+        "dissipate"
+      ],
+      "definition": "to gradually collect or increase in amount over a period of time",
+      "examples": [
+        {
+          "en": "Dust had accumulated on the shelves during the long holiday.",
+          "fa": "در تعطیلات طولانی، گرد و غبار روی قفسه‌ها انباشته شده بود."
+        }
+      ],
+      "ipa": "/əˈkjuːmjəleɪt/",
+      "pos": "v",
+      "synonyms": [
+        "amass",
+        "build up"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "انباشتن",
+        "روی هم جمع شدن",
+        "اندوختن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "accumulated"
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "paperId": "arshad-1401-p04",
+  "degree": "arshad",
+  "year": 1401,
+  "groupCodes": ["1110"],
+  "bookletCount": 1,
+  "source": { "file": "1110-1401.pdf", "pages": [2, 3] },
+  "extractedBy": { "model": "claude-sonnet-5", "at": "2026-09-15" },
+  "questions": [
+    {
+      "no": 1,
+      "part": "grammar",
+      "stem": "The way Hymes seeks to account for that fact is ----------- communicative competence, which \"is dependent upon both (tacit) knowledge and (ability for) use.\"",
+      "options": ["posited the concept of", "by positing the concept of", "the concept of which is posited", "that for the concept posited being"],
+      "optionLemmas": ["posit", "posit", "posit", "posit"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "posit",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "grammar",
+      "stem": "Closely associated with ----------- the capacity to interpret target language utterances as intended.",
+      "options": ["is the opportunity and interaction", "the opportunity for interaction", "the opportunity and interaction are", "the opportunity to interact is"],
+      "optionLemmas": ["opportunity", "opportunity", "opportunity", "opportunity"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "opportunity",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "grammar",
+      "stem": "The term affective factors stands for several variables that characterize learner disposition, ----------- attitudes and motivation.",
+      "options": ["the most important of which are", "of which the most important is", "the most important of them are", "of whose the most important being"],
+      "optionLemmas": ["important", "important", "important", "important"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "important",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "grammar",
+      "stem": "Even today, ----------- all of the talk about teacher empowerment through teacher reflection, we still see a general lack of respect for the craft knowledge of teachers.",
+      "options": ["but", "no matter", "with", "regardless"],
+      "optionLemmas": ["but", "no matter", "with", "regardless"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "with",
+      "uncertain": ["item tests a concessive function word ('with all of...' as a synonym of 'despite'); 'regardless' (without 'of') and 'but' are also weakly defensible depending on intended reading"]
+    },
+    {
+      "no": 5,
+      "part": "grammar",
+      "stem": "Not only do students walk into schools with expectations and assumptions formed as a result of life experiences but -----------.",
+      "options": ["so do their teachers", "also their teachers", "their teachers do also", "their teachers also"],
+      "optionLemmas": ["teacher", "teacher", "teacher", "teacher"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "teacher",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "grammar",
+      "stem": "Over time vapid added a broader, more figurative connotation to describe anything ----------- zest and spirit.",
+      "options": ["that lacks in", "in which is lacking", "which in it lacks", "that is lacking in"],
+      "optionLemmas": ["lack", "lack", "lack", "lack"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "lack",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "grammar",
+      "stem": "The scientist touted the value of interdisciplinary approach for environmental studies, arguing such an approach was of paramount importance in promoting environmental literacy among students.",
+      "options": ["interdisciplinary approach for", "arguing", "of paramount importance", "environmental literacy"],
+      "optionLemmas": ["approach", "argue", "importance", "literacy"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "approach",
+      "uncertain": ["error-identification item: missing article ('an') before 'interdisciplinary approach' is the underlined phrase judged to need changing"]
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "This all started on a Saturday morning in May, one of those warm spring's days that smell like clean linen.",
+      "options": ["This all started", "on a Saturday morning in May", "one of those warm spring's days", "smell"],
+      "optionLemmas": ["start", "morning", "day", "smell"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "day",
+      "uncertain": ["error-identification item: the possessive apostrophe in 'spring's days' is judged to be the error (should be 'spring days')"]
+    },
+    {
+      "no": 9,
+      "part": "grammar",
+      "stem": "Any civilized human being in this nineteenth century should not be aware that the earth traveled round the sun appeared to me to be such an extraordinary fact that I could hardly realize it.",
+      "options": ["Any civilized human being", "that the earth", "appeared to me to be", "it"],
+      "optionLemmas": ["being", "earth", "appear", "it"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "that",
+      "uncertain": ["error-identification item: the sentence needs an initial 'That' before 'any civilized human being' to form the subject clause of 'appeared'; the underlined segment 'Any civilized human being' is judged to be the part needing change"]
+    },
+    {
+      "no": 10,
+      "part": "grammar",
+      "stem": "Although talking while gesturing with one's hands was once considered undesirable, researchers have now found that using gestures during conversation makes thinking and speaking more easily for many people.",
+      "options": ["talking while gesturing with", "was once considered", "researchers have now found", "thinking and speaking more easily"],
+      "optionLemmas": ["gesture", "consider", "find", "easy"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "easy",
+      "uncertain": ["error-identification item: 'makes X Y' requires an adjective complement ('easier/easy'), not the adverb 'easily'"]
+    },
+    {
+      "no": 11,
+      "part": "grammar",
+      "stem": "By incorporating Pueblo figures into her strongly geometric and abstract works the Pueblo artist Helen Hardin has had a significant impact on the country's contemporary Native art.",
+      "options": ["into her strongly", "the Pueblo artist Helen Hardin", "has had", "a significant impact"],
+      "optionLemmas": ["strongly", "artist", "have", "impact"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "have",
+      "uncertain": ["error-identification item: the boundaries of the four underlined segments on the scan are hard to pin down precisely, especially the split between 'has had' and 'a significant impact'; tentatively guessed 'has had' (present perfect) is the error and should be simple past 'had', since the subject appears to be a historical/deceased artist, but this is a low-confidence inference and should be manually reviewed"]
+    },
+    {
+      "no": 12,
+      "part": "grammar",
+      "stem": "Beliefs established early on in life are resistant to change even to the face of contradictory evidence.",
+      "options": ["early on in life", "change", "to the face of", "evidence"],
+      "optionLemmas": ["early", "change", "face", "evidence"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "face",
+      "uncertain": ["error-identification item: the idiom is 'in the face of', so 'to the face of' is judged to be the error"]
+    },
+    {
+      "no": 13,
+      "part": "vocabulary",
+      "stem": "Even after he was caught red-handed, Brian still thought his ----------- would be believed.",
+      "options": ["remunerations", "predilections", "breaches", "mendacities"],
+      "optionLemmas": ["remuneration", "predilection", "breach", "mendacity"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "mendacity",
+      "uncertain": []
+    },
+    {
+      "no": 14,
+      "part": "vocabulary",
+      "stem": "The ----------- of the two families, who were neighbors for over twenty years, led to some close friendships as well as a few disagreements.",
+      "options": ["propinquity", "gratuity", "bipartisanship", "constituency"],
+      "optionLemmas": ["propinquity", "gratuity", "bipartisanship", "constituency"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "propinquity",
+      "uncertain": []
+    }
+  ],
+  "uncertain": [
+    "Section headers on page 3 diverge from the routes.jsonl expectation for this booklet: 'PART B' here is 'Written Expression' (error identification), not a cloze test, and 'PART C' here is headed 'Vocabulary', not Reading Comprehension. Both sections were transcribed as visible on the given pages (7-12 as grammar error-ID items, 13-14 as vocabulary items) per the task's instruction to flag rather than skip a mismatched section header. Only two vocabulary items (13-14) are visible on the given pages; any further Part C vocabulary items beyond page 3 were not supplied and are not included here.",
+    "q11: underlined-segment boundaries for the error-identification item are uncertain from the scan; the inferred answer is low-confidence and should be manually reviewed."
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "confusables": [
+    {
+      "note": "شکل نزدیک، اما salutary یعنی عبرت‌آموز و سودمند، مانند یک تجربهٔ تلخ آموزنده",
+      "word": "salutary"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "salubrious",
+  "lemma": "salubrious",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1405-p05",
+      "part": "vocabulary",
+      "questionNo": 21,
+      "reach": 1,
+      "surface": "salubrious",
+      "year": 1405
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p08",
+      "part": "vocabulary",
+      "questionNo": 17,
+      "reach": 1,
+      "surface": "salubrious",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "unhealthy"
+      ],
+      "definition": "good for your health, said especially of a climate or an environment",
+      "examples": [
+        {
+          "en": "Doctors sent him to a salubrious coastal town to recover.",
+          "fa": "پزشکان او را برای بهبودی به شهری ساحلی و خوش‌آب‌وهوا فرستادند."
+        }
+      ],
+      "ipa": "/səˈluːbriəs/",
+      "pos": "adj",
+      "synonyms": [
+        "healthful",
+        "wholesome"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 21
+        },
+        {
+          "paperId": "arshad-1400-p08",
+          "questionNo": 17
+        }
+      ],
+      "translations": [
+        "سلامت‌بخش",
+        "سالم",
+        "خوش‌آب‌وهوا"
+      ]
+    },
+    {
+      "antonyms": [
+        "seedy"
+      ],
+      "definition": "of a place, pleasant and respectable, most often used in a negative sentence",
+      "examples": [
+        {
+          "en": "They found a cheap flat in a less salubrious district.",
+          "fa": "آپارتمانی ارزان در محله‌ای کم‌آبروتر پیدا کردند."
+        }
+      ],
+      "ipa": "/səˈluːbriəs/",
+      "pos": "adj",
+      "synonyms": [
+        "respectable"
+      ],
+      "testedIn": [],
+      "translations": [
+        "آبرومند",
+        "خوش‌نام"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 1,
+      "1405": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1400,
+    "lastYear": 1405,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "salubrious"
+  ]
+}

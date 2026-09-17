@@ -1,0 +1,109 @@
+{
+  "confusables": [
+    {
+      "note": "biography یعنی زندگی‌نامهٔ یک شخص، اما bibliography فهرست کتاب‌ها و منابع است.",
+      "word": "biography"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "bibliography",
+  "lemma": "bibliography",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 23,
+      "surface": "bibliographies",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 5,
+      "surface": "bibliographies",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 1,
+      "surface": "bibliographies",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a list of the books and articles that were used in or are recommended for a piece of writing",
+      "examples": [
+        {
+          "en": "Every thesis must end with a complete and accurate bibliography.",
+          "fa": "هر پایان‌نامه باید با فهرست منابعی کامل و دقیق پایان یابد."
+        }
+      ],
+      "ipa": "/ˌbɪbliˈɒɡrəfi/",
+      "pos": "noun",
+      "synonyms": [
+        "reference list"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "کتاب‌شناسی",
+        "فهرست منابع",
+        "فهرست مآخذ"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "bibliographies"
+  ]
+}

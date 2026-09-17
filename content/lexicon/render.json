@@ -1,0 +1,110 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "render",
+  "lemma": "render",
+  "level": "C1",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1402-p04",
+      "part": "grammar",
+      "questionNo": 2,
+      "reach": 1,
+      "surface": "rendered",
+      "year": 1402
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to express or translate something into another language or form",
+      "examples": [
+        {
+          "en": "The translator rendered the poem into plain modern prose.",
+          "fa": "مترجم آن شعر را به نثر سادهٔ امروزی برگرداند."
+        }
+      ],
+      "ipa": "/ˈrendə(r)/",
+      "pos": "v",
+      "synonyms": [
+        "translate",
+        "express"
+      ],
+      "testedIn": [],
+      "translations": [
+        "برگرداندن",
+        "ترجمه کردن",
+        "بازنمایاندن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to cause someone or something to be in a particular state or condition",
+      "examples": [
+        {
+          "en": "The injury rendered him unable to walk for months.",
+          "fa": "آن آسیب‌دیدگی او را ماه‌ها ناتوان از راه رفتن کرد."
+        }
+      ],
+      "ipa": "/ˈrendə(r)/",
+      "pos": "v",
+      "synonyms": [
+        "make",
+        "leave"
+      ],
+      "testedIn": [],
+      "translations": [
+        "کردن (به حالتی درآوردن)",
+        "ساختن"
+      ]
+    },
+    {
+      "antonyms": [
+        "withhold"
+      ],
+      "definition": "to give or provide a service or help, especially formally",
+      "examples": [
+        {
+          "en": "The hospital rendered assistance to everyone injured in the crash.",
+          "fa": "بیمارستان به همهٔ مصدومان تصادف کمک رساند."
+        }
+      ],
+      "ipa": "/ˈrendə(r)/",
+      "pos": "v",
+      "synonyms": [
+        "provide",
+        "furnish"
+      ],
+      "testedIn": [],
+      "translations": [
+        "ارائه دادن (خدمت)",
+        "رساندن (کمک)"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "rendered"
+  ]
+}

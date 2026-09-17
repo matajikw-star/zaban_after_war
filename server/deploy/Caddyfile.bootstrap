@@ -1,0 +1,31 @@
+# Temporary Caddyfile used between bootstrap and the first real deploy.
+# All three hostnames serve the same static placeholder over HTTPS, which is what
+# Kavenegar's template review and Zarinpal's site check need to see.
+# Replaced by server/Caddyfile when PocketBase is deployed (docs/spec/what.md §14.2).
+
+{
+	email admin@konkurleitner.com
+	# ZeroSSL (Caddy's other default issuer) returned a malformed, non-JSON response when
+	# tested from this VPS on 2026-09-18 - plausibly unreachable/filtered for an Iranian IP.
+	# Let's Encrypt alone is what has actually been verified to work here.
+	acme_ca https://acme-v02.api.letsencrypt.org/directory
+}
+
+(common) {
+	encode zstd gzip
+	header X-Robots-Tag "noindex"
+	log {
+		output file /var/log/caddy/access.log
+		format json
+	}
+}
+
+www.konkurleitner.com {
+	redir https://konkurleitner.com{uri} 308
+}
+
+konkurleitner.com, app.konkurleitner.com, admin.konkurleitner.com {
+	import common
+	root * /opt/kl/placeholder
+	file_server
+}

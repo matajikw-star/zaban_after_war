@@ -1,0 +1,113 @@
+{
+  "confusables": [
+    {
+      "note": "املا و تلفظ نزدیک است اما idyllic یعنی دل‌انگیز و آرام مثل تصویری بهشتی، نه آرمان‌گرا",
+      "word": "idyllic"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "idealistic",
+  "lemma": "idealistic",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 20,
+      "surface": "idealistic",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 9,
+      "surface": "idealistic",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "idealistic",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "realistic",
+        "pragmatic"
+      ],
+      "definition": "believing that things can be perfect and acting on that belief, often in a way that ignores what is practical",
+      "examples": [
+        {
+          "en": "Her plan was generous but too idealistic for a city with no budget.",
+          "fa": "طرح او سخاوتمندانه بود اما برای شهری بی‌بودجه بیش از حد آرمان‌گرایانه بود."
+        }
+      ],
+      "ipa": "/ˌaɪdiəˈlɪstɪk/",
+      "pos": "adj",
+      "synonyms": [
+        "utopian",
+        "visionary"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "آرمان‌گرا",
+        "ایده‌آل‌گرا",
+        "خیال‌پردازانه"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "idealistic"
+  ]
+}

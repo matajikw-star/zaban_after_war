@@ -1,0 +1,100 @@
+{
+  "confusables": [
+    {
+      "note": "هم‌ریشه و نزدیک در املا؛ projectile یعنی پرتابه، جسمی که شلیک یا پرتاب می‌شود.",
+      "word": "projectile"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "projection",
+  "lemma": "projection",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1402-p02",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 32,
+      "surface": "projections",
+      "year": 1402
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "an estimate of a future amount or situation, based on figures that are available now",
+      "examples": [
+        {
+          "en": "Sales projections for next year were based on three months of data.",
+          "fa": "پیش‌بینی فروش سال آینده بر پایه داده‌های سه ماه تهیه شده بود."
+        }
+      ],
+      "ipa": "/prəˈdʒekʃn/",
+      "pos": "n",
+      "synonyms": [
+        "forecast",
+        "estimate"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p02",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "پیش‌بینی (بر پایه داده‌ها)",
+        "برآورد آینده",
+        "طرح‌ریزی عددی"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "the act of sending an image onto a screen or a surface with light",
+      "examples": [
+        {
+          "en": "The projection of the map onto the wall helped everyone follow the route.",
+          "fa": "انداختن تصویر نقشه روی دیوار به همه کمک کرد مسیر را دنبال کنند."
+        }
+      ],
+      "ipa": "/prəˈdʒekʃn/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "تصویر انداختن",
+        "پخش تصویر روی پرده"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1402": 1
+    },
+    "byYear": {
+      "1402": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1402,
+    "lastYear": 1402,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "projections"
+  ]
+}

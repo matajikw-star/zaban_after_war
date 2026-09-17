@@ -1,0 +1,146 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "manipulate",
+  "lemma": "manipulate",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 20,
+      "surface": "manipulated",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 9,
+      "surface": "manipulated",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 1,
+      "surface": "manipulated",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p05",
+      "part": "cloze",
+      "questionNo": 33,
+      "reach": 1,
+      "surface": "manipulate",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to control or change someone or something cleverly and often dishonestly, to get what you want",
+      "examples": [
+        {
+          "en": "The witness had manipulated the dates to hide where he really was.",
+          "fa": "شاهد تاریخ‌ها را دستکاری کرده بود تا پنهان کند واقعاً کجا بوده است."
+        }
+      ],
+      "ipa": "/məˈnɪpjuleɪt/",
+      "pos": "v",
+      "synonyms": [
+        "exploit",
+        "maneuver",
+        "rig"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "دستکاری کردن",
+        "به بازی گرفتن",
+        "اعمال نفوذ کردن بر"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to handle or operate something with skill, especially with the hands",
+      "examples": [
+        {
+          "en": "Surgeons learn to manipulate tiny instruments through a very small opening.",
+          "fa": "جراحان می‌آموزند ابزارهای بسیار ریز را از میان شکافی کوچک ماهرانه به کار ببرند."
+        }
+      ],
+      "ipa": "/məˈnɪpjuleɪt/",
+      "pos": "v",
+      "synonyms": [
+        "handle",
+        "operate",
+        "work"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 33
+        }
+      ],
+      "translations": [
+        "ماهرانه به کار بردن",
+        "کار کردن با (دست یا ابزار)"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1,
+      "1399": 3
+    },
+    "distinctYears": 2,
+    "firstYear": 1398,
+    "lastYear": 1399,
+    "priority": 8,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "manipulate",
+    "manipulated"
+  ]
+}

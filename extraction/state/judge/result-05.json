@@ -1,0 +1,1158 @@
+[
+ {
+  "input": "exploitation",
+  "lemma": "exploitation",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 3,
+  "reason": "The whole conditional rests on it: if exploitation of the planet's resources continues, the lifestyle runs a risk, and the reader who misses the word loses the premise.",
+  "gloss": "the act of using a resource heavily, often unfairly or wastefully"
+ },
+ {
+  "input": "exploration",
+  "lemma": "exploration",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "Transparent from explore, and languages discovered in explorations of the New World is background to a blank that sits on the it-was-difficult structure."
+ },
+ {
+  "input": "expressive",
+  "lemma": "expressive",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Transparent from express, and the sentence defines expressive ties outright as links formed when we emotionally invest ourselves in others."
+ },
+ {
+  "input": "extant",
+  "lemma": "extant",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 5,
+  "reason": "A genuinely hard word carrying the comparison between the fossil species and some extant whales; the parenthetical (living) softens it but does not make it a word a candidate would otherwise know.",
+  "gloss": "still existing today; not extinct"
+ },
+ {
+  "input": "extinction",
+  "lemma": "extinction",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Road to extinction closes the sentence, but extinction is standard environmental vocabulary for a B2 candidate."
+ },
+ {
+  "input": "extraneous",
+  "lemma": "extraneous",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 5,
+  "difficulty": 5,
+  "reason": "The blank is the direct antonym of it: omitting the extraneous details while explaining the ..... of the matter, so the answer is unreachable without the word.",
+  "gloss": "irrelevant; not belonging to the matter at hand"
+ },
+ {
+  "input": "extraordinary",
+  "lemma": "extraordinary",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "Such an extraordinary fact that I could hardly realize it uses a word every B2 candidate already has."
+ },
+ {
+  "input": "exuding",
+  "lemma": "exude",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "The subtle human presence exuding out of urban landscapes is the sentence's central image, and the verb is not derivable from anything a B2 reader knows.",
+  "gloss": "to give off or radiate something gradually"
+ },
+ {
+  "input": "eyewitness",
+  "lemma": "eyewitness",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The blank sits directly against it, but eye plus witness is a transparent compound for anyone who knows witness."
+ },
+ {
+  "input": "facilitator",
+  "lemma": "facilitator",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "The blank is the adjective describing how the effort looked; the facilitator is merely the agent, as replaceable here as instructor was in the calibration."
+ },
+ {
+  "input": "factual",
+  "lemma": "factual",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Transparent from fact, and the blank is the adjective describing the academic publisher, not the error."
+ },
+ {
+  "input": "faded",
+  "lemma": "fade",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "His dashing flattery faded uses a verb a B2 candidate has from everyday English; the item's difficulty lives in mountebank, not here."
+ },
+ {
+  "input": "faintly",
+  "lemma": "faintly",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "A full moon ..... faintly above constrains the missing verb, but faintly is a transparent adverb from faint, which a B2 reader knows in the sense of dim."
+ },
+ {
+  "input": "fairy",
+  "lemma": "fairy",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "Her fairy kingdom is the clue to the missing adjective, but fairy is school vocabulary from fairy tales."
+ },
+ {
+  "input": "fallen",
+  "lemma": "fall",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Have fallen into ..... since the advent of the MP3 player tests the idiom disuse, not the elementary verb fall."
+ },
+ {
+  "input": "fancy",
+  "lemma": "fancy",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "New and fancy boxes is decoration around a blank that asks for the verb of unloading defective stock on customers."
+ },
+ {
+  "input": "fare",
+  "lemma": "fare",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Anxious to reduce fares sets up the cost pressure, but fare in the sense of ticket price is standard school travel vocabulary."
+ },
+ {
+  "input": "farmer",
+  "lemma": "farmer",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "My uncle, a farmer names the speaker; the blank asks for the adjective before pessimist and the word itself is elementary."
+ },
+ {
+  "input": "fascist",
+  "lemma": "fascist",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "Brutal, fascist harangues sits beside the real difficulty of the item, and fascist is an international word a Persian speaker already has."
+ },
+ {
+  "input": "fastest",
+  "lemma": "fast",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "It's the fastest download ever is elementary, and the blank is the verb of the sentient-being clause."
+ },
+ {
+  "input": "fatal",
+  "lemma": "fatal",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The blank sits right after it in the fatal ..... in the government's economic policy, but fatal is common B2 vocabulary from news English."
+ },
+ {
+  "input": "fatigues",
+  "lemma": "fatigue",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "Fatigues your brain is one of two parallel effects, and the following clause about reducing capacity for productive thought hands the reader its meaning."
+ },
+ {
+  "input": "faucet",
+  "lemma": "faucet",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The judgement in the blank depends entirely on the contrast with something you can get free from a faucet, and Iranian candidates are taught tap, not the American word.",
+  "gloss": "a tap that controls the flow of water"
+ },
+ {
+  "input": "fed",
+  "lemma": "feed",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Rats fed a low-calorie diet uses an elementary verb; the item turns on the parallel clause after and."
+ },
+ {
+  "input": "feedstocks",
+  "lemma": "feedstock",
+  "verdict": "domain-term",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "These feedstocks and production methods is the subject of the cloze sentence, but feedstock is the vocabulary of industrial chemistry and energy engineering rather than of konkour English.",
+  "gloss": "raw material fed into an industrial process"
+ },
+ {
+  "input": "fence",
+  "lemma": "fencing",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "The surface is the sport fencing, not the noun fence the lemmatiser produced, and committing myself to fencing is background to a blank asking for the course of a career."
+ },
+ {
+  "input": "fertilized",
+  "lemma": "fertilize",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "Soil that has never been loosened or fertilized by education carries the metaphor, but fertilize is recoverable from fertilizer, which candidates know."
+ },
+ {
+  "input": "feud",
+  "lemma": "feud",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "Ending the age-old feud between the Capulets and the Montagues is the reason the missing clause exists, and nothing in the sentence explains the word.",
+  "gloss": "a long, bitter quarrel between two families or groups"
+ },
+ {
+  "input": "fewer",
+  "lemma": "fewer",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "Fewer than a third of those surveyed is elementary quantifier grammar and the blank tests the passive after opposed to."
+ },
+ {
+  "input": "fictionalized",
+  "lemma": "fictionalize",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "So much of the autobiography fictionalized is the claim of the sentence, but the derivative is transparent to anyone who has fiction."
+ },
+ {
+  "input": "figurative",
+  "lemma": "figurative",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "A broader, more figurative connotation is how the sentence explains vapid's semantic drift, and figurative is not derivable from figure for a B2 reader.",
+  "gloss": "metaphorical rather than literal"
+ },
+ {
+  "input": "finesse",
+  "lemma": "finesse",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 5,
+  "reason": "The participial phrase says nothing at all without it: drawn a unique picture with a finesse characteristic of the genius is the whole premise of the completion.",
+  "gloss": "delicate skill and subtlety in doing something"
+ },
+ {
+  "input": "finite",
+  "lemma": "finite",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 3,
+  "reason": "The blank sits immediately before are finite, so the missing noun is chosen off that adjective, even though the follow-up clause about running out partly glosses it.",
+  "gloss": "limited in quantity; having an end"
+ },
+ {
+  "input": "fireside",
+  "lemma": "fireside",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "Curl up by the fireside is scenery around a blank asking for the verb taken with a cup of hot chocolate, and the compound is transparent."
+ },
+ {
+  "input": "fjords",
+  "lemma": "fjord",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 5,
+  "reason": "Views of fjords and mountain peaks in Norway would read the same with any landscape noun; the item is an error-identification question that does not touch the word."
+ },
+ {
+  "input": "flattery",
+  "lemma": "flattery",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "His dashing flattery faded describes the salesman, but mountebank is what actually gates this item and flattery follows from flatter."
+ },
+ {
+  "input": "flavor",
+  "lemma": "flavor",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Releasing buttery, subtly fruity flavors across your tongue uses an everyday word; the blank is the verb the chocolate does before it melts."
+ },
+ {
+  "input": "flexibility",
+  "lemma": "flexibility",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Accessibility and flexibility is a pair of common academic nouns and the blank is the connector introducing them."
+ },
+ {
+  "input": "flu",
+  "lemma": "flu",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "Especially vulnerable to the flu is everyday vocabulary; the blank is the verb phrase attributed largely to."
+ },
+ {
+  "input": "fluctuate",
+  "lemma": "fluctuate",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 5,
+  "difficulty": 4,
+  "reason": "The completion is the concession to numbers may fluctuate from year to year, so the candidate who does not know the verb cannot see what over long periods contrasts with.",
+  "gloss": "to rise and fall irregularly"
+ },
+ {
+  "input": "fluctuations",
+  "lemma": "fluctuation",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 3,
+  "reason": "The noun appears in the same sentence as the verb it is formed from, and the fluctuations are often temporary is transparent to a reader who has just met fluctuate."
+ },
+ {
+  "input": "foam",
+  "lemma": "foam",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "A mattress made of high-density foam is incidental detail in an error-identification item, and foam is a familiar loanword."
+ },
+ {
+  "input": "follicles",
+  "lemma": "follicle",
+  "verdict": "domain-term",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 5,
+  "reason": "Grows out through the skin from follicles deep within the dermis is the clue that the blank is hair, but follicle is anatomy vocabulary, not konkour English.",
+  "gloss": "a small cavity in the skin from which a hair grows",
+  "fieldCodes": ["1121"]
+ },
+ {
+  "input": "fond",
+  "lemma": "fond",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Especially fond of fantasy techniques uses be fond of, a structure taught at intermediate level."
+ },
+ {
+  "input": "fondness",
+  "lemma": "fondness",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The blank sits directly on the adjective before it, but fondness is a transparent nominalisation of fond."
+ },
+ {
+  "input": "fool",
+  "lemma": "fool",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "No man is so much a fool turns on knave and wit, not on an elementary noun the sentence repeats at the end."
+ },
+ {
+  "input": "foolish",
+  "lemma": "foolish",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 1,
+  "reason": "The word is handed to the candidate in the next line, it's foolish to put all of your money in high-tech stocks, and it is elementary anyway."
+ },
+ {
+  "input": "forager",
+  "lemma": "forager",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 4,
+  "reason": "The passage glosses it by putting modern forager societies next to ancient hunter-gatherer life, and the blank asks for the noun of arguing from one to the other."
+ },
+ {
+  "input": "forbid",
+  "lemma": "forbid",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "Knowing their parents would forbid their union is the premise of the completion, but forbid is common B2 vocabulary from forbidden."
+ },
+ {
+  "input": "forceful",
+  "lemma": "forceful",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "A forceful alternative to the received wisdom is a transparent derivative of force and sits away from the blank, which opens the sentence."
+ },
+ {
+  "input": "forefathers",
+  "lemma": "forefather",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "Those of our forefathers who were especially good at solving problems is semi-transparent from the fore- prefix, and the blank asks what humans became."
+ },
+ {
+  "input": "foremost",
+  "lemma": "foremost",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "The world's foremost sports competition is the entire predicate the blank attaches to, and foremost is not reliably guessable from fore plus most.",
+  "gloss": "most important or leading of its kind"
+ },
+ {
+  "input": "forensic",
+  "lemma": "forensic",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 5,
+  "difficulty": 4,
+  "reason": "The blank is the missing subject and the sentence names it twice over, a forensic context and a forensic linguist, so the answer is inaccessible without the word.",
+  "gloss": "relating to the use of scientific or expert methods in legal cases"
+ },
+ {
+  "input": "foretell",
+  "lemma": "foretell",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "Computers cannot precisely foretell climate change is recoverable from tell plus the fore- of forecast, and the blank sits in the unless-clause about capturing processes."
+ },
+ {
+  "input": "forge",
+  "lemma": "forge",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 5,
+  "difficulty": 4,
+  "reason": "The blank sits immediately after it in forge a ....., so the missing noun is chosen off a figurative sense of the verb that a B2 candidate does not have.",
+  "gloss": "to create or establish something with effort"
+ },
+ {
+  "input": "forgiveness",
+  "lemma": "forgiveness",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "Begged forgiveness is transparent from forgive; the difficulty of the item lives in contrition."
+ },
+ {
+  "input": "formalism",
+  "lemma": "formalism",
+  "verdict": "domain-term",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "Formalism is a concept in art theory is the subject of the sentence, but the sentence defines it and it belongs to art and literary theory rather than to konkour English.",
+  "gloss": "the view that an artwork's value lies in its form alone"
+ },
+ {
+  "input": "formulate",
+  "lemma": "formulate",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "Begun to formulate a new concept of nature is recoverable from formula, and the blank is the preposition introducing the machine metaphor."
+ },
+ {
+  "input": "fortis",
+  "lemma": "fortis",
+  "verdict": "domain-term",
+  "confidence": "low",
+  "importance": 2,
+  "difficulty": 5,
+  "reason": "It is Latin inside the chemical name agua fortis, glossed on the spot as nitric acid, so it is chemistry vocabulary in the same clause that produced nitric.",
+  "gloss": "Latin for strong; in agua fortis, the old name for nitric acid",
+  "fieldCodes": ["1121"]
+ },
+ {
+  "input": "fortunately",
+  "lemma": "fortunately",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Fortunately the seawater finally began to ..... is a common sentence adverb and the item tests the verb after began."
+ },
+ {
+  "input": "fossil",
+  "lemma": "fossil",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The fossils show ..... opens the sentence, but fossil is familiar school science vocabulary and the blank is the conjunction."
+ },
+ {
+  "input": "fossilized",
+  "lemma": "fossilize",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Fossilized human remains is a transparent derivative of fossil in an error-identification item with no blank against it."
+ },
+ {
+  "input": "founder",
+  "lemma": "founder",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "The founder of the Children's Defense Fund is the agent, and the blank is the verb she directed at the lack of support."
+ },
+ {
+  "input": "fourteen",
+  "lemma": "fourteen",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 1,
+  "difficulty": 1,
+  "reason": "A study of fourteen such models uses a number word no candidate needs taught."
+ },
+ {
+  "input": "fragile",
+  "lemma": "fragile",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Enough fragile moments of ..... beauty pairs with the blank, but fragile is common B2 vocabulary reinforced by packaging English."
+ },
+ {
+  "input": "freely",
+  "lemma": "freely",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "The respondent can freely perform the complex skill uses a transparent adverb from free in an error-identification sentence."
+ },
+ {
+  "input": "freeman",
+  "lemma": "freeman",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 1,
+  "difficulty": 1,
+  "reason": "Freeman (1993) conducted a longitudinal study is a surname in a citation, not an English vocabulary item."
+ },
+ {
+  "input": "frequent",
+  "lemma": "frequent",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Their frequent bouts of field blindness uses a word every B2 candidate has; bouts and detachment carry the item."
+ },
+ {
+  "input": "friendship",
+  "lemma": "friendship",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Led to some close friendships is elementary, and the blank is the noun naming what the two neighbouring families had."
+ },
+ {
+  "input": "fringe",
+  "lemma": "fringe",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The whole sentence is about offering fringe benefits and comparing them with a competitor's, and neither fringe nor the collocation is guessable for a B2 candidate.",
+  "gloss": "an outer edge; in fringe benefits, extras given on top of pay"
+ },
+ {
+  "input": "frog",
+  "lemma": "frog",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Rainbows and jumping frogs is elementary scenery beside two blanks about presenting skills as fun."
+ },
+ {
+  "input": "frontal",
+  "lemma": "frontal",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "It is the transparent one in the list occipital, parietal, temporal, and frontal, and the blank asks for the noun those four items are."
+ },
+ {
+  "input": "frown",
+  "lemma": "frown",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The frowning brow of any nation is the figure the missing verb reacts to, but frown is taught alongside smile at intermediate level."
+ },
+ {
+  "input": "fruity",
+  "lemma": "fruity",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Buttery, subtly fruity flavors is a transparent derivative of fruit and sits after the blank."
+ },
+ {
+  "input": "funeral",
+  "lemma": "funeral",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "During the funeral procession sets the scene for the blank about the hearse, but funeral is common B2 vocabulary; hearse is the hard word here."
+ },
+ {
+  "input": "furtively",
+  "lemma": "furtively",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 5,
+  "reason": "Glanced furtively at her neighbor's paper is the behaviour the missing opening clause has to characterise, and the adverb is opaque to a B2 reader.",
+  "gloss": "in a secretive way, trying not to be noticed"
+ },
+ {
+  "input": "fuzzy",
+  "lemma": "fuzzy",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The blank is the verb parallel to being a little fuzzy on how we learned to read, so the idiomatic sense of the adjective decides the answer.",
+  "gloss": "unclear or vague in one's memory or understanding"
+ },
+ {
+  "input": "garbage",
+  "lemma": "garbage",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "If residents want the garbage to be collected regularly is everyday vocabulary; the blank tests the verb before the cleaners."
+ },
+ {
+  "input": "garrulous",
+  "lemma": "garrulous",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 5,
+  "reason": "The adverb in the blank has to reconcile long-winded answers with being remembered as succinct rather than garrulous, so the contrast is unusable without the word.",
+  "gloss": "excessively talkative"
+ },
+ {
+  "input": "gaseous",
+  "lemma": "gaseous",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Gaseous hydrogen against liquid hydrogen is the comparison the blank completes, but the adjective is transparent from gas."
+ },
+ {
+  "input": "gavel",
+  "lemma": "gavel",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 5,
+  "reason": "From gavel to gavel is an idiom for the trial's whole length, but the missing noun is driven by baffling, unedifying and sad, not by the prop."
+ },
+ {
+  "input": "genetically",
+  "lemma": "genetically",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Genetically influenced is transparent from a word that exists in Persian, and the blank is the noun before the that-clause."
+ },
+ {
+  "input": "genetics",
+  "lemma": "genetics",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Our shared genetics closes a long multi-blank cloze whose difficulty lies elsewhere, and the word is an international one."
+ },
+ {
+  "input": "genius",
+  "lemma": "genius",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "A finesse characteristic of the genius leans on finesse, not on genius, which is a familiar international word."
+ },
+ {
+  "input": "genocide",
+  "lemma": "genocide",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "Accused of genocide sets up the blank about the murder of civilians, but the word is known from news English and the -cide element is familiar."
+ },
+ {
+  "input": "gently",
+  "lemma": "gently",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "The principal said gently is a transparent adverb from gentle, and the blank asks for the noun after one of the great."
+ },
+ {
+  "input": "geocentric",
+  "lemma": "geocentric",
+  "verdict": "domain-term",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "A view of nature resting on a geocentric view of the universe is the sentence's historical claim, but the word belongs to astronomy and the history of science.",
+  "gloss": "treating the earth as the centre of the universe"
+ },
+ {
+  "input": "geometric",
+  "lemma": "geometric",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "Strongly geometric and abstract works is transparent from geometry in an error-identification sentence with no blank."
+ },
+ {
+  "input": "germs",
+  "lemma": "germ",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The germs we are exposed to in early childhood is the subject of the missing verb, but germ is familiar school science vocabulary."
+ },
+ {
+  "input": "ghg",
+  "lemma": "ghg",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "The sentence spells the abbreviation out as greenhouse gas (GHG) on the spot, so it is an acronym rather than a vocabulary item."
+ },
+ {
+  "input": "gladiators",
+  "lemma": "gladiator",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "Like a battle between gladiators is the illustration of the simile, not the answer, and the word is internationally familiar."
+ },
+ {
+  "input": "glands",
+  "lemma": "gland",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "Hormonal changes in the pituitary and adrenal glands describes a mechanism the blank does not depend on, and gland is school biology; the hard words beside it are pituitary and adrenal."
+ },
+ {
+  "input": "glitches",
+  "lemma": "glitch",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The blank is the complement of technical glitches are ....., so the missing word is chosen off a term a B2 candidate has no route to.",
+  "gloss": "a small, sudden fault in a machine or system"
+ },
+ {
+  "input": "glitter",
+  "lemma": "glitter",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "The ease and glitter of the life is echoed by luster in the same sentence, which hands the reader its sense."
+ },
+ {
+  "input": "gloves",
+  "lemma": "glove",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "A day of gardening without gloves is elementary, and the blank is the preposition after rubbed a special emollient."
+ },
+ {
+  "input": "glow",
+  "lemma": "glow",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "It got glowing reviews comes after the blank and repeats what the audience's reaction already established."
+ },
+ {
+  "input": "god",
+  "lemma": "god",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "God has showered His ..... upon our motherland puts the blank on the noun for blessings, not on an elementary word."
+ },
+ {
+  "input": "goodies",
+  "lemma": "goody",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "Piling pantry shelves with goodies is the third item in a list of three parallels, and the blank is the connector between buying books and reading them."
+ },
+ {
+  "input": "gotten",
+  "lemma": "get",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Had gotten off relatively lightly is an elementary verb form; the item turns on contrition."
+ },
+ {
+  "input": "govern",
+  "lemma": "govern",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Can govern population growth is recoverable from government, and the blank is the subject noun before in photoperiod."
+ },
+ {
+  "input": "gracefully",
+  "lemma": "gracefully",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "Swing over to your side gracefully without loss of face is a transparent adverb from grace, and the blank opens the sentence well before it."
+ },
+ {
+  "input": "gradually",
+  "lemma": "gradually",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "This material gradually coalesced uses a common adverb in an error-identification item whose hard word is coalesced."
+ },
+ {
+  "input": "graduation",
+  "lemma": "graduation",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "At the graduation ceremony is setting, and the item turns on rancid and the missing verb about the principal."
+ },
+ {
+  "input": "grammar",
+  "lemma": "grammar",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Comparative Indo-European grammar is a word every candidate has, in an error-identification sentence about philology."
+ },
+ {
+  "input": "grammatical",
+  "lemma": "grammatical",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Grammatical and semantic analysis of sentences is transparent from grammar and sits after the blank."
+ },
+ {
+  "input": "grandson",
+  "lemma": "grandson",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "The birth of his third grandson is an elementary compound; the blank tests the phrasal verb cut short."
+ },
+ {
+  "input": "grappling",
+  "lemma": "grapple",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "The problems we are grappling with is the cause the sentence offers for the fall in value, and the verb is opaque to a B2 candidate.",
+  "gloss": "to struggle with a difficult problem"
+ },
+ {
+  "input": "grave",
+  "lemma": "grave",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The blank sits against it in ..... the dead body from its grave, but grave in this sense is elementary; exhume is what the item tests."
+ },
+ {
+  "input": "gravitational",
+  "lemma": "gravitational",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "Grew in size and gravitational pull is transparent from gravity, which appears in the same sentence."
+ },
+ {
+  "input": "gravity",
+  "lemma": "gravity",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "As gravity and chance smashed smaller pieces together uses school science vocabulary in an error-identification item."
+ },
+ {
+  "input": "graze",
+  "lemma": "graze",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "Livestock needs a place to graze is one half of the land-pressure argument the missing connector concludes, and the verb is not school vocabulary.",
+  "gloss": "to feed on growing grass, of animals"
+ },
+ {
+  "input": "greatly",
+  "lemma": "greatly",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "The second clause, we will all benefit greatly from it, restates the blank and the adverb is transparent from great."
+ },
+ {
+  "input": "greed",
+  "lemma": "greed",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "Motivated by their innate cruelty and greed is the minority the blank contrasts with, but greed is a common word a B2 candidate normally has."
+ },
+ {
+  "input": "greenhouse",
+  "lemma": "greenhouse",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Greenhouse gas is familiar from climate coverage and is spelled out with its abbreviation in the sentence itself."
+ },
+ {
+  "input": "grew",
+  "lemma": "grow",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Weed grew ..... in the front yard puts the blank on the adverb; grow itself is elementary."
+ },
+ {
+  "input": "grief",
+  "lemma": "grief",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 5,
+  "difficulty": 3,
+  "reason": "Her grief was so extreme is the entire explanation of what Clarissa became, so the missing adjective is chosen off this noun.",
+  "gloss": "deep sorrow, especially after a death"
+ },
+ {
+  "input": "grind",
+  "lemma": "grind",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "Slide or grind against one another pairs the verb with a familiar one that carries the meaning, and the blank is the passive about the earthquake."
+ },
+ {
+  "input": "grinder",
+  "lemma": "grinder",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "The pet chicken destined for the meat grinder is transparent from grind plus the agent suffix, and the blank opens the sentence."
+ },
+ {
+  "input": "groom",
+  "lemma": "groom",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "Drove the groom away supplies the marriage setting for the missing adjective, but bride and groom is a pair taught in school English."
+ },
+ {
+  "input": "grudge",
+  "lemma": "grudge",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "The missing adjective describes the man who cherishes a grudge against you and desires the whole, so the noun is what the answer is read off.",
+  "gloss": "a persistent feeling of resentment over a past wrong"
+ },
+ {
+  "input": "grueling",
+  "lemma": "grueling",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 5,
+  "reason": "The grueling Alaska race is why experienced runners tried to do something to stop Paulsen entering, and the word is opaque even though nearly perished later hints at it.",
+  "gloss": "extremely demanding and exhausting"
+ },
+ {
+  "input": "grumpy",
+  "lemma": "grumpy",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 3,
+  "reason": "The blank is the noun immediately after it, so the choice against an avid party host is made on the strength of grumpy.",
+  "gloss": "bad-tempered and easily annoyed"
+ },
+ {
+  "input": "guild",
+  "lemma": "guild",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 4,
+  "reason": "The sentence glosses it on the spot as a professional organization for book writers, and the blank asks about writing as a career choice."
+ },
+ {
+  "input": "gym",
+  "lemma": "gym",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "At the gym, on the bus is everyday vocabulary at the far end of the sentence from the blank."
+ },
+ {
+  "input": "gypsy",
+  "lemma": "gypsy",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "The gypsy moth is a species name whose first element the blank, a relative clause about killing the caterpillars, does not depend on."
+ }
+]

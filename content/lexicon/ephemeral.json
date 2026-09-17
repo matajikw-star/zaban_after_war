@@ -1,0 +1,117 @@
+{
+  "confusables": [
+    {
+      "note": "تلفظ و املای نزدیکی دارد اما یعنی اثیری و لطیف، نه زودگذر.",
+      "word": "ethereal"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "ephemeral",
+  "lemma": "ephemeral",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1402-p03",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 29,
+      "surface": "ephemeral",
+      "year": 1402
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p01",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 42,
+      "surface": "ephemeral",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p03",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 16,
+      "surface": "ephemeral",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "enduring",
+        "permanent"
+      ],
+      "definition": "lasting for only a very short time",
+      "examples": [
+        {
+          "en": "Fame on social media is often ephemeral and quickly forgotten.",
+          "fa": "شهرت در شبکه‌های اجتماعی اغلب زودگذر است و به‌سرعت فراموش می‌شود."
+        }
+      ],
+      "ipa": "/ɪˈfemərəl/",
+      "pos": "adj",
+      "synonyms": [
+        "fleeting",
+        "transient",
+        "short-lived"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1402-p03",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "زودگذر",
+        "ناپایدار",
+        "گذرا"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 2
+    },
+    "byYear": {
+      "1399": 2,
+      "1402": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1402,
+    "priority": 11,
+    "timesAsAnswer": 2,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "ephemeral"
+  ]
+}

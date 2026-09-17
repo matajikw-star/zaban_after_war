@@ -1,0 +1,114 @@
+{
+  "confusables": [
+    {
+      "note": "devout یعنی مومن و متدین و بیشتر در بافت دینی به کار می‌رود",
+      "word": "devout"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "devoted",
+  "lemma": "devoted",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p01",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 48,
+      "surface": "devoted",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 3,
+      "surface": "devoted",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "indifferent"
+      ],
+      "definition": "giving a lot of love, loyalty and attention to someone or something",
+      "examples": [
+        {
+          "en": "She is a devoted teacher who stays after class for weak students.",
+          "fa": "او معلمی دلسوز است که برای دانش‌آموزان ضعیف بعد از کلاس می‌ماند."
+        }
+      ],
+      "ipa": "/dɪˈvəʊtɪd/",
+      "pos": "adj",
+      "synonyms": [
+        "loyal",
+        "dedicated"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "فداکار",
+        "وفادار",
+        "دلسوز"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "used with \"to\", given entirely to one purpose or subject",
+      "examples": [
+        {
+          "en": "The whole second floor is devoted to children's books.",
+          "fa": "تمام طبقه دوم به کتاب‌های کودکان اختصاص یافته است."
+        }
+      ],
+      "ipa": "/dɪˈvəʊtɪd/",
+      "pos": "adj",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "اختصاص‌یافته به"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "devoted"
+  ]
+}

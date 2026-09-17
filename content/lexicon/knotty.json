@@ -1,0 +1,111 @@
+{
+  "confusables": [
+    {
+      "note": "املا و تلفظ نزدیک است اما naughty یعنی شیطان و بازیگوش؛ در knotty حرف k خوانده نمی‌شود",
+      "word": "naughty"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "knotty",
+  "lemma": "knotty",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 11,
+      "reach": 1,
+      "surface": "knotty",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "smooth",
+        "untangled"
+      ],
+      "definition": "full of knots, or twisted and tangled together",
+      "examples": [
+        {
+          "en": "The old rope was too knotty to run through the pulley.",
+          "fa": "طناب کهنه چنان گره‌خورده بود که از قرقره رد نمی‌شد."
+        }
+      ],
+      "ipa": "/ˈnɒti/",
+      "pos": "adj",
+      "synonyms": [
+        "tangled",
+        "gnarled"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 11
+        }
+      ],
+      "translations": [
+        "گره‌خورده",
+        "گره‌دار",
+        "درهم‌پیچیده"
+      ]
+    },
+    {
+      "antonyms": [
+        "simple",
+        "straightforward"
+      ],
+      "definition": "of a problem or question, complicated and very hard to solve",
+      "examples": [
+        {
+          "en": "The committee spent a whole day on one knotty legal question.",
+          "fa": "کمیته یک روز کامل را صرف یک مسئله‌ی بغرنج حقوقی کرد."
+        }
+      ],
+      "ipa": "/ˈnɒti/",
+      "pos": "adj",
+      "synonyms": [
+        "thorny",
+        "intricate",
+        "complex"
+      ],
+      "testedIn": [],
+      "translations": [
+        "بغرنج",
+        "پیچیده",
+        "دشوار"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "knotty"
+  ]
+}

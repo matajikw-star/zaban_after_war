@@ -1,0 +1,117 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "commitment",
+  "lemma": "commitment",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1403-p02",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 53,
+      "surface": "commitment",
+      "year": 1403
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p01",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 58,
+      "surface": "commitment",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "indifference"
+      ],
+      "definition": "a promise to do something, together with the hard work and loyalty you give to it",
+      "examples": [
+        {
+          "en": "Learning an instrument well demands years of daily commitment.",
+          "fa": "خوب یاد گرفتن یک ساز سال‌ها پایبندی روزانه می‌طلبد."
+        }
+      ],
+      "ipa": "/kəˈmɪtmənt/",
+      "pos": "n",
+      "synonyms": [
+        "dedication",
+        "pledge",
+        "devotion"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p02",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1398-p01",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "تعهد",
+        "پایبندی",
+        "دلبستگی جدی"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "something you have already arranged to do, which takes up your time",
+      "examples": [
+        {
+          "en": "She could not join us because of family commitments that evening.",
+          "fa": "او به دلیل گرفتاری‌های خانوادگی آن شب نتوانست به ما بپیوندد."
+        }
+      ],
+      "ipa": "/kəˈmɪtmənt/",
+      "pos": "n",
+      "synonyms": [
+        "obligation",
+        "engagement"
+      ],
+      "testedIn": [],
+      "translations": [
+        "گرفتاری",
+        "کار از پیش تعیین‌شده"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1403": 1
+    },
+    "byYear": {
+      "1398": 1,
+      "1403": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1398,
+    "lastYear": 1403,
+    "priority": 8,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "commitment"
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "innovative",
+  "lemma": "innovative",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1402-p06",
+      "part": "vocabulary",
+      "questionNo": 18,
+      "reach": 1,
+      "surface": "innovative",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p10",
+      "part": "vocabulary",
+      "questionNo": 32,
+      "reach": 1,
+      "surface": "innovative",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p07",
+      "part": "vocabulary",
+      "questionNo": 169,
+      "reach": 1,
+      "surface": "innovative",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "conventional"
+      ],
+      "definition": "introducing new ideas or new ways of doing something",
+      "examples": [
+        {
+          "en": "The company built its reputation on innovative teaching software.",
+          "fa": "این شرکت اعتبارش را با نرم‌افزارهای آموزشی نوآورانه به دست آورد."
+        }
+      ],
+      "ipa": "/ˈɪnəveɪtɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "original",
+        "groundbreaking",
+        "inventive"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p06",
+          "questionNo": 18
+        },
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 32
+        },
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 169
+        }
+      ],
+      "translations": [
+        "نوآورانه",
+        "بدیع",
+        "خلاقانه"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1,
+      "1399": 1,
+      "1402": 1
+    },
+    "distinctYears": 3,
+    "firstYear": 1398,
+    "lastYear": 1402,
+    "priority": 9,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "innovative"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "confusables": [
+    {
+      "note": "شبیه به هم نوشته می‌شوند، اما desecrate یعنی هتک حرمت کردن مکان یا چیز مقدس",
+      "word": "desecrated"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "desiccated",
+  "lemma": "desiccated",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p01",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 58,
+      "surface": "desiccated",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "moist"
+      ],
+      "definition": "completely dried out, with all the moisture taken away",
+      "examples": [
+        {
+          "en": "The desiccated leaves crumbled to dust between my fingers.",
+          "fa": "برگ‌های خشکیده میان انگشتانم خرد شدند و به غبار بدل شدند."
+        }
+      ],
+      "ipa": "/ˈdesɪkeɪtɪd/",
+      "pos": "adj",
+      "synonyms": [
+        "parched",
+        "dried"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p01",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "خشکیده",
+        "خشک‌شده",
+        "بی‌آب و طراوت"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "desiccated"
+  ]
+}

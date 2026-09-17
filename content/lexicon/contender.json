@@ -1,0 +1,80 @@
+{
+  "confusables": [
+    {
+      "note": "pretender یعنی مدعی دروغینِ یک مقام (مثلاً مدعی تاج‌وتخت)، نه رقیبِ یک رقابت.",
+      "word": "pretender"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "contender",
+  "lemma": "contender",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p05",
+      "part": "cloze",
+      "questionNo": 37,
+      "reach": 1,
+      "surface": "Contenders",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a person or a team competing with others for a prize, a title or a position",
+      "examples": [
+        {
+          "en": "She is a serious contender for the gold medal this season.",
+          "fa": "او در این فصل مدعی جدی کسب مدال طلاست."
+        }
+      ],
+      "ipa": "/kənˈtendə(r)/",
+      "pos": "n",
+      "synonyms": [
+        "competitor",
+        "rival"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 37
+        }
+      ],
+      "translations": [
+        "مدعی",
+        "رقیب",
+        "نامزد کسب مقام"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "Contenders"
+  ]
+}

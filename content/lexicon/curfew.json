@@ -1,0 +1,76 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "curfew",
+  "lemma": "curfew",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1405-p07",
+      "part": "vocabulary",
+      "questionNo": 15,
+      "reach": 1,
+      "surface": "curfew",
+      "year": 1405
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "an official rule that people must stay indoors between certain hours, especially at night",
+      "examples": [
+        {
+          "en": "The government imposed a curfew from ten at night until dawn.",
+          "fa": "دولت از ساعت ده شب تا سپیده‌دم منع رفت‌وآمد برقرار کرد."
+        }
+      ],
+      "ipa": "/ˈkɜːfjuː/",
+      "pos": "n",
+      "synonyms": [
+        "restriction"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p07",
+          "questionNo": 15
+        }
+      ],
+      "translations": [
+        "منع رفت‌وآمد",
+        "منع عبور و مرور شبانه",
+        "حکومت نظامی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1405": 1
+    },
+    "byYear": {
+      "1405": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1405,
+    "lastYear": 1405,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "curfew"
+  ]
+}

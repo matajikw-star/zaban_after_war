@@ -1,0 +1,132 @@
+{
+  "paperId": "arshad-1402-p02",
+  "degree": "arshad",
+  "year": 1402,
+  "groupCodes": ["1101", "1102", "1104", "1105", "1106", "1107", "1108", "1111", "1112", "1113", "1114", "1115", "1116", "1130", "1132", "1152", "1203", "1257", "1259", "1263", "1264", "1272", "1277", "1283", "1294", "1352", "1357", "1358", "1360", "1364", "1365", "1509"],
+  "bookletCount": 32,
+  "source": { "file": "1101-1402.pdf", "pages": [2, 3] },
+  "extractedBy": { "model": "claude-sonnet-5", "at": "2026-09-14" },
+  "questions": [
+    {
+      "no": 1,
+      "part": "vocabulary",
+      "stem": "..... eye contact with your audience while giving your presentation.",
+      "options": ["Take", "Insure", "Direct", "Make"],
+      "optionLemmas": ["take", "insure", "direct", "make"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "make",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "vocabulary",
+      "stem": "If ..... hold true, future global population growth will be heavily concentrated in Latin America, Africa, and South Asia.",
+      "options": ["projections", "inclinations", "interventions", "realizations"],
+      "optionLemmas": ["projection", "inclination", "intervention", "realization"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "projection",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "vocabulary",
+      "stem": "Warning: Anyone caught stealing from these premises will be ..... .",
+      "options": ["exonerated", "intensified", "prosecuted", "legitimized"],
+      "optionLemmas": ["exonerate", "intensify", "prosecute", "legitimize"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "prosecute",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "vocabulary",
+      "stem": "The manager's inflammatory comments are just ..... an already difficult situation. He should think before he opens his mouth next time.",
+      "options": ["challenging", "exacerbating", "dispelling", "affirming"],
+      "optionLemmas": ["challenge", "exacerbate", "dispel", "affirm"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "exacerbate",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "vocabulary",
+      "stem": "The internet seems to have almost ..... every mode of communication ever invented!",
+      "options": ["captivated", "superseded", "allocated", "commenced"],
+      "optionLemmas": ["captivate", "supersede", "allocate", "commence"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "supersede",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "vocabulary",
+      "stem": "The woman is known as an ..... woman because she gives away millions of dollars every year to various charities.",
+      "options": ["economical", "aesthetic", "unforeseen", "altruistic"],
+      "optionLemmas": ["economical", "aesthetic", "unforeseen", "altruistic"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "altruistic",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "vocabulary",
+      "stem": "Jen takes medicine at the first sight of a/an ..... headache; Lin, by contrast, resists taking medicine even when she's really sick.",
+      "options": ["incipient", "skeptical", "ambiguous", "credible"],
+      "optionLemmas": ["incipient", "skeptical", "ambiguous", "credible"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "incipient",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "Teachers play various roles in a typical classroom, but surely one of the most important ..... classroom manager.",
+      "options": ["being", "of those are", "is that of", "ever to be is"],
+      "optionLemmas": ["be", "be", "be", "be"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "be",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "grammar",
+      "stem": "Effective teaching and learning cannot take place in ..... .",
+      "options": ["a classroom is poorly managed", "a managed classroom poorly", "a poorly managed classroom", "managing poorly a classroom"],
+      "optionLemmas": ["manage", "manage", "manage", "manage"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "manage",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "grammar",
+      "stem": "In these situations, both teachers and students ..... .",
+      "options": ["suffer", "they are suffered", "to suffer", "suffering"],
+      "optionLemmas": ["suffer", "suffer", "suffer", "suffer"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "suffer",
+      "uncertain": []
+    }
+  ],
+  "uncertain": []
+}

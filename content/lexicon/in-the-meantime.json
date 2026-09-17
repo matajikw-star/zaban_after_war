@@ -1,0 +1,82 @@
+{
+  "confusables": [
+    {
+      "note": "هم‌معنی است و جای هم به کار می‌رود، اما meanwhile یک کلمه است و به in نیاز ندارد",
+      "word": "meanwhile"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "in-the-meantime",
+  "lemma": "in the meantime",
+  "level": "B1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p11",
+      "part": "cloze",
+      "questionNo": 14,
+      "reach": 1,
+      "surface": "In the meantime",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "during the period of time between two events, or while something else is happening",
+      "examples": [
+        {
+          "en": "The new office opens in May; in the meantime we work from home.",
+          "fa": "دفتر جدید در ماه مه باز می‌شود؛ در این فاصله از خانه کار می‌کنیم."
+        }
+      ],
+      "ipa": "/ɪn ðə ˈmiːntaɪm/",
+      "pos": "adv",
+      "synonyms": [
+        "meanwhile",
+        "in the interim"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "در این میان",
+        "در این فاصله",
+        "تا آن موقع"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "In the meantime"
+  ]
+}

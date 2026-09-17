@@ -1,0 +1,126 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "scrutinize",
+  "lemma": "scrutinize",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 20,
+      "surface": "scrutinized",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 9,
+      "surface": "scrutinized",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 1,
+      "surface": "scrutinized",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p04",
+      "part": "vocabulary",
+      "questionNo": 21,
+      "reach": 1,
+      "surface": "scrutinize",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "skim",
+        "overlook"
+      ],
+      "definition": "to look at or examine something very carefully, in order to find any detail or fault",
+      "examples": [
+        {
+          "en": "Auditors scrutinized every receipt before approving the annual report.",
+          "fa": "حسابرسان پیش از تأیید گزارش سالانه هر رسیدی را موشکافانه بررسی کردند."
+        }
+      ],
+      "ipa": "/ˈskruːtənaɪz/",
+      "pos": "v",
+      "synonyms": [
+        "examine",
+        "inspect",
+        "pore over"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1398-p04",
+          "questionNo": 21
+        }
+      ],
+      "translations": [
+        "موشکافانه بررسی کردن",
+        "وارسی کردن",
+        "به‌دقت کاویدن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1,
+      "1399": 3
+    },
+    "distinctYears": 2,
+    "firstYear": 1398,
+    "lastYear": 1399,
+    "priority": 8,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "scrutinize",
+    "scrutinized"
+  ]
+}

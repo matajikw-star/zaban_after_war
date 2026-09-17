@@ -1,0 +1,157 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "amalgamate",
+  "lemma": "amalgamate",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1401-p05",
+      "part": "vocabulary",
+      "questionNo": 22,
+      "reach": 1,
+      "surface": "amalgamate",
+      "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 23,
+      "surface": "amalgamate",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 5,
+      "surface": "amalgamate",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "amalgamate",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "amalgamate",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1398-p04",
+      "part": "vocabulary",
+      "questionNo": 17,
+      "reach": 1,
+      "surface": "amalgamating",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "separate",
+        "split"
+      ],
+      "definition": "to join two or more organizations or things together so that they form one",
+      "examples": [
+        {
+          "en": "The two banks amalgamated and became the largest lender in the country.",
+          "fa": "آن دو بانک ادغام شدند و به بزرگ‌ترین وام‌دهندهٔ کشور تبدیل شدند."
+        }
+      ],
+      "ipa": "/əˈmælɡəmeɪt/",
+      "pos": "v",
+      "synonyms": [
+        "merge",
+        "combine",
+        "unite"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 22
+        },
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1398-p04",
+          "questionNo": 17
+        }
+      ],
+      "translations": [
+        "ادغام کردن",
+        "درهم آمیختن",
+        "یکی کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1,
+      "1400": 4,
+      "1401": 1
+    },
+    "distinctYears": 3,
+    "firstYear": 1398,
+    "lastYear": 1401,
+    "priority": 12,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 6,
+    "timesTested": 6
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "amalgamate",
+    "amalgamating"
+  ]
+}

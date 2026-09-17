@@ -1,0 +1,156 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "vulnerable",
+  "lemma": "vulnerable",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1405-p05",
+      "part": "vocabulary",
+      "questionNo": 13,
+      "reach": 1,
+      "surface": "vulnerable",
+      "year": 1405
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p01",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 42,
+      "surface": "vulnerable",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 20,
+      "surface": "vulnerable",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p03",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 16,
+      "surface": "vulnerable",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 9,
+      "surface": "vulnerable",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 1,
+      "surface": "vulnerable",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "immune",
+        "protected",
+        "invulnerable"
+      ],
+      "definition": "easily harmed, attacked or hurt, either physically or emotionally",
+      "examples": [
+        {
+          "en": "Older people are especially vulnerable to the cold in winter.",
+          "fa": "سالمندان در زمستان به‌ویژه در برابر سرما آسیب‌پذیرند."
+        }
+      ],
+      "ipa": "/ˈvʌlnərəbl/",
+      "pos": "adj",
+      "synonyms": [
+        "exposed",
+        "defenceless",
+        "susceptible"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 13
+        },
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "آسیب‌پذیر",
+        "بی‌دفاع",
+        "زودرنج"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 5,
+      "1405": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1405,
+    "priority": 10,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 6,
+    "timesTested": 6
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "vulnerable"
+  ]
+}

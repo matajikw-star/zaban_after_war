@@ -1,0 +1,1141 @@
+[
+ {
+  "input": "belittling",
+  "lemma": "belittle",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 3,
+  "reason": "The sentence sets the blank against belittling others as the two ways of making oneself greater, so the contrast fails if the word is opaque.",
+  "gloss": "to make someone or something seem less important than they are"
+ },
+ {
+  "input": "belong",
+  "lemma": "belong",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "The notion of belonging is the subject of the sentence, but belong is school vocabulary every candidate has."
+ },
+ {
+  "input": "beloved",
+  "lemma": "beloved",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "It sits directly against the blank before King Arthur, but beloved is transparent from love to any B2 reader."
+ },
+ {
+  "input": "beneficial",
+  "lemma": "beneficial",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The sentence turns on beneficial against commercial opportunity, but it is a common academic derivative of benefit, which the stem repeats two words later."
+ },
+ {
+  "input": "bequeathed",
+  "lemma": "bequeath",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 5,
+  "reason": "The main verb of the clause: what the old schools have bequeathed us is exactly the noun the blank asks for, and nothing else in the sentence supplies the handed-down sense.",
+  "gloss": "to hand something down to those who come after"
+ },
+ {
+  "input": "berating",
+  "lemma": "berate",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "Berating the cruel and idiotic ways of the world is one of the three activities that fix the bitter register the blank participle has to match.",
+  "gloss": "to scold or criticize someone angrily and at length"
+ },
+ {
+  "input": "beside",
+  "lemma": "besides",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Here it is the connective besides adding one more discomfort to the list; the blank is a verb in a later clause."
+ },
+ {
+  "input": "bias",
+  "lemma": "bias",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The whole passage hangs on artefacts biasing the account, but bias is standard academic vocabulary at B2."
+ },
+ {
+  "input": "bicentennial",
+  "lemma": "bicentennial",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "The blank is the noun collecting events and exhibitions; the sentence reads the same whether the museum year is a bicentennial or any other anniversary."
+ },
+ {
+  "input": "bicycle",
+  "lemma": "bicycle",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Bicycles and cycling products are the setting for a blank about expanding a range; the word is elementary."
+ },
+ {
+  "input": "bildungsroman",
+  "lemma": "bildungsroman",
+  "verdict": "domain-term",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 5,
+  "reason": "The appositive our very own bildungsroman restates the rite of ..... that the blank asks for, so it is load-bearing, but it is literary-critical terminology rather than konkour English.",
+  "gloss": "a novel tracing a character's growth from youth to maturity",
+  "fieldCodes": [
+   "1121"
+  ]
+ },
+ {
+  "input": "bite",
+  "lemma": "bite",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "A bite of birthday cake is everyday vocabulary and the blank is the verb about breaking the diet."
+ },
+ {
+  "input": "bizarre",
+  "lemma": "bizarre",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The Although contrast is built on bizarre against the blank, but bizarre is common enough in journalism that a B2 candidate reads it without help."
+ },
+ {
+  "input": "blackens",
+  "lemma": "blacken",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "It blackens the teeth is a wholly transparent derivative of black, and the blank is the connective before the acid comparison."
+ },
+ {
+  "input": "blackness",
+  "lemma": "blackness",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "A great blackness is transparent from black and the sentence itself unpacks it as acrimony."
+ },
+ {
+  "input": "blanket",
+  "lemma": "blanket",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "The blank sits directly against blanket statements, which is the whole subject of the claim, and the sweeping sense has nothing to do with the bed covering a candidate knows.",
+  "gloss": "applying to every case without exception; sweeping"
+ },
+ {
+  "input": "bless",
+  "lemma": "bless",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "The blank is the noun blessings and the stem itself supplies blessed with immense natural wealth."
+ },
+ {
+  "input": "blindness",
+  "lemma": "blindness",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Field blindness is a transparent compound of blind, and the sentence explains it as failing to keep scientific detachment."
+ },
+ {
+  "input": "bling",
+  "lemma": "bling",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 4,
+  "reason": "The stem glosses it on the spot as what others call ostentatious jewelry, and the blank is the verb about supplementing income."
+ },
+ {
+  "input": "blisters",
+  "lemma": "blister",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "The blank is the preposition before the blisters, so the noun is background, and gardening without gloves supplies its meaning."
+ },
+ {
+  "input": "bloodstream",
+  "lemma": "bloodstream",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Blood plus stream is self-explaining, and the blank is the substance causing vessels to contract."
+ },
+ {
+  "input": "blossoming",
+  "lemma": "blossom",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "The blank is the preposition after wreak havoc, and an otherwise blossoming career reads as thriving from the contrast alone."
+ },
+ {
+  "input": "blueprint",
+  "lemma": "blueprint",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "No blueprint for transforming an economy is decoded by the rest of the sentence, which names the approach that works, and the blank sits in the following clause."
+ },
+ {
+  "input": "boasted",
+  "lemma": "boast",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "Boasted about his ability is ordinary B1 vocabulary and the blank concerns how voters feel about national politics."
+ },
+ {
+  "input": "boasting",
+  "lemma": "boast",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "No boasting about our social workers opens the sentence, but boast is common school vocabulary."
+ },
+ {
+  "input": "bog",
+  "lemma": "bog",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 4,
+  "reason": "Bog irons sits in a subordinate clause naming where extraction could have happened; the blank is what they cite about Eriksson and does not depend on it."
+ },
+ {
+  "input": "bomb",
+  "lemma": "bomb",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Bombing victims set the scene for a blank about how disturbing the pictures were; the word is elementary."
+ },
+ {
+  "input": "bombardment",
+  "lemma": "bombardment",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Temporary relief from the bombardment leans on the noun, but it is transparent from bomb and the stem repeats the idea as the strikes."
+ },
+ {
+  "input": "bombers",
+  "lemma": "bomber",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "The stem itself supplies find and bomb it right after Allied bombers, so the derivative explains itself."
+ },
+ {
+  "input": "booklet",
+  "lemma": "booklet",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The blank is the verb whose subject is the booklet, but booklet is a transparent diminutive of book."
+ },
+ {
+  "input": "bookstore",
+  "lemma": "bookstore",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "Bookstores suffering and closing is the frame for the blank, and the compound is self-explaining."
+ },
+ {
+  "input": "borrowed",
+  "lemma": "borrow",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "The money he had borrowed is what the blank verb was done to, but borrow is elementary vocabulary."
+ },
+ {
+  "input": "borrowings",
+  "lemma": "borrowing",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Total borrowings and losses is the subject of the blank verb, and the financial sense follows directly from borrow."
+ },
+ {
+  "input": "bother",
+  "lemma": "bother",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "The stem pairs the blank noun with bothered to vote in the same sentence, and bother is B1 vocabulary."
+ },
+ {
+  "input": "boundary",
+  "lemma": "boundary",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The boundaries between cultural features carry the claim, but boundary is transparent from bound and common at B2."
+ },
+ {
+  "input": "bouts",
+  "lemma": "bout",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 4,
+  "reason": "Frequent bouts of field blindness gives the reader the frame frequent X of even if bout is unknown, and the blank sits away from it in the so-that clause."
+ },
+ {
+  "input": "breath",
+  "lemma": "breath",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "Shortness of breath is the outcome the blank causes, but breath is elementary."
+ },
+ {
+  "input": "brilliant",
+  "lemma": "brilliant",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "A brilliant man is the concession the churl clause overturns, and brilliant is everyday vocabulary."
+ },
+ {
+  "input": "broader",
+  "lemma": "broad",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "A broader, more figurative connotation is a plain comparative of broad and the blank is the participle before zest and spirit."
+ },
+ {
+  "input": "brochure",
+  "lemma": "brochure",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The old company brochure is the object of modify, but the word is a familiar international borrowing and the blank is the idiom start again from scratch."
+ },
+ {
+  "input": "broke",
+  "lemma": "break",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "Broke up is the event the blank noun asks an explanation for, and the phrasal verb is elementary."
+ },
+ {
+  "input": "brow",
+  "lemma": "brow",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "The blank verb comes just before the frowning brow, but frowning already delivers the threatening image without the noun."
+ },
+ {
+  "input": "brutal",
+  "lemma": "brutal",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "His brutal, fascist harangues set up the blank about laughing rather than obeying, but brutal is common at B2."
+ },
+ {
+  "input": "brutish",
+  "lemma": "brutish",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "Brutish appetites for violence stands next to the blank adjective, yet the derivative is transparent to anyone who knows brutal, and violence spells out the sense."
+ },
+ {
+  "input": "bulbs",
+  "lemma": "bulb",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Electric bulbs and emergency lights are what make gas lamps whatever the blank says, but bulb is everyday vocabulary."
+ },
+ {
+  "input": "bulging",
+  "lemma": "bulge",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "Bulging museum basements is scene-setting; the blank completes the comparison more accessible than ..... and does not depend on the adjective."
+ },
+ {
+  "input": "burst",
+  "lemma": "burst",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "Wanting to burst into the drug house is what the chief's blank restrains, and burst is elementary."
+ },
+ {
+  "input": "bustling",
+  "lemma": "bustling",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "Bustling streets is half the image the blank noun has to collect, and bustle is not a word a B2 candidate can derive from anything he knows.",
+  "gloss": "full of busy, noisy activity"
+ },
+ {
+  "input": "buttery",
+  "lemma": "buttery",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "Buttery flavors is a transparent derivative of butter and the blank is the verb describing how the chocolate melts."
+ },
+ {
+  "input": "buttress",
+  "lemma": "buttress",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "Buttress the family is the main verb of the first clause and it sets the pattern the blank verb has to continue for marriage.",
+  "gloss": "to support or reinforce something so it holds up"
+ },
+ {
+  "input": "bylaws",
+  "lemma": "bylaw",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "The sentence defines bylaws as it goes by listing what they specify, and the blank completes a parallel list rather than testing the noun."
+ },
+ {
+  "input": "byproduct",
+  "lemma": "byproduct",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "A safe byproduct of carbon-free power is the contrast to the blank noun, but by plus product is readable and dangerous problem carries the opposition."
+ },
+ {
+  "input": "cabin",
+  "lemma": "cabin",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "Cabin attendants is incidental to a blank about how the water was handed out, and cabin is common vocabulary."
+ },
+ {
+  "input": "caddy",
+  "lemma": "caddy",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 4,
+  "reason": "Golf caddy is a job title at the far end of the sentence; the blank is the reflexive verb about making up for the ruined racquet, and golf already tells the reader what a caddy is."
+ },
+ {
+  "input": "cafeteria",
+  "lemma": "cafeteria",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "The cafeteria is only the place the cupcake was taken from; the blank is the participle opening the sentence."
+ },
+ {
+  "input": "caine",
+  "lemma": "caine",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 1,
+  "difficulty": 1,
+  "reason": "Ms. Caine is a proper name in the stem, not vocabulary, and the blank is the participle describing her reaction."
+ },
+ {
+  "input": "calm",
+  "lemma": "calm",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "Speaking calmly and slowly is the difficulty the sentence reports, but calm is elementary vocabulary."
+ },
+ {
+  "input": "calorie",
+  "lemma": "calorie",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Calorie restriction opens the passage, but the word is an everyday international borrowing and the blank is about the flies' numbers."
+ },
+ {
+  "input": "canal",
+  "lemma": "canal",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "Root canal is the dentist's detail at the end; the blank is whether Ben was excused for missing the game."
+ },
+ {
+  "input": "canoeing",
+  "lemma": "canoe",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "Canoeing is the last of five hobbies whose variety, not whose individual meanings, decides the blank adjective."
+ },
+ {
+  "input": "capitalist",
+  "lemma": "capitalist",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Establishing capitalist relations is the historical frame, but the word is a familiar international term at B2."
+ },
+ {
+  "input": "capsule",
+  "lemma": "capsule",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "The stem explains the capsule as something propelled into orbit by a rocket, and the blank is what happened to the first attempt."
+ },
+ {
+  "input": "carcinogens",
+  "lemma": "carcinogen",
+  "verdict": "yes",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "No protection from carcinogens introduced by irradiation is the entire second half of the claim, and the stem never says what a carcinogen is.",
+  "gloss": "a substance that can cause cancer"
+ },
+ {
+  "input": "careerism",
+  "lemma": "careerism",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "The blank verb sits directly against it, but careerism reads straight off career and desperate already marks it as the thing she opposed."
+ },
+ {
+  "input": "careful",
+  "lemma": "careful",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "Be very careful in ..... frames the blank, but careful is elementary vocabulary."
+ },
+ {
+  "input": "carnell",
+  "lemma": "carnell",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 1,
+  "difficulty": 1,
+  "reason": "Rachel Carnell is the critic being cited, a proper name rather than a word to teach."
+ },
+ {
+  "input": "carroll",
+  "lemma": "carroll",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 1,
+  "difficulty": 1,
+  "reason": "Carroll (1963, 1965) is a citation, a proper name rather than vocabulary."
+ },
+ {
+  "input": "carved",
+  "lemma": "carve",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Rivulets have carved into the stone is the action producing the blank's sinkholes, but carve is standard B2 vocabulary."
+ },
+ {
+  "input": "carving",
+  "lemma": "carving",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The blank adjective sits right before native Indian carving, but the noun follows plainly from carve and machine-made supplies the contrast."
+ },
+ {
+  "input": "catastrophes",
+  "lemma": "catastrophe",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Climatic catastrophes that decimate populations drives the clause, but catastrophe is common at B2 and decimate spells out its force."
+ },
+ {
+  "input": "catastrophic",
+  "lemma": "catastrophic",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The claim is that climatic changes need not be catastrophic, but the adjective is common and transparent from catastrophe."
+ },
+ {
+  "input": "caterpillars",
+  "lemma": "caterpillar",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "The blank is the verb the virus does to the caterpillars, and gypsy moth plus wilt disease already tells the reader they are the insects being killed."
+ },
+ {
+  "input": "cave",
+  "lemma": "cave",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "The painted caves at Lascaux are the subject of the passage, but cave is elementary vocabulary."
+ },
+ {
+  "input": "cereals",
+  "lemma": "cereal",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Breakfast cereals is the product advertised; the blank is the noun for the fantasy techniques."
+ },
+ {
+  "input": "certainty",
+  "lemma": "certainty",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The sentence turns on uncertainty against certainty being an illusion, but both are transparent from certain."
+ },
+ {
+  "input": "chafes",
+  "lemma": "chafe",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 4,
+  "reason": "The blank is the preposition before the blisters and chafes, so the noun is background and blisters carries the meaning of the pair."
+ },
+ {
+  "input": "chaotic",
+  "lemma": "chaotic",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "A chaotic and violent process describes the planetesimals, but the adjective is transparent from chaos and violent glosses it."
+ },
+ {
+  "input": "characterize",
+  "lemma": "characterize",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Variables that characterize learner disposition is the definition the blank extends, but characterize is ordinary academic vocabulary."
+ },
+ {
+  "input": "charitable",
+  "lemma": "charitable",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The blank is the motive balanced against the charitable one, so it leans on the word, but charitable is a transparent derivative of charity."
+ },
+ {
+  "input": "chauvinism",
+  "lemma": "chauvinism",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 4,
+  "reason": "Rabid chauvinism is the disease the whole sentence illustrates, and the blank verb toward the banners of the others depends on grasping the in-group contempt it names.",
+  "gloss": "aggressive loyalty to one's own group together with contempt for others"
+ },
+ {
+  "input": "cheat",
+  "lemma": "cheat",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "Cheat their teams and countries is the consequence of the blank noun, but cheat is elementary."
+ },
+ {
+  "input": "cheer",
+  "lemma": "cheer",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Let out a tremendous cheer is everyday vocabulary; the blank is the participle about shaking Fermi's hand."
+ },
+ {
+  "input": "chemist",
+  "lemma": "chemist",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Highly-skilled chemist is the concession before the churl clause where the blank sits, and chemist is elementary."
+ },
+ {
+  "input": "cherishes",
+  "lemma": "cherish",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "The blank adjective describes the man who cherishes a grudge, but desires the whole in the same sentence gives the greed the answer needs, and cherish is known at B2."
+ },
+ {
+  "input": "childhood",
+  "lemma": "childhood",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Childhood is the first item in a list of conversation topics and the blank is the clause about when the exchange went flat."
+ },
+ {
+  "input": "childish",
+  "lemma": "childish",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "The blank noun is what the childish adjective modifies, but childish is transparent from child."
+ },
+ {
+  "input": "chilly",
+  "lemma": "chilly",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "On a chilly night sets the scene for a blank verb about the hot chocolate, and chilly is common vocabulary."
+ },
+ {
+  "input": "churl",
+  "lemma": "churl",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 5,
+  "reason": "He is a bit of a churl is the claim the blank clause has to illustrate, and nothing in the sentence tells the reader that a churl is rude and surly.",
+  "gloss": "a rude, bad-tempered person"
+ },
+ {
+  "input": "cigarette",
+  "lemma": "cigarette",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "The cigarette is the subject whose blank adjective the two clauses explain, but the word itself is elementary."
+ },
+ {
+  "input": "circuitry",
+  "lemma": "circuitry",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "Standard neural circuitry is the object of the blank participle, but circuitry reads off circuit and brain regions earlier in the sentence fixes the sense."
+ },
+ {
+  "input": "circulation",
+  "lemma": "circulation",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The second blank acts on circulation, but the noun is transparent from circulate and common in health writing."
+ },
+ {
+  "input": "cite",
+  "lemma": "cite",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Ericsson cites studies of physicians is the frame of the item, but cite is standard academic vocabulary at B2."
+ },
+ {
+  "input": "civilian",
+  "lemma": "civilian",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The murder of the civilians is what the general denied doing, but civilian is common in news English."
+ },
+ {
+  "input": "civilization",
+  "lemma": "civilization",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "Civilization is the subject of the claim the blank adjective qualifies, but the word is elementary."
+ },
+ {
+  "input": "civilized",
+  "lemma": "civilized",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Any civilized human being is a transparent derivative of civilize and the item turns on the should not be aware construction."
+ },
+ {
+  "input": "clare",
+  "lemma": "clare",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 1,
+  "difficulty": 1,
+  "reason": "Clare is the person in the stem, a proper name rather than vocabulary; the blank is the idiom stood her ground."
+ },
+ {
+  "input": "clarification",
+  "lemma": "clarification",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Calls for clarification is the claim of the sentence, but the noun is transparent from clarify and clear."
+ },
+ {
+  "input": "clarissa",
+  "lemma": "clarissa",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 1,
+  "difficulty": 1,
+  "reason": "Clarissa is the patient's name, not a word; the blank is the adjective her grief explains."
+ },
+ {
+  "input": "clarity",
+  "lemma": "clarity",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The blank is the change in the clarity of reds and oranges, but clarity is transparent from clear."
+ },
+ {
+  "input": "cleaner",
+  "lemma": "cleaner",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "The municipal cleaners are the recipients of the blank verb, and the agent noun follows directly from clean."
+ },
+ {
+  "input": "clerk",
+  "lemma": "clerk",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "The rude behavior of the clerk causes the blank participle, but clerk is common vocabulary."
+ },
+ {
+  "input": "cleverness",
+  "lemma": "cleverness",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "Intelligence is cleverness is the definition the item tests grammatically, and cleverness is transparent from clever."
+ },
+ {
+  "input": "clientele",
+  "lemma": "clientele",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "The blank adjective sits directly against clientele, but the word reads off client and the stem itself glosses it as students from Asia, Europe and South America."
+ },
+ {
+  "input": "climatic",
+  "lemma": "climatic",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Periodic climatic catastrophes is the cause the sentence proposes, but the adjective is transparent from climate."
+ },
+ {
+  "input": "climb",
+  "lemma": "climb",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "The mountain climber is the subject of the anecdote; the blank is the adjective before lesson and climb is elementary."
+ },
+ {
+  "input": "climber",
+  "lemma": "climber",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Reaching the peak is what makes the occasion whatever the blank says, and climber is a transparent agent noun from climb."
+ },
+ {
+  "input": "cling",
+  "lemma": "cling",
+  "verdict": "yes",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 4,
+  "reason": "Still cling to the hope is the whole force of the first clause, and the holding-on-against-the-odds sense is not recoverable from anything else in the sentence.",
+  "gloss": "to hold on tightly and refuse to let go"
+ },
+ {
+  "input": "clogging",
+  "lemma": "clog",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "The frame a bid to ..... motorists from clogging its roads already tells the reader the fee is meant to stop them, so the verb is not what blocks the answer."
+ },
+ {
+  "input": "closure",
+  "lemma": "closure",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "Definitional closure closes the sentence while the blank is the adjective after it is probably, and resist giving already signals the sense."
+ },
+ {
+  "input": "clot",
+  "lemma": "clot",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "The blood clot on Henry's lung is the subject of the whole sentence, but blood clot is a familiar compound in health writing and travelled through the bloodstream explains it."
+ },
+ {
+  "input": "cloth",
+  "lemma": "clothing",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "A chain of clothing stores is his second job; the blank is the preposition phrase about his work as a trainer."
+ },
+ {
+  "input": "cloud",
+  "lemma": "cloud",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "The movement of clouds is the subject the blank adjective describes, but cloud is elementary."
+ },
+ {
+  "input": "clumsily",
+  "lemma": "clumsily",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "Dare to use them clumsily closes the sentence while the blank is the noun for the nerve it takes, and clumsily is transparent from clumsy."
+ },
+ {
+  "input": "clumsy",
+  "lemma": "clumsy",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 4,
+  "difficulty": 2,
+  "reason": "The blank style is defined by contrast with the brother's unclear and clumsy writing, but unclear beside it does the work and clumsy is common at B2."
+ },
+ {
+  "input": "coal",
+  "lemma": "coal",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "Coal, oil and gas are the subject whose blank noun is finite, but coal is elementary vocabulary."
+ },
+ {
+  "input": "cocoa",
+  "lemma": "cocoa",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "The mug of cocoa is the detail at the end; the blank is the state of complete exhaustion the studying left her in."
+ },
+ {
+  "input": "cognition",
+  "lemma": "cognition",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 2,
+  "difficulty": 3,
+  "reason": "Sensory cognition names the process, but the blank is the connective introducing the no effective limit clause, and cognition is transparent from cognitive."
+ },
+ {
+  "input": "coin",
+  "lemma": "coin",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 1,
+  "reason": "Rare and antique coins is the clue for the blank collector noun, but coin itself is elementary."
+ },
+ {
+  "input": "coincide",
+  "lemma": "coincide",
+  "verdict": "no",
+  "confidence": "medium",
+  "importance": 3,
+  "difficulty": 3,
+  "reason": "Nor do they all coincide is half the claim about cultural boundaries, but coincide is standard academic vocabulary and transparent from coincidence."
+ },
+ {
+  "input": "cola",
+  "lemma": "cola",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Going without a cola is the trivial hardship the blank noun ironically ranks, and the word is an everyday borrowing."
+ },
+ {
+  "input": "coleridge",
+  "lemma": "coleridge",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 1,
+  "difficulty": 1,
+  "reason": "Coleridge is a poet's name in the stem, not vocabulary; the blank is the participle introducing the series of poems."
+ },
+ {
+  "input": "coli",
+  "lemma": "coli",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 2,
+  "reason": "E. coli is the taxonomic name of the organism and bacteria stands right beside it, so the blank about the contaminated water supply does not depend on it."
+ },
+ {
+  "input": "collapse",
+  "lemma": "collapse",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "The trial collapsed is the event the blank explains, but collapse is common at B2."
+ },
+ {
+  "input": "colleague",
+  "lemma": "colleague",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 2,
+  "difficulty": 1,
+  "reason": "Shaywitz and her colleagues are the researchers; the blank is what they identified, and colleague is common academic vocabulary."
+ },
+ {
+  "input": "collective",
+  "lemma": "collective",
+  "verdict": "no",
+  "confidence": "high",
+  "importance": 3,
+  "difficulty": 2,
+  "reason": "Individually and collectively closes the sentence the blank subject opens, but the word is transparent from collect and common at B2."
+ }
+]

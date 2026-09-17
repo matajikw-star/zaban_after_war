@@ -1,0 +1,138 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": "The noun (a settlement in which each side concedes something) and the verb (to weaken or put at risk) sit far apart in meaning even though the spelling and the stress are identical; a learner who knows the noun will not guess the verb. Both were tested, so the card must keep the two blocks visibly separate.",
+    "suspected": true
+  },
+  "id": "compromise",
+  "lemma": "compromise",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p09",
+      "part": "cloze",
+      "questionNo": 39,
+      "reach": 1,
+      "surface": "compromises",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p11",
+      "part": "vocabulary",
+      "questionNo": 28,
+      "reach": 1,
+      "surface": "compromise",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p01",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 58,
+      "surface": "compromise",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "deadlock"
+      ],
+      "definition": "an agreement that ends an argument because each side gives up part of what it wanted",
+      "examples": [
+        {
+          "en": "After hours of argument the two sides finally found a compromise.",
+          "fa": "پس از ساعت‌ها بحث، دو طرف سرانجام به سازشی رسیدند."
+        }
+      ],
+      "ipa": "/ˈkɒmprəmaɪz/",
+      "pos": "n",
+      "synonyms": [
+        "settlement",
+        "middle ground"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p11",
+          "questionNo": 28
+        },
+        {
+          "paperId": "arshad-1398-p01",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "سازش",
+        "توافق دوسویه",
+        "مصالحه"
+      ]
+    },
+    {
+      "antonyms": [
+        "safeguard",
+        "strengthen"
+      ],
+      "definition": "to weaken something or put it at risk, especially safety, quality or a principle",
+      "examples": [
+        {
+          "en": "Skipping safety checks could compromise the whole building's structure.",
+          "fa": "نادیده گرفتن بازرسی‌های ایمنی می‌تواند کل سازهٔ ساختمان را به خطر بیندازد."
+        }
+      ],
+      "ipa": "/ˈkɒmprəmaɪz/",
+      "pos": "v",
+      "synonyms": [
+        "undermine",
+        "jeopardize",
+        "endanger"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 39
+        }
+      ],
+      "translations": [
+        "به خطر انداختن",
+        "تضعیف کردن",
+        "خدشه‌دار کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 2
+    },
+    "byYear": {
+      "1398": 1,
+      "1400": 2
+    },
+    "distinctYears": 2,
+    "firstYear": 1398,
+    "lastYear": 1400,
+    "priority": 11,
+    "timesAsAnswer": 2,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "compromise",
+    "compromises"
+  ]
+}

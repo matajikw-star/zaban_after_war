@@ -1,0 +1,101 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "acknowledge",
+  "lemma": "acknowledge",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1401-p01",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 58,
+      "surface": "acknowledged",
+      "year": 1401
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "deny"
+      ],
+      "definition": "to admit that something is true, even when you would rather not",
+      "examples": [
+        {
+          "en": "She finally acknowledged that the plan had been a mistake.",
+          "fa": "او سرانجام اذعان کرد که آن نقشه اشتباه بوده است."
+        }
+      ],
+      "ipa": "/əkˈnɒlɪdʒ/",
+      "pos": "v",
+      "synonyms": [
+        "admit",
+        "concede"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p01",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "اذعان کردن به",
+        "پذیرفتن",
+        "اعتراف کردن به"
+      ]
+    },
+    {
+      "antonyms": [
+        "ignore"
+      ],
+      "definition": "to show that you have received or noticed something or someone",
+      "examples": [
+        {
+          "en": "Please acknowledge this email as soon as you receive it.",
+          "fa": "لطفاً به‌محض دریافت این ایمیل، رسید آن را اعلام کنید."
+        }
+      ],
+      "ipa": "/əkˈnɒlɪdʒ/",
+      "pos": "v",
+      "synonyms": [
+        "confirm receipt of"
+      ],
+      "testedIn": [],
+      "translations": [
+        "دریافت چیزی را اعلام کردن",
+        "اعتنا کردن به"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1401": 1
+    },
+    "byYear": {
+      "1401": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1401,
+    "lastYear": 1401,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "acknowledged"
+  ]
+}

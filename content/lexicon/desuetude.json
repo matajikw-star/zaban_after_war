@@ -1,0 +1,77 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "desuetude",
+  "lemma": "desuetude",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p09",
+      "part": "vocabulary",
+      "questionNo": 16,
+      "reach": 1,
+      "surface": "desuetude",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "the state of no longer being used or practised, most often in the phrase \"fall into desuetude\"",
+      "examples": [
+        {
+          "en": "Many old customs of the village have fallen into desuetude.",
+          "fa": "بسیاری از رسوم کهن آن روستا از رواج افتاده‌اند."
+        }
+      ],
+      "ipa": "/dɪˈsjuːɪtjuːd/",
+      "pos": "n",
+      "synonyms": [
+        "disuse",
+        "obsolescence"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 16
+        }
+      ],
+      "translations": [
+        "متروک شدن",
+        "بلااستفاده ماندن",
+        "از رواج افتادن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "desuetude"
+  ]
+}

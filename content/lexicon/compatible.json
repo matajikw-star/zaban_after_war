@@ -1,0 +1,129 @@
+{
+  "confusables": [
+    {
+      "note": "شکل نوشتاری نزدیک؛ comparable یعنی قابل مقایسه، نه سازگار",
+      "word": "comparable"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "compatible",
+  "lemma": "compatible",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p02",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 30,
+      "surface": "compatible",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p07",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 2,
+      "surface": "compatible",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p08",
+      "part": "vocabulary",
+      "questionNo": 13,
+      "reach": 1,
+      "surface": "compatible",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p13",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 1,
+      "surface": "compatible",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "incompatible",
+        "conflicting"
+      ],
+      "definition": "able to exist or be used together without causing problems",
+      "examples": [
+        {
+          "en": "This charger is compatible with every phone the company makes.",
+          "fa": "این شارژر با همهٔ گوشی‌هایی که این شرکت می‌سازد سازگار است."
+        }
+      ],
+      "ipa": "/kəmˈpætəbl/",
+      "pos": "adj",
+      "synonyms": [
+        "consistent",
+        "well-matched",
+        "harmonious"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p08",
+          "questionNo": 13
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "سازگار",
+        "هماهنگ",
+        "قابل استفاده با هم"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 4
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "compatible"
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "confusables": [
+    {
+      "note": "شکل و آوای نزدیک، اما broach یعنی مطرح کردن یک موضوع دشوار",
+      "word": "broach"
+    },
+    {
+      "note": "هم‌آوا، اما breech به بخش عقب لولهٔ اسلحه گفته می‌شود",
+      "word": "breech"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "breach",
+  "lemma": "breach",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1405-p07",
+      "part": "vocabulary",
+      "questionNo": 12,
+      "reach": 1,
+      "surface": "breach",
+      "year": 1405
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1401-p03",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 31,
+      "surface": "breach",
+      "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1401-p04",
+      "part": "vocabulary",
+      "questionNo": 13,
+      "reach": 1,
+      "surface": "breaches",
+      "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 20,
+      "surface": "breach",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 9,
+      "surface": "breach",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 1,
+      "surface": "breach",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "compliance"
+      ],
+      "definition": "an act of breaking a law, a rule or an agreement, often in the phrase \"in breach of\"",
+      "examples": [
+        {
+          "en": "The company was taken to court for a serious breach of contract.",
+          "fa": "آن شرکت به دلیل نقض جدی قرارداد به دادگاه کشیده شد."
+        }
+      ],
+      "ipa": "/briːtʃ/",
+      "pos": "n",
+      "synonyms": [
+        "violation",
+        "infringement"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p03",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1401-p04",
+          "questionNo": 13
+        },
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "نقض",
+        "تخلف",
+        "زیر پا گذاشتن قانون"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a gap made in a wall or a line of defence, or a break in a friendly relationship",
+      "examples": [
+        {
+          "en": "The waves opened a wide breach in the old sea wall.",
+          "fa": "امواج رخنه‌ای پهناور در دیوار قدیمی ساحلی ایجاد کردند."
+        }
+      ],
+      "ipa": "/briːtʃ/",
+      "pos": "n",
+      "synonyms": [
+        "gap",
+        "rift",
+        "opening"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p07",
+          "questionNo": 12
+        }
+      ],
+      "translations": [
+        "رخنه",
+        "شکاف",
+        "گسست"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1401": 1
+    },
+    "byYear": {
+      "1399": 3,
+      "1401": 2,
+      "1405": 1
+    },
+    "distinctYears": 3,
+    "firstYear": 1399,
+    "lastYear": 1405,
+    "priority": 14,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 5,
+    "timesTested": 6
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "breach",
+    "breaches"
+  ]
+}

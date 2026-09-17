@@ -1,0 +1,115 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "rigidity",
+  "lemma": "rigidity",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 12,
+      "surface": "rigidity",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 10,
+      "surface": "rigidity",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "flexibility",
+        "adaptability"
+      ],
+      "definition": "the quality of being unwilling to change rules, plans or ideas",
+      "examples": [
+        {
+          "en": "The rigidity of the old rules drove away the best young staff.",
+          "fa": "انعطاف‌ناپذیری قوانین قدیمی بهترین کارکنان جوان را فراری داد."
+        }
+      ],
+      "ipa": "/rɪˈdʒɪdəti/",
+      "pos": "n",
+      "synonyms": [
+        "inflexibility",
+        "stiffness"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "انعطاف‌ناپذیری",
+        "خشکی و جمود",
+        "سخت‌گیری بی‌انعطاف"
+      ]
+    },
+    {
+      "antonyms": [
+        "elasticity"
+      ],
+      "definition": "the quality of being stiff and hard, so that it cannot be bent",
+      "examples": [
+        {
+          "en": "Steel bars give the frame the rigidity it needs to carry weight.",
+          "fa": "میله‌های فولادی سفتی لازم برای تحمل وزن را به اسکلت می‌دهند."
+        }
+      ],
+      "ipa": "/rɪˈdʒɪdəti/",
+      "pos": "n",
+      "synonyms": [
+        "stiffness"
+      ],
+      "testedIn": [],
+      "translations": [
+        "سفتی",
+        "صلبیت"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "rigidity"
+  ]
+}

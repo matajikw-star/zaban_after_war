@@ -1,0 +1,212 @@
+{
+  "confusables": [
+    {
+      "note": "شکل نزدیک، اما distraction یعنی عامل حواس‌پرتی",
+      "word": "distraction"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "distinction",
+  "lemma": "distinction",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 23,
+      "surface": "distinction",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 5,
+      "surface": "distinction",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 1,
+      "surface": "distinction",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 1,
+      "surface": "distinction",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 20,
+      "surface": "distinction",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 9,
+      "surface": "distinction",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 1,
+      "surface": "distinction",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p01",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 58,
+      "surface": "distinction",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "similarity"
+      ],
+      "definition": "a clear difference between two or more things, or the act of showing that difference",
+      "examples": [
+        {
+          "en": "He drew a sharp distinction between knowing a rule and using it.",
+          "fa": "او میان دانستن یک قاعده و به‌کار بردن آن تمایزی روشن قائل شد."
+        }
+      ],
+      "ipa": "/dɪˈstɪŋkʃn/",
+      "pos": "n",
+      "synonyms": [
+        "difference",
+        "contrast",
+        "differentiation"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1398-p01",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "تمایز",
+        "تفاوت آشکار",
+        "فرق گذاشتن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "the quality of being excellent, or an honour given to someone for excellent work",
+      "examples": [
+        {
+          "en": "She is a scholar of real distinction in her own field.",
+          "fa": "او پژوهشگری به‌راستی برجسته در رشتهٔ خویش است."
+        }
+      ],
+      "ipa": "/dɪˈstɪŋkʃn/",
+      "pos": "n",
+      "synonyms": [
+        "eminence",
+        "honour",
+        "merit"
+      ],
+      "testedIn": [],
+      "translations": [
+        "برجستگی",
+        "افتخار و امتیاز"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1,
+      "1399": 3,
+      "1400": 4
+    },
+    "distinctYears": 3,
+    "firstYear": 1398,
+    "lastYear": 1400,
+    "priority": 14,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 8,
+    "timesTested": 8
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "distinction"
+  ]
+}

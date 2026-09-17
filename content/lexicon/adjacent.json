@@ -1,0 +1,75 @@
+{
+  "confusables": [
+    {
+      "note": "adjoining یعنی چسبیده و دارای دیوار یا مرز مشترک؛ adjacent می‌تواند فقط نزدیک باشد",
+      "word": "adjoining"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "adjacent",
+  "lemma": "adjacent",
+  "level": "B2",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p10",
+      "part": "grammar",
+      "questionNo": 14,
+      "reach": 1,
+      "surface": "adjacent",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "distant",
+        "remote"
+      ],
+      "definition": "next to or very near something else",
+      "examples": [
+        {
+          "en": "Our office is adjacent to the main library.",
+          "fa": "دفتر ما مجاور کتابخانهٔ مرکزی است."
+        }
+      ],
+      "ipa": "/əˈdʒeɪsnt/",
+      "pos": "adj",
+      "synonyms": [
+        "neighbouring",
+        "abutting",
+        "contiguous"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مجاور",
+        "همسایه",
+        "کنار هم"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "adjacent"
+  ]
+}

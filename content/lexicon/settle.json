@@ -1,0 +1,122 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "settle",
+  "lemma": "settle",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1402-p04",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 1,
+      "surface": "settled",
+      "year": 1402
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p03",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 30,
+      "surface": "settle",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "prolong",
+        "complicate"
+      ],
+      "definition": "to end an argument, problem or legal case by reaching a final decision about it",
+      "examples": [
+        {
+          "en": "The two families finally settled the dispute over the land.",
+          "fa": "سرانجام آن دو خانواده اختلافشان بر سر زمین را حل و فصل کردند."
+        }
+      ],
+      "ipa": "/ˈsetl/",
+      "pos": "v",
+      "synonyms": [
+        "resolve",
+        "conclude",
+        "sort out"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p03",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1402-p04",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "حل و فصل کردن",
+        "فیصله دادن",
+        "به سرانجام رساندن"
+      ]
+    },
+    {
+      "antonyms": [
+        "leave",
+        "migrate"
+      ],
+      "definition": "to go to live in a place permanently, or to begin living in a new country",
+      "examples": [
+        {
+          "en": "After years of moving around, they settled in a small coastal town.",
+          "fa": "پس از سال‌ها جابه‌جایی، در شهر ساحلی کوچکی ساکن شدند."
+        }
+      ],
+      "ipa": "/ˈsetl/",
+      "pos": "v",
+      "synonyms": [
+        "reside",
+        "make a home"
+      ],
+      "testedIn": [],
+      "translations": [
+        "ساکن شدن",
+        "سکنا گزیدن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1,
+      "1402": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1398,
+    "lastYear": 1402,
+    "priority": 8,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "settle",
+    "settled"
+  ]
+}

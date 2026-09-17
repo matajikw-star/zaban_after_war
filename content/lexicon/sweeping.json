@@ -1,0 +1,105 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "sweeping",
+  "lemma": "sweeping",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p10",
+      "part": "vocabulary",
+      "questionNo": 30,
+      "reach": 1,
+      "surface": "sweeping",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "minor",
+        "piecemeal"
+      ],
+      "definition": "affecting many things at once and changing them a great deal, leaving little as it was",
+      "examples": [
+        {
+          "en": "The new law brought sweeping reforms to the tax system.",
+          "fa": "قانون جدید اصلاحات گسترده‌ای در نظام مالیاتی پدید آورد."
+        }
+      ],
+      "ipa": "/ˈswiːpɪŋ/",
+      "pos": "adj",
+      "synonyms": [
+        "far-reaching",
+        "wholesale",
+        "extensive"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 30
+        }
+      ],
+      "translations": [
+        "گسترده",
+        "همه‌جانبه",
+        "اساسی"
+      ]
+    },
+    {
+      "antonyms": [
+        "qualified",
+        "nuanced"
+      ],
+      "definition": "said of a statement, too general and made without looking at the details or the exceptions",
+      "examples": [
+        {
+          "en": "She made a sweeping statement about all young drivers.",
+          "fa": "درباره همه راننده‌های جوان حکمی کلی صادر کرد."
+        }
+      ],
+      "ipa": "/ˈswiːpɪŋ/",
+      "pos": "adj",
+      "synonyms": [
+        "over-general",
+        "blanket"
+      ],
+      "testedIn": [],
+      "translations": [
+        "کلی‌گویانه",
+        "شتاب‌زده و کلی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "sweeping"
+  ]
+}

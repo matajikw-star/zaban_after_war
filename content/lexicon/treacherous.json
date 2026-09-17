@@ -1,0 +1,122 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "treacherous",
+  "lemma": "treacherous",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1403-p03",
+      "part": "vocabulary",
+      "questionNo": 11,
+      "reach": 1,
+      "surface": "treacherous",
+      "year": 1403
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1401-p05",
+      "part": "vocabulary",
+      "questionNo": 21,
+      "reach": 1,
+      "surface": "treacherous",
+      "year": 1401
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "safe",
+        "secure"
+      ],
+      "definition": "dangerous, especially when the danger is hidden and the place looks safe",
+      "examples": [
+        {
+          "en": "Melting snow had made the mountain path treacherous by noon.",
+          "fa": "تا ظهر، آب شدن برف مسیر کوهستان را خطرناک و فریبنده کرده بود."
+        }
+      ],
+      "ipa": "/ˈtretʃərəs/",
+      "pos": "adj",
+      "synonyms": [
+        "perilous",
+        "hazardous"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p03",
+          "questionNo": 11
+        }
+      ],
+      "translations": [
+        "خطرناک و فریبنده",
+        "پرمخاطره",
+        "غدار"
+      ]
+    },
+    {
+      "antonyms": [
+        "loyal",
+        "faithful"
+      ],
+      "definition": "willing to betray someone who trusts you",
+      "examples": [
+        {
+          "en": "A treacherous adviser passed the king's plans to his enemies.",
+          "fa": "مشاوری خائن نقشه‌های پادشاه را به دشمنانش رساند."
+        }
+      ],
+      "ipa": "/ˈtretʃərəs/",
+      "pos": "adj",
+      "synonyms": [
+        "disloyal",
+        "perfidious"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 21
+        }
+      ],
+      "translations": [
+        "خائن",
+        "نمک‌نشناس",
+        "پیمان‌شکن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1403": 1
+    },
+    "byYear": {
+      "1401": 1,
+      "1403": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1401,
+    "lastYear": 1403,
+    "priority": 8,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "treacherous"
+  ]
+}

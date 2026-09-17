@@ -1,0 +1,102 @@
+{
+  "confusables": [
+    {
+      "note": "شکل بسیار نزدیک، اما invoke یعنی متوسل شدن به قانون یا احضار کردن",
+      "word": "invoke"
+    },
+    {
+      "note": "revoke یعنی لغو کردن یا باطل کردن، نه تداعی کردن",
+      "word": "revoke"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "evoke",
+  "lemma": "evoke",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1402-p06",
+      "part": "vocabulary",
+      "questionNo": 17,
+      "reach": 1,
+      "surface": "evoking",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p07",
+      "part": "vocabulary",
+      "questionNo": 15,
+      "reach": 1,
+      "surface": "evoke",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to bring a feeling, a memory or an image into someone's mind",
+      "examples": [
+        {
+          "en": "The smell of wet soil evokes memories of my grandmother's garden.",
+          "fa": "بوی خاک خیس، خاطرات باغ مادربزرگم را تداعی می‌کند."
+        }
+      ],
+      "ipa": "/ɪˈvəʊk/",
+      "pos": "verb",
+      "synonyms": [
+        "arouse",
+        "conjure up",
+        "elicit"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p06",
+          "questionNo": 17
+        },
+        {
+          "paperId": "arshad-1399-p07",
+          "questionNo": 15
+        }
+      ],
+      "translations": [
+        "برانگیختن (احساس یا خاطره)",
+        "تداعی کردن",
+        "به یاد آوردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 1,
+      "1402": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1402,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "evoke",
+    "evoking"
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "hurt",
+  "lemma": "hurt",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p07",
+      "part": "vocabulary",
+      "questionNo": 168,
+      "reach": 1,
+      "surface": "hurt",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "help",
+        "benefit"
+      ],
+      "definition": "to have a bad effect on someone or something, especially on their interests or chances of success",
+      "examples": [
+        {
+          "en": "The new tariffs hurt small exporters far more than large ones.",
+          "fa": "تعرفه‌های جدید به صادرکنندگان کوچک بسیار بیشتر از بزرگ‌ها لطمه زد."
+        }
+      ],
+      "ipa": "/hɜːt/",
+      "pos": "v",
+      "synonyms": [
+        "damage",
+        "harm",
+        "undermine"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 168
+        }
+      ],
+      "translations": [
+        "لطمه زدن به",
+        "ضرر رساندن به",
+        "آسیب زدن"
+      ]
+    },
+    {
+      "antonyms": [
+        "heal"
+      ],
+      "definition": "to cause physical pain to a person or part of the body, or to feel such pain",
+      "examples": [
+        {
+          "en": "My shoulder still hurts when I lift anything heavy.",
+          "fa": "وقتی چیز سنگینی بلند می‌کنم شانه‌ام هنوز درد می‌گیرد."
+        }
+      ],
+      "ipa": "/hɜːt/",
+      "pos": "v",
+      "synonyms": [
+        "injure",
+        "ache"
+      ],
+      "testedIn": [],
+      "translations": [
+        "درد گرفتن",
+        "صدمه زدن",
+        "زخمی کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "hurt"
+  ]
+}

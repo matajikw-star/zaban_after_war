@@ -1,0 +1,170 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "expose",
+  "lemma": "expose",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1403-p01",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 60,
+      "surface": "exposed",
+      "year": 1403
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p11",
+      "part": "vocabulary",
+      "questionNo": 23,
+      "reach": 1,
+      "surface": "exposed",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p01",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 42,
+      "surface": "expose",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p03",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 16,
+      "surface": "expose",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p01",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 58,
+      "surface": "exposed",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "shelter",
+        "protect"
+      ],
+      "definition": "to put someone or something in a place where they are not protected from something harmful, usually in the phrase \"be exposed to\"",
+      "examples": [
+        {
+          "en": "Workers in that factory are exposed to loud noise for many hours.",
+          "fa": "کارگران آن کارخانه ساعت‌های زیادی در معرض سروصدای بلند قرار دارند."
+        }
+      ],
+      "ipa": "/ɪkˈspəʊz/",
+      "pos": "v",
+      "synonyms": [
+        "subject",
+        "lay open"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p01",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p11",
+          "questionNo": 23
+        },
+        {
+          "paperId": "arshad-1398-p01",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "در معرض قرار دادن",
+        "بی‌پناه گذاشتن"
+      ]
+    },
+    {
+      "antonyms": [
+        "conceal",
+        "cover up"
+      ],
+      "definition": "to make known something dishonest or wrong that was being kept secret",
+      "examples": [
+        {
+          "en": "The report exposed serious corruption inside the city council.",
+          "fa": "آن گزارش فساد جدی درون شورای شهر را افشا کرد."
+        }
+      ],
+      "ipa": "/ɪkˈspəʊz/",
+      "pos": "v",
+      "synonyms": [
+        "reveal",
+        "uncover",
+        "disclose"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "افشا کردن",
+        "برملا کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 1,
+      "1403": 1
+    },
+    "byYear": {
+      "1398": 1,
+      "1399": 2,
+      "1400": 1,
+      "1403": 1
+    },
+    "distinctYears": 4,
+    "firstYear": 1398,
+    "lastYear": 1403,
+    "priority": 17,
+    "timesAsAnswer": 2,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 5
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "expose",
+    "exposed"
+  ]
+}

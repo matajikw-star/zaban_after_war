@@ -1,0 +1,134 @@
+{
+  "confusables": [
+    {
+      "note": "هم‌ساختار و در گزینه‌ها کنار هم می‌آیند؛ antagonist یعنی شخصیت مخالف و رقیب قهرمان، نه خود قهرمان.",
+      "word": "antagonist"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "protagonist",
+  "lemma": "protagonist",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p01",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 48,
+      "surface": "protagonist",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p04",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 6,
+      "surface": "protagonist",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 3,
+      "surface": "protagonist",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "antagonist"
+      ],
+      "definition": "the most important character in a novel, a play or a film, around whom the story turns",
+      "examples": [
+        {
+          "en": "The protagonist of the novel is a young teacher who moves to the capital.",
+          "fa": "شخصیت اصلی این رمان معلمی جوان است که به پایتخت مهاجرت می‌کند."
+        }
+      ],
+      "ipa": "/prəˈtæɡənɪst/",
+      "pos": "n",
+      "synonyms": [
+        "hero",
+        "lead"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "شخصیت اصلی",
+        "قهرمان داستان"
+      ]
+    },
+    {
+      "antonyms": [
+        "opponent"
+      ],
+      "definition": "one of the main supporters of an idea or a political movement",
+      "examples": [
+        {
+          "en": "She was a leading protagonist of free education for girls.",
+          "fa": "او از مدافعان سرشناس آموزش رایگان برای دختران بود."
+        }
+      ],
+      "ipa": "/prəˈtæɡənɪst/",
+      "pos": "n",
+      "synonyms": [
+        "champion",
+        "advocate"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مدافع سرشناس (یک آرمان)",
+        "پیشگام"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "protagonist"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "jovial",
+  "lemma": "jovial",
+  "level": null,
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 23,
+      "surface": "jovial",
+      "year": 1400
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 5,
+      "surface": "jovial",
+      "year": 1400
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 1,
+      "surface": "jovial",
+      "year": 1400
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 1,
+      "surface": "jovial",
+      "year": 1400
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 4,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "jovial"
+  ]
+}

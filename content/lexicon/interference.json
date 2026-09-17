@@ -1,0 +1,118 @@
+{
+  "confusables": [
+    {
+      "note": "inference یعنی استنباط و نتیجه‌گیری؛ فقط یک حرف با interference فرق دارد",
+      "word": "inference"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "interference",
+  "lemma": "interference",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p03",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 30,
+      "surface": "interference",
+      "year": 1398
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p07",
+      "part": "cloze",
+      "questionNo": 183,
+      "reach": 1,
+      "surface": "interference",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "noninterference"
+      ],
+      "definition": "the act of getting involved in a situation that is not your business, when you are not wanted",
+      "examples": [
+        {
+          "en": "The board resented any interference from the ministry in hiring.",
+          "fa": "هیئت‌مدیره از هرگونه دخالت وزارتخانه در استخدام‌ها ناخرسند بود."
+        }
+      ],
+      "ipa": "/ˌɪntəˈfɪərəns/",
+      "pos": "n",
+      "synonyms": [
+        "meddling",
+        "intrusion"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p03",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 183
+        }
+      ],
+      "translations": [
+        "دخالت",
+        "مداخله",
+        "فضولی"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "noise or disturbance that spoils a radio, television or phone signal",
+      "examples": [
+        {
+          "en": "Heavy rain caused interference on the line and we lost the call.",
+          "fa": "باران شدید روی خط اختلال ایجاد کرد و تماس قطع شد."
+        }
+      ],
+      "ipa": "/ˌɪntəˈfɪərəns/",
+      "pos": "n",
+      "synonyms": [
+        "static",
+        "disturbance"
+      ],
+      "testedIn": [],
+      "translations": [
+        "پارازیت",
+        "اختلال (در سیگنال)"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "interference"
+  ]
+}

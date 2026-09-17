@@ -1,0 +1,105 @@
+{
+  "confusables": [
+    {
+      "note": "broil یعنی کباب کردن زیر شعله؛ تنها یک حرف با boil تفاوت دارد.",
+      "word": "broil"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "boil",
+  "lemma": "boil",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p10",
+      "part": "vocabulary",
+      "questionNo": 22,
+      "reach": 1,
+      "surface": "boils",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "used in the phrase \"boil down to\", to have one simple basic cause or point when everything else is stripped away",
+      "examples": [
+        {
+          "en": "Their long argument boils down to a simple question of money.",
+          "fa": "بحث طولانی آن‌ها در پرسش سادهٔ پول خلاصه می‌شود."
+        }
+      ],
+      "ipa": "/bɔɪl/",
+      "pos": "verb",
+      "synonyms": [
+        "come down to",
+        "amount to"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "خلاصه شدن در",
+        "برگشتن به (اصل مطلب)",
+        "در نهایت به ... ختم شدن"
+      ]
+    },
+    {
+      "antonyms": [
+        "freeze"
+      ],
+      "definition": "to heat a liquid until it bubbles and turns to steam, or to cook food in such a liquid",
+      "examples": [
+        {
+          "en": "Boil the potatoes for twenty minutes before adding any salt.",
+          "fa": "پیش از افزودن نمک، سیب‌زمینی‌ها را بیست دقیقه بجوشانید."
+        }
+      ],
+      "ipa": "/bɔɪl/",
+      "pos": "verb",
+      "synonyms": [
+        "simmer"
+      ],
+      "testedIn": [],
+      "translations": [
+        "جوشیدن",
+        "جوشاندن",
+        "آب‌پز کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "boils"
+  ]
+}

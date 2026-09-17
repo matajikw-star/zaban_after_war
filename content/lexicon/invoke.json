@@ -1,0 +1,108 @@
+{
+  "confusables": [
+    {
+      "note": "evoke یعنی برانگیختن خاطره یا احساس؛ invoke یعنی متوسل شدن و استناد کردن",
+      "word": "evoke"
+    },
+    {
+      "note": "revoke یعنی لغو و باطل کردن (مثلاً مجوز)، نه فراخواندن",
+      "word": "revoke"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "invoke",
+  "lemma": "invoke",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1402-p01",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 56,
+      "surface": "invoke",
+      "year": 1402
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to call on a person or an authority for help, support or protection",
+      "examples": [
+        {
+          "en": "The family invoked the help of a lawyer as soon as the threats began.",
+          "fa": "خانواده به محض آغاز تهدیدها به کمک یک وکیل متوسل شد."
+        }
+      ],
+      "ipa": "/ɪnˈvəʊk/",
+      "pos": "v",
+      "synonyms": [
+        "call on",
+        "appeal to",
+        "solicit"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p01",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "متوسل شدن به",
+        "طلب کردن (کمک)",
+        "به یاری خواندن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to mention a law, a rule or a principle as the reason for what you are doing",
+      "examples": [
+        {
+          "en": "The minister invoked an old law to block the sale of the land.",
+          "fa": "وزیر برای جلوگیری از فروش آن زمین به قانونی قدیمی استناد کرد."
+        }
+      ],
+      "ipa": "/ɪnˈvəʊk/",
+      "pos": "v",
+      "synonyms": [
+        "cite",
+        "apply"
+      ],
+      "testedIn": [],
+      "translations": [
+        "استناد کردن به",
+        "به کار بستن (قانون)"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1402": 1
+    },
+    "byYear": {
+      "1402": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1402,
+    "lastYear": 1402,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "invoke"
+  ]
+}

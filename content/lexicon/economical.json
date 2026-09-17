@@ -1,0 +1,145 @@
+{
+  "confusables": [
+    {
+      "note": "economic یعنی اقتصادی و مربوط به اقتصاد، اما economical یعنی کم‌خرج و صرفه‌جویانه",
+      "word": "economic"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "economical",
+  "lemma": "economical",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1402-p02",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 32,
+      "surface": "economical",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 23,
+      "surface": "economical",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 5,
+      "surface": "economical",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 1,
+      "surface": "economical",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 1,
+      "surface": "economical",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "wasteful",
+        "extravagant"
+      ],
+      "definition": "using money, fuel or time carefully and without waste",
+      "examples": [
+        {
+          "en": "A smaller car is far more economical on long trips.",
+          "fa": "خودروی کوچک‌تر در سفرهای طولانی به‌مراتب مقرون‌به‌صرفه‌تر است."
+        }
+      ],
+      "ipa": "/ˌiːkəˈnɒmɪkl/",
+      "pos": "adj",
+      "synonyms": [
+        "thrifty",
+        "frugal",
+        "cost-effective"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p02",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "مقرون‌به‌صرفه",
+        "صرفه‌جو",
+        "کم‌خرج"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 4,
+      "1402": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1400,
+    "lastYear": 1402,
+    "priority": 9,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 5,
+    "timesTested": 5
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "economical"
+  ]
+}

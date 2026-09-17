@@ -1,0 +1,105 @@
+{
+  "confusables": [
+    {
+      "note": "recede یعنی پس نشستن و عقب رفتن، مثلاً آب پس از سیل",
+      "word": "recede"
+    },
+    {
+      "note": "concede یعنی پذیرفتن ناخواسته یا واگذار کردن",
+      "word": "concede"
+    },
+    {
+      "note": "intercede یعنی میانجیگری و شفاعت کردن",
+      "word": "intercede"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "secede",
+  "lemma": "secede",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 12,
+      "surface": "secede",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 10,
+      "surface": "secede",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "join",
+        "unite"
+      ],
+      "definition": "to formally leave a country or an organization that you belong to",
+      "examples": [
+        {
+          "en": "Two provinces threatened to secede unless the tax law changed.",
+          "fa": "دو استان تهدید کردند که اگر قانون مالیات تغییر نکند جدا می‌شوند."
+        }
+      ],
+      "ipa": "/sɪˈsiːd/",
+      "pos": "v",
+      "synonyms": [
+        "withdraw",
+        "break away"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "جدا شدن (از کشور یا سازمان)",
+        "انشعاب کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "secede"
+  ]
+}

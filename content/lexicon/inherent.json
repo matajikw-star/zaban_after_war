@@ -1,0 +1,116 @@
+{
+  "confusables": [
+    {
+      "note": "بسیار شبیه اما فعل است؛ inherit یعنی به ارث بردن، حال آنکه inherent صفت است و یعنی ذاتی",
+      "word": "inherit"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "inherent",
+  "lemma": "inherent",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 12,
+      "surface": "inherent",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 10,
+      "surface": "inherent",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p03",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 30,
+      "surface": "Inherent",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "acquired",
+        "extrinsic"
+      ],
+      "definition": "existing as a natural and permanent part of something, so that it cannot be separated from it",
+      "examples": [
+        {
+          "en": "There is a risk inherent in every surgical procedure, however small.",
+          "fa": "در هر عمل جراحی، هرچند کوچک، خطری ذاتی وجود دارد."
+        }
+      ],
+      "ipa": "/ɪnˈherənt/",
+      "pos": "adj",
+      "synonyms": [
+        "intrinsic",
+        "innate",
+        "built-in"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1398-p03",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "ذاتی",
+        "درونی و جدایی‌ناپذیر",
+        "نهفته در"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1,
+      "1399": 2
+    },
+    "distinctYears": 2,
+    "firstYear": 1398,
+    "lastYear": 1399,
+    "priority": 7,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "Inherent",
+    "inherent"
+  ]
+}

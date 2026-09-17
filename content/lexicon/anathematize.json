@@ -1,0 +1,84 @@
+{
+  "confusables": [
+    {
+      "note": "آغاز مشابه اما بی‌ربط؛ anaesthetize یعنی بیهوش یا بی‌حس کردن",
+      "word": "anaesthetize"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "anathematize",
+  "lemma": "anathematize",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p09",
+      "part": "vocabulary",
+      "questionNo": 11,
+      "reach": 1,
+      "surface": "anathematize",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "bless",
+        "praise"
+      ],
+      "definition": "to condemn someone or something very strongly, especially with a formal religious curse",
+      "examples": [
+        {
+          "en": "The council anathematized the writings it judged to be pure heresy.",
+          "fa": "آن شورا نوشته‌هایی را که بدعتِ محض می‌دانست، تکفیر کرد."
+        }
+      ],
+      "ipa": "/əˈnæθəmətaɪz/",
+      "pos": "v",
+      "synonyms": [
+        "curse",
+        "denounce",
+        "condemn"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 11
+        }
+      ],
+      "translations": [
+        "لعن کردن",
+        "تکفیر کردن",
+        "به‌شدت محکوم کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "anathematize"
+  ]
+}

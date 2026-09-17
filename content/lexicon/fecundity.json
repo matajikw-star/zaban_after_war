@@ -1,0 +1,94 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "fecundity",
+  "lemma": "fecundity",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1402-p05",
+      "part": "cloze",
+      "questionNo": 29,
+      "reach": 1,
+      "surface": "fecundity",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p09",
+      "part": "cloze",
+      "questionNo": 31,
+      "reach": 1,
+      "surface": "fecundity",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "sterility",
+        "barrenness"
+      ],
+      "definition": "the ability to produce a large number of offspring, crops or new ideas",
+      "examples": [
+        {
+          "en": "The fecundity of the soil in that valley surprised the early farmers.",
+          "fa": "حاصلخیزی خاک آن دره، کشاورزان نخستین را شگفت‌زده کرد."
+        }
+      ],
+      "ipa": "/fɪˈkʌndəti/",
+      "pos": "noun",
+      "synonyms": [
+        "fertility",
+        "productiveness"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p05",
+          "questionNo": 29
+        },
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 31
+        }
+      ],
+      "translations": [
+        "باروری",
+        "زایایی",
+        "حاصلخیزی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 1,
+      "1402": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1400,
+    "lastYear": 1402,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "fecundity"
+  ]
+}

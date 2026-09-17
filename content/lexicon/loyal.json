@@ -1,0 +1,114 @@
+{
+  "confusables": [
+    {
+      "note": "royal یعنی سلطنتی و شاهانه؛ تفاوت نوشتاری فقط در حرف نخست است.",
+      "word": "royal"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "loyal",
+  "lemma": "loyal",
+  "level": "B1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 20,
+      "surface": "loyal",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 9,
+      "surface": "loyal",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 1,
+      "surface": "loyal",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "disloyal",
+        "treacherous"
+      ],
+      "definition": "always supporting a person, group, country or idea, and not abandoning them",
+      "examples": [
+        {
+          "en": "He stayed loyal to the same small team for twenty years.",
+          "fa": "او بیست سال به همان تیم کوچک وفادار ماند."
+        }
+      ],
+      "ipa": "/ˈlɔɪəl/",
+      "pos": "adj",
+      "synonyms": [
+        "faithful",
+        "devoted",
+        "staunch"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "وفادار",
+        "باوفا",
+        "صادق"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "loyal"
+  ]
+}

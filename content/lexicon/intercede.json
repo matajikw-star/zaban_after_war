@@ -1,0 +1,103 @@
+{
+  "confusables": [
+    {
+      "note": "recede یعنی پس نشستن و عقب رفتن (مثل آب یا خط مو)",
+      "word": "recede"
+    },
+    {
+      "note": "secede یعنی جدا شدن یک منطقه یا گروه از یک کشور یا سازمان",
+      "word": "secede"
+    },
+    {
+      "note": "precede یعنی پیش از چیزی آمدن",
+      "word": "precede"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "intercede",
+  "lemma": "intercede",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 12,
+      "surface": "intercede",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 10,
+      "surface": "intercede",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to speak to someone in order to persuade them to help or forgive another person",
+      "examples": [
+        {
+          "en": "The teacher agreed to intercede with the principal on the boy's behalf.",
+          "fa": "معلم پذیرفت که نزد مدیر از طرف آن پسر میانجیگری کند."
+        }
+      ],
+      "ipa": "/ˌɪntəˈsiːd/",
+      "pos": "v",
+      "synonyms": [
+        "mediate",
+        "plead"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "میانجیگری کردن",
+        "شفاعت کردن",
+        "وساطت کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "intercede"
+  ]
+}

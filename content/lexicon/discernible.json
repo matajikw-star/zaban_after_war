@@ -1,0 +1,84 @@
+{
+  "confusables": [
+    {
+      "note": "discerning صفتِ شخص است و یعنی تیزبین و نکته‌سنج؛ discernible یعنی چیزی که قابل تشخیص است",
+      "word": "discerning"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "discernible",
+  "lemma": "discernible",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p08",
+      "part": "vocabulary",
+      "questionNo": 13,
+      "reach": 1,
+      "surface": "discernible",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "imperceptible"
+      ],
+      "definition": "able to be seen, heard or noticed, though not always easily",
+      "examples": [
+        {
+          "en": "There was no discernible change in his tone of voice.",
+          "fa": "هیچ تغییر محسوسی در لحن صدای او دیده نمی‌شد."
+        }
+      ],
+      "ipa": "/dɪˈsɜːnəbl/",
+      "pos": "adj",
+      "synonyms": [
+        "perceptible",
+        "noticeable"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p08",
+          "questionNo": 13
+        }
+      ],
+      "translations": [
+        "قابل تشخیص",
+        "محسوس",
+        "مشهود"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "discernible"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "confusables": [
+    {
+      "note": "تقریباً معنای مخالف دارد: impassioned یعنی پرشور و پرحرارت",
+      "word": "impassioned"
+    },
+    {
+      "note": "impassable یعنی صعب‌العبور، مثلاً جاده‌ای که نمی‌شود از آن گذشت",
+      "word": "impassable"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "impassive",
+  "lemma": "impassive",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 12,
+      "surface": "impassive",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 10,
+      "surface": "impassive",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "emotional",
+        "expressive"
+      ],
+      "definition": "showing no feeling or reaction in the face or the voice",
+      "examples": [
+        {
+          "en": "The witness stayed impassive while the verdict was read out.",
+          "fa": "شاهد هنگام قرائت رأی دادگاه بی‌حالت باقی ماند."
+        }
+      ],
+      "ipa": "/ɪmˈpæsɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "expressionless",
+        "stony"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "بی‌احساس",
+        "بی‌حالت",
+        "خونسرد و بی‌واکنش"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "impassive"
+  ]
+}

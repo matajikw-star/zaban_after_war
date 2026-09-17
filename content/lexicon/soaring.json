@@ -1,0 +1,101 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": "",
+    "suspected": false
+  },
+  "id": "soaring",
+  "lemma": "soaring",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p07",
+      "part": "vocabulary",
+      "questionNo": 173,
+      "reach": 1,
+      "surface": "soaring",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "falling",
+        "plummeting"
+      ],
+      "definition": "rising very quickly to a high level, used especially of prices, costs or numbers",
+      "examples": [
+        {
+          "en": "Soaring food prices have worried families across the country.",
+          "fa": "افزایش سریع قیمت مواد غذایی خانواده‌ها را در سراسر کشور نگران کرده است."
+        }
+      ],
+      "ipa": "/ˈsɔːrɪŋ/",
+      "pos": "adj",
+      "synonyms": [
+        "rocketing",
+        "escalating",
+        "spiralling"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 173
+        }
+      ],
+      "translations": [
+        "به‌سرعت رو به افزایش",
+        "سرسام‌آور",
+        "سر به فلک کشیده"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "flying high in the air without much movement of the wings",
+      "examples": [
+        {
+          "en": "We watched the soaring eagles high above the narrow valley.",
+          "fa": "عقاب‌های در حال اوج گرفتن را بالای درهٔ باریک تماشا کردیم."
+        }
+      ],
+      "ipa": "/ˈsɔːrɪŋ/",
+      "pos": "adj",
+      "synonyms": [
+        "gliding"
+      ],
+      "testedIn": [],
+      "translations": [
+        "در حال اوج گرفتن",
+        "بلندپرواز"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "soaring"
+  ]
+}

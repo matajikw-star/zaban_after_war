@@ -1,0 +1,689 @@
+{
+  "paperId": "arshad-1403-p04",
+  "degree": "arshad",
+  "year": 1403,
+  "groupCodes": [
+    "1121"
+  ],
+  "bookletCount": 1,
+  "source": {
+    "file": "1121-1403.pdf",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "extractedBy": {
+    "model": "claude-sonnet-5",
+    "at": "2026-09-14"
+  },
+  "questions": [
+    {
+      "no": 1,
+      "part": "grammar",
+      "stem": "Shiraz is ..... a great city that one's mood quickly perks up on jumping out of the taxi.",
+      "options": [
+        "very",
+        "so",
+        "too",
+        "such"
+      ],
+      "optionLemmas": [
+        "very",
+        "so",
+        "too",
+        "such"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "such",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "grammar",
+      "stem": "..... a restless, uncompromising intelligence and a life of practicing what she preaches, of taking the kind of artistic risks she so fiercely espouses.",
+      "options": [
+        "She who has a book born of",
+        "Her is the books bearing",
+        "Hers is a book born of",
+        "Hers book bearing of"
+      ],
+      "optionLemmas": [
+        "have",
+        "bear",
+        "bear",
+        "bear"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "hers",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "grammar",
+      "stem": "I would not have minded if Mike had gotten off relatively lightly— ..... contrition and begged forgiveness.",
+      "options": [
+        "provided that the charges he had admitted, shown",
+        "provided, that is, that he had admitted the charges, shown",
+        "provided, that is, he had admitted the charges, that showed",
+        "provided they were the charges he had admitted, which showed"
+      ],
+      "optionLemmas": [
+        "provide",
+        "provide",
+        "provide",
+        "provide"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "provided",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "grammar",
+      "stem": "..... pleased her instructors and parents, who were among the audience, basking in the glory of the rising star's success.",
+      "options": [
+        "That Turquoise Finn delivered an outstanding performance",
+        "Given that Turquoise Finn earned a standing ovation, which",
+        "Turquoise Finn, who delivering an outstanding performance",
+        "The fact that Turquoise Finn delivered an outstanding performance that"
+      ],
+      "optionLemmas": [
+        "that",
+        "given",
+        "who",
+        "fact"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "that-clause",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "grammar",
+      "stem": "..... this controversial stop-motion oddity from Spain centers on a sausage-making contest and the pet chicken destined for the meat grinder.",
+      "options": [
+        "To taste something acquiring",
+        "Something of an acquired taste,",
+        "Something to be acquired, tasting",
+        "Given that the taste acquired something,"
+      ],
+      "optionLemmas": [
+        "taste",
+        "taste",
+        "acquire",
+        "acquire"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "acquired-taste",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "grammar",
+      "stem": "To paraphrase Samuel Johnson, Rand had just one vision and it was the wrong one. Even Eilenberger, ..... impatient with and staggered by Rand's potted version of the Nietzschean superman and will to power.",
+      "options": [
+        "however he has even-handed interpretations, seemingly turns",
+        "even though even-handed were his interpretations, turning him",
+        "whose seemingly even-handed interpretations turned him",
+        "despite his even-handed interpretations, seems by turns"
+      ],
+      "optionLemmas": [
+        "however",
+        "even though",
+        "whose",
+        "despite"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "despite",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "grammar",
+      "stem": "They are still in the unjustified position ..... some way to deal with the problem of Donald Junior a century and a half later, rather than the reading offered at the time of ratification that has stood unchallenged since.",
+      "options": [
+        "to claim that the true reading of the amendment sought by",
+        "of claimers whom their true reading of the amendment would seek in",
+        "of claiming that theirs is the true reading of the amendment, seeking",
+        "to claim the reading of the amendment to be true, that would be seeking"
+      ],
+      "optionLemmas": [
+        "claim",
+        "claim",
+        "claim",
+        "claim"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "of-claiming",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "Having drawn a unique picture with a finesse characteristic of the genius, ..... .",
+      "options": [
+        "the masterpiece was not admired by the critics to everybody's surprise",
+        "the artist was really disappointed that his masterpiece was not admired by the critics",
+        "the disappointment resulting from the critics' lack of admiration was barely surprising",
+        "the lack of admiration on the critics' part was both disappointing and surprising"
+      ],
+      "optionLemmas": [
+        "masterpiece",
+        "artist",
+        "disappointment",
+        "lack"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "dangling-modifier",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "vocabulary",
+      "stem": "I don't get ..... about anything; I find it comical when people get upset about travel problems that are beyond their control.",
+      "options": [
+        "stressed out",
+        "stressful",
+        "exhilarated",
+        "exhilarating"
+      ],
+      "optionLemmas": [
+        "stress",
+        "stress",
+        "exhilarate",
+        "exhilarate"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "stressed out",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "vocabulary",
+      "stem": "The capsule, built by a famous space firm, was propelled into orbit by a Falcon 9 rocket at the second attempt; the first, scheduled for June 20th, was ..... because of bad weather.",
+      "options": [
+        "counted in",
+        "sold out",
+        "called off",
+        "served up"
+      ],
+      "optionLemmas": [
+        "count",
+        "sell",
+        "call",
+        "serve"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "called off",
+      "uncertain": []
+    },
+    {
+      "no": 11,
+      "part": "vocabulary",
+      "stem": "The productivity of England's businesses improved ..... during the first quarter of the year; but it was much less than previously estimated.",
+      "options": [
+        "hypothetically",
+        "formerly",
+        "miserably",
+        "slightly"
+      ],
+      "optionLemmas": [
+        "hypothetical",
+        "former",
+        "miserable",
+        "slight"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "slightly",
+      "uncertain": []
+    },
+    {
+      "no": 12,
+      "part": "vocabulary",
+      "stem": "His aunt's unfortunate ..... to viruses meant she was nearly always sick.",
+      "options": [
+        "susceptibility",
+        "calamity",
+        "affinity",
+        "alacrity"
+      ],
+      "optionLemmas": [
+        "susceptibility",
+        "calamity",
+        "affinity",
+        "alacrity"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "susceptibility",
+      "uncertain": []
+    },
+    {
+      "no": 13,
+      "part": "vocabulary",
+      "stem": "As many a young girl has learned to her ....., pathological liars are great at deception.",
+      "options": [
+        "plight",
+        "memory",
+        "chagrin",
+        "declaration"
+      ],
+      "optionLemmas": [
+        "plight",
+        "memory",
+        "chagrin",
+        "declaration"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "chagrin",
+      "uncertain": []
+    },
+    {
+      "no": 14,
+      "part": "vocabulary",
+      "stem": "James Jackson, a retired English teacher, spent months at home ..... in gloomy thoughts, replaying wistful memories and berating the cruel and idiotic ways of the world and his fellow men.",
+      "options": [
+        "distending",
+        "postulating",
+        "surmounting",
+        "wallowing"
+      ],
+      "optionLemmas": [
+        "distend",
+        "postulate",
+        "surmount",
+        "wallow"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "wallowing",
+      "uncertain": []
+    },
+    {
+      "no": 15,
+      "part": "vocabulary",
+      "stem": "We looked ..... at the dealer's preposterous assertion that the car had never been in an accident.",
+      "options": [
+        "askance",
+        "shifty",
+        "suspicious",
+        "beseechingly"
+      ],
+      "optionLemmas": [
+        "askance",
+        "shifty",
+        "suspicious",
+        "beseech"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "askance",
+      "uncertain": []
+    },
+    {
+      "no": 16,
+      "part": "vocabulary",
+      "stem": "You were given an estimate ..... of fees; but the actual repair cost could be much higher.",
+      "options": [
+        "inclusive",
+        "additive",
+        "collaborative",
+        "dependent"
+      ],
+      "optionLemmas": [
+        "inclusive",
+        "additive",
+        "collaborative",
+        "dependent"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "inclusive",
+      "uncertain": []
+    },
+    {
+      "no": 17,
+      "part": "vocabulary",
+      "stem": "We must be prepared to buttress the family, to strengthen and to ..... marriage, doing everything in our power to save marriages.",
+      "options": [
+        "undergird",
+        "acquiesce",
+        "propose",
+        "articulate"
+      ],
+      "optionLemmas": [
+        "undergird",
+        "acquiesce",
+        "propose",
+        "articulate"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "undergird",
+      "uncertain": []
+    },
+    {
+      "no": 18,
+      "part": "vocabulary",
+      "stem": "Exactly how this position might be positively determined remains moot, and it is probably ..... to resist giving it definitional closure.",
+      "options": [
+        "inexorable",
+        "gratuitous",
+        "specious",
+        "salutary"
+      ],
+      "optionLemmas": [
+        "inexorable",
+        "gratuitous",
+        "specious",
+        "salutary"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "salutary",
+      "uncertain": []
+    },
+    {
+      "no": 19,
+      "part": "vocabulary",
+      "stem": "They got into a childish ..... about what color lamps to buy for their room.",
+      "options": [
+        "tiff",
+        "cabal",
+        "intrigue",
+        "collusion"
+      ],
+      "optionLemmas": [
+        "tiff",
+        "cabal",
+        "intrigue",
+        "collusion"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "tiff",
+      "uncertain": []
+    },
+    {
+      "no": 20,
+      "part": "vocabulary",
+      "stem": "Though he's known for his athleticism, he's also become known for his ..... prowess on account of his peculiar choice of clothing.",
+      "options": [
+        "listless",
+        "sartorial",
+        "abashed",
+        "penurious"
+      ],
+      "optionLemmas": [
+        "listless",
+        "sartorial",
+        "abash",
+        "penurious"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "sartorial",
+      "uncertain": []
+    },
+    {
+      "no": 21,
+      "part": "vocabulary",
+      "stem": "Brad's thesis is that attempts to ground moral status on a single criterion have been unsuccessful, as they inevitably lead to ..... measures to fit diverse values into a single mold.",
+      "options": [
+        "sanguine",
+        "saturnine",
+        "propitious",
+        "procrustean"
+      ],
+      "optionLemmas": [
+        "sanguine",
+        "saturnine",
+        "propitious",
+        "procrustean"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "procrustean",
+      "uncertain": []
+    },
+    {
+      "no": 22,
+      "part": "vocabulary",
+      "stem": "Yang has honed in on a message of the Fourth Industrial Revolution, touted the need for a nationwide universal basic income and boasted about his ability to reach voters who have become ..... by national politics.",
+      "options": [
+        "flouted",
+        "confuted",
+        "disaffected",
+        "mollified"
+      ],
+      "optionLemmas": [
+        "flout",
+        "confute",
+        "disaffect",
+        "mollify"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "disaffected",
+      "uncertain": []
+    },
+    {
+      "no": 23,
+      "part": "vocabulary",
+      "stem": "Unfortunately, a radical minority still refuses to play by the rules. When caught ....., the prototypical excuse is, to this day, ignorance.",
+      "options": [
+        "in flagrante delicto",
+        "in loco parentis",
+        "in habeas corpus",
+        "in actus me invito factus"
+      ],
+      "optionLemmas": [
+        "in flagrante delicto",
+        "in loco parentis",
+        "habeas corpus",
+        "actus me invito factus"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "in flagrante delicto",
+      "uncertain": []
+    },
+    {
+      "no": 24,
+      "part": "cloze",
+      "stem": "Particular life outcomes do not occur in a ..... .",
+      "options": [
+        "bind",
+        "vacuum",
+        "quandary",
+        "nutshell"
+      ],
+      "optionLemmas": [
+        "bind",
+        "vacuum",
+        "quandary",
+        "nutshell"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "vacuum",
+      "uncertain": []
+    },
+    {
+      "no": 25,
+      "part": "grammar",
+      "stem": "The most ubiquitous findings across optimism and pessimism research ..... optimism of many sorts to more positive affect.",
+      "options": [
+        "which are relating",
+        "are those related to",
+        "are those relating",
+        "that are those related"
+      ],
+      "optionLemmas": [
+        "relate",
+        "relate",
+        "relate",
+        "relate"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "relate",
+      "uncertain": []
+    },
+    {
+      "no": 26,
+      "part": "grammar",
+      "stem": "For example, several recent lines of ..... that tendencies to experience positive and negative affect are genetically influenced and have distinct biological substrates.",
+      "options": [
+        "converging research suggesting",
+        "suggestions converge researchers",
+        "research suggestions converge",
+        "research converge to suggest"
+      ],
+      "optionLemmas": [
+        "research",
+        "research",
+        "research",
+        "research"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "converge",
+      "uncertain": []
+    },
+    {
+      "no": 27,
+      "part": "grammar",
+      "stem": "This does not mean, of course, that those tendencies cannot ..... variation in affect within individuals is not influenced by positive or negative thinking.",
+      "options": [
+        "change through experience or influence environment, nor it implies that",
+        "change through experience nor influenced by environment, and implying that",
+        "be changed through experience nor influence environment, nor implying, that is,",
+        "be changed through experience or influenced by environment, nor does it imply that"
+      ],
+      "optionLemmas": [
+        "imply",
+        "imply",
+        "imply",
+        "imply"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "imply",
+      "uncertain": []
+    },
+    {
+      "no": 28,
+      "part": "grammar",
+      "stem": "It does suggest, however, that when one compares affective and other outcomes across individuals, it is important to remember that ..... people start.",
+      "options": [
+        "outcomes need to be evaluated relative to where",
+        "outcomes' need to be evaluated relative to where",
+        "outcomes need to be evaluated relatively than",
+        "outcomes need evaluation in relation to those"
+      ],
+      "optionLemmas": [
+        "evaluate",
+        "evaluate",
+        "evaluate",
+        "evaluate"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "evaluate",
+      "uncertain": []
+    },
+    {
+      "no": 29,
+      "part": "cloze",
+      "stem": "If one person begins with a stronger ..... to experience negative affect, or a weaker tendency to feel positive affect, we have to consider both the extent to which mood influences initial expectations in a particular situation and variations in mood from individual to individual.",
+      "options": [
+        "demonstration",
+        "predisposition",
+        "deferment",
+        "respect"
+      ],
+      "optionLemmas": [
+        "demonstration",
+        "predisposition",
+        "deferment",
+        "respect"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "predisposition",
+      "uncertain": []
+    },
+    {
+      "no": 30,
+      "part": "cloze",
+      "stem": "Moreover, patterns of covariance of optimism/pessimism and mood across individuals do not necessarily ..... covariance within individuals.",
+      "options": [
+        "pacify",
+        "collide",
+        "mimic",
+        "patronize"
+      ],
+      "optionLemmas": [
+        "pacify",
+        "collide",
+        "mimic",
+        "patronize"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "mimic",
+      "uncertain": []
+    }
+  ],
+  "uncertain": [
+    "q3 (grammar): all four options are grammatically dense variants of 'provided'; the correct reading depends on parsing 'shown contrition and begged forgiveness' as parallel past participles under an elided 'had' — flagged low confidence.",
+    "q18 (vocabulary): 'salutary' and 'gratuitous' are both semantically plausible completions for 'it is probably ..... to resist giving it definitional closure' — flagged low confidence.",
+    "q25 (grammar): the four options are all convoluted variants built on 'relate'; 'are those relating' was judged the only grammatically coherent completion, but the construction is unusual enough to flag low confidence."
+  ]
+}

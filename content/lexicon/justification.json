@@ -1,0 +1,198 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "justification",
+  "lemma": "justification",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1402-p06",
+      "part": "vocabulary",
+      "questionNo": 24,
+      "reach": 1,
+      "surface": "justification",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1401-p03",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 31,
+      "surface": "justification",
+      "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p02",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 30,
+      "surface": "justification",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 23,
+      "surface": "justification",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 5,
+      "surface": "justification",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p07",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 2,
+      "surface": "justification",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 1,
+      "surface": "justification",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 1,
+      "surface": "justification",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p13",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 1,
+      "surface": "justification",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a good reason or explanation for something that would otherwise seem wrong or unreasonable",
+      "examples": [
+        {
+          "en": "There is no justification for treating the two workers so differently.",
+          "fa": "هیچ توجیهی برای این‌که با آن دو کارگر چنین متفاوت رفتار شود وجود ندارد."
+        }
+      ],
+      "ipa": "/ˌdʒʌstɪfɪˈkeɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "reason",
+        "grounds",
+        "defence"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p06",
+          "questionNo": 24
+        },
+        {
+          "paperId": "arshad-1401-p03",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "توجیه",
+        "دلیل موجه",
+        "محمل منطقی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 7,
+      "1401": 1,
+      "1402": 1
+    },
+    "distinctYears": 3,
+    "firstYear": 1400,
+    "lastYear": 1402,
+    "priority": 15,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 9,
+    "timesTested": 9
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "justification"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "advent",
+  "lemma": "advent",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1398-p07",
+      "part": "vocabulary",
+      "questionNo": 175,
+      "reach": 1,
+      "surface": "advent",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "demise"
+      ],
+      "definition": "the arrival of an important event, invention or period of time, usually used in \"the advent of\"",
+      "examples": [
+        {
+          "en": "With the advent of smartphones, paper maps almost disappeared.",
+          "fa": "با ظهور گوشی‌های هوشمند، نقشه‌های کاغذی تقریباً ناپدید شدند."
+        }
+      ],
+      "ipa": "/ˈædvent/",
+      "pos": "n",
+      "synonyms": [
+        "arrival",
+        "emergence"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 175
+        }
+      ],
+      "translations": [
+        "ظهور",
+        "پیدایش",
+        "آغاز"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "advent"
+  ]
+}

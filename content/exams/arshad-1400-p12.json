@@ -1,0 +1,202 @@
+{
+  "paperId": "arshad-1400-p12",
+  "degree": "arshad",
+  "year": 1400,
+  "groupCodes": ["1156"],
+  "bookletCount": 1,
+  "source": { "file": "1156-1400.pdf", "pages": [2, 3] },
+  "extractedBy": { "model": "claude-sonnet-5", "at": "2026-09-15" },
+  "questions": [
+    {
+      "no": 1,
+      "part": "vocabulary",
+      "stem": "I ..... the argument because I didn't know enough about the subject.",
+      "options": ["depicted", "confronted", "dropped", "broached"],
+      "optionLemmas": ["depict", "confront", "drop", "broach"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "broach",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "vocabulary",
+      "stem": "Because my husband is a ..... supporter of the high school football team, he donates money to their organization every year.",
+      "options": ["zealous", "anomalous", "receptive", "successive"],
+      "optionLemmas": ["zealous", "anomalous", "receptive", "successive"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "zealous",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "vocabulary",
+      "stem": "Since the journey is ....., be sure to bring a first-aid kit.",
+      "options": ["courageous", "cautious", "enormous", "perilous"],
+      "optionLemmas": ["courageous", "cautious", "enormous", "perilous"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "perilous",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "vocabulary",
+      "stem": "The writer's stories appeal to a wide range of people—young and old, ..... and poor, literary and nonliterary.",
+      "options": ["economical", "financial", "affluent", "elite"],
+      "optionLemmas": ["economical", "financial", "affluent", "elite"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "affluent",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "vocabulary",
+      "stem": "His nostalgic ..... of growing up in a small city are comical, though they are perhaps embellished for comic effect.",
+      "options": ["impacts", "accounts", "entertainments", "bibliographics"],
+      "optionLemmas": ["impact", "account", "entertainment", "bibliographic"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "account",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "vocabulary",
+      "stem": "On a chilly night, you might like to curl up by the fireside and ..... a cup of hot chocolate while reading one of Thurber's books.",
+      "options": ["imbibe", "amalgamate", "relieve", "fascinate"],
+      "optionLemmas": ["imbibe", "amalgamate", "relieve", "fascinate"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "imbibe",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "vocabulary",
+      "stem": "Although Mr. Jackson was ....., he attempted to be jovial so that his colleagues at the meeting wouldn't think there was a problem.",
+      "options": ["unpretentious", "painstaking", "apprehensive", "attentive"],
+      "optionLemmas": ["unpretentious", "painstaking", "apprehensive", "attentive"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "apprehensive",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "vocabulary",
+      "stem": "Obviously the network is overreacting and engaging in ..... when they say \"55 million people are in danger!\" for normal thunderstorms.",
+      "options": ["distinction", "exaggeration", "expectation", "justification"],
+      "optionLemmas": ["distinction", "exaggeration", "expectation", "justification"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "exaggeration",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "vocabulary",
+      "stem": "My high school biology teacher loved to ..... from science into personal anecdotes about his college adventures.",
+      "options": ["evolved", "converted", "reversed", "digressed"],
+      "optionLemmas": ["evolve", "convert", "reverse", "digress"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "digress",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "vocabulary",
+      "stem": "Landing a plane on an aircraft carrier requires a great deal of ....., as you can crash if you miss the landing zone by even a little bit.",
+      "options": ["precision", "innovation", "superiority", "variability"],
+      "optionLemmas": ["precision", "innovation", "superiority", "variability"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "precision",
+      "uncertain": []
+    },
+    {
+      "no": 11,
+      "part": "grammar",
+      "stem": "..... in the bloodstream causes blood vessels to contract, thus (12) ..... circulation, which eventually leads to hardening of the arteries.",
+      "options": [
+        "The presence of tobacco is found",
+        "The presence of tobacco it is found",
+        "To be found the presence of tobacco",
+        "It has been found that the presence of tobacco"
+      ],
+      "optionLemmas": ["find", "find", "find", "find"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "find",
+      "uncertain": []
+    },
+    {
+      "no": 12,
+      "part": "grammar",
+      "stem": "(11) ..... in the bloodstream causes blood vessels to contract, thus ..... circulation, which eventually leads to hardening of the arteries.",
+      "options": ["slows", "to slow", "slowing", "it slows"],
+      "optionLemmas": ["slow", "slow", "slow", "slow"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "slow",
+      "uncertain": []
+    },
+    {
+      "no": 13,
+      "part": "grammar",
+      "stem": "..... the arteries stiffen, less blood reaches the brain, and the end result of this slowdown is a cerebral hemorrhage, commonly (14) ..... to as a \"stroke\".",
+      "options": ["So", "As", "Afterwards", "Due to"],
+      "optionLemmas": ["so", "as", "afterwards", "due to"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "as",
+      "uncertain": []
+    },
+    {
+      "no": 14,
+      "part": "grammar",
+      "stem": "...the end result of this slowdown is a cerebral hemorrhage, commonly ..... to as a \"stroke\". In addition, (15) ..... reduces the ability of the hemoglobin to release oxygen, resulting in shortness of breath.",
+      "options": ["referred", "that referred", "referring", "it is referred"],
+      "optionLemmas": ["refer", "refer", "refer", "refer"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "refer",
+      "uncertain": []
+    },
+    {
+      "no": 15,
+      "part": "grammar",
+      "stem": "In addition, ..... reduces the ability of the hemoglobin to release oxygen, resulting in shortness of breath.",
+      "options": [
+        "bloodstream's tobacco",
+        "the tobacco in bloodstream it",
+        "tobacco in the bloodstream which",
+        "tobacco in the bloodstream"
+      ],
+      "optionLemmas": ["tobacco", "tobacco", "tobacco", "tobacco"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "tobacco",
+      "uncertain": []
+    }
+  ],
+  "uncertain": []
+}

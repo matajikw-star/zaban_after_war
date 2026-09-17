@@ -1,0 +1,132 @@
+{
+  "confusables": [
+    {
+      "note": "devise فعل است و /dɪˈvaɪz/ تلفظ می‌شود و یعنی طراحی و ابداع کردن؛ device اسم است",
+      "word": "devise"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "device",
+  "lemma": "device",
+  "level": "B1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p01",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 48,
+      "surface": "devices",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p04",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 6,
+      "surface": "devices",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 3,
+      "surface": "devices",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a tool or piece of equipment made to do a particular job",
+      "examples": [
+        {
+          "en": "This small device measures the temperature of the whole room.",
+          "fa": "این دستگاه کوچک دمای کل اتاق را اندازه می‌گیرد."
+        }
+      ],
+      "ipa": "/dɪˈvaɪs/",
+      "pos": "n",
+      "synonyms": [
+        "gadget",
+        "instrument",
+        "appliance"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "دستگاه",
+        "وسیله",
+        "ابزار"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a plan or trick used to get a particular result, as in \"leave someone to their own devices\"",
+      "examples": [
+        {
+          "en": "Left to their own devices, the children built a rough shelter.",
+          "fa": "کودکان که به حال خود رها شده بودند، سرپناهی ابتدایی ساختند."
+        }
+      ],
+      "ipa": "/dɪˈvaɪs/",
+      "pos": "n",
+      "synonyms": [
+        "ploy",
+        "stratagem"
+      ],
+      "testedIn": [],
+      "translations": [
+        "حیله",
+        "ترفند"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "devices"
+  ]
+}

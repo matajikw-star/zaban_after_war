@@ -1,0 +1,94 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "surpass",
+  "lemma": "surpass",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1402-p01",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 56,
+      "surface": "surpassed",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p10",
+      "part": "vocabulary",
+      "questionNo": 31,
+      "reach": 1,
+      "surface": "surpass",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "lag behind"
+      ],
+      "definition": "to be greater or better than someone or something else",
+      "examples": [
+        {
+          "en": "Sales this year surpassed everything the company had achieved before.",
+          "fa": "فروش امسال از هر چه شرکت پیش‌تر به دست آورده بود پیشی گرفت."
+        }
+      ],
+      "ipa": "/səˈpɑːs/",
+      "pos": "v",
+      "synonyms": [
+        "exceed",
+        "outdo"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p01",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 31
+        }
+      ],
+      "translations": [
+        "پیشی گرفتن از",
+        "فراتر رفتن از",
+        "برتری یافتن بر"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 1,
+      "1402": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1402,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "surpass",
+    "surpassed"
+  ]
+}

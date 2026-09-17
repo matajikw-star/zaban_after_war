@@ -1,0 +1,86 @@
+{
+  "confusables": [
+    {
+      "note": "شباهت ظاهری؛ commodity یعنی کالا و جنس، نه جادار",
+      "word": "commodity"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "commodious",
+  "lemma": "commodious",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p11",
+      "part": "vocabulary",
+      "questionNo": 25,
+      "reach": 1,
+      "surface": "commodious",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "cramped",
+        "poky"
+      ],
+      "definition": "having plenty of space inside; comfortably large, used especially of rooms and buildings",
+      "examples": [
+        {
+          "en": "The old farmhouse had a commodious kitchen that seated twenty guests.",
+          "fa": "آن خانه‌ی روستایی قدیمی آشپزخانه‌ای جادار داشت که بیست مهمان در آن جا می‌شدند."
+        }
+      ],
+      "ipa": "/kəˈməʊdiəs/",
+      "pos": "adj",
+      "synonyms": [
+        "spacious",
+        "roomy",
+        "capacious"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p11",
+          "questionNo": 25
+        }
+      ],
+      "translations": [
+        "جادار",
+        "وسیع",
+        "فراخ"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "commodious"
+  ]
+}

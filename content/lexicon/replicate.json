@@ -1,0 +1,91 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "replicate",
+  "lemma": "replicate",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1403-p05",
+      "part": "vocabulary",
+      "questionNo": 27,
+      "reach": 1,
+      "surface": "replicate",
+      "year": 1403
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p03",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 30,
+      "surface": "replicate",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to copy something exactly, or to repeat a study to see whether the same result appears",
+      "examples": [
+        {
+          "en": "No other laboratory could replicate the results of that experiment.",
+          "fa": "هیچ آزمایشگاه دیگری نتوانست نتایج آن آزمایش را تکرار کند."
+        }
+      ],
+      "ipa": "/ˈreplɪkeɪt/",
+      "pos": "v",
+      "synonyms": [
+        "reproduce",
+        "duplicate"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p05",
+          "questionNo": 27
+        },
+        {
+          "paperId": "arshad-1398-p03",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "تکرار کردن",
+        "بازآفرینی کردن",
+        "همانندسازی کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1,
+      "1403": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1398,
+    "lastYear": 1403,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "replicate"
+  ]
+}

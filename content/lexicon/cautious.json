@@ -1,0 +1,169 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "cautious",
+  "lemma": "cautious",
+  "level": "B1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p01",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 48,
+      "surface": "cautious",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 23,
+      "surface": "cautious",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p04",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 6,
+      "surface": "cautious",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 5,
+      "surface": "cautious",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 3,
+      "surface": "cautious",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 1,
+      "surface": "cautious",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 1,
+      "surface": "cautious",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "reckless",
+        "rash"
+      ],
+      "definition": "careful to avoid danger, mistakes or unnecessary risks",
+      "examples": [
+        {
+          "en": "Banks have become more cautious about lending to new businesses.",
+          "fa": "بانک‌ها در وام دادن به کسب‌وکارهای نوپا محتاط‌تر شده‌اند."
+        }
+      ],
+      "ipa": "/ˈkɔːʃəs/",
+      "pos": "adj",
+      "synonyms": [
+        "careful",
+        "wary",
+        "prudent"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "محتاط",
+        "بااحتیاط",
+        "دوراندیش"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 7
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 9,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 7,
+    "timesTested": 7
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "cautious"
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "commit",
+  "lemma": "commit",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1403-p03",
+      "part": "cloze",
+      "questionNo": 22,
+      "reach": 1,
+      "surface": "committed to",
+      "year": 1403
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1402-p06",
+      "part": "vocabulary",
+      "questionNo": 19,
+      "reach": 1,
+      "surface": "commit",
+      "year": 1402
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "withdraw"
+      ],
+      "definition": "to promise sincerely to give your time, loyalty or resources to a person, plan or course of action",
+      "examples": [
+        {
+          "en": "She refused to commit herself to the project before seeing the budget.",
+          "fa": "او حاضر نشد پیش از دیدن بودجه خود را به آن پروژه متعهد کند."
+        }
+      ],
+      "ipa": "/kəˈmɪt/",
+      "pos": "v",
+      "synonyms": [
+        "pledge",
+        "dedicate",
+        "devote"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p06",
+          "questionNo": 19
+        }
+      ],
+      "translations": [
+        "متعهد شدن",
+        "تعهد دادن",
+        "خود را وقف کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to place something permanently into a state or a record, as in \"commit to memory\", \"commit to paper\" or \"commit to history\"",
+      "examples": [
+        {
+          "en": "He committed the whole poem to memory in a single evening.",
+          "fa": "او تمام آن شعر را در یک شب به حافظه سپرد."
+        }
+      ],
+      "ipa": "/kəˈmɪt/",
+      "pos": "v",
+      "synonyms": [
+        "consign",
+        "entrust"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p03",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "سپردن",
+        "ثبت کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to do something wrong or illegal",
+      "examples": [
+        {
+          "en": "Nobody could believe he would commit such a serious crime.",
+          "fa": "هیچ‌کس باور نمی‌کرد او مرتکب چنین جرم سنگینی شود."
+        }
+      ],
+      "ipa": "/kəˈmɪt/",
+      "pos": "v",
+      "synonyms": [
+        "perpetrate"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مرتکب شدن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1402": 1,
+      "1403": 1
+    },
+    "byYear": {
+      "1402": 1,
+      "1403": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1402,
+    "lastYear": 1403,
+    "priority": 10,
+    "timesAsAnswer": 2,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "commit",
+    "committed to"
+  ]
+}

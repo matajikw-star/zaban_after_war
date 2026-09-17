@@ -1,0 +1,95 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "downplay",
+  "lemma": "downplay",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1401-p03",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 31,
+      "surface": "downplay",
+      "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p04",
+      "part": "vocabulary",
+      "questionNo": 21,
+      "reach": 1,
+      "surface": "downplay",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "exaggerate",
+        "emphasize"
+      ],
+      "definition": "to make something seem less important or less serious than it really is",
+      "examples": [
+        {
+          "en": "The minister tried to downplay the scale of the shortage.",
+          "fa": "وزیر کوشید گستردگی این کمبود را کم‌اهمیت جلوه دهد."
+        }
+      ],
+      "ipa": "/ˌdaʊnˈpleɪ/",
+      "pos": "v",
+      "synonyms": [
+        "play down",
+        "minimize",
+        "understate"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p03",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1398-p04",
+          "questionNo": 21
+        }
+      ],
+      "translations": [
+        "کم‌اهمیت جلوه دادن",
+        "ناچیز شمردن",
+        "کوچک نمایاندن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1,
+      "1401": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1398,
+    "lastYear": 1401,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "downplay"
+  ]
+}

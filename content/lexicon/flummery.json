@@ -1,0 +1,101 @@
+{
+  "confusables": [
+    {
+      "note": "flummox فعل است و یعنی گیج و سردرگم کردن",
+      "word": "flummox"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "flummery",
+  "lemma": "flummery",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p09",
+      "part": "vocabulary",
+      "questionNo": 22,
+      "reach": 1,
+      "surface": "flummeries",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 14,
+      "reach": 1,
+      "surface": "flummery",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "candour"
+      ],
+      "definition": "words of praise or ceremony that sound pleasant but mean nothing and are not sincere",
+      "examples": [
+        {
+          "en": "The speech was pure flummery, full of praise and empty of content.",
+          "fa": "آن سخنرانی تعارفی توخالی بود؛ پر از ستایش و تهی از محتوا."
+        }
+      ],
+      "ipa": "/ˈflʌməri/",
+      "pos": "n",
+      "synonyms": [
+        "empty flattery",
+        "humbug"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 14
+        },
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "تعارف توخالی",
+        "چاپلوسی بی‌معنا",
+        "حرف پوچ"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1,
+      "1400": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1400,
+    "priority": 8,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "flummeries",
+    "flummery"
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "confusables": [
+    {
+      "note": "allude to یعنی به چیزی اشاره‌ی غیرمستقیم کردن، در حالی که elude یعنی گریختن",
+      "word": "allude"
+    },
+    {
+      "note": "delude یعنی فریب دادن و به اشتباه انداختن کسی",
+      "word": "delude"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "elude",
+  "lemma": "elude",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 20,
+      "surface": "elude",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 9,
+      "surface": "elude",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 1,
+      "surface": "elude",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "confront"
+      ],
+      "definition": "to escape from or avoid someone or something, especially by being quick or clever",
+      "examples": [
+        {
+          "en": "The thief eluded the police for almost three months.",
+          "fa": "دزد نزدیک به سه ماه از چنگ پلیس گریخت."
+        }
+      ],
+      "ipa": "/iˈluːd/",
+      "pos": "v",
+      "synonyms": [
+        "evade",
+        "dodge"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "گریختن از",
+        "طفره رفتن از",
+        "از چنگ کسی در رفتن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to be impossible for someone to remember, understand or achieve",
+      "examples": [
+        {
+          "en": "Her name eluded me for the whole length of the meeting.",
+          "fa": "نام او در تمام مدت جلسه به ذهنم نیامد."
+        }
+      ],
+      "ipa": "/iˈluːd/",
+      "pos": "v",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "به ذهن نیامدن",
+        "دست‌نیافتنی ماندن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "elude"
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "direct",
+  "lemma": "direct",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1405-p05",
+      "part": "cloze",
+      "questionNo": 24,
+      "reach": 1,
+      "surface": "directed",
+      "year": 1405
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1402-p02",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 32,
+      "surface": "Direct",
+      "year": 1402
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to aim something at a particular person, place or thing",
+      "examples": [
+        {
+          "en": "She directed her question at the youngest member of the panel.",
+          "fa": "پرسشش را متوجه جوان‌ترین عضو هیئت کرد."
+        }
+      ],
+      "ipa": "/dəˈrekt/",
+      "pos": "v",
+      "synonyms": [
+        "aim",
+        "point",
+        "channel"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 24
+        },
+        {
+          "paperId": "arshad-1402-p02",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "متوجه کردن",
+        "نشانه گرفتن",
+        "هدایت کردن به سمت"
+      ]
+    },
+    {
+      "antonyms": [
+        "indirect",
+        "roundabout"
+      ],
+      "definition": "going straight from one point to another, with nothing or nobody in between",
+      "examples": [
+        {
+          "en": "There is now a direct flight between the two capitals.",
+          "fa": "اکنون پروازی مستقیم میان دو پایتخت وجود دارد."
+        }
+      ],
+      "ipa": "/dəˈrekt/",
+      "pos": "adj",
+      "synonyms": [
+        "straight",
+        "immediate"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مستقیم",
+        "بی‌واسطه"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to be in charge of a film, play or organization and tell people what to do",
+      "examples": [
+        {
+          "en": "He directed three films before he turned thirty.",
+          "fa": "پیش از سی‌سالگی سه فیلم کارگردانی کرد."
+        }
+      ],
+      "ipa": "/dəˈrekt/",
+      "pos": "v",
+      "synonyms": [
+        "manage",
+        "oversee"
+      ],
+      "testedIn": [],
+      "translations": [
+        "کارگردانی کردن",
+        "اداره کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1402": 1,
+      "1405": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1402,
+    "lastYear": 1405,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "Direct",
+    "directed"
+  ]
+}

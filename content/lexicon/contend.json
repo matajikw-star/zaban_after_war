@@ -1,0 +1,67 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "contend",
+  "lemma": "contend",
+  "level": null,
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1401-p05",
+      "part": "grammar",
+      "questionNo": 34,
+      "reach": 1,
+      "surface": "contends",
+      "year": 1401
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1401-p05",
+      "part": "grammar",
+      "questionNo": 35,
+      "reach": 1,
+      "surface": "contends",
+      "year": 1401
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1401-p05",
+      "part": "grammar",
+      "questionNo": 37,
+      "reach": 1,
+      "surface": "contends",
+      "year": 1401
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 27,
+      "reach": 1,
+      "surface": "contended",
+      "year": 1399
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 4,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "contended",
+    "contends"
+  ]
+}

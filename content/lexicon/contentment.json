@@ -1,0 +1,74 @@
+{
+  "confusables": [
+    {
+      "note": "content اسم که باشد یعنی محتوا؛ حالتِ رضایت را باید با contentment گفت",
+      "word": "content"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "contentment",
+  "lemma": "contentment",
+  "level": "B2",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1402-p03",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 29,
+      "surface": "contentment",
+      "year": 1402
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "discontent",
+        "dissatisfaction"
+      ],
+      "definition": "a state of quiet happiness and satisfaction with what you have",
+      "examples": [
+        {
+          "en": "After years of striving, she found contentment in a quiet life.",
+          "fa": "پس از سال‌ها تلاش، خرسندی را در زندگی‌ای آرام یافت."
+        }
+      ],
+      "ipa": "/kənˈtentmənt/",
+      "pos": "n",
+      "synonyms": [
+        "satisfaction",
+        "ease"
+      ],
+      "testedIn": [],
+      "translations": [
+        "خرسندی",
+        "رضایت",
+        "قناعت"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "contentment"
+  ]
+}

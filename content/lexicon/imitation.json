@@ -1,0 +1,98 @@
+{
+  "confusables": [
+    {
+      "note": "املای نزدیک؛ intimation یعنی اشاره و کنایهٔ غیرمستقیم",
+      "word": "intimation"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "imitation",
+  "lemma": "imitation",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1402-p03",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 29,
+      "surface": "imitation",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1402-p06",
+      "part": "vocabulary",
+      "questionNo": 20,
+      "reach": 1,
+      "surface": "imitations",
+      "year": 1402
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "original"
+      ],
+      "definition": "the act of copying the way someone speaks or behaves, or a copy of something real",
+      "examples": [
+        {
+          "en": "Children learn much of their first language by imitation.",
+          "fa": "کودکان بخش زیادی از زبان اولشان را از راه تقلید یاد می‌گیرند."
+        }
+      ],
+      "ipa": "/ˌɪmɪˈteɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "copy",
+        "impersonation"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p03",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1402-p06",
+          "questionNo": 20
+        }
+      ],
+      "translations": [
+        "تقلید",
+        "بدل",
+        "نسخهٔ بدلی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1402": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1402,
+    "lastYear": 1402,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "imitation",
+    "imitations"
+  ]
+}

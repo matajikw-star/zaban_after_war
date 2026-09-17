@@ -1,0 +1,139 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "depict",
+  "lemma": "depict",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 23,
+      "surface": "depicted",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 5,
+      "surface": "depicted",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 1,
+      "surface": "depicted",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 1,
+      "surface": "depicted",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p10",
+      "part": "vocabulary",
+      "questionNo": 34,
+      "reach": 1,
+      "surface": "depicted",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to show or describe someone or something, in a picture or in words",
+      "examples": [
+        {
+          "en": "The painting depicts a busy market in a small town.",
+          "fa": "این نقاشی بازاری شلوغ در شهری کوچک را به تصویر می‌کشد."
+        }
+      ],
+      "ipa": "/dɪˈpɪkt/",
+      "pos": "v",
+      "synonyms": [
+        "portray",
+        "describe",
+        "represent"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 34
+        }
+      ],
+      "translations": [
+        "به تصویر کشیدن",
+        "توصیف کردن",
+        "نشان دادن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1,
+      "1400": 4
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1400,
+    "priority": 11,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 5
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "depicted"
+  ]
+}

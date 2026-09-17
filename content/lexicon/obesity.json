@@ -1,0 +1,48 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "obesity",
+  "lemma": "obesity",
+  "level": null,
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p08",
+      "part": "vocabulary",
+      "questionNo": 22,
+      "reach": 1,
+      "surface": "obesity",
+      "year": 1400
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p11",
+      "part": "grammar",
+      "questionNo": 5,
+      "reach": 1,
+      "surface": "obesity",
+      "year": 1400
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 2,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "obesity"
+  ]
+}

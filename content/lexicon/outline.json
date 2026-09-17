@@ -1,0 +1,144 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "outline",
+  "lemma": "outline",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 20,
+      "surface": "outline",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 9,
+      "surface": "outline",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p10",
+      "part": "vocabulary",
+      "questionNo": 23,
+      "reach": 1,
+      "surface": "outline",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 1,
+      "surface": "outline",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to give the main facts or ideas about something without the details",
+      "examples": [
+        {
+          "en": "In the first chapter the author outlines the aims of her research.",
+          "fa": "نویسنده در فصل نخست، اهداف پژوهش خود را به اختصار شرح می‌دهد."
+        }
+      ],
+      "ipa": "/ˈaʊtlaɪn/",
+      "pos": "verb",
+      "synonyms": [
+        "sketch",
+        "summarize",
+        "describe"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "شرح کلی دادن",
+        "طرح کلی ارائه کردن",
+        "به اختصار بیان کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a short description of the main ideas of something, or the line showing the outer shape of an object",
+      "examples": [
+        {
+          "en": "He sent me a rough outline of the plan before the meeting.",
+          "fa": "او پیش از جلسه، طرح کلی و خامی از برنامه برایم فرستاد."
+        }
+      ],
+      "ipa": "/ˈaʊtlaɪn/",
+      "pos": "noun",
+      "synonyms": [
+        "summary",
+        "contour"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 23
+        }
+      ],
+      "translations": [
+        "طرح کلی",
+        "رئوس مطالب",
+        "خط دور (شکل)"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 4
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "outline"
+  ]
+}

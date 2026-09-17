@@ -1,0 +1,96 @@
+{
+  "confusables": [
+    {
+      "note": "weight یعنی وزن و تلفظ آن دقیقاً مانند wait است",
+      "word": "weight"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "wait",
+  "lemma": "wait",
+  "level": "B1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p07",
+      "part": "cloze",
+      "questionNo": 186,
+      "reach": 1,
+      "surface": "waiting",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "used in \"waiting list\", a list of people who want something not yet available and must take their turn",
+      "examples": [
+        {
+          "en": "The clinic put her on a waiting list for six months.",
+          "fa": "درمانگاه او را شش ماه در فهرست انتظار گذاشت."
+        }
+      ],
+      "ipa": "/ˈweɪtɪŋ lɪst/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 186
+        }
+      ],
+      "translations": [
+        "فهرست انتظار",
+        "نوبت انتظار"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to stay where you are, or to delay doing something, until something else happens",
+      "examples": [
+        {
+          "en": "We waited nearly an hour for the next bus to arrive.",
+          "fa": "نزدیک یک ساعت منتظر رسیدن اتوبوس بعدی ماندیم."
+        }
+      ],
+      "ipa": "/weɪt/",
+      "pos": "v",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "منتظر ماندن",
+        "صبر کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "waiting"
+  ]
+}

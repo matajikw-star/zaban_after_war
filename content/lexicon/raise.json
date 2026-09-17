@@ -1,0 +1,43 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "raise",
+  "lemma": "raise",
+  "level": null,
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1403-p02",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 53,
+      "surface": "raise",
+      "year": 1403
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1403": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1403,
+    "lastYear": 1403,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "raise"
+  ]
+}

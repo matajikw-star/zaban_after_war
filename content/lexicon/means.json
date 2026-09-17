@@ -1,0 +1,132 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "means",
+  "lemma": "means",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p01",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 48,
+      "surface": "means",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p04",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 6,
+      "surface": "means",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 3,
+      "surface": "means",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "end"
+      ],
+      "definition": "a method or a thing that is used in order to achieve a result; the form is the same in the singular and the plural",
+      "examples": [
+        {
+          "en": "Email has become the quickest means of reaching our customers.",
+          "fa": "ایمیل سریع‌ترین وسیلهٔ رسیدن به مشتریان ما شده است."
+        }
+      ],
+      "ipa": "/miːnz/",
+      "pos": "n",
+      "synonyms": [
+        "method",
+        "way",
+        "medium"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "وسیله",
+        "راه",
+        "ابزار"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "the money or income that a person has available, as in \"live beyond your means\"",
+      "examples": [
+        {
+          "en": "The family lives well beyond its means and is deep in debt.",
+          "fa": "این خانواده بسیار فراتر از توان مالی خود زندگی می‌کند و سخت بدهکار است."
+        }
+      ],
+      "ipa": "/miːnz/",
+      "pos": "n",
+      "synonyms": [
+        "resources",
+        "income"
+      ],
+      "testedIn": [],
+      "translations": [
+        "توان مالی",
+        "تمکن",
+        "درآمد و دارایی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 3
+    },
+    "byYear": {
+      "1400": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 11,
+    "timesAsAnswer": 3,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "means"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "confusables": [
+    {
+      "note": "repetitious هم‌معنی است اما بیشتر دربارهٔ گفتار و نوشتارِ پرتکرار و ملال‌آور به کار می‌رود",
+      "word": "repetitious"
+    }
+  ],
+  "homograph": {
+    "note": "",
+    "suspected": false
+  },
+  "id": "repetitive",
+  "lemma": "repetitive",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 20,
+      "surface": "repetitive",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 9,
+      "surface": "repetitive",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "repetitive",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "varied"
+      ],
+      "definition": "made up of the same thing done or said many times, and therefore dull",
+      "examples": [
+        {
+          "en": "Packing boxes all day is repetitive and very tiring work.",
+          "fa": "بسته‌بندی جعبه‌ها در تمام روز کاری تکراری و بسیار خسته‌کننده است."
+        }
+      ],
+      "ipa": "/rɪˈpetətɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "monotonous",
+        "unvaried"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "تکراری",
+        "یکنواخت",
+        "کسل‌کننده از فرط تکرار"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "repetitive"
+  ]
+}

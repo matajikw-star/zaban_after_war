@@ -1,6 +1,6 @@
 # ADR-0003 — Leitner boxes with real intervals
 
-**Status:** accepted · **Date:** 2026-09-10
+**Status:** accepted; interval table and "done for today" framing superseded by ADR-0019 (2026-09-17) · **Date:** 2026-09-10
 
 ## Context
 
@@ -8,7 +8,7 @@ v1's boxes had no time dimension: word selection was weighted-random within the 
 sub-level, so a word could recur minutes after being answered and a long-untouched word never
 became urgent. See `docs/postmortem-v1.md` §1.
 
-The brand is Leitner (`konkourleitner.com`) and the box metaphor is legible to students — five
+The brand is Leitner (`konkurleitner.com`) and the box metaphor is legible to students — five
 boxes is something a candidate understands at a glance. The strongest open scheduler available
 is FSRS, which is not legible at all.
 

@@ -1,0 +1,133 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "range",
+  "lemma": "range",
+  "level": "B1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1402-p05",
+      "part": "vocabulary",
+      "questionNo": 19,
+      "reach": 1,
+      "surface": "range",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1402-p06",
+      "part": "vocabulary",
+      "questionNo": 17,
+      "reach": 1,
+      "surface": "ranging",
+      "year": 1402
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a set of similar things, or the limits between which an amount or quality can vary",
+      "examples": [
+        {
+          "en": "The shop sells a wide range of shoes at very different prices.",
+          "fa": "آن مغازه گسترهٔ وسیعی از کفش‌ها را با قیمت‌های بسیار متفاوت می‌فروشد."
+        }
+      ],
+      "ipa": "/reɪndʒ/",
+      "pos": "n",
+      "synonyms": [
+        "scope",
+        "variety",
+        "span"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p05",
+          "questionNo": 19
+        }
+      ],
+      "translations": [
+        "گستره",
+        "دامنه",
+        "مجموعهٔ متنوع"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to vary between two stated limits, or to cover a wide area or subject",
+      "examples": [
+        {
+          "en": "Prices range from ten dollars for a ticket to sixty for a seat.",
+          "fa": "قیمت‌ها از ده دلار برای یک بلیت تا شصت دلار برای یک صندلی متغیر است."
+        }
+      ],
+      "ipa": "/reɪndʒ/",
+      "pos": "v",
+      "synonyms": [
+        "vary",
+        "extend"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p06",
+          "questionNo": 17
+        }
+      ],
+      "translations": [
+        "در نوسان بودن (از ... تا ...)",
+        "گسترده بودن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a line of mountains or hills that stretch together across a region",
+      "examples": [
+        {
+          "en": "A snowy range rises behind the village on the northern side.",
+          "fa": "رشته‌کوهی برفی در سمت شمالی، پشت روستا سر برآورده است."
+        }
+      ],
+      "ipa": "/reɪndʒ/",
+      "pos": "n",
+      "synonyms": [
+        "chain"
+      ],
+      "testedIn": [],
+      "translations": [
+        "رشته‌کوه"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1402": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1402,
+    "lastYear": 1402,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "range",
+    "ranging"
+  ]
+}

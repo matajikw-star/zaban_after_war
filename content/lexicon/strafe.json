@@ -1,0 +1,75 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "strafe",
+  "lemma": "strafe",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 28,
+      "reach": 1,
+      "surface": "strafe",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to attack a place or a group of people with gunfire from a low-flying aircraft",
+      "examples": [
+        {
+          "en": "Fighter planes strafed the convoy on the coastal road.",
+          "fa": "جنگنده‌ها کاروان را در جاده ساحلی به رگبار بستند."
+        }
+      ],
+      "ipa": "/strɑːf/",
+      "pos": "v",
+      "synonyms": [
+        "machine-gun"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 28
+        }
+      ],
+      "translations": [
+        "از هوا به رگبار بستن",
+        "تیرباران کردن از هواپیما"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "strafe"
+  ]
+}

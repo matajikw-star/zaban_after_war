@@ -1,0 +1,48 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "namely",
+  "lemma": "namely",
+  "level": null,
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1402-p03",
+      "part": "grammar",
+      "questionNo": 9,
+      "reach": 29,
+      "surface": "namely",
+      "year": 1402
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1402-p03",
+      "part": "grammar",
+      "questionNo": 10,
+      "reach": 29,
+      "surface": "namely",
+      "year": 1402
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 2,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "namely"
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "overlook",
+  "lemma": "overlook",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1402-p03",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 29,
+      "surface": "overlook",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1401-p03",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 31,
+      "surface": "overlook",
+      "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1398-p04",
+      "part": "vocabulary",
+      "questionNo": 21,
+      "reach": 1,
+      "surface": "overlook",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "notice",
+        "spot"
+      ],
+      "definition": "to fail to notice or to fail to consider something important",
+      "examples": [
+        {
+          "en": "It is easy to overlook a small error in long calculations.",
+          "fa": "در محاسبات طولانی، نادیده گرفتن یک خطای کوچک آسان است."
+        }
+      ],
+      "ipa": "/ˌəʊvəˈlʊk/",
+      "pos": "v",
+      "synonyms": [
+        "miss",
+        "neglect",
+        "disregard"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p03",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1401-p03",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "نادیده گرفتن",
+        "از قلم انداختن",
+        "غفلت کردن از"
+      ]
+    },
+    {
+      "antonyms": [
+        "punish"
+      ],
+      "definition": "to decide to ignore a mistake or an offence instead of punishing it",
+      "examples": [
+        {
+          "en": "The teacher agreed to overlook his lateness just this once.",
+          "fa": "معلم پذیرفت فقط همین یک بار از تأخیر او چشم‌پوشی کند."
+        }
+      ],
+      "ipa": "/ˌəʊvəˈlʊk/",
+      "pos": "v",
+      "synonyms": [
+        "excuse",
+        "let pass"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p04",
+          "questionNo": 21
+        }
+      ],
+      "translations": [
+        "چشم‌پوشی کردن از",
+        "به روی خود نیاوردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to have a view over something from a higher position",
+      "examples": [
+        {
+          "en": "Their balcony overlooks the river and the old bridge.",
+          "fa": "بالکن آن‌ها مشرف به رودخانه و پل قدیمی است."
+        }
+      ],
+      "ipa": "/ˌəʊvəˈlʊk/",
+      "pos": "v",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "مشرف بودن به",
+        "دید داشتن به"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1,
+      "1401": 1,
+      "1402": 1
+    },
+    "distinctYears": 3,
+    "firstYear": 1398,
+    "lastYear": 1402,
+    "priority": 9,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "overlook"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "ersatz",
+  "lemma": "ersatz",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p09",
+      "part": "vocabulary",
+      "questionNo": 18,
+      "reach": 1,
+      "surface": "ersatz",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "genuine"
+      ],
+      "definition": "used in place of the real thing and not nearly as good as it",
+      "examples": [
+        {
+          "en": "During the war families drank ersatz coffee made from roasted barley.",
+          "fa": "در زمان جنگ خانواده‌ها قهوه‌ی بدلی‌ای می‌نوشیدند که از جوِ برشته درست می‌شد."
+        }
+      ],
+      "ipa": "/ˈeəzæts/",
+      "pos": "adj",
+      "synonyms": [
+        "artificial",
+        "substitute"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 18
+        }
+      ],
+      "translations": [
+        "بدلی",
+        "جایگزین مصنوعی",
+        "تقلبی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "ersatz"
+  ]
+}

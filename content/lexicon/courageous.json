@@ -1,0 +1,129 @@
+{
+  "confusables": [
+    {
+      "note": "آغاز یکسان و املای نزدیک؛ courteous یعنی مؤدب و باادب، نه شجاع",
+      "word": "courteous"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "courageous",
+  "lemma": "courageous",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 23,
+      "surface": "courageous",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 5,
+      "surface": "courageous",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 1,
+      "surface": "courageous",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 1,
+      "surface": "courageous",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "cowardly",
+        "timid"
+      ],
+      "definition": "showing bravery when facing something dangerous or difficult",
+      "examples": [
+        {
+          "en": "It was a courageous decision to speak out against her own employer.",
+          "fa": "تصمیم شجاعانه‌ای بود که علیه کارفرمای خودش حرف بزند."
+        }
+      ],
+      "ipa": "/kəˈreɪdʒəs/",
+      "pos": "adj",
+      "synonyms": [
+        "brave",
+        "valiant",
+        "fearless"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "شجاع",
+        "دلیر",
+        "بی‌باک"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 4
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "courageous"
+  ]
+}

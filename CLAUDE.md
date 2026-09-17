@@ -7,7 +7,7 @@ workflows to follow. Read before any work. Keep it current — see `## Maintaini
 
 A Persian, RTL, offline-first PWA that drills the English vocabulary that actually appeared
 in Iranian MA/PhD entrance exams (کنکور ارشد و دکتری) over the last ~10 years, using spaced
-repetition. Domain: `konkourleitner.com`. Audience: Iranian users. One owner, working through
+repetition. Domain: `konkurleitner.com`. Audience: Iranian users. One owner, working through
 Claude Code.
 
 Predecessor: `C:\Users\asus\Desktop\zaban reserection\starting-pwa-on-zaban` — a throwaway
@@ -18,7 +18,7 @@ which lists what it got wrong.
 
 | Layer | Path | Writes |
 |---|---|---|
-| **Sources** — raw exam papers, immutable | `sources/` | Human only. Read them; never edit them. |
+| **Sources** — raw exam papers, immutable | `sources/`, `raw_konkour_files/` | Human only. Read them; never edit them. The 7.7 GB scan corpus stays out of git (ADR-0006). |
 | **Wiki** — everything derived: the lexicon, hints, project knowledge | `content/`, `wiki/`, `docs/` | Claude, continuously |
 | **Schema** — conventions and workflows | `CLAUDE.md`, `CONTEXT.md` | Both, deliberately |
 
@@ -32,16 +32,45 @@ Three named operations. The user invokes them by name ("ingest 1402 arshad", "li
 
 ### ingest `<source>`
 
-Turn one raw exam paper into lexicon entries.
+Turn raw exam papers into lexicon entries.
 
-1. Read the source from `sources/raw/`. Quality is poor (scans, bad OCR) — read carefully and
-   flag what you cannot read rather than guessing.
-2. Extract every vocabulary question into `content/exams/<exam-id>.json`. Verbatim: stem,
-   four options, the key. An unreadable field gets `null` plus a note in `uncertain[]`.
+The archive is 2,241 scanned booklets (7.7 GB, 52,467 pages, no text layer), so ingest is a
+**pipeline, not a chat task**: `extraction/`. Free local passes route and dedupe; a model reads
+only the surviving unique pages. Never open exam page images in the main session — they go to
+`exam-extractor` subagents. **A year is the unit of work: `/complete-year 1404` takes one year
+from scans to lexicon and commits it**, and a fresh session can run it cold because the state
+lives in `extraction/state/`. `/extract-next` runs a single smaller batch when that is what you
+want. The procedure is `extraction/RUNBOOK.md`; the reasoning is `extraction/PIPELINE.md`.
+
+The unit of ingest is the **paper** (`arshad-<year>-pNN`), not the booklet: within a year many
+field codes sit the same English test. See `docs/adr/0007-paper-as-the-unit-of-ingest.md`.
+
+The rules that do not change, whatever runs them:
+
+1. Transcribe verbatim; never repair the English. An unreadable field is `null` plus a note in
+   `uncertain[]`. Never guess.
+2. These papers carry **no answer key**. The model infers it and records
+   `keySource: "inferred"` with a confidence. Nothing is ever labelled as coming from a key.
 3. For each tested word, create or update `content/lexicon/<word-id>.json`. A word already in
-   the lexicon gains one entry in `occurrences[]` — it does not get a second file.
-4. Report the counts and every `uncertain[]` item to the user before moving on.
-5. Append to `wiki/log.md`: `ingest | <exam-id> | <n> questions | <n> new words | <n> updated`.
+   the lexicon gains an entry in `occurrences[]` — it does not get a second file. Every
+   occurrence records `isAnswer`, and `stats.byYear` carries the per-year frequency.
+4. **The stem is data, not decoration.** A question's sentence is transcribed verbatim and
+   cross-checked word by word, like its options — it is the example the product shows, and the
+   pool a later pass picks context vocabulary from. **Which stem words earn a lexicon entry is
+   never decided during extraction**; that runs afterwards over every year at once, from
+   `content/exams/`, never from the scans — S7 sieves, S8 judges, and the criterion is
+   importance to the sentence crossed with difficulty, never frequency. See
+   `docs/adr/0010-context-vocabulary-is-a-later-pass.md`,
+   `docs/adr/0011-context-vocabulary-is-selected-by-importance-not-frequency.md` and
+   `extraction/JUDGING.md`. A word selected this way joins the lexicon with
+   `occurrenceType: "context"` occurrences, counted by `stats.timesAsContext` and deliberately
+   kept out of `stats.priority`.
+5. **Reading and grammar are located, never transcribed.** Part C is out of scope for the
+   lexicon, but S1 writes its page range into `extraction/state/routes.jsonl`
+   (`readingPages`, `grammarPages`) so a later feature never reopens the scans. Never send a
+   reading page to a model. See `docs/adr/0008-locate-reading-and-grammar-without-transcribing.md`.
+6. Report the counts and every `uncertain[]` item to the user before moving on.
+7. Append to `wiki/log.md`: `extract | <paperIds> | <n> questions | <n> new words | <n> updated`.
 
 Generating hints is a separate operation from ingest — see `docs/plan/content-pipeline.md`.
 
@@ -55,6 +84,23 @@ and add it to `wiki/index.md`.
 
 Health-check the wiki and report findings ranked by severity. Full checklist:
 `docs/plan/content-pipeline.md` → "Lint checklist". Run it after any bulk change.
+
+### build `<ticket>`
+
+Application work. **Read `docs/spec/what.md` first — it is the current, normative description
+of the whole system** (architecture, contracts, routes, screens, operations). The reasoning is
+`docs/spec/how-why.md`; the phases are `docs/plan/implementation-plan.md`; the owner's
+purchases and hand-overs are `docs/plan/owner-checklist.md`. Rules:
+
+1. A ticket under `.scratch/dev-<area>/issues/` before code; branch `feat/…` or `fix/…`; PR.
+2. **Any change to the system changes `what.md` in the same commit** and flips the section's
+   status mark. A decision with a cost to reverse also gets an ADR and a dated entry in
+   `how-why.md`. See ADR-0014.
+3. The code conventions in `what.md` §17 are binding: explicit state machines, error codes,
+   Persian only in `strings.ts`, no clock outside `engine/clock.ts`, boring dependencies.
+4. Bugs are fixed from logs: `docs/runbooks/debug-from-log.md`. Never ask the owner to reproduce.
+5. The network is required for OTP, login and payment only. Anything else that breaks offline is
+   a bug of the highest severity.
 
 ## Constitution
 
@@ -75,18 +121,29 @@ Non-negotiable. Violating one of these is worse than shipping late.
 
 A word id is a slug of the lemma: `attribute`, `distinct`, `set-off`. Lowercase, ASCII,
 hyphen-separated. It is derived once, at first ingest, and then **frozen** — renaming one
-orphans every user's progress for that word. Homographs with genuinely different meanings get
-a numeric suffix: `bear-1` (verb, tolerate), `bear-2` (noun, animal).
+orphans every user's progress for that word.
+
+**One spelling is one entry**, however far apart its meanings: `bear` the verb and `bear` the
+animal share a file and are carried as two entries in `senses[]`. There are no `bear-1` /
+`bear-2` ids. The front of a card is just the word, so two ids with the same spelling ask the
+user a question they cannot answer. See `docs/adr/0013-one-entry-per-spelling-no-homograph-split.md`.
 
 Never key anything user-facing on array position. The old app sliced `words[]` by index to
 build its curriculum, so adding a word silently rewrote what every user was studying.
 
+**Paper ids follow the same rule.** `arshad-1405-p02` names a cluster of booklets, not the
+second-biggest cluster of 1405 — it used to mean the latter, and two papers swapped identities
+when a new year was routed. Re-clustering keeps every id on the cluster it already named. See
+`docs/adr/0009-paper-ids-are-stable.md`.
+
 ## Stack
 
-Decided in `docs/adr/`. Summary: pnpm workspace; Vite + React + TypeScript + Tailwind (as
-dependencies, self-hosted); `vite-plugin-pwa`; Dexie/IndexedDB locally; PocketBase on an
-Iranian VPS for auth, sync, and payment. Verify versions in `package.json` rather than trusting
-this line.
+Decided in `docs/adr/`, described in `docs/spec/what.md` §4. Summary: pnpm workspace; Vite +
+React + TypeScript + Tailwind (as dependencies, self-hosted); `vite-plugin-pwa`; Dexie/IndexedDB
+locally; PocketBase behind Caddy on one Parspack VPS for auth (phone OTP), backup (event-log
+sync), payment (Zarinpal + discount codes) and the paid content package; a Bubblewrap TWA for
+the APK. Three origins: `konkurleitner.com` (landing), `app.` (the PWA + API), `admin.`
+(dashboard + PocketBase admin). Verify versions in `package.json` rather than trusting this line.
 
 ## Working agreements
 
@@ -117,6 +174,24 @@ Issues live as markdown files under `.scratch/<feature-slug>/` in this repo. See
 
 The five canonical triage roles, used verbatim as the label strings. See `docs/agents/triage-labels.md`.
 
+### Extraction pipeline
+
+The scan corpus is processed by `extraction/`, not by hand. Entry point:
+`extraction/RUNBOOK.md`. One year: `/complete-year <year>`. One batch: `/extract-next`.
+
+### Word data
+
+Filling the lexicon's Persian content — `level`, `senses`, `confusables`, `homograph` — is its
+own operation with its own standard: `extraction/WORD-DATA.md`. It is resumable with no state
+file (a word is done when its `senses` is non-empty), cut with `s11_batch.py` and written only
+through `s10_apply_word_data.py`, which is what keeps the generated fields from colliding with
+the extraction-owned ones.
+
 ### Domain docs
 
 Single-context: one `CONTEXT.md` and `docs/adr/` at the repo root. See `docs/agents/domain.md`.
+
+### System spec
+
+`docs/spec/what.md` (current state, normative) and `docs/spec/how-why.md` (history, appended).
+Superseded plans (`docs/plan/roadmap.md`, `docs/plan/infrastructure.md`) carry a banner.

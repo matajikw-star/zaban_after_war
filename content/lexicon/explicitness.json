@@ -1,0 +1,112 @@
+{
+  "confusables": [
+    {
+      "note": "در همان سؤال رقیب هم بودند: acerbity یعنی تندی و تلخی کلام، اما explicitness فقط صراحت است و لزوماً گزنده نیست.",
+      "word": "acerbity"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "explicitness",
+  "lemma": "explicitness",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 20,
+      "surface": "explicitness",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 9,
+      "surface": "explicitness",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 1,
+      "surface": "explicitness",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "vagueness"
+      ],
+      "definition": "the quality of saying something clearly and directly, without hiding anything",
+      "examples": [
+        {
+          "en": "The explicitness of the report left the ministers with no excuse.",
+          "fa": "صراحت آن گزارش هیچ بهانه‌ای برای وزیران باقی نگذاشت."
+        }
+      ],
+      "ipa": "/ɪkˈsplɪsɪtnəs/",
+      "pos": "noun",
+      "synonyms": [
+        "directness",
+        "frankness"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "صراحت",
+        "بی‌پرده‌گویی",
+        "رک‌گویی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "explicitness"
+  ]
+}

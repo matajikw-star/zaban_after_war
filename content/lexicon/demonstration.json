@@ -1,0 +1,178 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "demonstration",
+  "lemma": "demonstration",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1405-p01",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 29,
+      "surface": "demonstration",
+      "year": 1405
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1403-p04",
+      "part": "cloze",
+      "questionNo": 29,
+      "reach": 1,
+      "surface": "demonstration",
+      "year": 1403
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 20,
+      "surface": "demonstration",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 9,
+      "surface": "demonstration",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 1,
+      "surface": "demonstration",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p03",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 30,
+      "surface": "demonstration",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "an act of showing or proving something clearly, or a clear example of it",
+      "examples": [
+        {
+          "en": "The teacher gave a short demonstration of how the machine works.",
+          "fa": "معلم نمایش کوتاهی از نحوهٔ کار آن دستگاه ارائه داد."
+        }
+      ],
+      "ipa": "/ˌdemənˈstreɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "display",
+        "illustration",
+        "proof"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p01",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1403-p04",
+          "questionNo": 29
+        },
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1398-p03",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "نمایش",
+        "اثبات عملی",
+        "نمونهٔ آشکار"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a public meeting or march at which people show that they oppose or support something",
+      "examples": [
+        {
+          "en": "Thousands joined the demonstration against the rise in fuel prices.",
+          "fa": "هزاران نفر به تظاهرات علیه افزایش قیمت سوخت پیوستند."
+        }
+      ],
+      "ipa": "/ˌdemənˈstreɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "protest",
+        "rally",
+        "march"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تظاهرات",
+        "راهپیمایی اعتراضی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1405": 1
+    },
+    "byYear": {
+      "1398": 1,
+      "1399": 3,
+      "1403": 1,
+      "1405": 1
+    },
+    "distinctYears": 4,
+    "firstYear": 1398,
+    "lastYear": 1405,
+    "priority": 16,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 5,
+    "timesTested": 6
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "demonstration"
+  ]
+}

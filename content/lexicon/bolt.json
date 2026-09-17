@@ -1,0 +1,117 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": "The fastener, the lightning flash and the verb \"to dash away\" are far apart for a learner even though they share a root. Only the fastener was tested; the card must keep the three visibly separate.",
+    "suspected": true
+  },
+  "id": "bolt",
+  "lemma": "bolt",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 16,
+      "reach": 1,
+      "surface": "bolt",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a thick metal pin used with a nut to fasten things together, or a bar that slides across to lock a door",
+      "examples": [
+        {
+          "en": "The gate is held shut by a heavy iron bolt.",
+          "fa": "دروازه با کلونی سنگین و آهنی بسته نگه داشته می‌شود."
+        }
+      ],
+      "ipa": "/bəʊlt/",
+      "pos": "n",
+      "synonyms": [
+        "pin",
+        "latch"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 16
+        }
+      ],
+      "translations": [
+        "پیچ (با مهره)",
+        "کلون",
+        "چفت"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a sudden flash of lightning that strikes the ground",
+      "examples": [
+        {
+          "en": "A bolt of lightning split the old oak in half.",
+          "fa": "آذرخشی بلوط کهنسال را از وسط شکافت."
+        }
+      ],
+      "ipa": "/bəʊlt/",
+      "pos": "n",
+      "synonyms": [
+        "thunderbolt"
+      ],
+      "testedIn": [],
+      "translations": [
+        "آذرخش",
+        "صاعقه"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to run away suddenly and very fast, especially because of fear",
+      "examples": [
+        {
+          "en": "The horse bolted as soon as it heard the gunshot.",
+          "fa": "اسب به‌محض شنیدن صدای شلیک رم کرد."
+        }
+      ],
+      "ipa": "/bəʊlt/",
+      "pos": "v",
+      "synonyms": [
+        "dash",
+        "flee"
+      ],
+      "testedIn": [],
+      "translations": [
+        "رم کردن",
+        "در رفتن",
+        "ناگهان گریختن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "bolt"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "confusables": [
+    {
+      "note": "ظاهر نزدیکی دارند؛ enunciate یعنی واضح ادا کردن کلمات",
+      "word": "enunciate"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "enumerate",
+  "lemma": "enumerate",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p01",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 42,
+      "surface": "enumerate",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p03",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 16,
+      "surface": "enumerate",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to name things on a list one after another",
+      "examples": [
+        {
+          "en": "The manager began to enumerate the reasons for closing the branch.",
+          "fa": "مدیر شروع کرد به برشمردن دلایل تعطیلی آن شعبه."
+        }
+      ],
+      "ipa": "/ɪˈnjuːməreɪt/",
+      "pos": "v",
+      "synonyms": [
+        "list",
+        "itemize"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "برشمردن",
+        "یک‌به‌یک نام بردن",
+        "فهرست کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "enumerate"
+  ]
+}

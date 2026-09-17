@@ -1,0 +1,88 @@
+{
+  "confusables": [
+    {
+      "note": "املا و تلفظ نزدیک؛ ally یعنی متحد یا هم‌پیمان شدن",
+      "word": "ally"
+    },
+    {
+      "note": "املای بسیار نزدیک؛ alley یعنی کوچه یا گذرِ باریک",
+      "word": "alley"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "allay",
+  "lemma": "allay",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p09",
+      "part": "cloze",
+      "questionNo": 39,
+      "reach": 1,
+      "surface": "allays",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "aggravate",
+        "intensify"
+      ],
+      "definition": "to make a strong feeling such as fear, worry or anger become less intense",
+      "examples": [
+        {
+          "en": "The pilot's calm voice allayed the passengers' fears within a few moments.",
+          "fa": "صدای آرام خلبان در چند لحظه ترس مسافران را فرو نشاند."
+        }
+      ],
+      "ipa": "/əˈleɪ/",
+      "pos": "v",
+      "synonyms": [
+        "calm",
+        "assuage",
+        "dispel"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 39
+        }
+      ],
+      "translations": [
+        "فرو نشاندن",
+        "کاستن (ترس و نگرانی)",
+        "تسکین دادن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "allays"
+  ]
+}

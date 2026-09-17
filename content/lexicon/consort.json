@@ -1,0 +1,99 @@
+{
+  "confusables": [
+    {
+      "note": "consensus یعنی اجماع و توافق جمعی؛ در آزمون، شباهت ظاهری همین دو کلمه دام اصلی بوده است.",
+      "word": "consensus"
+    }
+  ],
+  "homograph": {
+    "note": "Noun /ˈkɒnsɔːt/ (a royal spouse) and verb /kənˈsɔːt/ (to keep company with) differ in stress and part of speech, and a learner will not guess one from the other.",
+    "suspected": true
+  },
+  "id": "consort",
+  "lemma": "consort",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p08",
+      "part": "cloze",
+      "questionNo": 37,
+      "reach": 1,
+      "surface": "consort",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "the husband or wife of a ruler, especially of a king or a queen",
+      "examples": [
+        {
+          "en": "The queen appeared on the balcony beside her consort.",
+          "fa": "ملکه در کنار همسرش روی بالکن ظاهر شد."
+        }
+      ],
+      "ipa": "/ˈkɒnsɔːt/",
+      "pos": "n",
+      "synonyms": [
+        "spouse"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 37
+        }
+      ],
+      "translations": [
+        "همسر پادشاه یا ملکه",
+        "همسر (رسمی)"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to spend time in the company of someone that other people disapprove of, used as \"consort with\"",
+      "examples": [
+        {
+          "en": "He was accused of consorting with criminals.",
+          "fa": "او را به معاشرت با تبهکاران متهم کردند."
+        }
+      ],
+      "ipa": "/kənˈsɔːt/",
+      "pos": "v",
+      "synonyms": [
+        "associate",
+        "mix"
+      ],
+      "testedIn": [],
+      "translations": [
+        "معاشرت کردن (با افراد نامناسب)",
+        "نشست‌وبرخاست کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "consort"
+  ]
+}

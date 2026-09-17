@@ -1,0 +1,89 @@
+{
+  "confusables": [
+    {
+      "note": "extraction یعنی استخراج یا بیرون کشیدن؛ ربطی به انقراض (extinction) ندارد.",
+      "word": "extraction"
+    },
+    {
+      "note": "املای نزدیک اما بی‌ربط: distinct یعنی متمایز و کاملاً جدا.",
+      "word": "distinct"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "extinct",
+  "lemma": "extinct",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1405-p06",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 1,
+      "surface": "extinction",
+      "year": 1405
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "extant",
+        "thriving"
+      ],
+      "definition": "no longer existing, especially used of a kind of animal or plant of which no living member remains",
+      "examples": [
+        {
+          "en": "Hunting and habitat loss made the bird extinct within fifty years.",
+          "fa": "شکار و نابودی زیستگاه در عرض پنجاه سال آن پرنده را منقرض کرد."
+        }
+      ],
+      "ipa": "/ɪkˈstɪŋkt/",
+      "pos": "adj",
+      "synonyms": [
+        "died out",
+        "vanished"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p06",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "منقرض‌شده",
+        "ازمیان‌رفته",
+        "انقراض (اسم آن: extinction)"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1405": 1
+    },
+    "byYear": {
+      "1405": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1405,
+    "lastYear": 1405,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "extinction"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "confusables": [
+    {
+      "note": "به سبب جابه‌جایی حروف اشتباه گرفته می‌شود، اما یعنی برشمردن یکایک موارد",
+      "word": "enumeration"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "remuneration",
+  "lemma": "remuneration",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1405-p04",
+      "part": "vocabulary",
+      "questionNo": 13,
+      "reach": 1,
+      "surface": "remuneration",
+      "year": 1405
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1401-p04",
+      "part": "vocabulary",
+      "questionNo": 13,
+      "reach": 1,
+      "surface": "remunerations",
+      "year": 1401
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "money paid to someone for the work or the service they have provided",
+      "examples": [
+        {
+          "en": "The contract sets out the remuneration for each stage of work.",
+          "fa": "قرارداد، دستمزد هر مرحله از کار را مشخص می‌کند."
+        }
+      ],
+      "ipa": "/rɪˌmjuːnəˈreɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "payment",
+        "compensation"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p04",
+          "questionNo": 13
+        },
+        {
+          "paperId": "arshad-1401-p04",
+          "questionNo": 13
+        }
+      ],
+      "translations": [
+        "حقوق و دستمزد",
+        "اجرت",
+        "پاداش مالی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1401": 1,
+      "1405": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1401,
+    "lastYear": 1405,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "remuneration",
+    "remunerations"
+  ]
+}

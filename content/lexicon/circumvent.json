@@ -1,0 +1,89 @@
+{
+  "confusables": [
+    {
+      "note": "circumscribe یعنی محدود کردن و مرز گذاشتن، نه دور زدن.",
+      "word": "circumscribe"
+    },
+    {
+      "note": "circumspect صفت است و یعنی محتاط؛ تنها پیشوند آن با circumvent مشترک است.",
+      "word": "circumspect"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "circumvent",
+  "lemma": "circumvent",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p03",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 30,
+      "surface": "circumvent",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "confront"
+      ],
+      "definition": "to find a way of avoiding a rule, a difficulty or an obstacle instead of facing it",
+      "examples": [
+        {
+          "en": "The company circumvented the new tax by moving its head office.",
+          "fa": "شرکت با جابه‌جا کردن دفتر مرکزی‌اش، مالیات جدید را دور زد."
+        }
+      ],
+      "ipa": "/ˌsɜːkəmˈvent/",
+      "pos": "verb",
+      "synonyms": [
+        "bypass",
+        "evade",
+        "sidestep"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p03",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "دور زدن",
+        "طفره رفتن از",
+        "اجتناب کردن از"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "circumvent"
+  ]
+}

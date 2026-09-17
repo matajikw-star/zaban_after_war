@@ -1,0 +1,1163 @@
+[
+  {
+    "input": "deserve",
+    "lemma": "deserve",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "customers deserve courteous treatment sits in the second sentence and deserve is school vocabulary every candidate already has."
+  },
+  {
+    "input": "desperate",
+    "lemma": "desperate",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "desperate to cross socioeconomic class is a familiar-romance cliche and the blank, so familiar as to feel ....., does not depend on it."
+  },
+  {
+    "input": "despise",
+    "lemma": "despise",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "It is the main verb: without despise the reader cannot see that the Taiwanese attitude is hatred, which is what enmity ..... in blood elaborates.",
+    "gloss": "to look down on with contempt or hatred"
+  },
+  {
+    "input": "despotism",
+    "lemma": "despotism",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "The despotism of the boss is the first and most concrete of the three oppressions the sentence promises freedom from, and the word is not inferable from toil or patriarchy.",
+    "gloss": "rule by an absolute, oppressive authority"
+  },
+  {
+    "input": "destined",
+    "lemma": "destined",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "The pet chicken destined for the meat grinder uses a fixed collocation that a reader who knows destiny reads straight through."
+  },
+  {
+    "input": "destroy",
+    "lemma": "destroy",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "destroy mangroves is elementary vocabulary and the blank is the relative clause describing salt-tolerant trees."
+  },
+  {
+    "input": "destruction",
+    "lemma": "destruction",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "any destruction of vitamins is wholly transparent from destroy, which the candidate already knows."
+  },
+  {
+    "input": "destructive",
+    "lemma": "destructive",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "the destructive hole he now finds himself in is a transparent derivative of destroy and the blank is the verb before himself from."
+  },
+  {
+    "input": "detachment",
+    "lemma": "detachment",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 3,
+    "reason": "The blank is the so-clause that fails to maintain the necessary scientific detachment, so the answer is chosen entirely against this word, whose sense of professional distance is not obvious from detach.",
+    "gloss": "impartial distance, freedom from personal involvement"
+  },
+  {
+    "input": "detention",
+    "lemma": "detention",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "the threat of a detention already says threat, so the blank verb into silence is recoverable without knowing the school-punishment sense."
+  },
+  {
+    "input": "deterministic",
+    "lemma": "deterministic",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "Constraints on deterministic selection opens a dense sentence whose blank sits at the far end before an understanding of the primitive computational operations, leaving the word background."
+  },
+  {
+    "input": "devastating",
+    "lemma": "devastating",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "an earthquake with devastating consequences is everyday news vocabulary that a newspaper-reading candidate has met many times."
+  },
+  {
+    "input": "devil",
+    "lemma": "devil",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "the devil incarnate is carried by incarnate, not by devil, which is basic vocabulary."
+  },
+  {
+    "input": "diagnoses",
+    "lemma": "diagnosis",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "enable them to make diagnoses closes the sentence about physicians, and diagnosis is an internationally familiar medical word."
+  },
+  {
+    "input": "dialects",
+    "lemma": "dialect",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Saussure's position on dialects uses a word common in general writing as well as linguistics, so it blocks nothing in the lets alone error question."
+  },
+  {
+    "input": "dickens",
+    "lemma": "Dickens",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Dickens is incapable of speaking names an author: a proper noun, not vocabulary that can be taught or tested as a word."
+  },
+  {
+    "input": "dictate",
+    "lemma": "dictate",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "The claim of the sentence is that attitudes, skills and strategies dictate whether learners grasp the intricacies of language, and the determine sense is not the one a candidate learns first.",
+    "gloss": "to determine or decisively control an outcome"
+  },
+  {
+    "input": "dictator",
+    "lemma": "dictator",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 1,
+    "reason": "Ralph has always longed to be a dictator uses a word that is effectively international and already known."
+  },
+  {
+    "input": "dictatorial",
+    "lemma": "dictatorial",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "the dictatorial impositions of the committee secretary is a transparent derivative of dictator."
+  },
+  {
+    "input": "diction",
+    "lemma": "diction",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank sits directly against it: the poems ..... from the more formal poetic diction of the Neoclassical Period, and a candidate is likely to read diction as pronunciation rather than choice of words.",
+    "gloss": "the choice and arrangement of words in writing or speech"
+  },
+  {
+    "input": "differ",
+    "lemma": "differ",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 1,
+    "reason": "the ways we acquire them differ ..... puts the blank right against the word, but differ itself is elementary vocabulary."
+  },
+  {
+    "input": "differentiated",
+    "lemma": "differentiate",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "highly differentiated vocabulary is glossed by its own contrast with limited vocabulary for corporate crime, and the word is readable from different."
+  },
+  {
+    "input": "differentiating",
+    "lemma": "differentiate",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "differentiating units identical in expression explains itself in place, and the form reduces transparently to different."
+  },
+  {
+    "input": "difficulty",
+    "lemma": "difficulty",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "have difficulty with regrouping in subtraction uses one of the commonest nouns in school English."
+  },
+  {
+    "input": "digitalization",
+    "lemma": "digitalization",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "their level of digitalization carries the sentence but is read straight off digital, and the sentence repeats the word to reinforce it."
+  },
+  {
+    "input": "dignity",
+    "lemma": "dignity",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "The dignity of Palestinian survivors opens the sentence, but dignity is staple human-rights journalism vocabulary and the blank is the relative clause about those who are no longer with us."
+  },
+  {
+    "input": "digressions",
+    "lemma": "digression",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The whole question turns on her lecture had too many digressions even though the following clause about wandering to various subjects hands the reader its meaning.",
+    "gloss": "a departure from the main subject in speech or writing"
+  },
+  {
+    "input": "diplomats",
+    "lemma": "diplomat",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "West African diplomats said is an attribution phrase and diplomat is common news vocabulary."
+  },
+  {
+    "input": "directive",
+    "lemma": "directive",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "The sentence glosses it itself by calling them these lists, and the noun is readable from direct and direction."
+  },
+  {
+    "input": "disadvantaged",
+    "lemma": "disadvantaged",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "good students from disadvantaged areas is transparent from advantage and is standard social-policy vocabulary."
+  },
+  {
+    "input": "disagreements",
+    "lemma": "disagreement",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "led to some close friendships as well as a few disagreements uses a wholly transparent derivative of agree."
+  },
+  {
+    "input": "disappeared",
+    "lemma": "disappear",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "have now virtually disappeared uses elementary vocabulary; the difficulty in that sentence is elsewhere."
+  },
+  {
+    "input": "disastrous",
+    "lemma": "disastrous",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "the long-term impact would be disastrous is what the blank contrasts with, but disastrous is read straight off disaster."
+  },
+  {
+    "input": "disbelief",
+    "lemma": "disbelief",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "faces were pictures of disbelief is transparent from believe, whatever the blank after it turns out to be."
+  },
+  {
+    "input": "discharge",
+    "lemma": "discharge",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "the mountain climber was discharged from the hospital is the event the whole item rests on, and the release-from-an-institution sense is not one a B2 candidate reliably has.",
+    "gloss": "to officially release someone from a hospital, job, or service"
+  },
+  {
+    "input": "disciplinary",
+    "lemma": "disciplinary",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "take disciplinary action is immediately explained by the sentence itself, which goes on to relieve City employees from duty."
+  },
+  {
+    "input": "discipline",
+    "lemma": "discipline",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "more closely to sociology and anthropology that to any other discipline names two disciplines first, so the field-of-study sense is handed to the reader."
+  },
+  {
+    "input": "discomfiting",
+    "lemma": "discomfit",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 5,
+    "reason": "The blank is the subject of is no less discomfiting than outright bragging, so the answer cannot be chosen without the word, which is rare and easily confused with discomforting.",
+    "gloss": "to make someone uneasy or embarrassed"
+  },
+  {
+    "input": "discourse",
+    "lemma": "discourse",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "The study's aim is the development of teachers' understanding of the professional discourse of education, and the academic sense of discourse as the talk of a field is not one a general candidate has.",
+    "gloss": "the characteristic language and debate of a field or community"
+  },
+  {
+    "input": "discursive",
+    "lemma": "discursive",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "generated by discursive formations, each with its particular ideologies is the sentence's whole claim, but discursive formation in this sense is critical-theory jargon, not konkour English.",
+    "gloss": "belonging to a system of discourse that produces meaning (critical theory)",
+    "fieldCodes": [
+      "1110"
+    ]
+  },
+  {
+    "input": "disgust",
+    "lemma": "disgust",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 2,
+    "reason": "much to our disgust is a parenthetical aside; the blank after sold is the idiom sold out."
+  },
+  {
+    "input": "disincentives",
+    "lemma": "disincentive",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "may actually function as disincentives is the point of the sentence, but the word is read straight off incentive plus dis-."
+  },
+  {
+    "input": "dislike",
+    "lemma": "dislike",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 1,
+    "reason": "their long-standing ..... and mutual dislike puts the blank right against it, but dislike is elementary vocabulary."
+  },
+  {
+    "input": "dismissal",
+    "lemma": "dismissal",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "Failure to do so will result in your dismissal is what fixes the blank, but the losing-your-job sense of dismissal is standard workplace English a candidate meets routinely."
+  },
+  {
+    "input": "disposition",
+    "lemma": "disposition",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank follows learner disposition directly and the answer depends on seeing that attitudes and motivation are instances of it; the temperament sense is not recoverable from dispose.",
+    "gloss": "a person's inherent tendency or temperament"
+  },
+  {
+    "input": "disruptions",
+    "lemma": "disruption",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "labor disruptions is common news vocabulary and transparent from disrupt."
+  },
+  {
+    "input": "dissatisfaction",
+    "lemma": "dissatisfaction",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 1,
+    "reason": "Gerry's dissatisfaction with our work is wholly transparent from satisfaction plus dis-."
+  },
+  {
+    "input": "distillation",
+    "lemma": "distillation",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "This book offers a distillation of that research is the main clause, and the figurative sense of a concentrated essence is far from the chemistry sense a candidate knows from school.",
+    "gloss": "a concentrated essence extracted from something larger"
+  },
+  {
+    "input": "distinct",
+    "lemma": "distinct",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 2,
+    "reason": "the categories are nevertheless distinct is what makes the blank a concessive connective, but distinct is common academic vocabulary a B2 reader has."
+  },
+  {
+    "input": "disturb",
+    "lemma": "disturb",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "The results ..... may disturb some parents uses a word taught at school level."
+  },
+  {
+    "input": "dive",
+    "lemma": "dive",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "so we dived for cover is idiomatic but dive itself is basic and the blank is the verb paired with swoop down."
+  },
+  {
+    "input": "diversion",
+    "lemma": "diversion",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "water diversion is one item in a list with drainage, infill and pollution, so the list carries the meaning and the blank sits before wetlands."
+  },
+  {
+    "input": "diverted",
+    "lemma": "divert",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "The answer depends on reading that most of the savings were diverted towards his treatment, which is the reason they ..... the order for the car.",
+    "gloss": "to redirect something to a different purpose or route"
+  },
+  {
+    "input": "dominated",
+    "lemma": "dominate",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "their thinking is dominated by their basic assumption uses a word every candidate already has."
+  },
+  {
+    "input": "downgraded",
+    "lemma": "downgrade",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "the structure generally downgraded the quality of life is transparent from down plus grade."
+  },
+  {
+    "input": "dozen",
+    "lemma": "dozen",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Dozens of people in the town of Walkerton fell ill uses a basic quantity word; the blank is contaminated with E. coli."
+  },
+  {
+    "input": "drainage",
+    "lemma": "drainage",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "through drainage, infill, water diversion, pollution is a list of means, and drainage is readable from drain."
+  },
+  {
+    "input": "dramatic",
+    "lemma": "dramatic",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "writers of dramatic tragedy uses a word transparent from drama; the blank is the connective before Behn's own comic stage productions."
+  },
+  {
+    "input": "dramatically",
+    "lemma": "dramatically",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "a dramatically improved overall economy is a transparent adverb of the kind strongly and largely were judged on."
+  },
+  {
+    "input": "drift",
+    "lemma": "drift",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "The quoted pair shift and drift lets shift gloss drift, and the blank asks only whether the phenomenon tends to occur more in the bottom teeth."
+  },
+  {
+    "input": "drill",
+    "lemma": "drill",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "can be drilled with presently available equipment uses a concrete, widely known verb."
+  },
+  {
+    "input": "drought",
+    "lemma": "drought",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "he's sure a drought is beginning is mirrored by his crops will be washed away, so the pattern of the farmer's pessimism is readable even without the word, which is standard geography vocabulary anyway."
+  },
+  {
+    "input": "drove",
+    "lemma": "drive",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "the kinds of automobiles they drove uses the most basic of verbs."
+  },
+  {
+    "input": "dunces",
+    "lemma": "dunce",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "reckless confrontation is the first priority of dunces is the sentence's verdict, and nothing around it hints that a dunce is a fool.",
+    "gloss": "a stupid or slow-witted person"
+  },
+  {
+    "input": "dyslexia",
+    "lemma": "dyslexia",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "The blank follows those who may have some level of dyslexia need ..... phonics work, so the reading-difficulty sense is exactly what makes phonics the point; the word is common enough in general journalism not to be a domain term.",
+    "gloss": "a learning disorder affecting the ability to read"
+  },
+  {
+    "input": "dyslexics",
+    "lemma": "dyslexic",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "good news for dyslexics is a transparent derivative of dyslexia, which is taught from its own occurrence in the same paper."
+  },
+  {
+    "input": "dystopian",
+    "lemma": "dystopian",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "The blank sits directly against it in That dystopian movie was a perfect ..... of consumerism without morals, and the word is not recoverable from anything else in the short sentence.",
+    "gloss": "portraying an imagined society that is frightening or oppressive"
+  },
+  {
+    "input": "dystrophy",
+    "lemma": "dystrophy",
+    "verdict": "domain-term",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "someone with muscular dystrophy is the fact that explains the high-density foam, but it is the name of a medical condition rather than konkour English.",
+    "gloss": "a disorder causing progressive weakening of the muscles",
+    "fieldCodes": [
+      "1148"
+    ]
+  },
+  {
+    "input": "earliest",
+    "lemma": "early",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "The earliest human artifacts is a basic superlative; the item tests subject-verb agreement."
+  },
+  {
+    "input": "earrings",
+    "lemma": "earring",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "a ten-dollar pair of earrings is concrete everyday vocabulary; the blank is the adjective about Rhoda's tight budget."
+  },
+  {
+    "input": "earthquake",
+    "lemma": "earthquake",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "an earthquake with devastating consequences uses a word known to every candidate."
+  },
+  {
+    "input": "eaten",
+    "lemma": "eat",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "Only when we had eaten the pie is an inversion item, not a vocabulary one."
+  },
+  {
+    "input": "economists",
+    "lemma": "economist",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "criticism by later economists is transparent from economy and economics."
+  },
+  {
+    "input": "edifice",
+    "lemma": "edifice",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "the whole 19th-century edifice of comparative philology completes the foundations metaphor the sentence is built on, and the word gives a B2 reader nothing to work from.",
+    "gloss": "a large building; figuratively, an imposing structure of ideas"
+  },
+  {
+    "input": "educated",
+    "lemma": "educated",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "they may have been highly educated uses a transparent derivative of educate."
+  },
+  {
+    "input": "educators",
+    "lemma": "educator",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "good news for dyslexics and debate ..... for certain educators uses an agentive derivative as transparent as instructor."
+  },
+  {
+    "input": "egg",
+    "lemma": "egg",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "raised for meat, fiber, milk, eggs is a list of elementary nouns."
+  },
+  {
+    "input": "egocentric",
+    "lemma": "egocentric",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "the egocentric ....., unable to make assertions about reality explains the idea in the following clause, and the word itself is read off ego plus centric."
+  },
+  {
+    "input": "elaborate",
+    "lemma": "elaborate",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 3,
+    "reason": "The answer is the antonym of elaborate language in using ..... rather than elaborate language, and the adjective sense complicated is not the elaborate on sense a candidate learns at school.",
+    "gloss": "detailed and complicated in design or expression"
+  },
+  {
+    "input": "elderly",
+    "lemma": "elderly",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "the growing number of elderly people is common vocabulary and the blank is attributed largely to."
+  },
+  {
+    "input": "elect",
+    "lemma": "elect",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "how the directors of the corporation are to be elected uses a basic civic verb."
+  },
+  {
+    "input": "elephant",
+    "lemma": "elephant",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "The African elephant is elementary vocabulary; the blank is the infinitive after one of the biggest efforts yet."
+  },
+  {
+    "input": "elevation",
+    "lemma": "elevation",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "the elevation of the so-called standard languages uses a figurative sense that so-called and the rest of the sentence make plain, and the noun is readable from elevate."
+  },
+  {
+    "input": "eliminate",
+    "lemma": "eliminate",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "of things to be eliminated uses a common academic verb a B2 candidate has."
+  },
+  {
+    "input": "elusive",
+    "lemma": "elusive",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "remains tonally elusive is the claim the rest of the sentence unpacks, and the blank paired with ruminative is chosen against it.",
+    "gloss": "hard to catch, pin down, or define"
+  },
+  {
+    "input": "embryo",
+    "lemma": "embryo",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "the growth of the embryo into chicken is school-biology vocabulary, and the blank verb before growth can be chosen from incubators alone."
+  },
+  {
+    "input": "emigrate",
+    "lemma": "emigrate",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "the citizens nearly decided to emigrate en masse sits in the second clause while the blank is with the ..... of new trade routes, and migration vocabulary is familiar to this audience."
+  },
+  {
+    "input": "emission",
+    "lemma": "emission",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 2,
+    "reason": "no tailpipe emissions is glossed by emit earlier in the same sentence, and emissions is everyday climate vocabulary."
+  },
+  {
+    "input": "emit",
+    "lemma": "emit",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "Fuel cell electric vehicles emit only water vapor and warm air is the premise the blank draws its conclusion from.",
+    "gloss": "to give off or send out gas, light, heat, or sound"
+  },
+  {
+    "input": "emollient",
+    "lemma": "emollient",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "rubbed a special emollient ..... the blisters and chafes leaves the reader no way to know what was rubbed on, even though the blank itself is only the preposition.",
+    "gloss": "a preparation that softens and soothes the skin"
+  },
+  {
+    "input": "emotion",
+    "lemma": "emotion",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 1,
+    "reason": "I am ..... emotion puts the blank straight against it, but emotion is elementary vocabulary."
+  },
+  {
+    "input": "emphasized",
+    "lemma": "emphasize",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "have emphasized the heuristic requirements uses a common academic verb; heuristic is the hard word in that sentence."
+  },
+  {
+    "input": "employ",
+    "lemma": "employ",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "the millions of fully employed workers uses basic vocabulary."
+  },
+  {
+    "input": "empowerment",
+    "lemma": "empowerment",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "all of the talk about teacher empowerment through teacher reflection uses a word read straight off power, and the blank is the concessive preposition."
+  },
+  {
+    "input": "enacting",
+    "lemma": "enact",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "the enacting of such a law names the law in the same phrase, so the passing-into-law sense is handed to the reader."
+  },
+  {
+    "input": "encapsulate",
+    "lemma": "encapsulate",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "his obsession to encapsulate enough fragile moments is the main clause and the blank is the adjective immediately governed by it.",
+    "gloss": "to capture or express the essence of something compactly"
+  },
+  {
+    "input": "endorsement",
+    "lemma": "endorsement",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "to earn the endorsement of a guy who cannot even remember your name is the purpose that explains why one would ..... and debase oneself.",
+    "gloss": "public approval or backing of a person or thing"
+  },
+  {
+    "input": "endured",
+    "lemma": "endure",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "they often endured great hardships is not what fixes the blank, which is given away by the apposition King Arthur."
+  },
+  {
+    "input": "engage",
+    "lemma": "engage",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "engage in violent behavior is a common academic collocation a B2 candidate has met."
+  },
+  {
+    "input": "engagement",
+    "lemma": "engagement",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "to generate and sustain their engagement is transparent from engage, and the item is a subordination error."
+  },
+  {
+    "input": "enhancement",
+    "lemma": "enhancement",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "a temporary enhancement of spatial-reasoning uses a common academic noun transparent from enhance."
+  },
+  {
+    "input": "enlightened",
+    "lemma": "enlightened",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 3,
+    "reason": "On a more enlightened planet is explained by the honest alternative the sentence goes on to describe."
+  },
+  {
+    "input": "enmity",
+    "lemma": "enmity",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 5,
+    "difficulty": 5,
+    "reason": "The blank sits directly against it in the kind of enmity ..... in blood and ripened by decades of antagonism, so the participle cannot be chosen without the word.",
+    "gloss": "deep-seated hostility or hatred"
+  },
+  {
+    "input": "ennui",
+    "lemma": "ennui",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 5,
+    "reason": "Annette's sense of ennui is the whole emotional content of the sentence and the word is opaque to anyone who has not met it.",
+    "gloss": "listless boredom arising from lack of interest"
+  },
+  {
+    "input": "enrolled",
+    "lemma": "enroll",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "Even though he isn't enrolled right now uses vocabulary any university candidate already needs."
+  },
+  {
+    "input": "ensued",
+    "lemma": "ensue",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 3,
+    "difficulty": 4,
+    "reason": "the unravelling of comparative Indo-European grammar ensued is the main clause of the As soon as sentence, and the follow-as-a-result sense is not guessable.",
+    "gloss": "to happen afterwards as a result"
+  },
+  {
+    "input": "enthusiasm",
+    "lemma": "enthusiasm",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "the sense of ..... and enthusiasm puts the blank beside it, but enthusiasm is school vocabulary."
+  },
+  {
+    "input": "entrepreneur",
+    "lemma": "entrepreneur",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 3,
+    "reason": "The entrepreneur had a well-deserved reputation is only the subject; the blank is fixed by having accurately anticipated many changes unforeseen by established business leaders."
+  },
+  {
+    "input": "environmentalists",
+    "lemma": "environmentalist",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "charges voiced by environmentalists is a transparent derivative of environment."
+  },
+  {
+    "input": "equation",
+    "lemma": "equation",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "unless the mathematical equations fed into them uses a word every candidate met in school mathematics."
+  },
+  {
+    "input": "equipped",
+    "lemma": "equip",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "equipped with sophisticated stone tools uses a common verb; the item is a relative-clause error."
+  },
+  {
+    "input": "espouses",
+    "lemma": "espouse",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 5,
+    "reason": "the kind of artistic risks she so fiercely espouses closes the sentence on a verb that nothing around it explains.",
+    "gloss": "to adopt and openly support a cause or belief"
+  },
+  {
+    "input": "essayist",
+    "lemma": "essayist",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "not a theorist or a scholar but an essayist is an agentive derivative of essay, as transparent as observer or thinker."
+  },
+  {
+    "input": "essentially",
+    "lemma": "essentially",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "whose demand, essentially, is a parenthetical adverb transparent from essential."
+  },
+  {
+    "input": "ethical",
+    "lemma": "ethical",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "imparting of ethical instruction uses a common academic adjective; the blank is fixed by the contrast with his sense of humor."
+  },
+  {
+    "input": "evacuation",
+    "lemma": "evacuation",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "led to the evacuation of the laboratory is what makes the scent bad enough for the blank, but evacuation is standard news vocabulary transparent from evacuate."
+  },
+  {
+    "input": "evident",
+    "lemma": "evident",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "artistic debt to Scandinavia is evident in paintings uses a common academic adjective read off evidence."
+  },
+  {
+    "input": "evolutionary",
+    "lemma": "evolutionary",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 2,
+    "reason": "a great burst of evolutionary creative occurred is transparent from evolution."
+  },
+  {
+    "input": "examine",
+    "lemma": "examine",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "wanting to examine his films uses one of the commonest academic verbs."
+  },
+  {
+    "input": "excavations",
+    "lemma": "excavation",
+    "verdict": "no",
+    "confidence": "medium",
+    "importance": 2,
+    "difficulty": 4,
+    "reason": "during paleontological excavations is a temporal adjunct while the main clause, primitive stone tools came to light, carries the sense on its own."
+  },
+  {
+    "input": "excitement",
+    "lemma": "excitement",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 2,
+    "difficulty": 1,
+    "reason": "unable to repress their excitement uses school vocabulary; repress is the hard word there."
+  },
+  {
+    "input": "exclude",
+    "lemma": "exclude",
+    "verdict": "yes",
+    "confidence": "high",
+    "importance": 4,
+    "difficulty": 3,
+    "reason": "The unemployment counts exclude the millions of fully employed workers is the sentence's claim, and the blank clause about their families remaining in poverty depends on it.",
+    "gloss": "to leave out or keep from being counted"
+  },
+  {
+    "input": "excuse",
+    "lemma": "excuse",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "that is no excuse for him to be ..... to customers uses basic vocabulary."
+  },
+  {
+    "input": "explicate",
+    "lemma": "explicate",
+    "verdict": "yes",
+    "confidence": "medium",
+    "importance": 4,
+    "difficulty": 4,
+    "reason": "the attempt to explicate this notion is the subject of the main clause, and the word is easily mistaken for explicit rather than read as explain in detail.",
+    "gloss": "to analyse and explain something in detail"
+  },
+  {
+    "input": "exploding",
+    "lemma": "explode",
+    "verdict": "no",
+    "confidence": "high",
+    "importance": 3,
+    "difficulty": 1,
+    "reason": "as an exploding knocked the soldier flat is a word-form error item built on a verb every candidate knows."
+  }
+]

@@ -1,0 +1,75 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "anthropomorphize",
+  "lemma": "anthropomorphize",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p09",
+      "part": "vocabulary",
+      "questionNo": 11,
+      "reach": 1,
+      "surface": "anthropomorphize",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to treat an animal, an object or a god as if it had human feelings and behavior",
+      "examples": [
+        {
+          "en": "Cartoons anthropomorphize animals by giving them speech and human clothes.",
+          "fa": "کارتون‌ها با دادن گفتار و لباس انسانی به حیوانات، آن‌ها را انسان‌انگاری می‌کنند."
+        }
+      ],
+      "ipa": "/ˌænθrəpəˈmɔːfaɪz/",
+      "pos": "verb",
+      "synonyms": [
+        "personify"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 11
+        }
+      ],
+      "translations": [
+        "انسان‌انگاری کردن",
+        "خصلت انسانی دادن به"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "anthropomorphize"
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "retreat",
+  "lemma": "retreat",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1405-p07",
+      "part": "vocabulary",
+      "questionNo": 12,
+      "reach": 1,
+      "surface": "retreat",
+      "year": 1405
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p01",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 48,
+      "surface": "retreat",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p04",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 6,
+      "surface": "retreat",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 3,
+      "surface": "retreat",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "advance"
+      ],
+      "definition": "the act of moving back or away from a difficult or dangerous situation",
+      "examples": [
+        {
+          "en": "The general ordered a retreat before the bridge was destroyed.",
+          "fa": "ژنرال پیش از تخریب پل دستور عقب‌نشینی داد."
+        }
+      ],
+      "ipa": "/rɪˈtriːt/",
+      "pos": "n",
+      "synonyms": [
+        "withdrawal",
+        "pullback"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p07",
+          "questionNo": 12
+        }
+      ],
+      "translations": [
+        "عقب‌نشینی",
+        "واپس‌نشینی"
+      ]
+    },
+    {
+      "antonyms": [
+        "advance"
+      ],
+      "definition": "to move back or away, especially from an enemy or from something unpleasant",
+      "examples": [
+        {
+          "en": "The troops retreated to the hills as darkness fell.",
+          "fa": "نیروها با فرا رسیدن تاریکی به تپه‌ها عقب‌نشینی کردند."
+        }
+      ],
+      "ipa": "/rɪˈtriːt/",
+      "pos": "v",
+      "synonyms": [
+        "withdraw",
+        "fall back"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "عقب‌نشینی کردن",
+        "پس کشیدن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a quiet private place where you can go to rest or think",
+      "examples": [
+        {
+          "en": "The cottage became their weekend retreat from city noise.",
+          "fa": "آن کلبه به خلوتگاه آخر هفتهٔ آن‌ها دور از هیاهوی شهر بدل شد."
+        }
+      ],
+      "ipa": "/rɪˈtriːt/",
+      "pos": "n",
+      "synonyms": [
+        "haven",
+        "refuge"
+      ],
+      "testedIn": [],
+      "translations": [
+        "خلوتگاه",
+        "پناهگاه آرام"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1405": 1
+    },
+    "byYear": {
+      "1400": 3,
+      "1405": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1400,
+    "lastYear": 1405,
+    "priority": 10,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "retreat"
+  ]
+}

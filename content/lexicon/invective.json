@@ -1,0 +1,115 @@
+{
+  "confusables": [
+    {
+      "note": "املای بسیار نزدیک اما بی‌ربط؛ inventive یعنی خلاق و مبتکر، نه ناسزاگویی",
+      "word": "inventive"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "invective",
+  "lemma": "invective",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1405-p05",
+      "part": "vocabulary",
+      "questionNo": 17,
+      "reach": 1,
+      "surface": "invectives",
+      "year": 1405
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p07",
+      "part": "vocabulary",
+      "questionNo": 17,
+      "reach": 1,
+      "surface": "invectives",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 14,
+      "reach": 1,
+      "surface": "invective",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "praise"
+      ],
+      "definition": "harsh and insulting language used to attack or criticize someone",
+      "examples": [
+        {
+          "en": "His speech soon turned into a stream of invective against his rivals.",
+          "fa": "سخنرانی او خیلی زود به سیلی از ناسزا علیه رقیبانش تبدیل شد."
+        }
+      ],
+      "ipa": "/ɪnˈvektɪv/",
+      "pos": "n",
+      "synonyms": [
+        "abuse",
+        "vituperation",
+        "tirade"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 17
+        },
+        {
+          "paperId": "arshad-1399-p07",
+          "questionNo": 17
+        },
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "ناسزا",
+        "دشنام تند",
+        "حملهٔ لفظی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 2,
+      "1405": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1405,
+    "priority": 7,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "invective",
+    "invectives"
+  ]
+}

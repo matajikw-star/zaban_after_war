@@ -1,0 +1,132 @@
+{
+  "paperId": "arshad-1405-p03",
+  "degree": "arshad",
+  "year": 1405,
+  "groupCodes": ["1101","1102","1104","1105","1106","1107","1108","1111","1112","1113","1114","1115","1130","1132","1203","1257","1259","1263","1264","1272","1283","1294"],
+  "bookletCount": 22,
+  "source": { "file": "1101-1405.pdf", "pages": [2, 3] },
+  "extractedBy": { "model": "claude-sonnet-5", "at": "2026-09-10" },
+  "questions": [
+    {
+      "no": 1,
+      "part": "vocabulary",
+      "stem": "His words should be understood in ..... in order to be correctly interpreted.",
+      "options": ["direction", "context", "expert", "interest"],
+      "optionLemmas": ["direction", "context", "expert", "interest"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "context",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "vocabulary",
+      "stem": "She told her friends about her intention to go abroad, changing her first decision to keep it ..... .",
+      "options": ["secret", "familiar", "final", "positive"],
+      "optionLemmas": ["secret", "familiar", "final", "positive"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "secret",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "vocabulary",
+      "stem": "She has ..... in her library the complete works of many Persian poets such as Hafez, Mowlana, Sa'di, Nezami and Ferdowsi.",
+      "options": ["defended", "arrived", "collected", "caused"],
+      "optionLemmas": ["defend", "arrive", "collect", "cause"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "collect",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "vocabulary",
+      "stem": "A defining ..... of online art is that it can be seen anywhere by anyone with an Internet-connected computer.",
+      "options": ["characteristic", "inspiration", "spectator", "artifact"],
+      "optionLemmas": ["characteristic", "inspiration", "spectator", "artifact"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "characteristic",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "vocabulary",
+      "stem": "For decades, the hygiene hypothesis has posited that the germs we are exposed to in early childhood can ..... us from developing allergies.",
+      "options": ["desist", "prescribe", "cease", "prevent"],
+      "optionLemmas": ["desist", "prescribe", "cease", "prevent"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "prevent",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "vocabulary",
+      "stem": "I was in need of money and not at all ..... about experiments, so I concurred and received the new medicine at the local hospital.",
+      "options": ["affluent", "plausible", "respective", "apprehensive"],
+      "optionLemmas": ["affluent", "plausible", "respective", "apprehensive"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "apprehensive",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "vocabulary",
+      "stem": "Some people suffer from a chronic case of rabid chauvinism; they brandish the banners and shields of their own tribe and ..... those of the others.",
+      "options": ["exculpate", "excoriate", "extrapolate", "expatiate"],
+      "optionLemmas": ["exculpate", "excoriate", "extrapolate", "expatiate"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "excoriate",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "Cognitive psychology focuses on how people perceive, store, and interpret information, .....(8) processes like perception, reasoning, and problem solving.",
+      "options": ["that studies", "studies", "studying", "and study"],
+      "optionLemmas": ["study", "study", "study", "study"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "study",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "grammar",
+      "stem": ".....(9) behaviorists, cognitive psychologists believe it is necessary to look at internal mental processes in order to understand behavior.",
+      "options": ["Unlike", "Although", "However", "Even"],
+      "optionLemmas": ["unlike", "although", "however", "even"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "unlike",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "grammar",
+      "stem": "Cognitive psychology has been extremely influential, and much contemporary research .....(10).",
+      "options": ["is cognitive with nature", "being in cognitive nature", "is cognitive in nature", "being naturally cognitive"],
+      "optionLemmas": ["cognitive", "cognitive", "cognitive", "cognitive"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "cognitive",
+      "uncertain": []
+    }
+  ],
+  "uncertain": []
+}

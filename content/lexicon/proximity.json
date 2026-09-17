@@ -1,0 +1,111 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "proximity",
+  "lemma": "proximity",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1401-p02",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 34,
+      "surface": "proximity",
+      "year": 1401
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 12,
+      "surface": "proximity",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 10,
+      "surface": "proximity",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "distance"
+      ],
+      "definition": "the state of being near to someone or something in space or time, often in the phrase \"in close proximity to\"",
+      "examples": [
+        {
+          "en": "The hotel's proximity to the airport makes it popular with travellers.",
+          "fa": "نزدیکی آن هتل به فرودگاه، آن را نزد مسافران محبوب کرده است."
+        }
+      ],
+      "ipa": "/prɒkˈsɪməti/",
+      "pos": "n",
+      "synonyms": [
+        "nearness",
+        "closeness",
+        "vicinity"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p02",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "نزدیکی",
+        "مجاورت"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 2,
+      "1401": 1
+    },
+    "byYear": {
+      "1399": 2,
+      "1401": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1401,
+    "priority": 13,
+    "timesAsAnswer": 3,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "proximity"
+  ]
+}

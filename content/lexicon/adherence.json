@@ -1,0 +1,84 @@
+{
+  "confusables": [
+    {
+      "note": "adhesion به چسبیدن فیزیکی دو چیز به هم اشاره دارد، اما adherence یعنی پایبندی به قاعده یا باور.",
+      "word": "adhesion"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "adherence",
+  "lemma": "adherence",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p08",
+      "part": "vocabulary",
+      "questionNo": 18,
+      "reach": 1,
+      "surface": "adherence",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "violation",
+        "defiance"
+      ],
+      "definition": "the fact of behaving according to a rule, a belief or an agreement, and continuing to do so",
+      "examples": [
+        {
+          "en": "Strict adherence to the safety rules kept the factory free of accidents.",
+          "fa": "پایبندی سختگیرانه به قواعد ایمنی، کارخانه را از حادثه دور نگه داشت."
+        }
+      ],
+      "ipa": "/ədˈhɪərəns/",
+      "pos": "n",
+      "synonyms": [
+        "compliance",
+        "observance",
+        "loyalty"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p08",
+          "questionNo": 18
+        }
+      ],
+      "translations": [
+        "پایبندی",
+        "تبعیت",
+        "وفاداری (به اصول)"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "adherence"
+  ]
+}

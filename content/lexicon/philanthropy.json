@@ -1,0 +1,84 @@
+{
+  "confusables": [
+    {
+      "note": "پایانه مشترک ‑anthropy گمراه‌کننده است؛ misanthropy یعنی مردم‌گریزی، درست نقطه مقابل philanthropy.",
+      "word": "misanthropy"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "philanthropy",
+  "lemma": "philanthropy",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p07",
+      "part": "vocabulary",
+      "questionNo": 167,
+      "reach": 1,
+      "surface": "philanthropy",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "misanthropy"
+      ],
+      "definition": "the practice of helping people in need, especially by giving money to good causes",
+      "examples": [
+        {
+          "en": "His philanthropy funded three hospitals in towns that had none.",
+          "fa": "بشردوستی او هزینه ساخت سه بیمارستان را در شهرهایی که بیمارستان نداشتند تأمین کرد."
+        }
+      ],
+      "ipa": "/fɪˈlænθrəpi/",
+      "pos": "n",
+      "synonyms": [
+        "generosity",
+        "charity"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 167
+        }
+      ],
+      "translations": [
+        "نوع‌دوستی",
+        "بشردوستی",
+        "خیرخواهی و بخشش مالی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "philanthropy"
+  ]
+}

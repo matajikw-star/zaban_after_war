@@ -1,0 +1,95 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "pantheon",
+  "lemma": "pantheon",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p09",
+      "part": "vocabulary",
+      "questionNo": 13,
+      "reach": 1,
+      "surface": "pantheon",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "the group of people who are the most famous and most admired in a particular field",
+      "examples": [
+        {
+          "en": "She now belongs to the pantheon of great modern novelists.",
+          "fa": "او اکنون در جمع بزرگان رمان‌نویسی مدرن جای دارد."
+        }
+      ],
+      "ipa": "/ˈpænθiən/",
+      "pos": "n",
+      "synonyms": [
+        "elite",
+        "hall of fame"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 13
+        }
+      ],
+      "translations": [
+        "جمع بزرگان",
+        "صف نام‌آوران",
+        "قلهٔ مشاهیر"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "all the gods of a people or a religion taken together, or a temple built to honor them",
+      "examples": [
+        {
+          "en": "Each god of the Greek pantheon ruled a different part of life.",
+          "fa": "هر خدای مجموعهٔ خدایان یونان بر بخشی متفاوت از زندگی فرمان می‌راند."
+        }
+      ],
+      "ipa": "/ˈpænθiən/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "مجموعهٔ خدایان",
+        "پرستشگاه همهٔ خدایان"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "pantheon"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "confusables": [
+    {
+      "note": "املای نزدیکی دارد اما arrange یعنی مرتب کردن و ترتیب دادن، نه مختل کردن",
+      "word": "arrange"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "derange",
+  "lemma": "derange",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p07",
+      "part": "vocabulary",
+      "questionNo": 14,
+      "reach": 1,
+      "surface": "deranged",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to make someone unable to think or behave normally, usually through mental illness; a person in that state is \"deranged\"",
+      "examples": [
+        {
+          "en": "Years of isolation had deranged the old man's mind completely.",
+          "fa": "سال‌ها انزوا ذهن آن پیرمرد را کاملاً مختل کرده بود."
+        }
+      ],
+      "ipa": "/dɪˈreɪndʒ/",
+      "pos": "v",
+      "synonyms": [
+        "unhinge",
+        "madden"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p07",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "مختل کردن (ذهن)",
+        "دیوانه کردن",
+        "آشفته کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "deranged"
+  ]
+}

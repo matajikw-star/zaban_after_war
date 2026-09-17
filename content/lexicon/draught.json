@@ -1,0 +1,43 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "draught",
+  "lemma": "draught",
+  "level": null,
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1403-p05",
+      "part": "vocabulary",
+      "questionNo": 17,
+      "reach": 1,
+      "surface": "draught",
+      "year": 1403
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1403": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1403,
+    "lastYear": 1403,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "draught"
+  ]
+}

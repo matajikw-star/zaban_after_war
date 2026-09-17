@@ -1,0 +1,168 @@
+{
+  "confusables": [
+    {
+      "note": "شباهت ظاهری؛ comprehensive یعنی جامع و فراگیر، نه نگران",
+      "word": "comprehensive"
+    },
+    {
+      "note": "هم‌ریشه است اما فعل و به معنای دستگیر کردن یا درک کردن",
+      "word": "apprehend"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "apprehensive",
+  "lemma": "apprehensive",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1405-p03",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 22,
+      "surface": "apprehensive",
+      "year": 1405
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1401-p05",
+      "part": "vocabulary",
+      "questionNo": 21,
+      "reach": 1,
+      "surface": "apprehensive",
+      "year": 1401
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 23,
+      "surface": "apprehensive",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 5,
+      "surface": "apprehensive",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 1,
+      "surface": "apprehensive",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 1,
+      "surface": "apprehensive",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "confident",
+        "unconcerned"
+      ],
+      "definition": "worried or nervous that something unpleasant is going to happen",
+      "examples": [
+        {
+          "en": "She felt apprehensive about her first day at the new school.",
+          "fa": "او دربارهٔ نخستین روزش در مدرسهٔ جدید دلواپس بود."
+        }
+      ],
+      "ipa": "/ˌæprɪˈhensɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "anxious",
+        "uneasy",
+        "fearful"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p03",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 21
+        },
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "دلواپس",
+        "نگران",
+        "بیمناک"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 4,
+      "1405": 1
+    },
+    "byYear": {
+      "1400": 4,
+      "1401": 1,
+      "1405": 1
+    },
+    "distinctYears": 3,
+    "firstYear": 1400,
+    "lastYear": 1405,
+    "priority": 22,
+    "timesAsAnswer": 5,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 6
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "apprehensive"
+  ]
+}

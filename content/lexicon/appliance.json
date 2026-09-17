@@ -1,0 +1,94 @@
+{
+  "confusables": [
+    {
+      "note": "applicant یعنی متقاضی یا داوطلب، نه وسیله خانگی",
+      "word": "applicant"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "appliance",
+  "lemma": "appliance",
+  "level": "B1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p01",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 42,
+      "surface": "appliances",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p03",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 16,
+      "surface": "appliances",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a machine made for a particular job in the home, such as a washing machine",
+      "examples": [
+        {
+          "en": "Modern appliances use far less electricity than those sold twenty years ago.",
+          "fa": "لوازم خانگی امروزی بسیار کمتر از مدل‌های بیست سال پیش برق مصرف می‌کنند."
+        }
+      ],
+      "ipa": "/əˈplaɪəns/",
+      "pos": "n",
+      "synonyms": [
+        "device",
+        "gadget"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "وسیله برقی خانگی",
+        "لوازم خانگی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "appliances"
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "confusables": [
+    {
+      "note": "notify مفعولش شخص است (به کسی خبر می‌دهند)، اما clarify مفعولش خودِ مطلب است (چیزی را روشن می‌کند) — دام همیشگی کنکور.",
+      "word": "clarify"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "notify",
+  "lemma": "notify",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p01",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 48,
+      "surface": "notifies",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p04",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 6,
+      "surface": "notifies",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 3,
+      "surface": "notifies",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "conceal"
+      ],
+      "definition": "to tell a person or an organization about something officially; the object is the one who is told, not the news itself",
+      "examples": [
+        {
+          "en": "Please notify the office at once if your home address changes.",
+          "fa": "اگر نشانی منزلتان تغییر کرد، لطفاً فوراً به دفتر اطلاع دهید."
+        }
+      ],
+      "ipa": "/ˈnəʊtɪfaɪ/",
+      "pos": "v",
+      "synonyms": [
+        "inform",
+        "advise",
+        "apprise"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "اطلاع دادن به",
+        "آگاه کردن",
+        "ابلاغ کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "notifies"
+  ]
+}

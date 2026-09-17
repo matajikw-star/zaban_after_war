@@ -1,0 +1,117 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "inclination",
+  "lemma": "inclination",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1402-p02",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 32,
+      "surface": "inclinations",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1401-p03",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 31,
+      "surface": "inclination",
+      "year": 1401
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "disinclination",
+        "aversion"
+      ],
+      "definition": "a feeling that makes you want to behave in a particular way, or a natural tendency to do something",
+      "examples": [
+        {
+          "en": "She had no inclination to argue with him at that late hour.",
+          "fa": "او در آن ساعت دیروقت هیچ تمایلی به بحث کردن با او نداشت."
+        }
+      ],
+      "ipa": "/ˌɪnklɪˈneɪʃn/",
+      "pos": "noun",
+      "synonyms": [
+        "tendency",
+        "propensity",
+        "leaning"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p02",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1401-p03",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "تمایل",
+        "گرایش",
+        "رغبت"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "the angle at which something slopes away from a flat or upright line",
+      "examples": [
+        {
+          "en": "The inclination of the roof helps the rain run off quickly.",
+          "fa": "شیب سقف کمک می‌کند باران به سرعت سرازیر شود."
+        }
+      ],
+      "ipa": "/ˌɪnklɪˈneɪʃn/",
+      "pos": "noun",
+      "synonyms": [
+        "slope",
+        "tilt"
+      ],
+      "testedIn": [],
+      "translations": [
+        "شیب",
+        "زاویه انحراف"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1401": 1,
+      "1402": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1401,
+    "lastYear": 1402,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "inclination",
+    "inclinations"
+  ]
+}

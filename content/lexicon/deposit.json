@@ -1,0 +1,115 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "deposit",
+  "lemma": "deposit",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p01",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 42,
+      "surface": "deposits",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p03",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 16,
+      "surface": "deposits",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "an amount of a mineral or other substance that has collected in the ground over a long time",
+      "examples": [
+        {
+          "en": "Large deposits of copper were found beneath the desert plain.",
+          "fa": "ذخایر بزرگی از مس در زیر دشت کویری یافت شد."
+        }
+      ],
+      "ipa": "/dɪˈpɒzɪt/",
+      "pos": "n",
+      "synonyms": [
+        "reserve",
+        "seam"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "ذخیرهٔ معدنی",
+        "نهشته",
+        "رسوب"
+      ]
+    },
+    {
+      "antonyms": [
+        "withdrawal"
+      ],
+      "definition": "money paid into a bank account, or a first part of a larger payment",
+      "examples": [
+        {
+          "en": "We paid a deposit on the flat and then signed the contract.",
+          "fa": "ما برای آپارتمان پیش‌پرداختی دادیم و سپس قرارداد را امضا کردیم."
+        }
+      ],
+      "ipa": "/dɪˈpɒzɪt/",
+      "pos": "n",
+      "synonyms": [
+        "down payment"
+      ],
+      "testedIn": [],
+      "translations": [
+        "سپرده",
+        "پیش‌پرداخت",
+        "ودیعه"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 2
+    },
+    "byYear": {
+      "1399": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 8,
+    "timesAsAnswer": 2,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "deposits"
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "call",
+  "lemma": "call",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1403-p03",
+      "part": "cloze",
+      "questionNo": 22,
+      "reach": 1,
+      "surface": "called for",
+      "year": 1403
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1403-p04",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 1,
+      "surface": "called off",
+      "year": 1403
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "go ahead with"
+      ],
+      "definition": "\"call off\": to cancel an event, or to stop an activity that has already begun",
+      "examples": [
+        {
+          "en": "They called off the match an hour before kick-off.",
+          "fa": "آن‌ها مسابقه را یک ساعت پیش از شروع لغو کردند."
+        }
+      ],
+      "ipa": "/ˌkɔːl ˈɒf/",
+      "pos": "v",
+      "synonyms": [
+        "cancel",
+        "scrap",
+        "abandon"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p04",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "لغو کردن",
+        "متوقف کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "\"call for\": to need something, or to demand it publicly",
+      "examples": [
+        {
+          "en": "The report calls for a full review of the safety rules.",
+          "fa": "این گزارش خواستار بازنگری کامل مقررات ایمنی است."
+        }
+      ],
+      "ipa": "/ˌkɔːl ˈfɔː(r)/",
+      "pos": "v",
+      "synonyms": [
+        "require",
+        "demand",
+        "warrant"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p03",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "نیازمند بودن به",
+        "خواستار شدن",
+        "طلب کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to telephone someone, or to say something loudly to attract attention",
+      "examples": [
+        {
+          "en": "Call me as soon as your train reaches the station.",
+          "fa": "به‌محض اینکه قطارت به ایستگاه رسید به من تلفن بزن."
+        }
+      ],
+      "ipa": "/kɔːl/",
+      "pos": "v",
+      "synonyms": [
+        "phone",
+        "ring",
+        "shout"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تلفن زدن",
+        "صدا زدن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1403": 1
+    },
+    "byYear": {
+      "1403": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1403,
+    "lastYear": 1403,
+    "priority": 6,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "called for",
+    "called off"
+  ]
+}

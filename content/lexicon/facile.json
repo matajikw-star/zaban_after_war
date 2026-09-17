@@ -1,0 +1,110 @@
+{
+  "confusables": [
+    {
+      "note": "املای نزدیک اما بی‌ربط: fragile یعنی شکننده و آسیب‌پذیر.",
+      "word": "fragile"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "facile",
+  "lemma": "facile",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p09",
+      "part": "vocabulary",
+      "questionNo": 19,
+      "reach": 1,
+      "surface": "facile",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "laborious",
+        "arduous"
+      ],
+      "definition": "done or achieved without any apparent effort, so that a hard task looks easy",
+      "examples": [
+        {
+          "en": "Her facile command of three languages surprised everyone at the meeting.",
+          "fa": "تسلط بی‌زحمت او بر سه زبان همه را در آن جلسه شگفت‌زده کرد."
+        }
+      ],
+      "ipa": "/ˈfæsaɪl/",
+      "pos": "adj",
+      "synonyms": [
+        "effortless",
+        "easy"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 19
+        }
+      ],
+      "translations": [
+        "آسان",
+        "بی‌زحمت",
+        "راحت و روان"
+      ]
+    },
+    {
+      "antonyms": [
+        "profound"
+      ],
+      "definition": "too simple, and produced without enough thought about a difficult subject",
+      "examples": [
+        {
+          "en": "He offered a facile answer to a question that deserved real study.",
+          "fa": "او به پرسشی که بررسی جدی می‌طلبید پاسخی ساده‌انگارانه داد."
+        }
+      ],
+      "ipa": "/ˈfæsaɪl/",
+      "pos": "adj",
+      "synonyms": [
+        "simplistic",
+        "glib",
+        "shallow"
+      ],
+      "testedIn": [],
+      "translations": [
+        "سطحی",
+        "ساده‌انگارانه",
+        "بی‌عمق"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "facile"
+  ]
+}

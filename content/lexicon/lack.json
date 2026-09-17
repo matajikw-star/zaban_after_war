@@ -1,0 +1,104 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "lack",
+  "lemma": "lack",
+  "level": "B1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p07",
+      "part": "vocabulary",
+      "questionNo": 170,
+      "reach": 1,
+      "surface": "Lacking",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "possess",
+        "have"
+      ],
+      "definition": "to not have something, or to not have enough of it",
+      "examples": [
+        {
+          "en": "Many village schools still lack a reliable internet connection.",
+          "fa": "بسیاری از مدرسه‌های روستایی هنوز اتصال اینترنت قابل‌اتکا ندارند."
+        }
+      ],
+      "ipa": "/læk/",
+      "pos": "v",
+      "synonyms": [
+        "want",
+        "need"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 170
+        }
+      ],
+      "translations": [
+        "نداشتن",
+        "کم داشتن",
+        "فاقد بودن"
+      ]
+    },
+    {
+      "antonyms": [
+        "abundance"
+      ],
+      "definition": "the state of not having something, or of not having enough of it",
+      "examples": [
+        {
+          "en": "The project failed for lack of money, not for lack of ideas.",
+          "fa": "طرح به دلیل کمبود پول شکست خورد، نه کمبود ایده."
+        }
+      ],
+      "ipa": "/læk/",
+      "pos": "n",
+      "synonyms": [
+        "shortage",
+        "absence"
+      ],
+      "testedIn": [],
+      "translations": [
+        "کمبود",
+        "فقدان",
+        "نبود"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "Lacking"
+  ]
+}

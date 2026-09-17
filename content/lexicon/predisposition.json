@@ -1,0 +1,84 @@
+{
+  "confusables": [
+    {
+      "note": "هم‌ریشه و نزدیک است؛ disposition یعنی خُلق‌وخوی کلی، اما predisposition زمینه یا آمادگی از پیش موجود برای چیزی است.",
+      "word": "disposition"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "predisposition",
+  "lemma": "predisposition",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1403-p04",
+      "part": "cloze",
+      "questionNo": 29,
+      "reach": 1,
+      "surface": "predisposition",
+      "year": 1403
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "aversion"
+      ],
+      "definition": "a tendency to behave, think or feel in a particular way, or to suffer from a particular illness",
+      "examples": [
+        {
+          "en": "Some families carry a genetic predisposition to high blood pressure.",
+          "fa": "برخی خانواده‌ها زمینه ژنتیکی ابتلا به فشار خون بالا را دارند."
+        }
+      ],
+      "ipa": "/ˌpriːdɪspəˈzɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "tendency",
+        "inclination"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p04",
+          "questionNo": 29
+        }
+      ],
+      "translations": [
+        "گرایش پیشین",
+        "زمینه (ابتلا یا رفتار)",
+        "آمادگی ذهنی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1403": 1
+    },
+    "byYear": {
+      "1403": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1403,
+    "lastYear": 1403,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "predisposition"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "anticipate",
+  "lemma": "anticipate",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1404-p03",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 28,
+      "surface": "anticipate",
+      "year": 1404
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to expect that something will happen and to take action to prepare for it in advance",
+      "examples": [
+        {
+          "en": "Good managers anticipate problems long before customers begin to complain.",
+          "fa": "مدیران خوب مشکلات را مدت‌ها پیش از آنکه مشتریان شکایت کنند پیش‌بینی می‌کنند."
+        }
+      ],
+      "ipa": "/ænˈtɪsɪpeɪt/",
+      "pos": "verb",
+      "synonyms": [
+        "foresee",
+        "expect"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p03",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "پیش‌بینی کردن",
+        "انتظار داشتن",
+        "از پیش آماده شدن برای"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1404": 1
+    },
+    "byYear": {
+      "1404": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1404,
+    "lastYear": 1404,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "anticipate"
+  ]
+}

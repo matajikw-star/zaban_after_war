@@ -1,0 +1,120 @@
+{
+  "confusables": [
+    {
+      "note": "evolve یعنی تکامل یافتن و به‌تدریج تغییر کردن",
+      "word": "evolve"
+    },
+    {
+      "note": "revolve یعنی چرخیدن دور یک محور",
+      "word": "revolve"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "devolve",
+  "lemma": "devolve",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p07",
+      "part": "vocabulary",
+      "questionNo": 20,
+      "reach": 1,
+      "surface": "devolve",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 12,
+      "reach": 1,
+      "surface": "devolve",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "centralize"
+      ],
+      "definition": "to pass power, work or responsibility from a central authority down to a lower level",
+      "examples": [
+        {
+          "en": "The government devolved health budgets to the provincial councils.",
+          "fa": "دولت بودجه‌های سلامت را به شوراهای استانی واگذار کرد."
+        }
+      ],
+      "ipa": "/dɪˈvɒlv/",
+      "pos": "v",
+      "synonyms": [
+        "delegate",
+        "transfer"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p07",
+          "questionNo": 20
+        },
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 12
+        }
+      ],
+      "translations": [
+        "واگذار کردن (اختیارات)",
+        "تفویض کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "used with \"into\", to get worse and turn into a disorderly state",
+      "examples": [
+        {
+          "en": "The meeting devolved into shouting before the first hour ended.",
+          "fa": "جلسه پیش از پایان ساعت نخست به داد و فریاد کشیده شد."
+        }
+      ],
+      "ipa": "/dɪˈvɒlv/",
+      "pos": "v",
+      "synonyms": [
+        "degenerate"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تنزل یافتن به",
+        "کشیده شدن به (وضعیتی بد)"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "devolve"
+  ]
+}

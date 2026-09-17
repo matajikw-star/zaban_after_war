@@ -1,0 +1,145 @@
+{
+  "confusables": [
+    {
+      "note": "در گزینه‌های همین آزمون آمده بود؛ یعنی جدا شدن یک منطقه یا گروه از یک اتحاد.",
+      "word": "secede"
+    },
+    {
+      "note": "یعنی پیش از چیزی آمدن یا مقدم بودن، نه عقب رفتن.",
+      "word": "precede"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "recede",
+  "lemma": "recede",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1402-p04",
+      "part": "vocabulary",
+      "questionNo": 11,
+      "reach": 1,
+      "surface": "recede",
+      "year": 1402
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 12,
+      "surface": "recede",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 10,
+      "surface": "recede",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "advance",
+        "rise"
+      ],
+      "definition": "to move back or away from a position it had reached before, said especially of water",
+      "examples": [
+        {
+          "en": "As the sea receded, a wide stretch of sand appeared.",
+          "fa": "با پس رفتن آب دریا، پهنهٔ وسیعی از شن پدیدار شد."
+        }
+      ],
+      "ipa": "/rɪˈsiːd/",
+      "pos": "v",
+      "synonyms": [
+        "retreat",
+        "withdraw",
+        "ebb"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1402-p04",
+          "questionNo": 11
+        }
+      ],
+      "translations": [
+        "پس رفتن",
+        "عقب نشستن",
+        "فروکش کردن"
+      ]
+    },
+    {
+      "antonyms": [
+        "intensify"
+      ],
+      "definition": "of a feeling, a memory or a problem, to become gradually weaker or less noticeable",
+      "examples": [
+        {
+          "en": "The pain slowly receded after she took the second tablet.",
+          "fa": "درد پس از خوردن قرص دوم به‌آرامی فروکش کرد."
+        }
+      ],
+      "ipa": "/rɪˈsiːd/",
+      "pos": "v",
+      "synonyms": [
+        "fade",
+        "subside",
+        "diminish"
+      ],
+      "testedIn": [],
+      "translations": [
+        "کم‌رنگ شدن",
+        "فروکش کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 2
+    },
+    "byYear": {
+      "1399": 2,
+      "1402": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1402,
+    "priority": 11,
+    "timesAsAnswer": 2,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "recede"
+  ]
+}

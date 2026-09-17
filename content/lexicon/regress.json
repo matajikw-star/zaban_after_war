@@ -1,0 +1,147 @@
+{
+  "confusables": [
+    {
+      "note": "یعنی از موضوع اصلی منحرف شدن، نه پسرفت کردن.",
+      "word": "digress"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "regress",
+  "lemma": "regress",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1402-p05",
+      "part": "vocabulary",
+      "questionNo": 13,
+      "reach": 1,
+      "surface": "regressed",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1401-p05",
+      "part": "vocabulary",
+      "questionNo": 26,
+      "reach": 1,
+      "surface": "regress",
+      "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p01",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 48,
+      "surface": "regress",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p04",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 6,
+      "surface": "regress",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 3,
+      "surface": "regress",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "progress",
+        "advance"
+      ],
+      "definition": "to return to an earlier and worse state or to a less developed way of behaving",
+      "examples": [
+        {
+          "en": "Without regular practice, his reading skills began to regress.",
+          "fa": "بدون تمرین منظم، مهارت خواندن او رو به پسرفت گذاشت."
+        }
+      ],
+      "ipa": "/rɪˈɡres/",
+      "pos": "v",
+      "synonyms": [
+        "deteriorate",
+        "backslide",
+        "revert"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p05",
+          "questionNo": 13
+        },
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 26
+        },
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "پسرفت کردن",
+        "واپس‌روی کردن",
+        "به حالت بدتر قبلی برگشتن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 3,
+      "1401": 1,
+      "1402": 1
+    },
+    "distinctYears": 3,
+    "firstYear": 1400,
+    "lastYear": 1402,
+    "priority": 11,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 5,
+    "timesTested": 5
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "regress",
+    "regressed"
+  ]
+}

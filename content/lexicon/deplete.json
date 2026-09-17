@@ -1,0 +1,178 @@
+{
+  "confusables": [
+    {
+      "note": "شکل نزدیک، اما deplore یعنی به‌شدت محکوم کردن یا افسوس خوردن",
+      "word": "deplore"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "deplete",
+  "lemma": "deplete",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p02",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 30,
+      "surface": "depletes",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p07",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 2,
+      "surface": "depletes",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p11",
+      "part": "vocabulary",
+      "questionNo": 34,
+      "reach": 1,
+      "surface": "depleted",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p13",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 1,
+      "surface": "depletes",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p02",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 20,
+      "surface": "depleted",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p06",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 9,
+      "surface": "depleted",
+      "year": 1399
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p11",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 1,
+      "surface": "depleted",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "replenish",
+        "accumulate"
+      ],
+      "definition": "to reduce the amount or the supply of something by a large degree, often until little is left",
+      "examples": [
+        {
+          "en": "Years of drought have depleted the water reserves of the whole region.",
+          "fa": "سال‌ها خشکسالی ذخایر آب کل آن منطقه را تحلیل برده است."
+        }
+      ],
+      "ipa": "/dɪˈpliːt/",
+      "pos": "v",
+      "synonyms": [
+        "exhaust",
+        "drain",
+        "use up"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p11",
+          "questionNo": 34
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "تحلیل بردن",
+        "تمام کردن (ذخیره یا منابع)",
+        "به‌شدت کاستن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 3
+    },
+    "byYear": {
+      "1399": 3,
+      "1400": 4
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1400,
+    "priority": 17,
+    "timesAsAnswer": 3,
+    "timesAsContext": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 7
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "depleted",
+    "depletes"
+  ]
+}

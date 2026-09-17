@@ -1,0 +1,102 @@
+{
+  "confusables": [
+    {
+      "note": "liturgy یعنی کل آیین و مناسک عبادی؛ litany در امتحان به معنای فهرست طولانی و خسته‌کننده است.",
+      "word": "liturgy"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "litany",
+  "lemma": "litany",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 19,
+      "reach": 1,
+      "surface": "litany",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a long and tiring list of things, especially of complaints, problems or details recited one after another",
+      "examples": [
+        {
+          "en": "Her letter was a litany of complaints about the new management.",
+          "fa": "نامهٔ او فهرستی طولانی از شکایت‌ها دربارهٔ مدیریت جدید بود."
+        }
+      ],
+      "ipa": "/ˈlɪtəni/",
+      "pos": "n",
+      "synonyms": [
+        "catalogue",
+        "recital"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 19
+        }
+      ],
+      "translations": [
+        "فهرست بلندبالا",
+        "رشتهٔ طولانی و ملال‌آور",
+        "ردیف کردن پی‌درپی"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a series of prayers in a church service in which a leader speaks a line and the people give a fixed reply",
+      "examples": [
+        {
+          "en": "The congregation answered each line of the litany in unison.",
+          "fa": "جماعت هر بند مناجات را یک‌صدا پاسخ می‌داد."
+        }
+      ],
+      "ipa": "/ˈlɪtəni/",
+      "pos": "n",
+      "synonyms": [
+        "invocation"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مناجات پرسش‌وپاسخی",
+        "دعای جمعی کلیسایی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "litany"
+  ]
+}

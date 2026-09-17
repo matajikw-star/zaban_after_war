@@ -1,0 +1,105 @@
+{
+  "confusables": [
+    {
+      "note": "disperse یعنی پراکنده کردن جمعیت یا ذرات، اما dispel برای احساس و باور به کار می‌رود",
+      "word": "disperse"
+    },
+    {
+      "note": "هم‌قافیه اما متفاوت؛ expel یعنی اخراج کردن",
+      "word": "expel"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "dispel",
+  "lemma": "dispel",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1402-p02",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 32,
+      "surface": "dispelling",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 30,
+      "reach": 1,
+      "surface": "dispelled",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "arouse",
+        "reinforce"
+      ],
+      "definition": "to make a feeling, belief or doubt go away, especially one that is mistaken or unpleasant",
+      "examples": [
+        {
+          "en": "A single phone call dispelled all her fears about the results.",
+          "fa": "یک تماس تلفنی همهٔ ترس‌های او دربارهٔ نتایج را زدود."
+        }
+      ],
+      "ipa": "/dɪˈspel/",
+      "pos": "v",
+      "synonyms": [
+        "banish",
+        "allay",
+        "dismiss"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p02",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 30
+        }
+      ],
+      "translations": [
+        "زدودن",
+        "برطرف کردن",
+        "از میان بردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 1,
+      "1402": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1402,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "dispelled",
+    "dispelling"
+  ]
+}

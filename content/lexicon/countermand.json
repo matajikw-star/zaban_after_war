@@ -1,0 +1,86 @@
+{
+  "confusables": [
+    {
+      "note": "شباهت ظاهری؛ counteract یعنی خنثی کردن اثر چیزی، نه لغو کردن دستور",
+      "word": "counteract"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "countermand",
+  "lemma": "countermand",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p05",
+      "part": "vocabulary",
+      "questionNo": 30,
+      "reach": 1,
+      "surface": "countermanded",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "confirm",
+        "uphold"
+      ],
+      "definition": "to cancel an order or instruction that has already been given, usually by issuing a new one",
+      "examples": [
+        {
+          "en": "The new commander countermanded the retreat ordered the previous night.",
+          "fa": "فرمانده‌ی جدید دستور عقب‌نشینیِ شب پیش را لغو کرد."
+        }
+      ],
+      "ipa": "/ˌkaʊntəˈmɑːnd/",
+      "pos": "v",
+      "synonyms": [
+        "revoke",
+        "rescind",
+        "cancel"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 30
+        }
+      ],
+      "translations": [
+        "لغو کردن (دستور یا سفارش)",
+        "پس گرفتن دستور",
+        "باطل کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "countermanded"
+  ]
+}

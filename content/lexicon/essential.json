@@ -1,0 +1,117 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "essential",
+  "lemma": "essential",
+  "level": "B1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p01",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 42,
+      "surface": "essential",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p03",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 16,
+      "surface": "essential",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "optional",
+        "unnecessary"
+      ],
+      "definition": "completely necessary; something you cannot manage without",
+      "examples": [
+        {
+          "en": "Clean water is essential for the health of the whole village.",
+          "fa": "آب پاک برای سلامت کل روستا ضروری است."
+        }
+      ],
+      "ipa": "/ɪˈsenʃl/",
+      "pos": "adj",
+      "synonyms": [
+        "necessary",
+        "vital",
+        "indispensable"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "ضروری",
+        "لازم",
+        "اساسی"
+      ]
+    },
+    {
+      "antonyms": [
+        "incidental"
+      ],
+      "definition": "belonging to the basic nature of a person or thing; central rather than added",
+      "examples": [
+        {
+          "en": "The essential difference between the two plans is who pays.",
+          "fa": "تفاوت بنیادی این دو طرح در این است که چه کسی هزینه را می‌پردازد."
+        }
+      ],
+      "ipa": "/ɪˈsenʃl/",
+      "pos": "adj",
+      "synonyms": [
+        "fundamental",
+        "intrinsic"
+      ],
+      "testedIn": [],
+      "translations": [
+        "ذاتی",
+        "بنیادی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 2
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 4,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "essential"
+  ]
+}

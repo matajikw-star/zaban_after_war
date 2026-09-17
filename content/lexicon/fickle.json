@@ -1,0 +1,101 @@
+{
+  "confusables": [
+    {
+      "note": "feckless یعنی بی‌عرضه و بی‌مسئولیت، نه دمدمی‌مزاج",
+      "word": "feckless"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "fickle",
+  "lemma": "fickle",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1405-p05",
+      "part": "vocabulary",
+      "questionNo": 19,
+      "reach": 1,
+      "surface": "fickle",
+      "year": 1405
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 25,
+      "reach": 1,
+      "surface": "fickle",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "steadfast",
+        "constant"
+      ],
+      "definition": "changing often in feelings, opinions or behaviour, so that nobody can rely on it",
+      "examples": [
+        {
+          "en": "Fashion is fickle, and last year's favourite colour is now ignored.",
+          "fa": "مد بی‌ثبات است و رنگ محبوب سال گذشته حالا نادیده گرفته می‌شود."
+        }
+      ],
+      "ipa": "/ˈfɪkl/",
+      "pos": "adj",
+      "synonyms": [
+        "capricious",
+        "changeable"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 19
+        },
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 25
+        }
+      ],
+      "translations": [
+        "دمدمی‌مزاج",
+        "بی‌ثبات",
+        "متلون"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1405": 1
+    },
+    "byYear": {
+      "1399": 1,
+      "1405": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1405,
+    "priority": 8,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "fickle"
+  ]
+}

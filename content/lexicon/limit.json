@@ -1,0 +1,118 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "limit",
+  "lemma": "limit",
+  "level": "A2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1405-p06",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "limit",
+      "year": 1405
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1401-p05",
+      "part": "vocabulary",
+      "questionNo": 11,
+      "reach": 1,
+      "surface": "limit",
+      "year": 1401
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "the greatest amount or point that is allowed or possible, beyond which something cannot go",
+      "examples": [
+        {
+          "en": "There is a strict limit on how much luggage each passenger may carry.",
+          "fa": "برای مقدار چمدانی که هر مسافر می‌تواند ببرد حد سختگیرانه‌ای وجود دارد."
+        }
+      ],
+      "ipa": "/ˈlɪmɪt/",
+      "pos": "noun",
+      "synonyms": [
+        "boundary",
+        "ceiling",
+        "maximum"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 11
+        }
+      ],
+      "translations": [
+        "حد",
+        "مرز",
+        "سقف (مجاز)"
+      ]
+    },
+    {
+      "antonyms": [
+        "expand",
+        "extend"
+      ],
+      "definition": "to stop something from becoming greater than a particular amount or level",
+      "examples": [
+        {
+          "en": "The doctor asked him to limit his coffee to two cups a day.",
+          "fa": "پزشک از او خواست قهوه‌اش را به دو فنجان در روز محدود کند."
+        }
+      ],
+      "ipa": "/ˈlɪmɪt/",
+      "pos": "verb",
+      "synonyms": [
+        "restrict",
+        "curb",
+        "cap"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p06",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "محدود کردن",
+        "کاهش دادن به حد معین"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1401": 1,
+      "1405": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1401,
+    "lastYear": 1405,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "limit"
+  ]
+}

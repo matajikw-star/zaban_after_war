@@ -1,0 +1,148 @@
+{
+  "confusables": [
+    {
+      "note": "املای بسیار نزدیک، اما relive یعنی دوباره تجربه کردن خاطره یا رویداد",
+      "word": "relive"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "relieve",
+  "lemma": "relieve",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 23,
+      "surface": "relieve",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 5,
+      "surface": "relieve",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "relieve",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "relieve",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "aggravate"
+      ],
+      "definition": "to make pain, worry or an unpleasant feeling less severe",
+      "examples": [
+        {
+          "en": "A warm bath relieved the aching in her shoulders.",
+          "fa": "یک حمام گرم درد شانه‌هایش را تسکین داد."
+        }
+      ],
+      "ipa": "/rɪˈliːv/",
+      "pos": "v",
+      "synonyms": [
+        "ease",
+        "alleviate",
+        "soothe"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "تسکین دادن",
+        "کاستن از (درد یا نگرانی)"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "used in \"relieve somebody of something\", to take a burden or a duty away from someone",
+      "examples": [
+        {
+          "en": "The assistant relieved him of the heavy bags at the door.",
+          "fa": "دستیار، کیف‌های سنگین را دم در از او گرفت."
+        }
+      ],
+      "ipa": "/rɪˈliːv/",
+      "pos": "v",
+      "synonyms": [
+        "free",
+        "release"
+      ],
+      "testedIn": [],
+      "translations": [
+        "بار چیزی را از دوش کسی برداشتن",
+        "معاف کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 4
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "relieve"
+  ]
+}

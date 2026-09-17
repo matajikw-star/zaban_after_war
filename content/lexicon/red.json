@@ -1,0 +1,101 @@
+{
+  "confusables": [
+    {
+      "note": "شکل گذشته read دقیقاً مثل red تلفظ می‌شود؛ در شنیدن این دو را با هم اشتباه نگیرید.",
+      "word": "read"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "red",
+  "lemma": "red",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p10",
+      "part": "vocabulary",
+      "questionNo": 21,
+      "reach": 1,
+      "surface": "red",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "used in the phrase \"red tape\" to describe official rules and paperwork that delay things without any real need",
+      "examples": [
+        {
+          "en": "Cutting red tape would let farmers export their fruit much faster.",
+          "fa": "کم کردن کاغذبازی اداری به کشاورزان اجازه می‌دهد میوه‌شان را بسیار سریع‌تر صادر کنند."
+        }
+      ],
+      "ipa": "/red/",
+      "pos": "adj",
+      "synonyms": [
+        "bureaucracy"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 21
+        }
+      ],
+      "translations": [
+        "کاغذبازی اداری (در ترکیب red tape)",
+        "بوروکراسی دست‌وپاگیر"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "having the colour of blood or of a ripe tomato",
+      "examples": [
+        {
+          "en": "She wore a red scarf that could be seen across the whole field.",
+          "fa": "او روسری قرمزی بسته بود که از آن سر زمین هم دیده می‌شد."
+        }
+      ],
+      "ipa": "/red/",
+      "pos": "adj",
+      "synonyms": [
+        "crimson",
+        "scarlet"
+      ],
+      "testedIn": [],
+      "translations": [
+        "قرمز",
+        "سرخ"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1
+    },
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "red"
+  ]
+}

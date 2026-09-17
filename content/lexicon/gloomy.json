@@ -1,0 +1,118 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "gloomy",
+  "lemma": "gloomy",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p11",
+      "part": "vocabulary",
+      "questionNo": 31,
+      "reach": 1,
+      "surface": "gloomy",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p01",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 58,
+      "surface": "gloomy",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "cheerful",
+        "optimistic"
+      ],
+      "definition": "feeling or showing sadness and very little hope about the future",
+      "examples": [
+        {
+          "en": "He looked gloomy all evening and hardly said a word to anyone.",
+          "fa": "او تمام شب غمگین به نظر می‌رسید و به سختی با کسی حرف زد."
+        }
+      ],
+      "ipa": "/ˈɡluːmi/",
+      "pos": "adj",
+      "synonyms": [
+        "despondent",
+        "morose",
+        "pessimistic"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p11",
+          "questionNo": 31
+        },
+        {
+          "paperId": "arshad-1398-p01",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "غمگین",
+        "دلگیر",
+        "ناامید"
+      ]
+    },
+    {
+      "antonyms": [
+        "bright"
+      ],
+      "definition": "dark in a way that makes a place feel sad or unpleasant",
+      "examples": [
+        {
+          "en": "We waited in a gloomy hall with one small window high above us.",
+          "fa": "در سالنی تاریک و دلگیر منتظر ماندیم که یک پنجره کوچک بالای سرمان داشت."
+        }
+      ],
+      "ipa": "/ˈɡluːmi/",
+      "pos": "adj",
+      "synonyms": [
+        "dim",
+        "dreary"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تاریک و دلگیر",
+        "غم‌انگیز (درباره مکان)"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1,
+      "1400": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1398,
+    "lastYear": 1400,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "gloomy"
+  ]
+}

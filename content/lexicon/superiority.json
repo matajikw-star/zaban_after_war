@@ -1,0 +1,143 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "superiority",
+  "lemma": "superiority",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 23,
+      "surface": "superiority",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 5,
+      "surface": "superiority",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 1,
+      "surface": "superiority",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 1,
+      "surface": "superiority",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "inferiority"
+      ],
+      "definition": "the state of being better, stronger or more important than someone or something else",
+      "examples": [
+        {
+          "en": "The team's superiority was obvious from the opening minutes of the match.",
+          "fa": "برتری آن تیم از همان دقایق نخست بازی آشکار بود."
+        }
+      ],
+      "ipa": "/suːˌpɪəriˈɒrəti/",
+      "pos": "n",
+      "synonyms": [
+        "advantage",
+        "dominance"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "برتری",
+        "تفوق"
+      ]
+    },
+    {
+      "antonyms": [
+        "humility"
+      ],
+      "definition": "a manner that shows you believe you are better than other people",
+      "examples": [
+        {
+          "en": "He spoke with an air of superiority that annoyed his colleagues.",
+          "fa": "او با حالتی از تکبر سخن می‌گفت که همکارانش را آزار می‌داد."
+        }
+      ],
+      "ipa": "/suːˌpɪəriˈɒrəti/",
+      "pos": "n",
+      "synonyms": [
+        "arrogance"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تکبر",
+        "برتری‌جویی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 4
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "superiority"
+  ]
+}

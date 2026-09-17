@@ -1,0 +1,104 @@
+{
+  "confusables": [
+    {
+      "note": "comprehend فقط یعنی فهمیدن و هرگز معنی «دستگیر کردن» نمی‌دهد.",
+      "word": "comprehend"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "apprehend",
+  "lemma": "apprehend",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p11",
+      "part": "vocabulary",
+      "questionNo": 21,
+      "reach": 1,
+      "surface": "apprehended",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "release"
+      ],
+      "definition": "to catch and arrest someone who is suspected of a crime",
+      "examples": [
+        {
+          "en": "Two suspects were apprehended at the border early on Monday morning.",
+          "fa": "دو مظنون بامداد دوشنبه در مرز دستگیر شدند."
+        }
+      ],
+      "ipa": "/ˌæprɪˈhend/",
+      "pos": "verb",
+      "synonyms": [
+        "arrest",
+        "seize"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p11",
+          "questionNo": 21
+        }
+      ],
+      "translations": [
+        "دستگیر کردن",
+        "بازداشت کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to understand something, especially something difficult or not obvious",
+      "examples": [
+        {
+          "en": "Young children cannot fully apprehend the danger of a busy road.",
+          "fa": "کودکان خردسال خطر یک خیابان پررفت‌وآمد را به‌طور کامل درک نمی‌کنند."
+        }
+      ],
+      "ipa": "/ˌæprɪˈhend/",
+      "pos": "verb",
+      "synonyms": [
+        "comprehend",
+        "grasp"
+      ],
+      "testedIn": [],
+      "translations": [
+        "درک کردن",
+        "دریافتن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1400": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "apprehended"
+  ]
+}

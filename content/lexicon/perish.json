@@ -1,0 +1,58 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "perish",
+  "lemma": "perish",
+  "level": null,
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p08",
+      "part": "grammar",
+      "questionNo": 11,
+      "reach": 1,
+      "surface": "perish",
+      "year": 1400
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 12,
+      "surface": "perished",
+      "year": 1399
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 10,
+      "surface": "perished",
+      "year": 1399
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 3,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "perish",
+    "perished"
+  ]
+}

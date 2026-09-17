@@ -1,0 +1,102 @@
+{
+  "confusables": [
+    {
+      "note": "املا و آوای نزدیک، اما bravery یعنی شجاعت",
+      "word": "bravery"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "brevity",
+  "lemma": "brevity",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1402-p03",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 29,
+      "surface": "brevity",
+      "year": 1402
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "verbosity"
+      ],
+      "definition": "the quality of using only a few words when speaking or writing",
+      "examples": [
+        {
+          "en": "Readers admire her brevity: she explains a difficult idea in two lines.",
+          "fa": "خوانندگان ایجاز او را می‌ستایند: اندیشه‌ای دشوار را در دو سطر توضیح می‌دهد."
+        }
+      ],
+      "ipa": "/ˈbrevəti/",
+      "pos": "n",
+      "synonyms": [
+        "conciseness",
+        "succinctness"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p03",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "ایجاز",
+        "اختصار",
+        "کوتاه‌گویی"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "the fact that something lasts only a short time",
+      "examples": [
+        {
+          "en": "The brevity of the visit disappointed everyone who had waited all morning.",
+          "fa": "کوتاهی آن دیدار همهٔ کسانی را که تمام صبح منتظر بودند ناامید کرد."
+        }
+      ],
+      "ipa": "/ˈbrevəti/",
+      "pos": "n",
+      "synonyms": [
+        "shortness"
+      ],
+      "testedIn": [],
+      "translations": [
+        "کوتاهی",
+        "زودگذری"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1402": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1402,
+    "lastYear": 1402,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "brevity"
+  ]
+}

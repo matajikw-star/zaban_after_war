@@ -1,0 +1,108 @@
+{
+  "confusables": [
+    {
+      "note": "restrained یعنی خویشتن‌دار و کنترل‌شده، در حالی که strained یعنی پرتنش و متشنج.",
+      "word": "restrained"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "strained",
+  "lemma": "strained",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1401-p05",
+      "part": "vocabulary",
+      "questionNo": 29,
+      "reach": 1,
+      "surface": "strained",
+      "year": 1401
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "cordial",
+        "relaxed"
+      ],
+      "definition": "not friendly or relaxed, because of tension and difficulty between people",
+      "examples": [
+        {
+          "en": "After the argument, the atmosphere at dinner was strained.",
+          "fa": "پس از آن مشاجره، فضای شام پرتنش بود."
+        }
+      ],
+      "ipa": "/streɪnd/",
+      "pos": "adj",
+      "synonyms": [
+        "tense",
+        "uneasy"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 29
+        }
+      ],
+      "translations": [
+        "پرتنش",
+        "متشنج",
+        "تیره (روابط)"
+      ]
+    },
+    {
+      "antonyms": [
+        "natural"
+      ],
+      "definition": "forced and not natural, said of a smile, a voice or a laugh",
+      "examples": [
+        {
+          "en": "He gave a strained smile and quickly changed the subject.",
+          "fa": "لبخندی زورکی زد و زود بحث را عوض کرد."
+        }
+      ],
+      "ipa": "/streɪnd/",
+      "pos": "adj",
+      "synonyms": [
+        "forced",
+        "artificial"
+      ],
+      "testedIn": [],
+      "translations": [
+        "زورکی",
+        "تصنعی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1401": 1
+    },
+    "byYear": {
+      "1401": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1401,
+    "lastYear": 1401,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "strained"
+  ]
+}

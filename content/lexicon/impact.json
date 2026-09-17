@@ -1,0 +1,200 @@
+{
+  "confusables": [
+    {
+      "note": "impetus یعنی انگیزه و نیروی آغازگرِ یک حرکت، نه اثر و پیامد آن",
+      "word": "impetus"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "impact",
+  "lemma": "impact",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 23,
+      "surface": "impacts",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 5,
+      "surface": "impacts",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 1,
+      "surface": "impacts",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 5,
+      "reach": 1,
+      "surface": "impacts",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 12,
+      "surface": "impact",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 10,
+      "surface": "impact",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "the powerful effect that something has on a situation or on people",
+      "examples": [
+        {
+          "en": "The new tax had an immediate impact on small businesses.",
+          "fa": "مالیات جدید تأثیری فوری بر کسب‌وکارهای کوچک گذاشت."
+        }
+      ],
+      "ipa": "/ˈɪmpækt/",
+      "pos": "n",
+      "synonyms": [
+        "effect",
+        "influence",
+        "consequence"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "تأثیر",
+        "اثرگذاری",
+        "پیامد"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "the force of one object hitting another",
+      "examples": [
+        {
+          "en": "The bottle broke on impact with the stone floor.",
+          "fa": "بطری در لحظهٔ برخورد با کف سنگی شکست."
+        }
+      ],
+      "ipa": "/ˈɪmpækt/",
+      "pos": "n",
+      "synonyms": [
+        "collision",
+        "blow"
+      ],
+      "testedIn": [],
+      "translations": [
+        "برخورد",
+        "ضربه"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to have a strong effect on someone or something",
+      "examples": [
+        {
+          "en": "Rising fuel prices impact every part of the economy.",
+          "fa": "بالا رفتن قیمت سوخت بر همهٔ بخش‌های اقتصاد تأثیر می‌گذارد."
+        }
+      ],
+      "ipa": "/ɪmˈpækt/",
+      "pos": "v",
+      "synonyms": [
+        "affect",
+        "influence"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تأثیر گذاشتن بر",
+        "اثر گذاشتن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 2,
+      "1400": 4
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1400,
+    "priority": 10,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 6,
+    "timesTested": 6
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "impact",
+    "impacts"
+  ]
+}

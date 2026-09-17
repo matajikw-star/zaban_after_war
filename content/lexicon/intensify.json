@@ -1,0 +1,95 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "intensify",
+  "lemma": "intensify",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1402-p02",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 32,
+      "surface": "intensified",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1398-p01",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 58,
+      "surface": "intensified",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "diminish",
+        "ease"
+      ],
+      "definition": "to become greater in degree, strength or amount, or to make something greater in this way",
+      "examples": [
+        {
+          "en": "The pain intensified whenever he tried to lift his right arm.",
+          "fa": "هر بار که می‌کوشید دست راستش را بلند کند، درد شدت می‌گرفت."
+        }
+      ],
+      "ipa": "/ɪnˈtensɪfaɪ/",
+      "pos": "verb",
+      "synonyms": [
+        "heighten",
+        "escalate",
+        "deepen"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p02",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1398-p01",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "تشدید شدن",
+        "شدت یافتن",
+        "تشدید کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1,
+      "1402": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1398,
+    "lastYear": 1402,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "intensified"
+  ]
+}

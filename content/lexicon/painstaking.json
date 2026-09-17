@@ -1,0 +1,129 @@
+{
+  "confusables": [
+    {
+      "note": "به pain مربوط نیست؛ painstaking یعنی پرزحمت و دقیق، نه دردناک",
+      "word": "painful"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "painstaking",
+  "lemma": "painstaking",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 23,
+      "surface": "painstaking",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 5,
+      "surface": "painstaking",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 1,
+      "surface": "painstaking",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 1,
+      "surface": "painstaking",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "careless",
+        "slapdash"
+      ],
+      "definition": "done with a great deal of care and attention to every small detail",
+      "examples": [
+        {
+          "en": "The manuscript was restored after years of painstaking work.",
+          "fa": "آن نسخه خطی پس از سال‌ها کار دقیق و پرزحمت مرمت شد."
+        }
+      ],
+      "ipa": "/ˈpeɪnzteɪkɪŋ/",
+      "pos": "adj",
+      "synonyms": [
+        "meticulous",
+        "thorough",
+        "scrupulous"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "دقیق و پرزحمت",
+        "با دقت فراوان",
+        "موشکافانه"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 4
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 4,
+    "timesTested": 4
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "painstaking"
+  ]
+}

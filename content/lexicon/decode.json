@@ -1,0 +1,86 @@
+{
+  "confusables": [
+    {
+      "note": "نقطه‌ی مقابل آن است؛ encode یعنی به رمز درآوردن، نه رمزگشایی",
+      "word": "encode"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "decode",
+  "lemma": "decode",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p04",
+      "part": "vocabulary",
+      "questionNo": 17,
+      "reach": 1,
+      "surface": "decoding",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "encode",
+        "encrypt"
+      ],
+      "definition": "to work out the meaning of a message that is in code or that is hard to understand",
+      "examples": [
+        {
+          "en": "It took the team three weeks to decode the general's final message.",
+          "fa": "سه هفته طول کشید تا تیم آخرین پیام آن ژنرال را رمزگشایی کند."
+        }
+      ],
+      "ipa": "/ˌdiːˈkəʊd/",
+      "pos": "v",
+      "synonyms": [
+        "decipher",
+        "interpret",
+        "unscramble"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p04",
+          "questionNo": 17
+        }
+      ],
+      "translations": [
+        "رمزگشایی کردن",
+        "معنای چیزی را دریافتن",
+        "کدگشایی کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "decoding"
+  ]
+}

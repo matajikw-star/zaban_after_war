@@ -1,0 +1,86 @@
+{
+  "confusables": [
+    {
+      "note": "شکل بسیار نزدیک، اما aloft یعنی در بالا و در هوا",
+      "word": "aloft"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "aloof",
+  "lemma": "aloof",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1398-p04",
+      "part": "vocabulary",
+      "questionNo": 20,
+      "reach": 1,
+      "surface": "aloof",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "gregarious",
+        "sociable"
+      ],
+      "definition": "not friendly or willing to take part, keeping an emotional distance from other people",
+      "examples": [
+        {
+          "en": "He stayed aloof at the party and spoke to almost nobody.",
+          "fa": "او در مهمانی کناره گرفت و تقریباً با هیچ‌کس حرف نزد."
+        }
+      ],
+      "ipa": "/əˈluːf/",
+      "pos": "adj",
+      "synonyms": [
+        "distant",
+        "detached",
+        "standoffish"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p04",
+          "questionNo": 20
+        }
+      ],
+      "translations": [
+        "گوشه‌گیر",
+        "سرد و بی‌اعتنا",
+        "فاصله‌گیرنده"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "aloof"
+  ]
+}

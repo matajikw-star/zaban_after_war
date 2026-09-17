@@ -1,0 +1,84 @@
+{
+  "confusables": [
+    {
+      "note": "superfluity یعنی زیادی و مازاد بودن، نه سطحی بودن.",
+      "word": "superfluity"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "superficiality",
+  "lemma": "superficiality",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p02",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 33,
+      "surface": "superficiality",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "depth",
+        "profundity"
+      ],
+      "definition": "the quality of dealing only with the obvious, outer part of something, without depth or care",
+      "examples": [
+        {
+          "en": "Critics attacked the report for its superficiality and lack of data.",
+          "fa": "منتقدان به خاطر سطحی‌نگری و نبود داده به گزارش تاختند."
+        }
+      ],
+      "ipa": "/ˌsuːpəfɪʃiˈæləti/",
+      "pos": "n",
+      "synonyms": [
+        "shallowness"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p02",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "سطحی‌نگری",
+        "سطحی بودن",
+        "ظاهربینی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1
+    },
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "superficiality"
+  ]
+}

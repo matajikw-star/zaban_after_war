@@ -1,0 +1,120 @@
+{
+  "confusables": [
+    {
+      "note": "املای بسیار نزدیکی دارد اما یعنی بی‌احترام و گستاخ.",
+      "word": "irreverent"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "irrelevant",
+  "lemma": "irrelevant",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1403-p01",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 60,
+      "surface": "irrelevant",
+      "year": 1403
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1403-p05",
+      "part": "vocabulary",
+      "questionNo": 25,
+      "reach": 1,
+      "surface": "irrelevant at",
+      "year": 1403
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p10",
+      "part": "vocabulary",
+      "questionNo": 28,
+      "reach": 1,
+      "surface": "irrelevant to",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "relevant",
+        "pertinent"
+      ],
+      "definition": "not connected with the matter being discussed, or not important to it, often in the pattern \"irrelevant to something\"",
+      "examples": [
+        {
+          "en": "His age is irrelevant to whether he can do the job.",
+          "fa": "سن او به اینکه می‌تواند این کار را انجام دهد یا نه بی‌ربط است."
+        }
+      ],
+      "ipa": "/ɪˈreləvənt/",
+      "pos": "adj",
+      "synonyms": [
+        "unrelated",
+        "immaterial",
+        "beside the point"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p01",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 28
+        },
+        {
+          "paperId": "arshad-1403-p05",
+          "questionNo": 25
+        }
+      ],
+      "translations": [
+        "بی‌ربط",
+        "نامرتبط",
+        "بی‌اهمیت"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1399": 1,
+      "1403": 1
+    },
+    "byYear": {
+      "1399": 1,
+      "1403": 2
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1403,
+    "priority": 11,
+    "timesAsAnswer": 2,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "irrelevant",
+    "irrelevant at",
+    "irrelevant to"
+  ]
+}

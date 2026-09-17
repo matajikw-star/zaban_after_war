@@ -1,0 +1,116 @@
+{
+  "confusables": [
+    {
+      "note": "restrain یعنی مهار کردن و جلوی کسی را گرفتن، اما restrict یعنی محدود کردن دامنه یا مقدار چیزی",
+      "word": "restrain"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "restrict",
+  "lemma": "restrict",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p11",
+      "part": "vocabulary",
+      "questionNo": 23,
+      "reach": 1,
+      "surface": "restricted",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 12,
+      "surface": "Restricted",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 10,
+      "surface": "Restricted",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "permit",
+        "broaden"
+      ],
+      "definition": "to keep something within set limits, or to stop someone from doing something freely",
+      "examples": [
+        {
+          "en": "The new rules restrict the number of cars allowed in the city centre.",
+          "fa": "قوانین جدید شمار خودروهای مجاز در مرکز شهر را محدود می‌کند."
+        }
+      ],
+      "ipa": "/rɪˈstrɪkt/",
+      "pos": "v",
+      "synonyms": [
+        "limit",
+        "confine",
+        "curb"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p11",
+          "questionNo": 23
+        },
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "محدود کردن",
+        "مقید کردن",
+        "منع کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 2,
+      "1400": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1400,
+    "priority": 7,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "Restricted",
+    "restricted"
+  ]
+}

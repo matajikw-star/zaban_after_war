@@ -1,0 +1,102 @@
+{
+  "confusables": [
+    {
+      "note": "املای بسیار نزدیک اما بی‌ربط؛ ascetic یعنی زاهد و ریاضت‌کش",
+      "word": "ascetic"
+    },
+    {
+      "note": "به نظر هم‌ریشه می‌آید ولی نیست؛ anesthetic یعنی دارویِ بی‌حسی",
+      "word": "anesthetic"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "aesthetic",
+  "lemma": "aesthetic",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1402-p02",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 32,
+      "surface": "aesthetic",
+      "year": 1402
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "connected with beauty and with the way something looks or is appreciated as art",
+      "examples": [
+        {
+          "en": "The building's aesthetic appeal matters as much as its practical use.",
+          "fa": "جذابیت زیبایی‌شناختی این ساختمان به اندازهٔ کاربرد عملی‌اش اهمیت دارد."
+        }
+      ],
+      "ipa": "/iːsˈθetɪk/",
+      "pos": "adj",
+      "synonyms": [
+        "artistic",
+        "tasteful"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p02",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "زیبایی‌شناختی",
+        "زیباشناسانه",
+        "مربوط به زیبایی"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a particular set of ideas about beauty that shapes an artist's or a period's work",
+      "examples": [
+        {
+          "en": "The director built the whole film around a cold, minimal aesthetic.",
+          "fa": "کارگردان تمام فیلم را بر پایهٔ سبکی سرد و مینیمال ساخت."
+        }
+      ],
+      "ipa": "/iːsˈθetɪk/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "سبک زیبایی‌شناختی",
+        "زیبایی‌شناسی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1402": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1402,
+    "lastYear": 1402,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "aesthetic"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "confusables": [
+    {
+      "note": "املای بسیار نزدیک؛ pry یعنی فضولی کردن یا با اهرم باز کردن.",
+      "word": "pry"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "ply",
+  "lemma": "ply",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1401-p05",
+      "part": "vocabulary",
+      "questionNo": 13,
+      "reach": 1,
+      "surface": "ply",
+      "year": 1401
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to work regularly at a job or a trade, especially in the phrase \"ply a trade\"",
+      "examples": [
+        {
+          "en": "For forty years the old tailor plied his trade in a narrow shop.",
+          "fa": "خیاط پیر چهل سال در مغازه‌ای باریک به کارش مشغول بود."
+        }
+      ],
+      "ipa": "/plaɪ/",
+      "pos": "v",
+      "synonyms": [
+        "practise",
+        "pursue"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 13
+        }
+      ],
+      "translations": [
+        "به کاری مشغول بودن",
+        "شغلی را (مرتب) انجام دادن",
+        "کاسبی کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to travel regularly along a particular route, used of a boat, bus or other vehicle",
+      "examples": [
+        {
+          "en": "Small ferries ply between the island and the mainland every hour.",
+          "fa": "قایق‌های کوچک هر ساعت میان جزیره و خشکی رفت‌وآمد می‌کنند."
+        }
+      ],
+      "ipa": "/plaɪ/",
+      "pos": "v",
+      "synonyms": [
+        "travel"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مرتب رفت‌وآمد کردن (در مسیری)",
+        "تردد کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1401": 1
+    },
+    "byYear": {
+      "1401": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1401,
+    "lastYear": 1401,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "ply"
+  ]
+}

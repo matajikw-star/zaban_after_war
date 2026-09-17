@@ -1,0 +1,57 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "ramification",
+  "lemma": "ramification",
+  "level": null,
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p02",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 30,
+      "surface": "ramification",
+      "year": 1400
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p07",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 2,
+      "surface": "ramification",
+      "year": 1400
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p13",
+      "part": "vocabulary",
+      "questionNo": 9,
+      "reach": 1,
+      "surface": "ramification",
+      "year": 1400
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 3,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "ramification"
+  ]
+}

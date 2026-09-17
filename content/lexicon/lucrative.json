@@ -1,0 +1,98 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "lucrative",
+  "lemma": "lucrative",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1405-p01",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 29,
+      "surface": "lucrative",
+      "year": 1405
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1398-p07",
+      "part": "vocabulary",
+      "questionNo": 166,
+      "reach": 1,
+      "surface": "lucrative",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "unprofitable",
+        "impecunious"
+      ],
+      "definition": "producing a large amount of money or profit",
+      "examples": [
+        {
+          "en": "Translating technical manuals turned out to be a lucrative sideline.",
+          "fa": "ترجمهٔ راهنماهای فنی به کاری جانبی و پردرآمد تبدیل شد."
+        }
+      ],
+      "ipa": "/ˈluːkrətɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "profitable",
+        "well-paid",
+        "remunerative"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p01",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 166
+        }
+      ],
+      "translations": [
+        "پرسود",
+        "پردرآمد",
+        "نان‌آور"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1398": 1,
+      "1405": 1
+    },
+    "byYear": {
+      "1398": 1,
+      "1405": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1398,
+    "lastYear": 1405,
+    "priority": 10,
+    "timesAsAnswer": 2,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "lucrative"
+  ]
+}

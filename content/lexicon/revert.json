@@ -1,0 +1,151 @@
+{
+  "confusables": [
+    {
+      "note": "یعنی منحرف کردن مسیر یا توجه، نه بازگشت به حالت قبل.",
+      "word": "divert"
+    },
+    {
+      "note": "یعنی جلوگیری کردن از وقوع چیزی یا رو گرداندن.",
+      "word": "avert"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "revert",
+  "lemma": "revert",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1402-p05",
+      "part": "vocabulary",
+      "questionNo": 21,
+      "reach": 1,
+      "surface": "reverted",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p09",
+      "part": "cloze",
+      "questionNo": 40,
+      "reach": 1,
+      "surface": "reverted",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 12,
+      "surface": "reverted to",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 10,
+      "surface": "reverted to",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 24,
+      "reach": 1,
+      "surface": "reverting",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "progress"
+      ],
+      "definition": "to go back to a former condition, habit or way of doing things, almost always in the pattern \"revert to something\"",
+      "examples": [
+        {
+          "en": "After a month of dieting he reverted to his old habits.",
+          "fa": "پس از یک ماه رژیم گرفتن، به عادت‌های قدیمی‌اش بازگشت."
+        }
+      ],
+      "ipa": "/rɪˈvɜːt/",
+      "pos": "v",
+      "synonyms": [
+        "return",
+        "relapse",
+        "go back"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p05",
+          "questionNo": 21
+        },
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 40
+        },
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 24
+        }
+      ],
+      "translations": [
+        "بازگشتن به (حالت قبل)",
+        "برگشتن به",
+        "عود کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 3,
+      "1400": 1,
+      "1402": 1
+    },
+    "distinctYears": 3,
+    "firstYear": 1399,
+    "lastYear": 1402,
+    "priority": 11,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 5,
+    "timesTested": 5
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "reverted",
+    "reverted to",
+    "reverting"
+  ]
+}

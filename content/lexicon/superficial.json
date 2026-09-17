@@ -1,0 +1,232 @@
+{
+  "confusables": [
+    {
+      "note": "شکل نزدیک، اما superfluous یعنی زائد و اضافی",
+      "word": "superfluous"
+    },
+    {
+      "note": "پایانهٔ مشابه دارند، اما artificial یعنی مصنوعی و ساختگی",
+      "word": "artificial"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "superficial",
+  "lemma": "superficial",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p01",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 48,
+      "surface": "superficial",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p02",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 30,
+      "surface": "superficial",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p04",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 6,
+      "surface": "superficial",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 3,
+      "surface": "superficial",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p07",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 2,
+      "surface": "superficial",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p13",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 1,
+      "surface": "superficial",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p01",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 42,
+      "surface": "superficial",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p03",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 16,
+      "surface": "superficial",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1398-p07",
+      "part": "vocabulary",
+      "questionNo": 173,
+      "reach": 1,
+      "surface": "superficial",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "thorough",
+        "profound"
+      ],
+      "definition": "not thorough or complete; looking only at the obvious features of something and not at what lies beneath them",
+      "examples": [
+        {
+          "en": "His knowledge of the subject turned out to be rather superficial.",
+          "fa": "دانش او دربارهٔ آن موضوع در نهایت نسبتاً سطحی از آب درآمد."
+        }
+      ],
+      "ipa": "/ˌsuːpəˈfɪʃl/",
+      "pos": "adj",
+      "synonyms": [
+        "shallow",
+        "cursory"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 173
+        }
+      ],
+      "translations": [
+        "سطحی",
+        "ظاهری",
+        "گذرا و کم‌عمق"
+      ]
+    },
+    {
+      "antonyms": [
+        "deep"
+      ],
+      "definition": "affecting only the surface of the skin or of an object, and therefore not serious",
+      "examples": [
+        {
+          "en": "She escaped the crash with only superficial cuts on her arm.",
+          "fa": "او از آن تصادف تنها با بریدگی‌های سطحی روی بازویش جان به در برد."
+        }
+      ],
+      "ipa": "/ˌsuːpəˈfɪʃl/",
+      "pos": "adj",
+      "synonyms": [
+        "surface",
+        "slight"
+      ],
+      "testedIn": [],
+      "translations": [
+        "سطحی (زخم یا آسیب)",
+        "روی سطح"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1,
+      "1399": 2,
+      "1400": 6
+    },
+    "distinctYears": 3,
+    "firstYear": 1398,
+    "lastYear": 1400,
+    "priority": 15,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 9,
+    "timesTested": 9
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "superficial"
+  ]
+}

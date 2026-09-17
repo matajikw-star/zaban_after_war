@@ -1,0 +1,358 @@
+{
+  "paperId": "arshad-1402-p04",
+  "degree": "arshad",
+  "year": 1402,
+  "groupCodes": [
+    "1110"
+  ],
+  "bookletCount": 1,
+  "source": {
+    "file": "1110-1402.pdf",
+    "pages": [
+      2,
+      3
+    ]
+  },
+  "extractedBy": {
+    "model": "claude-sonnet-5",
+    "at": "2026-09-14"
+  },
+  "questions": [
+    {
+      "no": 1,
+      "part": "grammar",
+      "stem": "Linguists sometimes use the terms analytic and synthetic to describe ..... morphology is made use of in a language.",
+      "options": [
+        "which degree of",
+        "the degree to which",
+        "to degree of which",
+        "the degree that"
+      ],
+      "optionLemmas": [
+        "degree",
+        "degree",
+        "degree",
+        "degree"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "degree",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "grammar",
+      "stem": "Grammatical elements (both function words and inflectional affixes) are not translated directly, ..... rendered by grammatical-value labels, generally in abbreviated form.",
+      "options": [
+        "however",
+        "they are",
+        "to be",
+        "but are"
+      ],
+      "optionLemmas": [
+        "however",
+        "be",
+        "be",
+        "be"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "but",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "grammar",
+      "stem": "While we certainly don't know everything there is to know, ....., at this juncture we are in a position to do far better than the language-as-instinct thesis.",
+      "options": [
+        "there is even a fraction of everything",
+        "which even a fraction of everything",
+        "or even a fraction of everything",
+        "by even a fraction of everything"
+      ],
+      "optionLemmas": [
+        "fraction",
+        "fraction",
+        "fraction",
+        "fraction"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "fraction",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "grammar",
+      "stem": "..... and drawing on cutting-edge research, The Language Myth sets out a forceful alternative to the received wisdom, showing how language and the mind really work.",
+      "options": [
+        "Compellingly written",
+        "Writing compellingly",
+        "To be compellingly written",
+        "By writing it compellingly"
+      ],
+      "optionLemmas": [
+        "write",
+        "write",
+        "write",
+        "write"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "write",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "grammar",
+      "stem": "To discover the nature of this Universal Grammar whose principles characterize all human languages is a major aim of linguistics theory.",
+      "options": [
+        "To discover",
+        "whose principles",
+        "is",
+        "linguistics theory"
+      ],
+      "optionLemmas": [
+        "discover",
+        "principle",
+        "be",
+        "linguistic"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "linguistic",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "grammar",
+      "stem": "Whereas self-determination theory addresses students' perceptions of their level of autonomy, competence, and relatedness in a given activity, and self-regulation theory is concerned with what students do to generate and sustain their engagement.",
+      "options": [
+        "Whereas",
+        "in a given activity",
+        "and self-regulation theory",
+        "with what students do to"
+      ],
+      "optionLemmas": [
+        "whereas",
+        "activity",
+        "theory",
+        "do"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "theory",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "grammar",
+      "stem": "As our primate ancestors' need to stoke the energy-consuming organ in their skulls with nutritious, calorie-rich fuel created selection pressure favoring features now characteristic of primates.",
+      "options": [
+        "As our primate ancestors' need",
+        "nutritious, calorie-rich fuel",
+        "selection pressure favoring",
+        "now characteristic of"
+      ],
+      "optionLemmas": [
+        "ancestor",
+        "fuel",
+        "pressure",
+        "characteristic"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "primate",
+      "uncertain": [
+        "q7: unclear whether the intended error is 'now characteristic of primates' (likely should read 'humans', inferred from passage logic) or a different underlined segment; no clear grammatical rule violation identified, so this is a content-based guess"
+      ]
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "Conventional paleoanthropological wisdom holds that the first humans had left Africa were tall, large-brained people equipped with sophisticated stone tools who began migrating northward around a million years ago.",
+      "options": [
+        "holds",
+        "had left",
+        "equipped with",
+        "around a million years"
+      ],
+      "optionLemmas": [
+        "hold",
+        "leave",
+        "equip",
+        "year"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "leave",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "vocabulary",
+      "stem": "Computers cannot precisely foretell climate change unless the mathematical equations fed into them ..... capture the natural meteorological processes they are aimed to simulate.",
+      "options": [
+        "indiscriminately",
+        "sufficiently",
+        "complacently",
+        "metaphorically"
+      ],
+      "optionLemmas": [
+        "indiscriminately",
+        "sufficiently",
+        "complacently",
+        "metaphorically"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "sufficiently",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "vocabulary",
+      "stem": "The judge ..... his appeal, allowing the original verdict to stand.",
+      "options": [
+        "expatriated",
+        "deliberated",
+        "settled",
+        "dismissed"
+      ],
+      "optionLemmas": [
+        "expatriate",
+        "deliberate",
+        "settle",
+        "dismiss"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "dismiss",
+      "uncertain": []
+    },
+    {
+      "no": 11,
+      "part": "vocabulary",
+      "stem": "Whales that surface too quickly from deep dives may ..... from decompression sickness, a sometimes lethal condition that also affects humans.",
+      "options": [
+        "expire",
+        "deflate",
+        "recede",
+        "submerge"
+      ],
+      "optionLemmas": [
+        "expire",
+        "deflate",
+        "recede",
+        "submerge"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "expire",
+      "uncertain": []
+    },
+    {
+      "no": 12,
+      "part": "vocabulary",
+      "stem": "The crew quarters on the submarine were so ..... that each sailor was allotted only a tiny locker.",
+      "options": [
+        "moralized",
+        "adjoined",
+        "cramped",
+        "ostracized"
+      ],
+      "optionLemmas": [
+        "moralize",
+        "adjoin",
+        "cramped",
+        "ostracize"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "cramped",
+      "uncertain": []
+    },
+    {
+      "no": 13,
+      "part": "vocabulary",
+      "stem": "Two years passed in this manner, during which I paid no visit to Geneva, but was engaged, heart and soul, in the ..... of some discoveries which I hoped to make.",
+      "options": [
+        "track",
+        "stimulus",
+        "footsteps",
+        "pursuit"
+      ],
+      "optionLemmas": [
+        "track",
+        "stimulus",
+        "footstep",
+        "pursuit"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "pursuit",
+      "uncertain": []
+    },
+    {
+      "no": 14,
+      "part": "vocabulary",
+      "stem": "Once ..... as the surest way to hone your mental powers, brain training software is now dogged by doubts over its effectiveness.",
+      "options": [
+        "feigned",
+        "flabbergasted",
+        "touted",
+        "proselytized"
+      ],
+      "optionLemmas": [
+        "feign",
+        "flabbergast",
+        "tout",
+        "proselytize"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "tout",
+      "uncertain": []
+    },
+    {
+      "no": 15,
+      "part": "vocabulary",
+      "stem": "Regardless of the long-winded answers Michael ..... gave in class, his teachers remember him as succinct student, rather than a garrulous one, because he generally kept to himself.",
+      "options": [
+        "consistently",
+        "paradoxically",
+        "superficially",
+        "tendentiously"
+      ],
+      "optionLemmas": [
+        "consistently",
+        "paradoxically",
+        "superficially",
+        "tendentiously"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "paradoxically",
+      "uncertain": []
+    }
+  ],
+  "uncertain": [
+    "Section-header mismatch: page 3's Part C is printed as 'PART C: Vocabulary' (items 9-15, four-option vocabulary-in-context items), not a reading-comprehension passage as the routing metadata implied. No reading passage or Part C reading questions appear in pages 2-3 of this booklet (code 1110); transcribed the vocabulary section per instructions rather than skipping it. Flagging for routes.jsonl review.",
+    "This booklet has no distinct 'PART B: Cloze Test' section as expected from the standard layout; instead it runs PART A: Structure (items 1-4), PART B: Written Expression / error-identification (items 5-8), and PART C: Vocabulary (items 9-15). All items 1-8 were transcribed as grammar-type items with the four underlined phrases as options."
+  ]
+}

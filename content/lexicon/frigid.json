@@ -1,0 +1,138 @@
+{
+  "confusables": [
+    {
+      "note": "املای نزدیک اما بی‌ربط: rigid یعنی سفت و انعطاف‌ناپذیر.",
+      "word": "rigid"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "frigid",
+  "lemma": "frigid",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p01",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 48,
+      "surface": "frigid",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p04",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 6,
+      "surface": "frigid",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 3,
+      "surface": "frigid",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "torrid",
+        "balmy"
+      ],
+      "definition": "extremely cold, especially used of air, weather or a region",
+      "examples": [
+        {
+          "en": "Frigid winds swept the platform while we waited for the bus.",
+          "fa": "بادهای بسیار سرد سکو را جارو می‌کرد تا وقتی منتظر اتوبوس بودیم."
+        }
+      ],
+      "ipa": "/ˈfrɪdʒɪd/",
+      "pos": "adj",
+      "synonyms": [
+        "freezing",
+        "icy",
+        "bitter"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "بسیار سرد",
+        "یخبندان",
+        "منجمد"
+      ]
+    },
+    {
+      "antonyms": [
+        "warm",
+        "cordial"
+      ],
+      "definition": "very unfriendly in manner, showing no warmth towards other people",
+      "examples": [
+        {
+          "en": "She gave the visitors a frigid nod and went back inside.",
+          "fa": "او سری سرد و بی‌اعتنا برای مهمانان تکان داد و به داخل برگشت."
+        }
+      ],
+      "ipa": "/ˈfrɪdʒɪd/",
+      "pos": "adj",
+      "synonyms": [
+        "aloof",
+        "cold"
+      ],
+      "testedIn": [],
+      "translations": [
+        "سرد و بی‌روح",
+        "خشک و بی‌اعتنا"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "frigid"
+  ]
+}

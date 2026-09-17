@@ -1,0 +1,57 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "attainable",
+  "lemma": "attainable",
+  "level": null,
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1398-p02",
+      "part": "grammar",
+      "questionNo": 13,
+      "reach": 33,
+      "surface": "attainable",
+      "year": 1398
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1398-p02",
+      "part": "grammar",
+      "questionNo": 14,
+      "reach": 33,
+      "surface": "attainable",
+      "year": 1398
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1398-p02",
+      "part": "grammar",
+      "questionNo": 15,
+      "reach": 33,
+      "surface": "attainable",
+      "year": 1398
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 3,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "attainable"
+  ]
+}

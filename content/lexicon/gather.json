@@ -1,0 +1,117 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "gather",
+  "lemma": "gather",
+  "level": "A2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1402-p03",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 29,
+      "surface": "gathers",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p07",
+      "part": "vocabulary",
+      "questionNo": 170,
+      "reach": 1,
+      "surface": "Gathering",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "scatter",
+        "disperse"
+      ],
+      "definition": "to bring things or people together in one place, or to come together in one place",
+      "examples": [
+        {
+          "en": "A crowd gathered outside the courthouse to hear the verdict.",
+          "fa": "جمعیتی بیرون دادگاه گرد آمدند تا حکم را بشنوند."
+        }
+      ],
+      "ipa": "/ˈɡæðə(r)/",
+      "pos": "verb",
+      "synonyms": [
+        "collect",
+        "assemble"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p03",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 170
+        }
+      ],
+      "translations": [
+        "جمع کردن",
+        "گرد آوردن",
+        "گرد آمدن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to believe or understand something from what you have heard or seen",
+      "examples": [
+        {
+          "en": "From his tone I gathered that the negotiations had failed.",
+          "fa": "از لحن او دریافتم که مذاکرات شکست خورده است."
+        }
+      ],
+      "ipa": "/ˈɡæðə(r)/",
+      "pos": "verb",
+      "synonyms": [
+        "infer",
+        "understand"
+      ],
+      "testedIn": [],
+      "translations": [
+        "دریافتن",
+        "چنین فهمیدن",
+        "استنباط کردن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1,
+      "1402": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1398,
+    "lastYear": 1402,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "Gathering",
+    "gathers"
+  ]
+}

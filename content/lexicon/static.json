@@ -1,0 +1,100 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "static",
+  "lemma": "static",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1402-p03",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "reach": 29,
+      "surface": "static",
+      "year": 1402
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "dynamic",
+        "fluctuating"
+      ],
+      "definition": "staying at the same level, without changing or moving over a period of time",
+      "examples": [
+        {
+          "en": "House prices in the small town have been static for two years.",
+          "fa": "قیمت مسکن در آن شهر کوچک دو سال است ثابت مانده."
+        }
+      ],
+      "ipa": "/ˈstætɪk/",
+      "pos": "adj",
+      "synonyms": [
+        "unchanging",
+        "stationary"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p03",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "ثابت",
+        "بدون تغییر",
+        "ایستا"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "noise on a radio or television caused by electricity in the air, which spoils the sound",
+      "examples": [
+        {
+          "en": "During the storm the radio gave us nothing but static.",
+          "fa": "در طول طوفان، رادیو جز خش‌خش چیزی به ما نداد."
+        }
+      ],
+      "ipa": "/ˈstætɪk/",
+      "pos": "n",
+      "synonyms": [
+        "interference"
+      ],
+      "testedIn": [],
+      "translations": [
+        "پارازیت",
+        "خش‌خش رادیویی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1402": 1
+    },
+    "byYear": {
+      "1402": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1402,
+    "lastYear": 1402,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "static"
+  ]
+}

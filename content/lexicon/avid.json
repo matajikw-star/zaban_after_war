@@ -1,0 +1,48 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "avid",
+  "lemma": "avid",
+  "level": null,
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1403-p03",
+      "part": "vocabulary",
+      "questionNo": 12,
+      "reach": 1,
+      "surface": "avid",
+      "year": 1403
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1403-p03",
+      "part": "vocabulary",
+      "questionNo": 17,
+      "reach": 1,
+      "surface": "avid",
+      "year": 1403
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 2,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "avid"
+  ]
+}

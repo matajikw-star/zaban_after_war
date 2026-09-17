@@ -1,0 +1,95 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "quandary",
+  "lemma": "quandary",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1405-p04",
+      "part": "vocabulary",
+      "questionNo": 13,
+      "reach": 1,
+      "surface": "quandary",
+      "year": 1405
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1403-p04",
+      "part": "cloze",
+      "questionNo": 24,
+      "reach": 1,
+      "surface": "quandary",
+      "year": 1403
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "certainty"
+      ],
+      "definition": "a state of not being able to decide what to do, because every choice seems wrong",
+      "examples": [
+        {
+          "en": "The two job offers left him in a quandary for a week.",
+          "fa": "آن دو پیشنهاد شغلی یک هفته او را بر سر دوراهی گذاشت."
+        }
+      ],
+      "ipa": "/ˈkwɒndəri/",
+      "pos": "n",
+      "synonyms": [
+        "dilemma",
+        "predicament"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p04",
+          "questionNo": 13
+        },
+        {
+          "paperId": "arshad-1403-p04",
+          "questionNo": 24
+        }
+      ],
+      "translations": [
+        "دوراهی",
+        "بلاتکلیفی",
+        "سردرگمی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1405": 1
+    },
+    "byYear": {
+      "1403": 1,
+      "1405": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1403,
+    "lastYear": 1405,
+    "priority": 8,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "quandary"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "confusables": [
+    {
+      "note": "به‌صورت دو کلمه فعل است (خراب شدن یا شکست خوردن)، اما breakdown یک‌کلمه و اسم است.",
+      "word": "break down"
+    },
+    {
+      "note": "breakthrough یعنی پیشرفت بزرگ و ناگهانی، درست نقطهٔ مقابل breakdown.",
+      "word": "breakthrough"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "breakdown",
+  "lemma": "breakdown",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1402-p03",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "reach": 29,
+      "surface": "breakdown",
+      "year": 1402
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a failure or collapse of something such as communication, negotiations or a relationship",
+      "examples": [
+        {
+          "en": "A breakdown in talks left the two sides further apart.",
+          "fa": "اختلال در مذاکرات، دو طرف را از هم دورتر کرد."
+        }
+      ],
+      "ipa": "/ˈbreɪkdaʊn/",
+      "pos": "noun",
+      "synonyms": [
+        "collapse",
+        "failure"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p03",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "اختلال",
+        "فروپاشی",
+        "شکست (در ارتباط یا مذاکره)"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a period of severe mental illness in which a person can no longer cope with ordinary life",
+      "examples": [
+        {
+          "en": "After months of overwork he suffered a complete nervous breakdown.",
+          "fa": "پس از ماه‌ها کار بیش از حد، دچار فروپاشی کامل روانی شد."
+        }
+      ],
+      "ipa": "/ˈbreɪkdaʊn/",
+      "pos": "noun",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "فروپاشی روانی",
+        "بحران عصبی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1402": 1
+    },
+    "byYear": {
+      "1402": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1402,
+    "lastYear": 1402,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "breakdown"
+  ]
+}

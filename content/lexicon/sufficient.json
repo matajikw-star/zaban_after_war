@@ -1,0 +1,113 @@
+{
+  "confusables": [
+    {
+      "note": "efficient یعنی کارآمد و بهره‌ور، اما sufficient یعنی به اندازه کافی.",
+      "word": "efficient"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "sufficient",
+  "lemma": "sufficient",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p02",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 30,
+      "surface": "sufficient",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p07",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 2,
+      "surface": "sufficient",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1400-p13",
+      "part": "vocabulary",
+      "questionNo": 7,
+      "reach": 1,
+      "surface": "sufficient",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "insufficient",
+        "inadequate"
+      ],
+      "definition": "as much as is needed for a particular purpose, and no less",
+      "examples": [
+        {
+          "en": "We did not have sufficient time to check every answer.",
+          "fa": "وقت کافی نداشتیم که همه پاسخ‌ها را بررسی کنیم."
+        }
+      ],
+      "ipa": "/səˈfɪʃnt/",
+      "pos": "adj",
+      "synonyms": [
+        "enough",
+        "adequate"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "کافی",
+        "بسنده",
+        "به اندازه لازم"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1400": 3
+    },
+    "distinctYears": 1,
+    "firstYear": 1400,
+    "lastYear": 1400,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 3,
+    "timesTested": 3
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "sufficient"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "hemorrhage",
+  "lemma": "hemorrhage",
+  "level": null,
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p03",
+      "part": "grammar",
+      "questionNo": 13,
+      "reach": 23,
+      "surface": "hemorrhage",
+      "year": 1400
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p03",
+      "part": "grammar",
+      "questionNo": 14,
+      "reach": 23,
+      "surface": "hemorrhage",
+      "year": 1400
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p05",
+      "part": "grammar",
+      "questionNo": 13,
+      "reach": 5,
+      "surface": "hemorrhage",
+      "year": 1400
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p05",
+      "part": "grammar",
+      "questionNo": 14,
+      "reach": 5,
+      "surface": "hemorrhage",
+      "year": 1400
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p10",
+      "part": "grammar",
+      "questionNo": 13,
+      "reach": 1,
+      "surface": "hemorrhage",
+      "year": 1400
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p10",
+      "part": "grammar",
+      "questionNo": 14,
+      "reach": 1,
+      "surface": "hemorrhage",
+      "year": 1400
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p12",
+      "part": "grammar",
+      "questionNo": 13,
+      "reach": 1,
+      "surface": "hemorrhage",
+      "year": 1400
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p12",
+      "part": "grammar",
+      "questionNo": 14,
+      "reach": 1,
+      "surface": "hemorrhage",
+      "year": 1400
+    }
+  ],
+  "provenance": null,
+  "senses": [],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 8,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "hemorrhage"
+  ]
+}

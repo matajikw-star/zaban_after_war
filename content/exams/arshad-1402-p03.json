@@ -1,0 +1,132 @@
+{
+  "paperId": "arshad-1402-p03",
+  "degree": "arshad",
+  "year": 1402,
+  "groupCodes": ["1117", "1134", "1142", "1143", "1201", "1204", "1206", "1207", "1208", "1251", "1267", "1268", "1301", "1302", "1303", "1304", "1305", "1306", "1307", "1308", "1309", "1311", "1312", "1313", "1315", "1317", "1319", "1321", "1328"],
+  "bookletCount": 29,
+  "source": { "file": "1117-1402.pdf", "pages": [2, 3] },
+  "extractedBy": { "model": "claude-sonnet-5", "at": "2026-09-14" },
+  "questions": [
+    {
+      "no": 1,
+      "part": "vocabulary",
+      "stem": "Despite the fact that Gross Domestic Product (GDP) has increased substantially in the industrialized West, the levels of human contentment have remained ..... .",
+      "options": ["apposite", "interwoven", "static", "implicit"],
+      "optionLemmas": ["apposite", "interwoven", "static", "implicit"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "static",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "vocabulary",
+      "stem": "Immigration ..... from the Latin word migration and means the act of a foreigner entering a country in the aim of obtaining the right of permanent residence.",
+      "options": ["gathers", "obtains", "arises", "derives"],
+      "optionLemmas": ["gather", "obtain", "arise", "derive"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "derive",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "vocabulary",
+      "stem": "Not speaking the same language as your customers can lead to communication ..... .",
+      "options": ["breakdown", "brevity", "gesture", "imitation"],
+      "optionLemmas": ["breakdown", "brevity", "gesture", "imitation"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "breakdown",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "vocabulary",
+      "stem": "The factory's workforce has ..... from over 4,000 to a few hundred.",
+      "options": ["withdrawn", "dwindled", "undercut", "forecasted"],
+      "optionLemmas": ["withdraw", "dwindle", "undercut", "forecast"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "dwindle",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "vocabulary",
+      "stem": "The police came up empty-handed despite an ..... exploration of the suspect's home.",
+      "options": ["exhaustive", "inescapable", "ephemeral", "inevitable"],
+      "optionLemmas": ["exhaustive", "inescapable", "ephemeral", "inevitable"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "exhaustive",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "vocabulary",
+      "stem": "When the old man married a woman in her thirties, all everyone talked about was the ..... in the couple's ages.",
+      "options": ["diversity", "disparity", "longevity", "extension"],
+      "optionLemmas": ["diversity", "disparity", "longevity", "extension"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "disparity",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "vocabulary",
+      "stem": "One local factory will ..... the town's job shortage by providing 250 more jobs.",
+      "options": ["overlook", "adjust", "displace", "alleviate"],
+      "optionLemmas": ["overlook", "adjust", "displace", "alleviate"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "alleviate",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "One commentator argues that the success of private schools is not in their money, ..... their organization.",
+      "options": ["that is", "it is in", "but in", "is"],
+      "optionLemmas": ["be", "be", "but", "be"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "but",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "grammar",
+      "stem": "But if head teachers at state schools ..... given the same freedom as those at private schools, namely ..... poor teachers and pay more to good ones, parents would not need to send their children to private schools any more.",
+      "options": ["had", "were", "to be", "be"],
+      "optionLemmas": ["have", "be", "be", "be"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "be",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "grammar",
+      "stem": "But if head teachers at state schools ..... given the same freedom as those at private schools, namely ..... poor teachers and pay more to good ones, parents would not need to send their children to private schools any more.",
+      "options": ["by sacking", "sacking", "sacked", "to sack"],
+      "optionLemmas": ["sack", "sack", "sack", "sack"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "sack",
+      "uncertain": []
+    }
+  ],
+  "uncertain": []
+}

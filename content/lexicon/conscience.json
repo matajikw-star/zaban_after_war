@@ -1,0 +1,83 @@
+{
+  "confusables": [
+    {
+      "note": "صفت است و یعنی هوشیار یا آگاه؛ conscience اسم است و یعنی وجدان",
+      "word": "conscious"
+    },
+    {
+      "note": "صفت و یعنی وظیفه‌شناس و باوجدان در کار",
+      "word": "conscientious"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "conscience",
+  "lemma": "conscience",
+  "level": "B2",
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p09",
+      "part": "cloze",
+      "questionNo": 35,
+      "reach": 1,
+      "surface": "conscience",
+      "year": 1400
+    },
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-1400-p09",
+      "part": "grammar",
+      "questionNo": 36,
+      "reach": 1,
+      "surface": "conscience",
+      "year": 1400
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "the sense inside you that tells you whether what you are doing is right or wrong",
+      "examples": [
+        {
+          "en": "He could not silence his conscience after keeping the money.",
+          "fa": "پس از برداشتن آن پول نتوانست وجدانش را ساکت کند."
+        }
+      ],
+      "ipa": "/ˈkɒnʃəns/",
+      "pos": "n",
+      "synonyms": [
+        "scruples",
+        "moral sense"
+      ],
+      "testedIn": [],
+      "translations": [
+        "وجدان",
+        "وجدان اخلاقی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 2,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "conscience"
+  ]
+}

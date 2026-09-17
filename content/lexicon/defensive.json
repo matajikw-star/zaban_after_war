@@ -1,0 +1,122 @@
+{
+  "confusables": [
+    {
+      "note": "defensible یعنی قابل دفاع و توجیه‌پذیر، نه مربوط به دفاع نظامی",
+      "word": "defensible"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "defensive",
+  "lemma": "defensive",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1405-p07",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 1,
+      "surface": "defensive",
+      "year": 1405
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1402-p01",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "reach": 56,
+      "surface": "defensive",
+      "year": 1402
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "offensive",
+        "aggressive"
+      ],
+      "definition": "done or used in order to protect someone or something from attack",
+      "examples": [
+        {
+          "en": "The city built high walls as a defensive measure against raiders.",
+          "fa": "شهر دیوارهایی بلند به‌عنوان اقدامی دفاعی در برابر مهاجمان ساخت."
+        }
+      ],
+      "ipa": "/dɪˈfensɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "protective"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p07",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1402-p01",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "دفاعی",
+        "تدافعی",
+        "حفاظتی"
+      ]
+    },
+    {
+      "antonyms": [
+        "receptive"
+      ],
+      "definition": "quick to protect yourself from criticism, often by refusing to listen to it",
+      "examples": [
+        {
+          "en": "He became defensive as soon as anyone questioned his figures.",
+          "fa": "به‌محض اینکه کسی اعداد او را زیر سؤال می‌برد، گارد می‌گرفت."
+        }
+      ],
+      "ipa": "/dɪˈfensɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "touchy"
+      ],
+      "testedIn": [],
+      "translations": [
+        "گارد گرفته",
+        "زودرنج در برابر انتقاد"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1405": 1
+    },
+    "byYear": {
+      "1402": 1,
+      "1405": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1402,
+    "lastYear": 1405,
+    "priority": 8,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "defensive"
+  ]
+}

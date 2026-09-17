@@ -1,0 +1,97 @@
+{
+  "confusables": [
+    {
+      "note": "pedagogic یعنی آموزشی و مربوط به تدریس، بار منفی pedantic را ندارد",
+      "word": "pedagogic"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "pedantic",
+  "lemma": "pedantic",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p07",
+      "part": "vocabulary",
+      "questionNo": 18,
+      "reach": 1,
+      "surface": "pedantic",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p05",
+      "part": "vocabulary",
+      "questionNo": 25,
+      "reach": 1,
+      "surface": "pedantic",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "too concerned with small rules and details, especially in order to show off one's learning",
+      "examples": [
+        {
+          "en": "His pedantic corrections of our grammar slowed every meeting down.",
+          "fa": "اصلاح‌های خرده‌گیرانه او روی دستور زبان ما، هر جلسه را کند می‌کرد."
+        }
+      ],
+      "ipa": "/pɪˈdæntɪk/",
+      "pos": "adj",
+      "synonyms": [
+        "nitpicking",
+        "punctilious",
+        "fussy"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p07",
+          "questionNo": 18
+        },
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 25
+        }
+      ],
+      "translations": [
+        "فضل‌فروش",
+        "خرده‌گیر",
+        "وسواسی در جزئیات"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1,
+      "1399": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1398,
+    "lastYear": 1399,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "pedantic"
+  ]
+}

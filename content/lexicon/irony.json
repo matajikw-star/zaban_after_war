@@ -1,0 +1,105 @@
+{
+  "confusables": [
+    {
+      "note": "satire یعنی هجو؛ نقد گزنده‌ی افراد یا جامعه با زبان طنز، نه وارونه شدن انتظارها",
+      "word": "satire"
+    },
+    {
+      "note": "parody یعنی نقیضه؛ تقلید خنده‌دار از سبک یک اثر یا فرد",
+      "word": "parody"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "irony",
+  "lemma": "irony",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1401-p05",
+      "part": "vocabulary",
+      "questionNo": 27,
+      "reach": 1,
+      "surface": "irony",
+      "year": 1401
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a situation in which what happens is the opposite of what was expected or hoped for, in a way that seems almost arranged",
+      "examples": [
+        {
+          "en": "The irony is that the fire station itself burned down that night.",
+          "fa": "طنز ماجرا اینجاست که همان شب خودِ ایستگاه آتش‌نشانی سوخت."
+        }
+      ],
+      "ipa": "/ˈaɪrəni/",
+      "pos": "n",
+      "synonyms": [
+        "paradox"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 27
+        }
+      ],
+      "translations": [
+        "وارونگی طنزآمیز رویدادها",
+        "طنز موقعیت",
+        "بازی روزگار"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "the use of words that say the opposite of what you really mean, usually to be amusing or critical",
+      "examples": [
+        {
+          "en": "There was a touch of irony in the way he thanked his critics.",
+          "fa": "در شیوه‌ی تشکر او از منتقدانش رگه‌ای از کنایه بود."
+        }
+      ],
+      "ipa": "/ˈaɪrəni/",
+      "pos": "n",
+      "synonyms": [
+        "sarcasm"
+      ],
+      "testedIn": [],
+      "translations": [
+        "کنایه",
+        "گوشه و طعنه"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1401": 1
+    },
+    "byYear": {
+      "1401": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1401,
+    "lastYear": 1401,
+    "priority": 5,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "irony"
+  ]
+}

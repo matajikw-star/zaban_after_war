@@ -1,0 +1,119 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "abuse",
+  "lemma": "abuse",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1398-p07",
+      "part": "vocabulary",
+      "questionNo": 170,
+      "reach": 1,
+      "surface": "Abusing",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to use something in a wrong or harmful way, especially for your own advantage",
+      "examples": [
+        {
+          "en": "Officials who abuse their power should lose their positions.",
+          "fa": "مقام‌هایی که از قدرت خود سوءاستفاده می‌کنند باید مقامشان را از دست بدهند."
+        }
+      ],
+      "ipa": "/əˈbjuːz/",
+      "pos": "v",
+      "synonyms": [
+        "misuse",
+        "exploit"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 170
+        }
+      ],
+      "translations": [
+        "سوءاستفاده کردن از",
+        "نادرست به کار بردن"
+      ]
+    },
+    {
+      "antonyms": [
+        "protect"
+      ],
+      "definition": "to treat a person or an animal cruelly or violently",
+      "examples": [
+        {
+          "en": "The charity rescues dogs that have been abused by their owners.",
+          "fa": "این خیریه سگ‌هایی را نجات می‌دهد که صاحبانشان آنها را آزار داده‌اند."
+        }
+      ],
+      "ipa": "/əˈbjuːz/",
+      "pos": "v",
+      "synonyms": [
+        "mistreat",
+        "maltreat"
+      ],
+      "testedIn": [],
+      "translations": [
+        "بدرفتاری کردن با",
+        "آزار دادن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "cruel or violent treatment of someone, or the wrong use of something; note that the noun ends in an s sound and the verb in a z sound",
+      "examples": [
+        {
+          "en": "The report described years of abuse inside the institution.",
+          "fa": "گزارش، سال‌ها بدرفتاری در آن مؤسسه را شرح داد."
+        }
+      ],
+      "ipa": "/əˈbjuːs/",
+      "pos": "n",
+      "synonyms": [
+        "mistreatment",
+        "misuse"
+      ],
+      "testedIn": [],
+      "translations": [
+        "سوءاستفاده",
+        "بدرفتاری",
+        "آزار"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1398,
+    "lastYear": 1398,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "Abusing"
+  ]
+}

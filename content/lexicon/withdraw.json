@@ -1,0 +1,293 @@
+{
+  "confusables": [
+    {
+      "note": "withdraw یعنی چیزی را که داده‌ای پس بگیری؛ withhold یعنی از همان اول ندهی",
+      "word": "withhold"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "withdraw",
+  "lemma": "withdraw",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1402-p01",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 56,
+      "surface": "withdraw",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1402-p03",
+      "part": "vocabulary",
+      "questionNo": 4,
+      "reach": 29,
+      "surface": "withdrawn",
+      "year": 1402
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p01",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 48,
+      "surface": "withdraw",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p04",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 6,
+      "surface": "withdraw",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p06",
+      "part": "vocabulary",
+      "questionNo": 8,
+      "reach": 3,
+      "surface": "withdraw",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1400-p11",
+      "part": "vocabulary",
+      "questionNo": 35,
+      "reach": 1,
+      "surface": "withdraw",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p01",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 42,
+      "surface": "withdraw",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 3,
+      "paperId": "arshad-1399-p03",
+      "part": "vocabulary",
+      "questionNo": 6,
+      "reach": 16,
+      "surface": "withdraw",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p04",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 12,
+      "surface": "Withdrawn",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p05",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 10,
+      "surface": "Withdrawn",
+      "year": 1399
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1398-p07",
+      "part": "cloze",
+      "questionNo": 181,
+      "reach": 1,
+      "surface": "withdrew",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "affirm",
+        "uphold"
+      ],
+      "definition": "to say officially that something you said or offered is no longer true or available",
+      "examples": [
+        {
+          "en": "The newspaper withdrew the claim once the evidence had been checked.",
+          "fa": "روزنامه پس از بررسی مدارک، آن ادعا را پس گرفت."
+        }
+      ],
+      "ipa": "/wɪðˈdrɔː/",
+      "pos": "v",
+      "synonyms": [
+        "retract",
+        "revoke",
+        "rescind"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p11",
+          "questionNo": 35
+        },
+        {
+          "paperId": "arshad-1402-p01",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "پس گرفتن",
+        "پس کشیدن (حرف یا حمایت)"
+      ]
+    },
+    {
+      "antonyms": [
+        "deposit"
+      ],
+      "definition": "to take money out of a bank account, or to remove something from a place",
+      "examples": [
+        {
+          "en": "He withdrew a small amount from his savings account.",
+          "fa": "او مبلغ کمی از حساب پس‌اندازش برداشت کرد."
+        }
+      ],
+      "ipa": "/wɪðˈdrɔː/",
+      "pos": "v",
+      "synonyms": [
+        "extract",
+        "remove"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 181
+        },
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "برداشت کردن",
+        "بیرون کشیدن",
+        "خارج کردن"
+      ]
+    },
+    {
+      "antonyms": [
+        "advance",
+        "engage"
+      ],
+      "definition": "to move back or away from a place or situation, or to stop taking part in something",
+      "examples": [
+        {
+          "en": "Two runners withdrew from the race after the first lap.",
+          "fa": "دو دونده پس از دور اول از مسابقه کناره‌گیری کردند."
+        }
+      ],
+      "ipa": "/wɪðˈdrɔː/",
+      "pos": "v",
+      "synonyms": [
+        "retreat",
+        "pull out",
+        "back off"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1402-p03",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "عقب کشیدن",
+        "کناره‌گیری کردن",
+        "انصراف دادن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1398": 1,
+      "1399": 4,
+      "1400": 4,
+      "1402": 2
+    },
+    "distinctYears": 4,
+    "firstYear": 1398,
+    "lastYear": 1402,
+    "priority": 21,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 10,
+    "timesTested": 11
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "Withdrawn",
+    "withdraw",
+    "withdrawn",
+    "withdrew"
+  ]
+}

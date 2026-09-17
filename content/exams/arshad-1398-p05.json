@@ -1,0 +1,552 @@
+{
+  "paperId": "arshad-1398-p05",
+  "degree": "arshad",
+  "year": 1398,
+  "groupCodes": ["1121"],
+  "bookletCount": 1,
+  "source": { "file": "1121-1398.pdf", "pages": [2, 3, 4, 5, 6] },
+  "extractedBy": { "model": "claude-sonnet-5", "at": "2026-09-16" },
+  "questions": [
+    {
+      "no": 1,
+      "part": "grammar",
+      "stem": "The orthodox view of a single intelligence, widely, if wrongly, accepted today in the minds of the general population, ....., who by the second decade of this century had put forth its major precepts.",
+      "options": [
+        "a few researchers whose energies and convictions originated those",
+        "originated from the energies and convictions of a few researchers",
+        "the energies and convictions of which originated and a few researchers",
+        "with which originated the energies and convictions of a few researchers"
+      ],
+      "optionLemmas": ["originate", "originate", "originate", "originate"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "originate",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "grammar",
+      "stem": "One of the charges voiced by environmentalists is that the people constructing shallow ponds for shrimp farming all too often destroy mangroves, salt-tolerant trees ..... .",
+      "options": [
+        "in much of the tropical world line the coast",
+        "line much coast in the tropical world",
+        "line the coast of much of the tropical world",
+        "that line the coast in much of the tropical world"
+      ],
+      "optionLemmas": ["line", "line", "line", "line"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "line",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "grammar",
+      "stem": "To doctors, sugar hides a great blackness; it blackens the teeth, and under its sweetness it is nothing but a very great acrimony, ..... it equals agua fortis [nitric acid].",
+      "options": ["such that", "as if", "even if", "notwithstanding"],
+      "optionLemmas": ["such that", "as if", "even if", "notwithstanding"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "such that",
+      "uncertain": ["q3 stem: the paper prints \"agua fortis\" (its own typo for \"aqua fortis\"); transcribed verbatim"]
+    },
+    {
+      "no": 4,
+      "part": "grammar",
+      "stem": "But only in the mid-1980s ..... access to this regime in the laboratory.",
+      "options": [
+        "did control over materials and nanofabrication begin to provide",
+        "materials and nanofabrication began to control and provided",
+        "when materials and nanofabrication and their control began providing",
+        "it was that control over materials and nanofabrication did begin to provide"
+      ],
+      "optionLemmas": ["provide", "provide", "provide", "provide"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "provide",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "grammar",
+      "stem": "Calorie restriction delays puberty in rats, mice and monkeys. And the maggots produced by long-lived flies die in greater ..... .",
+      "options": [
+        "number compared to normal flies",
+        "a number than the ones in normal files do",
+        "numbers than those of normal flies do",
+        "numbers or as many as normal flies"
+      ],
+      "optionLemmas": ["number", "number", "number", "number"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "number",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "grammar",
+      "stem": "..... how influential television programs and movies are, we have good reason to believe that their depictions of violence cause young people to engage in violent behavior.",
+      "options": ["For all", "Far from", "Given", "Irrespective of"],
+      "optionLemmas": ["for all", "far from", "given", "irrespective of"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "given",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "grammar",
+      "stem": "Symbiotic cells of algae known as zooxanthellae carry out photosynthesis using the metabolic wastes of the corals, ....., for their coral hosts, and even for other members of the reef community.",
+      "options": [
+        "they themselves produce food",
+        "that produce food for them",
+        "and producing food for themselves",
+        "thereby producing food for themselves"
+      ],
+      "optionLemmas": ["produce", "produce", "produce", "produce"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "produce",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "..... sinus headache, SineEase costs the least per dose.",
+      "options": [
+        "Over-the-counter medications marketed to relieve",
+        "Marketing medications over the counter for relief of",
+        "Marketing over the counters are medications which relieve",
+        "Of the many over-the-counter medications marketed for the relief of"
+      ],
+      "optionLemmas": ["medication", "medication", "medication", "medication"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "medication",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "grammar",
+      "stem": "Anxious to reduce fares in what has, as a result of deregulation, become a highly competitive market, ..... safety inspections and routine maintenance of aircraft.",
+      "options": [
+        "costs to be reduced tempts airline to decrease",
+        "airlines will be tempted to reduce costs by decreasing",
+        "it will tempt airlines to reduce costs and thus decreasing",
+        "tempting, as it may seem to reduce costs, airlines tend to decrease"
+      ],
+      "optionLemmas": ["tempt", "tempt", "tempt", "tempt"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "tempt",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "grammar",
+      "stem": "Some scientists say consciousness exists but ....., like quantum mechanics is for monkeys.",
+      "options": [
+        "for humans is so complex as to be fathomed",
+        "so complex it is to fathom for humans",
+        "as for humans so complex to fathom that",
+        "at too complex a level for humans to fathom"
+      ],
+      "optionLemmas": ["complex", "complex", "complex", "complex"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "complex",
+      "uncertain": []
+    },
+    {
+      "no": 11,
+      "part": "vocabulary",
+      "stem": "The food cooked in this way is particularly ....., and hence highly recommended, for people who are recuperating from a severe illness.",
+      "options": ["wholesome", "copious", "forcible", "fetid"],
+      "optionLemmas": ["wholesome", "copious", "forcible", "fetid"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "wholesome",
+      "uncertain": []
+    },
+    {
+      "no": 12,
+      "part": "vocabulary",
+      "stem": "Not finding any sponsors to stage their performance, the upstart music group decided to hold a concert at the beach, ..... .",
+      "options": ["impromptuj", "insuperable", "inestimable", "alfresco"],
+      "optionLemmas": ["impromptu", "insuperable", "inestimable", "alfresco"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "impromptu",
+      "uncertain": ["q12 option1 printed as 'impromptuj' (likely paper's own typo/rendering of 'impromptu'); key chosen as 'impromptu' over 'alfresco' since 'at the beach' already conveys outdoor setting, but this is debatable"]
+    },
+    {
+      "no": 13,
+      "part": "vocabulary",
+      "stem": "The day the three-member team was supposed to ..... after the completion of the task came the news that they had been assigned another project and would have to work together for another three months.",
+      "options": ["convoke", "disband", "coalesce", "relent"],
+      "optionLemmas": ["convoke", "disband", "coalesce", "relent"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "disband",
+      "uncertain": []
+    },
+    {
+      "no": 14,
+      "part": "vocabulary",
+      "stem": "She only had words of ..... for her husband, blaming him for their son's failure at school.",
+      "options": ["parody", "hyperbole", "rhetoric", "animadversion"],
+      "optionLemmas": ["parody", "hyperbole", "rhetoric", "animadversion"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "animadversion",
+      "uncertain": []
+    },
+    {
+      "no": 15,
+      "part": "vocabulary",
+      "stem": "The retailer tried to ..... his defective stock on his customers by packing it in new and fancy boxes.",
+      "options": ["sap", "garnish", "foist", "overpower"],
+      "optionLemmas": ["sap", "garnish", "foist", "overpower"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "foist",
+      "uncertain": []
+    },
+    {
+      "no": 16,
+      "part": "vocabulary",
+      "stem": "The book appears to be very ..... when you read its outer jacket and the back cover, but as you read it, you find that there is very little substance as it is far removed from practicality.",
+      "options": ["prolix", "sententious", "defeasible", "incongruous"],
+      "optionLemmas": ["prolix", "sententious", "defeasible", "incongruous"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "sententious",
+      "uncertain": []
+    },
+    {
+      "no": 17,
+      "part": "vocabulary",
+      "stem": "We must continue to ..... freedom not only from toil, but from the despotism of the boss, from a viciously enforced racial order, and from the intimate violence of patriarchy.",
+      "options": ["outstrip", "divest", "disabuse", "pursue"],
+      "optionLemmas": ["outstrip", "divest", "disabuse", "pursue"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "pursue",
+      "uncertain": []
+    },
+    {
+      "no": 18,
+      "part": "vocabulary",
+      "stem": "One day in early 2009, almost a year to the day since I'd committed myself to fencing, something happened that would completely change the ..... of my career.",
+      "options": ["trajectory", "parabola", "itinerary", "excursion"],
+      "optionLemmas": ["trajectory", "parabola", "itinerary", "excursion"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "trajectory",
+      "uncertain": []
+    },
+    {
+      "no": 19,
+      "part": "vocabulary",
+      "stem": "Between its pre-crisis peak in late 2007 and its ..... at the end of 2009, the economy contracted by 11.2 percent.",
+      "options": ["opulence", "nexus", "perquisite", "nadir"],
+      "optionLemmas": ["opulence", "nexus", "perquisite", "nadir"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "nadir",
+      "uncertain": []
+    },
+    {
+      "no": 20,
+      "part": "vocabulary",
+      "stem": "It was the first time in eight years that someone had tried to take ..... action against the dictatorial impositions of the committee secretary.",
+      "options": ["titular", "flagging", "contingent", "countervailing"],
+      "optionLemmas": ["titular", "flagging", "contingent", "countervailing"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "countervailing",
+      "uncertain": []
+    },
+    {
+      "no": 21,
+      "part": "vocabulary",
+      "stem": "Unlike some other regimes in Latin America, Brazil's military rulers attempted to keep up a/an ..... of democracy after taking over in 1964.",
+      "options": ["solemnity", "equity", "veneer", "forte"],
+      "optionLemmas": ["solemnity", "equity", "veneer", "forte"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "veneer",
+      "uncertain": []
+    },
+    {
+      "no": 22,
+      "part": "vocabulary",
+      "stem": "The new movie remains tonally elusive, changing at times scene by scene or even moment by moment between playful comedy and something more ..... and ruminative.",
+      "options": ["ebullient", "histroinic", "cloying", "downcast"],
+      "optionLemmas": ["ebullient", "histrionic", "cloying", "downcast"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "downcast",
+      "uncertain": ["q22 option2 printed as 'histroinic' (likely the paper's own typo/rendering of 'histrionic')"]
+    },
+    {
+      "no": 23,
+      "part": "vocabulary",
+      "stem": "The ..... of the players has badly affected the spirit of sports; most of the players nowadays require money more than they require name, and thus cheat not only their teams but also their countries.",
+      "options": ["venality", "alienation", "forgery", "torpidity"],
+      "optionLemmas": ["venality", "alienation", "forgery", "torpidity"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "venality",
+      "uncertain": []
+    },
+    {
+      "no": 24,
+      "part": "vocabulary",
+      "stem": "Left with no other option, the court made the rather unusual decision to ..... the dead body from its grave and have a DNA test conducted on it to firmly establish its identity.",
+      "options": ["dismember", "detract", "disinter", "denude"],
+      "optionLemmas": ["dismember", "detract", "disinter", "denude"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "disinter",
+      "uncertain": []
+    },
+    {
+      "no": 25,
+      "part": "vocabulary",
+      "stem": "Prone to being emotional like all human beings, it sometimes becomes very difficult for a judge to give a ..... hearing to a court case involving human issues.",
+      "options": ["pedantic", "dispassionate", "meretricious", "synergetic"],
+      "optionLemmas": ["pedantic", "dispassionate", "meretricious", "synergetic"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "dispassionate",
+      "uncertain": []
+    },
+    {
+      "no": 26,
+      "part": "vocabulary",
+      "stem": "An interrogation by a police officer is a questioning session between him and you; he can ask you or anybody any questions because that is his ..... .",
+      "options": ["discretion", "prerogative", "franchise", "deference"],
+      "optionLemmas": ["discretion", "prerogative", "franchise", "deference"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "prerogative",
+      "uncertain": []
+    },
+    {
+      "no": 27,
+      "part": "vocabulary",
+      "stem": "Population control is a ..... need of the hour. We just cannot afford to let our numbers multiply unchecked.",
+      "options": ["clamant", "diabolical", "blatant", "nascent"],
+      "optionLemmas": ["clamant", "diabolical", "blatant", "nascent"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "clamant",
+      "uncertain": []
+    },
+    {
+      "no": 28,
+      "part": "vocabulary",
+      "stem": "The prince said that if he could ..... his connection to the royal family and make himself a person of common descent and ordinary connexions, he would gladly do so.",
+      "options": ["revoke", "assay", "chew over", "vaunt"],
+      "optionLemmas": ["revoke", "assay", "chew over", "vaunt"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "revoke",
+      "uncertain": []
+    },
+    {
+      "no": 29,
+      "part": "vocabulary",
+      "stem": "It rained non-stop for a few hours in Chandrapur. As a result, the city was flooded, electricity went ..... and the people on the roads waded knee-deep in water.",
+      "options": ["risible", "hale", "kaput", "tremulous"],
+      "optionLemmas": ["risible", "hale", "kaput", "tremulous"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "kaput",
+      "uncertain": []
+    },
+    {
+      "no": 30,
+      "part": "vocabulary",
+      "stem": "The family had booked their first big car with great delight. However, just two days before the delivery, the head of the family suffered from a heart attack. Most of the savings were diverted towards his treatment and so they ..... the order for the car.",
+      "options": ["counteracted", "countermanded", "counterbalanced", "counterclaimed"],
+      "optionLemmas": ["counteract", "countermand", "counterbalance", "counterclaim"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "countermand",
+      "uncertain": []
+    },
+    {
+      "no": 31,
+      "part": "cloze",
+      "stem": "A recent brain imaging study may provide good news for dyslexics and debate ..... for certain educators.",
+      "options": ["modicum", "prognostication", "fodder", "implacability"],
+      "optionLemmas": ["modicum", "prognostication", "fodder", "implacability"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "fodder",
+      "uncertain": []
+    },
+    {
+      "no": 32,
+      "part": "grammar",
+      "stem": "Using functional magnetic resonance imaging, Yale University professor Sally E. Shaywitz and her colleagues have identified ....., one of which may result from ineffective reading instruction early in life.",
+      "options": [
+        "two distinct types of dyslexia-related reading disorders appearing",
+        "dyslexia-related reading disorders they appear in two distinct types",
+        "what appear to be two distinct types of dyslexia-related reading disorders",
+        "disorders appearing to be dyslexia-related reading of two distinct types that"
+      ],
+      "optionLemmas": ["appear", "appear", "appear", "appear"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "appear",
+      "uncertain": []
+    },
+    {
+      "no": 33,
+      "part": "cloze",
+      "stem": "Shaywitz studied the neural activity of 27 normal readers, 19 \"accuracy-improved readers\" who have learned to read more accurately by going at a slow pace, and 24 \"persistently poor readers\" who ..... both speed and comprehension.",
+      "options": ["transcend", "manipulate", "portend of", "struggle with"],
+      "optionLemmas": ["transcend", "manipulate", "portend", "struggle"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "struggle",
+      "uncertain": []
+    },
+    {
+      "no": 34,
+      "part": "grammar",
+      "stem": "Images showed that the slow but accurate readers did not activate the same brain regions when reading as the normal subjects, ..... some standard neural circuitry but their brains had compensated with other pathways.",
+      "options": [
+        "and suggest the lack of",
+        "suggesting that they lacked",
+        "and that they suggest they lacked",
+        "which suggested that they are lacking in"
+      ],
+      "optionLemmas": ["suggest", "suggest", "suggest", "suggest"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "suggest",
+      "uncertain": []
+    },
+    {
+      "no": 35,
+      "part": "grammar",
+      "stem": "\"It tells us that the system is there for reading .....,\" Shaywitz says.",
+      "options": [
+        "but that it hasn't been properly activated",
+        "despite of its not being yet properly activated",
+        "has not been not yet properly activated, though",
+        "to have not been properly activated yet, however"
+      ],
+      "optionLemmas": ["activate", "activate", "activate", "activate"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "activate",
+      "uncertain": []
+    },
+    {
+      "no": 36,
+      "part": "cloze",
+      "stem": "She concludes that poor readers, instead of \".....,\" letters into words as normal readers do, were trying to identify words by rote memory.",
+      "options": ["mutating", "juxtaposing", "enforcing", "translating"],
+      "optionLemmas": ["mutate", "juxtapose", "enforce", "translate"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "translate",
+      "uncertain": []
+    },
+    {
+      "no": 37,
+      "part": "cloze",
+      "stem": "..... of phonics—a rigorous study of the relation between letters and sounds—maintain that this approach is more effective than the \"whole language\" method, ..... naturally learn to recognize words through reading and writing.",
+      "options": ["Contenders", "Champions", "Detractors", "Gadflies"],
+      "optionLemmas": ["contender", "champion", "detractor", "gadfly"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "champion",
+      "uncertain": []
+    },
+    {
+      "no": 38,
+      "part": "grammar",
+      "stem": "..... of phonics—a rigorous study of the relation between letters and sounds—maintain that this approach is more effective than the \"whole language\" method, ..... naturally learn to recognize words through reading and writing.",
+      "options": [
+        "which is based on the belief that children",
+        "based on the belief that children who",
+        "a belief based on the fact children",
+        "based on its belief children"
+      ],
+      "optionLemmas": ["belief", "belief", "belief", "belief"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "belief",
+      "uncertain": []
+    },
+    {
+      "no": 39,
+      "part": "grammar",
+      "stem": "Many schools now use both approaches, ..... some experts say that children in general, and especially those who may have some level of dyslexia, need ..... phonics work.",
+      "options": ["as such", "in that", "that is", "although"],
+      "optionLemmas": ["as such", "in that", "that is", "although"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "although",
+      "uncertain": []
+    },
+    {
+      "no": 40,
+      "part": "cloze",
+      "stem": "Many schools now use both approaches, ..... some experts say that children in general, and especially those who may have some level of dyslexia, need ..... phonics work.",
+      "options": ["stronger", "more peripheral", "pithier", "more reactionary"],
+      "optionLemmas": ["strong", "peripheral", "pithy", "reactionary"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "strong",
+      "uncertain": []
+    }
+  ],
+  "uncertain": []
+}

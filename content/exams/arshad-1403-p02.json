@@ -1,0 +1,132 @@
+{
+  "paperId": "arshad-1403-p02",
+  "degree": "arshad",
+  "year": 1403,
+  "groupCodes": ["1103", "1109", "1119", "1127", "1137", "1138", "1139", "1144", "1146", "1202", "1205", "1209", "1213", "1214", "1215", "1216", "1217", "1219", "1253", "1255", "1256", "1262", "1273", "1276", "1279", "1285", "1287", "1292", "1293", "1314", "1322", "1323", "1324", "1325", "1327", "1350", "1351", "1353", "1356", "1359", "1361", "1362", "1363", "1365", "1501", "1502", "1503", "1504", "1505", "1506", "1507", "1510", "1511"],
+  "bookletCount": 53,
+  "source": { "file": "1103-1403.pdf", "pages": [2, 3] },
+  "extractedBy": { "model": "claude-sonnet-5", "at": "2026-09-14" },
+  "questions": [
+    {
+      "no": 1,
+      "part": "vocabulary",
+      "stem": "If you want to excel at what you love and take your skills to the next level, you need to make a ..... to both yourself and your craft.",
+      "options": ["commitment", "passion", "statement", "venture"],
+      "optionLemmas": ["commitment", "passion", "statement", "venture"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "commitment",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "vocabulary",
+      "stem": "It is usually difficult to ..... clearly between fact and fiction in her books.",
+      "options": ["gloat", "rely", "raise", "distinguish"],
+      "optionLemmas": ["gloat", "rely", "raise", "distinguish"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "distinguish",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "vocabulary",
+      "stem": "Some people seem to lack a moral ....., but those who have one are capable of making the right choice when confronted with difficult decisions.",
+      "options": ["aspect", "compass", "dilemma", "sensation"],
+      "optionLemmas": ["aspect", "compass", "dilemma", "sensation"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "compass",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "vocabulary",
+      "stem": "The factual error may be insignificant; but it is surprising in a book put out by a/an ..... academic publisher.",
+      "options": ["complacent", "incipient", "prestigious", "notorious"],
+      "optionLemmas": ["complacent", "incipient", "prestigious", "notorious"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "prestigious",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "vocabulary",
+      "stem": "In a society conditioned for instant ....., most people want quick results.",
+      "options": ["marrow", "gratification", "spontaneity", "consternation"],
+      "optionLemmas": ["marrow", "gratification", "spontaneity", "consternation"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "gratification",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "vocabulary",
+      "stem": "One medically-qualified official was ..... that a product could be so beneficial and yet not have its medical benefit matched by commensurate commercial opportunity.",
+      "options": ["incredulous", "quintessential", "appeased", "exhilarated"],
+      "optionLemmas": ["incredulous", "quintessential", "appease", "exhilarate"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "incredulous",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "vocabulary",
+      "stem": "Some aspects of zoological gardens always ..... me, because animals are put there expressly for the entertainment of the public.",
+      "options": ["deliberate", "surmise", "patronize", "appall"],
+      "optionLemmas": ["deliberate", "surmise", "patronize", "appall"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "appall",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "Many schools and universities ..... transition to online learning, and this trend is likely to continue in the future.",
+      "options": ["forced to", "have forced", "were forced to", "forcing"],
+      "optionLemmas": ["force", "force", "force", "force"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "force",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "grammar",
+      "stem": "There are many benefits to online learning, ..... accessibility and flexibility.",
+      "options": ["including increased", "they include increasing", "and increase", "they are increased"],
+      "optionLemmas": ["include", "include", "increase", "increase"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "include",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "grammar",
+      "stem": "Online learning ..... affordable than traditional in-person learning, making education more accessible to a wider range of students.",
+      "options": ["is also more", "also to be more", "which is also more", "is also so"],
+      "optionLemmas": ["be", "be", "be", "be"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "be",
+      "uncertain": []
+    }
+  ],
+  "uncertain": []
+}

@@ -1,0 +1,107 @@
+{
+  "confusables": [
+    {
+      "note": "هم‌آوا با seed؛ اما cede یعنی واگذار کردن، نه بذر",
+      "word": "seed"
+    },
+    {
+      "note": "secede یعنی جدا شدن از یک اتحاد یا کشور",
+      "word": "secede"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "cede",
+  "lemma": "cede",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 1,
+      "paperId": "arshad-1400-p09",
+      "part": "cloze",
+      "questionNo": 40,
+      "reach": 1,
+      "surface": "ceded",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 12,
+      "reach": 1,
+      "surface": "cede",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "retain",
+        "seize"
+      ],
+      "definition": "to give up land, power or a right to another person or country, often unwillingly",
+      "examples": [
+        {
+          "en": "After the war the country ceded several islands to its neighbour.",
+          "fa": "کشور پس از جنگ چند جزیره را به همسایه‌اش واگذار کرد."
+        }
+      ],
+      "ipa": "/siːd/",
+      "pos": "v",
+      "synonyms": [
+        "surrender",
+        "yield",
+        "relinquish"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 40
+        },
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 12
+        }
+      ],
+      "translations": [
+        "واگذار کردن",
+        "تسلیم کردن",
+        "از دست دادن (به نفع دیگری)"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 1
+    },
+    "byYear": {
+      "1399": 1,
+      "1400": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1399,
+    "lastYear": 1400,
+    "priority": 8,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "cede",
+    "ceded"
+  ]
+}

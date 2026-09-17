@@ -1,0 +1,132 @@
+{
+  "paperId": "arshad-1404-p03",
+  "degree": "arshad",
+  "year": 1404,
+  "groupCodes": ["1117", "1134", "1142", "1143", "1201", "1204", "1206", "1207", "1208", "1251", "1267", "1268", "1301", "1302", "1303", "1304", "1305", "1306", "1307", "1308", "1309", "1312", "1313", "1315", "1317", "1319", "1321", "1328"],
+  "bookletCount": 28,
+  "source": { "file": "1117-1404.pdf", "pages": [2, 3] },
+  "extractedBy": { "model": "claude-sonnet-5", "at": "2026-09-14" },
+  "questions": [
+    {
+      "no": 1,
+      "part": "vocabulary",
+      "stem": "My mother was a very strong, ..... woman who was a real adventurer in love with the arts and sports.",
+      "options": ["consecutive", "independent", "enforced", "subsequent"],
+      "optionLemmas": ["consecutive", "independent", "enforce", "subsequent"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "independent",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "vocabulary",
+      "stem": "The weakened ozone ....., which is vital to protecting life on Earth, is on track to be restored to full strength within decades.",
+      "options": ["layer", "level", "brim", "ingredient"],
+      "optionLemmas": ["layer", "level", "brim", "ingredient"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "layer",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "vocabulary",
+      "stem": "Reading about the extensive food directives some parents leave for their babysitters, I was wondering if these lists are meant to ease ..... feeling for leaving the children in someone else's care.",
+      "options": ["an affectionate", "a misguided", "an undisturbed", "a guilty"],
+      "optionLemmas": ["affectionate", "misguided", "undisturbed", "guilty"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "guilty",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "vocabulary",
+      "stem": "He is struck deaf by disease at an early age, but in rigorous and refreshingly unsentimental fashion, he learns to overcome his ..... so that he can keep alive the dream of becoming a physician like his father.",
+      "options": ["ambition", "incompatibility", "handicap", "roughness"],
+      "optionLemmas": ["ambition", "incompatibility", "handicap", "roughness"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "handicap",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "vocabulary",
+      "stem": "With cloak and suit manufacturers beginning to ..... their needs for the fall season, trading in the wool goods market showed signs of improvement this week.",
+      "options": ["anticipate", "nullify", "revile", "compliment"],
+      "optionLemmas": ["anticipate", "nullify", "revile", "compliment"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "anticipate",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "vocabulary",
+      "stem": "Sculptors leave highly ..... footprints in the sand of time, and millions of people who never heard the name of Augustus Saint-Gaudens are well-acquainted with his two statues of Lincoln.",
+      "options": ["insipid", "sinister", "conspicuous", "reclusive"],
+      "optionLemmas": ["insipid", "sinister", "conspicuous", "reclusive"],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "conspicuous",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "vocabulary",
+      "stem": "To avoid liability, officers were told that they need to ..... closely to established department rules and demonstrate that probable cause for an arrest or the issuance of a summons existed.",
+      "options": ["recapitulate", "confide", "hinder", "adhere"],
+      "optionLemmas": ["recapitulate", "confide", "hinder", "adhere"],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "adhere",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "The first organized international competition involving winter sports ..... just five years after the birth of the modern Olympics in 1896.",
+      "options": ["was introducing", "was introduced", "introduced", "has been introducing"],
+      "optionLemmas": ["introduce", "introduce", "introduce", "introduce"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "introduce",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "grammar",
+      "stem": "It was held eight times between 1901 and 1926, ..... all but one time.",
+      "options": ["with Stockholm hosting", "and Stockholm hosting", "that Stockholm hosted", "Stockholm hosted"],
+      "optionLemmas": ["host", "host", "host", "host"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "host",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "grammar",
+      "stem": "Figure skating was included in the Olympics for the first time in the 1908 Summer Games in London, ..... the skating competition was not actually held until October, some three months after the other events were over.",
+      "options": ["despite", "although", "otherwise", "notwithstanding"],
+      "optionLemmas": ["despite", "although", "otherwise", "notwithstanding"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "although",
+      "uncertain": []
+    }
+  ],
+  "uncertain": []
+}

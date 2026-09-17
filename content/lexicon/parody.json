@@ -1,0 +1,101 @@
+{
+  "confusables": [
+    {
+      "note": "satire نقد گزنده اجتماعی است، اما parody لزوماً تقلید سبک یک اثر یا شخص است",
+      "word": "satire"
+    },
+    {
+      "note": "املای نزدیک، اما parity یعنی برابری و هم‌ترازی",
+      "word": "parity"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "parody",
+  "lemma": "parody",
+  "level": "C1",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1401-p05",
+      "part": "vocabulary",
+      "questionNo": 27,
+      "reach": 1,
+      "surface": "parody",
+      "year": 1401
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p05",
+      "part": "vocabulary",
+      "questionNo": 14,
+      "reach": 1,
+      "surface": "parody",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a piece of writing, music or acting that copies the style of someone in a funny, exaggerated way",
+      "examples": [
+        {
+          "en": "The students performed a parody of the evening news for the festival.",
+          "fa": "دانشجویان برای جشنواره، تقلیدی مسخره‌آمیز از اخبار شامگاهی اجرا کردند."
+        }
+      ],
+      "ipa": "/ˈpærədi/",
+      "pos": "noun",
+      "synonyms": [
+        "spoof",
+        "caricature",
+        "burlesque"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 27
+        },
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "نقیضه",
+        "تقلید مسخره‌آمیز",
+        "هجو"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1398": 1,
+      "1401": 1
+    },
+    "distinctYears": 2,
+    "firstYear": 1398,
+    "lastYear": 1401,
+    "priority": 6,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 2,
+    "timesTested": 2
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "parody"
+  ]
+}

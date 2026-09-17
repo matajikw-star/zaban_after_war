@@ -1,0 +1,141 @@
+{
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "precision",
+  "lemma": "precision",
+  "level": "B2",
+  "occurrences": [
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p03",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 23,
+      "surface": "precision",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p05",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 5,
+      "surface": "precision",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p10",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 1,
+      "surface": "precision",
+      "year": 1400
+    },
+    {
+      "isAnswer": true,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1400-p12",
+      "part": "vocabulary",
+      "questionNo": 10,
+      "reach": 1,
+      "surface": "precision",
+      "year": 1400
+    },
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 0,
+      "paperId": "arshad-1398-p07",
+      "part": "vocabulary",
+      "questionNo": 175,
+      "reach": 1,
+      "surface": "precision",
+      "year": 1398
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "vagueness",
+        "imprecision"
+      ],
+      "definition": "the quality of being exact, accurate and careful about small details",
+      "examples": [
+        {
+          "en": "The surgeon worked with great precision under the bright operating lights.",
+          "fa": "جراح با دقت بسیار زیر نورهای روشن اتاق عمل کار می‌کرد."
+        }
+      ],
+      "ipa": "/prɪˈsɪʒn/",
+      "pos": "n",
+      "synonyms": [
+        "accuracy",
+        "exactness"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 175
+        }
+      ],
+      "translations": [
+        "دقت",
+        "دقت و ظرافت",
+        "ریزبینی"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {
+      "1400": 4
+    },
+    "byYear": {
+      "1398": 1,
+      "1400": 4
+    },
+    "distinctYears": 2,
+    "firstYear": 1398,
+    "lastYear": 1400,
+    "priority": 17,
+    "timesAsAnswer": 4,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 5
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "precision"
+  ]
+}

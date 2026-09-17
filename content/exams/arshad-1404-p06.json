@@ -1,0 +1,618 @@
+{
+  "paperId": "arshad-1404-p06",
+  "degree": "arshad",
+  "year": 1404,
+  "groupCodes": [
+    "1148"
+  ],
+  "bookletCount": 1,
+  "source": {
+    "file": "1148-1404.pdf",
+    "pages": [
+      2,
+      3,
+      4
+    ]
+  },
+  "extractedBy": {
+    "model": "claude-sonnet-5",
+    "at": "2026-09-14"
+  },
+  "questions": [
+    {
+      "no": 1,
+      "part": "grammar",
+      "stem": "Crowded cities around the world have made urban living ..... complicated that we need cutting-edge solutions to provide health services to all.",
+      "options": [
+        "so",
+        "too",
+        "such",
+        "very"
+      ],
+      "optionLemmas": [
+        "so",
+        "too",
+        "such",
+        "very"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "so",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "grammar",
+      "stem": "Urban development should avoid ..... wetlands through drainage, infill, water diversion, pollution or the introduction of invasive species.",
+      "options": [
+        "to destroy",
+        "destroying",
+        "which destroys",
+        "that is destroying"
+      ],
+      "optionLemmas": [
+        "destroy",
+        "destroy",
+        "destroy",
+        "destroy"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "destroy",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "grammar",
+      "stem": "..... that additional data collection is critical, develop a sampling plan to ensure you are collecting the relevant data in a manner that can have both the data quality and measurement quality criteria necessary.",
+      "options": [
+        "It is decided",
+        "As to be decided",
+        "If you had decided",
+        "Should you decide"
+      ],
+      "optionLemmas": [
+        "decide",
+        "decide",
+        "decide",
+        "decide"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "decide",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "grammar",
+      "stem": "If residents want the garbage to be collected regularly, they’d better ..... the municipal cleaners sufficient money.",
+      "options": [
+        "to be paying",
+        "paying",
+        "to pay",
+        "pay"
+      ],
+      "optionLemmas": [
+        "pay",
+        "pay",
+        "pay",
+        "pay"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "pay",
+      "uncertain": []
+    },
+    {
+      "no": 5,
+      "part": "grammar",
+      "stem": "..... only about 10,000 on-street parking spots at schools reserved for employees with placards, traffic experts fear that holders of the new placards will not find a proper spot to park their car.",
+      "options": [
+        "There are",
+        "There have been",
+        "Given that there are",
+        "That there have been"
+      ],
+      "optionLemmas": [
+        "be",
+        "be",
+        "given",
+        "that"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "given",
+      "uncertain": []
+    },
+    {
+      "no": 6,
+      "part": "grammar",
+      "stem": "Can you please explain to the municipal management team why ..... contribute to the overall function of the whole municipality?",
+      "options": [
+        "increasing salary will give workers",
+        "giving workers a salary increase will",
+        "will giving workers a salary increase",
+        "a salary increase will be given workers"
+      ],
+      "optionLemmas": [
+        "increase",
+        "give",
+        "give",
+        "give"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "give",
+      "uncertain": []
+    },
+    {
+      "no": 7,
+      "part": "grammar",
+      "stem": "As this district has a dense population, the mayor ..... more parking lots during his previous term in office, but he unfortunately did not.",
+      "options": [
+        "should have built",
+        "must have built",
+        "had been building",
+        "would be building"
+      ],
+      "optionLemmas": [
+        "build",
+        "build",
+        "build",
+        "build"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "build",
+      "uncertain": []
+    },
+    {
+      "no": 8,
+      "part": "grammar",
+      "stem": "If urban management is seen in this holistic and integrated way, it may begin to have some success in countries ..... their rapid urban growth.",
+      "options": [
+        "which trying to cope with",
+        "trying desperately to cope with",
+        "desperately trying to cope with",
+        "where they try desperately to be coping"
+      ],
+      "optionLemmas": [
+        "try",
+        "try",
+        "try",
+        "try"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "low",
+      "testedWord": "try",
+      "uncertain": []
+    },
+    {
+      "no": 9,
+      "part": "vocabulary",
+      "stem": "Little by little, ....., I developed this passion, and although one-half of a passion is obsession, the other half is love.",
+      "options": [
+        "in spite of myself",
+        "contrary for myself",
+        "otherwise I intended",
+        "despite of my intention"
+      ],
+      "optionLemmas": [
+        "spite",
+        "contrary",
+        "intend",
+        "intention"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "spite",
+      "uncertain": []
+    },
+    {
+      "no": 10,
+      "part": "grammar",
+      "stem": "..... too embarrassing to ignore did the federal authorities decide to act.",
+      "options": [
+        "When the media coverage became",
+        "With the media coverage becoming",
+        "Just while the media coverage becoming",
+        "Only after the media coverage became"
+      ],
+      "optionLemmas": [
+        "become",
+        "become",
+        "become",
+        "become"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "become",
+      "uncertain": []
+    },
+    {
+      "no": 11,
+      "part": "grammar",
+      "stem": "It is the exclusive right of City management to take disciplinary action for proper cause, relieve City employees from duty, for instance, because lack of work or other legitimate reasons.",
+      "options": [
+        "to take disciplinary action",
+        "from duty",
+        "because",
+        "other"
+      ],
+      "optionLemmas": [
+        "action",
+        "duty",
+        "because",
+        "other"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "because",
+      "uncertain": []
+    },
+    {
+      "no": 12,
+      "part": "grammar",
+      "stem": "We should ask ourselves whether it is worth living in a specific city if we are paying a high price compared with the services we obtain if we could go to another city and truly to realize our full potential.",
+      "options": [
+        "it is worth living",
+        "compared with",
+        "we obtain",
+        "to realize"
+      ],
+      "optionLemmas": [
+        "live",
+        "compare",
+        "obtain",
+        "realize"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "realize",
+      "uncertain": []
+    },
+    {
+      "no": 13,
+      "part": "grammar",
+      "stem": "He dramatically reneged by his promises, negotiating the lease of some of the city’s largest markets to private companies with close links to political elites for ‘redevelopment’ of the city.",
+      "options": [
+        "reneged by",
+        "negotiating",
+        "to private",
+        "with close links to"
+      ],
+      "optionLemmas": [
+        "renege",
+        "negotiate",
+        "private",
+        "link"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "renege",
+      "uncertain": []
+    },
+    {
+      "no": 14,
+      "part": "grammar",
+      "stem": "If the economic prosperity of cities increases, so do their level of digitalization and if cities embrace and integrate digitalization, there is a positive impact on their economic growth.",
+      "options": [
+        "cities increases",
+        "so do their",
+        "integrate digitalization",
+        "impact on their"
+      ],
+      "optionLemmas": [
+        "increase",
+        "do",
+        "integrate",
+        "impact"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "do",
+      "uncertain": []
+    },
+    {
+      "no": 15,
+      "part": "grammar",
+      "stem": "This European Union Smart Cities consultant has developed an application for users to discover in which cities best adapt to their expectations and preferences, based on his study of the 140 most attractive cities according to various international studies.",
+      "options": [
+        "developed an application",
+        "in which cities",
+        "to their expectations",
+        "according to"
+      ],
+      "optionLemmas": [
+        "develop",
+        "which",
+        "expectation",
+        "according"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "which",
+      "uncertain": []
+    },
+    {
+      "no": 16,
+      "part": "vocabulary",
+      "stem": "Whether in the South or the North, the cities we are living in are a clear expression of the increasing inequalities from which our societies ....., as a result of putting money and greed before people’s well-being.",
+      "options": [
+        "tolerate",
+        "protest",
+        "suffer",
+        "show"
+      ],
+      "optionLemmas": [
+        "tolerate",
+        "protest",
+        "suffer",
+        "show"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "suffer",
+      "uncertain": []
+    },
+    {
+      "no": 17,
+      "part": "vocabulary",
+      "stem": "A city is a relatively large, dense, permanent ..... of heterogeneous individuals and groups of individuals organized to perform locality-relevant functions in an integrated manner.",
+      "options": [
+        "vacancy",
+        "shape",
+        "profession",
+        "settlement"
+      ],
+      "optionLemmas": [
+        "vacancy",
+        "shape",
+        "profession",
+        "settlement"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "settlement",
+      "uncertain": []
+    },
+    {
+      "no": 18,
+      "part": "vocabulary",
+      "stem": "No effective global collaborative agreement to ..... climate change can be delivered without the full involvement of cities.",
+      "options": [
+        "tackle",
+        "violate",
+        "ensure",
+        "claim"
+      ],
+      "optionLemmas": [
+        "tackle",
+        "violate",
+        "ensure",
+        "claim"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "tackle",
+      "uncertain": []
+    },
+    {
+      "no": 19,
+      "part": "vocabulary",
+      "stem": "Urban development holds the promise of creating sustainable communities that enhance quality of life and ..... social connectivity for all residents.",
+      "options": [
+        "complicate",
+        "disband",
+        "promote",
+        "concern"
+      ],
+      "optionLemmas": [
+        "complicate",
+        "disband",
+        "promote",
+        "concern"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "promote",
+      "uncertain": []
+    },
+    {
+      "no": 20,
+      "part": "vocabulary",
+      "stem": "Some urban development plans often ignore green spaces, focusing ..... on commercial growth only.",
+      "options": [
+        "reliant",
+        "instead",
+        "similar",
+        "dependent"
+      ],
+      "optionLemmas": [
+        "reliant",
+        "instead",
+        "similar",
+        "dependent"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "instead",
+      "uncertain": []
+    },
+    {
+      "no": 21,
+      "part": "vocabulary",
+      "stem": "It is hardly surprising that most explorations of the future of cities and approaches to developing urban strategies ..... to incorporate questions related to the governance of cities.",
+      "options": [
+        "tend",
+        "favor",
+        "guide",
+        "address"
+      ],
+      "optionLemmas": [
+        "tend",
+        "favor",
+        "guide",
+        "address"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "tend",
+      "uncertain": []
+    },
+    {
+      "no": 22,
+      "part": "vocabulary",
+      "stem": "City life, a dynamic ..... of bustling streets and towering structures, has evolved into a defining aspect of human civilization.",
+      "options": [
+        "equivocation",
+        "deduction",
+        "tenancy",
+        "tapestry"
+      ],
+      "optionLemmas": [
+        "equivocation",
+        "deduction",
+        "tenancy",
+        "tapestry"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "tapestry",
+      "uncertain": []
+    },
+    {
+      "no": 23,
+      "part": "vocabulary",
+      "stem": "Cities produce and distribute the resources that provide better livelihoods for urban and rural residents ..... .",
+      "options": [
+        "alike",
+        "likely",
+        "as like",
+        "as likewise"
+      ],
+      "optionLemmas": [
+        "alike",
+        "likely",
+        "as like",
+        "as likewise"
+      ],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "alike",
+      "uncertain": []
+    },
+    {
+      "no": 24,
+      "part": "vocabulary",
+      "stem": "Everything in the city is observed and supported by the municipality departments, so that the ..... living within the defined city boundaries could be provided by the basic standards of living.",
+      "options": [
+        "applicants",
+        "ingredients",
+        "proponents",
+        "inhabitants"
+      ],
+      "optionLemmas": [
+        "applicant",
+        "ingredient",
+        "proponent",
+        "inhabitant"
+      ],
+      "key": 3,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "inhabitant",
+      "uncertain": []
+    },
+    {
+      "no": 25,
+      "part": "vocabulary",
+      "stem": "It is not news to anyone that many governments have ..... their responsibilities for any urban planning, leaving “the market” to freely operate the private appropriation of urban spaces without any restriction.",
+      "options": [
+        "burdened",
+        "bolstered",
+        "abandoned",
+        "pilfered"
+      ],
+      "optionLemmas": [
+        "burden",
+        "bolster",
+        "abandon",
+        "pilfer"
+      ],
+      "key": 2,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "abandon",
+      "uncertain": []
+    },
+    {
+      "no": 26,
+      "part": "vocabulary",
+      "stem": "Cities combine a mix of specialization and diversity derived from a concentration of people and economic activity that generates a ..... environment for innovation in ideas, technologies and processes.",
+      "options": [
+        "feline",
+        "fertile",
+        "sallow",
+        "stagnant"
+      ],
+      "optionLemmas": [
+        "feline",
+        "fertile",
+        "sallow",
+        "stagnant"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "fertile",
+      "uncertain": []
+    },
+    {
+      "no": 27,
+      "part": "vocabulary",
+      "stem": "It is widely acknowledged that the world has entered a more ..... period of political, social, economic and environmental conditions, as a result of which the current urban context presents a range of uncertainties and risks.",
+      "options": [
+        "lucid",
+        "volatile",
+        "mundane",
+        "malleable"
+      ],
+      "optionLemmas": [
+        "lucid",
+        "volatile",
+        "mundane",
+        "malleable"
+      ],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "volatile",
+      "uncertain": []
+    }
+  ],
+  "uncertain": []
+}

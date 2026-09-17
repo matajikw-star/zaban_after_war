@@ -1,0 +1,111 @@
+{
+  "confusables": [
+    {
+      "note": "تلفظ بسیار نزدیکی دارند؛ exceed یعنی فراتر رفتن از حدی، اما accede یعنی تن دادن به خواسته.",
+      "word": "exceed"
+    },
+    {
+      "note": "concede یعنی پذیرفتن شکست یا اعتراف به درستی چیزی، نه موافقت با یک درخواست.",
+      "word": "concede"
+    }
+  ],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
+  "id": "accede",
+  "lemma": "accede",
+  "level": "C2",
+  "occurrences": [
+    {
+      "isAnswer": false,
+      "occurrenceType": "tested",
+      "optionIndex": 2,
+      "paperId": "arshad-1399-p08",
+      "part": "vocabulary",
+      "questionNo": 15,
+      "reach": 1,
+      "surface": "accede",
+      "year": 1399
+    }
+  ],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "refuse",
+        "decline"
+      ],
+      "definition": "to agree to a request, demand or proposal, often after resisting it",
+      "examples": [
+        {
+          "en": "After long talks the minister acceded to the union's demands.",
+          "fa": "پس از مذاکرات طولانی، وزیر به خواسته‌های اتحادیه تن داد."
+        }
+      ],
+      "ipa": "/əkˈsiːd/",
+      "pos": "v",
+      "synonyms": [
+        "consent",
+        "assent",
+        "comply"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 15
+        }
+      ],
+      "translations": [
+        "تن دادن به",
+        "موافقت کردن با",
+        "پذیرفتن (خواسته)"
+      ]
+    },
+    {
+      "antonyms": [
+        "abdicate"
+      ],
+      "definition": "to take up a high office or position, especially a throne",
+      "examples": [
+        {
+          "en": "She acceded to the throne at the age of twenty-five.",
+          "fa": "او در بیست‌وپنج‌سالگی بر تخت نشست."
+        }
+      ],
+      "ipa": "/əkˈsiːd/",
+      "pos": "v",
+      "synonyms": [
+        "assume",
+        "succeed to"
+      ],
+      "testedIn": [],
+      "translations": [
+        "به مقام رسیدن",
+        "بر تخت نشستن"
+      ]
+    }
+  ],
+  "stats": {
+    "answersByYear": {},
+    "byYear": {
+      "1399": 1
+    },
+    "distinctYears": 1,
+    "firstYear": 1399,
+    "lastYear": 1399,
+    "priority": 3,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft",
+  "surfaceForms": [
+    "accede"
+  ]
+}

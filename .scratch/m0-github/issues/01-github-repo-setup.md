@@ -1,6 +1,6 @@
 # 01 — Finish M0: GitHub repo, protection, CI
 
-Status: ready-for-agent
+Status: done (2026-09-18)
 Type: task
 Milestone: M0
 
@@ -32,16 +32,17 @@ already done, what is left, and what is specific to this machine.
    pushed**; once `origin` exists, leave history alone.
 3. `gh repo create konkour-leitner --private --source=. --remote=origin --push`. Private —
    the lexicon is the business asset.
-4. Branch protection (command in `docs/plan/repo-setup.md` §4). `enforce_admins=true` is the
-   part that matters; zero required approvals since the owner is solo.
+4. ~~Branch protection~~ **done 2026-09-18.** `main` requires a pull request and a green `ci`
+   check, `enforce_admins` is on, force-pushes and deletions are refused. Verified by pushing
+   an empty commit straight at `main` and being rejected with GH006.
 5. Tracking rule for the parallel session's output, per their ADR-0006/0007:
    they gitignore `extraction/cache/` as regenerable and commit `extraction/state/`. Commit
    `.claude/`. Coordinate before touching files another session is actively writing.
 6. Test SSH from a GitHub Actions runner to an Iranian VPS — the M0 risk row in
    `docs/plan/roadmap.md`. If it fails, the pull-based deploy in `docs/plan/infrastructure.md`
    becomes the plan. Blocked until a VPS exists, so this may move to M3.
-7. Verify: open a trivial PR, watch CI go green, merge it, then confirm a direct
-   `git push origin main` is refused. That refusal is the deliverable.
+7. ~~Verify~~ **done 2026-09-18.** PRs #1 and #2 both went through CI green and merged; a
+   direct `git push origin main` was then refused. That refusal was the deliverable.
 
 ## Watch out
 

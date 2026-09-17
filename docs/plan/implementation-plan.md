@@ -22,7 +22,8 @@ Gate: VPS reachable over SSH, SMS template approved, Zarinpal panel accessible, 
 Tickets under `.scratch/dev-foundation/`:
 
 1. Repo: `apps/web`, `apps/landing`, `apps/admin`, `packages/design`, `android/` scaffolds;
-   root scripts; CI `e2e` job skeleton; `.env.example` complete; branch protection requires `ci`.
+   root scripts; CI `e2e` job skeleton; `.env.example` complete. (Branch protection is already
+   on: `main` takes a green-`ci` PR only, verified 2026-09-18.)
 2. `packages/core` rewritten to `what.md` §5: types, `params.ts`, `fold`, `progress`, `streak`,
    `paceEstimate`, `nextCard`, `goalFromMinutes`. Exhaustive tests (§16.1) including fast-check.
 3. `tools/simulate`: a 90-day synthetic user; output checked by hand once and pinned as a

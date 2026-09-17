@@ -6,7 +6,7 @@
   },
   "id": "carry",
   "lemma": "carry",
-  "level": null,
+  "level": "A1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +20,61 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to hold something and take it with you from one place to another",
+      "examples": [
+        {
+          "en": "She carried the heavy box up three flights of stairs alone.",
+          "fa": "او آن جعبهٔ سنگین را تنها از سه طبقه پله بالا برد."
+        }
+      ],
+      "ipa": "/ˈkæri/",
+      "pos": "v",
+      "synonyms": [
+        "bear",
+        "transport"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 177
+        }
+      ],
+      "translations": [
+        "حمل کردن",
+        "بردن",
+        "با خود بردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to \"carry out\" a task, an order or a piece of research is to do it and finish it properly",
+      "examples": [
+        {
+          "en": "The team carried out a survey of two thousand families last spring.",
+          "fa": "آن گروه بهار گذشته پیمایشی از دو هزار خانواده انجام داد."
+        }
+      ],
+      "ipa": "/ˌkæri ˈaʊt/",
+      "pos": "phr v",
+      "synonyms": [
+        "perform",
+        "conduct"
+      ],
+      "testedIn": [],
+      "translations": [
+        "انجام دادن",
+        "به اجرا درآوردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

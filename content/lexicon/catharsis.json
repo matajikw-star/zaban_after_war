@@ -6,7 +6,7 @@
   },
   "id": "catharsis",
   "lemma": "catharsis",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +20,42 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "repression"
+      ],
+      "definition": "the release of strong feelings that leaves a person calmer, often through art, writing or talking",
+      "examples": [
+        {
+          "en": "Writing about the accident was a catharsis that helped him sleep again.",
+          "fa": "نوشتن دربارهٔ آن حادثه پالایشی روانی بود که کمک کرد دوباره بخوابد."
+        }
+      ],
+      "ipa": "/kəˈθɑːsɪs/",
+      "pos": "n",
+      "synonyms": [
+        "release",
+        "purging"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 32
+        }
+      ],
+      "translations": [
+        "پالایش روانی",
+        "تخلیهٔ هیجانی",
+        "کاتارسیس"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هم‌ریشه و نزدیک در املا، اما capture یعنی اسیر کردن یا به چنگ آوردن",
+      "word": "capture"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "captivate",
   "lemma": "captivate",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,42 @@
       "year": 1402
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "bore"
+      ],
+      "definition": "to attract and hold someone's attention completely, because they find you or it charming",
+      "examples": [
+        {
+          "en": "The young pianist captivated the audience with her very first piece.",
+          "fa": "پیانیست جوان با همان قطعهٔ نخستش تماشاگران را مجذوب کرد."
+        }
+      ],
+      "ipa": "/ˈkæptɪveɪt/",
+      "pos": "v",
+      "synonyms": [
+        "enchant",
+        "fascinate"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p02",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "مجذوب کردن",
+        "شیفته کردن",
+        "دل ربودن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

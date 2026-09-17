@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "constitution یعنی قانون اساسی یا ساختار و بنیهٔ چیزی، نه حوزهٔ انتخابیه.",
+      "word": "constitution"
+    },
+    {
+      "note": "constituent یعنی جزء تشکیل‌دهنده و نیز رأی‌دهندهٔ یک حوزه؛ constituency خودِ حوزه است.",
+      "word": "constituent"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "constituency",
   "lemma": "constituency",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +29,58 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a district whose voters elect a representative, or the voters who live in that district",
+      "examples": [
+        {
+          "en": "The minister returned to her constituency to meet local voters.",
+          "fa": "وزیر برای دیدار با رأی‌دهندگان محلی به حوزهٔ انتخابیه‌اش بازگشت."
+        }
+      ],
+      "ipa": "/kənˈstɪtjuənsi/",
+      "pos": "n",
+      "synonyms": [
+        "electorate"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p04",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "حوزهٔ انتخابیه",
+        "رأی‌دهندگان یک حوزه"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a group of people who support a person, an idea or a product",
+      "examples": [
+        {
+          "en": "The magazine has built a loyal constituency among young readers.",
+          "fa": "این مجله در میان خوانندگان جوان پایگاه وفاداری برای خود ساخته است."
+        }
+      ],
+      "ipa": "/kənˈstɪtjuənsi/",
+      "pos": "n",
+      "synonyms": [
+        "following"
+      ],
+      "testedIn": [],
+      "translations": [
+        "گروه حامیان",
+        "پایگاه اجتماعی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

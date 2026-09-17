@@ -6,7 +6,7 @@
   },
   "id": "cabal",
   "lemma": "cabal",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +20,40 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a small group of people who join together secretly to plan something, especially against a government or a leader",
+      "examples": [
+        {
+          "en": "A small cabal of officers planned to seize power while the president was abroad.",
+          "fa": "دار و دسته‌ای کوچک از افسران نقشه کشیدند تا در غیاب رئیس‌جمهور قدرت را به دست بگیرند."
+        }
+      ],
+      "ipa": "/kəˈbæl/",
+      "pos": "n",
+      "synonyms": [
+        "clique",
+        "faction"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p04",
+          "questionNo": 19
+        }
+      ],
+      "translations": [
+        "دار و دستهٔ سری",
+        "باند مخفی",
+        "محفل توطئه‌گر"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "همین واژه است؛ candour املای بریتانیایی و candor املای آمریکایی آن است",
+      "word": "candour"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "candor",
   "lemma": "candor",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,42 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "evasiveness"
+      ],
+      "definition": "the quality of saying openly what you really think, even when it is unwelcome",
+      "examples": [
+        {
+          "en": "I admired the candor with which she admitted her own mistakes.",
+          "fa": "از صراحتی که با آن اشتباهات خودش را پذیرفت خوشم آمد."
+        }
+      ],
+      "ipa": "/ˈkændə(r)/",
+      "pos": "n",
+      "synonyms": [
+        "frankness",
+        "openness"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p01",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "صراحت",
+        "رک‌گویی",
+        "بی‌پردگی در سخن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

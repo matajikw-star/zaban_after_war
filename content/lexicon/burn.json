@@ -6,7 +6,7 @@
   },
   "id": "burn",
   "lemma": "burn",
-  "level": null,
+  "level": "A1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +20,63 @@
       "year": 1402
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "extinguish"
+      ],
+      "definition": "to be on fire, or to damage or destroy something with fire",
+      "examples": [
+        {
+          "en": "The old barn burned for hours before the firefighters finally arrived.",
+          "fa": "انبار کهنه ساعت‌ها سوخت تا اینکه سرانجام آتش‌نشان‌ها رسیدند."
+        }
+      ],
+      "ipa": "/bɜːn/",
+      "pos": "v",
+      "synonyms": [
+        "blaze",
+        "scorch"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p05",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "سوختن",
+        "سوزاندن",
+        "آتش گرفتن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to feel or cause a hot, painful sensation on the skin or in the eyes",
+      "examples": [
+        {
+          "en": "My eyes burned from the thick smoke that filled the kitchen.",
+          "fa": "چشمانم از دود غلیظی که آشپزخانه را پر کرده بود می‌سوخت."
+        }
+      ],
+      "ipa": "/bɜːn/",
+      "pos": "v",
+      "synonyms": [
+        "sting",
+        "smart"
+      ],
+      "testedIn": [],
+      "translations": [
+        "سوزش داشتن",
+        "سوزاندن (پوست یا چشم)"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

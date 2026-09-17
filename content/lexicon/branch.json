@@ -6,7 +6,7 @@
   },
   "id": "branch",
   "lemma": "branch",
-  "level": null,
+  "level": "A2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +20,62 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "one of the parts of a tree that grows out from the trunk and carries leaves",
+      "examples": [
+        {
+          "en": "The children climbed onto a thick branch and waved to us from there.",
+          "fa": "بچه‌ها از شاخه‌ای کلفت بالا رفتند و از آنجا برای ما دست تکان دادند."
+        }
+      ],
+      "ipa": "/brɑːntʃ/",
+      "pos": "n",
+      "synonyms": [
+        "bough",
+        "limb"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p05",
+          "questionNo": 20
+        }
+      ],
+      "translations": [
+        "شاخه",
+        "شاخهٔ درخت"
+      ]
+    },
+    {
+      "antonyms": [
+        "headquarters"
+      ],
+      "definition": "a local office or shop that belongs to a larger company or organization",
+      "examples": [
+        {
+          "en": "Our bank has opened a new branch near the railway station.",
+          "fa": "بانک ما شعبه‌ای تازه نزدیک ایستگاه راه‌آهن باز کرده است."
+        }
+      ],
+      "ipa": "/brɑːntʃ/",
+      "pos": "n",
+      "synonyms": [
+        "office",
+        "outlet"
+      ],
+      "testedIn": [],
+      "translations": [
+        "شعبه",
+        "نمایندگی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

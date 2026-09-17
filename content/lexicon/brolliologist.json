@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "در همان سؤال آمده بود؛ phillumenist یعنی گردآورندهٔ قوطی کبریت",
+      "word": "phillumenist"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "brolliologist",
   "lemma": "brolliologist",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +25,36 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a rare and playful word for a person who collects umbrellas, built on \"brolly\", the British informal word for an umbrella; it is not listed in standard dictionaries",
+      "examples": [
+        {
+          "en": "Only a devoted brolliologist would keep two hundred umbrellas in one small room.",
+          "fa": "فقط یک گردآورندهٔ پرشور چتر دویست چتر را در یک اتاق کوچک نگه می‌دارد."
+        }
+      ],
+      "ipa": "/ˌbrɒliˈɒlədʒɪst/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p03",
+          "questionNo": 17
+        }
+      ],
+      "translations": [
+        "گردآورندهٔ چتر",
+        "کلکسیونر چتر"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

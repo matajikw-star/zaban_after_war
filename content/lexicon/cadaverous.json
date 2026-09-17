@@ -6,7 +6,7 @@
   },
   "id": "cadaverous",
   "lemma": "cadaverous",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +20,42 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "ruddy"
+      ],
+      "definition": "extremely pale and thin, so that a person looks like a dead body",
+      "examples": [
+        {
+          "en": "After months of illness he had a cadaverous look that frightened his children.",
+          "fa": "پس از ماه‌ها بیماری چهره‌ای مرده‌وار داشت که بچه‌هایش را می‌ترساند."
+        }
+      ],
+      "ipa": "/kəˈdævərəs/",
+      "pos": "adj",
+      "synonyms": [
+        "gaunt",
+        "haggard"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 11
+        }
+      ],
+      "translations": [
+        "مرده‌وار",
+        "نزار و رنگ‌پریده",
+        "شبیه جنازه"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

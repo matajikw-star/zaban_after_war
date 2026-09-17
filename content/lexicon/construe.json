@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "construct یعنی ساختن و بنا کردن؛ construe یعنی تعبیر کردن.",
+      "word": "construct"
+    },
+    {
+      "note": "misconstrue همین فعل با پیشوند منفی است: بد تعبیر کردن و اشتباه فهمیدن.",
+      "word": "misconstrue"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "construe",
   "lemma": "construe",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +29,39 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to understand a word, a statement or an action as having a particular meaning, out of several possible ones",
+      "examples": [
+        {
+          "en": "Her silence was construed as an admission of guilt.",
+          "fa": "سکوت او به منزلهٔ اعتراف به گناه تعبیر شد."
+        }
+      ],
+      "ipa": "/kənˈstruː/",
+      "pos": "v",
+      "synonyms": [
+        "interpret"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p03",
+          "questionNo": 21
+        }
+      ],
+      "translations": [
+        "تعبیر کردن",
+        "تفسیر کردن",
+        "معنا کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

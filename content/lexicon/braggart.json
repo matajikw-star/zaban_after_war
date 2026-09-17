@@ -6,7 +6,7 @@
   },
   "id": "braggart",
   "lemma": "braggart",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -20,8 +20,40 @@
       "year": 1402
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a person who talks too proudly about what they own or what they can do",
+      "examples": [
+        {
+          "en": "Nobody believed the braggart when he said he had climbed the mountain alone.",
+          "fa": "هیچ‌کس حرف آن لاف‌زن را باور نکرد وقتی گفت تنها از کوه بالا رفته است."
+        }
+      ],
+      "ipa": "/ˈbræɡət/",
+      "pos": "n",
+      "synonyms": [
+        "boaster",
+        "show-off"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p05",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "لاف‌زن",
+        "خودستا",
+        "فخرفروش"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

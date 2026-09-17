@@ -152,11 +152,31 @@ distance.
   the **learner-dictionary (Oxford/Cambridge) convention**: `/r/` not `/ɹ/`,
   `/e/` not `/ɛ/`, syllabic `/ˈkənˈtrɪʃn/`. The hint pass generates `تداعی صوتی`
   hints *from* this, so a wrong one teaches a wrong sound.
-- **Domain terms** — 45 context words carry a `domain` block with field codes.
-  Use the discipline's own Persian term, not a general paraphrase: `morphology`
-  in linguistics is «صرف / ساخت‌واژه», not «ریخت‌شناسی». Nothing maps a field code
-  to a field name yet (`.scratch/stem-vocab/issues/02-field-code-names.md`); it
-  does not block the work, but say so when the field is ambiguous.
+- **Domain terms** — 44 context words carry a `domain` block. Use the
+  discipline's own Persian term, not a general paraphrase: `morphology` in
+  linguistics is «صرف / ساخت‌واژه», not «ریخت‌شناسی».
+
+  **`domain.fieldCodes` names the papers the word sat in, not its discipline.**
+  It is weak evidence and sometimes none — JUDGING.md rule 6 is the same rule
+  from the judging side: `anybody` and `anxious` attribute to 1121 too.
+  `content/field-codes.json` maps a code to its Persian name; three codes carry
+  every block:
+
+  | code | field | words | worth as a hint |
+  |---|---|---|---|
+  | `1110` | زبان‌شناسی | 20 | real — `affix`, `lexical`, `philology`, `signifier` |
+  | `1121` | زبان انگلیسی | 14 | **none** — the field this product is for, and its paper is a general English test, so its stems range over every subject |
+  | `1148` | مدیریت کسب و کار و امور شهری | 6 | none — `hypothalamus` and `planetesimal` are not business terms |
+
+  So: take the discipline from the word. A 1121 tag tells you a word appeared in
+  an English exam, which you already knew. Five blocks (`feedstock`,
+  `formalism`, `geocentric`, `hemoglobin`, `protocetid`) carry an empty
+  `fieldCodes` because they sat general papers — also not a signal.
+
+  75 of the 132 codes in the corpus are still unnamed, and three are
+  contradictory in the source sheet
+  (`.scratch/stem-vocab/issues/02-field-code-names.md`). Neither blocks this
+  pass, since no word data depends on a code being named.
 - **`status` stays `draft`.** Only the owner promotes to `approved`.
 - **A wrong lemma is reported, never renamed.** Word ids are frozen forever
   (constitution rule 6). `content/lexicon/histrionic.json` has

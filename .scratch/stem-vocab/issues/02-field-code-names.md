@@ -1,51 +1,76 @@
 # 02 — Map field codes to field names
 
-Status: open
+Status: partly resolved — 57 of 132 named, 3 contradictory
 Type: task
 
 ## Goal
 
 `content/exams/*.json` carries `groupCodes` — the کد رشته that sat each paper —
 and `extraction/state/routes.jsonl` carries one per booklet. 918 code entries
-across 58 papers. **Nothing in the repo says what any of them mean.** `1121` is
-a number.
+across 58 papers. Nothing in the repo said what any of them meant.
 
-## Why it matters now
+## What changed (2026-09-17)
 
-Two things need the mapping, and neither can be finished without it:
+The owner supplied a workbook, now at `sources/reference/field-codes.xlsx`, and
+named one further code by hand. `extraction/scripts/field_codes.py` converts it
+to **`content/field-codes.json`**. Re-run that script when a fuller sheet
+arrives; do not hand-edit the JSON.
 
-- **Domain-term attribution** (ADR-0011). The judging pass flags a stem word as a
-  domain term and records the field codes it belongs to. Machine-readable today,
-  unreadable by a human — and unshowable in a UI that must say
-  «اصطلاح تخصصی رشتهٔ ...» in Persian.
-- **Onboarding** asks the candidate for their field code (product-brief R7, Q25).
-  A picker needs names, not a number the candidate must know by heart.
+| | count |
+|---|---|
+| codes named | 57 of the 132 in the corpus |
+| names in the sheet the corpus never uses | 22 |
+| codes still unnamed | 75 |
+| codes the sheet contradicts itself on | 3 |
 
-## What is already known from the corpus
+**The three codes the domain-term work needed are all named now:**
 
-Three codes sit their own English paper in almost every year, so they are the
-only ones a per-field view can serve with real content:
+| code | name | source | domain-block words |
+|---|---|---|---|
+| 1110 | زبان‌شناسی | sheet | 20 |
+| 1121 | زبان انگلیسی | owner, by hand — not in the sheet | 14 |
+| 1148 | مدیریت کسب و کار و امور شهری | sheet | 6 |
 
-| code | own paper in | papers |
-|---|---|---|
-| 1110 | 1398, 1399, 1400, and on | 8 |
-| 1121 | 1398, 1399, 1400, and on | 8 |
-| 1148 | 1398, 1399, 1400, and on | 6 |
+## The finding that came out of it
 
-The rest share general papers of up to 60 codes.
+**A field code names the paper a word sat in, not the word's discipline** —
+JUDGING.md rule 6 said so from the judging side, and naming the codes confirms
+it from the other end:
+
+- `1121` is **زبان انگلیسی**, the field this product exists for. Its paper is a
+  general English test, so its stems range over every subject. That is why
+  `zooxanthellae`, `pituitary`, `keratin` and `covariance` all attribute to it.
+  A 1121 tag carries **no disciplinary signal at all**.
+- `1148` is مدیریت کسب و کار, yet carries `hypothalamus` and `planetesimal`.
+  Same story.
+- Only `1110` (زبان‌شناسی) mostly coincides with its words.
+
+Recorded in `extraction/WORD-DATA.md` → "Domain terms", because the generating
+agent is the consumer that would otherwise have trusted the code.
+
+This also settles the `covariance` question that was open against this ticket:
+1121 cannot decide between «کوواریانس» (statistics) and «هم‌وردایی» (physics),
+because 1121 is not a physics field or a statistics field. «کوواریانس» stands on
+the word's own merits.
 
 ## Left to do
 
-1. Source the code → name mapping. It is public (Sanjesh publishes the دفترچه
-   with codes and field names each year); the owner may also know the three
-   above by heart, which would unblock the domain-term work immediately.
-2. Store it as `content/field-codes.json` — `{ "1121": "..." }`, Persian names,
-   English keys. Content, not extraction state: the app ships it.
-3. Note that codes are not stable across years in general. Record the year each
-   name was read from, and check the three above against more than one year
-   before trusting them.
+1. **Name the remaining 75 codes.** Public — Sanjesh publishes the دفترچه with
+   codes and field names each year. Not blocking: no word data depends on a code
+   being named. Onboarding's field picker (product-brief R7, Q25) does.
+2. **Resolve the three contradictions.** Parked in `needsReview` in the JSON so
+   nothing wrong ships:
+   - `1361` — the sheet gives both «حسابداری» and «هنرهای ساخت و معماری».
+   - `1363` — «فرش انگل شناسی», which is «فرش» with the next row run into it.
+   - `1503` — «قارچ شناسی دامپزشکی مهندسی ایمنی», two names in one cell.
+   All three appear in 7 papers each, so they are worth fixing eventually.
+3. **Codes are not stable across years.** The sheet records no year. Check the
+   three named codes above against more than one year's دفترچه before trusting
+   them beyond the domain-term use they have now.
 
 ## Watch out
 
 - Do not infer a field name from the vocabulary of its paper. That is guessing
-  dressed as evidence — the same error ADR-0011 exists to correct.
+  dressed as evidence — the same error ADR-0011 exists to correct, and the
+  finding above is exactly why it would have gone wrong: the vocabulary of the
+  1121 paper would have suggested biology.

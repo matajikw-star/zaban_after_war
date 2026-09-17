@@ -186,7 +186,48 @@ The fixed constraints (mobile-first, RTL, one primary action, no clutter) do not
 | Telegram bot from the client for reports | Token in the client (rule 5) and `api.telegram.org` unreachable for the audience. |
 | Expiring entitlements / DRM on the paid file | Permanent purchase is the product; a paid user's device holds the content by design (ADR-0004). |
 
-## 5. How to extend this file
+## 5. The build start (2026-09-18)
+
+The owner handed over the whole build in one instruction: take the system in `what.md` from the
+scaffold to a downloadable APK, orchestrating cheaper agents for routine code and stronger ones
+for the engine and the state machines, testing every part, and keeping the code easy to change
+because the product is early. Decisions made at the start:
+
+- **Design system chosen** — ADR-0020: shadcn/ui components with a liquid-glass look, Sonnat
+  typography and RTL rules, monochrome palette with colour only on the grading buttons, light
+  and dark themes. Vazirmatn stands in for Sonnat's commercial IRANSans.
+- **OTP is developed in full but tested with a mock.** Kavenegar cannot send to anyone but the
+  owner until identity verification completes, so `SMS_PROVIDER=mock` accepts the fixed code
+  `123456` and the real provider is switched on by one environment variable. The mock is never
+  the default in production configuration.
+- **Hints ship as a placeholder.** No hint data exists yet; the card shows a collapsed
+  «راهنمای یادگیری» disclosure that says the hint is coming, so the UI does not change shape
+  when hints arrive.
+- **Content ships incomplete by design.** Packages include only words with written senses
+  (895 of 2,098 on this date) and grow with content updates, as §6.2 already allowed.
+- **Dependency versions are pinned to what the registry served on 2026-09-18** and recorded in
+  each `package.json`; a line per new dependency is added below as they are introduced.
+
+### 5.1 Dependencies added by the scaffold (ticket dev-foundation/01)
+
+| Dependency | Why |
+|---|---|
+| `react`, `react-dom` 19 | §4. |
+| `vite`, `@vitejs/plugin-react` | §4; Vite is the build for all three apps. |
+| `tailwindcss`, `@tailwindcss/vite` v4 | §4; tokens through `@theme`. |
+| `vite-plugin-pwa` | Workbox precache and the prompt-style update (§7.7). |
+| `react-router` | The one flat route table (§4). |
+| `zustand` | Four small stores (§4). |
+| `dexie` | IndexedDB (§7.3). |
+| `uuid` | UUIDv7 ids (§4). |
+| `date-fns`, `date-fns-jalali` | Jalali dates in onboarding and the season summary. |
+| `lucide-react` | Icons, tree-shaken. |
+| `radix-ui`, `class-variance-authority`, `clsx`, `tailwind-merge` | The shadcn/ui pattern (§7.9). |
+| `fast-check` | Property tests for the engine (§16.1). |
+| `@playwright/test` | E2E (§16.2). |
+
+## 6. How to extend this file
+
 
 Append a dated section per decision session. State the decision, the alternatives, and the
 reason in the owner's terms. If it changes `what.md`, change `what.md` in the same commit. If it

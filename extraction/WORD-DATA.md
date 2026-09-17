@@ -192,13 +192,19 @@ distance.
 
 ```
 python extraction/scripts/s11_batch.py --status
-python extraction/scripts/s11_batch.py --next 40 --out <scratchpad>/batch-NN
+python extraction/scripts/s11_batch.py --next 40 --batches 6 --out <scratchpad>/wd
 ```
 
 Order is the generation queue: tested words by `stats.priority`, then context
 words by importance × difficulty. The pass is resumable with no state file — a
 word is done when its entry has a non-empty `senses`, so `content/lexicon/` is
 the state and a fresh session can pick up cold.
+
+**Cut every concurrent batch in one call.** `--out` is the parent; batches land
+in `<parent>/batch-NN`. Because pending is derived from `content/lexicon/`,
+calling `--next` six times in a row returns *the same forty words six times* —
+the state only moves when a batch is applied. `--batches K` is what makes the
+slices disjoint, and it is the price of holding no state file.
 
 ### 2. Hand it to an Opus subagent
 

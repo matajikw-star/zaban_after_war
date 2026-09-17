@@ -160,6 +160,14 @@ The five canonical triage roles, used verbatim as the label strings. See `docs/a
 The scan corpus is processed by `extraction/`, not by hand. Entry point:
 `extraction/RUNBOOK.md`. One year: `/complete-year <year>`. One batch: `/extract-next`.
 
+### Word data
+
+Filling the lexicon's Persian content — `level`, `senses`, `confusables`, `homograph` — is its
+own operation with its own standard: `extraction/WORD-DATA.md`. It is resumable with no state
+file (a word is done when its `senses` is non-empty), cut with `s11_batch.py` and written only
+through `s10_apply_word_data.py`, which is what keeps the generated fields from colliding with
+the extraction-owned ones.
+
 ### Domain docs
 
 Single-context: one `CONTEXT.md` and `docs/adr/` at the repo root. See `docs/agents/domain.md`.

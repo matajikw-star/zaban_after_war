@@ -300,7 +300,7 @@
         "examples": [
           {
             "en": "An independent press is a bulwark against the abuse of power.",
-            "fa": "مطبوعات مستقل سنگری در برابر سوءاستفاده از قدرت‌اند."
+            "fa": "مطبوعات مستقل سنگری در برابر سوءاستفاده از قدرت است."
           }
         ],
         "testedIn": [
@@ -441,7 +441,7 @@
         "examples": [
           {
             "en": "If you skip the backup, you run the risk of losing everything.",
-            "fa": "اگر از پشتیبان‌گیری صرف‌نظر کنی، خطر از دست دادن همه چیز را به جان می‌خری."
+            "fa": "اگر از پشتیبان‌گیری صرف‌نظر کنی، در معرض خطرِ از دست دادن همه چیز قرار می‌گیری."
           }
         ],
         "testedIn": [
@@ -662,7 +662,7 @@
         "examples": [
           {
             "en": "The horse bolted as soon as it heard the gunshot.",
-            "fa": "اسب به‌محض شنیدن صدای شلیک رم کرد و در رفت."
+            "fa": "اسب به‌محض شنیدن صدای شلیک رم کرد."
           }
         ],
         "testedIn": []
@@ -713,7 +713,7 @@
         "examples": [
           {
             "en": "A surgeon by profession, he was a jazz pianist by avocation.",
-            "fa": "حرفه‌اش جراحی بود و از سر ذوق، پیانیست جاز."
+            "fa": "او به‌حرفه جراح بود و به‌عنوان سرگرمی، پیانیست جاز بود."
           }
         ],
         "testedIn": []
@@ -974,7 +974,7 @@
         "examples": [
           {
             "en": "The hospital rendered assistance to everyone injured in the crash.",
-            "fa": "بیمارستان به همهٔ مصدومان تصادف کمک‌رسانی کرد."
+            "fa": "بیمارستان به همهٔ مصدومان تصادف کمک رساند."
           }
         ],
         "testedIn": []

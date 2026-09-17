@@ -358,7 +358,7 @@ The bulk of the job looks like this: one appearance across ten years of exams.
    - *something or someone that protects or defends against danger or attack*
    - syn: rampart, safeguard, defence · ant: —
    - «An independent press is a bulwark against the abuse of power.»
-     مطبوعات مستقل سنگری در برابر سوءاستفاده از قدرت‌اند.
+     مطبوعات مستقل سنگری در برابر سوءاستفاده از قدرت است.
 
 **Confusables:** none - deliberately left empty.
 
@@ -482,7 +482,7 @@ The exam tested only one of the meanings. The question is how many to write.
    - *to be in a situation where something bad could happen to you, as in "run a risk" or "run the risk of"*
    - syn: risk, incur · ant: —
    - «If you skip the backup, you run the risk of losing everything.»
-     اگر از پشتیبان‌گیری صرف‌نظر کنی، خطر از دست دادن همه چیز را به جان می‌خری.
+     اگر از پشتیبان‌گیری صرف‌نظر کنی، در معرض خطرِ از دست دادن همه چیز قرار می‌گیری.
 2. **بالغ بودن بر / در سطحِ ... بودن / رسیدن به (میزان)**  `v` `/rʌn/` · 1 exam occurrence(s)
    - *to be at a particular level, rate or amount*
    - syn: stand at, amount to · ant: —
@@ -602,7 +602,7 @@ The exam tested only one of the meanings. The question is how many to write.
    - *to run away suddenly and very fast, especially because of fear*
    - syn: dash, flee · ant: —
    - «The horse bolted as soon as it heard the gunshot.»
-     اسب به‌محض شنیدن صدای شلیک رم کرد و در رفت.
+     اسب به‌محض شنیدن صدای شلیک رم کرد.
 
 **Confusables:** none - deliberately left empty.
 
@@ -757,7 +757,7 @@ Konkour distractors are built from exactly this.
    - *to give or provide a service or help, especially formally*
    - syn: provide, furnish · ant: withhold
    - «The hospital rendered assistance to everyone injured in the crash.»
-     بیمارستان به همهٔ مصدومان تصادف کمک‌رسانی کرد.
+     بیمارستان به همهٔ مصدومان تصادف کمک رساند.
 
 **Confusables:** none - deliberately left empty.
 
@@ -809,7 +809,7 @@ Never tested, so `testedIn` is empty and the exam sentence is the only evidence 
    - *a hobby or activity someone does regularly besides their main job*
    - syn: hobby, pastime, sideline · ant: vocation, profession
    - «A surgeon by profession, he was a jazz pianist by avocation.»
-     حرفه‌اش جراحی بود و از سر ذوق، پیانیست جاز.
+     او به‌حرفه جراح بود و به‌عنوان سرگرمی، پیانیست جاز بود.
 
 **Confusables:**
 - `vocation` — دقیقاً نقطهٔ مقابل؛ vocation شغل اصلی و رسالت است و avocation کار ذوقی در کنار آن

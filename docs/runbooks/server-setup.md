@@ -14,19 +14,13 @@ ssh root@188.212.96.127
 ```
 
 Type the password from the order e-mail, then the new password twice when asked (store it in
-your password manager). Then paste this one line and press Enter — it installs your public key
-so Claude can connect without any password afterwards:
+your password manager), then type `exit`. Still in PowerShell, run this one line — it installs
+your public key so Claude can connect without any password from then on (it asks for the new
+password once):
 
 ```
-mkdir -p ~/.ssh && chmod 700 ~/.ssh && echo "$(cat <<'K'
-PASTE_THE_CONTENT_OF_zsecrets\public-key-file.pub_HERE
-K
-)" >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys && echo done && exit
+type C:\Users\asus\Desktop\zsecrets\public-key-file.pub | ssh root@188.212.96.127 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys && echo done"
 ```
-
-(Simpler alternative, from a second PowerShell window on your machine:
-`type C:\Users\asus\Desktop\zsecrets\public-key-file.pub | ssh root@188.212.96.127 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"`
-— it asks for the new password once.)
 
 Check from Claude's side: `ssh -i ~/.ssh/kl_root.pem root@188.212.96.127 'echo ok'` prints `ok`.
 

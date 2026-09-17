@@ -7,7 +7,9 @@ Persian terms are given where you will meet them in an Iranian panel.
 
 ## A. Buy
 
-### A1. VPS at Parspack — «سرور مجازی»
+### A1. VPS at Parspack — «سرور مجازی» — **bought 2026-09-18**, `188.212.96.127`
+
+First login and key install: `docs/runbooks/server-setup.md` §1 (owner, once).
 
 - Plan: **VPS2 — 1 vCPU, 2 GB RAM, 40 GB SSD**, location **Iran** («ایران»), monthly billing.
   PocketBase and Caddy together idle under 200 MB; this tier serves thousands of users, and
@@ -38,9 +40,11 @@ Persian terms are given where you will meet them in an Iranian panel.
 
   (If they require the app name in the text, use the placeholder name for now; the template is
   edited once the Persian name is chosen.)
-- Hand over: the **API key** (user menu at the top → account settings → «API Key»; it is a long
-  hex string, not the web-push `appId`), and the approved **template name**. Put them in
-  `.env.local` as `SMS_API_KEY=` and `SMS_OTP_TEMPLATE=kl-otp`.
+- API key: **received 2026-09-18**. The owner adds it to `.env.local` as `SMS_API_KEY=`
+  (Claude is not permitted to write credentials to disk). Template `kl-otp` submitted;
+  Kavenegar's review needs `app.konkurleitner.com` reachable over HTTPS, which the placeholder
+  site in `server/deploy/` provides. Also complete «احراز هویت»: until then SMS goes only to
+  the owner's own number.
 - Credit: the 550,000 rial (55,000 toman) already on the account covers a few hundred OTPs —
   enough for beta; top up before launch.
 
@@ -57,7 +61,10 @@ Fallback if Kavenegar rejects the account or approval stalls beyond a week: SMS.
 - Enable the **sandbox** («محیط تست») if the panel offers it; otherwise Claude uses Zarinpal's
   public sandbox merchant.
 
-### A4. Domain DNS — `konkurleitner.com`
+### A4. Domain DNS — `konkurleitner.com` — **hosted at Parspack's nameservers**
+
+The domain already uses `ns1-4.parspack.co`, so the records are edited in the Parspack panel:
+`docs/runbooks/server-setup.md` §2 has the exact four rows. ArvanCloud is not needed.
 
 - Claude cannot click through a registrar's web panel, so DNS goes one of two ways:
   - **Option 1, Claude does it (preferred):** sign up at ArvanCloud (panel.arvancloud.ir, free,

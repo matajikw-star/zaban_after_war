@@ -64,7 +64,10 @@ if ! command -v caddy >/dev/null 2>&1; then
   curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' > /etc/apt/sources.list.d/caddy-stable.list
   apt-get update -q && apt-get install -yq caddy
 fi
-mkdir -p /var/log/caddy && chown caddy:caddy /var/log/caddy
+mkdir -p /var/log/caddy && chown -R caddy:caddy /var/log/caddy
+# `caddy validate` (run below) writes an empty access.log as root before the service ever
+# starts under the caddy user; without this the first reload fails with "permission denied".
+touch /var/log/caddy/access.log && chown caddy:caddy /var/log/caddy/access.log
 
 echo "== placeholder site (until the app is deployed)"
 cp -f ${KL_HOME}/deploy/placeholder.html ${KL_HOME}/placeholder/index.html 2>/dev/null || true

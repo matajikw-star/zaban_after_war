@@ -1,6 +1,6 @@
 # ADR-0004 — Entitlement is server-side; no client banning
 
-**Status:** accepted · **Date:** 2026-09-10
+**Status:** accepted; "chunks" amended to two packages by ADR-0016, entitlement `source` added per product-brief D11 (2026-09-17) · **Date:** 2026-09-10
 
 ## Context
 

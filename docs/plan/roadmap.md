@@ -1,5 +1,8 @@
 # Roadmap
 
+> **Superseded 2026-09-17** by `docs/plan/implementation-plan.md` (phases) and `docs/spec/what.md`
+> (the current system). Kept for its reasoning; do not plan from it. See ADR-0014.
+
 Seven milestones. Each one ends in something demonstrable, and each is small enough that its
 work can be cut without stranding the milestones after it.
 
@@ -122,7 +125,7 @@ lead time — it is gated only by M4 shipping first.
 - Full lint pass; fix duplicate lemmas, missing translations, unapproved hints.
 - Free-tier slice chosen deliberately (Product hat).
 - Onboarding, install instructions, support contact, privacy text.
-- `konkourleitner.com` cut over to production; the staging path stays for the next release.
+- `konkurleitner.com` cut over to production; the staging path stays for the next release.
 
 *Done when:* a stranger can find the site, install it, study free, pay, and study the rest —
 offline.

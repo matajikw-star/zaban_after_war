@@ -1,5 +1,9 @@
 # Infrastructure
 
+> **Superseded 2026-09-17** by `docs/spec/what.md` §14 (infrastructure, deploy, backups) and
+> `docs/plan/owner-checklist.md` (what to buy). Kept for its reasoning; do not plan from it. Note the
+> VPS is Parspack, not ArvanCloud, and Umami is dropped at launch. See ADR-0014.
+
 Answers the owner's question — *server, or is a simple host enough?* — and then specifies exactly
 what to buy, install, deploy and back up.
 
@@ -27,7 +31,7 @@ This is a "cheap server, not no server" situation.
 ## Target architecture
 
 ```
-                    konkourleitner.com
+                    konkurleitner.com
                             │
                   ArvanCloud DNS + CDN (free tier)
                             │  caches the static PWA, hides origin IP
@@ -60,7 +64,7 @@ One process, one origin, one directory to back up.
 | OS | Ubuntu LTS | Whatever the provider's current LTS image is. |
 | DNS / CDN | ArvanCloud free plan | Iranian CDN, so the static assets are served from inside the country. Requires Iranian identity verification. |
 | Object storage | S3-compatible, a few GB | For nightly `pb_data` backups. PocketBase can push these itself. |
-| Domain | `konkourleitner.com` — already owned | Point nameservers at ArvanCloud. |
+| Domain | `konkurleitner.com` — already owned | Point nameservers at ArvanCloud. |
 | SMS | Kavenegar / SMS.ir / Ghasedak | Pay per message. Compare per-SMS price *and* OTP-pattern approval speed — the pattern approval is the slow part. |
 | Payment | Zarinpal merchant | Requires an Iranian business/identity record. **Start this first — it is the longest lead time in the whole plan.** |
 

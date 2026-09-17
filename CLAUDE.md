@@ -7,7 +7,7 @@ workflows to follow. Read before any work. Keep it current — see `## Maintaini
 
 A Persian, RTL, offline-first PWA that drills the English vocabulary that actually appeared
 in Iranian MA/PhD entrance exams (کنکور ارشد و دکتری) over the last ~10 years, using spaced
-repetition. Domain: `konkourleitner.com`. Audience: Iranian users. One owner, working through
+repetition. Domain: `konkurleitner.com`. Audience: Iranian users. One owner, working through
 Claude Code.
 
 Predecessor: `C:\Users\asus\Desktop\zaban reserection\starting-pwa-on-zaban` — a throwaway
@@ -85,6 +85,23 @@ and add it to `wiki/index.md`.
 Health-check the wiki and report findings ranked by severity. Full checklist:
 `docs/plan/content-pipeline.md` → "Lint checklist". Run it after any bulk change.
 
+### build `<ticket>`
+
+Application work. **Read `docs/spec/what.md` first — it is the current, normative description
+of the whole system** (architecture, contracts, routes, screens, operations). The reasoning is
+`docs/spec/how-why.md`; the phases are `docs/plan/implementation-plan.md`; the owner's
+purchases and hand-overs are `docs/plan/owner-checklist.md`. Rules:
+
+1. A ticket under `.scratch/dev-<area>/issues/` before code; branch `feat/…` or `fix/…`; PR.
+2. **Any change to the system changes `what.md` in the same commit** and flips the section's
+   status mark. A decision with a cost to reverse also gets an ADR and a dated entry in
+   `how-why.md`. See ADR-0014.
+3. The code conventions in `what.md` §17 are binding: explicit state machines, error codes,
+   Persian only in `strings.ts`, no clock outside `engine/clock.ts`, boring dependencies.
+4. Bugs are fixed from logs: `docs/runbooks/debug-from-log.md`. Never ask the owner to reproduce.
+5. The network is required for OTP, login and payment only. Anything else that breaks offline is
+   a bug of the highest severity.
+
 ## Constitution
 
 Non-negotiable. Violating one of these is worse than shipping late.
@@ -121,10 +138,12 @@ when a new year was routed. Re-clustering keeps every id on the cluster it alrea
 
 ## Stack
 
-Decided in `docs/adr/`. Summary: pnpm workspace; Vite + React + TypeScript + Tailwind (as
-dependencies, self-hosted); `vite-plugin-pwa`; Dexie/IndexedDB locally; PocketBase on an
-Iranian VPS for auth, sync, and payment. Verify versions in `package.json` rather than trusting
-this line.
+Decided in `docs/adr/`, described in `docs/spec/what.md` §4. Summary: pnpm workspace; Vite +
+React + TypeScript + Tailwind (as dependencies, self-hosted); `vite-plugin-pwa`; Dexie/IndexedDB
+locally; PocketBase behind Caddy on one Parspack VPS for auth (phone OTP), backup (event-log
+sync), payment (Zarinpal + discount codes) and the paid content package; a Bubblewrap TWA for
+the APK. Three origins: `konkurleitner.com` (landing), `app.` (the PWA + API), `admin.`
+(dashboard + PocketBase admin). Verify versions in `package.json` rather than trusting this line.
 
 ## Working agreements
 
@@ -171,3 +190,8 @@ the extraction-owned ones.
 ### Domain docs
 
 Single-context: one `CONTEXT.md` and `docs/adr/` at the repo root. See `docs/agents/domain.md`.
+
+### System spec
+
+`docs/spec/what.md` (current state, normative) and `docs/spec/how-why.md` (history, appended).
+Superseded plans (`docs/plan/roadmap.md`, `docs/plan/infrastructure.md`) carry a banner.

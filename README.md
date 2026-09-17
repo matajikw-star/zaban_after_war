@@ -3,12 +3,13 @@
 An offline-first Persian PWA for memorising the English vocabulary that actually appears in the
 Iranian MA and PhD entrance exams (کنکور ارشد و دکتری), using spaced repetition.
 
-`konkourleitner.com`
+`konkurleitner.com`
 
 ## Status
 
-Planning. No application code yet — the repo currently holds the project's schema, decisions and
-plan. See [`docs/plan/roadmap.md`](docs/plan/roadmap.md) for what gets built and in what order.
+Content extracted (2,098 words, 1398–1405); application development planned, not started.
+The system is described in [`docs/spec/what.md`](docs/spec/what.md) and built in the order of
+[`docs/plan/implementation-plan.md`](docs/plan/implementation-plan.md).
 
 ## Where things are
 

@@ -10,5 +10,6 @@
 ## Checks
 
 - [ ] Tests cover the change
+- [ ] `docs/spec/what.md` updated if the system changed (and its status marks flipped)
 - [ ] Docs updated in this same commit (`CLAUDE.md`, `CONTEXT.md`, `docs/`)
 - [ ] `wiki/log.md` appended, if a decision changed

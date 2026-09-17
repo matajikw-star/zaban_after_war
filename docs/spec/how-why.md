@@ -1,0 +1,193 @@
+# HOW and WHY — how the design got this way
+
+The companion to `what.md`. That file says what the system is; this one says how it came to be
+and why each shape was chosen over the alternatives. It is a narrative, appended to as decisions
+are made, and it never has to be "current" — history does not go stale. When a decision is big
+enough to be reversible only at real cost, it also gets an ADR in `docs/adr/`; this file links
+to it rather than repeating it.
+
+Reading order for a newcomer: `CLAUDE.md` → `what.md` → this file → the ADRs it points at.
+
+---
+
+## 1. Where it started
+
+A first build (v1, `starting-pwa-on-zaban`) proved that students would use a Leitner app for
+konkur vocabulary and that the box metaphor reads well. It also had no spacing, wiped history on
+level-up, merged devices by guesswork, shipped the paid content to everyone, loaded React from
+foreign CDNs, ran on a free backend that deleted itself, and used a copyrighted book's word
+list. `docs/postmortem-v1.md` reads it closely. Every one of those became a rule in v2's
+constitution, which is why the constitution exists at all.
+
+The asset of v2 is different in kind: the words that were **actually tested** in the exam,
+extracted from the scanned papers, with fresh translations, examples and hints. That extraction
+was the first half of the project (`extraction/`, ADR-0006 to ADR-0013) and produced 2,098
+entries across 58 papers (1398–1405) before any application code was written. The product's
+claim — «این کلمه در کنکور ۱۴۰۲ آمده» — is the reason for that order.
+
+## 2. The design interview (2026-09-14 to 2026-09-17)
+
+`docs/plan/product-brief.md` is the decision log of seven rounds between the owner and Claude.
+The decisions that shape the engine and the business, in the order they were forced:
+
+- **One-off permanent purchase**, no subscription — the only model that sits on Zarinpal and
+  BazaarPay alike with no extra logic, and the one a student buying a book already understands.
+- **PWA first, Bazaar second**, as two builds on two origins — traffic the project earns pays no
+  store commission; the store build differs only in payment.
+- **Anonymous first, phone at purchase** — the app must feel valuable before it asks for
+  anything. The cost is that anonymous progress is not backed up; the mitigation is a gentle
+  «ذخیرهٔ پیشرفت» prompt after 50 presentations.
+- **The station map was tried and dropped.** A visible finite path of 80–100-word stations was
+  designed in full and then reversed when the owner saw the flow it implied. What survived is
+  the internal rule that new words are introduced in exam-value order. The user sees boxes,
+  a percentage, a streak and a chart — never an algorithm.
+- **The app never says "done".** Strict Leitner would empty the queue; the owner's requirement
+  is that a student who wants another hour always has cards. Hence the four-pool queue
+  (due → new → conquered-due → early) where the last pool is always non-empty.
+- **No 30-day floor.** ADR-0003's 10m/1d/3d/7d/21d ladder made conquest take 32 days; a
+  candidate with three weeks left would be structurally unable to finish. The ladder became
+  10m/1d/2d/4d/8d (7-day floor). Promotion still requires the interval to have elapsed, so a
+  7-day conquest is possible but uncommon. ADR-0019 supersedes ADR-0003.
+- **Progress never decreases** (high-water-mark box) and is **weighted by exam frequency**
+  (`timesTested`, raw). The rule had to fit one sentence for the user, and it does. Measured
+  on the real corpus: the bottom half of words carries 34 % of the weight, so the endgame is
+  not dead; the top 20 % carries 42 %, so early progress feels fast.
+- **Self-graded recall, English → Persian.** A 3–5 second card makes a 100-review goal a
+  5–8 minute session; multiple choice would triple it and break the pace model.
+- **Two gates.** The server-side content boundary (150 free words) and the client-side soft
+  trigger (100 presentations) do different jobs and are deliberately separate.
+- **No notifications at launch.** Web push in Iran rides a Google socket that cannot be
+  proxied and has been cut before (`wiki/web-push-in-iran.md`). Retention lives inside the app.
+- **Word data is sense-shaped** (ADR-0012) and **one spelling is one entry** (ADR-0013),
+  because the card's front is just the word.
+- **Reports are structured flags, not free text** — a word id and one of three reasons tells the
+  content pipeline what to regenerate; a paragraph does not.
+
+## 3. The development plan session (2026-09-17)
+
+The owner handed over the whole technical side with a brief: reliability first, then
+correctness, then cost; simple debuggable code; ready-made components wherever possible; a
+management panel with user reports and bug logs; discount codes; the app on a subdomain, not the
+root; an install prompt on phones; offline from install to the end of life; as native as a PWA
+can be, with an APK if possible; and a design that does not look "vibe-coded". Three
+corrections arrived during the session: questions are asked in English, the domain is
+`konkurleitner.com` (not `konkour…`), and logging must let an AI fix bugs unaided. Two
+additions: progress is backed up whenever online and the network must never interrupt the user
+outside signup/login/payment; and the word list is delivered exactly twice — free and paid.
+
+What was decided, and why:
+
+### 3.1 Two documents instead of one growing log — ADR-0014
+
+The docs had become a chronological pile: brief, rounds, ADRs, plans, each true at the time.
+Adding a feature or debugging meant reading all of it to learn the current state. The owner asked
+for a "what" that is always current and a "how/why" that explains it. So: `what.md` is
+normative and edited in the same commit as any system change; this file and the ADRs are
+history and are appended to. `roadmap.md` and `infrastructure.md` are superseded by
+`implementation-plan.md` and `what.md` §14 and carry a banner saying so; they are kept because
+their reasoning is still right.
+
+### 3.2 Three origins: landing, app, admin — ADR-0015
+
+The owner wants the app off the root domain. Doing it properly means three origins, not paths:
+the service worker's scope and IndexedDB are origin-bound, so a landing page under the app
+origin would be inside the SW's cache and the app's storage; Android asset links are declared
+per origin; and the PocketBase admin UI must not be reachable from the origin users hit. The
+admin subdomain also gives the dashboard and the PB admin UI one place with one login.
+
+### 3.3 The APK is a TWA, built at launch, offered as a download — ADR-0015
+
+The owner asked for an APK "if possible". Three ways exist: TWA (Chrome renders the PWA inside
+an Android shell; ~zero app code), Capacitor (a real WebView; our code is bundled; every app
+update is a store update), or a native rewrite. TWA wins on every axis the owner ranked —
+reliability (Chrome's engine, our tested PWA, one codebase), correctness (identical behaviour to
+the web build), cost (a config file) — and it is what Bazaar documents. The cost is Chrome
+dependence; `fallbackType: customtabs` degrades gracefully, and the landing page offers the PWA
+install as the other path. Offering the APK at launch rather than only in Bazaar costs nothing
+extra and reaches users who distrust "add to home screen".
+
+### 3.4 Content ships as two packages — ADR-0016
+
+The earlier plan chunked the paid content into N downloads for resumability. The owner asked for
+two deliveries: free and paid. Two packages are simpler in every place that matters — one gated
+route, one hash, one atomic swap, one "downloaded or not" state — and the resumability concern
+is solved at the transport level with HTTP `Range`, which the client already needs for unstable
+connections. The paid package contains the free words too, so the client has one active package
+and a content update is one file.
+
+### 3.5 Backup is the event-log sync, presented as backup — ADR-0002, `what.md` §7.4
+
+The owner's requirement — offline everything, back up whenever online, never interrupt — is
+exactly what ADR-0002's append-only log was designed for; there is no new mechanism, only the
+discipline that the sync state machine never blocks anything and is invisible unless it fails
+for a long time. Two consequences were made explicit: anonymous installs are not backed up (no
+identity to restore to), and login on a device with local history merges by re-pushing
+everything (idempotent by id) rather than by any comparison logic. The word "backup" is used
+in the UI and in this doc because it is the user's mental model; "sync" is the implementation.
+
+### 3.6 Logging for an AI debugger — ADR-0017
+
+The owner is not a developer; the log is the bug report. Third-party error services are out
+(ADR-0005, and Sentry SaaS is unreachable for the audience; self-hosting GlitchTip is a second
+database and a Python process on a small VPS). A first-party record sent through the same
+offline outbox as everything else costs one collection and one route. What makes it AI-fixable
+is not the stack but the **context**: breadcrumbs of the last 50 actions, a snapshot of the
+engine's inputs (last 20 events, package version, goal), and symbolication against source maps
+uploaded at deploy. The `pnpm errors` tool turns a record into a readable report in one command,
+which is the interface the agent uses. The runbook makes the procedure repeatable.
+
+### 3.7 Admin = PocketBase's UI plus a thin dashboard — ADR-0018
+
+PocketBase already ships a mature admin UI for every CRUD job the owner has (users, grants,
+codes, viewing reports and errors, backups, logs). Rebuilding it would be weeks of new code
+guarding money. What it lacks is aggregation: sales, funnel, flags per word, errors per
+fingerprint. A four-page read-only dashboard over one stats route covers that. Chosen over a
+fully custom panel on the owner's priorities (reliability, then cost).
+
+### 3.8 Discount codes are validated and applied on the server — `what.md` §8.3
+
+Every price the client shows is a display; the server computes `payable` from `app_config` and
+the code at `request` time and verifies the same amount with Zarinpal. A 100 % code grants
+without touching the gateway, which is also the mechanism for gifts and testers. The 30-day
+streak referral code from the brief is just a code row created by a cron later.
+
+### 3.9 Parspack, no Umami, Kavenegar
+
+Parspack because the owner already has an account there — the machine spec is identical
+elsewhere and one fewer identity verification matters more than marginal price. Umami dropped at
+launch because it is a second process and database on the VPS for page-view charts the
+first-party beacon already implies; revisit if marketing needs it. Kavenegar for SMS because its
+Verify Lookup path needs no dedicated line and its template approval is the fastest known; the
+provider is behind one interface so swapping is one file.
+
+### 3.10 Launch scope: core + payment, no real-exam mode
+
+Every feature that is not on the path from install to purchase to offline study was moved after
+launch: real-exam mode, per-field views, Bazaar, referral, season summary stays (it is a screen
+over existing numbers). Less surface is more reliability, which is the owner's first priority.
+
+### 3.11 Design system deferred to the owner's choice
+
+A list of reference systems was given rather than a mockup, at the owner's request. The tokens
+are the only styling until a system is chosen; one mockup screen is approved before app code.
+The fixed constraints (mobile-first, RTL, one primary action, no clutter) do not depend on it.
+
+## 4. Things considered and rejected in this session
+
+| Idea | Why not |
+|---|---|
+| Backing up anonymous progress under the install id | No identity to restore to; adds a server-side merge path for no user benefit. |
+| Self-hosted Sentry / GlitchTip | A second database and process on a 4 GB VPS, for a stack trace we can symbolicate ourselves. |
+| Capacitor / native Android | Every release becomes an APK release; a second test surface; the owner ranked cost third but reliability first, and one codebase is more reliable. |
+| Chunked paid content (N files) | Solved resumability at the wrong layer; the owner asked for two deliveries. |
+| Redux / TanStack Query / GraphQL | The app has four stores and one server; ceremony without benefit. |
+| Docker on the VPS | One Go binary and Caddy; a container runtime is a larger surface than the app. |
+| PocketBase's built-in email OTP for auth | It sends email; phone OTP needs a custom route anyway, so the whole flow is ours and testable with a console provider. |
+| Telegram bot from the client for reports | Token in the client (rule 5) and `api.telegram.org` unreachable for the audience. |
+| Expiring entitlements / DRM on the paid file | Permanent purchase is the product; a paid user's device holds the content by design (ADR-0004). |
+
+## 5. How to extend this file
+
+Append a dated section per decision session. State the decision, the alternatives, and the
+reason in the owner's terms. If it changes `what.md`, change `what.md` in the same commit. If it
+is expensive to reverse, add an ADR and link it.

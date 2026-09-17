@@ -7,11 +7,11 @@ the conflict is called out here and resolved by a new ADR, not silently.
 
 Status (2026-09-16): **decisions substantially closed.** Rounds 1-6 below settle D1-D12 and
 Q13-Q38; five product questions (Q33-Q37) and two owner-action items (SMS provider, VPS) remain.
-This file is a *decision log*, not a build specification — it is the input to `docs/spec/`, which
-does not exist yet. Before any production work starts, the schema layer must be brought in line:
-`packages/core/src/types.ts` still carries the superseded interval ladder and `wordId`, ADR-0003
-documents the old intervals, ADR-0004 assumes Zarinpal is the only payment source, and CONTEXT.md
-has no vocabulary for conquered / weight / high-water mark / presentation.
+This file is a *decision log*, not a build specification. **The build specification now exists:
+`docs/spec/what.md`** (2026-09-17), with the history in `docs/spec/how-why.md`. Where this file
+and `what.md` differ, `what.md` wins. ADR-0019 records the interval ladder and queue; ADR-0016
+the two packages; CONTEXT.md now carries conquered / weight / high-water mark / presentation.
+`packages/core/src/types.ts` still holds the superseded ladder until Phase 1 rewrites it.
 
 ---
 
@@ -159,7 +159,7 @@ Answered by the owner during the design interview. Each still needs an ADR befor
   subscription machinery. Content added in later years reaches existing buyers free, and is
   treated as a retention asset rather than a lost sale. It is also the only model that sits on
   both Zarinpal and BazaarPay without extra logic.
-- **D6 — Distribution: two channels, sequenced.** Ship the PWA on `konkourleitner.com` with
+- **D6 — Distribution: two channels, sequenced.** Ship the PWA on `konkurleitner.com` with
   Zarinpal first, shake out the early defects against real users, then publish a **second build**
   to Cafe Bazaar as a TWA whose only difference is that it pays through BazaarPay. Rationale from
   the owner: traffic the project earns itself (Telegram, Instagram) then pays no store
@@ -212,7 +212,7 @@ Answered by the owner during the design interview. Each still needs an ADR befor
   removing several hundred words without breaking.** Consequence: the station map is regenerable
   freely until first public release and append-only afterwards.
 - **D6 refinement — two builds, two origins.** The Bazaar TWA points at a separate subdomain
-  (e.g. `bazaar.konkourleitner.com`) serving a build from which the Zarinpal checkout is absent.
+  (e.g. `bazaar.konkurleitner.com`) serving a build from which the Zarinpal checkout is absent.
   Not a path on the main origin: Digital Asset Links, service-worker scope and browser storage are
   all origin-scoped, and a path split leaves the web checkout reachable inside the reviewed
   package.

@@ -6,7 +6,7 @@
   },
   "id": "rigidity",
   "lemma": "rigidity",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,69 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "flexibility",
+        "adaptability"
+      ],
+      "definition": "the quality of being unwilling to change rules, plans or ideas",
+      "examples": [
+        {
+          "en": "The rigidity of the old rules drove away the best young staff.",
+          "fa": "انعطاف‌ناپذیری قوانین قدیمی بهترین کارکنان جوان را فراری داد."
+        }
+      ],
+      "ipa": "/rɪˈdʒɪdəti/",
+      "pos": "n",
+      "synonyms": [
+        "inflexibility",
+        "stiffness"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "انعطاف‌ناپذیری",
+        "خشکی و جمود",
+        "سخت‌گیری بی‌انعطاف"
+      ]
+    },
+    {
+      "antonyms": [
+        "elasticity"
+      ],
+      "definition": "the quality of being stiff and hard, so that it cannot be bent",
+      "examples": [
+        {
+          "en": "Steel bars give the frame the rigidity it needs to carry weight.",
+          "fa": "میله‌های فولادی سفتی لازم برای تحمل وزن را به اسکلت می‌دهند."
+        }
+      ],
+      "ipa": "/rɪˈdʒɪdəti/",
+      "pos": "n",
+      "synonyms": [
+        "stiffness"
+      ],
+      "testedIn": [],
+      "translations": [
+        "سفتی",
+        "صلبیت"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "scarcely قید است و یعنی به‌سختی و تقریباً هیچ، اما scanty صفت است و یعنی ناچیز",
+      "word": "scarcely"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "scanty",
   "lemma": "scanty",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,48 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "abundant",
+        "plentiful"
+      ],
+      "definition": "too small in amount or size to be enough",
+      "examples": [
+        {
+          "en": "The evidence for that claim is scanty and mostly second-hand.",
+          "fa": "شواهد این ادعا ناچیز و بیشتر دست‌دوم است."
+        }
+      ],
+      "ipa": "/ˈskænti/",
+      "pos": "adj",
+      "synonyms": [
+        "meager",
+        "sparse",
+        "scant"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "ناچیز",
+        "اندک",
+        "ناکافی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "ظاهر نزدیکی دارند؛ enunciate یعنی واضح ادا کردن کلمات",
+      "word": "enunciate"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "enumerate",
   "lemma": "enumerate",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,44 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to name things on a list one after another",
+      "examples": [
+        {
+          "en": "The manager began to enumerate the reasons for closing the branch.",
+          "fa": "مدیر شروع کرد به برشمردن دلایل تعطیلی آن شعبه."
+        }
+      ],
+      "ipa": "/ɪˈnjuːməreɪt/",
+      "pos": "v",
+      "synonyms": [
+        "list",
+        "itemize"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "برشمردن",
+        "یک‌به‌یک نام بردن",
+        "فهرست کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

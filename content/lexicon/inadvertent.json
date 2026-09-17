@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املای نزدیک؛ inadvisable یعنی ناعاقلانه و غیرقابل‌توصیه",
+      "word": "inadvisable"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "inadvertent",
   "lemma": "inadvertent",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,47 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "deliberate",
+        "intentional"
+      ],
+      "definition": "happening by accident, without the person meaning to do it",
+      "examples": [
+        {
+          "en": "An inadvertent click deleted the file he had worked on all night.",
+          "fa": "یک کلیک سهوی فایلی را که تمام شب رویش کار کرده بود پاک کرد."
+        }
+      ],
+      "ipa": "/ˌɪnədˈvɜːtənt/",
+      "pos": "adj",
+      "synonyms": [
+        "unintentional",
+        "accidental"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p04",
+          "questionNo": 12
+        },
+        {
+          "paperId": "arshad-1405-p06",
+          "questionNo": 15
+        }
+      ],
+      "translations": [
+        "سهوی",
+        "غیرعمدی",
+        "ناخواسته"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -6,7 +6,7 @@
   },
   "id": "scrutiny",
   "lemma": "scrutiny",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,46 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "neglect"
+      ],
+      "definition": "careful and thorough examination of something, in order to find out about it",
+      "examples": [
+        {
+          "en": "Every budget line came under close scrutiny at the meeting.",
+          "fa": "در آن جلسه هر ردیف بودجه زیر بررسی دقیق قرار گرفت."
+        }
+      ],
+      "ipa": "/ˈskruːtəni/",
+      "pos": "n",
+      "synonyms": [
+        "examination",
+        "inspection"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "بررسی دقیق",
+        "موشکافی",
+        "وارسی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

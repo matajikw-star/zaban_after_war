@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املای بسیار نزدیک؛ relict اصطلاحی تخصصی در زیست‌شناسی و زمین‌شناسی است",
+      "word": "relict"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "relic",
   "lemma": "relic",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,62 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "an object or custom that has survived from a much earlier time",
+      "examples": [
+        {
+          "en": "The wooden plough in the yard is a relic of an older farming life.",
+          "fa": "خیش چوبی توی حیاط یادگاری از زندگی کشاورزی قدیمی‌تر است."
+        }
+      ],
+      "ipa": "/ˈrelɪk/",
+      "pos": "n",
+      "synonyms": [
+        "remnant",
+        "vestige"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "یادگار گذشته",
+        "بازمانده",
+        "اثر باستانی"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a part of the body or a possession of a holy person, kept and treated with respect",
+      "examples": [
+        {
+          "en": "Pilgrims travelled for weeks to see the relics kept in the shrine.",
+          "fa": "زائران هفته‌ها راه می‌پیمودند تا تبرکات نگهداری‌شده در آن زیارتگاه را ببینند."
+        }
+      ],
+      "ipa": "/ˈrelɪk/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "تبرک",
+        "بازماندهٔ مقدس"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

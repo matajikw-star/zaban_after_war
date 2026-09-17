@@ -6,7 +6,7 @@
   },
   "id": "effortless",
   "lemma": "effortless",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,47 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "laborious",
+        "strained"
+      ],
+      "definition": "done so well or so easily that it seems to need no effort at all",
+      "examples": [
+        {
+          "en": "The dancer moved across the stage with effortless grace.",
+          "fa": "آن رقصنده با ظرافتی بی‌زحمت از عرض صحنه گذشت."
+        }
+      ],
+      "ipa": "/ˈefətləs/",
+      "pos": "adj",
+      "synonyms": [
+        "easy",
+        "smooth"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p02",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 185
+        }
+      ],
+      "translations": [
+        "بی‌زحمت",
+        "آسان و روان",
+        "بدون تلاش"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

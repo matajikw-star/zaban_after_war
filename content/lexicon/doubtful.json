@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هر دو یعنی مردد، اما dubious بار «مشکوک و مشکوک‌بودنِ خودِ چیز» را هم دارد",
+      "word": "dubious"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "doubtful",
   "lemma": "doubtful",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,71 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "confident",
+        "certain"
+      ],
+      "definition": "not feeling sure about something; uncertain whether something is true or right",
+      "examples": [
+        {
+          "en": "She looked doubtful when we asked her to sign the contract.",
+          "fa": "وقتی از او خواستیم قرارداد را امضا کند، مردد به نظر می‌رسید."
+        }
+      ],
+      "ipa": "/ˈdaʊtfl/",
+      "pos": "adj",
+      "synonyms": [
+        "unsure",
+        "uncertain",
+        "dubious"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1405-p06",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "مردد",
+        "نامطمئن",
+        "شکاک"
+      ]
+    },
+    {
+      "antonyms": [
+        "likely"
+      ],
+      "definition": "unlikely to happen or to be true",
+      "examples": [
+        {
+          "en": "It is doubtful whether the bridge will be finished this year.",
+          "fa": "بعید است که ساخت این پل امسال به پایان برسد."
+        }
+      ],
+      "ipa": "/ˈdaʊtfl/",
+      "pos": "adj",
+      "synonyms": [
+        "unlikely",
+        "improbable"
+      ],
+      "testedIn": [],
+      "translations": [
+        "بعید",
+        "نامحتمل"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

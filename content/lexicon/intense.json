@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "intensive یعنی فشرده و متمرکز (مثل دورهٔ فشرده)، اما intense یعنی شدید",
+      "word": "intensive"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "intense",
   "lemma": "intense",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,71 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "mild",
+        "slight"
+      ],
+      "definition": "very great in strength or degree, and often hard to bear",
+      "examples": [
+        {
+          "en": "The intense heat of the furnace kept the workers at a distance.",
+          "fa": "گرمای شدید کوره کارگران را در فاصله‌ای دور نگه می‌داشت."
+        }
+      ],
+      "ipa": "/ɪnˈtens/",
+      "pos": "adj",
+      "synonyms": [
+        "extreme",
+        "severe",
+        "acute"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "شدید",
+        "سخت",
+        "پرفشار"
+      ]
+    },
+    {
+      "antonyms": [
+        "relaxed"
+      ],
+      "definition": "having or showing very strong feelings, and taking things very seriously",
+      "examples": [
+        {
+          "en": "He is an intense young man who rarely jokes about his work.",
+          "fa": "او جوانی پرحرارت است که به‌ندرت دربارهٔ کارش شوخی می‌کند."
+        }
+      ],
+      "ipa": "/ɪnˈtens/",
+      "pos": "adj",
+      "synonyms": [
+        "passionate",
+        "earnest"
+      ],
+      "testedIn": [],
+      "translations": [
+        "پرشور",
+        "جدی و پرحرارت"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "dispel یعنی زدودن شک یا ترس، نه بیرون کردن آدم‌ها",
+      "word": "dispel"
+    },
+    {
+      "note": "repel یعنی دفع کردن و پس زدن حمله یا جذب نکردن",
+      "word": "repel"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "expel",
   "lemma": "expel",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +40,68 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "admit",
+        "accept"
+      ],
+      "definition": "to officially force someone to leave a school, an organization or a country",
+      "examples": [
+        {
+          "en": "The school decided to expel two students for repeated cheating.",
+          "fa": "مدرسه تصمیم گرفت دو دانش‌آموز را به دلیل تقلب مکرر اخراج کند."
+        }
+      ],
+      "ipa": "/ɪkˈspel/",
+      "pos": "v",
+      "synonyms": [
+        "eject",
+        "banish"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "اخراج کردن",
+        "بیرون راندن"
+      ]
+    },
+    {
+      "antonyms": [
+        "absorb"
+      ],
+      "definition": "to force air, gas or liquid out of a container or out of the body",
+      "examples": [
+        {
+          "en": "The lungs expel air each time you breathe out.",
+          "fa": "ریه‌ها هر بار که بازدم می‌کنید هوا را خارج می‌کنند."
+        }
+      ],
+      "ipa": "/ɪkˈspel/",
+      "pos": "v",
+      "synonyms": [
+        "discharge"
+      ],
+      "testedIn": [],
+      "translations": [
+        "خارج کردن",
+        "دفع کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

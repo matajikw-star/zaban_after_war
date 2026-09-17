@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املای نزدیک؛ intimation یعنی اشاره و کنایهٔ غیرمستقیم",
+      "word": "intimation"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "imitation",
   "lemma": "imitation",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,46 @@
       "year": 1402
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "original"
+      ],
+      "definition": "the act of copying the way someone speaks or behaves, or a copy of something real",
+      "examples": [
+        {
+          "en": "Children learn much of their first language by imitation.",
+          "fa": "کودکان بخش زیادی از زبان اولشان را از راه تقلید یاد می‌گیرند."
+        }
+      ],
+      "ipa": "/ˌɪmɪˈteɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "copy",
+        "impersonation"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p03",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1402-p06",
+          "questionNo": 20
+        }
+      ],
+      "translations": [
+        "تقلید",
+        "بدل",
+        "نسخهٔ بدلی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

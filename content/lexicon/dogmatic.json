@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شباهت ظاهری دارند، اما pragmatic یعنی عمل‌گرا و واقع‌بین، نه جزم‌اندیش",
+      "word": "pragmatic"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "dogmatic",
   "lemma": "dogmatic",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,47 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "open-minded",
+        "flexible"
+      ],
+      "definition": "stating your opinions as if they were certainly true and refusing to consider that anyone else could be right",
+      "examples": [
+        {
+          "en": "He is too dogmatic to admit that another method might work better.",
+          "fa": "او آن‌قدر جزم‌اندیش است که نمی‌پذیرد شاید روشی دیگر بهتر جواب بدهد."
+        }
+      ],
+      "ipa": "/dɒɡˈmætɪk/",
+      "pos": "adj",
+      "synonyms": [
+        "opinionated",
+        "doctrinaire"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "جزم‌اندیش",
+        "متعصب در عقیده",
+        "قاطع و انعطاف‌ناپذیر"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

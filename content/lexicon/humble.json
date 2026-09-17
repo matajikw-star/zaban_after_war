@@ -6,7 +6,7 @@
   },
   "id": "humble",
   "lemma": "humble",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,71 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "arrogant",
+        "proud"
+      ],
+      "definition": "not proud; not believing that you are more important than other people",
+      "examples": [
+        {
+          "en": "Despite all his prizes, the old teacher remained remarkably humble.",
+          "fa": "آن معلم پیر با همهٔ جوایزش به‌طرز چشمگیری فروتن ماند."
+        }
+      ],
+      "ipa": "/ˈhʌmbl/",
+      "pos": "adj",
+      "synonyms": [
+        "modest",
+        "unassuming"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p01",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1399-p03",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "فروتن",
+        "متواضع",
+        "افتاده"
+      ]
+    },
+    {
+      "antonyms": [
+        "noble",
+        "grand"
+      ],
+      "definition": "low in rank or social position, or simple and not expensive",
+      "examples": [
+        {
+          "en": "She rose from humble beginnings to lead the whole company.",
+          "fa": "او از خاستگاهی ساده برخاست و به رهبری کل شرکت رسید."
+        }
+      ],
+      "ipa": "/ˈhʌmbl/",
+      "pos": "adj",
+      "synonyms": [
+        "lowly",
+        "modest"
+      ],
+      "testedIn": [],
+      "translations": [
+        "ساده و بی‌آلایش",
+        "فرودست"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

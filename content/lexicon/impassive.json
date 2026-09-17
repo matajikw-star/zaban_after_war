@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "تقریباً معنای مخالف دارد: impassioned یعنی پرشور و پرحرارت",
+      "word": "impassioned"
+    },
+    {
+      "note": "impassable یعنی صعب‌العبور، مثلاً جاده‌ای که نمی‌شود از آن گذشت",
+      "word": "impassable"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "impassive",
   "lemma": "impassive",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +40,47 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "emotional",
+        "expressive"
+      ],
+      "definition": "showing no feeling or reaction in the face or the voice",
+      "examples": [
+        {
+          "en": "The witness stayed impassive while the verdict was read out.",
+          "fa": "شاهد هنگام قرائت رأی دادگاه بی‌حالت باقی ماند."
+        }
+      ],
+      "ipa": "/ɪmˈpæsɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "expressionless",
+        "stony"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1399-p05",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "بی‌احساس",
+        "بی‌حالت",
+        "خونسرد و بی‌واکنش"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

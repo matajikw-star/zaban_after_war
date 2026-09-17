@@ -91,6 +91,23 @@ this — a batch where any tested occurrence goes unclaimed is rejected whole.
 A **context** occurrence is never claimed; a context-only word has `testedIn: []`
 on every sense, and that is correct.
 
+**From rank ~751 the queue is entirely distractor-only.** `stats.priority` ranks
+words that were ever the answer above words that never were, so the queue has a
+cliff in it:
+
+| ranks | words | never an answer |
+|---|---|---|
+| 1-750 | 750 | 33% |
+| 751-2098 | 1,026 | **100%** |
+
+Below the cliff no key ever confirms a meaning: every occurrence is a wrong
+option, often one that fits its stem badly or not at all, because the examiner
+chose it precisely for not fitting. So **write the word's ordinary core meaning
+and let `testedIn` follow it.** Do not contort a sense to make a nonsense
+distractor slot read well — rule 1 says lead with the exam's meaning, and where
+the exam only ever used the word wrongly, the exam has no meaning to lead with.
+Say in your report which assignments were judgement rather than evidence.
+
 ### 4. A collocation-bound meaning is its own sense
 
 `vicious circle` is a sense of `vicious`, listed first, because the exam question

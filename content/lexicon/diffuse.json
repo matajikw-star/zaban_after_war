@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "diffuse",
   "lemma": "diffuse",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -37,7 +42,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1399": 1
@@ -59,7 +65,5 @@
   "surfaceForms": [
     "diffuse",
     "diffused"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

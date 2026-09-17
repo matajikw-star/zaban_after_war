@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "arriviste",
   "lemma": "arriviste",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -15,7 +20,8 @@
       "year": 1400
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1400": 1
@@ -35,7 +41,5 @@
   "status": "draft",
   "surfaceForms": [
     "arrivistes"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

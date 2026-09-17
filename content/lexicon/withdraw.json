@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "withdraw",
   "lemma": "withdraw",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -125,7 +130,8 @@
       "year": 1398
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1400": 1
@@ -151,7 +157,5 @@
     "withdraw",
     "withdrawn",
     "withdrew"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

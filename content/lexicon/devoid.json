@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "devoid",
   "lemma": "devoid",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -15,7 +20,8 @@
       "year": 1403
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1403": 1
@@ -35,7 +41,5 @@
   "status": "draft",
   "surfaceForms": [
     "devoid of"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

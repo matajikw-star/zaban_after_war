@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "lassitude",
   "lemma": "lassitude",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -26,7 +31,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1399": 1
@@ -47,7 +53,5 @@
   "status": "draft",
   "surfaceForms": [
     "lassitude"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

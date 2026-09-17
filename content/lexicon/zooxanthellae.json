@@ -1,12 +1,17 @@
 {
+  "confusables": [],
   "domain": {
     "fieldCodes": [
       "1121"
     ]
   },
-  "examples": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "zooxanthellae",
   "lemma": "zooxanthellae",
+  "level": null,
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -18,7 +23,8 @@
       "year": 1398
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {},
@@ -34,7 +40,5 @@
   "status": "draft",
   "surfaceForms": [
     "zooxanthellae"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

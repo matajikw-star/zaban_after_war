@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "irrelevant",
   "lemma": "irrelevant",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -37,7 +42,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1399": 1,
@@ -61,7 +67,5 @@
     "irrelevant",
     "irrelevant at",
     "irrelevant to"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

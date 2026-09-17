@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "eventual",
   "lemma": "eventual",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -26,7 +31,8 @@
       "year": 1400
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1400": 2
@@ -46,7 +52,5 @@
   "status": "draft",
   "surfaceForms": [
     "eventually"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

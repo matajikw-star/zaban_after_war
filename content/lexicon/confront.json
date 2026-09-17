@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "confront",
   "lemma": "confront",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -70,7 +75,8 @@
       "year": 1400
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
@@ -90,7 +96,5 @@
   "status": "draft",
   "surfaceForms": [
     "confronted"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

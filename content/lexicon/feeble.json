@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "feeble",
   "lemma": "feeble",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -26,7 +31,8 @@
       "year": 1401
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1404": 1
@@ -48,7 +54,5 @@
   "surfaceForms": [
     "a feeble",
     "feeble"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

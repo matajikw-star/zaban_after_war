@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "colloquial",
   "lemma": "colloquial",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -26,7 +31,8 @@
       "year": 1398
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1398": 1
@@ -48,7 +54,5 @@
   "surfaceForms": [
     "colloquial",
     "colloquially"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

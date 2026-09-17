@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "triumph",
   "lemma": "triumph",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -37,7 +42,8 @@
       "year": 1400
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1400": 3
@@ -57,7 +63,5 @@
   "status": "draft",
   "surfaceForms": [
     "triumph"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "cede",
   "lemma": "cede",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -26,7 +31,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1400": 1
@@ -48,7 +54,5 @@
   "surfaceForms": [
     "cede",
     "ceded"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "wane",
   "lemma": "wane",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -26,7 +31,8 @@
       "year": 1403
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
@@ -46,7 +52,5 @@
   "surfaceForms": [
     "wane",
     "waned to"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

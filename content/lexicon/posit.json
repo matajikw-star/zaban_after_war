@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "posit",
   "lemma": "posit",
+  "level": null,
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -13,7 +18,8 @@
       "year": 1405
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {},
@@ -29,7 +35,5 @@
   "status": "draft",
   "surfaceForms": [
     "posited"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

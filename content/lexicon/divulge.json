@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "divulge",
   "lemma": "divulge",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -26,7 +31,8 @@
       "year": 1398
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1400": 1
@@ -48,7 +54,5 @@
   "surfaceForms": [
     "divulge",
     "divulging"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

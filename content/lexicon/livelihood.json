@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "livelihood",
   "lemma": "livelihood",
+  "level": null,
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -22,7 +27,8 @@
       "year": 1400
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {},
@@ -39,7 +45,5 @@
   "surfaceForms": [
     "livelihood",
     "livelihoods"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "meager",
   "lemma": "meager",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -37,7 +42,8 @@
       "year": 1398
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1402": 1
@@ -59,7 +65,5 @@
   "status": "draft",
   "surfaceForms": [
     "meager"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

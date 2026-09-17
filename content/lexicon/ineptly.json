@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "ineptly",
   "lemma": "ineptly",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -26,7 +31,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
@@ -44,7 +50,5 @@
   "status": "draft",
   "surfaceForms": [
     "ineptly"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

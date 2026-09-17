@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "commitment",
   "lemma": "commitment",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -26,7 +31,8 @@
       "year": 1398
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1403": 1
@@ -47,7 +53,5 @@
   "status": "draft",
   "surfaceForms": [
     "commitment"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

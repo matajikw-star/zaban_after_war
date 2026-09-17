@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "motivate",
   "lemma": "motivate",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -15,7 +20,8 @@
       "year": 1401
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1401": 1
@@ -35,7 +41,5 @@
   "status": "draft",
   "surfaceForms": [
     "motivated"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

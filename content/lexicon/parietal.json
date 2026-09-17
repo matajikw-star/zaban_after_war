@@ -1,12 +1,17 @@
 {
+  "confusables": [],
   "domain": {
     "fieldCodes": [
       "1110"
     ]
   },
-  "examples": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "parietal",
   "lemma": "parietal",
+  "level": null,
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -18,7 +23,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {},
@@ -34,7 +40,5 @@
   "status": "draft",
   "surfaceForms": [
     "parietal"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

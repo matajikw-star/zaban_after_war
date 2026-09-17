@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "compel",
   "lemma": "compel",
+  "level": null,
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -31,7 +36,8 @@
       "year": 1400
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {},
@@ -47,7 +53,5 @@
   "status": "draft",
   "surfaceForms": [
     "compel"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

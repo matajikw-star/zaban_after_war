@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "digression",
   "lemma": "digression",
+  "level": null,
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -31,7 +36,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {},
@@ -47,7 +53,5 @@
   "status": "draft",
   "surfaceForms": [
     "digressions"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

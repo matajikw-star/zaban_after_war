@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "diminish",
   "lemma": "diminish",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -37,7 +42,8 @@
       "year": 1398
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1398": 1
@@ -60,7 +66,5 @@
     "diminish",
     "diminished",
     "diminishing"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

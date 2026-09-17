@@ -56,27 +56,62 @@ One file per word, forever. A word already present gains an occurrence rather th
 {
   "id": "attribute",
   "lemma": "attribute",
-  "pos": ["v", "n"],
-  "translations": ["نسبت دادن به", "مشخصه، ویژگی"],
-  "synonyms": ["ascribe", "characteristic"],
-  "examples": [
-    { "en": "Ancient peoples attributed magic properties to certain stones.",
-      "fa": "مردمان باستان ویژگی‌های جادویی را به سنگ‌های خاصی نسبت می‌دادند." }
+  "level": "B2",
+  "senses": [
+    {
+      "pos": "v",
+      "ipa": "/əˈtrɪbjuːt/",
+      "definition": "to say that something was caused by a particular thing or person",
+      "translations": ["نسبت دادن به", "منسوب کردن"],
+      "synonyms": ["ascribe", "credit"],
+      "antonyms": [],
+      "examples": [
+        { "en": "Ancient peoples attributed magic properties to certain stones.",
+          "fa": "مردمان باستان ویژگی‌های جادویی را به سنگ‌های خاصی نسبت می‌دادند." }
+      ],
+      "testedIn": [{ "paperId": "arshad-1402-p03", "questionNo": 12 }]
+    }
   ],
+  "confusables": [{ "word": "contribute", "note": "شباهت ظاهری؛ هم‌ریشه نیستند" }],
+  "homograph": { "suspected": false, "note": null },
   "occurrences": [
-    { "examId": "arshad-1402-zaban", "questionNo": 12 },
-    { "examId": "arshad-1398-zaban", "questionNo": 7 }
+    { "occurrenceType": "tested", "paperId": "arshad-1402-p03", "year": 1402,
+      "questionNo": 12, "part": "vocabulary", "optionIndex": 1, "isAnswer": true,
+      "surface": "attributed", "reach": 3 }
   ],
-  "status": "draft"
+  "stats": { "timesTested": 1, "timesAsAnswer": 1, "timesAsContext": 0, "priority": 5 },
+  "status": "draft",
+  "provenance": { "model": "claude-opus-5", "at": "2026-09-17", "schemaVersion": 2 }
 }
 ```
 
-- `id` is frozen at creation (`CLAUDE.md` → "Word ids"). Renaming one orphans user progress.
+The shape is **sense-shaped**, not parallel arrays: a translation, a definition, an example and
+the question that tested them all belong to one meaning of the word. See
+`docs/adr/0012-word-data-is-sense-shaped-and-generated-once.md` for why, and for what each field
+is worth.
+
+**Two provenances, never mixed.** Extraction owns `id`, `lemma`, `surfaceForms`, `occurrences`,
+`stats` and `domain`; they are a fold over `content/exams/` and are re-derived on every run.
+The generation pass owns `level`, `senses`, `confusables`, `homograph` and `provenance`; nothing
+re-derives those, so `s6_lexicon.py` and `s8_fold.py` carry them through untouched. A change that
+makes either side rewrite the other's fields is a bug.
+
+- `id` is frozen at creation (`CLAUDE.md` → "Word ids"). Renaming one orphans user progress. If a
+  lemma turns out to be wrong after the id is minted, **report it; never rename the file.**
 - `occurrences[]` is the product's core claim — every entry points at a real extracted question.
   A word with an empty `occurrences[]` has no business being in the lexicon.
+  `occurrenceType` is `"tested"` (the word was one of the four options, so it has an
+  `optionIndex` and an `isAnswer`) or `"context"` (it appeared in the stem, so it has neither).
+- `senses[].testedIn` links a meaning to the questions that tested *that* meaning. It is knowable
+  only while reading the question, which is why it is written during generation and never after.
+- `homograph.suspected` flags a word whose senses are different enough to deserve `word-1` /
+  `word-2`. Raise the flag; the split is the owner's call and must happen before any user has
+  progress on the id.
 - `status`: `draft` → `approved`. Only the owner promotes to `approved`.
-- Translations and examples are **written fresh**, not copied from any book. This is the legal
-  premise of v2 (`docs/postmortem-v1.md` → "Legal note").
+- Translations, definitions and examples are **written fresh**, not copied from any book or
+  dictionary. This is the legal premise of v2 (`docs/postmortem-v1.md` → "Legal note").
+- The exam sentence is never used as a word's `example`. It is joined in at build time from
+  `occurrences[]`, and reusing it teaches the answer to one question rather than the word.
 
 ### 4. Generate hints → `content/hints/<word-id>.md`
 
@@ -108,15 +143,17 @@ Run after any bulk change. Implemented as `pnpm content:lint`, and by Claude on 
 1. Every `testedWord` resolves to a lexicon file.
 2. Every `occurrences[]` entry points to an exam and question number that exist.
 3. No duplicate ids; no two files whose lemmas differ only by case or whitespace.
-4. Every lexicon entry has at least one translation and at least one occurrence.
+4. Every lexicon entry has at least one sense, that sense has at least one translation and
+   one example, and the entry has at least one occurrence.
 5. Every exam JSON validates against the schema.
 
 **Warnings:**
 
 6. Words with no hint file, or a hint still unapproved.
 7. Entries still `draft` after their exam has been reported complete.
-8. Homograph suspects: one entry carrying translations that look like unrelated senses — it
-   probably needs splitting into `word-1` / `word-2` (do this *before* users have progress on it).
+8. Homograph suspects: `homograph.suspected` is true, or one entry carries senses that look
+   unrelated — it probably needs splitting into `word-1` / `word-2` (do this *before* users have
+   progress on it).
 9. `uncertain[]` items still open.
 10. Orphans: exam questions whose `testedWord` is `null`.
 11. Context-only entries: a lexicon file whose every occurrence is
@@ -127,6 +164,11 @@ Run after any bulk change. Implemented as `pnpm content:lint`, and by Claude on 
 12. A context occurrence carrying an `optionIndex` or an `isAnswer`. Those
     belong to a tested occurrence only; their presence means the two kinds have
     been conflated somewhere.
+13. A `senses[].testedIn` entry pointing at a question the word has no `occurrences[]` entry for,
+    or a word whose senses between them claim fewer questions than it was tested in — a tested
+    occurrence no sense accounts for means a meaning went unwritten.
+14. An entry whose `examples[].en` reproduces the stem of one of its own occurrences. The exam
+    sentence is joined at build time and must never be duplicated as the authored example.
 
 Report findings ranked by severity, with file paths. Fix nothing silently — a lint that
 auto-repairs hides the extraction problems this pipeline exists to surface.

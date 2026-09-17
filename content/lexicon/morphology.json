@@ -1,12 +1,17 @@
 {
+  "confusables": [],
   "domain": {
     "fieldCodes": [
       "1110"
     ]
   },
-  "examples": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "morphology",
   "lemma": "morphology",
+  "level": null,
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -18,7 +23,8 @@
       "year": 1402
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {},
@@ -34,7 +40,5 @@
   "status": "draft",
   "surfaceForms": [
     "morphology"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

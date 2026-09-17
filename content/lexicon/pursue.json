@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "pursue",
   "lemma": "pursue",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -48,7 +53,8 @@
       "year": 1398
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1398": 1,
@@ -74,7 +80,5 @@
   "surfaceForms": [
     "pursue",
     "pursuing"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

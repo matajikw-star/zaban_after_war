@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "vindicate",
   "lemma": "vindicate",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -37,7 +42,8 @@
       "year": 1402
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1402": 1,
@@ -61,7 +67,5 @@
   "surfaceForms": [
     "vindicate",
     "vindicated"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

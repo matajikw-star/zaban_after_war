@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "distinguish",
   "lemma": "distinguish",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -37,7 +42,8 @@
       "year": 1398
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1403": 1
@@ -60,7 +66,5 @@
   "surfaceForms": [
     "distinguish",
     "distinguishes"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

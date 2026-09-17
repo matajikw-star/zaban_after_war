@@ -1,13 +1,18 @@
 {
+  "confusables": [],
   "domain": {
     "fieldCodes": [
       "1110",
       "1121"
     ]
   },
-  "examples": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "affective",
   "lemma": "affective",
+  "level": null,
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -28,7 +33,8 @@
       "year": 1401
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {},
@@ -44,7 +50,5 @@
   "status": "draft",
   "surfaceForms": [
     "affective"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

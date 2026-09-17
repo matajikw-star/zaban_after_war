@@ -86,14 +86,16 @@ def main() -> int:
         entry = {
             "id": wid,                                   # frozen forever
             "lemma": (prev or {}).get("lemma") or w["lemma"],
-            "pos": (prev or {}).get("pos", []),
-            "translations": (prev or {}).get("translations", []),
-            "synonyms": (prev or {}).get("synonyms", []),
-            "examples": (prev or {}).get("examples", []),
+            # Written by the generation pass, not derivable here (ADR-0012).
+            "level": (prev or {}).get("level"),
+            "senses": (prev or {}).get("senses", []),
+            "confusables": (prev or {}).get("confusables", []),
+            "homograph": (prev or {}).get("homograph", {"suspected": False, "note": None}),
             "surfaceForms": sorted({o["surface"] for o in tested + context if o.get("surface")}),
             "occurrences": tested + context,
             "stats": build_stats(tested, context),
             "status": (prev or {}).get("status", "draft"),
+            "provenance": (prev or {}).get("provenance"),
         }
         if w["verdict"] == "domain-term":
             # Kept so the app can show a domain term only to the fields whose

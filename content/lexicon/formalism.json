@@ -1,10 +1,15 @@
 {
+  "confusables": [],
   "domain": {
     "fieldCodes": []
   },
-  "examples": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "formalism",
   "lemma": "formalism",
+  "level": null,
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -88,7 +93,8 @@
       "year": 1400
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {},
@@ -104,7 +110,5 @@
   "status": "draft",
   "surfaceForms": [
     "formalism"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

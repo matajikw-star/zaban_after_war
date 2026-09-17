@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "attribute",
   "lemma": "attribute",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -37,7 +42,8 @@
       "year": 1401
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1401": 1,
@@ -61,7 +67,5 @@
     "attribute",
     "attributed",
     "attributes"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "modesty",
   "lemma": "modesty",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -26,7 +31,8 @@
       "year": 1401
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1404": 1
@@ -47,7 +53,5 @@
   "status": "draft",
   "surfaceForms": [
     "modesty"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

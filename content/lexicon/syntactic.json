@@ -1,12 +1,17 @@
 {
+  "confusables": [],
   "domain": {
     "fieldCodes": [
       "1110"
     ]
   },
-  "examples": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "syntactic",
   "lemma": "syntactic",
+  "level": null,
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -18,7 +23,8 @@
       "year": 1404
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {},
@@ -34,7 +40,5 @@
   "status": "draft",
   "surfaceForms": [
     "syntactic"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

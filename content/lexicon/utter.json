@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "utter",
   "lemma": "utter",
+  "level": null,
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -31,7 +36,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {},
@@ -48,7 +54,5 @@
   "surfaceForms": [
     "uttered",
     "uttering"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

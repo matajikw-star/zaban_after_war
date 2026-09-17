@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "revert",
   "lemma": "revert",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -59,7 +64,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
@@ -81,7 +87,5 @@
     "reverted",
     "reverted to",
     "reverting"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

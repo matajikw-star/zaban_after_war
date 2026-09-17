@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "perk",
   "lemma": "perk",
+  "level": null,
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -22,7 +27,8 @@
       "year": 1401
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {},
@@ -39,7 +45,5 @@
   "surfaceForms": [
     "perk",
     "perks"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

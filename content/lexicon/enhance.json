@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "enhance",
   "lemma": "enhance",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -37,7 +42,8 @@
       "year": 1398
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1399": 1,
@@ -60,7 +66,5 @@
   "status": "draft",
   "surfaceForms": [
     "enhance"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

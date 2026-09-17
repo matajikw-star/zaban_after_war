@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "lurid",
   "lemma": "lurid",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -26,7 +31,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1399": 1,
@@ -48,7 +54,5 @@
   "status": "draft",
   "surfaceForms": [
     "lurid"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "peripheral",
   "lemma": "peripheral",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -59,7 +64,8 @@
       "year": 1398
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1400": 1
@@ -82,7 +88,5 @@
   "surfaceForms": [
     "more peripheral",
     "peripheral"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

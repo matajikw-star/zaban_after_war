@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "mutual",
   "lemma": "mutual",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -70,7 +75,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1400": 3
@@ -92,7 +98,5 @@
   "status": "draft",
   "surfaceForms": [
     "mutual"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

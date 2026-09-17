@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "emulate",
   "lemma": "emulate",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -37,7 +42,8 @@
       "year": 1401
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
@@ -57,7 +63,5 @@
   "status": "draft",
   "surfaceForms": [
     "emulate"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

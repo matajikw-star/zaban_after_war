@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "flaw",
   "lemma": "flaw",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -26,7 +31,8 @@
       "year": 1403
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1403": 1
@@ -47,7 +53,5 @@
   "status": "draft",
   "surfaceForms": [
     "flaw"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

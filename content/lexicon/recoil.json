@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "recoil",
   "lemma": "recoil",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -48,7 +53,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1400": 3
@@ -70,7 +76,5 @@
   "surfaceForms": [
     "recoil",
     "recoil at"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "rigid",
   "lemma": "rigid",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -37,7 +42,8 @@
       "year": 1398
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
@@ -57,7 +63,5 @@
   "surfaceForms": [
     "rigid",
     "rigidly"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

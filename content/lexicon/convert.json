@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "convert",
   "lemma": "convert",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -70,7 +75,8 @@
       "year": 1400
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
@@ -91,7 +97,5 @@
   "surfaceForms": [
     "convert",
     "converted"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

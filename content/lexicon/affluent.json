@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "affluent",
   "lemma": "affluent",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -70,7 +75,8 @@
       "year": 1400
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1400": 4,
@@ -93,7 +99,5 @@
   "status": "draft",
   "surfaceForms": [
     "affluent"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

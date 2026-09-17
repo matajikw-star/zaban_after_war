@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "juxtapose",
   "lemma": "juxtapose",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -15,7 +20,8 @@
       "year": 1398
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
@@ -33,7 +39,5 @@
   "status": "draft",
   "surfaceForms": [
     "juxtaposing"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

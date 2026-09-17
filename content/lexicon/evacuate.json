@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "evacuate",
   "lemma": "evacuate",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -37,7 +42,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1399": 2
@@ -59,7 +65,5 @@
   "surfaceForms": [
     "evacuate",
     "evacuated"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

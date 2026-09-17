@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "pessimistic",
   "lemma": "pessimistic",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -15,7 +20,8 @@
       "year": 1405
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1405": 1
@@ -35,7 +41,5 @@
   "status": "draft",
   "surfaceForms": [
     "pessimistic"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

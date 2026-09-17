@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "wallow",
   "lemma": "wallow",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -26,7 +31,8 @@
       "year": 1403
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1403": 1
@@ -48,7 +54,5 @@
   "surfaceForms": [
     "wallow",
     "wallowing"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

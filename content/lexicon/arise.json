@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "arise",
   "lemma": "arise",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -70,7 +75,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
@@ -92,7 +98,5 @@
     "Arisen",
     "arise",
     "arises"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

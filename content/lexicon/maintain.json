@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "maintain",
   "lemma": "maintain",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -26,7 +31,8 @@
       "year": 1400
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1402": 1
@@ -48,7 +54,5 @@
   "surfaceForms": [
     "maintained",
     "maintaining"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

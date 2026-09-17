@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "flummery",
   "lemma": "flummery",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -26,7 +31,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1399": 1
@@ -48,7 +54,5 @@
   "surfaceForms": [
     "flummeries",
     "flummery"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

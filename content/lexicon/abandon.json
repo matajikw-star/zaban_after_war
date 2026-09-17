@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "abandon",
   "lemma": "abandon",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -26,7 +31,8 @@
       "year": 1404
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1404": 1
@@ -48,7 +54,5 @@
   "surfaceForms": [
     "abandon",
     "abandoned"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

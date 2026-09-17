@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "stem",
   "lemma": "stem",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -37,7 +42,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1402": 1
@@ -59,7 +65,5 @@
   "surfaceForms": [
     "stemmed from",
     "stemming"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

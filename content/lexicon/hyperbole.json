@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "hyperbole",
   "lemma": "hyperbole",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -26,7 +31,8 @@
       "year": 1398
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1398": 1
@@ -46,7 +52,5 @@
   "status": "draft",
   "surfaceForms": [
     "hyperbole"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

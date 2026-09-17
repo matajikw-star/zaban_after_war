@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "deplete",
   "lemma": "deplete",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -81,7 +86,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1399": 3
@@ -103,7 +109,5 @@
   "surfaceForms": [
     "depleted",
     "depletes"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

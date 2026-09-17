@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "disparity",
   "lemma": "disparity",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -15,7 +20,8 @@
       "year": 1402
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1402": 1
@@ -35,7 +41,5 @@
   "status": "draft",
   "surfaceForms": [
     "disparity"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

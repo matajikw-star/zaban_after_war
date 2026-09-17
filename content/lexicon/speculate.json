@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "speculate",
   "lemma": "speculate",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -26,7 +31,8 @@
       "year": 1398
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
@@ -46,7 +52,5 @@
   "surfaceForms": [
     "speculate",
     "speculating"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

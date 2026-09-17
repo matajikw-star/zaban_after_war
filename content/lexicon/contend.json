@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "contend",
   "lemma": "contend",
+  "level": null,
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -40,7 +45,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {},
@@ -57,7 +63,5 @@
   "surfaceForms": [
     "contended",
     "contends"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

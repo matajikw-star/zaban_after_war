@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "conscience",
   "lemma": "conscience",
+  "level": null,
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -22,7 +27,8 @@
       "year": 1400
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {},
@@ -38,7 +44,5 @@
   "status": "draft",
   "surfaceForms": [
     "conscience"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

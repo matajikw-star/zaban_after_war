@@ -1,10 +1,15 @@
 {
+  "confusables": [],
   "domain": {
     "fieldCodes": []
   },
-  "examples": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "geocentric",
   "lemma": "geocentric",
+  "level": null,
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -61,7 +66,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {},
@@ -77,7 +83,5 @@
   "status": "draft",
   "surfaceForms": [
     "geocentric"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

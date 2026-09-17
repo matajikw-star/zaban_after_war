@@ -1,10 +1,15 @@
 {
+  "confusables": [],
   "domain": {
     "fieldCodes": []
   },
-  "examples": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "feedstock",
   "lemma": "feedstock",
+  "level": null,
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -16,7 +21,8 @@
       "year": 1401
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {},
@@ -32,7 +38,5 @@
   "status": "draft",
   "surfaceForms": [
     "feedstocks"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

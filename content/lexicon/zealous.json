@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "zealous",
   "lemma": "zealous",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -70,7 +75,8 @@
       "year": 1400
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1400": 4,
@@ -93,7 +99,5 @@
   "surfaceForms": [
     "zealous",
     "zealously"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

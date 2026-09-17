@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "fulfill",
   "lemma": "fulfill",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -26,7 +31,8 @@
       "year": 1400
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
@@ -46,7 +52,5 @@
   "surfaceForms": [
     "fulfill",
     "fulfilling"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

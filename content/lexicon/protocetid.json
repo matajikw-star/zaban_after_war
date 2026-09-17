@@ -1,10 +1,15 @@
 {
+  "confusables": [],
   "domain": {
     "fieldCodes": []
   },
-  "examples": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "protocetid",
   "lemma": "protocetid",
+  "level": null,
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -16,7 +21,8 @@
       "year": 1402
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {},
@@ -32,7 +38,5 @@
   "status": "draft",
   "surfaceForms": [
     "protocetid"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

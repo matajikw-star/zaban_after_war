@@ -1,12 +1,17 @@
 {
+  "confusables": [],
   "domain": {
     "fieldCodes": [
       "1121"
     ]
   },
-  "examples": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "phonics",
   "lemma": "phonics",
+  "level": null,
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -45,7 +50,8 @@
       "year": 1398
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {},
@@ -61,7 +67,5 @@
   "status": "draft",
   "surfaceForms": [
     "phonics"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

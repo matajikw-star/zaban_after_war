@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "adhere",
   "lemma": "adhere",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -26,7 +31,8 @@
       "year": 1403
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1403": 1,
@@ -49,7 +55,5 @@
   "surfaceForms": [
     "adhere",
     "adheres"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

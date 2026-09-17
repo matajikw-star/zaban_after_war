@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "avid",
   "lemma": "avid",
+  "level": null,
   "occurrences": [
     {
       "occurrenceType": "context",
@@ -22,7 +27,8 @@
       "year": 1403
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {},
@@ -38,7 +44,5 @@
   "status": "draft",
   "surfaceForms": [
     "avid"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

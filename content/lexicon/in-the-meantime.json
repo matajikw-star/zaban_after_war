@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "in-the-meantime",
   "lemma": "in the meantime",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -15,7 +20,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1399": 1
@@ -35,7 +41,5 @@
   "status": "draft",
   "surfaceForms": [
     "In the meantime"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

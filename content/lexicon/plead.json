@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "plead",
   "lemma": "plead",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -15,7 +20,8 @@
       "year": 1404
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1404": 1
@@ -35,7 +41,5 @@
   "status": "draft",
   "surfaceForms": [
     "pleaded"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

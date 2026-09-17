@@ -140,14 +140,16 @@ def main() -> int:
         entry = {
             "id": wid,                                  # frozen forever
             "lemma": prev.get("lemma") if prev else lemma,
-            "pos": (prev or {}).get("pos", []),
-            "translations": (prev or {}).get("translations", []),
-            "synonyms": (prev or {}).get("synonyms", []),
-            "examples": (prev or {}).get("examples", []),
+            # Written by the generation pass, not derivable here (ADR-0012).
+            "level": (prev or {}).get("level"),
+            "senses": (prev or {}).get("senses", []),
+            "confusables": (prev or {}).get("confusables", []),
+            "homograph": (prev or {}).get("homograph", {"suspected": False, "note": None}),
             "surfaceForms": sorted({o["surface"] for o in occ + context if o.get("surface")}),
             "occurrences": occ + context,
             "stats": build_stats(occ, context),
             "status": (prev or {}).get("status", "draft"),
+            "provenance": (prev or {}).get("provenance"),
         }
         # Set by S8 for a domain term, and no more re-derivable here than the
         # context occurrences are.

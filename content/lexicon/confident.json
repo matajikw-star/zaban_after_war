@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "confident",
   "lemma": "confident",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -26,7 +31,8 @@
       "year": 1404
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1404": 1,
@@ -48,7 +54,5 @@
   "status": "draft",
   "surfaceForms": [
     "confident"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

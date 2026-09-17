@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "unchecked",
   "lemma": "unchecked",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -26,7 +31,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1399": 2
@@ -46,7 +52,5 @@
   "status": "draft",
   "surfaceForms": [
     "unchecked"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "account",
   "lemma": "account",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -48,7 +53,8 @@
       "year": 1400
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1400": 4
@@ -68,7 +74,5 @@
   "status": "draft",
   "surfaceForms": [
     "accounts"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

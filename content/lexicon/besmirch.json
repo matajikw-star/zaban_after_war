@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "besmirch",
   "lemma": "besmirch",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -26,7 +31,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1400": 1
@@ -47,7 +53,5 @@
   "status": "draft",
   "surfaceForms": [
     "besmirch"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

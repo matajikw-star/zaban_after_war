@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "proximity",
   "lemma": "proximity",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -37,7 +42,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1399": 2,
@@ -59,7 +65,5 @@
   "status": "draft",
   "surfaceForms": [
     "proximity"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

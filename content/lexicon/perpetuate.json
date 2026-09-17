@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "perpetuate",
   "lemma": "perpetuate",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -26,7 +31,8 @@
       "year": 1401
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1401": 1
@@ -47,7 +53,5 @@
   "status": "draft",
   "surfaceForms": [
     "perpetuate"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "amenity",
   "lemma": "amenity",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -37,7 +42,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1405": 1
@@ -58,7 +64,5 @@
   "status": "draft",
   "surfaceForms": [
     "amenities"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

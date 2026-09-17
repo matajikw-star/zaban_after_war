@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "recapitulate",
   "lemma": "recapitulate",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -37,7 +42,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1399": 2
@@ -58,7 +64,5 @@
   "status": "draft",
   "surfaceForms": [
     "recapitulate"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

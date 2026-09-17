@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "entertainment",
   "lemma": "entertainment",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": false,
@@ -48,7 +53,8 @@
       "year": 1400
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {},
     "byYear": {
@@ -66,7 +72,5 @@
   "status": "draft",
   "surfaceForms": [
     "entertainments"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

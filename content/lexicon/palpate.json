@@ -1,7 +1,12 @@
 {
-  "examples": [],
+  "confusables": [],
+  "homograph": {
+    "note": null,
+    "suspected": false
+  },
   "id": "palpate",
   "lemma": "palpate",
+  "level": null,
   "occurrences": [
     {
       "isAnswer": true,
@@ -26,7 +31,8 @@
       "year": 1399
     }
   ],
-  "pos": [],
+  "provenance": null,
+  "senses": [],
   "stats": {
     "answersByYear": {
       "1401": 1
@@ -48,7 +54,5 @@
   "surfaceForms": [
     "palpate",
     "palpated"
-  ],
-  "synonyms": [],
-  "translations": []
+  ]
 }

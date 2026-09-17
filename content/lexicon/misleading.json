@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "mislead فعل است (گمراه کردن)؛ misleading صفتی است که از همان فعل ساخته شده.",
+      "word": "mislead"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "misleading",
   "lemma": "misleading",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,43 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "accurate",
+        "truthful"
+      ],
+      "definition": "giving a wrong idea or impression, so that people come to believe something untrue",
+      "examples": [
+        {
+          "en": "The headline was misleading, because the study said the opposite.",
+          "fa": "تیتر خبر گمراه‌کننده بود، چون پژوهش خلاف آن را می‌گفت."
+        }
+      ],
+      "ipa": "/ˌmɪsˈliːdɪŋ/",
+      "pos": "adj",
+      "synonyms": [
+        "deceptive",
+        "specious"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p04",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "گمراه‌کننده",
+        "فریبنده",
+        "اشتباه‌انداز"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "renovate یعنی بازسازی و نوسازی ساختمان، نه تمدید کردن مدرک یا قرارداد",
+      "word": "renovate"
+    }
+  ],
   "homograph": {
-    "note": null,
+    "note": "",
     "suspected": false
   },
   "id": "renew",
   "lemma": "renew",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,52 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "cancel",
+        "abandon"
+      ],
+      "definition": "to make something valid for a further period of time, or to start something again after a break",
+      "examples": [
+        {
+          "en": "You must renew your passport before you book the flight.",
+          "fa": "باید پیش از رزرو پرواز گذرنامه‌ات را تمدید کنی."
+        }
+      ],
+      "ipa": "/rɪˈnjuː/",
+      "pos": "v",
+      "synonyms": [
+        "extend",
+        "resume",
+        "restore"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "تمدید کردن",
+        "از سر گرفتن",
+        "نو کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

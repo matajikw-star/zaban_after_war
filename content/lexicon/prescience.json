@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املا و تلفظ نزدیک و گمراه‌کننده؛ presence یعنی حضور.",
+      "word": "presence"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "prescience",
   "lemma": "prescience",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,42 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "hindsight"
+      ],
+      "definition": "the ability to know or correctly guess what will happen in the future",
+      "examples": [
+        {
+          "en": "His warnings about the crash showed remarkable prescience.",
+          "fa": "هشدارهای او درباره سقوط بازار نشان از آینده‌نگری چشمگیری داشت."
+        }
+      ],
+      "ipa": "/ˈpresiəns/",
+      "pos": "n",
+      "synonyms": [
+        "foresight",
+        "foreknowledge"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p01",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "آینده‌نگری",
+        "پیش‌بینی درست آینده",
+        "غیب‌دانی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

@@ -6,7 +6,7 @@
   },
   "id": "hindrance",
   "lemma": "hindrance",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,44 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "help",
+        "aid"
+      ],
+      "definition": "a person or thing that makes it harder for something to be done or to happen",
+      "examples": [
+        {
+          "en": "Heavy luggage proved a serious hindrance on the mountain path.",
+          "fa": "بار سنگین روی مسیر کوهستانی مانعی جدی از آب درآمد."
+        }
+      ],
+      "ipa": "/ˈhɪndrəns/",
+      "pos": "n",
+      "synonyms": [
+        "obstacle",
+        "impediment",
+        "encumbrance"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p03",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "مانع",
+        "سد راه",
+        "دست‌وپاگیر"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

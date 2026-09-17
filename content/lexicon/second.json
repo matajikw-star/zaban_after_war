@@ -1,12 +1,12 @@
 {
   "confusables": [],
   "homograph": {
-    "note": null,
-    "suspected": false
+    "note": "The unit of time reads as unrelated to the ordinal for a learner, and the collocation \"second to none\" means the opposite of ranking second. There is also a verb /sɪˈkɒnd/, stressed on the second syllable, meaning to transfer an employee temporarily; it is not given a sense here.",
+    "suspected": true
   },
   "id": "second",
   "lemma": "second",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,85 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "mediocre"
+      ],
+      "definition": "better than everything else of its kind, in the phrase \"second to none\"",
+      "examples": [
+        {
+          "en": "As a cook, my grandmother was second to none in our family.",
+          "fa": "مادربزرگم در آشپزی در خانوادهٔ ما بی‌همتا بود."
+        }
+      ],
+      "ipa": "/ˈsekənd/",
+      "pos": "adj",
+      "synonyms": [
+        "unrivalled",
+        "unsurpassed"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 16
+        }
+      ],
+      "translations": [
+        "بی‌همتا",
+        "بی‌نظیر",
+        "سرآمد"
+      ]
+    },
+    {
+      "antonyms": [
+        "first"
+      ],
+      "definition": "coming after the first one in order or in a series",
+      "examples": [
+        {
+          "en": "She finished second in the race and looked very pleased.",
+          "fa": "او در مسابقه دوم شد و بسیار خشنود به نظر می‌رسید."
+        }
+      ],
+      "ipa": "/ˈsekənd/",
+      "pos": "adj",
+      "synonyms": [
+        "next"
+      ],
+      "testedIn": [],
+      "translations": [
+        "دومین",
+        "دوم"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "one of the sixty parts that a minute is divided into; a very short moment of time",
+      "examples": [
+        {
+          "en": "Wait a second while I find the key in my bag.",
+          "fa": "یک ثانیه صبر کن تا کلید را در کیفم پیدا کنم."
+        }
+      ],
+      "ipa": "/ˈsekənd/",
+      "pos": "n",
+      "synonyms": [
+        "moment",
+        "instant"
+      ],
+      "testedIn": [],
+      "translations": [
+        "ثانیه",
+        "لحظه"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

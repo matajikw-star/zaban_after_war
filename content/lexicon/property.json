@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املای بسیار نزدیک و سردرگم‌کننده؛ propriety یعنی رعایت آداب و شایستگی رفتار، نه دارایی و نه خاصیت.",
+      "word": "propriety"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "property",
   "lemma": "property",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,61 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a quality or a power that a substance or a material naturally has",
+      "examples": [
+        {
+          "en": "Copper has useful properties: it conducts heat and resists rust.",
+          "fa": "مس خاصیت‌های سودمندی دارد: گرما را هدایت می‌کند و در برابر زنگ مقاوم است."
+        }
+      ],
+      "ipa": "/ˈprɒpəti/",
+      "pos": "n",
+      "synonyms": [
+        "quality",
+        "attribute"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p02",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "خاصیت",
+        "ویژگی (ماده)"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a thing or things that belong to someone; land and buildings that someone owns",
+      "examples": [
+        {
+          "en": "Please do not leave your property unattended in the waiting room.",
+          "fa": "لطفاً وسایل خود را بدون مراقب در سالن انتظار رها نکنید."
+        }
+      ],
+      "ipa": "/ˈprɒpəti/",
+      "pos": "n",
+      "synonyms": [
+        "possessions",
+        "estate"
+      ],
+      "testedIn": [],
+      "translations": [
+        "دارایی",
+        "ملک",
+        "اموال"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

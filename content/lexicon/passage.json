@@ -6,7 +6,7 @@
   },
   "id": "passage",
   "lemma": "passage",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,61 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "the process of moving from one stage or condition of life to the next, especially in the phrase \"rite of passage\"",
+      "examples": [
+        {
+          "en": "Leaving home for university is a rite of passage for many teenagers.",
+          "fa": "ترک خانه برای رفتن به دانشگاه برای بسیاری از نوجوانان آیینی از گذار به بزرگسالی است."
+        }
+      ],
+      "ipa": "/ˈpæsɪdʒ/",
+      "pos": "n",
+      "synonyms": [
+        "transition"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 18
+        }
+      ],
+      "translations": [
+        "گذار (از مرحله‌ای به مرحله دیگر)",
+        "گذر",
+        "آیین گذار (در ترکیب rite of passage)"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a short part of a book, speech or piece of music, taken from the whole",
+      "examples": [
+        {
+          "en": "The teacher asked us to read the passage twice and then summarize it.",
+          "fa": "معلم از ما خواست آن قطعه را دو بار بخوانیم و بعد خلاصه‌اش کنیم."
+        }
+      ],
+      "ipa": "/ˈpæsɪdʒ/",
+      "pos": "n",
+      "synonyms": [
+        "extract",
+        "excerpt"
+      ],
+      "testedIn": [],
+      "translations": [
+        "قطعه (از متن)",
+        "بند",
+        "پاراگراف"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

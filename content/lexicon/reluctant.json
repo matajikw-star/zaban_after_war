@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "reticent یعنی کم‌حرف و تودار؛ reluctant یعنی بی‌میل به انجام کاری",
+      "word": "reticent"
+    }
+  ],
   "homograph": {
-    "note": null,
+    "note": "",
     "suspected": false
   },
   "id": "reluctant",
   "lemma": "reluctant",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,45 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "keen",
+        "eager",
+        "willing"
+      ],
+      "definition": "not willing to do something and therefore slow to do it",
+      "examples": [
+        {
+          "en": "He was reluctant to leave the party so early in the evening.",
+          "fa": "او بی‌میل بود که این‌قدر زود مهمانی را ترک کند."
+        }
+      ],
+      "ipa": "/rɪˈlʌktənt/",
+      "pos": "adj",
+      "synonyms": [
+        "unwilling",
+        "hesitant",
+        "disinclined"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 12
+        }
+      ],
+      "translations": [
+        "بی‌میل",
+        "اکراه‌داشته",
+        "ناراضی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

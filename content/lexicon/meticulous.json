@@ -6,7 +6,7 @@
   },
   "id": "meticulous",
   "lemma": "meticulous",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +42,52 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "careless",
+        "sloppy"
+      ],
+      "definition": "very careful and exact, paying attention to every small detail",
+      "examples": [
+        {
+          "en": "Her meticulous notes made the experiment easy for others to repeat.",
+          "fa": "یادداشت‌های دقیق و موشکافانهٔ او تکرار آزمایش را برای دیگران آسان کرد."
+        }
+      ],
+      "ipa": "/məˈtɪkjələs/",
+      "pos": "adj",
+      "synonyms": [
+        "painstaking",
+        "scrupulous",
+        "thorough"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "دقیق و موشکاف",
+        "باریک‌بین",
+        "وسواس‌گونه در کار"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

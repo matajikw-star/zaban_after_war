@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "scrap یعنی تکه‌پاره یا دور انداختن طرح، نه خراشیدن؛ از نظر املا آسان اشتباه می‌شود",
+      "word": "scrap"
+    }
+  ],
   "homograph": {
-    "note": null,
+    "note": "",
     "suspected": false
   },
   "id": "scratch",
   "lemma": "scratch",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,61 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "the very beginning, with nothing prepared in advance, in the phrase \"from scratch\"",
+      "examples": [
+        {
+          "en": "They lost the file and had to write the whole report from scratch.",
+          "fa": "پرونده را گم کردند و مجبور شدند کل گزارش را از صفر بنویسند."
+        }
+      ],
+      "ipa": "/skrætʃ/",
+      "pos": "n",
+      "synonyms": [
+        "the beginning"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 23
+        }
+      ],
+      "translations": [
+        "از صفر",
+        "از ابتدا",
+        "از پایه"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to rub the skin with your nails, or to make a thin mark on a surface with something sharp",
+      "examples": [
+        {
+          "en": "The cat scratched the leg of the new wooden table.",
+          "fa": "گربه پایهٔ میز چوبی جدید را خراشید."
+        }
+      ],
+      "ipa": "/skrætʃ/",
+      "pos": "v",
+      "synonyms": [
+        "scrape",
+        "graze"
+      ],
+      "testedIn": [],
+      "translations": [
+        "خاراندن",
+        "خراشیدن",
+        "خط انداختن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1

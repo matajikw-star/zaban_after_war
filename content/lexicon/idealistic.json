@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املا و تلفظ نزدیک است اما idyllic یعنی دل‌انگیز و آرام مثل تصویری بهشتی، نه آرمان‌گرا",
+      "word": "idyllic"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "idealistic",
   "lemma": "idealistic",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,51 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "realistic",
+        "pragmatic"
+      ],
+      "definition": "believing that things can be perfect and acting on that belief, often in a way that ignores what is practical",
+      "examples": [
+        {
+          "en": "Her plan was generous but too idealistic for a city with no budget.",
+          "fa": "طرح او سخاوتمندانه بود اما برای شهری بی‌بودجه بیش از حد آرمان‌گرایانه بود."
+        }
+      ],
+      "ipa": "/ˌaɪdiəˈlɪstɪk/",
+      "pos": "adj",
+      "synonyms": [
+        "utopian",
+        "visionary"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "آرمان‌گرا",
+        "ایده‌آل‌گرا",
+        "خیال‌پردازانه"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -1,12 +1,12 @@
 {
   "confusables": [],
   "homograph": {
-    "note": null,
+    "note": "",
     "suspected": false
   },
   "id": "security",
   "lemma": "security",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,66 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "danger",
+        "vulnerability"
+      ],
+      "definition": "the state of being safe from attack or harm, and the measures taken to keep people safe",
+      "examples": [
+        {
+          "en": "Security at the airport was tightened after the warning.",
+          "fa": "پس از آن هشدار، امنیت فرودگاه تشدید شد."
+        }
+      ],
+      "ipa": "/sɪˈkjʊərəti/",
+      "pos": "n",
+      "synonyms": [
+        "safety",
+        "protection"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p07",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "امنیت",
+        "ایمنی",
+        "حفاظت"
+      ]
+    },
+    {
+      "antonyms": [
+        "insecurity"
+      ],
+      "definition": "the feeling of being safe and free from worry about money or the future",
+      "examples": [
+        {
+          "en": "A steady job gave the family a real sense of security.",
+          "fa": "یک شغل ثابت به خانواده احساس امنیت واقعی داد."
+        }
+      ],
+      "ipa": "/sɪˈkjʊərəti/",
+      "pos": "n",
+      "synonyms": [
+        "stability",
+        "assurance"
+      ],
+      "testedIn": [],
+      "translations": [
+        "احساس امنیت",
+        "تأمین (مالی و شغلی)"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

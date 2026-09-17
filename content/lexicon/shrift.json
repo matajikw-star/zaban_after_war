@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "shift یعنی جابه‌جایی یا نوبت کاری؛ shrift تقریباً فقط در عبارت short shrift دیده می‌شود",
+      "word": "shift"
+    }
+  ],
   "homograph": {
-    "note": null,
+    "note": "",
     "suspected": false
   },
   "id": "shrift",
   "lemma": "shrift",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,41 @@
       "year": 1404
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "consideration"
+      ],
+      "definition": "little attention or sympathy, almost always in the phrase \"short shrift\"",
+      "examples": [
+        {
+          "en": "The committee gave short shrift to his carefully written proposal.",
+          "fa": "کمیته پیشنهاد سنجیدهٔ او را سرسری گرفت و به آن بی‌اعتنایی کرد."
+        }
+      ],
+      "ipa": "/ʃrɪft/",
+      "pos": "n",
+      "synonyms": [
+        "scant attention"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p04",
+          "questionNo": 13
+        }
+      ],
+      "translations": [
+        "بی‌اعتنایی",
+        "برخورد سرسری",
+        "کم‌توجهی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1404": 1

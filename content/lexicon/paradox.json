@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "paradigm یعنی الگو و چارچوب فکری؛ paradox یعنی تناقض‌نما — املای آغازین مشترک، معنای کاملاً جدا.",
+      "word": "paradigm"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "paradox",
   "lemma": "paradox",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,40 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a statement or a situation that seems to contradict itself, but which may still be true",
+      "examples": [
+        {
+          "en": "It is a paradox that the busiest people often find time to help.",
+          "fa": "تناقض‌نماست که پرمشغله‌ترین آدم‌ها اغلب برای کمک وقت پیدا می‌کنند."
+        }
+      ],
+      "ipa": "/ˈpærədɒks/",
+      "pos": "n",
+      "synonyms": [
+        "contradiction",
+        "incongruity"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p01",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "تناقض‌نما",
+        "پارادوکس",
+        "امر متناقض"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

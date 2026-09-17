@@ -6,7 +6,7 @@
   },
   "id": "leaven",
   "lemma": "leaven",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,63 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "deaden"
+      ],
+      "definition": "to make something less heavy, dull or serious by mixing in a different and livelier quality",
+      "examples": [
+        {
+          "en": "She leavened a long technical talk with a few well-chosen jokes.",
+          "fa": "او سخنرانی فنی و طولانی را با چند لطیفهٔ سنجیده تلطیف کرد."
+        }
+      ],
+      "ipa": "/ˈlevn/",
+      "pos": "v",
+      "synonyms": [
+        "lighten",
+        "enliven",
+        "temper"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 27
+        }
+      ],
+      "translations": [
+        "تلطیف کردن",
+        "جان بخشیدن به",
+        "سبک و دلنشین کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a substance, such as yeast, that is added to dough to make it rise",
+      "examples": [
+        {
+          "en": "Bread baked without leaven stays flat, dense and heavy.",
+          "fa": "نانی که بدون خمیرمایه پخته شود صاف، متراکم و سنگین می‌ماند."
+        }
+      ],
+      "ipa": "/ˈlevn/",
+      "pos": "n",
+      "synonyms": [
+        "yeast"
+      ],
+      "testedIn": [],
+      "translations": [
+        "خمیرمایه",
+        "ورآورنده"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 1

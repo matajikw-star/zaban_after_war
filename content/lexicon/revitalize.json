@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "همان واژه است؛ revitalise فقط املای بریتانیایی revitalize است",
+      "word": "revitalise"
+    }
+  ],
   "homograph": {
-    "note": null,
+    "note": "",
     "suspected": false
   },
   "id": "revitalize",
   "lemma": "revitalize",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,44 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "undermine",
+        "weaken"
+      ],
+      "definition": "to give new strength, energy or life to something that had become weak or dull",
+      "examples": [
+        {
+          "en": "The new park helped revitalize the old centre of the town.",
+          "fa": "پارک جدید به مرکز قدیمی شهر جان تازه‌ای بخشید."
+        }
+      ],
+      "ipa": "/ˌriːˈvaɪtəlaɪz/",
+      "pos": "v",
+      "synonyms": [
+        "reinvigorate",
+        "regenerate",
+        "renew"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 171
+        }
+      ],
+      "translations": [
+        "جان تازه بخشیدن",
+        "احیا کردن",
+        "رونق دادن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

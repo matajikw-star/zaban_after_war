@@ -18,8 +18,16 @@ alias, not a rename.
 | `burgeoning` | `burgeon` | batch-06 | The id is the `-ing` form. It is only ever tested as an adjective ("a burgeoning industry"), so the entry is written for the adjective and the card is not wrong — just narrower than the lemma should be. |
 | `histrionic` | — | pre-existing | Not a wrong lemma. Its `surfaceForms` carries `histroinic`, a typo **in the exam paper**, transcribed verbatim as ingest rule 1 requires. The lemma is right; leave both alone. |
 
+| `impromptu` | — | batch-13 | Not a wrong lemma. `surfaceForms` carries `impromptuj`, a typo **in the exam paper** (`arshad-1398-p05` q12), transcribed verbatim like `histroinic`. The lemma is right; leave it. |
+| `non-sequitur` | — | batch-14 | Not wrong. The id is hyphenated and the lemma is `non sequitur` with a space, which is correct for a multiword entry. |
+
 ## Not a lemma problem, but adjacent
 
+- **18 surface forms are claimed by two ids each**, because the lemmatiser
+  split the same word across twin papers — `mislead`/`misleading`,
+  `strict`/`strictly`, and 16 more. That is not a wrong lemma; it is one word
+  with two entries, and it has its own ticket:
+  `.scratch/word-data/issues/02-lemmatiser-split-twin-papers.md`.
 - `meager` is the US spelling and carries a British IPA `/ˈmiːɡə(r)/`. Both
   spellings are current; the id is whichever the exam printed. No action unless
   the owner wants spelling normalised, which would be a rename.

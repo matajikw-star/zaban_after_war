@@ -6,7 +6,7 @@
   },
   "id": "procrustean",
   "lemma": "procrustean",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,43 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "flexible",
+        "accommodating"
+      ],
+      "definition": "forcing people or things into one fixed pattern without any regard for how different they are",
+      "examples": [
+        {
+          "en": "Grading every student by one formula is a procrustean approach to teaching.",
+          "fa": "نمره دادن به همه دانش‌آموزان با یک فرمول، رویکردی یکسان‌ساز و تحمیلی در آموزش است."
+        }
+      ],
+      "ipa": "/prəʊˈkrʌstiən/",
+      "pos": "adj",
+      "synonyms": [
+        "inflexible",
+        "rigid"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p04",
+          "questionNo": 21
+        }
+      ],
+      "translations": [
+        "یکسان‌ساز و تحمیلی",
+        "سخت و انعطاف‌ناپذیر",
+        "به‌زور قالب‌بندی‌شده"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1403": 1

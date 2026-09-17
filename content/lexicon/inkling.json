@@ -6,7 +6,7 @@
   },
   "id": "inkling",
   "lemma": "inkling",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,41 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a slight idea or suspicion that something is true or is about to happen",
+      "examples": [
+        {
+          "en": "We had no inkling that the company was about to close.",
+          "fa": "کوچک‌ترین تصوری نداشتیم که شرکت در آستانه‌ی تعطیلی است."
+        }
+      ],
+      "ipa": "/ˈɪŋklɪŋ/",
+      "pos": "n",
+      "synonyms": [
+        "hint",
+        "suspicion",
+        "intimation"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "ظن",
+        "حدس مبهم",
+        "کوچک‌ترین تصور"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1

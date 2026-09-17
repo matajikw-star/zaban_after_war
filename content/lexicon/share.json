@@ -1,12 +1,12 @@
 {
   "confusables": [],
   "homograph": {
-    "note": null,
+    "note": "",
     "suspected": false
   },
   "id": "share",
   "lemma": "share",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,63 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "any of the equal parts that a company's capital is divided into and that people can buy",
+      "examples": [
+        {
+          "en": "He bought two hundred shares in a small airline last spring.",
+          "fa": "او بهار گذشته دویست سهم از یک شرکت هواپیمایی کوچک خرید."
+        }
+      ],
+      "ipa": "/ʃeə(r)/",
+      "pos": "n",
+      "synonyms": [
+        "stock",
+        "holding"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 188
+        }
+      ],
+      "translations": [
+        "سهم (شرکت)",
+        "سهام"
+      ]
+    },
+    {
+      "antonyms": [
+        "keep"
+      ],
+      "definition": "to divide something between two or more people, or to use it together with them",
+      "examples": [
+        {
+          "en": "The children shared the cake fairly between the four of them.",
+          "fa": "بچه‌ها کیک را عادلانه میان هر چهار نفرشان تقسیم کردند."
+        }
+      ],
+      "ipa": "/ʃeə(r)/",
+      "pos": "v",
+      "synonyms": [
+        "divide",
+        "split"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تقسیم کردن",
+        "سهیم شدن",
+        "به اشتراک گذاشتن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

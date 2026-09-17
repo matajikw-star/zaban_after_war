@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هم‌ساختار و متضاد یکدیگرند؛ optimistic یعنی خوش‌بین. در گزینه‌ها این دو را به جای هم نخوانید.",
+      "word": "optimistic"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "pessimistic",
   "lemma": "pessimistic",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,43 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "optimistic",
+        "hopeful"
+      ],
+      "definition": "expecting bad things to happen or believing that a situation will end badly",
+      "examples": [
+        {
+          "en": "Economists are pessimistic about the chances of a quick recovery.",
+          "fa": "اقتصاددانان درباره امکان یک بهبود سریع بدبین هستند."
+        }
+      ],
+      "ipa": "/ˌpesɪˈmɪstɪk/",
+      "pos": "adj",
+      "synonyms": [
+        "gloomy",
+        "despondent"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p06",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "بدبین",
+        "ناامید",
+        "منفی‌نگر"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

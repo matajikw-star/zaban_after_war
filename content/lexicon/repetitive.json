@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "repetitious هم‌معنی است اما بیشتر دربارهٔ گفتار و نوشتارِ پرتکرار و ملال‌آور به کار می‌رود",
+      "word": "repetitious"
+    }
+  ],
   "homograph": {
-    "note": null,
+    "note": "",
     "suspected": false
   },
   "id": "repetitive",
   "lemma": "repetitive",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,50 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "varied"
+      ],
+      "definition": "made up of the same thing done or said many times, and therefore dull",
+      "examples": [
+        {
+          "en": "Packing boxes all day is repetitive and very tiring work.",
+          "fa": "بسته‌بندی جعبه‌ها در تمام روز کاری تکراری و بسیار خسته‌کننده است."
+        }
+      ],
+      "ipa": "/rɪˈpetətɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "monotonous",
+        "unvaried"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 6
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "تکراری",
+        "یکنواخت",
+        "کسل‌کننده از فرط تکرار"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

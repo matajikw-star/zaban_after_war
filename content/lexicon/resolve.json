@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "resolute صفت است به معنای مصمم و استوار، در حالی که resolve فعلِ حل کردن است",
+      "word": "resolute"
+    },
+    {
+      "note": "dissolve یعنی حل شدن در مایع یا منحل کردن، نه حل و فصل کردنِ اختلاف",
+      "word": "dissolve"
+    }
+  ],
   "homograph": {
-    "note": null,
+    "note": "",
     "suspected": false
   },
   "id": "resolve",
   "lemma": "resolve",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +29,64 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "aggravate"
+      ],
+      "definition": "to find a satisfactory answer to a problem or an end to a disagreement",
+      "examples": [
+        {
+          "en": "Talks went on all night until the two sides resolved the dispute.",
+          "fa": "گفت‌وگوها تا صبح ادامه یافت تا اینکه دو طرف اختلاف را حل و فصل کردند."
+        }
+      ],
+      "ipa": "/rɪˈzɒlv/",
+      "pos": "v",
+      "synonyms": [
+        "settle",
+        "sort out",
+        "reconcile"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p05",
+          "questionNo": 16
+        }
+      ],
+      "translations": [
+        "حل و فصل کردن",
+        "فیصله دادن",
+        "رفع کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to make a firm decision to do something",
+      "examples": [
+        {
+          "en": "He resolved to study for two hours every night before the exam.",
+          "fa": "او تصمیم گرفت پیش از امتحان هر شب دو ساعت درس بخواند."
+        }
+      ],
+      "ipa": "/rɪˈzɒlv/",
+      "pos": "v",
+      "synonyms": [
+        "determine",
+        "decide"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تصمیم قاطع گرفتن",
+        "عزم کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1403": 1

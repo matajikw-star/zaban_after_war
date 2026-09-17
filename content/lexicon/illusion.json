@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "تلفظ بسیار نزدیک است اما allusion یعنی اشاره‌ی غیرمستقیم به چیزی، نه توهم",
+      "word": "allusion"
+    },
+    {
+      "note": "delusion باوری نادرست و سرسختانه است که فرد با وجود شواهد رهایش نمی‌کند",
+      "word": "delusion"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "illusion",
   "lemma": "illusion",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +51,70 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "reality"
+      ],
+      "definition": "a false idea or belief about someone or something, especially one that makes you expect too much",
+      "examples": [
+        {
+          "en": "He had no illusions about how hard the first year would be.",
+          "fa": "او درباره‌ی سختی سال اول هیچ توهمی نداشت."
+        }
+      ],
+      "ipa": "/ɪˈluːʒn/",
+      "pos": "n",
+      "synonyms": [
+        "misconception",
+        "fantasy"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "توهم",
+        "پندار باطل",
+        "خیال خام"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "something that seems to exist or to be different from the way it really is, because the senses are deceived",
+      "examples": [
+        {
+          "en": "Mirrors on both walls create the illusion of a much larger room.",
+          "fa": "آینه‌های دو دیوار خطای دید اتاقی بسیار بزرگ‌تر را می‌سازند."
+        }
+      ],
+      "ipa": "/ɪˈluːʒn/",
+      "pos": "n",
+      "synonyms": [
+        "mirage"
+      ],
+      "testedIn": [],
+      "translations": [
+        "خطای دید",
+        "نمود فریبنده"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

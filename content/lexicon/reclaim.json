@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هر دو درباره گرفتن چیزی‌اند؛ اما requisition یعنی مصادره یا درخواست رسمی کالا توسط یک نهاد، نه پس گرفتن مال خود.",
+      "word": "requisition"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "reclaim",
   "lemma": "reclaim",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,62 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "forfeit"
+      ],
+      "definition": "to get back something that was taken away or that you had lost, especially property or money; the noun is \"reclamation\"",
+      "examples": [
+        {
+          "en": "Passengers may reclaim lost luggage at the desk near gate four.",
+          "fa": "مسافران می‌توانند چمدان گم‌شده را از باجه نزدیک گیت چهار پس بگیرند."
+        }
+      ],
+      "ipa": "/rɪˈkleɪm/",
+      "pos": "v",
+      "synonyms": [
+        "recover",
+        "repossess"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 18
+        }
+      ],
+      "translations": [
+        "پس گرفتن",
+        "بازپس‌گیری کردن",
+        "مطالبه و بازستاندن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to make land fit for farming or building again, for example by draining it",
+      "examples": [
+        {
+          "en": "Engineers reclaimed hundreds of hectares of marsh for new farmland.",
+          "fa": "مهندسان صدها هکتار باتلاق را برای زمین کشاورزی تازه احیا کردند."
+        }
+      ],
+      "ipa": "/rɪˈkleɪm/",
+      "pos": "v",
+      "synonyms": [
+        "restore"
+      ],
+      "testedIn": [],
+      "translations": [
+        "احیا کردن (زمین)",
+        "آباد کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

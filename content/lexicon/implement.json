@@ -1,12 +1,12 @@
 {
   "confusables": [],
   "homograph": {
-    "note": null,
-    "suspected": false
+    "note": "Verb /ˈɪmplɪment/ 'carry out a plan' and noun /ˈɪmplɪmənt/ 'a tool' differ in the final vowel and in part of speech, and a learner who knows one will not guess the other. A hint must say which sense it targets; the exam tested the verb.",
+    "suspected": true
   },
   "id": "implement",
   "lemma": "implement",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +42,72 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "abandon"
+      ],
+      "definition": "to put a plan, decision or system into effect so that it actually happens",
+      "examples": [
+        {
+          "en": "The ministry will implement the new rules at the start of next year.",
+          "fa": "وزارتخانه قوانین جدید را از ابتدای سال آینده اجرا خواهد کرد."
+        }
+      ],
+      "ipa": "/ˈɪmplɪment/",
+      "pos": "v",
+      "synonyms": [
+        "carry out",
+        "execute",
+        "enforce"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "اجرا کردن",
+        "به اجرا درآوردن",
+        "پیاده‌سازی کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a tool or simple piece of equipment used for a particular job, especially outdoor work",
+      "examples": [
+        {
+          "en": "The shed was full of rusting farm implements.",
+          "fa": "انباری پر بود از ابزارهای زنگ‌زده‌ی کشاورزی."
+        }
+      ],
+      "ipa": "/ˈɪmplɪmənt/",
+      "pos": "n",
+      "synonyms": [
+        "tool",
+        "utensil"
+      ],
+      "testedIn": [],
+      "translations": [
+        "ابزار",
+        "وسیله‌ی کار"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

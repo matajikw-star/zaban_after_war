@@ -6,7 +6,7 @@
   },
   "id": "neglect",
   "lemma": "neglect",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +42,76 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "tend",
+        "cherish"
+      ],
+      "definition": "to fail to give proper care or attention to someone or something, or to fail to do something you should do",
+      "examples": [
+        {
+          "en": "He neglected his health completely while finishing the project.",
+          "fa": "او هنگام به پایان رساندن پروژه کاملاً از سلامت خود غافل ماند."
+        }
+      ],
+      "ipa": "/nɪˈɡlekt/",
+      "pos": "v",
+      "synonyms": [
+        "disregard",
+        "overlook",
+        "ignore"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "بی‌توجهی کردن به",
+        "سهل‌انگاری کردن",
+        "غفلت کردن از"
+      ]
+    },
+    {
+      "antonyms": [
+        "care"
+      ],
+      "definition": "the failure to look after someone or something properly, over a long period",
+      "examples": [
+        {
+          "en": "The old house had fallen apart after years of neglect.",
+          "fa": "خانهٔ قدیمی پس از سال‌ها بی‌توجهی از هم پاشیده بود."
+        }
+      ],
+      "ipa": "/nɪˈɡlekt/",
+      "pos": "n",
+      "synonyms": [
+        "negligence",
+        "disregard"
+      ],
+      "testedIn": [],
+      "translations": [
+        "بی‌توجهی",
+        "سهل‌انگاری",
+        "غفلت"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -1,12 +1,25 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "outlet یعنی مجرا، دریچهٔ خروج یا فروشگاه عرضه؛ ربطی به پول خرج‌شده ندارد.",
+      "word": "outlet"
+    },
+    {
+      "note": "outset یعنی آغاز کار (at the outset: در آغاز)؛ outlay یعنی هزینهٔ پرداخت‌شده.",
+      "word": "outset"
+    },
+    {
+      "note": "outcome یعنی نتیجه و پیامد؛ outlay هزینه‌ای است که در ابتدا صرف می‌شود.",
+      "word": "outcome"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "outlay",
   "lemma": "outlay",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +33,44 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "income",
+        "return"
+      ],
+      "definition": "an amount of money that has to be spent on something, especially at the start of a project",
+      "examples": [
+        {
+          "en": "Solar panels need a large outlay before they save you anything.",
+          "fa": "پنل‌های خورشیدی پیش از آنکه چیزی صرفه‌جویی کنند، هزینهٔ اولیهٔ بزرگی می‌خواهند."
+        }
+      ],
+      "ipa": "/ˈaʊtleɪ/",
+      "pos": "n",
+      "synonyms": [
+        "expenditure",
+        "expense",
+        "investment"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 25
+        }
+      ],
+      "translations": [
+        "هزینهٔ اولیه",
+        "مخارج",
+        "هزینه‌کرد"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1

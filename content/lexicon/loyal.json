@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "royal یعنی سلطنتی و شاهانه؛ تفاوت نوشتاری فقط در حرف نخست است.",
+      "word": "royal"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "loyal",
   "lemma": "loyal",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,52 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "disloyal",
+        "treacherous"
+      ],
+      "definition": "always supporting a person, group, country or idea, and not abandoning them",
+      "examples": [
+        {
+          "en": "He stayed loyal to the same small team for twenty years.",
+          "fa": "او بیست سال به همان تیم کوچک وفادار ماند."
+        }
+      ],
+      "ipa": "/ˈlɔɪəl/",
+      "pos": "adj",
+      "synonyms": [
+        "faithful",
+        "devoted",
+        "staunch"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "وفادار",
+        "باوفا",
+        "صادق"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

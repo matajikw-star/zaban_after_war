@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "level یعنی سطح، ارتفاع یا درجه؛ layer یعنی لایه‌ای که روی چیزی را می‌پوشاند یا میان دو چیز قرار می‌گیرد.",
+      "word": "level"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "layer",
   "lemma": "layer",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,39 @@
       "year": 1404
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a quantity of a substance that covers a surface or lies between two other things",
+      "examples": [
+        {
+          "en": "A thin layer of dust covered every book on the shelf.",
+          "fa": "لایه‌ای نازک از گرد و غبار روی همهٔ کتاب‌های قفسه را پوشانده بود."
+        }
+      ],
+      "ipa": "/ˈleɪə(r)/",
+      "pos": "n",
+      "synonyms": [
+        "coat",
+        "stratum"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p03",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "لایه",
+        "قشر"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1404": 1

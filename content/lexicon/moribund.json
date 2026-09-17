@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "morbid یعنی بیمارگونه و مرگ‌اندیش (دربارهٔ افکار و علاقه‌ها)؛ moribund یعنی در حال احتضار یا رو به زوال.",
+      "word": "morbid"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "moribund",
   "lemma": "moribund",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,52 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "thriving",
+        "flourishing"
+      ],
+      "definition": "close to death, or, of an organization or activity, no longer active and about to come to an end",
+      "examples": [
+        {
+          "en": "The factory was moribund for years before it finally closed.",
+          "fa": "کارخانه سال‌ها رو به زوال بود تا اینکه سرانجام تعطیل شد."
+        }
+      ],
+      "ipa": "/ˈmɒrɪbʌnd/",
+      "pos": "adj",
+      "synonyms": [
+        "dying",
+        "declining",
+        "stagnant"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "در حال احتضار",
+        "رو به مرگ",
+        "رو به زوال"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

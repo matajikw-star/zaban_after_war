@@ -6,7 +6,7 @@
   },
   "id": "redeem",
   "lemma": "redeem",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,62 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "disgrace"
+      ],
+      "definition": "to make up for a fault or a failure, so that people think better of you again",
+      "examples": [
+        {
+          "en": "After a weak first half, the goalkeeper redeemed himself with two fine saves.",
+          "fa": "پس از نیمه اول ضعیف، دروازه‌بان با دو مهار عالی خطایش را جبران کرد."
+        }
+      ],
+      "ipa": "/rɪˈdiːm/",
+      "pos": "v",
+      "synonyms": [
+        "atone for",
+        "make amends for"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p07",
+          "questionNo": 16
+        }
+      ],
+      "translations": [
+        "جبران کردن (خطا)",
+        "اعاده حیثیت کردن",
+        "رو سفید کردن خود"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to exchange a voucher, a coupon or a bond for goods, services or money",
+      "examples": [
+        {
+          "en": "You can redeem this coupon at any branch before the end of March.",
+          "fa": "می‌توانید این کوپن را تا پایان ماه مارس در هر شعبه‌ای نقد کنید."
+        }
+      ],
+      "ipa": "/rɪˈdiːm/",
+      "pos": "v",
+      "synonyms": [
+        "cash in"
+      ],
+      "testedIn": [],
+      "translations": [
+        "نقد کردن (کوپن یا اوراق)",
+        "بازخرید کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1

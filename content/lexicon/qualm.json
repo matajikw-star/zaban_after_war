@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "در تلفظ حرف l در هر دو خوانده نمی‌شود و شکل کلمه‌ها نزدیک است؛ calm یعنی آرام، اما qualm یعنی تردید و دل‌نگرانی.",
+      "word": "calm"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "qualm",
   "lemma": "qualm",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,50 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "confidence"
+      ],
+      "definition": "a feeling of doubt or worry about whether what you are doing is right",
+      "examples": [
+        {
+          "en": "She had no qualms about refusing an offer that felt dishonest.",
+          "fa": "او هیچ تردید وجدانی نداشت از اینکه پیشنهادی را که ناصادقانه می‌نمود رد کند."
+        }
+      ],
+      "ipa": "/kwɑːm/",
+      "pos": "n",
+      "synonyms": [
+        "misgiving",
+        "scruple"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "تردید وجدانی",
+        "دودلی اخلاقی",
+        "دل‌نگرانی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

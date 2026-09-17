@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املای بسیار نزدیک؛ deduction یعنی کسر کردن مبلغ از کل یا استنتاج منطقی، اما reduction یعنی کم شدن و کاهش.",
+      "word": "deduction"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "reduction",
   "lemma": "reduction",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,43 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "increase",
+        "intensification"
+      ],
+      "definition": "the act of making something smaller or less, or the amount by which it becomes less",
+      "examples": [
+        {
+          "en": "The new engine brought a sharp reduction in fuel costs.",
+          "fa": "موتور جدید کاهش چشمگیری در هزینه سوخت به همراه آورد."
+        }
+      ],
+      "ipa": "/rɪˈdʌkʃn/",
+      "pos": "n",
+      "synonyms": [
+        "decrease",
+        "cut"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p02",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "کاهش",
+        "کم شدن",
+        "تخفیف (در قیمت)"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

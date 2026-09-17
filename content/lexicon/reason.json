@@ -6,7 +6,7 @@
   },
   "id": "reason",
   "lemma": "reason",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,61 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "the power of logical thinking, used in the phrase \"it stands to reason\" to mean that something is obvious once you think about it",
+      "examples": [
+        {
+          "en": "It stands to reason that tired drivers make more mistakes at night.",
+          "fa": "بدیهی است که رانندگان خسته شب‌ها خطاهای بیشتری مرتکب می‌شوند."
+        }
+      ],
+      "ipa": "/ˈriːzn/",
+      "pos": "n",
+      "synonyms": [
+        "logic",
+        "sense"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p02",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "منطق (در ترکیب it stands to reason: بدیهی است)",
+        "عقل",
+        "خرد"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a cause or an explanation for something that has happened or that someone has done",
+      "examples": [
+        {
+          "en": "She gave no reason for leaving the meeting so early.",
+          "fa": "او هیچ دلیلی برای ترک زودهنگام جلسه نیاورد."
+        }
+      ],
+      "ipa": "/ˈriːzn/",
+      "pos": "n",
+      "synonyms": [
+        "cause",
+        "motive"
+      ],
+      "testedIn": [],
+      "translations": [
+        "دلیل",
+        "علت"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

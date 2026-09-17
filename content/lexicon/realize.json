@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "همان کلمه است، فقط با املای بریتانیایی؛ realize املای آمریکایی و رایج در آزمون‌هاست.",
+      "word": "realise"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "realize",
   "lemma": "realize",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,64 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "abandon"
+      ],
+      "definition": "to make a plan, a hope or an ambition actually happen",
+      "examples": [
+        {
+          "en": "The dream of a railway across the desert was finally realized in 1960.",
+          "fa": "رؤیای کشیدن راه‌آهن از دل کویر سرانجام در سال ۱۹۶۰ محقق شد."
+        }
+      ],
+      "ipa": "/ˈriːəlaɪz/",
+      "pos": "v",
+      "synonyms": [
+        "fulfil",
+        "accomplish"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p03",
+          "questionNo": 21
+        }
+      ],
+      "translations": [
+        "محقق کردن",
+        "به عمل درآوردن",
+        "جامه عمل پوشاندن به"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to become fully aware of a fact or to understand something clearly",
+      "examples": [
+        {
+          "en": "Halfway home he realized that he had left his keys at the office.",
+          "fa": "نیمه‌راه خانه متوجه شد که کلیدهایش را در دفتر جا گذاشته است."
+        }
+      ],
+      "ipa": "/ˈriːəlaɪz/",
+      "pos": "v",
+      "synonyms": [
+        "grasp",
+        "recognize"
+      ],
+      "testedIn": [],
+      "translations": [
+        "متوجه شدن",
+        "پی بردن به",
+        "درک کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1403": 1

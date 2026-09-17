@@ -6,7 +6,7 @@
   },
   "id": "instrument",
   "lemma": "instrument",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +42,67 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a tool or device used for careful, technical or scientific work",
+      "examples": [
+        {
+          "en": "The surgeon laid out her instruments before the operation began.",
+          "fa": "جراح پیش از آغاز عمل ابزارهایش را چید."
+        }
+      ],
+      "ipa": "/ˈɪnstrəmənt/",
+      "pos": "n",
+      "synonyms": [
+        "tool",
+        "device",
+        "apparatus"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "ابزار",
+        "دستگاه",
+        "وسیله"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "an object such as a piano or a violin that is used for playing music",
+      "examples": [
+        {
+          "en": "He plays three instruments, but the cello is his favorite.",
+          "fa": "او سه ساز می‌نوازد، اما ویولن‌سل را از همه بیشتر دوست دارد."
+        }
+      ],
+      "ipa": "/ˈɪnstrəmənt/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "ساز",
+        "آلت موسیقی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

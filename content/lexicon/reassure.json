@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "reassure یعنی دوباره آرام و خاطرجمع کردن کسی که نگران است، اما assure یعنی به کسی اطمینان دادن که چیزی درست است.",
+      "word": "assure"
+    },
+    {
+      "note": "املا نزدیک است؛ ensure یعنی تضمین کردن که کاری انجام شود، نه دلگرم کردن کسی.",
+      "word": "ensure"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "reassure",
   "lemma": "reassure",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +51,51 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "alarm",
+        "worry"
+      ],
+      "definition": "to say or do something that makes another person feel less worried or less afraid",
+      "examples": [
+        {
+          "en": "The doctor reassured the parents that the fever was not dangerous.",
+          "fa": "پزشک والدین را خاطرجمع کرد که آن تب خطرناک نیست."
+        }
+      ],
+      "ipa": "/ˌriːəˈʃʊə(r)/",
+      "pos": "v",
+      "synonyms": [
+        "comfort",
+        "soothe"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "خاطرجمع کردن",
+        "دلگرم کردن",
+        "آرام کردن (با اطمینان دادن)"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

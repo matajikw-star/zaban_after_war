@@ -6,7 +6,7 @@
   },
   "id": "mount",
   "lemma": "mount",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,92 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "abandon"
+      ],
+      "definition": "to organize and begin something large, such as a campaign, an attack, an exhibition or a rescue",
+      "examples": [
+        {
+          "en": "The union mounted a long campaign against the new contracts.",
+          "fa": "اتحادیه کارزاری طولانی علیه قراردادهای جدید به راه انداخت."
+        }
+      ],
+      "ipa": "/maʊnt/",
+      "pos": "v",
+      "synonyms": [
+        "launch",
+        "stage",
+        "organize"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p02",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "به راه انداختن",
+        "ترتیب دادن",
+        "سازمان دادن"
+      ]
+    },
+    {
+      "antonyms": [
+        "decrease"
+      ],
+      "definition": "to increase gradually in amount, level or intensity",
+      "examples": [
+        {
+          "en": "Pressure on the minister mounted as the scandal spread.",
+          "fa": "با گسترش رسوایی، فشار بر وزیر فزونی گرفت."
+        }
+      ],
+      "ipa": "/maʊnt/",
+      "pos": "v",
+      "synonyms": [
+        "rise",
+        "build up",
+        "escalate"
+      ],
+      "testedIn": [],
+      "translations": [
+        "فزونی گرفتن",
+        "بالا رفتن",
+        "انباشته شدن"
+      ]
+    },
+    {
+      "antonyms": [
+        "remove"
+      ],
+      "definition": "to fix something in position on a support or a surface",
+      "examples": [
+        {
+          "en": "They mounted the camera on a tripod near the front door.",
+          "fa": "دوربین را روی سه‌پایه‌ای نزدیک در ورودی نصب کردند."
+        }
+      ],
+      "ipa": "/maʊnt/",
+      "pos": "v",
+      "synonyms": [
+        "install",
+        "fix",
+        "set"
+      ],
+      "testedIn": [],
+      "translations": [
+        "نصب کردن",
+        "سوار کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

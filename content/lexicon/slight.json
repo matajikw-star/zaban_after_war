@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "sleight هم‌آوا با slight است اما فقط در عبارت sleight of hand به معنای تردستی به کار می‌رود",
+      "word": "sleight"
+    }
+  ],
   "homograph": {
-    "note": null,
+    "note": "",
     "suspected": false
   },
   "id": "slight",
   "lemma": "slight",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,67 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "considerable",
+        "substantial"
+      ],
+      "definition": "very small in degree or amount, so that it is hardly noticeable; the adverb \"slightly\" means to a small degree",
+      "examples": [
+        {
+          "en": "There was a slight delay before the train left the station.",
+          "fa": "پیش از حرکت قطار از ایستگاه، تأخیری جزئی رخ داد."
+        }
+      ],
+      "ipa": "/slaɪt/",
+      "pos": "adj",
+      "synonyms": [
+        "small",
+        "minor",
+        "marginal"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p04",
+          "questionNo": 11
+        }
+      ],
+      "translations": [
+        "جزئی",
+        "اندک",
+        "خفیف"
+      ]
+    },
+    {
+      "antonyms": [
+        "honour"
+      ],
+      "definition": "to treat someone rudely as if they were not important",
+      "examples": [
+        {
+          "en": "He felt slighted when no one asked for his opinion.",
+          "fa": "وقتی هیچ‌کس نظرش را نپرسید، احساس کرد تحقیر شده است."
+        }
+      ],
+      "ipa": "/slaɪt/",
+      "pos": "v",
+      "synonyms": [
+        "snub",
+        "insult"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تحقیر کردن",
+        "بی‌اعتنایی کردن به"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1403": 1

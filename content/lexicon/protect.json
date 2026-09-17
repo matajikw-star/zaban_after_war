@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "تنها یک حرف فرق دارند؛ protest یعنی اعتراض کردن، نه محافظت کردن.",
+      "word": "protest"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "protect",
   "lemma": "protect",
-  "level": null,
+  "level": "A2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,43 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "endanger",
+        "attack"
+      ],
+      "definition": "to keep someone or something safe from harm, damage or loss",
+      "examples": [
+        {
+          "en": "A thick wall protects the village from winter winds.",
+          "fa": "دیواری ضخیم روستا را از بادهای زمستانی محافظت می‌کند."
+        }
+      ],
+      "ipa": "/prəˈtekt/",
+      "pos": "v",
+      "synonyms": [
+        "safeguard",
+        "defend"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p06",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "محافظت کردن از",
+        "حمایت کردن از",
+        "پاسداری کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

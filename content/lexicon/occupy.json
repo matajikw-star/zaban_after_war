@@ -6,7 +6,7 @@
   },
   "id": "occupy",
   "lemma": "occupy",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,68 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "liberate",
+        "withdraw from"
+      ],
+      "definition": "to move into a place and take control of it by force, especially with an army",
+      "examples": [
+        {
+          "en": "Foreign troops occupied the port city for almost three years.",
+          "fa": "نیروهای بیگانه نزدیک به سه سال شهر بندری را اشغال کردند."
+        }
+      ],
+      "ipa": "/ˈɒkjupaɪ/",
+      "pos": "v",
+      "synonyms": [
+        "seize",
+        "invade",
+        "capture"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p07",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "اشغال کردن",
+        "به تصرف درآوردن"
+      ]
+    },
+    {
+      "antonyms": [
+        "vacate"
+      ],
+      "definition": "to fill a space or an amount of time, or to hold a job or a position",
+      "examples": [
+        {
+          "en": "The bookshelves occupy most of the back wall of the room.",
+          "fa": "قفسه‌های کتاب بیشتر دیوار پشتی اتاق را در بر گرفته‌اند."
+        }
+      ],
+      "ipa": "/ˈɒkjupaɪ/",
+      "pos": "v",
+      "synonyms": [
+        "fill",
+        "take up",
+        "hold"
+      ],
+      "testedIn": [],
+      "translations": [
+        "اشغال کردن (فضا یا زمان)",
+        "در بر گرفتن",
+        "(مقام) داشتن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

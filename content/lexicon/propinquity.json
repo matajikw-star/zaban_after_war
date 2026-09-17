@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "آغاز و آهنگ کلمه شبیه است؛ propensity یعنی گرایش و تمایل به انجام کاری، نه نزدیکی مکانی.",
+      "word": "propensity"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "propinquity",
   "lemma": "propinquity",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,42 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "remoteness"
+      ],
+      "definition": "the state of being near to something or someone in place, time or family relationship",
+      "examples": [
+        {
+          "en": "The propinquity of the two workshops made joint projects easy to arrange.",
+          "fa": "نزدیکی آن دو کارگاه به یکدیگر ترتیب دادن طرح‌های مشترک را آسان می‌کرد."
+        }
+      ],
+      "ipa": "/prəˈpɪŋkwəti/",
+      "pos": "n",
+      "synonyms": [
+        "proximity",
+        "nearness"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p04",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "نزدیکی (مکانی)",
+        "مجاورت",
+        "قرابت خویشاوندی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

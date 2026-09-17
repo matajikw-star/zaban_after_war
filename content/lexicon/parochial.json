@@ -6,7 +6,7 @@
   },
   "id": "parochial",
   "lemma": "parochial",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,62 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "broad-minded",
+        "cosmopolitan"
+      ],
+      "definition": "showing interest only in local or small matters, with a narrow and limited outlook",
+      "examples": [
+        {
+          "en": "Their parochial attitude ignored everything that happened beyond the village.",
+          "fa": "نگرش تنگ‌نظرانهٔ آنان هر آنچه را بیرون از دهکده رخ می‌داد نادیده می‌گرفت."
+        }
+      ],
+      "ipa": "/pəˈrəʊkiəl/",
+      "pos": "adj",
+      "synonyms": [
+        "narrow-minded",
+        "insular",
+        "provincial"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p04",
+          "questionNo": 15
+        }
+      ],
+      "translations": [
+        "تنگ‌نظر",
+        "محدودنگر",
+        "کوته‌بین"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "relating to a parish, the small local area that a church serves",
+      "examples": [
+        {
+          "en": "The parochial school stood right beside the village church.",
+          "fa": "مدرسهٔ وابسته به کلیسا درست کنار کلیسای دهکده بود."
+        }
+      ],
+      "ipa": "/pəˈrəʊkiəl/",
+      "pos": "adj",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "مربوط به حوزهٔ کلیسایی",
+        "ناحیه‌ای"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

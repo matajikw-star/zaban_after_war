@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هم‌معنی است و جای هم به کار می‌رود، اما meanwhile یک کلمه است و به in نیاز ندارد",
+      "word": "meanwhile"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "in-the-meantime",
   "lemma": "in the meantime",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,40 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "during the period of time between two events, or while something else is happening",
+      "examples": [
+        {
+          "en": "The new office opens in May; in the meantime we work from home.",
+          "fa": "دفتر جدید در ماه مه باز می‌شود؛ در این فاصله از خانه کار می‌کنیم."
+        }
+      ],
+      "ipa": "/ɪn ðə ˈmiːntaɪm/",
+      "pos": "adv",
+      "synonyms": [
+        "meanwhile",
+        "in the interim"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "در این میان",
+        "در این فاصله",
+        "تا آن موقع"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1

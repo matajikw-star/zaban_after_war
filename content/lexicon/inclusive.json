@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "exclusive یعنی انحصاری و بیرون‌گذارنده؛ در قیمت‌ها exclusive of یعنی بدون احتساب، درست مقابل inclusive of",
+      "word": "exclusive"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "inclusive",
   "lemma": "inclusive",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,65 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "exclusive"
+      ],
+      "definition": "containing everything mentioned, especially all the costs, as in a price \"inclusive of\" tax",
+      "examples": [
+        {
+          "en": "The quoted price is inclusive of delivery and insurance.",
+          "fa": "قیمت اعلام‌شده شامل هزینه‌ی ارسال و بیمه است."
+        }
+      ],
+      "ipa": "/ɪnˈkluːsɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "all-in",
+        "comprehensive"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p04",
+          "questionNo": 16
+        }
+      ],
+      "translations": [
+        "شامل",
+        "با احتساب",
+        "دربرگیرنده"
+      ]
+    },
+    {
+      "antonyms": [
+        "exclusionary"
+      ],
+      "definition": "deliberately open to everyone and not leaving out any group of people",
+      "examples": [
+        {
+          "en": "The school aims to build a more inclusive classroom for every child.",
+          "fa": "مدرسه می‌کوشد کلاسی فراگیرتر برای همه‌ی کودکان بسازد."
+        }
+      ],
+      "ipa": "/ɪnˈkluːsɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "open",
+        "non-discriminatory"
+      ],
+      "testedIn": [],
+      "translations": [
+        "فراگیر",
+        "همه‌شمول"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1403": 1

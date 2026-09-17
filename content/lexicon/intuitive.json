@@ -6,7 +6,7 @@
   },
   "id": "intuitive",
   "lemma": "intuitive",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,65 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "analytical",
+        "deliberate"
+      ],
+      "definition": "based on an immediate feeling of what is right rather than on conscious reasoning",
+      "examples": [
+        {
+          "en": "Experienced nurses often make intuitive judgments that later prove right.",
+          "fa": "پرستاران باتجربه اغلب داوری‌هایی شهودی می‌کنند که بعداً درست از آب درمی‌آید."
+        }
+      ],
+      "ipa": "/ɪnˈtjuːɪtɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "instinctive",
+        "innate"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p05",
+          "questionNo": 19
+        }
+      ],
+      "translations": [
+        "شهودی",
+        "بر پایه‌ی شهود",
+        "حسی"
+      ]
+    },
+    {
+      "antonyms": [
+        "counterintuitive"
+      ],
+      "definition": "of a tool or design, easy to use without being taught how",
+      "examples": [
+        {
+          "en": "The app is so intuitive that my grandmother needed no help with it.",
+          "fa": "این برنامه چنان سرراست است که مادربزرگم برای کار با آن به کمک نیاز نداشت."
+        }
+      ],
+      "ipa": "/ɪnˈtjuːɪtɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "user-friendly"
+      ],
+      "testedIn": [],
+      "translations": [
+        "ساده و سرراست (در کاربری)",
+        "کاربرپسند"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1403": 1

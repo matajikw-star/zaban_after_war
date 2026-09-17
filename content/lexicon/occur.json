@@ -6,7 +6,7 @@
   },
   "id": "occur",
   "lemma": "occur",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,62 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to happen, especially without being planned or arranged beforehand",
+      "examples": [
+        {
+          "en": "Earthquakes occur far less often in this part of the country.",
+          "fa": "زمین‌لرزه در این بخش از کشور بسیار کمتر رخ می‌دهد."
+        }
+      ],
+      "ipa": "/əˈkɜː(r)/",
+      "pos": "v",
+      "synonyms": [
+        "happen",
+        "take place",
+        "arise"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p01",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "رخ دادن",
+        "اتفاق افتادن",
+        "پیش آمدن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "used in the phrase \"occur to somebody\", to come suddenly into someone's mind",
+      "examples": [
+        {
+          "en": "It never occurred to me that she might refuse the offer.",
+          "fa": "هرگز به ذهنم خطور نکرد که ممکن است او پیشنهاد را رد کند."
+        }
+      ],
+      "ipa": "/əˈkɜː(r)/",
+      "pos": "v",
+      "synonyms": [
+        "strike",
+        "dawn on"
+      ],
+      "testedIn": [],
+      "translations": [
+        "به ذهن خطور کردن",
+        "به فکر کسی رسیدن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

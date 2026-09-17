@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "avenue یعنی خیابان بزرگ یا راهِ رسیدن به چیزی؛ فقط املا و پایانِ واژه شبیه revenue است",
+      "word": "avenue"
+    }
+  ],
   "homograph": {
-    "note": null,
+    "note": "",
     "suspected": false
   },
   "id": "revenue",
   "lemma": "revenue",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,43 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "expenditure"
+      ],
+      "definition": "the money that a company or a government receives, especially from sales or from taxes",
+      "examples": [
+        {
+          "en": "The company's revenue grew by ten percent last year.",
+          "fa": "درآمد شرکت سال گذشته ده درصد رشد کرد."
+        }
+      ],
+      "ipa": "/ˈrevənjuː/",
+      "pos": "n",
+      "synonyms": [
+        "income",
+        "receipts",
+        "proceeds"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 179
+        }
+      ],
+      "translations": [
+        "درآمد",
+        "عایدی",
+        "درآمد مالیاتی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

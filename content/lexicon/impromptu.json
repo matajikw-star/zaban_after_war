@@ -6,7 +6,7 @@
   },
   "id": "impromptu",
   "lemma": "impromptu",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,44 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "rehearsed",
+        "planned"
+      ],
+      "definition": "done or given without any planning or preparation beforehand",
+      "examples": [
+        {
+          "en": "The guests gathered round for an impromptu performance in the kitchen.",
+          "fa": "مهمان‌ها دور هم جمع شدند تا اجرایی بداهه در آشپزخانه ببینند."
+        }
+      ],
+      "ipa": "/ɪmˈprɒmptjuː/",
+      "pos": "adj",
+      "synonyms": [
+        "spontaneous",
+        "extemporaneous",
+        "unrehearsed"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 12
+        }
+      ],
+      "translations": [
+        "فی‌البداهه",
+        "بداهه",
+        "بدون برنامه‌ی قبلی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

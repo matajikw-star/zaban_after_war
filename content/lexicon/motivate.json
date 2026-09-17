@@ -6,7 +6,7 @@
   },
   "id": "motivate",
   "lemma": "motivate",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,66 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "deter"
+      ],
+      "definition": "to be the reason why someone acts in a particular way or why something happens; often used in the passive",
+      "examples": [
+        {
+          "en": "The decision was motivated by cost rather than by any concern for quality.",
+          "fa": "آن تصمیم را هزینه برانگیخته بود، نه دغدغهٔ کیفیت."
+        }
+      ],
+      "ipa": "/ˈməʊtɪveɪt/",
+      "pos": "v",
+      "synonyms": [
+        "prompt",
+        "drive",
+        "impel"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 31
+        }
+      ],
+      "translations": [
+        "برانگیختن",
+        "محرک بودن",
+        "سبب شدن"
+      ]
+    },
+    {
+      "antonyms": [
+        "discourage"
+      ],
+      "definition": "to make someone want to do something and work hard at it",
+      "examples": [
+        {
+          "en": "A good coach can motivate players to train much harder.",
+          "fa": "مربی خوب می‌تواند به بازیکنان انگیزه دهد که بسیار سخت‌تر تمرین کنند."
+        }
+      ],
+      "ipa": "/ˈməʊtɪveɪt/",
+      "pos": "v",
+      "synonyms": [
+        "inspire",
+        "encourage"
+      ],
+      "testedIn": [],
+      "translations": [
+        "انگیزه دادن",
+        "ترغیب کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

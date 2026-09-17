@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "meanwhile تقریباً هم‌معناست اما تنهاست؛ meantime تقریباً همیشه در ترکیب in the meantime می‌آید.",
+      "word": "meanwhile"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "meantime",
   "lemma": "meantime",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,39 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "used in the phrase \"in the meantime\", meaning during the period between two events, or while something else is going on",
+      "examples": [
+        {
+          "en": "The new system starts in June; in the meantime, use the old forms.",
+          "fa": "سامانهٔ جدید از خرداد آغاز می‌شود؛ در این فاصله از فرم‌های قدیمی استفاده کنید."
+        }
+      ],
+      "ipa": "/ˈmiːntaɪm/",
+      "pos": "adv",
+      "synonyms": [
+        "meanwhile"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "در این میان",
+        "در این فاصله",
+        "ضمناً"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1

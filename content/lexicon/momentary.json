@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "momentous یعنی بسیار مهم و سرنوشت‌ساز؛ momentary یعنی لحظه‌ای و زودگذر — تفاوت معنایی کاملاً جداست.",
+      "word": "momentous"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "momentary",
   "lemma": "momentary",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,52 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "lasting",
+        "permanent"
+      ],
+      "definition": "lasting for a very short time, only for a moment",
+      "examples": [
+        {
+          "en": "There was a momentary silence in the hall before the applause began.",
+          "fa": "پیش از آغاز تشویق، سکوتی لحظه‌ای در سالن برقرار شد."
+        }
+      ],
+      "ipa": "/ˈməʊməntri/",
+      "pos": "adj",
+      "synonyms": [
+        "brief",
+        "fleeting",
+        "transient"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "لحظه‌ای",
+        "آنی",
+        "زودگذر"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

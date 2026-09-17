@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "impetus اسم است و یعنی انگیزه و نیروی محرک؛ impetuous صفت است و یعنی عجول",
+      "word": "impetus"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "impetuous",
   "lemma": "impetuous",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,44 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "cautious",
+        "deliberate"
+      ],
+      "definition": "acting quickly and without thinking about what may happen as a result",
+      "examples": [
+        {
+          "en": "One impetuous message cost him a friendship of twenty years.",
+          "fa": "یک پیام عجولانه دوستی بیست‌ساله‌ای را از او گرفت."
+        }
+      ],
+      "ipa": "/ɪmˈpetʃuəs/",
+      "pos": "adj",
+      "synonyms": [
+        "rash",
+        "hasty",
+        "impulsive"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p11",
+          "questionNo": 31
+        }
+      ],
+      "translations": [
+        "عجول",
+        "بی‌پروا",
+        "شتاب‌زده"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 1

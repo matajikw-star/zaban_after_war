@@ -6,7 +6,7 @@
   },
   "id": "kaput",
   "lemma": "kaput",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,43 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "working",
+        "functional"
+      ],
+      "definition": "an informal word for broken, no longer working, or completely finished",
+      "examples": [
+        {
+          "en": "After one winter in the damp the old heater went kaput.",
+          "fa": "پس از یک زمستان در رطوبت، بخاری قدیمی از کار افتاد."
+        }
+      ],
+      "ipa": "/kəˈpʊt/",
+      "pos": "adj",
+      "synonyms": [
+        "broken",
+        "defunct"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 29
+        }
+      ],
+      "translations": [
+        "از کار افتاده",
+        "خراب",
+        "کارش تمام"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

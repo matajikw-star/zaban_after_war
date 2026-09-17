@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "در همان تست گزینه بود؛ extemporaneously یعنی فی‌البداهه و بدون آمادگی قبلی، نه در یک آن",
+      "word": "extemporaneously"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "instantaneously",
   "lemma": "instantaneously",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,42 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "gradually"
+      ],
+      "definition": "at once and with no delay that can be noticed",
+      "examples": [
+        {
+          "en": "A message sent from Tehran reaches Tokyo almost instantaneously.",
+          "fa": "پیامی که از تهران فرستاده شود تقریباً بی‌درنگ به توکیو می‌رسد."
+        }
+      ],
+      "ipa": "/ˌɪnstənˈteɪniəsli/",
+      "pos": "adv",
+      "synonyms": [
+        "instantly",
+        "immediately"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 172
+        }
+      ],
+      "translations": [
+        "آنی",
+        "بی‌درنگ",
+        "در یک چشم به هم زدن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

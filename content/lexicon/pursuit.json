@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شباهت املایی و آوایی زیاد است؛ persuade یعنی متقاعد کردن، اما pursue/pursuit درباره دنبال کردن و پی‌جویی است.",
+      "word": "persuade"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "pursuit",
   "lemma": "pursuit",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,62 @@
       "year": 1402
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "abandonment"
+      ],
+      "definition": "the act of trying hard over a long time to achieve or obtain something, as in \"in pursuit of\"",
+      "examples": [
+        {
+          "en": "He gave up a safe job in pursuit of a career in music.",
+          "fa": "او شغلی مطمئن را رها کرد تا در پی حرفه‌ای در موسیقی برود."
+        }
+      ],
+      "ipa": "/pəˈsjuːt/",
+      "pos": "n",
+      "synonyms": [
+        "quest",
+        "search"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p04",
+          "questionNo": 13
+        }
+      ],
+      "translations": [
+        "پی‌جویی",
+        "تلاش برای دستیابی به",
+        "در پیِ (چیزی) بودن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "the act of following someone in order to catch them",
+      "examples": [
+        {
+          "en": "Two police cars set off in pursuit of the stolen van.",
+          "fa": "دو خودروی پلیس به تعقیب وانت دزدیده‌شده رفتند."
+        }
+      ],
+      "ipa": "/pəˈsjuːt/",
+      "pos": "n",
+      "synonyms": [
+        "chase"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تعقیب",
+        "دنبال کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1402": 1

@@ -6,7 +6,7 @@
   },
   "id": "inconsistency",
   "lemma": "inconsistency",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +42,50 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "consistency"
+      ],
+      "definition": "the fact of not staying the same, or a detail that contradicts another part of the same account",
+      "examples": [
+        {
+          "en": "The lawyer pointed out several inconsistencies in the witness's story.",
+          "fa": "وکیل چند تناقض در روایت شاهد را نشان داد."
+        }
+      ],
+      "ipa": "/ˌɪnkənˈsɪstənsi/",
+      "pos": "n",
+      "synonyms": [
+        "contradiction",
+        "discrepancy"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "ناسازگاری",
+        "تناقض",
+        "بی‌ثباتی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

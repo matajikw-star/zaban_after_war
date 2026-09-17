@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "responsive یعنی واکنش‌نشان‌دهنده و زودپاسخ، نه مسئول یا مقصر",
+      "word": "responsive"
+    }
+  ],
   "homograph": {
-    "note": null,
+    "note": "",
     "suspected": false
   },
   "id": "responsible",
   "lemma": "responsible",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,66 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "blameless"
+      ],
+      "definition": "being the cause of something, or having the duty to answer for it",
+      "examples": [
+        {
+          "en": "A faulty wire was responsible for the fire in the kitchen.",
+          "fa": "یک سیم معیوب مسئول آتش‌سوزی در آشپزخانه بود."
+        }
+      ],
+      "ipa": "/rɪˈspɒnsəbl/",
+      "pos": "adj",
+      "synonyms": [
+        "accountable",
+        "answerable",
+        "to blame"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p02",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "مسئول",
+        "مقصر",
+        "پاسخگو"
+      ]
+    },
+    {
+      "antonyms": [
+        "careless"
+      ],
+      "definition": "sensible and able to be trusted to behave well",
+      "examples": [
+        {
+          "en": "She is a responsible driver who never uses her phone at the wheel.",
+          "fa": "او رانندهٔ مسئولیت‌پذیری است که هنگام رانندگی هرگز از تلفنش استفاده نمی‌کند."
+        }
+      ],
+      "ipa": "/rɪˈspɒnsəbl/",
+      "pos": "adj",
+      "synonyms": [
+        "reliable",
+        "trustworthy"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مسئولیت‌پذیر",
+        "قابل اعتماد"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

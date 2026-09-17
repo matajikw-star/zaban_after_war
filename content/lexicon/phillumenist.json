@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هر دو نام یک جور علاقه‌مند است و در گزینه‌ها کنار هم می‌آیند؛ ailurophile یعنی گربه‌دوست، نه کلکسیونر کبریت.",
+      "word": "ailurophile"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "phillumenist",
   "lemma": "phillumenist",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,36 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a person who collects matchboxes, matchbooks or their labels as a hobby",
+      "examples": [
+        {
+          "en": "A serious phillumenist keeps each label flat inside a numbered album.",
+          "fa": "یک کلکسیونر جدی قوطی کبریت هر برچسب را صاف و در آلبومی شماره‌دار نگه می‌دارد."
+        }
+      ],
+      "ipa": "/fɪˈluːmɪnɪst/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p03",
+          "questionNo": 17
+        }
+      ],
+      "translations": [
+        "کلکسیونر قوطی کبریت",
+        "جمع‌کننده برچسب کبریت"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1403": 1

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "economical یعنی کم‌خرج و مقرون‌به‌صرفه، نه «مالی»",
+      "word": "economical"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "financial",
   "lemma": "financial",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +58,51 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "connected with money and the way money is managed",
+      "examples": [
+        {
+          "en": "The company is in serious financial trouble after a bad year.",
+          "fa": "این شرکت پس از یک سال بد، در مشکل مالی جدی است."
+        }
+      ],
+      "ipa": "/faɪˈnænʃl/",
+      "pos": "adj",
+      "synonyms": [
+        "monetary",
+        "fiscal"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 4
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "مالی",
+        "پولی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

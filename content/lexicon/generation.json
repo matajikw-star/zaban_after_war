@@ -6,7 +6,7 @@
   },
   "id": "generation",
   "lemma": "generation",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,62 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "all the people or products of roughly the same age or stage of development, seen as one group",
+      "examples": [
+        {
+          "en": "A new generation of writers grew up reading those translations.",
+          "fa": "نسل تازه‌ای از نویسندگان با خواندن آن ترجمه‌ها بزرگ شد."
+        }
+      ],
+      "ipa": "/ˌdʒenəˈreɪʃn/",
+      "pos": "noun",
+      "synonyms": [
+        "cohort",
+        "age group"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 29
+        }
+      ],
+      "translations": [
+        "نسل",
+        "دوره"
+      ]
+    },
+    {
+      "antonyms": [
+        "consumption"
+      ],
+      "definition": "the act of producing something such as electricity, heat or income",
+      "examples": [
+        {
+          "en": "Wind now accounts for a third of the country's power generation.",
+          "fa": "باد اکنون یک‌سوم تولید برق کشور را تأمین می‌کند."
+        }
+      ],
+      "ipa": "/ˌdʒenəˈreɪʃn/",
+      "pos": "noun",
+      "synonyms": [
+        "production",
+        "creation"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تولید (برق و انرژی)",
+        "ایجاد"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

@@ -6,7 +6,7 @@
   },
   "id": "contamination",
   "lemma": "contamination",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,42 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "purification"
+      ],
+      "definition": "the presence of a harmful substance in water, food, soil or air, or the act of putting it there",
+      "examples": [
+        {
+          "en": "Tests showed serious contamination of the river below the paper mill.",
+          "fa": "آزمایش‌ها آلودگی شدید رودخانه در پایین‌دست کارخانه‌ی کاغذ را نشان داد."
+        }
+      ],
+      "ipa": "/kənˌtæmɪˈneɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "pollution",
+        "impurity"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p05",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "آلودگی",
+        "آلوده‌سازی",
+        "ناخالصی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1403": 1

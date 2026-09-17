@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هم‌خانواده اما متفاوت؛ cramped صفت است به معنای تنگ و بی‌جا",
+      "word": "cramped"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "cramp",
   "lemma": "cramp",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,59 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "in the phrase \"cramp someone's style\": to stop someone from behaving as freely as they would like",
+      "examples": [
+        {
+          "en": "Having a younger brother tag along really cramped his style at parties.",
+          "fa": "همراه‌آمدنِ برادر کوچکش در مهمانی‌ها واقعاً دست‌وپای او را می‌بست."
+        }
+      ],
+      "ipa": "/kræmp/",
+      "pos": "v",
+      "synonyms": [
+        "hamper",
+        "restrict"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 24
+        }
+      ],
+      "translations": [
+        "دست‌وپای کسی را بستن",
+        "مانع راحتی کسی شدن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a sudden painful tightening of a muscle that makes it hard to move",
+      "examples": [
+        {
+          "en": "The swimmer got a cramp in her leg halfway across the lake.",
+          "fa": "شناگر در نیمه‌ی راهِ دریاچه دچار گرفتگی عضله‌ی پا شد."
+        }
+      ],
+      "ipa": "/kræmp/",
+      "pos": "n",
+      "synonyms": [
+        "spasm"
+      ],
+      "testedIn": [],
+      "translations": [
+        "گرفتگی عضله",
+        "انقباض دردناک"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 1

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املای نزدیک، اما investigate یعنی تحقیق و بررسی کردن",
+      "word": "investigate"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "instigate",
   "lemma": "instigate",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,48 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "halt",
+        "suppress"
+      ],
+      "definition": "to make something start, especially an official process or trouble between people",
+      "examples": [
+        {
+          "en": "A small group of workers instigated the strike that closed the plant.",
+          "fa": "گروه کوچکی از کارگران اعتصابی را به راه انداختند که کارخانه را تعطیل کرد."
+        }
+      ],
+      "ipa": "/ˈɪnstɪɡeɪt/",
+      "pos": "verb",
+      "synonyms": [
+        "initiate",
+        "provoke",
+        "incite"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 16
+        },
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 26
+        }
+      ],
+      "translations": [
+        "به راه انداختن",
+        "برانگیختن",
+        "تحریک کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

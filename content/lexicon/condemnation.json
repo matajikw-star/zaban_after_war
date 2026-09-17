@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "تقریباً متضاد است؛ commendation یعنی تقدیر و ستایش رسمی",
+      "word": "commendation"
+    },
+    {
+      "note": "شباهت ظاهری؛ condensation یعنی میعان و بخارِ آب‌شده روی سطح",
+      "word": "condensation"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "condemnation",
   "lemma": "condemnation",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +51,51 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "praise",
+        "approval"
+      ],
+      "definition": "the act of saying strongly and publicly that someone or something is very bad or wrong",
+      "examples": [
+        {
+          "en": "The attack drew immediate condemnation from governments across the region.",
+          "fa": "آن حمله بی‌درنگ با محکومیت دولت‌های سراسر منطقه روبه‌رو شد."
+        }
+      ],
+      "ipa": "/ˌkɒndemˈneɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "denunciation",
+        "censure"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p02",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p07",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p13",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "محکومیت",
+        "نکوهش",
+        "تقبیح"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

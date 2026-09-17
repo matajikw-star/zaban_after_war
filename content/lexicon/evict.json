@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "evacuate یعنی تخلیه کردن محل به دلیل خطر، نه بیرون کردن مستأجر به حکم قانون.",
+      "word": "evacuate"
+    },
+    {
+      "note": "املای نزدیک اما بی‌ربط: elicit یعنی بیرون کشیدن پاسخ یا اطلاعات از کسی.",
+      "word": "elicit"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "evict",
   "lemma": "evict",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +29,43 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "house",
+        "shelter"
+      ],
+      "definition": "to force someone to leave the house or land they are living on, usually through a legal process",
+      "examples": [
+        {
+          "en": "The bank evicted the family from the farm after two missed payments.",
+          "fa": "بانک پس از دو قسط پرداخت‌نشده، خانواده را از مزرعه بیرون کرد."
+        }
+      ],
+      "ipa": "/ɪˈvɪkt/",
+      "pos": "verb",
+      "synonyms": [
+        "expel",
+        "turn out"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p03",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "بیرون کردن (از خانه یا ملک)",
+        "اخراج کردن مستأجر",
+        "تخلیه‌ی ملک را تحمیل کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

@@ -6,7 +6,7 @@
   },
   "id": "partake",
   "lemma": "partake",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,66 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "abstain"
+      ],
+      "definition": "in the pattern \"partake in\" or \"partake of\", to take part in an activity together with other people",
+      "examples": [
+        {
+          "en": "Only a few villagers chose to partake in the annual ceremony.",
+          "fa": "تنها چند روستایی تصمیم گرفتند در مراسم سالانه شرکت کنند."
+        }
+      ],
+      "ipa": "/pɑːˈteɪk/",
+      "pos": "verb",
+      "synonyms": [
+        "participate",
+        "share in"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p01",
+          "questionNo": 5
+        },
+        {
+          "paperId": "arshad-1398-p03",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "شرکت کردن",
+        "سهیم شدن",
+        "بهره بردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "in the pattern \"partake of\", to eat or drink some of something, used in a formal or humorous way",
+      "examples": [
+        {
+          "en": "The guests were invited to partake of tea and sweets after the talk.",
+          "fa": "پس از سخنرانی از مهمانان دعوت شد چای و شیرینی تناول کنند."
+        }
+      ],
+      "ipa": "/pɑːˈteɪk/",
+      "pos": "verb",
+      "synonyms": [
+        "consume"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تناول کردن",
+        "نوشیدن یا خوردن (رسمی)"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

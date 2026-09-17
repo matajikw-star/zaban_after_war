@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شباهت ظاهری؛ prevailing یعنی غالب و رایج، نه خنثی‌کننده",
+      "word": "prevailing"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "countervailing",
   "lemma": "countervailing",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,43 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "reinforcing"
+      ],
+      "definition": "acting against something else with equal force, so that its effect is balanced or cancelled",
+      "examples": [
+        {
+          "en": "Lower wages were offset by the countervailing benefit of cheaper housing.",
+          "fa": "دستمزد کمتر با مزیتِ جبران‌کننده‌ی مسکن ارزان‌تر جبران می‌شد."
+        }
+      ],
+      "ipa": "/ˈkaʊntəveɪlɪŋ/",
+      "pos": "adj",
+      "synonyms": [
+        "offsetting",
+        "compensating",
+        "opposing"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 20
+        }
+      ],
+      "translations": [
+        "خنثی‌کننده",
+        "جبران‌کننده",
+        "متقابل"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شبیه به نظر می‌رسد اما gratitude یعنی سپاسگزاری، نه ارضای خواسته.",
+      "word": "gratitude"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "gratification",
   "lemma": "gratification",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,43 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "frustration",
+        "deprivation"
+      ],
+      "definition": "the pleasure and satisfaction you feel when a wish or a need of yours is met",
+      "examples": [
+        {
+          "en": "Saving money asks you to delay gratification for years at a time.",
+          "fa": "پس‌انداز کردن از تو می‌خواهد که سال‌ها ارضای خواسته‌ات را به تعویق بیندازی."
+        }
+      ],
+      "ipa": "/ˌɡrætɪfɪˈkeɪʃn/",
+      "pos": "noun",
+      "synonyms": [
+        "satisfaction",
+        "fulfilment"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p02",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "ارضای خواسته",
+        "خشنودی",
+        "کام‌یابی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1403": 1

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هم‌ریشه با «ریشه» و شبیه به آن؛ eradicate یعنی ریشه‌کن و نابود کردن چیزی",
+      "word": "eradicate"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "deracinate",
   "lemma": "deracinate",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,43 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "settle",
+        "root"
+      ],
+      "definition": "to tear someone or something away from their native place or culture, as if pulling up roots",
+      "examples": [
+        {
+          "en": "War had deracinated whole families and scattered them across three continents.",
+          "fa": "جنگ خانواده‌های کاملی را از ریشه کنده و در سه قاره پراکنده کرده بود."
+        }
+      ],
+      "ipa": "/dɪˈræsɪneɪt/",
+      "pos": "v",
+      "synonyms": [
+        "uproot",
+        "displace"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "از ریشه کندن",
+        "بی‌ریشه کردن",
+        "از سرزمین و فرهنگ خود جدا کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 1

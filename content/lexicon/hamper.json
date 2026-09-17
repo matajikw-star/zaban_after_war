@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املای نزدیک اما بی‌ربط: hammer یعنی چکش یا چکش زدن.",
+      "word": "hammer"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "hamper",
   "lemma": "hamper",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,44 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "facilitate",
+        "assist"
+      ],
+      "definition": "to make it harder for someone to do something or for something to happen, by getting in the way",
+      "examples": [
+        {
+          "en": "Heavy fog hampered the search for the missing climbers.",
+          "fa": "مه سنگین جست‌وجو برای کوهنوردان گم‌شده را کند کرد."
+        }
+      ],
+      "ipa": "/ˈhæmpə(r)/",
+      "pos": "verb",
+      "synonyms": [
+        "hinder",
+        "impede",
+        "obstruct"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p01",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "مانع شدن",
+        "کند کردن",
+        "دشوار کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

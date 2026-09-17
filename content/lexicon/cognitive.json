@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هم‌ریشه اما متفاوت؛ cognizant یعنی آگاه و مطلع از چیزی",
+      "word": "cognizant"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "cognitive",
   "lemma": "cognitive",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,42 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "emotional"
+      ],
+      "definition": "connected with the mental processes of thinking, knowing, remembering and learning",
+      "examples": [
+        {
+          "en": "Lack of sleep damages cognitive skills such as memory and attention.",
+          "fa": "کم‌خوابی به مهارت‌های شناختی مانند حافظه و توجه آسیب می‌زند."
+        }
+      ],
+      "ipa": "/ˈkɒɡnətɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "mental",
+        "intellectual"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p03",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "شناختی",
+        "مربوط به شناخت و تفکر",
+        "ذهنی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

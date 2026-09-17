@@ -6,7 +6,7 @@
   },
   "id": "impose",
   "lemma": "impose",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,74 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "lift",
+        "remove"
+      ],
+      "definition": "to officially force a rule, a tax or a punishment to be accepted or obeyed",
+      "examples": [
+        {
+          "en": "The government imposed a heavy tax on imported cars last spring.",
+          "fa": "دولت بهار گذشته مالیات سنگینی بر خودروهای وارداتی وضع کرد."
+        }
+      ],
+      "ipa": "/ɪmˈpəʊz/",
+      "pos": "verb",
+      "synonyms": [
+        "enforce",
+        "levy",
+        "inflict"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p02",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "تحمیل کردن",
+        "وضع کردن (قانون یا مالیات)",
+        "اعمال کردن"
+      ]
+    },
+    {
+      "antonyms": [
+        "modest"
+      ],
+      "definition": "in the form \"imposing\", large and impressive enough to make people admire or respect something",
+      "examples": [
+        {
+          "en": "An imposing stone gate stood at the entrance to the old city.",
+          "fa": "دروازه‌ای سنگی و باشکوه در ورودی شهر قدیمی قرار داشت."
+        }
+      ],
+      "ipa": "/ɪmˈpəʊzɪŋ/",
+      "pos": "adj",
+      "synonyms": [
+        "impressive",
+        "grand",
+        "striking"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 30
+        }
+      ],
+      "translations": [
+        "باشکوه",
+        "چشمگیر",
+        "پرابهت"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

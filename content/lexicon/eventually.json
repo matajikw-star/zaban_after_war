@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هم‌ریشه اما متفاوت: eventful یعنی پر از اتفاق و پرماجرا، نه «سرانجام».",
+      "word": "eventful"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "eventually",
   "lemma": "eventually",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,43 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "immediately"
+      ],
+      "definition": "after a long time, or after a number of delays and difficulties",
+      "examples": [
+        {
+          "en": "The train was late, but we eventually reached the village before dark.",
+          "fa": "قطار تأخیر داشت، اما سرانجام پیش از تاریکی به روستا رسیدیم."
+        }
+      ],
+      "ipa": "/ɪˈventʃuəli/",
+      "pos": "adv",
+      "synonyms": [
+        "finally",
+        "ultimately",
+        "in the end"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "سرانجام",
+        "بالاخره",
+        "در نهایت"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 1

@@ -219,7 +219,17 @@ slices disjoint, and it is the price of holding no state file.
 
 The owner asked for Opus specifically. **Four to six concurrent, no more** —
 twelve concurrent agents hit the account's session rate limit during the
-selection pass and nine of twelve were killed by a 429.
+selection pass and nine of twelve were killed by a 429. Six is not always safe
+either: batches 07-12 hit the session limit with six running, and three were
+killed.
+
+**A killed agent has usually still done the work.** All three of those had
+already written `out.json` and died before validating and reporting. Do not
+re-run them blind — check for the file first, validate it yourself with
+`--dry-run`, and apply it if it comes back clean. What is lost is the agent's
+written report of its own uncertainties, not the batch; reconstruct the part
+that matters by listing which of the batch's words have a `keyConfidence: low`
+occurrence and reading those entries yourself.
 
 **Agents write files; they do not reply with content.** A subagent returning 125
 words of JSON in its reply burns the session's context being read. Ask for a file

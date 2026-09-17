@@ -6,7 +6,7 @@
   },
   "id": "extortionate",
   "lemma": "extortionate",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,43 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "reasonable",
+        "modest"
+      ],
+      "definition": "much too high in price or amount, in a way that seems unfair or dishonest",
+      "examples": [
+        {
+          "en": "The hotel charges extortionate rates for a bottle of mineral water.",
+          "fa": "آن هتل برای یک بطری آب معدنی مبلغ سرسام‌آوری می‌گیرد."
+        }
+      ],
+      "ipa": "/ɪkˈstɔːʃənət/",
+      "pos": "adj",
+      "synonyms": [
+        "exorbitant",
+        "excessive"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "سرسام‌آور (قیمت)",
+        "گزاف",
+        "ظالمانه گران"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

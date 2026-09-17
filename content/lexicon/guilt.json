@@ -6,7 +6,7 @@
   },
   "id": "guilt",
   "lemma": "guilt",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +42,72 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "pride"
+      ],
+      "definition": "the unhappy feeling you have when you know you have done something wrong",
+      "examples": [
+        {
+          "en": "He felt a wave of guilt for forgetting his mother's birthday.",
+          "fa": "برای فراموش کردن تولد مادرش موجی از احساس گناه به او دست داد."
+        }
+      ],
+      "ipa": "/ɡɪlt/",
+      "pos": "noun",
+      "synonyms": [
+        "remorse",
+        "shame"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "احساس گناه",
+        "عذاب وجدان"
+      ]
+    },
+    {
+      "antonyms": [
+        "innocence"
+      ],
+      "definition": "the fact that someone has committed a crime, as decided in a court of law",
+      "examples": [
+        {
+          "en": "The jury needed three days to agree on his guilt.",
+          "fa": "هیئت‌منصفه سه روز وقت لازم داشت تا بر مجرمیت او توافق کند."
+        }
+      ],
+      "ipa": "/ɡɪlt/",
+      "pos": "noun",
+      "synonyms": [
+        "culpability",
+        "blame"
+      ],
+      "testedIn": [],
+      "translations": [
+        "مجرمیت",
+        "گناهکاری"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

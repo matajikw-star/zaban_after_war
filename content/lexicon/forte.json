@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "fort یعنی قلعه یا دژ نظامی و تلفظش /fɔːt/ است",
+      "word": "fort"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "forte",
   "lemma": "forte",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,46 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "weakness"
+      ],
+      "definition": "the thing that a particular person is especially good at doing",
+      "examples": [
+        {
+          "en": "Writing quick summaries has never really been my forte.",
+          "fa": "نوشتن خلاصه‌های سریع هیچ‌وقت نقطه قوت من نبوده است."
+        }
+      ],
+      "ipa": "/ˈfɔːteɪ/",
+      "pos": "noun",
+      "synonyms": [
+        "strength",
+        "speciality"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 34
+        },
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 21
+        }
+      ],
+      "translations": [
+        "نقطه قوت",
+        "توانایی ویژه",
+        "هنر اصلی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

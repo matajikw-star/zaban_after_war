@@ -6,7 +6,7 @@
   },
   "id": "feeling",
   "lemma": "feeling",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,63 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a person's emotions, especially the ones that can be hurt or offended; usually used in the plural",
+      "examples": [
+        {
+          "en": "She apologized at once for hurting her friend's feelings.",
+          "fa": "او بی‌درنگ بابت جریحه‌دار کردن احساسات دوستش عذرخواهی کرد."
+        }
+      ],
+      "ipa": "/ˈfiːlɪŋ/",
+      "pos": "noun",
+      "synonyms": [
+        "emotions",
+        "sensibilities"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p01",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "احساسات",
+        "عواطف"
+      ]
+    },
+    {
+      "antonyms": [
+        "numbness"
+      ],
+      "definition": "something that you feel in your body or your mind, such as an idea or a physical sensation",
+      "examples": [
+        {
+          "en": "I had a strange feeling that someone was watching the house.",
+          "fa": "حس عجیبی داشتم که کسی خانه را زیر نظر گرفته است."
+        }
+      ],
+      "ipa": "/ˈfiːlɪŋ/",
+      "pos": "noun",
+      "synonyms": [
+        "sensation",
+        "impression"
+      ],
+      "testedIn": [],
+      "translations": [
+        "حس",
+        "احساس (درونی)",
+        "گمان"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1403": 1

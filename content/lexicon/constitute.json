@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شباهت ظاهری؛ institute یعنی بنیان نهادن یا مؤسسه، نه تشکیل دادن اجزا",
+      "word": "institute"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "constitute",
   "lemma": "constitute",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,72 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to be the parts that together form something, or to be considered as something",
+      "examples": [
+        {
+          "en": "Women constitute nearly half of the workforce in that industry.",
+          "fa": "زنان نزدیک به نیمی از نیروی کار آن صنعت را تشکیل می‌دهند."
+        }
+      ],
+      "ipa": "/ˈkɒnstɪtjuːt/",
+      "pos": "v",
+      "synonyms": [
+        "form",
+        "make up",
+        "amount to"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "تشکیل دادن",
+        "به شمار رفتن",
+        "محسوب شدن"
+      ]
+    },
+    {
+      "antonyms": [
+        "dissolve"
+      ],
+      "definition": "to formally set up a committee, a court or another official body",
+      "examples": [
+        {
+          "en": "The board was constituted last year to review safety at the plant.",
+          "fa": "آن هیئت سال گذشته برای بررسی ایمنی کارخانه تأسیس شد."
+        }
+      ],
+      "ipa": "/ˈkɒnstɪtjuːt/",
+      "pos": "v",
+      "synonyms": [
+        "establish",
+        "found"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تأسیس کردن",
+        "رسماً تشکیل دادن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

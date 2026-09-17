@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "جفت کلاسیک اشتباه: flout یعنی زیر پا گذاشتن قانون یا قاعده، نه به رخ کشیدن.",
+      "word": "flout"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "flaunt",
   "lemma": "flaunt",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,44 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "conceal",
+        "downplay"
+      ],
+      "definition": "to show something you own or are proud of in an obvious way, in order to impress other people",
+      "examples": [
+        {
+          "en": "He flaunts his new watch at every meeting he attends.",
+          "fa": "او ساعت تازه‌اش را در هر جلسه‌ای که می‌رود به رخ می‌کشد."
+        }
+      ],
+      "ipa": "/flɔːnt/",
+      "pos": "verb",
+      "synonyms": [
+        "parade",
+        "show off",
+        "display"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "به رخ کشیدن",
+        "خودنمایی کردن با",
+        "پز دادن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

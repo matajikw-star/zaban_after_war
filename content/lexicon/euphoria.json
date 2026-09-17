@@ -6,7 +6,7 @@
   },
   "id": "euphoria",
   "lemma": "euphoria",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,43 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "despair",
+        "gloom"
+      ],
+      "definition": "a strong feeling of happiness and excitement that usually does not last long",
+      "examples": [
+        {
+          "en": "A wave of euphoria swept the stadium after the final goal.",
+          "fa": "موجی از شور و شعف پس از گل آخر ورزشگاه را فرا گرفت."
+        }
+      ],
+      "ipa": "/juːˈfɔːriə/",
+      "pos": "noun",
+      "synonyms": [
+        "elation",
+        "jubilation"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p01",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "سرخوشی",
+        "شور و شعف",
+        "نشئگی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1403": 1

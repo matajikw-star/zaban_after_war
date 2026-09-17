@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شباهت ظاهری؛ consume یعنی مصرف کردن یا خوردن، نه کارکشته",
+      "word": "consume"
+    }
+  ],
   "homograph": {
-    "note": null,
-    "suspected": false
+    "note": "Different stress and different part of speech: the adjective is /ˈkɒnsəmət/ (supremely skilled) and the verb is /ˈkɒnsəmeɪt/ (to bring to completion). Only the adjective was tested; the card should show the two as separate blocks and a hint must say which it targets.",
+    "suspected": true
   },
   "id": "consummate",
   "lemma": "consummate",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,65 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "inept",
+        "amateurish"
+      ],
+      "definition": "extremely skilled at something, or perfect of its kind",
+      "examples": [
+        {
+          "en": "She handled the angry crowd with the ease of a consummate politician.",
+          "fa": "او جمعیت خشمگین را با خونسردیِ یک سیاستمدار کارکشته آرام کرد."
+        }
+      ],
+      "ipa": "/ˈkɒnsəmət/",
+      "pos": "adj",
+      "synonyms": [
+        "accomplished",
+        "masterly",
+        "supreme"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p07",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "کارکشته",
+        "تمام‌عیار",
+        "چیره‌دست"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to make something complete or final, especially an agreement or a deal",
+      "examples": [
+        {
+          "en": "The two firms consummated the merger after months of quiet talks.",
+          "fa": "آن دو شرکت پس از ماه‌ها مذاکره‌ی بی‌سروصدا ادغام را به سرانجام رساندند."
+        }
+      ],
+      "ipa": "/ˈkɒnsəmeɪt/",
+      "pos": "v",
+      "synonyms": [
+        "complete",
+        "finalize"
+      ],
+      "testedIn": [],
+      "translations": [
+        "به سرانجام رساندن",
+        "نهایی کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1

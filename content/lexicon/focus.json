@@ -6,7 +6,7 @@
   },
   "id": "focus",
   "lemma": "focus",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,65 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "digress",
+        "scatter"
+      ],
+      "definition": "to give all your attention to one particular thing rather than to everything at once",
+      "examples": [
+        {
+          "en": "Try to focus on one chapter a night instead of the whole book.",
+          "fa": "بکوش هر شب به‌جای کل کتاب روی یک فصل تمرکز کنی."
+        }
+      ],
+      "ipa": "/ˈfəʊkəs/",
+      "pos": "verb",
+      "synonyms": [
+        "concentrate",
+        "zero in"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p02",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "تمرکز کردن (بر)",
+        "متمرکز شدن بر",
+        "توجه را معطوف کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "the thing that people are paying most attention to, or the centre of an activity",
+      "examples": [
+        {
+          "en": "Safety has become the main focus of this year's training programme.",
+          "fa": "ایمنی به کانون اصلی برنامه‌ی آموزشی امسال تبدیل شده است."
+        }
+      ],
+      "ipa": "/ˈfəʊkəs/",
+      "pos": "noun",
+      "synonyms": [
+        "centre",
+        "emphasis"
+      ],
+      "testedIn": [],
+      "translations": [
+        "کانون",
+        "محور توجه",
+        "تمرکز"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

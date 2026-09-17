@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شباهت ظاهری؛ incline یعنی تمایل داشتن یا شیب، نه رد کردن",
+      "word": "incline"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "decline",
   "lemma": "decline",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,70 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "accept",
+        "agree"
+      ],
+      "definition": "to politely refuse an offer, an invitation or a request to do something",
+      "examples": [
+        {
+          "en": "He declined the invitation politely, saying he had another appointment.",
+          "fa": "او دعوت را مؤدبانه رد کرد و گفت قرار دیگری دارد."
+        }
+      ],
+      "ipa": "/dɪˈklaɪn/",
+      "pos": "v",
+      "synonyms": [
+        "refuse",
+        "reject",
+        "turn down"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 15
+        }
+      ],
+      "translations": [
+        "امتناع کردن",
+        "رد کردن",
+        "نپذیرفتن"
+      ]
+    },
+    {
+      "antonyms": [
+        "increase",
+        "rise"
+      ],
+      "definition": "to become smaller, weaker or less important over a period of time",
+      "examples": [
+        {
+          "en": "Sales declined sharply in the months after the factory closed.",
+          "fa": "فروش در ماه‌های پس از تعطیلی کارخانه به‌شدت کاهش یافت."
+        }
+      ],
+      "ipa": "/dɪˈklaɪn/",
+      "pos": "v",
+      "synonyms": [
+        "decrease",
+        "diminish",
+        "dwindle"
+      ],
+      "testedIn": [],
+      "translations": [
+        "کاهش یافتن",
+        "افول کردن",
+        "رو به افت گذاشتن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1

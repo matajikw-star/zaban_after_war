@@ -6,7 +6,7 @@
   },
   "id": "ominous",
   "lemma": "ominous",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,48 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "auspicious",
+        "promising"
+      ],
+      "definition": "suggesting that something bad or unpleasant is going to happen",
+      "examples": [
+        {
+          "en": "An ominous silence fell over the room after the letter was read.",
+          "fa": "پس از خواندن نامه، سکوتی شوم بر اتاق حاکم شد."
+        }
+      ],
+      "ipa": "/ˈɒmɪnəs/",
+      "pos": "adj",
+      "synonyms": [
+        "foreboding",
+        "menacing",
+        "sinister"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p04",
+          "questionNo": 8
+        },
+        {
+          "paperId": "arshad-1400-p08",
+          "questionNo": 19
+        }
+      ],
+      "translations": [
+        "شوم",
+        "بدشگون",
+        "نگران‌کننده"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

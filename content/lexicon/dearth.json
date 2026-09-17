@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شباهت ظاهری و آوایی؛ death یعنی مرگ، اما dearth یعنی کمبود",
+      "word": "death"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "dearth",
   "lemma": "dearth",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,44 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "abundance",
+        "surplus"
+      ],
+      "definition": "a situation in which there is not enough of something that people need",
+      "examples": [
+        {
+          "en": "There is a dearth of qualified nurses in the region's small hospitals.",
+          "fa": "در بیمارستان‌های کوچک این منطقه کمبود پرستار متخصص وجود دارد."
+        }
+      ],
+      "ipa": "/dɜːθ/",
+      "pos": "n",
+      "synonyms": [
+        "scarcity",
+        "shortage",
+        "lack"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p03",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "کمبود",
+        "نایابی",
+        "قحطی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

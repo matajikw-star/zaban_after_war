@@ -6,7 +6,7 @@
   },
   "id": "innovation",
   "lemma": "innovation",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +53,54 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "tradition"
+      ],
+      "definition": "a new idea, method or product, or the act of introducing new things",
+      "examples": [
+        {
+          "en": "The factory owes its success to constant innovation in design.",
+          "fa": "موفقیت این کارخانه مدیون نوآوری مداوم در طراحی است."
+        }
+      ],
+      "ipa": "/ˌɪnəˈveɪʃn/",
+      "pos": "noun",
+      "synonyms": [
+        "invention",
+        "novelty"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "نوآوری",
+        "ابتکار",
+        "بدعت"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

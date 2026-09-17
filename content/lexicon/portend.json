@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املای نزدیک، اما pretend یعنی وانمود کردن",
+      "word": "pretend"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "portend",
   "lemma": "portend",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,45 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to be a sign or warning that something, usually something bad, is going to happen",
+      "examples": [
+        {
+          "en": "The sudden fall in prices portended a long and painful recession.",
+          "fa": "افت ناگهانی قیمت‌ها از رکودی طولانی و دردناک خبر می‌داد."
+        }
+      ],
+      "ipa": "/pɔːˈtend/",
+      "pos": "verb",
+      "synonyms": [
+        "foreshadow",
+        "presage",
+        "augur"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 39
+        },
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 33
+        }
+      ],
+      "translations": [
+        "نشانه بودن (از رویدادی بد)",
+        "خبر دادن از",
+        "پیش‌گویی کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

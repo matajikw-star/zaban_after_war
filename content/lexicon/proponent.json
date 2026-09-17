@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "فقط یک حرف تفاوت دارد و معنایش وارونه است: opponent یعنی مخالف",
+      "word": "opponent"
+    },
+    {
+      "note": "component یعنی جزء یا قطعه، نه طرفدار",
+      "word": "component"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "proponent",
   "lemma": "proponent",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +40,48 @@
       "year": 1404
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "opponent",
+        "critic"
+      ],
+      "definition": "a person who supports an idea or a course of action and argues in public for it",
+      "examples": [
+        {
+          "en": "She became a leading proponent of free education for adults.",
+          "fa": "او به یکی از مدافعان برجسته آموزش رایگان برای بزرگسالان تبدیل شد."
+        }
+      ],
+      "ipa": "/prəˈpəʊnənt/",
+      "pos": "noun",
+      "synonyms": [
+        "advocate",
+        "supporter",
+        "champion"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 29
+        },
+        {
+          "paperId": "arshad-1404-p06",
+          "questionNo": 24
+        }
+      ],
+      "translations": [
+        "طرفدار",
+        "مدافع",
+        "هوادار"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

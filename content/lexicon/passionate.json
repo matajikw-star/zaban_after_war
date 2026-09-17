@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "compassionate یعنی دلسوز و مهربان، نه پرشور",
+      "word": "compassionate"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "passionate",
   "lemma": "passionate",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,48 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "indifferent",
+        "apathetic"
+      ],
+      "definition": "showing or feeling very strong emotion or enthusiasm about something",
+      "examples": [
+        {
+          "en": "She is a passionate defender of the rights of working women.",
+          "fa": "او مدافعی پرشور برای حقوق زنان شاغل است."
+        }
+      ],
+      "ipa": "/ˈpæʃənət/",
+      "pos": "adj",
+      "synonyms": [
+        "ardent",
+        "fervent",
+        "enthusiastic"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p02",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1398-p03",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "پرشور",
+        "مشتاق",
+        "آتشین"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -6,7 +6,7 @@
   },
   "id": "obscure",
   "lemma": "obscure",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,76 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "celebrated",
+        "famous",
+        "clear"
+      ],
+      "definition": "not known to many people, or not easy to understand",
+      "examples": [
+        {
+          "en": "The poem quotes an obscure writer whose books are long out of print.",
+          "fa": "این شعر از نویسنده‌ای گمنام نقل می‌کند که کتاب‌هایش مدت‌هاست تجدید چاپ نشده‌اند."
+        }
+      ],
+      "ipa": "/əbˈskjʊə(r)/",
+      "pos": "adj",
+      "synonyms": [
+        "unknown",
+        "abstruse",
+        "unclear"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 30
+        }
+      ],
+      "translations": [
+        "ناشناخته",
+        "گمنام",
+        "مبهم"
+      ]
+    },
+    {
+      "antonyms": [
+        "reveal",
+        "clarify"
+      ],
+      "definition": "to prevent something from being seen or clearly understood",
+      "examples": [
+        {
+          "en": "Thick fog obscured the mountains for most of the morning.",
+          "fa": "مه غلیظ بیشتر صبح کوه‌ها را پنهان کرده بود."
+        }
+      ],
+      "ipa": "/əbˈskjʊə(r)/",
+      "pos": "verb",
+      "synonyms": [
+        "conceal",
+        "blur",
+        "cloud"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 31
+        }
+      ],
+      "translations": [
+        "پنهان کردن",
+        "مبهم ساختن",
+        "پوشاندن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

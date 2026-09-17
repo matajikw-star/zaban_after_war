@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شکل و تلفظ نزدیک، اما poignant یعنی تأثیرگذار و غم‌انگیز",
+      "word": "poignant"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "piquant",
   "lemma": "piquant",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,71 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "bland",
+        "insipid"
+      ],
+      "definition": "having a pleasantly sharp or spicy taste",
+      "examples": [
+        {
+          "en": "The sauce had a piquant flavour that woke up the whole dish.",
+          "fa": "آن سس طعمی تند و خوشمزه داشت که تمام غذا را زنده می‌کرد."
+        }
+      ],
+      "ipa": "/ˈpiːkənt/",
+      "pos": "adj",
+      "synonyms": [
+        "tangy",
+        "spicy",
+        "zesty"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "تند و خوشمزه",
+        "تند و گس"
+      ]
+    },
+    {
+      "antonyms": [
+        "dull"
+      ],
+      "definition": "pleasantly interesting or exciting in a slightly unusual way",
+      "examples": [
+        {
+          "en": "There was something piquant about the way she told the old story.",
+          "fa": "در شیوه‌ای که او آن داستان قدیمی را تعریف می‌کرد چیزی گیرا وجود داشت."
+        }
+      ],
+      "ipa": "/ˈpiːkənt/",
+      "pos": "adj",
+      "synonyms": [
+        "intriguing",
+        "stimulating"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p05",
+          "questionNo": 21
+        }
+      ],
+      "translations": [
+        "گیرا",
+        "جالب و برانگیزاننده"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

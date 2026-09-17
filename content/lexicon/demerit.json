@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "نقطه‌ی مقابل آن است؛ merit یعنی شایستگی و امتیاز مثبت",
+      "word": "merit"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "demerit",
   "lemma": "demerit",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,52 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "merit",
+        "advantage"
+      ],
+      "definition": "a fault or disadvantage of something, or a mark given against someone for bad behaviour",
+      "examples": [
+        {
+          "en": "The report weighed the merits and demerits of moving the factory abroad.",
+          "fa": "گزارش محاسن و معایب انتقال کارخانه به خارج را سنجید."
+        }
+      ],
+      "ipa": "/ˌdiːˈmerɪt/",
+      "pos": "n",
+      "synonyms": [
+        "drawback",
+        "shortcoming",
+        "fault"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "عیب",
+        "نقطه‌ضعف",
+        "امتیاز منفی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

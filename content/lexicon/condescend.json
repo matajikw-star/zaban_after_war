@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شباهت ظاهری؛ descend یعنی پایین آمدن و فرود آمدن",
+      "word": "descend"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "condescend",
   "lemma": "condescend",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,63 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "respect"
+      ],
+      "definition": "to behave towards others as if you are more important or more intelligent than they are",
+      "examples": [
+        {
+          "en": "The doctor never condescends to his patients, whatever their education.",
+          "fa": "آن پزشک هرگز به بیمارانش از بالا نگاه نمی‌کند، تحصیلاتشان هرچه باشد."
+        }
+      ],
+      "ipa": "/ˌkɒndɪˈsend/",
+      "pos": "v",
+      "synonyms": [
+        "patronize",
+        "look down on"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 25
+        }
+      ],
+      "translations": [
+        "از بالا نگاه کردن",
+        "تحقیرآمیز رفتار کردن",
+        "فخر فروختن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to agree to do something that you think is below your dignity",
+      "examples": [
+        {
+          "en": "At last the manager condescended to answer one of our letters.",
+          "fa": "سرانجام مدیر منت گذاشت و به یکی از نامه‌های ما پاسخ داد."
+        }
+      ],
+      "ipa": "/ˌkɒndɪˈsend/",
+      "pos": "v",
+      "synonyms": [
+        "deign",
+        "stoop"
+      ],
+      "testedIn": [],
+      "translations": [
+        "منت گذاشتن و پذیرفتن",
+        "لطف کردن و تنزل دادن خود"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1

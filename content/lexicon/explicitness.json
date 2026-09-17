@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "در همان سؤال رقیب هم بودند: acerbity یعنی تندی و تلخی کلام، اما explicitness فقط صراحت است و لزوماً گزنده نیست.",
+      "word": "acerbity"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "explicitness",
   "lemma": "explicitness",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,50 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "vagueness"
+      ],
+      "definition": "the quality of saying something clearly and directly, without hiding anything",
+      "examples": [
+        {
+          "en": "The explicitness of the report left the ministers with no excuse.",
+          "fa": "صراحت آن گزارش هیچ بهانه‌ای برای وزیران باقی نگذاشت."
+        }
+      ],
+      "ipa": "/ɪkˈsplɪsɪtnəs/",
+      "pos": "noun",
+      "synonyms": [
+        "directness",
+        "frankness"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "صراحت",
+        "بی‌پرده‌گویی",
+        "رک‌گویی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

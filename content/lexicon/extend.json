@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "extent اسم است و یعنی میزان یا حد، در حالی که extend فعل است",
+      "word": "extent"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "extend",
   "lemma": "extend",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,72 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "shorten",
+        "curtail"
+      ],
+      "definition": "to make something longer or larger, or to make it last for more time",
+      "examples": [
+        {
+          "en": "The university extended the deadline for applications by two weeks.",
+          "fa": "دانشگاه مهلت ارسال درخواست‌ها را دو هفته تمدید کرد."
+        }
+      ],
+      "ipa": "/ɪkˈstend/",
+      "pos": "verb",
+      "synonyms": [
+        "prolong",
+        "lengthen",
+        "expand"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p03",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "تمدید کردن",
+        "گسترش دادن",
+        "دراز کردن"
+      ]
+    },
+    {
+      "antonyms": [
+        "withdraw"
+      ],
+      "definition": "to formally offer help, thanks or an invitation to someone",
+      "examples": [
+        {
+          "en": "The mayor extended a warm welcome to the visiting scholars.",
+          "fa": "شهردار به پژوهشگران مهمان خوشامد گرمی گفت."
+        }
+      ],
+      "ipa": "/ɪkˈstend/",
+      "pos": "verb",
+      "synonyms": [
+        "offer",
+        "give"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p01",
+          "questionNo": 6
+        }
+      ],
+      "translations": [
+        "ابراز کردن (کمک یا دعوت)",
+        "ارائه دادن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

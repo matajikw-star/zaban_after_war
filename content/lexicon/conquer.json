@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شباهت ظاهری؛ concur یعنی هم‌نظر بودن و موافقت کردن",
+      "word": "concur"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "conquer",
   "lemma": "conquer",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +47,75 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "surrender",
+        "lose"
+      ],
+      "definition": "to take control of a country or people by force, after defeating them in war",
+      "examples": [
+        {
+          "en": "The empire conquered most of the coast within a single summer.",
+          "fa": "آن امپراتوری بیشتر نوار ساحلی را تنها در یک تابستان فتح کرد."
+        }
+      ],
+      "ipa": "/ˈkɒŋkə(r)/",
+      "pos": "v",
+      "synonyms": [
+        "defeat",
+        "subdue",
+        "vanquish"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 3
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "فتح کردن",
+        "تسخیر کردن",
+        "شکست دادن"
+      ]
+    },
+    {
+      "antonyms": [
+        "succumb"
+      ],
+      "definition": "to succeed in dealing with a problem, a fear or a bad habit",
+      "examples": [
+        {
+          "en": "It took her two years to conquer her fear of flying.",
+          "fa": "دو سال طول کشید تا او بر ترسش از پرواز غلبه کند."
+        }
+      ],
+      "ipa": "/ˈkɒŋkə(r)/",
+      "pos": "v",
+      "synonyms": [
+        "overcome",
+        "master"
+      ],
+      "testedIn": [],
+      "translations": [
+        "غلبه کردن بر",
+        "چیره شدن بر"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شباهت ظاهری؛ content یعنی محتوا و مطالبِ درون چیزی، نه بافت و زمینه",
+      "word": "content"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "context",
   "lemma": "context",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,41 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "the words or the situation around something, which help to explain what it really means; often used in the phrase \"in context\"",
+      "examples": [
+        {
+          "en": "Taken out of context, that remark sounds far harsher than it was.",
+          "fa": "آن جمله وقتی از بافت خود جدا شود، بسیار تندتر از آنچه بود به نظر می‌رسد."
+        }
+      ],
+      "ipa": "/ˈkɒntekst/",
+      "pos": "n",
+      "synonyms": [
+        "setting",
+        "background",
+        "circumstances"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p03",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "بافت",
+        "زمینه",
+        "سیاق کلام"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املای نزدیک، اما evolve یعنی به تدریج تحول یافتن",
+      "word": "evolve"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "involve",
   "lemma": "involve",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,69 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "in the pattern \"be involved in something\", to take part in an activity or be closely connected with it",
+      "examples": [
+        {
+          "en": "Several teachers were involved in writing the new textbook.",
+          "fa": "چند معلم در نوشتن کتاب درسی جدید مشارکت داشتند."
+        }
+      ],
+      "ipa": "/ɪnˈvɒlv/",
+      "pos": "verb",
+      "synonyms": [
+        "participate",
+        "engage"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 28
+        }
+      ],
+      "translations": [
+        "درگیر بودن",
+        "دخیل بودن",
+        "شرکت داشتن"
+      ]
+    },
+    {
+      "antonyms": [
+        "exclude"
+      ],
+      "definition": "to include something as a necessary part or result of an activity",
+      "examples": [
+        {
+          "en": "The job involves travelling to remote villages twice a month.",
+          "fa": "این شغل مستلزم سفر به روستاهای دورافتاده دو بار در ماه است."
+        }
+      ],
+      "ipa": "/ɪnˈvɒlv/",
+      "pos": "verb",
+      "synonyms": [
+        "entail",
+        "require",
+        "include"
+      ],
+      "testedIn": [],
+      "translations": [
+        "در بر داشتن",
+        "مستلزم بودن",
+        "شامل شدن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

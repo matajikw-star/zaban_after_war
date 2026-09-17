@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "همان فعل با معنای یکسان است؛ fill in بیشتر بریتانیایی و fill out بیشتر آمریکایی است.",
+      "word": "fill in"
+    },
+    {
+      "note": "در همان سؤال رقیب بود: hand in یعنی تحویل دادن فرم، نه پر کردن آن.",
+      "word": "hand in"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "fill-out",
   "lemma": "fill out",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +29,41 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "leave blank"
+      ],
+      "definition": "to write the information that is asked for in the spaces on a form or a document",
+      "examples": [
+        {
+          "en": "Please fill out this form in black ink and sign it below.",
+          "fa": "لطفاً این فرم را با جوهر مشکی پر کنید و پایین آن را امضا کنید."
+        }
+      ],
+      "ipa": "/ˌfɪl ˈaʊt/",
+      "pos": "phrasal verb",
+      "synonyms": [
+        "complete",
+        "fill in"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p06",
+          "questionNo": 11
+        }
+      ],
+      "translations": [
+        "پر کردن (فرم)",
+        "تکمیل کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

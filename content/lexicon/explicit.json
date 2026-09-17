@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "نقطه‌ی مقابل: implicit یعنی ضمنی و تلویحی، چیزی که گفته نشده اما فهمیده می‌شود.",
+      "word": "implicit"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "explicit",
   "lemma": "explicit",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,44 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "implicit",
+        "vague"
+      ],
+      "definition": "stated clearly and in detail, so that there is no room for doubt about what is meant",
+      "examples": [
+        {
+          "en": "The contract is explicit about who pays for the repairs.",
+          "fa": "قرارداد درباره‌ی اینکه چه کسی هزینه‌ی تعمیرها را می‌پردازد صریح است."
+        }
+      ],
+      "ipa": "/ɪkˈsplɪsɪt/",
+      "pos": "adj",
+      "synonyms": [
+        "clear",
+        "unambiguous",
+        "precise"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p02",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "صریح",
+        "روشن و بی‌ابهام",
+        "واضح"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

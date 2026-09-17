@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شبیه به گوش می‌آید اما faith یعنی ایمان و اعتقاد، نه تقدیر.",
+      "word": "faith"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "fate",
   "lemma": "fate",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,65 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "free will",
+        "choice"
+      ],
+      "definition": "the power that some people believe controls everything that happens and cannot be resisted",
+      "examples": [
+        {
+          "en": "He believed that fate, not planning, had brought them together.",
+          "fa": "او باور داشت که تقدیر، نه برنامه‌ریزی، آن دو را کنار هم آورده است."
+        }
+      ],
+      "ipa": "/feɪt/",
+      "pos": "noun",
+      "synonyms": [
+        "destiny",
+        "providence"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p03",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "تقدیر",
+        "سرنوشت",
+        "قسمت"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "what finally happens to a person or a thing, especially something bad",
+      "examples": [
+        {
+          "en": "The fate of the old cinema will be decided by the council tonight.",
+          "fa": "سرنوشت آن سینمای قدیمی امشب در شورا تعیین می‌شود."
+        }
+      ],
+      "ipa": "/feɪt/",
+      "pos": "noun",
+      "synonyms": [
+        "outcome",
+        "end"
+      ],
+      "testedIn": [],
+      "translations": [
+        "عاقبت",
+        "سرنوشت (فرجام)",
+        "سرانجام"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

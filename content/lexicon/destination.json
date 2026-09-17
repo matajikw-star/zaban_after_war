@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "destiny یعنی سرنوشت و تقدیر، نه جایی که به سوی آن سفر می‌کنید",
+      "word": "destiny"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "destination",
   "lemma": "destination",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,38 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "the place that someone or something is travelling to",
+      "examples": [
+        {
+          "en": "We reached our destination just before the heavy rain started.",
+          "fa": "درست پیش از آغاز باران شدید به مقصدمان رسیدیم."
+        }
+      ],
+      "ipa": "/ˌdestɪˈneɪʃn/",
+      "pos": "n",
+      "synonyms": [
+        "terminus"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p06",
+          "questionNo": 12
+        }
+      ],
+      "translations": [
+        "مقصد",
+        "مقصد سفر"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

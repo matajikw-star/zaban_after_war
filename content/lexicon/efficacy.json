@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "efficiency یعنی بازدهی و انجام کار با کمترین اتلاف؛ efficacy یعنی اینکه اصلاً نتیجه‌ی مطلوب را می‌دهد یا نه",
+      "word": "efficiency"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "efficacy",
   "lemma": "efficacy",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,40 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "the power of a treatment, method or remedy to produce the result it is meant to produce",
+      "examples": [
+        {
+          "en": "Doctors are still testing the efficacy of the new vaccine.",
+          "fa": "پزشکان هنوز در حال آزمودن اثربخشی واکسن جدید هستند."
+        }
+      ],
+      "ipa": "/ˈefɪkəsi/",
+      "pos": "n",
+      "synonyms": [
+        "effectiveness",
+        "potency"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p02",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "اثربخشی",
+        "کارایی",
+        "تأثیر مطلوب"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

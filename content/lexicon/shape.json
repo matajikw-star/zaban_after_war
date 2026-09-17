@@ -6,7 +6,7 @@
   },
   "id": "shape",
   "lemma": "shape",
-  "level": null,
+  "level": "A1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,66 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "the outer form or outline of something",
+      "examples": [
+        {
+          "en": "The cake was baked in the shape of a star.",
+          "fa": "کیک به شکل یک ستاره پخته شده بود."
+        }
+      ],
+      "ipa": "/ʃeɪp/",
+      "pos": "n",
+      "synonyms": [
+        "form",
+        "outline"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p06",
+          "questionNo": 17
+        }
+      ],
+      "translations": [
+        "شکل",
+        "فرم",
+        "قالب"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to have an important influence on the way something develops",
+      "examples": [
+        {
+          "en": "Childhood experiences shape the way we handle stress as adults.",
+          "fa": "تجربه‌های کودکی به شیوهٔ رویارویی ما با استرس در بزرگسالی شکل می‌دهند."
+        }
+      ],
+      "ipa": "/ʃeɪp/",
+      "pos": "v",
+      "synonyms": [
+        "mould",
+        "influence"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p01",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "شکل دادن به",
+        "سمت‌وسو دادن به"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

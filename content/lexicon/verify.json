@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "نزدیک به نظر می‌رسد، اما certify یعنی رسماً و کتباً گواهی دادن",
+      "word": "certify"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "verify",
   "lemma": "verify",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,46 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "refute"
+      ],
+      "definition": "to check or prove that something is true, accurate or genuine",
+      "examples": [
+        {
+          "en": "The bank verifies every signature before releasing the money.",
+          "fa": "بانک پیش از آزاد کردن پول، صحت هر امضا را بررسی می‌کند."
+        }
+      ],
+      "ipa": "/ˈverɪfaɪ/",
+      "pos": "v",
+      "synonyms": [
+        "confirm",
+        "substantiate"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p07",
+          "questionNo": 13
+        },
+        {
+          "paperId": "arshad-1401-p01",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "راستی‌آزمایی کردن",
+        "صحت چیزی را بررسی کردن",
+        "تأیید کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

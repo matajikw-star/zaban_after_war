@@ -6,7 +6,7 @@
   },
   "id": "atrabilious",
   "lemma": "atrabilious",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,42 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "cheerful"
+      ],
+      "definition": "bad-tempered and gloomy, and easily made angry",
+      "examples": [
+        {
+          "en": "The atrabilious old clerk complained about every customer who entered.",
+          "fa": "آن کارمند پیر و بدخلق از هر مشتری که وارد می‌شد شکایت می‌کرد."
+        }
+      ],
+      "ipa": "/ˌætrəˈbɪliəs/",
+      "pos": "adj",
+      "synonyms": [
+        "irritable",
+        "morose"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 15
+        }
+      ],
+      "translations": [
+        "بدخلق",
+        "عبوس",
+        "تندخو"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

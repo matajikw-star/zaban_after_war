@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "boring صفت چیزی است که کسل‌کننده است، اما bored حالت کسی است که کسل شده؛ همین تقابل در گزینه‌های کنکور می‌آید.",
+      "word": "bored"
+    },
+    {
+      "note": "boor یعنی آدم بی‌نزاکت و تلفظش /bʊə/ است، نه /bɔː/.",
+      "word": "boor"
+    }
+  ],
   "homograph": {
-    "note": null,
-    "suspected": false
+    "note": "Two unrelated words share this spelling and pronunciation: \"bore\" meaning to make someone weary, and \"bore\" meaning to drill a hole. A third, not given a sense here, is \"bore\" as the past tense of \"bear\". Knowing one gives a learner no clue to the others.",
+    "suspected": true
   },
   "id": "bore",
   "lemma": "bore",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +29,64 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "interest",
+        "excite"
+      ],
+      "definition": "to make someone feel tired and uninterested because something is dull or repetitive; the adjective \"boring\" describes the thing, and \"bored\" describes the person",
+      "examples": [
+        {
+          "en": "Long meetings bore him, so he doodles in his notebook.",
+          "fa": "جلسه‌های طولانی او را کسل می‌کند، برای همین در دفترش خط‌خطی می‌کند."
+        }
+      ],
+      "ipa": "/bɔː(r)/",
+      "pos": "verb",
+      "synonyms": [
+        "weary",
+        "tire"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p06",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "کسل کردن",
+        "خسته کردن",
+        "بی‌حوصله کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to make a deep round hole in something using a tool or a machine",
+      "examples": [
+        {
+          "en": "Workers bored a narrow well through thirty meters of rock.",
+          "fa": "کارگران چاهی باریک را از میان سی متر سنگ حفر کردند."
+        }
+      ],
+      "ipa": "/bɔː(r)/",
+      "pos": "verb",
+      "synonyms": [
+        "drill"
+      ],
+      "testedIn": [],
+      "translations": [
+        "سوراخ کردن",
+        "حفر کردن",
+        "مته زدن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

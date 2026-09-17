@@ -6,7 +6,7 @@
   },
   "id": "enthusiastic",
   "lemma": "enthusiastic",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,43 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "indifferent",
+        "apathetic"
+      ],
+      "definition": "showing strong interest, excitement and approval about something",
+      "examples": [
+        {
+          "en": "The audience gave the young pianist an enthusiastic welcome.",
+          "fa": "تماشاگران از پیانیست جوان استقبالی پرشور کردند."
+        }
+      ],
+      "ipa": "/ɪnˌθjuːziˈæstɪk/",
+      "pos": "adj",
+      "synonyms": [
+        "keen",
+        "eager"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 189
+        }
+      ],
+      "translations": [
+        "مشتاق",
+        "پرشور",
+        "بااشتیاق"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

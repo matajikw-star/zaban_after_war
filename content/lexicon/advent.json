@@ -6,7 +6,7 @@
   },
   "id": "advent",
   "lemma": "advent",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,42 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "demise"
+      ],
+      "definition": "the arrival of an important event, invention or period of time, usually used in \"the advent of\"",
+      "examples": [
+        {
+          "en": "With the advent of smartphones, paper maps almost disappeared.",
+          "fa": "با ظهور گوشی‌های هوشمند، نقشه‌های کاغذی تقریباً ناپدید شدند."
+        }
+      ],
+      "ipa": "/ˈædvent/",
+      "pos": "n",
+      "synonyms": [
+        "arrival",
+        "emergence"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 175
+        }
+      ],
+      "translations": [
+        "ظهور",
+        "پیدایش",
+        "آغاز"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "حروف بسیار نزدیک، اما reserve یعنی ذخیره کردن یا از پیش رزرو کردن",
+      "word": "reserve"
+    },
+    {
+      "note": "هم‌ریشه به نظر می‌رسد، اما revert یعنی بازگشتن به حالت یا عادت پیشین",
+      "word": "revert"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "reverse",
   "lemma": "reverse",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +62,76 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "uphold"
+      ],
+      "definition": "to change something into its opposite, or to change a decision so that it no longer applies",
+      "examples": [
+        {
+          "en": "The court reversed the earlier decision after new evidence appeared.",
+          "fa": "دادگاه پس از پیدا شدن مدارک تازه، تصمیم پیشین را لغو کرد."
+        }
+      ],
+      "ipa": "/rɪˈvɜːs/",
+      "pos": "v",
+      "synonyms": [
+        "overturn",
+        "invert"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "معکوس کردن",
+        "وارونه کردن",
+        "لغو کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "used in \"the reverse\", the opposite of what has been said or expected",
+      "examples": [
+        {
+          "en": "I expected panic, but the reverse happened and everyone stayed calm.",
+          "fa": "انتظار هراس داشتم، اما عکس آن رخ داد و همه آرام ماندند."
+        }
+      ],
+      "ipa": "/rɪˈvɜːs/",
+      "pos": "n",
+      "synonyms": [
+        "opposite",
+        "contrary"
+      ],
+      "testedIn": [],
+      "translations": [
+        "عکس",
+        "خلاف",
+        "وارونه"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

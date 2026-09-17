@@ -6,7 +6,7 @@
   },
   "id": "dole-out",
   "lemma": "dole out",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,41 @@
       "year": 1404
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to give out something in small amounts, often unwillingly or to many people in turn",
+      "examples": [
+        {
+          "en": "The charity doled out blankets to the families waiting outside.",
+          "fa": "آن خیریه میان خانواده‌هایی که بیرون منتظر بودند پتو توزیع کرد."
+        }
+      ],
+      "ipa": "/ˌdəʊl ˈaʊt/",
+      "pos": "v",
+      "synonyms": [
+        "hand out",
+        "distribute",
+        "ration"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1404-p05",
+          "questionNo": 15
+        }
+      ],
+      "translations": [
+        "جیره‌وار دادن",
+        "اندک‌اندک توزیع کردن",
+        "سهم‌بندی کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1404": 1

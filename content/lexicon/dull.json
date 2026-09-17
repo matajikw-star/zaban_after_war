@@ -6,7 +6,7 @@
   },
   "id": "dull",
   "lemma": "dull",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +42,76 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "lively",
+        "interesting"
+      ],
+      "definition": "not interesting or exciting in any way",
+      "examples": [
+        {
+          "en": "The lecture was so dull that several students fell asleep.",
+          "fa": "سخنرانی چنان کسل‌کننده بود که چند دانشجو خوابشان برد."
+        }
+      ],
+      "ipa": "/dʌl/",
+      "pos": "adj",
+      "synonyms": [
+        "boring",
+        "tedious"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p02",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1399-p06",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1399-p11",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "کسل‌کننده",
+        "خسته‌کننده",
+        "ملال‌آور"
+      ]
+    },
+    {
+      "antonyms": [
+        "bright",
+        "sharp"
+      ],
+      "definition": "not bright, not sharp or not strong, used of colours, light, blades and pain",
+      "examples": [
+        {
+          "en": "A dull grey sky hung over the city all morning.",
+          "fa": "آسمانی خاکستری و کدر تمام صبح بر فراز شهر بود."
+        }
+      ],
+      "ipa": "/dʌl/",
+      "pos": "adj",
+      "synonyms": [
+        "blunt",
+        "muted"
+      ],
+      "testedIn": [],
+      "translations": [
+        "کدر",
+        "تیره",
+        "کند (تیغه)"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

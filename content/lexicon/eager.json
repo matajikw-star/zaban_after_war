@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "eagle یعنی عقاب؛ املای نزدیکی دارد اما هیچ ربطی به اشتیاق ندارد",
+      "word": "eagle"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "eager",
   "lemma": "eager",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,43 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "reluctant",
+        "indifferent"
+      ],
+      "definition": "wanting very much to do or have something",
+      "examples": [
+        {
+          "en": "The children were eager to open their presents before dinner.",
+          "fa": "بچه‌ها بی‌تاب بودند که پیش از شام هدایایشان را باز کنند."
+        }
+      ],
+      "ipa": "/ˈiːɡə(r)/",
+      "pos": "adj",
+      "synonyms": [
+        "keen",
+        "enthusiastic"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "مشتاق",
+        "بی‌تاب",
+        "علاقه‌مند"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

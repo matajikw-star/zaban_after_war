@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "elocution یعنی فن بیان و درست ادا کردن کلمات؛ eloquence یعنی شیوایی و تأثیرگذاری سخن",
+      "word": "elocution"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "eloquence",
   "lemma": "eloquence",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,42 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "inarticulacy"
+      ],
+      "definition": "the ability to speak or write well and in a way that moves or persuades people",
+      "examples": [
+        {
+          "en": "She defended her position with an eloquence nobody had expected.",
+          "fa": "او از موضع خود با شیوایی‌ای دفاع کرد که هیچ‌کس انتظارش را نداشت."
+        }
+      ],
+      "ipa": "/ˈeləkwəns/",
+      "pos": "n",
+      "synonyms": [
+        "articulacy",
+        "fluency"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 25
+        }
+      ],
+      "translations": [
+        "شیوایی",
+        "فصاحت",
+        "بلاغت"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

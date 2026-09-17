@@ -6,7 +6,7 @@
   },
   "id": "transcend",
   "lemma": "transcend",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,44 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to go beyond the usual limits of something",
+      "examples": [
+        {
+          "en": "Great music transcends the borders of language and culture.",
+          "fa": "موسیقی بزرگ از مرزهای زبان و فرهنگ فراتر می‌رود."
+        }
+      ],
+      "ipa": "/trænˈsend/",
+      "pos": "v",
+      "synonyms": [
+        "exceed",
+        "rise above"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p06",
+          "questionNo": 26
+        },
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 33
+        }
+      ],
+      "translations": [
+        "فراتر رفتن از",
+        "پشت سر گذاشتن",
+        "برتر بودن از"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

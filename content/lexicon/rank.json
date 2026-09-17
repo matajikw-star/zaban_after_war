@@ -6,7 +6,7 @@
   },
   "id": "rank",
   "lemma": "rank",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,65 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a position on a scale of importance, especially in an army or an organization",
+      "examples": [
+        {
+          "en": "He rose to the rank of captain within only four years.",
+          "fa": "او تنها ظرف چهار سال به درجهٔ سروانی رسید."
+        }
+      ],
+      "ipa": "/ræŋk/",
+      "pos": "n",
+      "synonyms": [
+        "grade",
+        "standing"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p05",
+          "questionNo": 20
+        },
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 16
+        }
+      ],
+      "translations": [
+        "رتبه",
+        "درجه",
+        "مقام"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to give something a place in a list according to its quality or importance",
+      "examples": [
+        {
+          "en": "The magazine ranks universities by teaching quality and research output.",
+          "fa": "آن مجله دانشگاه‌ها را بر پایهٔ کیفیت تدریس و برون‌داد پژوهشی رتبه‌بندی می‌کند."
+        }
+      ],
+      "ipa": "/ræŋk/",
+      "pos": "v",
+      "synonyms": [
+        "rate",
+        "classify"
+      ],
+      "testedIn": [],
+      "translations": [
+        "رتبه‌بندی کردن",
+        "درجه‌بندی کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

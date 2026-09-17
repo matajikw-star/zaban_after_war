@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هم‌آوای ceiling است: sealing یعنی مهر و موم یا آب‌بندی کردن، اما ceiling یعنی سقف.",
+      "word": "sealing"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "ceiling",
   "lemma": "ceiling",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,78 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "used in the phrase \"glass ceiling\", an unofficial barrier that keeps women or minority groups from reaching the most senior positions",
+      "examples": [
+        {
+          "en": "Many women still hit a glass ceiling in senior management.",
+          "fa": "بسیاری از زنان هنوز در مدیریت ارشد به سقف شیشه‌ای برمی‌خورند."
+        }
+      ],
+      "ipa": "/ˈsiːlɪŋ/",
+      "pos": "noun",
+      "synonyms": [],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 11
+        }
+      ],
+      "translations": [
+        "سقف (در ترکیب glass ceiling: سقف شیشه‌ای)",
+        "مانع نامرئی پیشرفت"
+      ]
+    },
+    {
+      "antonyms": [
+        "floor"
+      ],
+      "definition": "the upper inside surface of a room",
+      "examples": [
+        {
+          "en": "The old hall has a painted ceiling and tall narrow windows.",
+          "fa": "تالار قدیمی سقفی نقاشی‌شده و پنجره‌هایی بلند و باریک دارد."
+        }
+      ],
+      "ipa": "/ˈsiːlɪŋ/",
+      "pos": "noun",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "سقف"
+      ]
+    },
+    {
+      "antonyms": [
+        "floor"
+      ],
+      "definition": "an official upper limit set on prices, wages or numbers",
+      "examples": [
+        {
+          "en": "The government set a ceiling on the price of imported medicine.",
+          "fa": "دولت برای قیمت داروی وارداتی سقفی تعیین کرد."
+        }
+      ],
+      "ipa": "/ˈsiːlɪŋ/",
+      "pos": "noun",
+      "synonyms": [
+        "cap",
+        "limit"
+      ],
+      "testedIn": [],
+      "translations": [
+        "سقف (حداکثر مجاز)",
+        "حد بالا"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

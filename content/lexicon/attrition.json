@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "attribution یعنی نسبت دادن چیزی به کسی؛ شباهت املایی زیادی دارد اما معنایش جداست.",
+      "word": "attribution"
+    },
+    {
+      "note": "contrition یعنی پشیمانی عمیق؛ تنها پیشوند آن با attrition فرق دارد.",
+      "word": "contrition"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "attrition",
   "lemma": "attrition",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +29,42 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "growth"
+      ],
+      "definition": "a gradual reduction in number or strength, especially through a steady loss of people, customers or resources",
+      "examples": [
+        {
+          "en": "The company shrank through attrition rather than by firing anyone.",
+          "fa": "شرکت به‌جای اخراج کسی، از راه ریزش تدریجی نیرو کوچک شد."
+        }
+      ],
+      "ipa": "/əˈtrɪʃn/",
+      "pos": "noun",
+      "synonyms": [
+        "erosion",
+        "wearing down"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 33
+        }
+      ],
+      "translations": [
+        "فرسایش",
+        "کاهش تدریجی",
+        "ریزش (نیرو یا مشتری)"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1399": 1

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "discerning صفتِ شخص است و یعنی تیزبین و نکته‌سنج؛ discernible یعنی چیزی که قابل تشخیص است",
+      "word": "discerning"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "discernible",
   "lemma": "discernible",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,42 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "imperceptible"
+      ],
+      "definition": "able to be seen, heard or noticed, though not always easily",
+      "examples": [
+        {
+          "en": "There was no discernible change in his tone of voice.",
+          "fa": "هیچ تغییر محسوسی در لحن صدای او دیده نمی‌شد."
+        }
+      ],
+      "ipa": "/dɪˈsɜːnəbl/",
+      "pos": "adj",
+      "synonyms": [
+        "perceptible",
+        "noticeable"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p08",
+          "questionNo": 13
+        }
+      ],
+      "translations": [
+        "قابل تشخیص",
+        "محسوس",
+        "مشهود"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 1

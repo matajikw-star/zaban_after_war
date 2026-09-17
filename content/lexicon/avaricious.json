@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "voracious یعنی پرخور یا سیری‌ناپذیر (مثلاً در خواندن)، اما avaricious فقط دربارهٔ پول و مال است.",
+      "word": "voracious"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "avaricious",
   "lemma": "avaricious",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,42 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "generous"
+      ],
+      "definition": "extremely eager to have more money or possessions than one needs",
+      "examples": [
+        {
+          "en": "The avaricious landlord raised the rent for a third time.",
+          "fa": "صاحب‌خانهٔ آزمند برای سومین بار اجاره را بالا برد."
+        }
+      ],
+      "ipa": "/ˌævəˈrɪʃəs/",
+      "pos": "adj",
+      "synonyms": [
+        "greedy",
+        "covetous"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p08",
+          "questionNo": 17
+        }
+      ],
+      "translations": [
+        "آزمند",
+        "طمع‌کار",
+        "حریص"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 1

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شکل و آهنگ نزدیکی دارد، اما stipulate یعنی شرط گذاشتن در قرارداد",
+      "word": "stipulate"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "speculate",
   "lemma": "speculate",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,63 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to form an opinion about something without having all the facts",
+      "examples": [
+        {
+          "en": "Reporters speculated about the reasons behind the minister's sudden resignation.",
+          "fa": "خبرنگاران دربارهٔ دلایل استعفای ناگهانی وزیر گمانه‌زنی کردند."
+        }
+      ],
+      "ipa": "/ˈspekjuleɪt/",
+      "pos": "v",
+      "synonyms": [
+        "conjecture",
+        "surmise"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1399-p10",
+          "questionNo": 30
+        },
+        {
+          "paperId": "arshad-1398-p03",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "گمانه‌زنی کردن",
+        "حدس زدن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to buy something in the hope of selling it later at a profit, accepting the risk of loss",
+      "examples": [
+        {
+          "en": "He speculated on foreign currency and lost most of his savings.",
+          "fa": "او روی ارز خارجی سفته‌بازی کرد و بیشتر پس‌اندازش را از دست داد."
+        }
+      ],
+      "ipa": "/ˈspekjuleɪt/",
+      "pos": "v",
+      "synonyms": [
+        "gamble"
+      ],
+      "testedIn": [],
+      "translations": [
+        "سفته‌بازی کردن",
+        "سرمایه‌گذاری پرریسک کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -6,7 +6,7 @@
   },
   "id": "serve",
   "lemma": "serve",
-  "level": null,
+  "level": "A2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,65 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to give someone food or drink, especially as part of a meal or in a restaurant",
+      "examples": [
+        {
+          "en": "They served hot soup to everyone waiting outside in the cold.",
+          "fa": "برای همهٔ کسانی که بیرون در سرما منتظر بودند سوپ داغ سرو کردند."
+        }
+      ],
+      "ipa": "/sɜːv/",
+      "pos": "v",
+      "synonyms": [
+        "dish up"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p04",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "سرو کردن",
+        "پذیرایی کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to be useful or good enough for a particular purpose",
+      "examples": [
+        {
+          "en": "This old box will serve as a table until the furniture arrives.",
+          "fa": "این جعبهٔ قدیمی تا رسیدن مبلمان به‌جای میز به کار می‌آید."
+        }
+      ],
+      "ipa": "/sɜːv/",
+      "pos": "v",
+      "synonyms": [
+        "function as",
+        "answer"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 19
+        }
+      ],
+      "translations": [
+        "به کار آمدن",
+        "برآوردن (هدف)",
+        "خدمت کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

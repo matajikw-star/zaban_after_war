@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "appeal یعنی جذابیت یا درخواست، اما appall یعنی منزجر و شوکه کردن.",
+      "word": "appeal"
+    },
+    {
+      "note": "همان واژه است؛ appal املای بریتانیایی و appall املای آمریکایی است.",
+      "word": "appal"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "appall",
   "lemma": "appall",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +29,40 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to shock someone deeply and make them feel strong disapproval or dismay",
+      "examples": [
+        {
+          "en": "The conditions inside the old prison appalled every visiting inspector.",
+          "fa": "وضعیت درون آن زندان قدیمی هر بازرسِ بازدیدکننده را منزجر می‌کرد."
+        }
+      ],
+      "ipa": "/əˈpɔːl/",
+      "pos": "verb",
+      "synonyms": [
+        "horrify",
+        "dismay"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1403-p02",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "منزجر کردن",
+        "شوکه کردن",
+        "به وحشت انداختن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1403": 1

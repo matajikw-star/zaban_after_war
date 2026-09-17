@@ -6,7 +6,7 @@
   },
   "id": "put",
   "lemma": "put",
-  "level": null,
+  "level": "A1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,87 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "remove"
+      ],
+      "definition": "to move something into a particular place or position",
+      "examples": [
+        {
+          "en": "Please put the documents on my desk before you leave.",
+          "fa": "لطفاً پیش از رفتن، مدارک را روی میز من بگذار."
+        }
+      ],
+      "ipa": "/pʊt/",
+      "pos": "v",
+      "synonyms": [
+        "place",
+        "set"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p01",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1398-p02",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "گذاشتن",
+        "قرار دادن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "used in \"put off\", to move an event or a duty to a later time",
+      "examples": [
+        {
+          "en": "They put the meeting off until the results were ready.",
+          "fa": "آن‌ها جلسه را تا آماده شدن نتایج به تعویق انداختند."
+        }
+      ],
+      "ipa": "/pʊt/",
+      "pos": "v",
+      "synonyms": [
+        "postpone",
+        "delay"
+      ],
+      "testedIn": [],
+      "translations": [
+        "به تعویق انداختن",
+        "عقب انداختن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "used in \"put up with\", to accept an unpleasant situation without complaining",
+      "examples": [
+        {
+          "en": "She put up with the noise for years without complaining once.",
+          "fa": "او سال‌ها آن سر و صدا را تحمل کرد بی‌آنکه حتی یک بار شکایت کند."
+        }
+      ],
+      "ipa": "/pʊt/",
+      "pos": "v",
+      "synonyms": [
+        "tolerate",
+        "endure"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تحمل کردن",
+        "ساختن با چیزی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

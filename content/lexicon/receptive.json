@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شکل بسیار نزدیک، اما perceptive یعنی تیزبین و نکته‌سنج، نه پذیرا",
+      "word": "perceptive"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "receptive",
   "lemma": "receptive",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +58,53 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "resistant"
+      ],
+      "definition": "willing to listen to and accept new ideas or suggestions",
+      "examples": [
+        {
+          "en": "The new manager was receptive to suggestions from junior staff.",
+          "fa": "مدیر جدید پذیرای پیشنهادهای کارکنان تازه‌کار بود."
+        }
+      ],
+      "ipa": "/rɪˈseptɪv/",
+      "pos": "adj",
+      "synonyms": [
+        "open-minded",
+        "responsive"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 2
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 2
+        }
+      ],
+      "translations": [
+        "پذیرا",
+        "گشوده به ایده‌های تازه"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "هم‌ریشه است اما یعنی تنوع و گوناگونی، نه میزان تغییر",
+      "word": "variety"
+    },
+    {
+      "note": "شکل بسیار نزدیک، اما viability یعنی امکان‌پذیری و قابلیت دوام",
+      "word": "viability"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "variability",
   "lemma": "variability",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +62,55 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "consistency",
+        "stability"
+      ],
+      "definition": "the degree to which something changes or differs from one case to another",
+      "examples": [
+        {
+          "en": "Rainfall shows high variability from one year to the next.",
+          "fa": "بارندگی از سالی به سال دیگر نوسان زیادی نشان می‌دهد."
+        }
+      ],
+      "ipa": "/ˌveəriəˈbɪləti/",
+      "pos": "n",
+      "synonyms": [
+        "fluctuation",
+        "inconsistency"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "تغییرپذیری",
+        "نوسان",
+        "پراکندگی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

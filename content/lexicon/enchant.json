@@ -6,7 +6,7 @@
   },
   "id": "enchant",
   "lemma": "enchant",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,62 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "bore"
+      ],
+      "definition": "to fill someone with delight, so that they cannot look away or lose interest",
+      "examples": [
+        {
+          "en": "The old storyteller enchanted the children for a whole afternoon.",
+          "fa": "قصه‌گوی پیر تمام یک بعدازظهر کودکان را مجذوب کرد."
+        }
+      ],
+      "ipa": "/ɪnˈtʃɑːnt/",
+      "pos": "v",
+      "synonyms": [
+        "captivate",
+        "charm"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p01",
+          "questionNo": 4
+        }
+      ],
+      "translations": [
+        "مجذوب کردن",
+        "شیفته کردن",
+        "دلربایی کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to put someone or something under a magic spell",
+      "examples": [
+        {
+          "en": "In the tale, a witch enchants the ring and hides it.",
+          "fa": "در آن قصه، جادوگری انگشتر را افسون می‌کند و پنهانش می‌سازد."
+        }
+      ],
+      "ipa": "/ɪnˈtʃɑːnt/",
+      "pos": "v",
+      "synonyms": [
+        "bewitch"
+      ],
+      "testedIn": [],
+      "translations": [
+        "افسون کردن",
+        "طلسم کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

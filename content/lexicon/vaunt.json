@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "معنایی نزدیک اما واژه‌ای دیگر: به نمایش گذاشتن و خودنمایی کردن",
+      "word": "flaunt"
+    },
+    {
+      "note": "شکل بسیار نزدیک، اما taunt یعنی متلک انداختن و ریشخند کردن",
+      "word": "taunt"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "vaunt",
   "lemma": "vaunt",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +40,66 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "belittle"
+      ],
+      "definition": "to praise or boast about something proudly, often more than it deserves",
+      "examples": [
+        {
+          "en": "He never vaunted his wealth in front of his old friends.",
+          "fa": "او هرگز ثروتش را پیش دوستان قدیمی‌اش به رخ نکشید."
+        }
+      ],
+      "ipa": "/vɔːnt/",
+      "pos": "v",
+      "synonyms": [
+        "boast",
+        "brag"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p05",
+          "questionNo": 17
+        },
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 28
+        }
+      ],
+      "translations": [
+        "به رخ کشیدن",
+        "لاف زدن از",
+        "فخر فروختن به"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "used as \"vaunted\" or \"much-vaunted\" before a noun, praised a great deal, often undeservedly",
+      "examples": [
+        {
+          "en": "The much-vaunted new system crashed on its very first day.",
+          "fa": "آن سامانهٔ تازه و پرآوازه همان روز نخست از کار افتاد."
+        }
+      ],
+      "ipa": "/ˈvɔːntɪd/",
+      "pos": "adj",
+      "synonyms": [
+        "acclaimed"
+      ],
+      "testedIn": [],
+      "translations": [
+        "پرآوازه",
+        "بسیار ستوده‌شده"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

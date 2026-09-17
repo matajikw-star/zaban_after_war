@@ -6,7 +6,7 @@
   },
   "id": "wane",
   "lemma": "wane",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,66 @@
       "year": 1403
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "wax",
+        "grow"
+      ],
+      "definition": "to become gradually weaker, smaller or less important",
+      "examples": [
+        {
+          "en": "Public interest in the scandal waned after a few weeks.",
+          "fa": "توجه عمومی به آن رسوایی پس از چند هفته کم‌رنگ شد."
+        }
+      ],
+      "ipa": "/weɪn/",
+      "pos": "v",
+      "synonyms": [
+        "decline",
+        "diminish",
+        "ebb"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p04",
+          "questionNo": 14
+        },
+        {
+          "paperId": "arshad-1403-p03",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "رو به کاهش گذاشتن",
+        "افول کردن",
+        "کم‌رنگ شدن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "used in \"on the wane\", in a state of steady decline",
+      "examples": [
+        {
+          "en": "The party's influence has been on the wane since the election.",
+          "fa": "نفوذ آن حزب از زمان انتخابات رو به افول بوده است."
+        }
+      ],
+      "ipa": "/weɪn/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "رو به افول",
+        "در حال کاهش"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -6,7 +6,7 @@
   },
   "id": "arriviste",
   "lemma": "arriviste",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,39 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a person who has recently gained wealth or social position and is seen as pushy or lacking refinement",
+      "examples": [
+        {
+          "en": "The old families dismissed the young banker as a vulgar arriviste.",
+          "fa": "خانواده‌های قدیمی آن بانکدار جوان را نوکیسه‌ای عوام می‌دانستند."
+        }
+      ],
+      "ipa": "/ˌæriːˈviːst/",
+      "pos": "noun",
+      "synonyms": [
+        "upstart",
+        "parvenu"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 12
+        }
+      ],
+      "translations": [
+        "تازه به دوران رسیده",
+        "نوکیسه"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1400": 1

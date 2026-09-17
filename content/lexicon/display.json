@@ -6,7 +6,7 @@
   },
   "id": "display",
   "lemma": "display",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -42,8 +42,70 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "conceal"
+      ],
+      "definition": "to put something where people can see it, or to show a quality or feeling openly",
+      "examples": [
+        {
+          "en": "The museum displayed the coins in a locked glass case.",
+          "fa": "موزه سکه‌ها را در ویترین شیشه‌ای قفل‌شده‌ای به نمایش گذاشت."
+        }
+      ],
+      "ipa": "/dɪˈspleɪ/",
+      "pos": "v",
+      "synonyms": [
+        "exhibit",
+        "show"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p01",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p04",
+          "questionNo": 1
+        },
+        {
+          "paperId": "arshad-1400-p06",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "نمایش دادن",
+        "به نمایش گذاشتن",
+        "از خود نشان دادن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "an arrangement of things put out for people to look at, as in \"on display\"",
+      "examples": [
+        {
+          "en": "A display of old photographs filled the entrance hall.",
+          "fa": "چیدمانی از عکس‌های قدیمی سرسرای ورودی را پر کرده بود."
+        }
+      ],
+      "ipa": "/dɪˈspleɪ/",
+      "pos": "n",
+      "synonyms": [
+        "exhibition"
+      ],
+      "testedIn": [],
+      "translations": [
+        "نمایش",
+        "چیدمان نمایشی"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "invent یعنی ساختن چیزی که پیش‌تر وجود نداشته؛ discover یعنی یافتن چیزی که وجود داشته است",
+      "word": "invent"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "discover",
   "lemma": "discover",
-  "level": null,
+  "level": "A2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,40 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to find something or learn a fact for the first time",
+      "examples": [
+        {
+          "en": "We discovered a small bakery hidden behind the old market.",
+          "fa": "نانوایی کوچکی را کشف کردیم که پشت بازار قدیمی پنهان بود."
+        }
+      ],
+      "ipa": "/dɪˈskʌvə(r)/",
+      "pos": "v",
+      "synonyms": [
+        "find out",
+        "realize"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p01",
+          "questionNo": 3
+        }
+      ],
+      "translations": [
+        "کشف کردن",
+        "پی بردن",
+        "فهمیدن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

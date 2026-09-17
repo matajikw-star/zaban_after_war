@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شکل نزدیک، اما abstruse یعنی بسیار پیچیده و دیرفهم",
+      "word": "abstruse"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "abstract",
   "lemma": "abstract",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,64 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "concrete",
+        "physical"
+      ],
+      "definition": "based on general ideas rather than on things you can see or touch",
+      "examples": [
+        {
+          "en": "Justice and freedom are abstract ideas that are hard to define.",
+          "fa": "عدالت و آزادی ایده‌هایی انتزاعی‌اند که تعریف کردنشان دشوار است."
+        }
+      ],
+      "ipa": "/ˈæbstrækt/",
+      "pos": "adj",
+      "synonyms": [
+        "theoretical",
+        "conceptual"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p04",
+          "questionNo": 22
+        }
+      ],
+      "translations": [
+        "انتزاعی",
+        "مجرد",
+        "ذهنی"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a short summary of an article, a research paper or a talk",
+      "examples": [
+        {
+          "en": "Each author must submit an abstract of about two hundred words.",
+          "fa": "هر نویسنده باید چکیده‌ای در حدود دویست کلمه ارائه کند."
+        }
+      ],
+      "ipa": "/ˈæbstrækt/",
+      "pos": "n",
+      "synonyms": [
+        "summary",
+        "synopsis"
+      ],
+      "testedIn": [],
+      "translations": [
+        "چکیده",
+        "خلاصهٔ مقاله"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

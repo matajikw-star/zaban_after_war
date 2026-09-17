@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "شکل بسیار نزدیک اما معنای تقریباً مخالف: تضعیف کردن و سست کردن",
+      "word": "undermine"
+    },
+    {
+      "note": "یعنی زیربنا و اساس چیزی بودن، نه تأکید کردن بر آن",
+      "word": "underlie"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "underline",
   "lemma": "underline",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +40,62 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "downplay"
+      ],
+      "definition": "to show clearly that something is important or true",
+      "examples": [
+        {
+          "en": "The accident underlines the need for better safety training.",
+          "fa": "آن حادثه، نیاز به آموزش ایمنی بهتر را برجسته می‌کند."
+        }
+      ],
+      "ipa": "/ˌʌndəˈlaɪn/",
+      "pos": "v",
+      "synonyms": [
+        "emphasize",
+        "highlight"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p11",
+          "questionNo": 35
+        },
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 171
+        }
+      ],
+      "translations": [
+        "تأکید کردن بر",
+        "برجسته کردن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to draw a line under a word or a sentence on a page",
+      "examples": [
+        {
+          "en": "Underline every word you do not know in the passage.",
+          "fa": "زیر هر واژه‌ای که در متن نمی‌دانی خط بکش."
+        }
+      ],
+      "ipa": "/ˌʌndəˈlaɪn/",
+      "pos": "v",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "زیر چیزی خط کشیدن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

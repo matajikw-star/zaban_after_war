@@ -1,12 +1,21 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "anomaly یعنی ناهنجاری و استثنا، نه قیاس؛ تنها آغاز واژه شبیه است.",
+      "word": "anomaly"
+    },
+    {
+      "note": "allegory یعنی حکایت تمثیلی و یک قالب ادبی است، نه مقایسه‌ای توضیحی.",
+      "word": "allegory"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "analogy",
   "lemma": "analogy",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +29,40 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a comparison between two things that are alike in some way, made in order to explain something or make a point",
+      "examples": [
+        {
+          "en": "The teacher drew an analogy between the human heart and a pump.",
+          "fa": "معلم میان قلب انسان و یک تلمبه قیاسی برقرار کرد."
+        }
+      ],
+      "ipa": "/əˈnælədʒi/",
+      "pos": "noun",
+      "synonyms": [
+        "comparison",
+        "parallel"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p03",
+          "questionNo": 8
+        }
+      ],
+      "translations": [
+        "قیاس",
+        "تشبیه",
+        "شباهت"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

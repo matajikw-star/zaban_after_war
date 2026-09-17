@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "جانوری بسیار نزدیک، اما کروکودیل پوزه‌ای باریک‌تر و V شکل دارد",
+      "word": "crocodile"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "alligator",
   "lemma": "alligator",
-  "level": null,
+  "level": "B1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,36 @@
       "year": 1401
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "a large reptile with a long tail and a short, wide snout, found in rivers and swamps of America and China",
+      "examples": [
+        {
+          "en": "Alligators lay still in the shallow water for hours.",
+          "fa": "تمساح‌های آمریکایی ساعت‌ها در آب کم‌عمق بی‌حرکت می‌مانند."
+        }
+      ],
+      "ipa": "/ˈælɪɡeɪtə(r)/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [
+        {
+          "paperId": "arshad-1401-p05",
+          "questionNo": 23
+        }
+      ],
+      "translations": [
+        "تمساح آمریکایی",
+        "الیگاتور"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1401": 1

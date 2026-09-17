@@ -6,7 +6,7 @@
   },
   "id": "clear",
   "lemma": "clear",
-  "level": null,
+  "level": "A2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,70 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "vague",
+        "confusing",
+        "obscure"
+      ],
+      "definition": "easy to understand, with nothing confusing or uncertain about it",
+      "examples": [
+        {
+          "en": "The instructions were clear enough for a beginner to follow.",
+          "fa": "دستورالعمل‌ها آن‌قدر روشن بود که یک مبتدی هم بتواند دنبالشان کند."
+        }
+      ],
+      "ipa": "/klɪə(r)/",
+      "pos": "adj",
+      "synonyms": [
+        "plain",
+        "lucid",
+        "explicit"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p06",
+          "questionNo": 9
+        }
+      ],
+      "translations": [
+        "روشن",
+        "واضح",
+        "قابل فهم"
+      ]
+    },
+    {
+      "antonyms": [
+        "cloudy",
+        "blocked"
+      ],
+      "definition": "easy to see through, or free of anything that blocks, covers or dirties it",
+      "examples": [
+        {
+          "en": "The water was so clear that we could count the stones.",
+          "fa": "آب چنان زلال بود که می‌توانستیم سنگ‌ها را بشماریم."
+        }
+      ],
+      "ipa": "/klɪə(r)/",
+      "pos": "adj",
+      "synonyms": [
+        "transparent",
+        "unobstructed"
+      ],
+      "testedIn": [],
+      "translations": [
+        "شفاف",
+        "زلال",
+        "بی‌مانع"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

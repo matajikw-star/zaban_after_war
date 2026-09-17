@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "یعنی نیمه‌شفاف؛ نور را عبور می‌دهد اما تصویر پشت آن دیده نمی‌شود",
+      "word": "translucent"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "transparency",
   "lemma": "transparency",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,69 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "secrecy"
+      ],
+      "definition": "the practice of doing things openly, so that people can see what is decided and why",
+      "examples": [
+        {
+          "en": "Voters demanded greater transparency in how public money was spent.",
+          "fa": "رأی‌دهندگان خواستار شفافیت بیشتر در نحوهٔ خرج شدن پول عمومی شدند."
+        }
+      ],
+      "ipa": "/trænsˈpærənsi/",
+      "pos": "n",
+      "synonyms": [
+        "openness",
+        "accountability"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p07",
+          "questionNo": 183
+        }
+      ],
+      "translations": [
+        "شفافیت",
+        "علنی بودن",
+        "صراحت"
+      ]
+    },
+    {
+      "antonyms": [
+        "opacity"
+      ],
+      "definition": "the quality of a material that lets light pass through it so that you can see through it",
+      "examples": [
+        {
+          "en": "The transparency of the glass lets sunlight reach every corner.",
+          "fa": "شفافیت آن شیشه اجازه می‌دهد نور خورشید به هر گوشه برسد."
+        }
+      ],
+      "ipa": "/trænsˈpærənsi/",
+      "pos": "n",
+      "synonyms": [
+        "clarity"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1402-p06",
+          "questionNo": 24
+        }
+      ],
+      "translations": [
+        "شفافیت نوری",
+        "عبور نور از ماده"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

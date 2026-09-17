@@ -6,7 +6,7 @@
   },
   "id": "resort",
   "lemma": "resort",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +31,80 @@
       "year": 1402
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "used in \"resort to\", to do something you would rather avoid because nothing else has worked",
+      "examples": [
+        {
+          "en": "When talks failed, the workers resorted to a two-week strike.",
+          "fa": "وقتی مذاکرات شکست خورد، کارگران به اعتصابی دو هفته‌ای متوسل شدند."
+        }
+      ],
+      "ipa": "/rɪˈzɔːt/",
+      "pos": "v",
+      "synonyms": [
+        "turn to",
+        "fall back on"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p07",
+          "questionNo": 9
+        },
+        {
+          "paperId": "arshad-1402-p05",
+          "questionNo": 21
+        }
+      ],
+      "translations": [
+        "متوسل شدن به",
+        "از سر ناچاری دست به کاری زدن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "a place where many people go for holidays, often by the sea or in the mountains",
+      "examples": [
+        {
+          "en": "The mountain resort fills with visitors every winter.",
+          "fa": "آن تفرجگاه کوهستانی هر زمستان پر از گردشگر می‌شود."
+        }
+      ],
+      "ipa": "/rɪˈzɔːt/",
+      "pos": "n",
+      "synonyms": [
+        "retreat"
+      ],
+      "testedIn": [],
+      "translations": [
+        "تفرجگاه",
+        "استراحتگاه"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "used in \"a last resort\", the final choice left when everything else has failed",
+      "examples": [
+        {
+          "en": "Surgery should be a last resort, not the first option.",
+          "fa": "جراحی باید آخرین راه چاره باشد، نه نخستین گزینه."
+        }
+      ],
+      "ipa": "/rɪˈzɔːt/",
+      "pos": "n",
+      "synonyms": [],
+      "testedIn": [],
+      "translations": [
+        "آخرین راه چاره"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

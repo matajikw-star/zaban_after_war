@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "تنها یک حرف کمتر دارد، اما sever یعنی بریدن و قطع کردن",
+      "word": "sever"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "severe",
   "lemma": "severe",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,69 @@
       "year": 1404
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "mild"
+      ],
+      "definition": "very bad, serious or intense",
+      "examples": [
+        {
+          "en": "Severe flooding closed the main road for almost a week.",
+          "fa": "سیل شدید، جادهٔ اصلی را نزدیک به یک هفته بست."
+        }
+      ],
+      "ipa": "/sɪˈvɪə(r)/",
+      "pos": "adj",
+      "synonyms": [
+        "serious",
+        "acute"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p07",
+          "questionNo": 10
+        },
+        {
+          "paperId": "arshad-1404-p05",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "شدید",
+        "وخیم",
+        "سخت"
+      ]
+    },
+    {
+      "antonyms": [
+        "lenient"
+      ],
+      "definition": "treating people in a strict and harsh way",
+      "examples": [
+        {
+          "en": "The judge was severe with drivers who ignored the speed limit.",
+          "fa": "قاضی با رانندگانی که محدودیت سرعت را نادیده می‌گرفتند سختگیر بود."
+        }
+      ],
+      "ipa": "/sɪˈvɪə(r)/",
+      "pos": "adj",
+      "synonyms": [
+        "strict",
+        "harsh"
+      ],
+      "testedIn": [],
+      "translations": [
+        "سختگیر",
+        "خشن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

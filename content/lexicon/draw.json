@@ -6,7 +6,7 @@
   },
   "id": "draw",
   "lemma": "draw",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,82 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [],
+      "definition": "to form and state a comparison, distinction or conclusion, as in \"draw an analogy between\" two things",
+      "examples": [
+        {
+          "en": "The writer draws a comparison between memory and an old map.",
+          "fa": "نویسنده میان حافظه و یک نقشه‌ی قدیمی مقایسه‌ای برقرار می‌کند."
+        }
+      ],
+      "ipa": "/drɔː/",
+      "pos": "v",
+      "synonyms": [
+        "make",
+        "form"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p02",
+          "questionNo": 5
+        }
+      ],
+      "translations": [
+        "برقرار کردن (قیاس یا مقایسه)",
+        "گرفتن (نتیجه)"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to make a picture of something with a pencil or a pen",
+      "examples": [
+        {
+          "en": "My sister drew a horse on the back of the envelope.",
+          "fa": "خواهرم پشت پاکت نامه اسبی کشید."
+        }
+      ],
+      "ipa": "/drɔː/",
+      "pos": "v",
+      "synonyms": [
+        "sketch"
+      ],
+      "testedIn": [],
+      "translations": [
+        "کشیدن (نقاشی)",
+        "ترسیم کردن"
+      ]
+    },
+    {
+      "antonyms": [
+        "repel"
+      ],
+      "definition": "to attract people or their attention, or to pull something towards you",
+      "examples": [
+        {
+          "en": "The free concert drew a large crowd to the park.",
+          "fa": "آن کنسرت رایگان جمعیت زیادی را به پارک کشاند."
+        }
+      ],
+      "ipa": "/drɔː/",
+      "pos": "v",
+      "synonyms": [
+        "attract",
+        "pull"
+      ],
+      "testedIn": [],
+      "translations": [
+        "جلب کردن (توجه)",
+        "کشیدن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

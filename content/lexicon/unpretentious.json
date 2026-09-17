@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "همین واژه بدون پیشوند un و با معنای مخالف: پرافاده و متظاهر",
+      "word": "pretentious"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "unpretentious",
   "lemma": "unpretentious",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": false,
@@ -53,8 +58,55 @@
       "year": 1400
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "pretentious",
+        "ostentatious"
+      ],
+      "definition": "simple and modest, not trying to seem more important or more expensive than it is",
+      "examples": [
+        {
+          "en": "The restaurant is small and unpretentious, but the food is excellent.",
+          "fa": "آن رستوران کوچک و بی‌تکلف است، اما غذایش عالی است."
+        }
+      ],
+      "ipa": "/ˌʌnprɪˈtenʃəs/",
+      "pos": "adj",
+      "synonyms": [
+        "modest",
+        "down-to-earth"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p03",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p05",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p10",
+          "questionNo": 7
+        },
+        {
+          "paperId": "arshad-1400-p12",
+          "questionNo": 7
+        }
+      ],
+      "translations": [
+        "بی‌ادعا",
+        "ساده و بی‌تکلف",
+        "فروتن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

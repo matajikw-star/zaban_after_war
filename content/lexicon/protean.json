@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "املای بسیار نزدیک، اما protein یعنی پروتئین و هیچ ربطی به این واژه ندارد",
+      "word": "protein"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "protean",
   "lemma": "protean",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": false,
@@ -31,8 +36,48 @@
       "year": 1399
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "constant",
+        "unchanging"
+      ],
+      "definition": "able to change easily and often, or able to do many different things well",
+      "examples": [
+        {
+          "en": "A protean actor moves easily from comic roles to tragic ones.",
+          "fa": "یک بازیگر همه‌فن‌حریف به‌راحتی از نقش‌های کمیک به نقش‌های تراژیک می‌رود."
+        }
+      ],
+      "ipa": "/ˈprəʊtiən/",
+      "pos": "adj",
+      "synonyms": [
+        "versatile",
+        "changeable",
+        "mutable"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1400-p09",
+          "questionNo": 18
+        },
+        {
+          "paperId": "arshad-1399-p08",
+          "questionNo": 25
+        }
+      ],
+      "translations": [
+        "دگرگون‌شونده",
+        "متغیر",
+        "همه‌فن‌حریف"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {},
     "byYear": {

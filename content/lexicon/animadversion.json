@@ -1,12 +1,17 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "aversion یعنی بیزاری و یک احساس درونی است، اما animadversion سخنِ سرزنش‌آمیز است.",
+      "word": "aversion"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "animadversion",
   "lemma": "animadversion",
-  "level": null,
+  "level": "C2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +25,42 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "praise"
+      ],
+      "definition": "a remark that criticizes someone or something harshly",
+      "examples": [
+        {
+          "en": "His speech was full of animadversions on the city council.",
+          "fa": "سخنرانی او پر از نکوهش شورای شهر بود."
+        }
+      ],
+      "ipa": "/ˌænɪmædˈvɜːʃn/",
+      "pos": "noun",
+      "synonyms": [
+        "censure",
+        "reproof"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p05",
+          "questionNo": 14
+        }
+      ],
+      "translations": [
+        "نکوهش",
+        "سرزنش",
+        "انتقاد تند"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

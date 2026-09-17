@@ -1,12 +1,25 @@
 {
-  "confusables": [],
+  "confusables": [
+    {
+      "note": "apathy یعنی بی‌تفاوتی و نداشتن احساس، اما antipathy احساسی فعال و منفی است.",
+      "word": "apathy"
+    },
+    {
+      "note": "empathy یعنی هم‌دلی، درست نقطهٔ مقابل antipathy.",
+      "word": "empathy"
+    },
+    {
+      "note": "sympathy یعنی هم‌دردی؛ پسوند مشترک ‑pathy این سه واژه را به هم شبیه می‌کند.",
+      "word": "sympathy"
+    }
+  ],
   "homograph": {
     "note": null,
     "suspected": false
   },
   "id": "antipathy",
   "lemma": "antipathy",
-  "level": null,
+  "level": "C1",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +33,43 @@
       "year": 1398
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "sympathy",
+        "affinity"
+      ],
+      "definition": "a strong feeling of dislike toward someone or something",
+      "examples": [
+        {
+          "en": "Her antipathy to crowded parties kept her at home most weekends.",
+          "fa": "بیزاری او از مهمانی‌های شلوغ باعث می‌شد بیشتر آخر هفته‌ها در خانه بماند."
+        }
+      ],
+      "ipa": "/ænˈtɪpəθi/",
+      "pos": "noun",
+      "synonyms": [
+        "aversion",
+        "hostility"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1398-p01",
+          "questionNo": 1
+        }
+      ],
+      "translations": [
+        "بیزاری",
+        "تنفر",
+        "نفرت"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1398": 1

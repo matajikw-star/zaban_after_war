@@ -6,7 +6,7 @@
   },
   "id": "embrace",
   "lemma": "embrace",
-  "level": null,
+  "level": "B2",
   "occurrences": [
     {
       "isAnswer": true,
@@ -20,8 +20,61 @@
       "year": 1405
     }
   ],
-  "provenance": null,
-  "senses": [],
+  "provenance": {
+    "at": "2026-09-17",
+    "model": "claude-opus-5",
+    "schemaVersion": 2
+  },
+  "senses": [
+    {
+      "antonyms": [
+        "reject"
+      ],
+      "definition": "to accept a new idea, belief or change willingly and with enthusiasm",
+      "examples": [
+        {
+          "en": "The company embraced remote work long before other firms did.",
+          "fa": "آن شرکت مدت‌ها پیش از دیگر شرکت‌ها دورکاری را با آغوش باز پذیرفت."
+        }
+      ],
+      "ipa": "/ɪmˈbreɪs/",
+      "pos": "v",
+      "synonyms": [
+        "adopt",
+        "welcome"
+      ],
+      "testedIn": [
+        {
+          "paperId": "arshad-1405-p05",
+          "questionNo": 10
+        }
+      ],
+      "translations": [
+        "با آغوش باز پذیرفتن",
+        "با اشتیاق پذیرفتن"
+      ]
+    },
+    {
+      "antonyms": [],
+      "definition": "to hold someone closely in your arms as a sign of affection",
+      "examples": [
+        {
+          "en": "The two brothers embraced warmly at the airport gate.",
+          "fa": "دو برادر کنار گیت فرودگاه گرم یکدیگر را در آغوش گرفتند."
+        }
+      ],
+      "ipa": "/ɪmˈbreɪs/",
+      "pos": "v",
+      "synonyms": [
+        "hug"
+      ],
+      "testedIn": [],
+      "translations": [
+        "در آغوش گرفتن",
+        "بغل کردن"
+      ]
+    }
+  ],
   "stats": {
     "answersByYear": {
       "1405": 1

@@ -345,6 +345,48 @@ Consequence: the root `vitest.config.ts` became a two-project configuration — 
   table objects Dexie installs. This cost an afternoon in the predecessor project; it is written
   down here so it does not cost a second one.
 
+### 5.6 Things ticket dev-web/04 (home, boxes, word, progress, summary, settings, season) had to decide (2026-09-18)
+
+- **The bottom nav is a component the four screens render, not a property of the root layout.**
+  `/review`, `/word/:id`, `/session/summary` and the whole onboarding/paywall/login/checkout flow
+  do not show it, so `screens/layout/BottomNav.tsx` is a new file each of `Home`, `Boxes`,
+  `Progress` and `Settings` imports, rather than an edit to the shared `Layout.tsx`.
+- **A new `engine/use-fold.ts` hook, built on `useSyncExternalStore`.** None of the bound
+  functions in `engine/index.ts` are React state, so recording a review on `/word/:id` would not
+  repaint `/boxes` or `/progress` without something to subscribe to. `fold-cache.ts` already
+  replaces its `current` object wholesale on every refold, so identity comparison is exactly the
+  right `getSnapshot`. This is the one place `apps/web/src/engine` touches React; `packages/core`
+  still does not.
+- **`engine/box-items.ts`, `engine/chart-data.ts` and `engine/season.ts` are new, narrow modules**
+  rather than additions to `engine/index.ts`: the ticket asked to prefer new files over editing
+  shared ones, and each is independently pure and unit-tested (`boxItems`, `chartData`,
+  `seasonReached`/`seasonStats`), with a thin `current*`-prefixed wrapper binding it to the live
+  cache for the screen to call.
+- **`db/dexie.ts` gained one `KvKey`: `seasonShownFor`.** The "show the season screen once" rule
+  needs a persisted marker keyed by the exam date, and the `KvKey` union is deliberately closed
+  (§7.3) so a typo is a compile error — the smallest edit was adding the key, not opening the
+  union up.
+- **The word detail screen (`screens/word/WordDetail.tsx`) is built from scratch**, not by reusing
+  anything from `screens/review/**`: the review card is built around the front/back reveal flow,
+  while this screen shows a full card, a review timeline and a flag sheet all at once. It reads
+  the whole cached event log via `engine/fold-cache.ts`'s already-exported `cachedEvents()` and
+  filters by `itemId`, rather than adding an indexed Dexie query to `db/repo.ts`.
+- **`content/field-codes.json` is imported straight from the repo root** into
+  `screens/settings/Settings.tsx` (`../../../../../content/field-codes.json`), because it is
+  generated wiki data (CLAUDE.md's Wiki layer), not app source, and duplicating it into `apps/web`
+  would be a second copy to keep in sync. Only the `codes` map (named field codes) is shown, per
+  the ticket.
+- **The exam-date field is a plain text input in `۱۴۰۵/۱۱/۱۵` shape**, parsed and formatted with
+  `date-fns-jalali`, rather than a calendar widget — there is no calendar primitive in `ui/` yet
+  and the owner-facing format is exactly what the placeholder shows.
+- **The theme picker is three `Switch`es, not a new `RadioGroup` primitive.** `ui/` has no radio
+  group; three controlled switches (`checked={theme === choice}`) that only ever turn themselves
+  on give the same exclusive-choice behaviour without adding a component for one screen.
+- **The settings "گزارش مشکل" flow calls `reportError('user_report', new Error('user_report'), …)`**
+  rather than adding a dedicated non-`Error` overload — `reportError`'s signature already takes
+  `unknown`, and every other call site in the codebase passes a real error, so a placeholder
+  `Error` keeps the one function signature instead of adding a case to it.
+
 ## 6. How to extend this file
 
 

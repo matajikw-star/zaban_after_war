@@ -1,0 +1,23 @@
+{
+  "paperId": "arshad-9999-p02",
+  "degree": "arshad",
+  "year": 9999,
+  "groupCodes": ["0000"],
+  "source": { "file": "fixture.pdf", "pages": [1] },
+  "extractedBy": { "model": "fixture", "at": "2026-01-01" },
+  "questions": [
+    {
+      "no": 1,
+      "part": "vocabulary",
+      "stem": "The workers went on strike ---------- their demands were met.",
+      "options": ["banana", "cherry", "date", "fig"],
+      "optionLemmas": ["banana", "cherry", "date", "fig"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "banana",
+      "uncertain": []
+    }
+  ],
+  "uncertain": []
+}

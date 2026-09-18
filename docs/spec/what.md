@@ -97,7 +97,7 @@ apps/
   admin/          the owner's stats dashboard (Vite + React, tiny)          [building — scaffold]
 packages/
   core/           the SRS engine: pure functions, exhaustively tested       [live]
-  content/        JSON schemas, lint, package builder                       [building — lint exists]
+  content/        JSON schemas, lint, package builder                       [live]
   design/         design tokens (CSS variables), fonts, shared base styles  [building — tokens + Vazirmatn]
 server/
   pb_hooks/       PocketBase JS hooks (routes, crons)                        [planned]
@@ -115,9 +115,9 @@ docs/runbooks/    operational procedures (deploy, debug-from-log, restore)
 Workspace: pnpm, Node ≥ 22, TypeScript strict, Biome, Vitest, Playwright. Root scripts, all
 registered: `test`, `test:watch`, `lint`, `format`, `typecheck` (`tsc --build` for the composite
 packages, then `pnpm -r typecheck` for the apps, which are `noEmit`), `build`, `budget`, `e2e`,
-`content:lint`, and the `tools/` entry points `simulate`, `errors`, `logs`, `flags`, `deploy`,
-`content:build` — the last six are stubs that print `not implemented` and exit 1. `deploy`
-must be run as `pnpm run deploy`: bare `pnpm deploy` is pnpm's own subcommand.
+`content:lint`, `content:build` (§6, real), and the `tools/` entry points `simulate`, `errors`,
+`logs`, `flags`, `deploy` — those five are still stubs that print `not implemented` and exit 1.
+`deploy` must be run as `pnpm run deploy`: bare `pnpm deploy` is pnpm's own subcommand.
 
 ---
 
@@ -332,7 +332,7 @@ Content ships as **exactly two packages**, built by `packages/content` in CI fro
 
 | Package | Contents | Delivery |
 |---|---|---|
-| `free` | the first 150 words by rank (exclusions applied) with hints | Part of the PWA build, precached by the service worker. Offline from first launch. |
+| `free` | the 150 lowest-rank shipping words, with hints where approved | Part of the PWA build, precached by the service worker. Offline from first launch. |
 | `paid` | **all** words (the free 150 included), with hints where approved | One file, entitlement-gated, downloaded once after purchase into IndexedDB. Replaces `free` as the active package. |
 
 A content update is a new version of the same two files; the client swaps a package atomically
@@ -365,25 +365,41 @@ interface WordCard {
 
 ### 6.2 Build rules
 
-- `rank` = order by `stats.priority` desc, then `timesTested` desc, then `firstYear` desc, then
-  id. Frozen per version; a new year's words get appended ranks. Existing users' progress is
-  keyed by id, so re-ranking never touches their state.
+- **Rank is frozen forever, not just per version.** `packages/content/ranks.json` maps id →
+  rank, committed. A word not yet in the file — because it just gained a first sense, or was
+  never excluded before — gets the next rank by `stats.priority` desc, then `timesTested` desc,
+  then `firstYear` desc, then id asc, appended after the current maximum. An id already in the
+  file keeps its rank whatever the build recomputes for it. Existing users' progress is keyed
+  by id, so re-ranking never touches their state. One caveat this creates: a higher-priority
+  word that gains senses later is appended after words that shipped earlier at lower priority,
+  so the free-150 boundary can shift by one word as word data completes — no progress is lost,
+  since it is keyed by id (`how-why.md` §5).
 - `packages/content/exclusions.json` lists ids that never ship (non-words such as `as-like`,
-  see `.scratch/word-data/issues/04`). Ids stay frozen; only shipping is decided here.
+  see `.scratch/word-data/issues/04-non-words-and-latin-phrases.md`). Ids stay frozen; only
+  shipping is decided here.
 - A word ships without `hint` when its hint file is missing or unapproved. **The free 150 must
   all have approved hints before launch**; the rest may ship without and gain hints in updates.
 - Words with empty `senses` are **excluded from both packages** until their word data is
   written (895 of 2,098 done on 2026-09-17). The paid package therefore grows with content
-  updates until the lexicon is complete; the build prints the count.
+  updates until the lexicon is complete; the build prints `shipping N of M words`.
 - The exam stem is joined from `content/exams/`, never duplicated into `examples`.
-- The blank marker in stems is normalised to `.....` at build time (17 stems use hyphens).
-- `pnpm content:build` writes `apps/web/public/content/free.json` (hashed by Vite) and
-  `server/content/paid.json` plus `manifest.json` `{ free: {version, hash, bytes}, paid: {version, hash, bytes} }`.
+- The blank marker in stems is normalised to `.....` at build time (34 stems use a run of
+  hyphens instead of dots, measured 2026-09-18 — this ticket's own count; the earlier figure of
+  17 was never re-verified against the full corpus).
+- `pnpm content:build` writes `apps/web/public/content/free.json` and `server/content/paid.json`
+  plain (Vite does not hash or rename either — see §7.7), plus `manifest.json`
+  `{ free: {version, hash, bytes}, paid: {version, hash, bytes} }`. `packages/content/versions.json`
+  holds the last-written `{version, hash}` per package so the version string
+  (`YYYY-MM-DD.N`) is reproducible: unchanged content keeps its version; changed content mints
+  `N+1` the same day or `.1` on a new day.
 
 ### 6.3 Size
 
-2,098 words × ~1.3 KB ≈ 2.7 MB raw, ≈ 650 KB gzipped (Caddy compresses). The free package is
-≈ 200 KB raw. Both are well inside IndexedDB norms.
+Measured 2026-09-18, 893 of 2,098 words shipping (word data incomplete — see above): `paid`
+is 1.36 MB raw, 352 KB gzipped; `free` (150 words) is 303 KB raw, 74 KB gzipped. Both scale
+roughly linearly with word count, so the full 2,098-word `paid` package is projected at
+≈ 3.2 MB raw, ≈ 830 KB gzipped once word data is complete — still well inside IndexedDB norms.
+Caddy gzips in production; the numbers above are measured with `node:zlib`, not a live server.
 
 ---
 
@@ -481,7 +497,10 @@ cache is **kept** until the owner acts — the app never revokes on its own.
 
 ### 7.7 Service worker and updates
 
-- Precache: app shell, fonts, `content/free.<hash>.json`. Navigation fallback to `index.html`.
+- Precache: app shell, fonts, `content/free.json` — Workbox revisions it by its own content
+  hash (computed at `generateSW` time from the file's bytes); Vite does not rename or hash the
+  file itself, since it ships from `apps/web/public/` untouched. Navigation fallback to
+  `index.html`.
 - `registerType: 'prompt'`. A new version is downloaded in the background; the app shows a small
   «نسخهٔ جدید آماده است — اعمال» chip on the home screen and applies on tap or on the next cold
   start. Never mid-session.

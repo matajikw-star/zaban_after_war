@@ -1,0 +1,59 @@
+{
+  "paperId": "arshad-9999-p01",
+  "degree": "arshad",
+  "year": 9999,
+  "groupCodes": ["0000"],
+  "source": { "file": "fixture.pdf", "pages": [1] },
+  "extractedBy": { "model": "fixture", "at": "2026-01-01" },
+  "questions": [
+    {
+      "no": 1,
+      "part": "vocabulary",
+      "stem": "The scientist ..... the discovery to a lucky accident.",
+      "options": ["apple", "fig", "cherry", "date"],
+      "optionLemmas": ["apple", "fig", "cherry", "date"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "apple",
+      "uncertain": []
+    },
+    {
+      "no": 2,
+      "part": "vocabulary",
+      "stem": "She ate a fresh ..... every morning before school.",
+      "options": ["banana", "apple", "fig", "cherry"],
+      "optionLemmas": ["banana", "apple", "fig", "cherry"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "apple",
+      "uncertain": []
+    },
+    {
+      "no": 3,
+      "part": "vocabulary",
+      "stem": "The ..... tree grew tall in the corner of the garden.",
+      "options": ["fig", "apple", "banana", "cherry"],
+      "optionLemmas": ["fig", "apple", "banana", "cherry"],
+      "key": 0,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "fig",
+      "uncertain": []
+    },
+    {
+      "no": 4,
+      "part": "grammar",
+      "stem": "The committee reached its decision through elderberry reasoning that satisfied everyone.",
+      "options": ["quickly", "thoroughly", "reluctantly", "openly"],
+      "optionLemmas": ["quickly", "thoroughly", "reluctantly", "openly"],
+      "key": 1,
+      "keySource": "inferred",
+      "keyConfidence": "high",
+      "testedWord": "thoroughly",
+      "uncertain": []
+    }
+  ],
+  "uncertain": []
+}

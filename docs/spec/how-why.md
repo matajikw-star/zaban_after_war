@@ -273,6 +273,36 @@ its own, not inside a scaffold.
   so `@theme` parses, and `!.claude` in `files.includes` so a nested agent worktree does not read
   as a second root configuration.
 
+### 5.3 The content package builder (2026-09-18)
+
+- **`packages/content/ranks.json` freezes rank across builds, not just within one.** The
+  builder (`packages/content/src/build/`) only ever appends: an id already in the file keeps
+  its rank forever, whatever `stats.priority` says about it on a later run. The alternative —
+  recomputing rank from `stats` every build — was rejected because rank is what `ContentItem`
+  keys introduction order on (`what.md` §5.1), and a user's Leitner state is keyed by id;
+  silently reshuffling introduction order would be the same bug the old app had slicing
+  `words[]` by index (`CLAUDE.md`, "Word ids"), just one layer up.
+  - **The free-150 boundary can shift by one word as word data completes.** A word ships only
+    once it has `senses` (895 of 2,098 as of this date); when a higher-`priority` word gets its
+    senses written later, it is still appended to `ranks.json` *after* every word already
+    ranked, including lower-priority words that shipped earlier. So the 150 lowest-rank
+    shipping words are not guaranteed to be the 150 highest-priority words in the final
+    lexicon — only in the limit, once every word has senses. This is accepted rather than
+    "fixed" by re-ranking, because progress is keyed by id: nothing is lost when the boundary
+    moves, a word just moves from `free` to `paid` or back between content updates.
+- **Two lint scoping calls, both because the checklist (`docs/plan/content-pipeline.md`) was
+  written before the corpus existed to test it against:**
+  - Check 1 ("every `testedWord` resolves to a lexicon file") is scoped to `vocabulary` and
+    `cloze` parts. `grammar`-part questions are transcribed into `content/exams/` like the
+    others, but CLAUDE.md rule 5 keeps grammar out of the lexicon on purpose — its
+    `testedWord` names a grammar point (a preposition, a verb form), not a memorizable word,
+    and running the check unscoped reports 358 non-issues for every real one.
+  - Check 4 ("every entry has senses, translations, examples, occurrences") only examines the
+    `senses`/translations/examples parts for an entry whose `senses` is already non-empty.
+    1,203 of 2,098 entries are mid-pipeline (word data not yet written, per
+    `extraction/WORD-DATA.md`) and that is not a defect; `occurrences[] ≥ 1` still applies to
+    every entry, pipeline stage notwithstanding.
+
 ## 6. How to extend this file
 
 

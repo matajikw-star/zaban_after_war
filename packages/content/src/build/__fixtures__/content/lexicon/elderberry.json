@@ -1,0 +1,45 @@
+{
+  "id": "elderberry",
+  "lemma": "elderberry",
+  "level": "C1",
+  "senses": [
+    {
+      "pos": "n",
+      "ipa": "/ˈɛldərˌbɛri/",
+      "definition": "a small dark purple berry that grows on the elder tree",
+      "translations": ["آقطی"],
+      "synonyms": [],
+      "antonyms": [],
+      "examples": [
+        { "en": "She made jam from wild elderberries.", "fa": "او از آقطی وحشی مربا درست کرد." }
+      ],
+      "testedIn": []
+    }
+  ],
+  "confusables": [],
+  "homograph": { "suspected": false, "note": null },
+  "occurrences": [
+    {
+      "occurrenceType": "context",
+      "paperId": "arshad-9999-p01",
+      "part": "grammar",
+      "questionNo": 4,
+      "reach": 1,
+      "surface": "elderberry",
+      "year": 9999
+    }
+  ],
+  "stats": {
+    "byYear": {},
+    "answersByYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
+    "timesAsAnswer": 0,
+    "timesAsContext": 1,
+    "timesAsDistractor": 0,
+    "timesTested": 0
+  },
+  "status": "draft"
+}

@@ -64,7 +64,9 @@ export type KvKey =
   | 'goalSheetShownDay'
   | 'swUpdateAvailable'
   | 'theme'
-  | 'downloadReceivedBytes';
+  | 'downloadReceivedBytes'
+  /** The `examDate` (epoch ms) the season screen was last shown for — shows it once (§7.8). */
+  | 'seasonShownFor';
 
 export interface KvRow {
   readonly key: KvKey;

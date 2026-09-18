@@ -1,0 +1,45 @@
+{
+  "id": "banana",
+  "lemma": "banana",
+  "level": "A1",
+  "senses": [
+    {
+      "pos": "n",
+      "ipa": "/bəˈnɑːnə/",
+      "definition": "a long curved fruit with a yellow skin",
+      "translations": ["موز"],
+      "synonyms": [],
+      "antonyms": [],
+      "examples": [{ "en": "He slipped on a banana peel.", "fa": "او روی پوست موز لیز خورد." }],
+      "testedIn": [{ "paperId": "arshad-9999-p02", "questionNo": 1 }]
+    }
+  ],
+  "confusables": [],
+  "homograph": { "suspected": false, "note": null },
+  "occurrences": [
+    {
+      "occurrenceType": "tested",
+      "paperId": "arshad-9999-p02",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "optionIndex": 0,
+      "isAnswer": true,
+      "reach": 1,
+      "surface": "banana",
+      "year": 9999
+    }
+  ],
+  "stats": {
+    "byYear": { "9999": 1 },
+    "answersByYear": { "9999": 1 },
+    "distinctYears": 1,
+    "firstYear": 9999,
+    "lastYear": 9999,
+    "priority": 15,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft"
+}

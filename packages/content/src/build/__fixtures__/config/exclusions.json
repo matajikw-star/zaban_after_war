@@ -1,0 +1,4 @@
+{
+  "ids": ["cherry"],
+  "note": "fixture exclusion for the builder tests"
+}

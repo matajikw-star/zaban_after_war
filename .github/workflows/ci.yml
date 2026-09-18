@@ -36,6 +36,9 @@ jobs:
       - name: Test
         run: pnpm test
 
+      - name: Build content packages
+        run: pnpm content:build
+
       - name: Build
         run: pnpm build
 
@@ -87,6 +90,9 @@ jobs:
 
       - name: Install Chromium for Playwright
         run: pnpm --filter @kl/web exec playwright install --with-deps chromium
+
+      - name: Build content packages
+        run: pnpm content:build
 
       - name: Build
         run: pnpm build

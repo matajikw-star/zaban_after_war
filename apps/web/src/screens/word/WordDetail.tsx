@@ -7,11 +7,11 @@
  * actions, «این را بلدم» and the flag sheet.
  */
 
+import type { WordCard } from '@kl/content';
 import type { ItemId } from '@kl/core';
 import { ChevronRight, Flag } from 'lucide-react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
-import type { WordCard } from '@kl/content';
 import { outboxEnqueue } from '../../db/repo.ts';
 import { now } from '../../engine/clock.ts';
 import { cachedEvents } from '../../engine/fold-cache.ts';

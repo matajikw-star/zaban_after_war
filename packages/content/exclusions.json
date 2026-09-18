@@ -1,0 +1,4 @@
+{
+  "ids": ["as-like", "as-likewise"],
+  "note": "Invented options built from a correct answer and a distractor so they would look plausible and be wrong (arshad-1404-p06 q23) — not English. See .scratch/word-data/issues/04-non-words-and-latin-phrases.md. Ids stay frozen in content/lexicon/; only shipping is decided here."
+}

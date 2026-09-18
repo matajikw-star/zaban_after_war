@@ -1,0 +1,61 @@
+{
+  "id": "apple",
+  "lemma": "apple",
+  "level": "A1",
+  "senses": [
+    {
+      "pos": "n",
+      "ipa": "/ˈæpl/",
+      "definition": "a round fruit with firm white flesh and red, yellow or green skin",
+      "translations": ["سیب"],
+      "synonyms": [],
+      "antonyms": [],
+      "examples": [
+        { "en": "She packed an apple for lunch.", "fa": "او یک سیب برای ناهار برداشت." }
+      ],
+      "testedIn": [
+        { "paperId": "arshad-9999-p01", "questionNo": 1 },
+        { "paperId": "arshad-9999-p01", "questionNo": 2 }
+      ]
+    }
+  ],
+  "confusables": [],
+  "homograph": { "suspected": false, "note": null },
+  "occurrences": [
+    {
+      "occurrenceType": "tested",
+      "paperId": "arshad-9999-p01",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "optionIndex": 0,
+      "isAnswer": true,
+      "reach": 1,
+      "surface": "apple",
+      "year": 9999
+    },
+    {
+      "occurrenceType": "tested",
+      "paperId": "arshad-9999-p01",
+      "part": "vocabulary",
+      "questionNo": 2,
+      "optionIndex": 1,
+      "isAnswer": false,
+      "reach": 1,
+      "surface": "apple",
+      "year": 9999
+    }
+  ],
+  "stats": {
+    "byYear": { "9999": 2 },
+    "answersByYear": { "9999": 1 },
+    "distinctYears": 1,
+    "firstYear": 9999,
+    "lastYear": 9999,
+    "priority": 20,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 2
+  },
+  "status": "draft"
+}

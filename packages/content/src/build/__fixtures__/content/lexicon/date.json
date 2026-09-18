@@ -1,0 +1,34 @@
+{
+  "id": "date",
+  "lemma": "date",
+  "level": null,
+  "senses": [],
+  "confusables": [],
+  "homograph": { "suspected": false, "note": null },
+  "occurrences": [
+    {
+      "occurrenceType": "tested",
+      "paperId": "arshad-9999-p01",
+      "part": "vocabulary",
+      "questionNo": 1,
+      "optionIndex": 3,
+      "isAnswer": false,
+      "reach": 1,
+      "surface": "date",
+      "year": 9999
+    }
+  ],
+  "stats": {
+    "byYear": { "9999": 1 },
+    "answersByYear": {},
+    "distinctYears": 1,
+    "firstYear": 9999,
+    "lastYear": 9999,
+    "priority": 5,
+    "timesAsAnswer": 0,
+    "timesAsContext": 0,
+    "timesAsDistractor": 1,
+    "timesTested": 1
+  },
+  "status": "draft"
+}

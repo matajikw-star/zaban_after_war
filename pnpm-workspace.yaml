@@ -1,6 +1,7 @@
 packages:
   - "apps/*"
   - "packages/*"
+  - "server"
 
 # esbuild ships a platform binary that its install script unpacks; vitest needs it.
 allowBuilds:

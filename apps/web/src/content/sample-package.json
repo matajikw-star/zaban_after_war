@@ -1,0 +1,396 @@
+{
+  "packageId": "free",
+  "version": "0000-00-00.dev",
+  "builtAt": "2026-09-18T00:00:00.000Z",
+  "schemaVersion": 1,
+  "hash": "dev-fixture-not-a-real-hash",
+  "items": [
+    {
+      "id": "abandon",
+      "lemma": "abandon",
+      "rank": 1,
+      "weight": 6,
+      "level": "B1",
+      "senses": [
+        {
+          "pos": "verb",
+          "ipa": "/əˈbændən/",
+          "definition": "to leave someone or something behind for good",
+          "translations": ["رها کردن", "ترک کردن"],
+          "synonyms": ["desert", "forsake"],
+          "antonyms": ["keep", "retain"],
+          "examples": [{ "en": "They abandoned the car.", "fa": "آن‌ها ماشین را رها کردند." }]
+        }
+      ],
+      "confusables": [{ "word": "abundant", "note": "املای نزدیک، معنای بی‌ربط" }],
+      "homograph": { "suspected": false, "note": null },
+      "hint": {
+        "template": "تداعی صوتی",
+        "association": "اَبَن‌دن",
+        "sentence": "خانه را «اَبَن‌دن» کرد و رفت."
+      },
+      "exam": {
+        "timesTested": 6,
+        "timesAsAnswer": 3,
+        "years": [1396, 1399, 1402],
+        "lastYear": 1402,
+        "stems": [
+          {
+            "paperId": "arshad-1402-p01",
+            "year": 1402,
+            "questionNo": 12,
+            "stem": "The crew had to ..... the sinking ship within minutes.",
+            "options": ["abandon", "abolish", "absorb", "accuse"],
+            "key": 0,
+            "isAnswer": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "abundant",
+      "lemma": "abundant",
+      "rank": 2,
+      "weight": 5,
+      "level": "B2",
+      "senses": [
+        {
+          "pos": "adjective",
+          "ipa": "/əˈbʌndənt/",
+          "definition": "existing in large quantities",
+          "translations": ["فراوان", "پرشمار"],
+          "synonyms": ["plentiful", "ample"],
+          "antonyms": ["scarce"],
+          "examples": [{ "en": "Water is abundant here.", "fa": "آب اینجا فراوان است." }]
+        }
+      ],
+      "confusables": [{ "word": "abandon", "note": "املای نزدیک، معنای بی‌ربط" }],
+      "homograph": { "suspected": false, "note": null },
+      "hint": null,
+      "exam": {
+        "timesTested": 5,
+        "timesAsAnswer": 2,
+        "years": [1397, 1401],
+        "lastYear": 1401,
+        "stems": [
+          {
+            "paperId": "arshad-1401-p02",
+            "year": 1401,
+            "questionNo": 4,
+            "stem": "Rainfall is ..... in the north of the country.",
+            "options": ["abundant", "absent", "abrupt", "abstract"],
+            "key": 0,
+            "isAnswer": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "acquire",
+      "lemma": "acquire",
+      "rank": 3,
+      "weight": 5,
+      "level": "B2",
+      "senses": [
+        {
+          "pos": "verb",
+          "ipa": "/əˈkwaɪər/",
+          "definition": "to get or come to have something",
+          "translations": ["به دست آوردن", "کسب کردن"],
+          "synonyms": ["obtain", "gain"],
+          "antonyms": ["lose"],
+          "examples": [{ "en": "She acquired a new skill.", "fa": "او مهارت تازه‌ای کسب کرد." }]
+        }
+      ],
+      "confusables": [],
+      "homograph": { "suspected": false, "note": null },
+      "hint": null,
+      "exam": {
+        "timesTested": 5,
+        "timesAsAnswer": 4,
+        "years": [1395, 1400],
+        "lastYear": 1400,
+        "stems": [
+          {
+            "paperId": "arshad-1400-p01",
+            "year": 1400,
+            "questionNo": 7,
+            "stem": "Children ..... their first language without formal teaching.",
+            "options": ["acquire", "achieve", "accuse", "adjust"],
+            "key": 0,
+            "isAnswer": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "adjacent",
+      "lemma": "adjacent",
+      "rank": 4,
+      "weight": 4,
+      "level": "C1",
+      "senses": [
+        {
+          "pos": "adjective",
+          "ipa": "/əˈdʒeɪsnt/",
+          "definition": "next to or adjoining something",
+          "translations": ["مجاور", "هم‌جوار"],
+          "synonyms": ["neighbouring"],
+          "antonyms": ["distant"],
+          "examples": [{ "en": "The adjacent room was empty.", "fa": "اتاق مجاور خالی بود." }]
+        }
+      ],
+      "confusables": [],
+      "homograph": { "suspected": false, "note": null },
+      "hint": null,
+      "exam": {
+        "timesTested": 4,
+        "timesAsAnswer": 2,
+        "years": [1398],
+        "lastYear": 1398,
+        "stems": []
+      }
+    },
+    {
+      "id": "bear",
+      "lemma": "bear",
+      "rank": 5,
+      "weight": 4,
+      "level": "B1",
+      "senses": [
+        {
+          "pos": "verb",
+          "ipa": "/beər/",
+          "definition": "to tolerate or endure",
+          "translations": ["تحمل کردن"],
+          "synonyms": ["endure", "tolerate"],
+          "antonyms": [],
+          "examples": [
+            { "en": "I cannot bear the noise.", "fa": "نمی‌توانم این سروصدا را تحمل کنم." }
+          ]
+        },
+        {
+          "pos": "noun",
+          "ipa": "/beər/",
+          "definition": "a large heavy mammal",
+          "translations": ["خرس"],
+          "synonyms": [],
+          "antonyms": [],
+          "examples": [
+            { "en": "A brown bear crossed the road.", "fa": "یک خرس قهوه‌ای از جاده گذشت." }
+          ]
+        }
+      ],
+      "confusables": [{ "word": "bare", "note": "هم‌آوا، املای متفاوت" }],
+      "homograph": { "suspected": true, "note": "فعل و اسم، یک املا (ADR-0013)" },
+      "hint": null,
+      "exam": {
+        "timesTested": 4,
+        "timesAsAnswer": 1,
+        "years": [1394, 1403],
+        "lastYear": 1403,
+        "stems": []
+      }
+    },
+    {
+      "id": "coherent",
+      "lemma": "coherent",
+      "rank": 6,
+      "weight": 4,
+      "level": "C1",
+      "senses": [
+        {
+          "pos": "adjective",
+          "ipa": "/kəʊˈhɪərənt/",
+          "definition": "logical and consistent",
+          "translations": ["منسجم", "پیوسته"],
+          "synonyms": ["consistent", "logical"],
+          "antonyms": ["incoherent"],
+          "examples": [{ "en": "He gave a coherent answer.", "fa": "پاسخ منسجمی داد." }]
+        }
+      ],
+      "confusables": [],
+      "homograph": { "suspected": false, "note": null },
+      "hint": null,
+      "exam": {
+        "timesTested": 4,
+        "timesAsAnswer": 3,
+        "years": [1399, 1402],
+        "lastYear": 1402,
+        "stems": [
+          {
+            "paperId": "arshad-1402-p02",
+            "year": 1402,
+            "questionNo": 18,
+            "stem": "The report was well organised and ..... throughout.",
+            "options": ["coherent", "coincident", "collective", "competent"],
+            "key": 0,
+            "isAnswer": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "deliberate",
+      "lemma": "deliberate",
+      "rank": 7,
+      "weight": 3,
+      "level": "C1",
+      "senses": [
+        {
+          "pos": "adjective",
+          "ipa": "/dɪˈlɪbərət/",
+          "definition": "done on purpose",
+          "translations": ["عمدی", "سنجیده"],
+          "synonyms": ["intentional"],
+          "antonyms": ["accidental"],
+          "examples": [{ "en": "It was a deliberate choice.", "fa": "انتخابی عمدی بود." }]
+        }
+      ],
+      "confusables": [],
+      "homograph": { "suspected": true, "note": "صفت و فعل، یک املا" },
+      "hint": null,
+      "exam": {
+        "timesTested": 3,
+        "timesAsAnswer": 2,
+        "years": [1397],
+        "lastYear": 1397,
+        "stems": []
+      }
+    },
+    {
+      "id": "distinct",
+      "lemma": "distinct",
+      "rank": 8,
+      "weight": 3,
+      "level": "B2",
+      "senses": [
+        {
+          "pos": "adjective",
+          "ipa": "/dɪˈstɪŋkt/",
+          "definition": "clearly different or separate",
+          "translations": ["متمایز", "مشخص"],
+          "synonyms": ["separate", "distinctive"],
+          "antonyms": ["identical"],
+          "examples": [{ "en": "Two distinct groups formed.", "fa": "دو گروه متمایز شکل گرفت." }]
+        }
+      ],
+      "confusables": [{ "word": "distinguished", "note": "هم‌ریشه، معنای متفاوت" }],
+      "homograph": { "suspected": false, "note": null },
+      "hint": null,
+      "exam": {
+        "timesTested": 3,
+        "timesAsAnswer": 1,
+        "years": [1400],
+        "lastYear": 1400,
+        "stems": []
+      }
+    },
+    {
+      "id": "eliminate",
+      "lemma": "eliminate",
+      "rank": 9,
+      "weight": 3,
+      "level": "B2",
+      "senses": [
+        {
+          "pos": "verb",
+          "ipa": "/ɪˈlɪmɪneɪt/",
+          "definition": "to remove or get rid of completely",
+          "translations": ["حذف کردن", "از بین بردن"],
+          "synonyms": ["remove", "eradicate"],
+          "antonyms": ["add"],
+          "examples": [{ "en": "The plan eliminates waste.", "fa": "این طرح هدررفت را حذف می‌کند." }]
+        }
+      ],
+      "confusables": [],
+      "homograph": { "suspected": false, "note": null },
+      "hint": null,
+      "exam": {
+        "timesTested": 3,
+        "timesAsAnswer": 2,
+        "years": [1401],
+        "lastYear": 1401,
+        "stems": []
+      }
+    },
+    {
+      "id": "inevitable",
+      "lemma": "inevitable",
+      "rank": 10,
+      "weight": 2,
+      "level": "C1",
+      "senses": [
+        {
+          "pos": "adjective",
+          "ipa": "/ɪnˈevɪtəbl/",
+          "definition": "certain to happen and impossible to avoid",
+          "translations": ["اجتناب‌ناپذیر", "حتمی"],
+          "synonyms": ["unavoidable"],
+          "antonyms": ["avoidable"],
+          "examples": [{ "en": "Change is inevitable.", "fa": "تغییر اجتناب‌ناپذیر است." }]
+        }
+      ],
+      "confusables": [],
+      "homograph": { "suspected": false, "note": null },
+      "hint": null,
+      "exam": {
+        "timesTested": 2,
+        "timesAsAnswer": 1,
+        "years": [1403],
+        "lastYear": 1403,
+        "stems": []
+      }
+    },
+    {
+      "id": "reluctant",
+      "lemma": "reluctant",
+      "rank": 11,
+      "weight": 2,
+      "level": "B2",
+      "senses": [
+        {
+          "pos": "adjective",
+          "ipa": "/rɪˈlʌktənt/",
+          "definition": "unwilling and hesitant",
+          "translations": ["بی‌میل", "اکراه‌دار"],
+          "synonyms": ["unwilling", "hesitant"],
+          "antonyms": ["eager"],
+          "examples": [{ "en": "She was reluctant to answer.", "fa": "برای پاسخ دادن بی‌میل بود." }]
+        }
+      ],
+      "confusables": [],
+      "homograph": { "suspected": false, "note": null },
+      "hint": null,
+      "exam": {
+        "timesTested": 2,
+        "timesAsAnswer": 2,
+        "years": [1398],
+        "lastYear": 1398,
+        "stems": []
+      }
+    },
+    {
+      "id": "set-off",
+      "lemma": "set off",
+      "rank": 12,
+      "weight": 0,
+      "level": "B1",
+      "senses": [
+        {
+          "pos": "phrasal verb",
+          "ipa": null,
+          "definition": "to begin a journey",
+          "translations": ["راه افتادن", "عازم شدن"],
+          "synonyms": ["depart"],
+          "antonyms": ["arrive"],
+          "examples": [{ "en": "They set off at dawn.", "fa": "سپیده‌دم راه افتادند." }]
+        }
+      ],
+      "confusables": [],
+      "homograph": { "suspected": false, "note": null },
+      "hint": null,
+      "exam": { "timesTested": 0, "timesAsAnswer": 0, "years": [], "lastYear": null, "stems": [] }
+    }
+  ]
+}

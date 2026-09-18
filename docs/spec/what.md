@@ -436,7 +436,7 @@ Caddy gzips in production; the numbers above are measured with `node:zlib`, not 
 
 ## 7. The client app (`apps/web`)
 
-### 7.1 Shape
+### 7.1 Shape [live]
 
 ```
 src/
@@ -446,10 +446,12 @@ src/
   ui/                 shadcn-style primitives (Button, Sheet, Dialog, Progress, ...)
   stores/             zustand: auth.ts, content.ts, session.ts, sync.ts, settings.ts
   db/                 dexie.ts (schema), repo.ts (typed reads/writes; the only file that touches Dexie)
-  engine/             thin adapters over @kl/core (fold cache, rng, clock)
-  net/                api.ts (typed fetch wrappers for every route in §8), pocketbase.ts (SDK instance)
+  engine/             thin adapters over @kl/core (fold cache, rng, clock) + index.ts, the bound API
+  net/                api.ts (typed fetch wrappers for every route in §8)
   sync/               backup.ts (state machine), download.ts (state machine)
   log/                breadcrumbs.ts, errors.ts (capture + report), snapshot.ts
+  content/            types.ts — the §6.1 package shape, until @kl/content exports it
+  errors.ts           AppError (§17.4)
   strings.ts          every Persian UI string, keyed; no string literals in components
   version.ts          APP_VERSION + BUILD_SHA injected by Vite
 ```
@@ -457,7 +459,15 @@ src/
 Rules: a screen reads stores and calls repo/net functions; it never touches Dexie or fetch
 directly. Every async operation is a named state machine with its states listed in this file.
 
-### 7.2 Identity on the device
+`net/pocketbase.ts` was planned and is not built: the app talks to our own routes (§8.2) and
+never to PocketBase's generic collection API, so the SDK would be a dependency with no caller.
+
+Bootstrap order in `main.tsx`: install error capture → open the database → mint or read the
+`installId` → load auth and settings from `kv` → load the content package the entitlement allows
+→ fold the review log → mount. A content package that cannot be loaded is reported and **not**
+fatal: the shell, the settings and the existing review log all still work without it.
+
+### 7.2 Identity on the device [live]
 
 - `installId` — UUIDv7 minted on first launch, stored in `kv`. Tags every event as `device`.
 - `userId` + auth token — only after OTP login; stored in `kv` (not localStorage, so one place
@@ -465,18 +475,22 @@ directly. Every async operation is a named state machine with its states listed 
   An expired token never blocks study; it only pauses backup until the next successful refresh
   or re-login, and the settings screen shows that quietly.
 
-### 7.3 Dexie schema (`db/dexie.ts`, version 1)
+### 7.3 Dexie schema (`db/dexie.ts`, version 1) [live]
 
 | Table | Key | Indexes | Purpose |
 |---|---|---|---|
 | `events` | `id` | `synced`, `itemId`, `at` | Every `ReviewEvent`, local and pulled. `synced: 0|1`. |
 | `outbox` | `seq` (auto) | `kind`, `createdAt` | Non-progress uploads: `flag`, `beacon`, `error`. `{kind, payload, attempts, lastError}`. |
 | `packages` | `packageId` | | `{packageId, version, hash, bytes, json}` — the whole package as one record. |
-| `kv` | `key` | | `installId`, `auth`, `profile`, `entitlement`, `syncCursor`, `lastBackupAt`, `onboarding`, `pendingPayment`, `presentationsBeforePaywall`, `swUpdateAvailable`. |
+| `kv` | `key` | | `installId`, `auth`, `profile`, `entitlement`, `syncCursor`, `lastBackupAt`, `onboarding`, `pendingPayment`, `presentationsBeforePaywall`, `swUpdateAvailable`, `theme`, `downloadReceivedBytes`. |
 
 Schema changes are Dexie versions with upgrade functions; never delete `events`.
 
-### 7.4 Backup (sync) state machine — `sync/backup.ts`
+The `kv` keys are a TypeScript union in `db/dexie.ts`, so a typo is a compile error and the set
+above is enumerable. `theme` (§7.9's manual override) and `downloadReceivedBytes` (§7.5's resume
+point) were added in the app-shell ticket.
+
+### 7.4 Backup (sync) state machine — `sync/backup.ts` [building]
 
 The owner's word for this is **backup**; the mechanism is ADR-0002's event-log union.
 
@@ -504,7 +518,14 @@ open; immediately after login; a manual button in settings.
 Anonymous installs are not backed up (there is no identity to restore to). The app asks the user
 to «ذخیرهٔ پیشرفت با شمارهٔ موبایل» once after 50 presentations and always from settings.
 
-### 7.5 Content download state machine — `sync/download.ts`
+Built so far: the state union, the pure `transition(state, event)` (total — every state answers
+every event — and tested as a full table) and the backoff ladder. `run()` is a stub that logs one
+breadcrumb; the push, the outbox drain and the pull are wired in Phase 4. Two transitions the
+spec did not name, decided here: a `START` while a run is in flight is ignored rather than
+restarting it, and a `START` from `error` **does** run immediately, because it is the manual
+button in settings and a user who taps it should not wait out an hour's backoff.
+
+### 7.5 Content download state machine — `sync/download.ts` [building]
 
 States: `none → checking → downloading(progress) → verifying → installed` and `error(reason)`
 with the same backoff as backup. Runs when online and entitled and `packages.paid` is missing or
@@ -519,7 +540,13 @@ older than the manifest's version.
 - The paywall-result screen and settings show progress («دانلود واژه‌ها ۶۳٪ — با اینترنت ادامه
   پیدا می‌کند»). Study continues on whatever package is active during the download.
 
-### 7.6 Entitlement on the device
+Built so far: the state union and the pure `transition(state, event)`, total over six states and
+eight events and tested as a full 48-cell table; `run()` is a stub until Phase 5. `installed`
+carries the version it installed, and `error → RETRY` returns to `none` rather than to the
+interrupted step, so the next attempt re-reads the manifest — the received byte count is in `kv`
+and the `Range` header makes restarting from the top nearly free.
+
+### 7.6 Entitlement on the device [building]
 
 `kv.entitlement = { status: 'none' | 'full', source, grantedAt, checkedAt }`. Written only from a
 server response (`/api/me` or the purchase result). Read offline forever; never expires. An online
@@ -543,6 +570,12 @@ cache is **kept** until the owner acts — the app never revokes on its own.
 ### 7.8 Screens
 
 All screens work offline unless marked **online**. Persian copy lives in `strings.ts`.
+
+**Every route below exists as of the app-shell ticket**, in one flat `createBrowserRouter` table
+in `routes.tsx`, inside a root layout that owns the theme attribute and the React error boundary.
+All of them but `/` are placeholders that render their Persian title; each is built by its own
+ticket. A path that matches nothing renders a Persian not-found screen inside the same layout,
+because the service worker answers every navigation with `index.html` (§7.7).
 
 | Route | Screen | States / notes |
 |---|---|---|
@@ -705,7 +738,7 @@ the old progress → if entitled, paid download starts → done.
 
 Goal: any bug is fixable by an agent from the log record alone. Three layers.
 
-### 10.1 Client error record (`client_errors`)
+### 10.1 Client error record (`client_errors`) [live] (client side)
 
 Captured by `log/errors.ts` from `window.onerror`, `unhandledrejection`, a top-level React error
 boundary, service-worker errors, and explicit `reportError(kind, err, data)` calls in the state

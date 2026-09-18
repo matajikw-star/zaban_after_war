@@ -1,6 +1,6 @@
 # 01 — App shell: routing, stores, Dexie, repo, engine adapters, logging, UI primitives
 
-Status: ready-for-agent
+Status: resolved
 Type: task
 Phase: 3
 
@@ -48,3 +48,31 @@ calls `repo`/`net` functions.
 
 `pnpm dev` shows the placeholder home; every route renders; `pnpm test` covers the above;
 `what.md` §7.1–7.3 marked `live`, §7.8 `building`.
+
+## Comments
+
+**2026-09-18 — resolved.** `apps/web/src` now holds the whole shell: `routes.tsx` (one flat
+`createBrowserRouter` table with all thirteen routes of §7.8 plus a not-found, inside a root
+layout that owns the theme attribute, the React error boundary and a `nav` breadcrumb per route
+change), `db/dexie.ts` (schema version 1 exactly as §7.3) and `db/repo.ts` (the only importer of
+Dexie), the engine adapters (`clock.ts`, `rng.ts`, `fold-cache.ts` and `index.ts`, whose bound
+functions are the only way a component reaches `@kl/core`), five zustand stores, the three
+logging files, `net/api.ts` with one typed function per §8.2 route, the two state machines, and
+eleven UI primitives on `radix-ui` with the tokens and the glass look.
+
+243 unit tests (232 existing + the app's own, across eight files): repo round-trips, the fold
+cache re-folding on `recordReview`, the breadcrumb ring capping at 50, the §10.1 record carrying
+every field, both `transition()` tables in full (backup 4 x 5, download 6 x 8), `faNumber` /
+`faPercent`, the `AppError` mapping against a mocked `fetch`, and the content store including
+the dev-fixture fallback. `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm build`, `pnpm budget`
+(146.7 KB gzipped of 300 KB) and `KL_E2E_CHANNEL=msedge pnpm e2e` all pass.
+
+No runtime dependency was added. Two devDependencies of `apps/web` were: `happy-dom` 20.14.5 and
+`fake-indexeddb` 6.2.5, recorded in `how-why.md` §5.3. The root `vitest.config.ts` is now a
+two-project configuration so one `pnpm test` covers `packages/*` (node) and `apps/web`
+(happy-dom).
+
+Decisions the spec left open are in `how-why.md` §5.4. The three that change behaviour: a
+missing content package is reported and not fatal, so the shell still works without one; a
+git-ignored `free.json` falls back to a twelve-word dev fixture behind `import.meta.env.DEV`;
+and `net/pocketbase.ts` was dropped from §7.1 because the app calls only our own routes.

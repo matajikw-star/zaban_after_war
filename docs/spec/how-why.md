@@ -302,6 +302,48 @@ its own, not inside a scaffold.
     1,203 of 2,098 entries are mid-pipeline (word data not yet written, per
     `extraction/WORD-DATA.md`) and that is not a defect; `occurrences[] ≥ 1` still applies to
     every entry, pipeline stage notwithstanding.
+### 5.4 Dependencies added by the app shell (ticket dev-web/01, 2026-09-18)
+
+Two devDependencies of `apps/web`, both only for `vitest`. No runtime dependency was added: the
+shell is built entirely from the list in §5.1.
+
+| Dependency | Version | Why |
+|---|---|---|
+| `happy-dom` | 20.14.5 | The app's unit tests touch the DOM — the theme attribute, the error-capture handlers, `matchMedia`, `navigator` — and `packages/core`'s `node` environment has none of it. Chosen over `jsdom` because it starts in about a third of the time and this suite runs on every commit; nothing here needs jsdom's stricter spec coverage. |
+| `fake-indexeddb` | 6.2.5 | `db/repo.ts` is worth testing against a real IndexedDB rather than a mocked Dexie, because the round-trips it gets wrong are index queries (`where('synced').equals(0)`), which a mock would not model. Loaded as `fake-indexeddb/auto` from `apps/web/vitest.setup.ts`, before any module that constructs the Dexie instance. |
+
+Consequence: the root `vitest.config.ts` became a two-project configuration — `packages` in the
+`node` environment, `apps/web` in `happy-dom` — so one `pnpm test` still runs everything.
+
+### 5.5 Things the app shell had to decide (2026-09-18)
+
+- **A dev fixture stands in for a missing `free.json`.** `apps/web/public/content/free.json` is
+  written by `pnpm content:build` and is git-ignored, so a fresh clone has no content at all and
+  every screen would be empty. `apps/web/src/content/sample-package.json` holds twelve words that
+  the content store falls back to when the fetch 404s, behind `import.meta.env.DEV` so Vite folds
+  the branch away in a production build (verified: neither the fixture nor its strings appear in
+  `dist`). The fallback logs a breadcrumb naming itself, so it can never be mistaken for real
+  content in a log.
+- **A missing content package is reported, not fatal.** Bootstrap catches the content step and
+  mounts anyway. Blanking the app would also take away settings, progress and the review log the
+  user already has, and a package that failed to load is a broken build, which the error record
+  now says plainly.
+- **`WordCard` and `ContentPackage` are duplicated into `apps/web/src/content/types.ts`**, copied
+  verbatim from §6.1, because `packages/content` was being built in parallel and did not export
+  them yet. The file says to delete it and switch to the `@kl/content` export the moment it lands.
+- **`net/pocketbase.ts` was dropped from §7.1.** The app calls our own routes (§8.2) and never
+  PocketBase's collection API, so the SDK instance the shape diagram promised has no caller.
+- **The error fingerprint falls back to djb2 when Web Crypto is absent.** §10.1 asks for
+  sha1(kind + message + top stack frame); `crypto.subtle` is missing on an insecure origin and in
+  some test environments. The fallback digest is prefixed `djb2-`, so a record built without
+  crypto is visible as such in the data rather than passing as a short sha1.
+- **`engine/index.ts` is the one `index.ts` in `apps/web/src`.** §17.1 bans barrel files; this is
+  not one — it holds the bound engine functions themselves rather than re-exporting other modules.
+  Every UI primitive is imported by its own file, with no `ui/index.ts`.
+- **The Dexie table fields use `declare`, not `!`.** With `useDefineForClassFields` (ES2022
+  target) a definite-assignment field is defined as `undefined` on the instance and shadows the
+  table objects Dexie installs. This cost an afternoon in the predecessor project; it is written
+  down here so it does not cost a second one.
 
 ## 6. How to extend this file
 

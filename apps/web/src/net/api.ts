@@ -11,7 +11,7 @@
  */
 
 import type { ReviewEvent } from '@kl/core';
-import type { ContentManifest } from '../content/types.ts';
+import type { ContentManifest } from '../content/manifest.ts';
 import { now } from '../engine/clock.ts';
 import { AppError } from '../errors.ts';
 import { breadcrumb } from '../log/breadcrumbs.ts';

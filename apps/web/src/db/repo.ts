@@ -5,8 +5,8 @@
  * every query in one file, which is what makes "why is the queue empty" answerable from a log.
  */
 
+import type { ContentPackage, PackageId } from '@kl/content';
 import type { ReviewEvent } from '@kl/core';
-import type { ContentPackage, PackageId } from '../content/types.ts';
 import { now } from '../engine/clock.ts';
 import { AppError } from '../errors.ts';
 import { breadcrumb } from '../log/breadcrumbs.ts';

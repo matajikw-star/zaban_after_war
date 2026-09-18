@@ -344,6 +344,50 @@ Consequence: the root `vitest.config.ts` became a two-project configuration — 
   target) a definite-assignment field is defined as `undefined` on the instance and shadows the
   table objects Dexie installs. This cost an afternoon in the predecessor project; it is written
   down here so it does not cost a second one.
+- **The duplicated `WordCard` is gone.** `packages/content` now exports the §6.1 shapes, so
+  `apps/web/src/content/types.ts` was deleted and every importer takes `WordCard`,
+  `ContentPackage` and `PackageId` from `@kl/content`. What was left of the file — the
+  `/api/content/manifest` response of §8.2, which is about content without being content — moved
+  to `apps/web/src/content/manifest.ts` and kept its name honest.
+- **Only the first blank of a multi-blank stem is filled.** 75 of the 1,085 transcribed stems
+  have two or more `.....` markers, because the paper tested two words in one sentence. The card
+  cannot know that its lemma belongs in the second gap, so the later gaps render as empty
+  underlines rather than repeating the word in a place it may not go.
+- **The card's exam sentence is pinned, not picked.** `primarySentence` takes the answered stem
+  with the highest year and breaks a tie on `paperId` then `questionNo`. Any unordered choice
+  would mean the same word showing a different sentence on the next review, which reads as a bug
+  even when it is not.
+- **A sense with no translation sinks to the end.** Word data is 895 of 2,098 words, so a
+  half-filled card exists today. Leading with an untranslated sense would show a back with
+  nothing on it; `orderedSenses` puts the translated senses first and keeps the build's order
+  among them.
+- **The paywall count is written to `kv` before the navigation, and the "already shown" flag is
+  per session.** The count is durable so a reload cannot buy another hundred words; the flag is
+  in the session store so «بعداً» genuinely returns the user to studying (§7.8) instead of
+  bouncing them back to the paywall on the next card. A `freePresentationLimit` of 0 disables the
+  paywall, which is how server config turns it off without a build.
+- **The presentation that triggers the paywall shows no feedback.** It navigates straight to
+  `/paywall`. Printing «دفعهٔ بعد» and then moving the screen out from under it was worse than
+  losing one box animation.
+- **Beacons fire on a crossing, not an equality.** `reviews_10` asks whether the lifetime total
+  moved from below 10 to 10 or more. A device that restores a backup folds from 0 to 400 in one
+  step, and `total === 10` would have missed every threshold on exactly the devices that earned
+  them.
+- **`faYear` joins `faNumber` in `ui/format.ts`.** `Intl.NumberFormat('fa-IR')` groups, so a
+  Jalali year printed with `faNumber` reads «۱٬۴۰۲». A year is a label, not a quantity.
+- **Two new engine files rather than more bound functions.** `engine/fold-reads.ts` (`itemBox`,
+  `totalPresentations`) and `engine/goal-sheet.ts` (`todayKey`, `shouldShowGoalSheet`) are
+  projections of the cached fold and of `dayKey`, not `@kl/core` calls, so they sit beside
+  `engine/index.ts` instead of inside it — and they keep `@kl/core` out of the screen (§17.6).
+- **The overflow menu is a dropdown, the other two are sheets.** Opening the flag sheet out of a
+  sheet stacks two focus traps; Radix's `DropdownMenu` closes itself first, so there is never
+  more than one modal on screen.
+- **The toast lives in `screens/review/`.** The review screen is the only place in the app that
+  confirms something without changing what is on screen. A shared toast would be a provider, a
+  queue and a portal for one caller; it moves to `ui/` when a second screen needs one.
+- **`/paywall` ships as a placeholder with a real way out.** The review loop needs somewhere to
+  send a free user at the limit, and §7.8 requires «بعداً» to return them to the queue. The
+  argument and that button are real from this ticket; the price and «خرید» arrive with Phase 5.
 
 ## 6. How to extend this file
 

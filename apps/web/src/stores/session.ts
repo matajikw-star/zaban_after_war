@@ -25,11 +25,17 @@ export interface SessionState {
   readonly presentations: number;
   readonly correct: number;
   readonly conquered: number;
+  /**
+   * True once `/paywall` has been shown in this session. A free user who taps «بعداً» keeps
+   * studying (§7.8) and must not be bounced to the paywall on the very next card.
+   */
+  readonly paywallShown: boolean;
   start: () => void;
   setCard: (card: NextCard | null) => void;
   reveal: () => void;
   /** Called after `engine.recordReview` resolves, with what the fold now says. */
   countAnswer: (correct: boolean, conquered: boolean) => void;
+  markPaywallShown: () => void;
   end: () => void;
 }
 
@@ -41,9 +47,17 @@ export const useSessionStore = create<SessionState>()((set, get) => ({
   presentations: 0,
   correct: 0,
   conquered: 0,
+  paywallShown: false,
 
   start: () => {
-    set({ startedAt: now(), presentations: 0, correct: 0, conquered: 0, revealed: false });
+    set({
+      startedAt: now(),
+      presentations: 0,
+      correct: 0,
+      conquered: 0,
+      revealed: false,
+      paywallShown: false,
+    });
     breadcrumb('log', 'session.start');
   },
 
@@ -71,6 +85,11 @@ export const useSessionStore = create<SessionState>()((set, get) => ({
       conquered: state.conquered + (conquered ? 1 : 0),
     });
     breadcrumb('log', 'session.countAnswer', { correct, conquered });
+  },
+
+  markPaywallShown: () => {
+    set({ paywallShown: true });
+    breadcrumb('nav', 'session.paywallShown');
   },
 
   end: () => {

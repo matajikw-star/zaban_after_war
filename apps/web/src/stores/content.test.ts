@@ -1,5 +1,5 @@
+import type { ContentPackage } from '@kl/content';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import type { ContentPackage } from '../content/types.ts';
 import { db } from '../db/dexie.ts';
 import { putPackage } from '../db/repo.ts';
 import { breadcrumbs, clearBreadcrumbs } from '../log/breadcrumbs.ts';

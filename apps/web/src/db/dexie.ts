@@ -8,9 +8,9 @@
  * never deleted — it is the source of truth for user progress (ADR-0002).
  */
 
+import type { ContentPackage, PackageId } from '@kl/content';
 import type { ReviewEvent } from '@kl/core';
 import Dexie, { type Table } from 'dexie';
-import type { ContentPackage, PackageId } from '../content/types.ts';
 
 /** A `ReviewEvent` plus the one mutable bit the device owns: has the server got it yet. */
 export interface EventRow {
@@ -60,6 +60,8 @@ export type KvKey =
   | 'onboarding'
   | 'pendingPayment'
   | 'presentationsBeforePaywall'
+  /** The Tehran `dayKey` the goal-reached sheet was last shown on; once a day, never blocking. */
+  | 'goalSheetShownDay'
   | 'swUpdateAvailable'
   | 'theme'
   | 'downloadReceivedBytes';

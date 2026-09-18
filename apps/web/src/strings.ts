@@ -53,6 +53,66 @@ export const strings = {
     goalRing: 'حلقهٔ هدف امروز',
     progressBar: 'نوار پیشرفت',
   },
+
+  /** The review screen (what.md §7.8). Appended as one block by the review ticket. */
+  review: {
+    back: 'بازگشت',
+    end: 'پایان',
+    overflow: 'گزینه‌های بیشتر',
+    tapToReveal: 'برای دیدن معنی لمس کنید',
+    empty: 'فعلاً کلمه‌ای برای مرور نیست.',
+
+    // The exam badge: «۲ بار در کنکور، آخرین بار ۱۴۰۲».
+    examTimes: 'بار در کنکور',
+    examLastYear: 'آخرین بار',
+
+    gradeForgot: 'بلد نبودم',
+    gradeKnew: 'بلد بودم',
+
+    more: 'بیشتر',
+    definition: 'تعریف',
+    pronunciation: 'تلفظ',
+    synonyms: 'مترادف‌ها',
+    antonyms: 'متضادها',
+    otherSenses: 'معنی‌های دیگر',
+    homograph: 'این املا بیش از یک معنی دارد.',
+    confusables: 'کلمه‌های شبیه',
+    examHistory: 'سابقهٔ کنکور',
+    question: 'سؤال',
+
+    hintTitle: 'راهنمای یادگیری',
+    hintSoon: 'راهنمای این کلمه به‌زودی اضافه می‌شود.',
+
+    know: 'این را بلدم',
+    flag: 'این کلمه اشکال دارد',
+    flagQuestion: 'کدام بخش مشکل دارد؟',
+    flagTranslation: 'معنی درست نیست',
+    flagExample: 'مثال اشکال دارد',
+    flagHint: 'راهنما اشکال دارد',
+    flagCancel: 'انصراف',
+    flagRecorded: 'ثبت شد',
+
+    // Feedback after a grade: «جعبهٔ ۱ ← جعبهٔ ۲» and «دفعهٔ بعد: ۲ روز دیگر».
+    box: 'جعبهٔ',
+    boxNew: 'تازه',
+    conquered: 'فتح شد',
+    nextDue: 'دفعهٔ بعد',
+    inMinutes: 'دقیقه دیگر',
+    inHours: 'ساعت دیگر',
+    inDays: 'روز دیگر',
+
+    goalTitle: 'به هدف امروز رسیدی',
+    goalBody: 'می‌توانی همین‌جا استراحت کنی، یا اگر حالش را داری ادامه بدهی.',
+    goalContinue: 'ادامه می‌دهم',
+    goalFinish: 'پایان جلسه',
+  },
+
+  /** The paywall (what.md §7.8). Placeholder copy until Phase 5 builds the real screen. */
+  paywall: {
+    pace: 'نسخهٔ رایگان ۱۵۰ کلمه دارد. با نسخهٔ کامل، همهٔ کلمه‌هایی که ده سال اخیر در کنکور آمده‌اند به مرور می‌رسند و پیش از روز آزمون تمام می‌شوند.',
+    soon: 'خرید در مرحلهٔ بعد فعال می‌شود.',
+    later: 'بعداً',
+  },
 } as const;
 
 export type Strings = typeof strings;

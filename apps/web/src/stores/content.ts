@@ -7,9 +7,9 @@
  * engine's `ContentItem[]`, and a lemma lookup for the card.
  */
 
+import type { ContentPackage, PackageId, WordCard } from '@kl/content';
 import type { ContentItem, ItemId } from '@kl/core';
 import { create } from 'zustand';
-import type { ContentPackage, PackageId, WordCard } from '../content/types.ts';
 import { getPackage, putPackage } from '../db/repo.ts';
 import { AppError } from '../errors.ts';
 import { breadcrumb } from '../log/breadcrumbs.ts';

@@ -450,7 +450,7 @@ src/
   net/                api.ts (typed fetch wrappers for every route in §8)
   sync/               backup.ts (state machine), download.ts (state machine)
   log/                breadcrumbs.ts, errors.ts (capture + report), snapshot.ts
-  content/            types.ts — the §6.1 package shape, until @kl/content exports it
+  content/            manifest.ts — the §8.2 manifest shape (the package shape is @kl/content)
   errors.ts           AppError (§17.4)
   strings.ts          every Persian UI string, keyed; no string literals in components
   version.ts          APP_VERSION + BUILD_SHA injected by Vite
@@ -482,13 +482,14 @@ fatal: the shell, the settings and the existing review log all still work withou
 | `events` | `id` | `synced`, `itemId`, `at` | Every `ReviewEvent`, local and pulled. `synced: 0|1`. |
 | `outbox` | `seq` (auto) | `kind`, `createdAt` | Non-progress uploads: `flag`, `beacon`, `error`. `{kind, payload, attempts, lastError}`. |
 | `packages` | `packageId` | | `{packageId, version, hash, bytes, json}` — the whole package as one record. |
-| `kv` | `key` | | `installId`, `auth`, `profile`, `entitlement`, `syncCursor`, `lastBackupAt`, `onboarding`, `pendingPayment`, `presentationsBeforePaywall`, `swUpdateAvailable`, `theme`, `downloadReceivedBytes`. |
+| `kv` | `key` | | `installId`, `auth`, `profile`, `entitlement`, `syncCursor`, `lastBackupAt`, `onboarding`, `pendingPayment`, `presentationsBeforePaywall`, `goalSheetShownDay`, `swUpdateAvailable`, `theme`, `downloadReceivedBytes`. |
 
 Schema changes are Dexie versions with upgrade functions; never delete `events`.
 
 The `kv` keys are a TypeScript union in `db/dexie.ts`, so a typo is a compile error and the set
 above is enumerable. `theme` (§7.9's manual override) and `downloadReceivedBytes` (§7.5's resume
-point) were added in the app-shell ticket.
+point) were added in the app-shell ticket; `goalSheetShownDay` (the Tehran `dayKey` the
+goal-reached sheet last appeared on) in the review ticket.
 
 ### 7.4 Backup (sync) state machine — `sync/backup.ts` [building]
 
@@ -573,20 +574,20 @@ All screens work offline unless marked **online**. Persian copy lives in `string
 
 **Every route below exists as of the app-shell ticket**, in one flat `createBrowserRouter` table
 in `routes.tsx`, inside a root layout that owns the theme attribute and the React error boundary.
-All of them but `/` are placeholders that render their Persian title; each is built by its own
-ticket. A path that matches nothing renders a Persian not-found screen inside the same layout,
+The rows marked **[live]** are built; the rest are placeholders that render their Persian title,
+each waiting on its own ticket. A path that matches nothing renders a Persian not-found screen inside the same layout,
 because the service worker answers every navigation with `index.html` (§7.7).
 
 | Route | Screen | States / notes |
 |---|---|---|
 | `/onboarding` | 3 slides (what it is, the exam-frequency claim, Leitner in one picture) → minutes/day → exam date (Jalali picker, skippable) → field (skippable, from `content/field-codes.json`) → placement (skippable) → install nudge | Writes `profile`; `beacon onboarding_done`. |
 | `/` | Home | Goal ring (today's presentations / goal), streak, progress %, conquered count, one primary button «شروع مرور», the update chip, backup status dot. |
-| `/review` | Card | Front: word, exam badge («۱ بار در کنکور، سال ۱۴۰۲»), tap to reveal. Back: translations + one sentence (the exam stem for answer-words, else the authored example); «بیشتر» expands definition, hint, other senses, confusables, exam history. Buttons: «بلد نبودم» / «بلد بودم»; overflow: «این را بلدم» (know), «این کلمه اشکال دارد» (flag sheet with 3 reasons). Feedback: box change and «دفعهٔ بعد: ۲ روز دیگر». Goal reached → congratulation sheet suggesting a break, never blocking. Paywall trigger → `/paywall`. |
+| `/review` **[live]** | Card | Front: word, exam badge («۱ بار در کنکور، سال ۱۴۰۲»), tap to reveal. Back: translations + one sentence (the exam stem for answer-words, else the authored example); «بیشتر» expands definition, other senses, confusables, exam history, and «راهنمای یادگیری» is its own collapsed disclosure. Buttons: «بلد نبودم» / «بلد بودم»; overflow (⋯): «این را بلدم» (know), «این کلمه اشکال دارد» (flag sheet with 3 reasons → `outbox` `flag`). Feedback: box change and «دفعهٔ بعد: ۲ روز دیگر», ~900 ms or a tap. Goal reached → congratulation sheet, once per Tehran day (`kv.goalSheetShownDay`), never blocking. `kv.presentationsBeforePaywall` counts up while the entitlement is `none`; at `freePresentationLimit` → `/paywall`, once per session, `beacon paywall_shown`. Beacons `first_review`, `reviews_10`, `reviews_100` on crossing. «پایان» → `/session/summary`. |
 | `/session/summary` | End of session | Presentations, accuracy, conquered today, streak; «ادامه» or «خانه». |
 | `/boxes` | Leitner boxes | Five columns with counts; tap → list of words in that box with next-due; tap word → `/word/:id`. |
 | `/word/:id` | Word detail | Full card plus history (every review as a dot on a timeline), «این را بلدم», flag. |
 | `/progress` | Progress | Percent with the one-sentence rule («هر بار که یک کلمه در کنکور آمده، یک امتیاز»), conquered/total, 30-day bar chart, pace estimate vs exam date with a goal nudge. |
-| `/paywall` | Paywall | The pace argument, what is included, price with strike-through, «خرید» → login if anonymous → `/checkout`. «بعداً» returns to study (early-pool cards keep the app usable). |
+| `/paywall` | Paywall | The pace argument, what is included, price with strike-through, «خرید» → login if anonymous → `/checkout`. «بعداً» returns to study (early-pool cards keep the app usable). **Placeholder until Phase 5:** the argument and «بعداً» are live; the price and «خرید» arrive with payment. |
 | `/login` | Phone + OTP — **online** | States: `enterPhone → sending → enterCode → verifying → done`; errors: rate-limited (shows retry-after), wrong code (attempts left), network (retry). Explains why the number is needed (restore + purchase). |
 | `/checkout` | Price, discount code — **online** | `quote` on code entry; «پرداخت» → `pay/request` → redirect to Zarinpal. |
 | `/purchase/result` | Callback landing — **online** | `?status=ok|failed`; on ok: fetch `/api/me`, cache entitlement, start download, show progress; on failed: reason + retry. If a `pendingPayment` exists on next launch, ask `/api/pay/status/:id` before assuming failure. |

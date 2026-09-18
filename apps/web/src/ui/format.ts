@@ -13,6 +13,17 @@ export function faNumber(value: number): string {
   return numberFormat.format(value);
 }
 
+const yearFormat = new Intl.NumberFormat('fa-IR', { useGrouping: false });
+
+/**
+ * `1402` → `۱۴۰۲`. A year is a label, not a quantity: `faNumber` would group it as `۱٬۴۰۲`,
+ * which no Iranian reader would recognise as a Jalali year.
+ */
+export function faYear(value: number): string {
+  if (!Number.isFinite(value)) return '—';
+  return yearFormat.format(value);
+}
+
 const percentFormat = new Intl.NumberFormat('fa-IR', { maximumFractionDigits: 0 });
 
 /** `63` → `۶۳٪`. The argument is already 0..100, as `progress().percent` returns it. */

@@ -1,6 +1,6 @@
+import type { ContentPackage } from '@kl/content';
 import type { ReviewEvent } from '@kl/core';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import type { ContentPackage } from '../content/types.ts';
 import { db } from './dexie.ts';
 import {
   allEvents,

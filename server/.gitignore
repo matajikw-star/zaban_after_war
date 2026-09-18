@@ -1,0 +1,9 @@
+# The pinned PocketBase binary. Downloaded by `pnpm --filter @kl/server pb:download`, by the
+# test harness and by CI; never committed (33 MB, and it is pinned by POCKETBASE_VERSION anyway).
+.pb/
+
+# The SQLite database. Lives on the VPS and in backups (what.md §14.5), nowhere else.
+pb_data/
+
+# Built content packages, shipped by the deploy script (§6, §14.4). Regenerable from content/.
+content/

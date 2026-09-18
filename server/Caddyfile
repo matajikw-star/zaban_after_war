@@ -1,0 +1,82 @@
+# The real Caddyfile (what.md §14.2). Replaces deploy/Caddyfile.bootstrap once PocketBase is
+# deployed; installed to /etc/caddy/Caddyfile by the deploy script.
+#
+#   sudo caddy validate --config /etc/caddy/Caddyfile
+#   sudo systemctl reload caddy
+#
+# Three origins on purpose (§2): storage, service-worker scope and Android asset links are all
+# origin-scoped, the landing page must never sit inside the app's SW scope, and the PocketBase
+# admin UI must not be reachable on the app origin.
+
+{
+	email admin@konkurleitner.com
+
+	# ZeroSSL (Caddy's other default issuer) returned a malformed, non-JSON response when tested
+	# from this VPS on 2026-09-18 — plausibly unreachable or filtered for an Iranian IP. Let's
+	# Encrypt alone is what has actually been verified to work here, so it is pinned rather than
+	# left to Caddy's issuer fallback, which would spend a minute failing over on every renewal.
+	acme_ca https://acme-v02.api.letsencrypt.org/directory
+}
+
+(common) {
+	encode zstd gzip
+
+	# Until launch. Removing this line is a deliberate act, in its own commit.
+	header X-Robots-Tag "noindex"
+
+	log {
+		output file /var/log/caddy/access.log
+		format json
+	}
+}
+
+# --- konkurleitner.com — the landing page (§12) -------------------------------------------------
+
+www.konkurleitner.com {
+	redir https://konkurleitner.com{uri} 308
+}
+
+konkurleitner.com {
+	import common
+	root * /opt/kl/landing
+	file_server
+
+	# The APK (§13) is served from here, and it is large enough that compressing it again wastes
+	# CPU on a 1-vCPU box.
+	@apk path /downloads/*.apk
+	header @apk Content-Type application/vnd.android.package-archive
+}
+
+# --- app.konkurleitner.com — the PWA and its API (§7, §8) ---------------------------------------
+
+app.konkurleitner.com {
+	import common
+
+	# The PocketBase admin UI is reachable on the admin origin only (§15). 404, not 403: this
+	# origin should not admit that a dashboard exists.
+	@admin path /_/*
+	respond @admin 404
+
+	# PocketBase serves both /api/* and pb_public (the built PWA plus the free content package),
+	# so there is one upstream and no static handler here.
+	reverse_proxy 127.0.0.1:8090
+}
+
+# --- admin.konkurleitner.com — the owner dashboard (§11) ----------------------------------------
+
+admin.konkurleitner.com {
+	import common
+
+	handle /api/* {
+		reverse_proxy 127.0.0.1:8090
+	}
+
+	handle /_/* {
+		reverse_proxy 127.0.0.1:8090
+	}
+
+	handle {
+		root * /opt/kl/admin
+		file_server
+	}
+}

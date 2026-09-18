@@ -9,6 +9,7 @@
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:server": "pnpm --filter @kl/server test",
     "typecheck": "tsc --build --force && pnpm -r --if-present typecheck",
     "lint": "biome check .",
     "format": "biome check --write .",

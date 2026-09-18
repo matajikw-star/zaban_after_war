@@ -14,11 +14,64 @@
       "!apps/web/dev-dist",
       "!apps/web/playwright-report",
       "!apps/web/test-results",
-      "!packages/design/fonts"
+      "!packages/design/fonts",
+      "!server/.pb"
     ]
   },
   "formatter": { "enabled": true, "indentStyle": "space", "indentWidth": 2, "lineWidth": 100 },
   "linter": { "enabled": true, "rules": { "preset": "recommended" } },
   "javascript": { "formatter": { "quoteStyle": "single", "semicolons": "always" } },
-  "css": { "parser": { "tailwindDirectives": true } }
+  "css": { "parser": { "tailwindDirectives": true } },
+  "overrides": [
+    {
+      "includes": ["server/pb_hooks/**", "server/pb_migrations/**"],
+      "javascript": {
+        "globals": [
+          "$app",
+          "$apis",
+          "$dbx",
+          "$filesystem",
+          "$http",
+          "$mails",
+          "$os",
+          "$security",
+          "$template",
+          "$tokens",
+          "__hooks",
+          "require",
+          "module",
+          "exports",
+          "routerAdd",
+          "routerUse",
+          "cronAdd",
+          "cronRemove",
+          "onBootstrap",
+          "onRecordCreateRequest",
+          "onRecordUpdateRequest",
+          "onRecordAfterCreateSuccess",
+          "onRecordAfterUpdateSuccess",
+          "migrate",
+          "Collection",
+          "Record",
+          "DateField",
+          "JSONField",
+          "NumberField",
+          "RelationField",
+          "SelectField",
+          "TextField",
+          "BoolField",
+          "AutodateField",
+          "ApiError",
+          "BadRequestError",
+          "UnauthorizedError",
+          "ForbiddenError",
+          "NotFoundError"
+        ]
+      }
+    },
+    {
+      "includes": ["server/test/**"],
+      "linter": { "rules": { "suspicious": { "noExplicitAny": "off" } } }
+    }
+  ]
 }

@@ -100,9 +100,9 @@ packages/
   content/        JSON schemas, lint, package builder                       [live]
   design/         design tokens (CSS variables), fonts, shared base styles  [building — tokens + Vazirmatn]
 server/
-  pb_hooks/       PocketBase JS hooks (routes, crons)                        [planned]
-  pb_migrations/  collections and API rules                                  [planned]
-  Caddyfile, systemd/, deploy/   VPS configuration and deploy scripts       [planned]
+  pb_hooks/       PocketBase JS hooks (routes, crons)                        [building]
+  pb_migrations/  collections and API rules                                  [live]
+  Caddyfile, systemd/, deploy/   VPS configuration and deploy scripts       [building]
   POCKETBASE_VERSION            the pinned binary version                    [building — 0.40.2]
 android/          Bubblewrap TWA project (twa-manifest.json); keystore NOT in git [building — README]
 tools/            simulator, error/log readers, deploy, backup pull, budget  [building — budget works, rest stubs]
@@ -597,7 +597,7 @@ decorative illustration on the review card.
 
 ## 8. The server (PocketBase)
 
-### 8.1 Collections (`pb_migrations/`)
+### 8.1 Collections (`pb_migrations/`) `[live]`
 
 `users` is the auth collection; every other collection is ours. API rules are the security
 boundary; hooks add behaviour.
@@ -615,34 +615,44 @@ boundary; hooks add behaviour.
 | `client_errors` | see §10.1 | create via route; read superuser. |
 | `app_config` | single record: `listPrice`, `salePrice`, `freePresentationLimit`, `minAppVersion`, `supportUrl`, `notice` | public read; superuser write. |
 
+In `pb_migrations/1758000000_init.js` a rule of `""` means anyone and `null` means nobody through
+the REST API — only a hook (which writes with `app.save()`, bypassing rules) or a superuser. The
+`users` collection is PocketBase's default one, edited rather than created: `passwordAuth` off,
+`authToken.duration` 365 days, `email` made optional because the OTP flow creates an account from
+a phone number alone. `app_config` is seeded by the same migration with 450000 / 290000 / 100.
+
 ### 8.2 Routes (`pb_hooks/`)
 
-Every route is registered through `lib/route.js` → `withRoute(name, handler)`, which validates
-input, catches everything, logs a structured record (§10.2) and answers `{ error: { code, message } }`
-with a stable `code`. Bodies are JSON. Auth is the PocketBase bearer token.
+Every route is registered through `lib/route.js` → `withRoute(name, handler, opts)`, which
+authenticates (`opts.auth` is `none` / `user` / `superuser` / `optional`), validates the body
+against `opts.schema`, caps it at 32 KB, catches everything, logs one structured record (§10.2)
+and answers `{ error: { code, message } }` with a stable `code` — one of `BAD_INPUT`,
+`UNAUTHORIZED`, `FORBIDDEN`, `NOT_FOUND`, `RATE_LIMITED`, `INTERNAL`. Bodies are JSON. Auth is the
+PocketBase bearer token. Because PocketBase serializes each handler into its own isolated context,
+`withRoute` is required and applied *inside* the handler, not around it (see how-why §5.4).
 
-| Route | Auth | Body → Response |
-|---|---|---|
-| `GET /api/config` | none | `app_config` fields. |
-| `POST /api/otp/request` | none | `{phone}` → `{ok, retryAfter}`. Limits: 3 per phone / 10 min, 10 per IP / hour. 5-digit code, 3-minute expiry, sent with the SMS provider's OTP template. |
-| `POST /api/otp/verify` | none | `{phone, code}` → PocketBase auth response `{token, record}`. ≤ 5 attempts per code. Finds or creates the user by phone. |
-| `GET /api/me` | user | `{user, entitlement, profileUpdatedAt}`; also refreshes `lastSeenAt`. |
-| `PATCH /api/me/profile` | user | `{profile}` → stored if `updatedAt` is newer. |
-| `POST /api/sync/push` | user | `{events: ReviewEvent[]}` (≤ 500) → `{accepted, duplicates}`. Insert-ignore by id; `user` set from auth, never from the body. |
-| `GET /api/sync/pull?since=&limit=` | user | `{events, cursor, more}`. Cursor = `created` + id. |
-| `GET /api/content/manifest` | none | `{free: {version, hash, bytes}, paid: {version, hash, bytes}}`. |
-| `GET /api/content/paid` | user + entitled | The file, with `Range` support. 20 per user per day. |
-| `POST /api/pay/quote` | user | `{code?}` → `{listPrice, salePrice, discountAmount, payable, codeStatus: 'ok'|'invalid'|'expired'|'exhausted'|'used'}`. |
-| `POST /api/pay/request` | user | `{code?}` → `{paymentId, gatewayUrl}`. Creates the pending payment, applies the code, calls Zarinpal `request`. A `payable` of 0 (100 % code) grants directly and returns `{paymentId, granted: true}`. |
-| `GET /api/pay/callback` | none (Zarinpal) | `?Authority=&Status=` → verifies with Zarinpal using the stored `payable`, flips the payment, creates the entitlement, increments the code's `usedCount`, then `302` to `/purchase/result?status=ok&ref=`, or `…?status=failed&reason=`. Idempotent (Zarinpal code 101 = already verified). |
-| `GET /api/pay/status/:id` | user (own) | `{status, refId}`. |
-| `POST /api/flags` | optional | `{installId, itemId, reason, appVersion, at}` → `{ok}`. 50 per install per day. |
-| `POST /api/beacon` | optional | `{installId, events: [{name, at, appVersion}]}` → `{ok}`. Unknown names rejected. |
-| `POST /api/client-errors` | optional | one record (§10.1) → `{ok, deduped}`. 30 per install per day; same fingerprint within an hour increments `count` instead of inserting. |
-| `GET /api/health` | none | `{ok, version, time}`. |
-| `GET /api/admin/stats?range=` | superuser | Aggregates for the dashboard (§11.2). |
-| `POST /api/admin/grant` | superuser | `{phone, note}` → creates the user if missing and an entitlement with `source: manual`. |
-| `GET /api/admin/sourcemap/:sha/:file` | superuser | Serves a source map from `/opt/kl/sourcemaps/` for symbolication. |
+| Route | Auth | Body → Response | |
+|---|---|---|---|
+| `GET /api/config` | none | `app_config` fields. | `[live]` |
+| `POST /api/otp/request` | none | `{phone}` → `{ok, retryAfter}`. Limits: 3 per phone / 10 min, 10 per IP / hour. 5-digit code, 3-minute expiry, sent with the SMS provider's OTP template. | `[planned]` |
+| `POST /api/otp/verify` | none | `{phone, code}` → PocketBase auth response `{token, record}`. ≤ 5 attempts per code. Finds or creates the user by phone. | `[planned]` |
+| `GET /api/me` | user | `{user, entitlement, profileUpdatedAt}`; also refreshes `lastSeenAt`. | `[live]` |
+| `PATCH /api/me/profile` | user | `{profile}` → stored if `updatedAt` is newer. Equal is not newer. | `[live]` |
+| `POST /api/sync/push` | user | `{events: ReviewEvent[]}` (≤ 500) → `{accepted, duplicates}`. Insert-ignore by id; `user` set from auth, never from the body. | `[planned]` |
+| `GET /api/sync/pull?since=&limit=` | user | `{events, cursor, more}`. Cursor = `created` + id. | `[planned]` |
+| `GET /api/content/manifest` | none | `{free: {version, hash, bytes}, paid: {version, hash, bytes}}`. | `[planned]` |
+| `GET /api/content/paid` | user + entitled | The file, with `Range` support. 20 per user per day. | `[planned]` |
+| `POST /api/pay/quote` | user | `{code?}` → `{listPrice, salePrice, discountAmount, payable, codeStatus: 'ok'|'invalid'|'expired'|'exhausted'|'used'}`. | `[planned]` |
+| `POST /api/pay/request` | user | `{code?}` → `{paymentId, gatewayUrl}`. Creates the pending payment, applies the code, calls Zarinpal `request`. A `payable` of 0 (100 % code) grants directly and returns `{paymentId, granted: true}`. | `[planned]` |
+| `GET /api/pay/callback` | none (Zarinpal) | `?Authority=&Status=` → verifies with Zarinpal using the stored `payable`, flips the payment, creates the entitlement, increments the code's `usedCount`, then `302` to `/purchase/result?status=ok&ref=`, or `…?status=failed&reason=`. Idempotent (Zarinpal code 101 = already verified). | `[planned]` |
+| `GET /api/pay/status/:id` | user (own) | `{status, refId}`. | `[planned]` |
+| `POST /api/flags` | optional | `{installId, itemId, reason, appVersion, at}` → `{ok}`. 50 per install per day. | `[planned]` |
+| `POST /api/beacon` | optional | `{installId, events: [{name, at, appVersion}]}` → `{ok}`. Unknown names rejected. | `[planned]` |
+| `POST /api/client-errors` | optional | one record (§10.1) → `{ok, deduped}`. 30 per install per day; same fingerprint within an hour increments `count` instead of inserting. | `[planned]` |
+| `GET /api/health` | none | `{ok, version, time}`. `version` is `<pocketbase>+hooks.<n>`. Registered as a middleware, not a route: PocketBase owns this path (how-why §5.4). | `[live]` |
+| `GET /api/admin/stats?range=` | superuser | Aggregates for the dashboard (§11.2). | `[planned]` |
+| `POST /api/admin/grant` | superuser | `{phone, note}` → creates the user if missing and an entitlement with `source: manual`. | `[planned]` |
+| `GET /api/admin/sourcemap/:sha/:file` | superuser | Serves a source map from `/opt/kl/sourcemaps/` for symbolication. | `[planned]` |
 
 Crons (`pb_hooks/cron.pb.js`): purge expired `otp_codes` hourly; `reconcileUnverified` every 15
 minutes (Zarinpal `unverified` → verify any successful-but-unverified authority we own; this is
@@ -832,7 +842,7 @@ Detects in-app browsers and tells the user to open in Chrome. No JavaScript beyo
 
 ## 14. Infrastructure and deployment
 
-### 14.1 The machine
+### 14.1 The machine `[building]`
 
 One Parspack **VPS2**: 1 vCPU, 2 GB RAM, 40 GB SSD, Ubuntu 24.04 LTS, Iran location (100 GB/month
 traffic, which is ~150,000 paid-package downloads). PocketBase and Caddy idle under 200 MB; this
@@ -846,7 +856,7 @@ tier carries thousands of users, and Parspack resizes in place if it ever does n
   with `EnvironmentFile=/opt/kl/.env` (mode 600, owner `kl`).
 - Directories: `/opt/kl/{pb_public,pb_hooks,pb_migrations,content,landing,admin,sourcemaps,backups}`.
 
-### 14.2 Caddyfile (shape)
+### 14.2 Caddyfile (shape) `[building]`
 
 ```
 konkurleitner.com, www.konkurleitner.com {
@@ -959,15 +969,26 @@ produces a schedule where a word can be conquered in exactly 7 days but the medi
 
 ### 16.3 Server
 
-The e2e job exercises every route. A small Vitest API suite additionally covers: OTP rate limits,
-push idempotency, pull paging, content gate refusing an unentitled user, quote/request for each
-`codeStatus`, callback with a wrong amount, callback replay, `reconcileUnverified`.
+`server/test/` (Vitest, `pnpm test:server`) starts the pinned PocketBase binary on a random port
+against an empty temp `pb_data` with this repo's hooks and migrations, creates a superuser through
+the CLI, and exercises the routes over real HTTP — API rules, goja semantics and the error
+envelope do not exist in a mock. It is a separate job from `ci`, because the root `pnpm test` must
+stay runnable without the binary. `users` has password auth disabled, so a test gets a user token
+through the superuser-only `POST /api/collections/users/impersonate/:id`.
+
+Covered today: the migrations apply from empty and every collection has the rules of §8.1;
+`config`, `health`, `me` and `me/profile` including newer-wins; the `withRoute` envelope, its codes
+and its structured log line with the phone masked and secrets hashed. Still to cover as the routes
+land: OTP rate limits, push idempotency, pull paging, content gate refusing an unentitled user,
+quote/request for each `codeStatus`, callback with a wrong amount, callback replay,
+`reconcileUnverified`. The e2e job exercises every route end to end.
 
 ### 16.4 CI jobs
 
-`ci` (lint, typecheck, unit, build, budget) on every PR; `e2e` on every PR (downloads the pinned
-PocketBase binary); `deploy` on `main` if SSH works; `android` on tags. Branch protection requires
-`ci` and `e2e`.
+`ci` (lint, typecheck, unit, build, budget) on every PR; `server` on every PR (the API suite,
+§16.3); `e2e` on every PR; `deploy` on `main` if SSH works; `android` on tags. `server` and `e2e`
+download the pinned PocketBase binary into `server/.pb/` and share one cache key. Branch
+protection requires `ci`, `server` and `e2e`.
 
 ---
 

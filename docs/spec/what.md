@@ -662,7 +662,8 @@ a phone number alone. `app_config` is seeded by the same migration with 450000 /
 
 Every route is registered through `lib/route.js` → `withRoute(name, handler, opts)`, which
 authenticates (`opts.auth` is `none` / `user` / `superuser` / `optional`), validates the body
-against `opts.schema`, caps it at 32 KB, catches everything, logs one structured record (§10.2)
+against `opts.schema`, caps it at 32 KB (`opts.maxBodyBytes` raises it for one route:
+`sync/push` takes 256 KB, what 500 events cost), catches everything, logs one structured record (§10.2)
 and answers `{ error: { code, message } }` with a stable `code` — one of `BAD_INPUT`,
 `UNAUTHORIZED`, `FORBIDDEN`, `NOT_FOUND`, `RATE_LIMITED`, `INTERNAL`, and for OTP
 `PHONE_INVALID`, `OTP_WRONG`, `OTP_EXPIRED`, `OTP_LOCKED`, `SMS_FAILED` (502),
@@ -679,8 +680,8 @@ PocketBase bearer token. Because PocketBase serializes each handler into its own
 | `POST /api/otp/verify` | none | `{phone, code}` (code 5–6 digits) → `{token, record}`, the shape of PocketBase's auth response, built by the route with `record.newAuthToken()` (365 days). Only the latest code for the phone counts. Each try spends an attempt atomically before the compare (constant-time); a wrong code → `OTP_WRONG` + `attemptsLeft`; after 5 → `OTP_LOCKED`, even for the right code; expired, used or never requested → `OTP_EXPIRED`. A used code is burnt, not deleted, so it still counts toward the rate limit. Finds or creates the user by phone. | `[live]` |
 | `GET /api/me` | user | `{user, entitlement, profileUpdatedAt}`; also refreshes `lastSeenAt`. | `[live]` |
 | `PATCH /api/me/profile` | user | `{profile}` → stored if `updatedAt` is newer. Equal is not newer. | `[live]` |
-| `POST /api/sync/push` | user | `{events: ReviewEvent[]}` (≤ 500) → `{accepted, duplicates}`. Insert-ignore by id; `user` set from auth, never from the body. | `[planned]` |
-| `GET /api/sync/pull?since=&limit=` | user | `{events, cursor, more}`. Cursor = `created` + id. | `[planned]` |
+| `POST /api/sync/push` | user | `{events: ReviewEvent[]}` (≤ 500, else `BAD_INPUT`) → `{accepted, duplicates}` (`sync.pb.js`, `lib/sync.js`). `INSERT OR IGNORE` by id in one transaction, so a replayed or overlapping batch stores each event once and never edits the first copy. `user` comes from the token; a `user` in the body or on an event is dropped. Each event is checked (lowercase UUID id, `itemId` 1–64 chars, `at` a non-negative integer, `kind` `review`/`know`, `grade` 0/1, `device` ≤ 64 chars); **one malformed event rejects the whole batch** with `BAD_INPUT` naming `events[i]`, and nothing of it is stored. An `at` more than a year from the server clock is stored as sent and logged once per push (`flag: at_out_of_range`). An id that already belongs to another user is left untouched, counted in `duplicates`, and logged (`flag: id_conflict`). | `[live]` |
+| `GET /api/sync/pull?since=&limit=` | user | `{events, cursor, more}`, only the caller's events, ordered by `(created, id)`. `limit` 1–1000, default 500. `cursor` is `"<created>|<id>"` of the last event returned — opaque to the client, which passes it back as `since`; an empty page returns the `since` it was given, a fresh account `''`. A malformed `since` or `limit` → `BAD_INPUT`. Every push stamps all its rows with one `created` strictly greater than any this user already has (`max(now, previous + 1 ms)`, inside the write transaction), so an event that becomes visible later can never sort behind a cursor already handed out — even across two pushes in the same millisecond or a server clock step (how-why §5.8). | `[live]` |
 | `GET /api/content/manifest` | none | `{free: {version, hash, bytes}, paid: {version, hash, bytes}}`. | `[planned]` |
 | `GET /api/content/paid` | user + entitled | The file, with `Range` support. 20 per user per day. | `[planned]` |
 | `POST /api/pay/quote` | user | `{code?}` → `{listPrice, salePrice, discountAmount, payable, codeStatus: 'ok'|'invalid'|'expired'|'exhausted'|'used'}`. | `[planned]` |
@@ -1033,8 +1034,14 @@ console happy path, hashing at rest, single use, same user on a second login, 5 
 locked, expiry, both rate limits with `retryAfter` and `Retry-After`, phone normalisation, the
 purge cron, `mock` accepting `123456` only, an unknown provider and Kavenegar without a key.
 The harness takes env overrides (`startServer({env})`) and exposes the process `output()`, which
-is where the console provider's code is read from. Still to cover as the routes land: push
-idempotency, pull paging, content gate refusing an unentitled user,
+is where the console provider's code is read from. Sync (`sync.test.ts`): push idempotency (same batch twice, an overlapping retry, a tampered
+replay keeps the first copy), 500 accepted and 501 rejected with nothing stored, every malformed
+field rejecting the whole batch, the out-of-range `at` log flag, pull paging at seven page sizes
+across three pushes with no gap or duplicate, id order inside one push's shared `created`, push
+and pull interleaved fifteen times, two concurrent pushes, cross-user isolation (B cannot pull
+A's events, cannot overwrite them by id, a forged `user` is ignored, A's cursor opens nothing of
+B's), 401 without a token, 403 for a superuser, and the generic collection API still shut. Still
+to cover as the routes land: content gate refusing an unentitled user,
 quote/request for each `codeStatus`, callback with a wrong amount, callback replay,
 `reconcileUnverified`. The e2e job exercises every route end to end.
 

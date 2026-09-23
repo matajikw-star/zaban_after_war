@@ -517,6 +517,38 @@ What the routes do as a result:
   it the 10-per-IP-per-hour limit is one global bucket, and the eleventh login of the hour
   across the whole country is refused.
 
+### 5.8 Sync: what the push and pull had to decide (2026-09-24)
+
+Ticket `dev-server/03`. Server half.
+
+- **The pull cursor is safe only because every push stamps `created` itself.** `(created, id)`
+  paging silently loses an event whenever a row becomes visible *after* a reader's cursor has
+  passed its sort position — two pushes in the same millisecond (a UUIDv7 id from another device
+  sorts anywhere), or the server clock stepping back. So `lib/sync.js` inserts with raw
+  `INSERT OR IGNORE` and sets `created` to one value per push:
+  `max(now, this user's max(created) + 1 ms)`, read inside the write transaction. PocketBase's
+  write pool is a single connection, so no other push lands between the read and the commit.
+  Every row of a later push therefore sorts strictly after everything a reader could already have
+  seen; rows of one push share a stamp and are ordered by id, and a reader sees that
+  transaction whole or not at all. Rejected: SQLite `rowid` as the cursor (renumbered by
+  `VACUUM` on a table without an integer primary key), a "only return rows older than N
+  seconds" lag (still assumes a monotonic clock and a bounded transaction).
+- **Raw SQL, not `app.save(record)`.** Insert-ignore is one statement and atomic under
+  concurrency; check-then-save would race two devices pushing the same id. The cost is that
+  PocketBase's field validation is bypassed, so `cleanEvent` re-checks every field the
+  collection declares.
+- **One malformed event rejects the whole push.** Skipping it would let the client mark it
+  synced and lose it from every other device. Our own client minted it, so it is a bug to fix;
+  until then it stays local and unsynced, and the client's fifth consecutive failure files a
+  `client_errors` record. The cost: one bad event holds back the backup of the others. Reversing
+  it later (a `rejected[]` list) is an additive change to the response.
+- **A foreign id is a duplicate, not an error.** A body can never write into another user's log
+  (§15), but refusing the batch would block a legitimate login merge on a shared device, whose
+  earlier account's events are already on the server under that account. They are counted as
+  duplicates and logged `id_conflict`.
+- **`withRoute` gained `maxBodyBytes`.** The 32 KB cap of §15 cannot hold 500 events (~170 bytes
+  each); `sync/push` takes 256 KB and everything else keeps 32 KB.
+
 ## 6. How to extend this file
 
 

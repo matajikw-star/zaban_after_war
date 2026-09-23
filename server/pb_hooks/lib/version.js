@@ -10,7 +10,7 @@
 // so a screenshot of settings and one health call identify the running code.
 
 const POCKETBASE_VERSION = '0.40.2';
-const HOOKS_VERSION = '2';
+const HOOKS_VERSION = '3';
 
 module.exports = {
   POCKETBASE_VERSION,

@@ -13,7 +13,8 @@ const IOS_CHROME =
 const TELEGRAM_ANDROID =
   'Mozilla/5.0 (Linux; Android 13; Pixel 7 Build/TQ3A.230901.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/122.0.0.0 Mobile Safari/537.36 Telegram-Android/10.14.0 (Pixel 7)';
 
-const TELEGRAM_WEBVIEW = 'Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 tgWebAppPlatform/android';
+const TELEGRAM_WEBVIEW =
+  'Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 tgWebAppPlatform/android';
 
 const INSTAGRAM_IOS =
   'Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Instagram 321.0.0.28.106';
@@ -58,7 +59,11 @@ describe('detectInstallContext', () => {
 
   it('an in-app browser wins over a captured native prompt', () => {
     expect(
-      detectInstallContext({ userAgent: TELEGRAM_ANDROID, standalone: false, hasNativePrompt: true }),
+      detectInstallContext({
+        userAgent: TELEGRAM_ANDROID,
+        standalone: false,
+        hasNativePrompt: true,
+      }),
     ).toBe('in-app-browser');
   });
 

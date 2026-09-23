@@ -7,8 +7,8 @@
  * again short of a reload.
  */
 
-import { now } from '../engine/clock.ts';
 import { outboxEnqueue } from '../db/repo.ts';
+import { now } from '../engine/clock.ts';
 import { breadcrumb } from '../log/breadcrumbs.ts';
 import type { BeaconEvent } from '../net/api.ts';
 import { usePwaStore } from '../stores/pwa.ts';
@@ -54,7 +54,8 @@ export function detectInstallContext({
   if (standalone) return 'installed';
   if (IN_APP_BROWSER_PATTERNS.some((pattern) => pattern.test(userAgent))) return 'in-app-browser';
   if (hasNativePrompt) return 'native';
-  if (IOS_SAFARI_PATTERN.test(userAgent) && !IOS_OTHER_BROWSER_PATTERN.test(userAgent)) return 'ios';
+  if (IOS_SAFARI_PATTERN.test(userAgent) && !IOS_OTHER_BROWSER_PATTERN.test(userAgent))
+    return 'ios';
   return 'unavailable';
 }
 

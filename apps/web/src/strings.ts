@@ -238,7 +238,8 @@ export const strings = {
     inAppBrowserBody: 'برای نصب، این صفحه را در Chrome باز کنید.',
     copyLink: 'کپی لینک',
     copied: 'کپی شد',
-    iosBody: 'برای نصب: دکمهٔ اشتراک‌گذاری (Share) را بزنید، سپس «Add to Home Screen» را انتخاب کنید.',
+    iosBody:
+      'برای نصب: دکمهٔ اشتراک‌گذاری (Share) را بزنید، سپس «Add to Home Screen» را انتخاب کنید.',
     installedBody: 'برنامه نصب شده است.',
     unavailableBody: 'نصب مستقیم در این مرورگر ممکن نیست؛ برای نصب از Chrome استفاده کنید.',
   },

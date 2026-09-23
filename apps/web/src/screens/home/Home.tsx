@@ -6,13 +6,15 @@
  * passed — Home is the screen every cold start lands on, so it is the natural place to check.
  */
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { kvGet, kvSet } from '../../db/repo.ts';
 import { now } from '../../engine/clock.ts';
 import { presentationsToday, progress, streak } from '../../engine/index.ts';
 import { seasonReached } from '../../engine/season.ts';
+import { applyUpdate } from '../../pwa/update.ts';
 import { useAuthStore } from '../../stores/auth.ts';
+import { usePwaStore } from '../../stores/pwa.ts';
 import { useSettingsStore } from '../../stores/settings.ts';
 import { useSyncStore } from '../../stores/sync.ts';
 import { strings } from '../../strings.ts';
@@ -21,6 +23,7 @@ import { Chip } from '../../ui/Chip.tsx';
 import { faNumber, faPercent } from '../../ui/format.ts';
 import { ProgressRing } from '../../ui/Progress.tsx';
 import { BOTTOM_NAV_SPACER_CLASS, BottomNav } from '../layout/BottomNav.tsx';
+import { useOnboardingRedirect } from '../onboarding/redirect.ts';
 
 /** Redirects to `/season` once per exam date — the kv write makes it "once" across reloads. */
 function useSeasonRedirect(examDate: number | null): void {
@@ -39,29 +42,18 @@ function useSeasonRedirect(examDate: number | null): void {
   }, [examDate, navigate]);
 }
 
-/** The «نسخهٔ جدید آماده است» chip: shown only once `kv.swUpdateAvailable` is set (ticket 05). */
-function useSwUpdateAvailable(): boolean {
-  const [available, setAvailable] = useState(false);
-  useEffect(() => {
-    let cancelled = false;
-    void kvGet<boolean>('swUpdateAvailable').then((value) => {
-      if (!cancelled) setAvailable(value === true);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-  return available;
-}
-
 export function Home() {
   const navigate = useNavigate();
   const profile = useSettingsStore((state) => state.profile);
   const userId = useAuthStore((state) => state.userId);
   const backup = useSyncStore((state) => state.backup);
   const unsyncedCount = useSyncStore((state) => state.unsyncedCount);
-  const updateReady = useSwUpdateAvailable();
+  // `pwa/update.ts` drives this: `available` on a background download that finished (`NEED_REFRESH`),
+  // cleared again once the tap starts `applying` (§7.7 — the chip disappears the instant it is
+  // pressed, since the reload it triggers is about to replace this screen anyway).
+  const updateReady = usePwaStore((state) => state.updateReady);
 
+  useOnboardingRedirect();
   useSeasonRedirect(profile.examDate);
 
   const today = presentationsToday();
@@ -81,7 +73,15 @@ export function Home() {
     >
       <h1 className="text-h4 font-medium">{strings.appName}</h1>
 
-      {updateReady ? <Chip tone="solid">{strings.home.updateReady}</Chip> : null}
+      {updateReady ? (
+        <button
+          type="button"
+          className="appearance-none bg-transparent p-0"
+          onClick={() => void applyUpdate()}
+        >
+          <Chip tone="solid">{strings.home.updateReady}</Chip>
+        </button>
+      ) : null}
 
       <div className="flex flex-col items-center gap-2">
         <ProgressRing

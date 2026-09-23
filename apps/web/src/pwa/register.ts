@@ -13,6 +13,7 @@
 
 import { registerSW } from 'virtual:pwa-register';
 import { breadcrumb } from '../log/breadcrumbs.ts';
+import { reportError } from '../log/errors.ts';
 import { captureInstallPrompt } from './install.ts';
 import { noteNeedRefresh, onRegistered, setUpdateSwFn } from './update.ts';
 
@@ -37,6 +38,7 @@ export function registerServiceWorker(): void {
     },
     onRegisterError: (error) => {
       breadcrumb('sw', 'register.error', { message: String(error) });
+      void reportError('sw', error, { phase: 'register.onRegisterError' });
     },
   });
 

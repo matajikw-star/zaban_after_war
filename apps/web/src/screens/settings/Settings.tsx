@@ -10,13 +10,14 @@
 import { goalFromMinutes, ONBOARDING_MINUTES } from '@kl/core';
 import { format, isValid, parse } from 'date-fns-jalali';
 import type { ReactNode } from 'react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router';
 // `content/` is the repo-root wiki layer (CLAUDE.md), not part of this app: the field names it
 // carries are derived data, generated once from the owner's spreadsheet, not app source.
 import fieldCodesJson from '../../../../../content/field-codes.json';
 import { reportError } from '../../log/errors.ts';
 import { useAuthStore } from '../../stores/auth.ts';
+import { usePwaStore } from '../../stores/pwa.ts';
 import { type ThemeChoice, useSettingsStore } from '../../stores/settings.ts';
 import { useSyncStore } from '../../stores/sync.ts';
 import { strings } from '../../strings.ts';
@@ -129,6 +130,8 @@ export function Settings() {
   const backup = useSyncStore((state) => state.backup);
   const download = useSyncStore((state) => state.download);
   const lastBackupAt = useSyncStore((state) => state.lastBackupAt);
+  const installPrompt = usePwaStore((state) => state.installPrompt);
+  const [installOpen, setInstallOpen] = useState(false);
 
   const [examDateText, setExamDateText] = useState(() =>
     profile.examDate === null ? '' : format(new Date(profile.examDate), JALALI_FORMAT),
@@ -254,7 +257,16 @@ export function Settings() {
       </Section>
 
       <Section title={strings.settings.installTitle}>
-        <p className="text-body-sm text-[var(--fg-muted)]">{strings.settings.installComingSoon}</p>
+        {installPrompt === 'installed' ? (
+          <p className="text-body-sm text-[var(--fg-muted)]">
+            {strings.settings.installInstalledLabel}
+          </p>
+        ) : (
+          <Button variant="secondary" onClick={() => setInstallOpen(true)}>
+            {strings.settings.installTitle}
+          </Button>
+        )}
+        <InstallSheet open={installOpen} onClose={() => setInstallOpen(false)} />
       </Section>
 
       <Section title={strings.settings.reportTitle}>

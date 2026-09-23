@@ -7,8 +7,9 @@
  */
 
 import type { ReviewEvent } from '@kl/core';
-import { eventCount, kvGet, lastEvents, packageVersions, unsyncedCount } from '../db/repo.ts';
+import { eventCount, lastEvents, packageVersions, unsyncedCount } from '../db/repo.ts';
 import { presentationsToday, streak } from '../engine/index.ts';
+import { controllingServiceWorkerUrl } from '../pwa/storage.ts';
 import { useAuthStore } from '../stores/auth.ts';
 import { useContentStore } from '../stores/content.ts';
 import { useSettingsStore } from '../stores/settings.ts';
@@ -63,13 +64,12 @@ export async function snapshot(): Promise<ErrorSnapshot> {
   const content = useContentStore.getState();
   const settings = useSettingsStore.getState();
 
-  const [events, unsynced, versions, tail, storage, swVersion] = await Promise.all([
+  const [events, unsynced, versions, tail, storage] = await Promise.all([
     eventCount().catch(() => 0),
     unsyncedCount().catch(() => 0),
     packageVersions().catch(() => ({}) as Record<string, string>),
     lastEvents(20).catch(() => [] as ReviewEvent[]),
     storageSnapshot(),
-    kvGet<string>('swUpdateAvailable').catch(() => undefined),
   ]);
 
   let streakDays = 0;
@@ -90,7 +90,7 @@ export async function snapshot(): Promise<ErrorSnapshot> {
     activePackage: content.active,
     packageVersions: versions,
     downloadState: sync.download.name,
-    swVersion: swVersion ?? null,
+    swVersion: controllingServiceWorkerUrl(),
     storage,
     goal: settings.profile.dailyGoal,
     streak: streakDays,

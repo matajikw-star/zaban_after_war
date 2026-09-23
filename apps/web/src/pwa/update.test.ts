@@ -13,9 +13,9 @@ import {
   resetUpdateStateForTests,
   setUpdateSwFn,
   transition,
+  UPDATE_IDLE,
   type UpdateEvent,
   type UpdateState,
-  UPDATE_IDLE,
   updateState,
 } from './update.ts';
 

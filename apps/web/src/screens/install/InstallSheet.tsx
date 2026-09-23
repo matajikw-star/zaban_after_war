@@ -22,7 +22,9 @@ export interface InstallSheetProps {
   readonly onClose: () => void;
 }
 
-function CopyLinkButton() {
+/** Exported so onboarding's install step can offer the same copy-link fallback without
+ * duplicating the clipboard dance. */
+export function CopyLinkButton() {
   const [copied, setCopied] = useState(false);
 
   async function copy(): Promise<void> {
@@ -71,7 +73,9 @@ export function InstallSheet({ open, onClose }: InstallSheetProps) {
 
         {context === 'in-app-browser' ? (
           <div className="flex flex-col gap-3">
-            <p className="text-body-sm text-[var(--fg-muted)]">{strings.install.inAppBrowserBody}</p>
+            <p className="text-body-sm text-[var(--fg-muted)]">
+              {strings.install.inAppBrowserBody}
+            </p>
             <CopyLinkButton />
           </div>
         ) : null}

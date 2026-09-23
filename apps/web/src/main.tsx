@@ -21,6 +21,7 @@ import { AppError } from './errors.ts';
 import { breadcrumb } from './log/breadcrumbs.ts';
 import { installErrorCapture, reportError } from './log/errors.ts';
 import type { BeaconEvent } from './net/api.ts';
+import { registerServiceWorker } from './pwa/register.ts';
 import { router } from './routes.tsx';
 import { useAuthStore } from './stores/auth.ts';
 import { useContentStore } from './stores/content.ts';
@@ -53,6 +54,19 @@ async function recordFirstOpen(installId: string): Promise<void> {
 
 async function bootstrap(): Promise<void> {
   installErrorCapture();
+
+  // Synchronous, no `await` before it: `registerServiceWorker` attaches the `beforeinstallprompt`
+  // listener as its first act, and Chrome can fire that event as soon as the page is deemed
+  // installable — a listener attached even one microtask late can miss it for the page's whole
+  // life (`pwa/install.ts`). Guarded because a registration failure (a misconfigured build, a
+  // browser that throws on `navigator.serviceWorker.register`) must never take the rest of the
+  // app down with it — offline study is the product's whole promise (§7.7).
+  try {
+    registerServiceWorker();
+  } catch (err) {
+    void reportError('sw', err, { phase: 'bootstrap.registerServiceWorker' });
+  }
+
   breadcrumb('log', 'bootstrap.start', { appVersion: APP_VERSION });
 
   await openDatabase();

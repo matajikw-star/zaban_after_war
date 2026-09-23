@@ -21,6 +21,7 @@ import { Chip } from '../../ui/Chip.tsx';
 import { faNumber, faPercent } from '../../ui/format.ts';
 import { ProgressRing } from '../../ui/Progress.tsx';
 import { BOTTOM_NAV_SPACER_CLASS, BottomNav } from '../layout/BottomNav.tsx';
+import { useOnboardingRedirect } from '../onboarding/redirect.ts';
 
 /** Redirects to `/season` once per exam date — the kv write makes it "once" across reloads. */
 function useSeasonRedirect(examDate: number | null): void {
@@ -62,6 +63,7 @@ export function Home() {
   const unsyncedCount = useSyncStore((state) => state.unsyncedCount);
   const updateReady = useSwUpdateAvailable();
 
+  useOnboardingRedirect();
   useSeasonRedirect(profile.examDate);
 
   const today = presentationsToday();

@@ -480,6 +480,43 @@ any assertion about a log line has to poll for the flush, and has to poll for *i
 polling for "any line for this route" passes on a row an earlier test wrote, which is exactly how
 the first version of the harness lied.
 
+### 5.7 The OTP probe: what PocketBase 0.40.2 actually does (2026-09-24)
+
+Ticket `dev-server/02`. Before any OTP code was written, a throwaway hook (`zz_probe.pb.js`,
+commit 808fdc2, deleted in the commit that adds this section) exercised every 0.40 API the
+routes would lean on, against the pinned binary on an empty `pb_data`. Results:
+
+| API | Result |
+|---|---|
+| `new Record(users)` + `setPassword(random)` + `$app.save()` on a `passwordAuth`-disabled `users` | **Works.** The password is still required on an auth record; a random 40-char one is set and never used. |
+| `record.newAuthToken()` | **Works**, returns the JWT string. Its `exp` is exactly `authToken.duration` (31536000 s = 365 days) after issue. |
+| `users.authToken.duration` | **Works**, reads `31536000` — the migration's value took. |
+| `$security.randomStringWithAlphabet(5, '0123456789')` | **Works**, e.g. `37617`. |
+| `$security.equal(a, b)` | **Works** — PocketBase's constant-time string compare. `$security.hs256(text, secret)` (HMAC-SHA256, hex) also works. |
+| `e.response.header().set('Retry-After', '42')` then `e.json(...)` | **Works**, the header reaches the client. |
+| `e.realIP()` | **Works**, but see below: it is `127.0.0.1` for everyone behind Caddy unless `trustedProxy` is set. |
+| `$app.settings().rateLimits` | **Readable.** Default rules exist (`*:auth` 2/3 s, `*:create` 20/5 s, `/api/batch`, `/api/` 300/10 s) but `enabled: false`. Rules are per IP or per label, never per phone, so the OTP limits are an in-hook count. |
+| `$app.settings().trustedProxy` | `{headers: [], useLeftmostIP: false}` by default. |
+| `$apis.recordAuthResponse(e, rec, 'otp')` | **Works, but it writes the response itself and returns** — the handler keeps running, and a following `e.json()` appended a second JSON object to the same body. Unusable inside `withRoute`, which always writes its own envelope. |
+| JSON-serialising a `Record` (`e.json(200, {record})`) | **Works**, public fields only: no `password`, no `tokenKey`; `email` is left out when `emailVisibility` is false. Same shape `recordAuthResponse` sends. |
+| `findRecordsByFilter(col, 'phone = {:phone} && created > {:since}', sort, limit, 0, params)` | **Works** with named params. |
+| A date literal in a filter param | **Only PocketBase's own format compares correctly**: `2026-09-23 21:38:00.000Z` (space). A JS ISO string with a `T` silently matched nothing, because dates are stored as text and `' ' < 'T'`. |
+| `countRecords(col, $dbx.hashExp({...}))`, `cronAdd` | Both exist and work. |
+
+What the routes do as a result:
+
+- **The verify route builds the auth response itself**: `{ token: record.newAuthToken(), record }`.
+  That is the same `{token, record}` shape `recordAuthResponse` writes, it keeps the one
+  `withRoute` envelope and log line, and nothing else in this app hooks `onRecordAuthRequest`.
+- **Every date handed to a filter goes through one helper** (`lib/otp.js` `pbDate`) that turns an
+  ISO string into PocketBase's `YYYY-MM-DD HH:MM:SS.sssZ`. Without it the rate limits count
+  nothing and never trip, and no error is raised anywhere.
+- **`trustedProxy` is set by a migration** to `X-Forwarded-For`, rightmost value. PocketBase
+  listens on `127.0.0.1:8090` only and Caddy is the one hop in front (DNS-only, no CDN proxy,
+  §14.3), so the rightmost entry is the address Caddy saw and a client cannot forge it. Without
+  it the 10-per-IP-per-hour limit is one global bucket, and the eleventh login of the hour
+  across the whole country is refused.
+
 ## 6. How to extend this file
 
 

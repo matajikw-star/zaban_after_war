@@ -10,7 +10,7 @@
 import { goalFromMinutes, ONBOARDING_MINUTES } from '@kl/core';
 import { format, isValid, parse } from 'date-fns-jalali';
 import type { ReactNode } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 // `content/` is the repo-root wiki layer (CLAUDE.md), not part of this app: the field names it
 // carries are derived data, generated once from the owner's spreadsheet, not app source.
@@ -28,6 +28,7 @@ import { Input } from '../../ui/Input.tsx';
 import { SheetClose, SheetContent, SheetRoot, SheetTrigger } from '../../ui/Sheet.tsx';
 import { Switch } from '../../ui/Switch.tsx';
 import { APP_VERSION, BUILD_SHA } from '../../version.ts';
+import { InstallSheet } from '../install/InstallSheet.tsx';
 import { BOTTOM_NAV_SPACER_CLASS, BottomNav } from '../layout/BottomNav.tsx';
 
 const JALALI_FORMAT = 'yyyy/MM/dd';

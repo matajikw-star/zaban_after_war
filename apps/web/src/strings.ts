@@ -213,7 +213,7 @@ export const strings = {
     downloadInstalled: 'نصب‌شده',
     downloadError: 'دانلود در انتظار اینترنت',
     installTitle: 'نصب برنامه',
-    installComingSoon: 'به‌زودی از همین‌جا قابل نصب است',
+    installInstalledLabel: 'نصب‌شده',
     reportTitle: 'گزارش مشکل',
     reportNotePlaceholder: 'توضیح مشکل (اختیاری)',
     reportSubmit: 'ارسال گزارش',
@@ -229,6 +229,18 @@ export const strings = {
     daysStudied: 'روز مطالعه',
     presentations: 'ارائه',
     newDate: 'تاریخ جدید',
+  },
+
+  /** The install sheet (`what.md` §7.8's install paragraph), opened from settings. */
+  install: {
+    sheetTitle: 'نصب برنامه',
+    installAction: 'نصب',
+    inAppBrowserBody: 'برای نصب، این صفحه را در Chrome باز کنید.',
+    copyLink: 'کپی لینک',
+    copied: 'کپی شد',
+    iosBody: 'برای نصب: دکمهٔ اشتراک‌گذاری (Share) را بزنید، سپس «Add to Home Screen» را انتخاب کنید.',
+    installedBody: 'برنامه نصب شده است.',
+    unavailableBody: 'نصب مستقیم در این مرورگر ممکن نیست؛ برای نصب از Chrome استفاده کنید.',
   },
 } as const;
 

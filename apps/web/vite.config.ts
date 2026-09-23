@@ -31,8 +31,11 @@ export default defineConfig(({ mode }) => {
       __APP_VERSION__: JSON.stringify(pkg.version),
       __BUILD_SHA__: JSON.stringify(buildSha()),
     },
-    server: { port: 5173, strictPort: true },
-    preview: { port: 4173, strictPort: true },
+    // Bound to the IPv4 loopback explicitly: `localhost` resolves to the IPv6 loopback first on
+    // some dev machines, and a server that only bound `::1` was unreachable from tools (curl,
+    // Playwright's own readiness probe) that dial `127.0.0.1`.
+    server: { port: 5173, strictPort: true, host: '127.0.0.1' },
+    preview: { port: 4173, strictPort: true, host: '127.0.0.1' },
     build: {
       // Uploaded per build sha at deploy time so a production stack symbolicates (§14.4).
       sourcemap: true,

@@ -52,7 +52,14 @@ export interface Server {
    * the file has logged that route.
    */
   logsFor(route: string, match?: (line: LogLine) => boolean): Promise<LogLine[]>;
+  /** Everything the process has written to stdout/stderr so far (the console SMS provider). */
+  output(): string;
   stop(): Promise<void>;
+}
+
+export interface StartOptions {
+  /** Overrides for the child's environment, e.g. `{ SMS_PROVIDER: 'mock' }`. */
+  readonly env?: Record<string, string>;
 }
 
 function randomPort(): number {
@@ -77,7 +84,7 @@ async function waitForHealth(url: string, child: ChildProcess, output: () => str
   throw new Error(`pocketbase did not become healthy in 30s:\n${output()}`);
 }
 
-export async function startServer(): Promise<Server> {
+export async function startServer(options: StartOptions = {}): Promise<Server> {
   const binary = await ensurePocketBase();
   const dataDir = await mkdtemp(path.join(tmpdir(), 'kl-pb-'));
   const hooksDir = path.join(serverDir, 'pb_hooks');
@@ -96,6 +103,7 @@ export async function startServer(): Promise<Server> {
     BACKUP_S3_ENDPOINT: 'test',
     BACKUP_S3_KEY: 'test',
     BACKUP_S3_SECRET: 'test',
+    ...options.env,
   };
 
   // The superuser is created before `serve`, which is also what first applies the migrations to
@@ -231,6 +239,10 @@ export async function startServer(): Promise<Server> {
         await new Promise((resolve) => setTimeout(resolve, 400));
       }
       return last;
+    },
+
+    output() {
+      return output;
     },
 
     async stop() {

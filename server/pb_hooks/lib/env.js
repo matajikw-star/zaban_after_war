@@ -30,7 +30,7 @@ const REQUIRED = [
 
 /** Names whose value is constrained. */
 const ENUMS = {
-  SMS_PROVIDER: ['kavenegar', 'console'],
+  SMS_PROVIDER: ['kavenegar', 'console', 'mock'],
   ZARINPAL_SANDBOX: ['0', '1'],
 };
 
@@ -80,6 +80,15 @@ function check(app) {
   // The console SMS provider must never be what a real phone is authenticated against.
   if (isConsoleSms() && get('PUBLIC_APP_ORIGIN').indexOf('konkurleitner.com') !== -1) {
     problems.push('SMS_PROVIDER=console on a production origin');
+  }
+
+  // `mock` on the real origin is allowed — it is what staging runs until the SMS account is
+  // verified — but it means every phone logs in with 123456, so it is said at every boot.
+  if (
+    get('SMS_PROVIDER') === 'mock' &&
+    get('PUBLIC_APP_ORIGIN').indexOf('konkurleitner.com') !== -1
+  ) {
+    problems.push('SMS_PROVIDER=mock on a production origin: every phone logs in with 123456');
   }
 
   if (problems.length === 0) {

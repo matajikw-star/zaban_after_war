@@ -664,15 +664,19 @@ Every route is registered through `lib/route.js` → `withRoute(name, handler, o
 authenticates (`opts.auth` is `none` / `user` / `superuser` / `optional`), validates the body
 against `opts.schema`, caps it at 32 KB, catches everything, logs one structured record (§10.2)
 and answers `{ error: { code, message } }` with a stable `code` — one of `BAD_INPUT`,
-`UNAUTHORIZED`, `FORBIDDEN`, `NOT_FOUND`, `RATE_LIMITED`, `INTERNAL`. Bodies are JSON. Auth is the
+`UNAUTHORIZED`, `FORBIDDEN`, `NOT_FOUND`, `RATE_LIMITED`, `INTERNAL`, and for OTP
+`PHONE_INVALID`, `OTP_WRONG`, `OTP_EXPIRED`, `OTP_LOCKED`, `SMS_FAILED` (502),
+`SMS_PROVIDER_UNKNOWN` (500). A few errors carry one extra top-level number next to `error`:
+`retryAfter` (seconds) on every 429, which also sets the `Retry-After` header, and
+`attemptsLeft` on `OTP_WRONG`. Bodies are JSON. Auth is the
 PocketBase bearer token. Because PocketBase serializes each handler into its own isolated context,
 `withRoute` is required and applied *inside* the handler, not around it (see how-why §5.4).
 
 | Route | Auth | Body → Response | |
 |---|---|---|---|
 | `GET /api/config` | none | `app_config` fields. | `[live]` |
-| `POST /api/otp/request` | none | `{phone}` → `{ok, retryAfter}`. Limits: 3 per phone / 10 min, 10 per IP / hour. 5-digit code, 3-minute expiry, sent with the SMS provider's OTP template. | `[planned]` |
-| `POST /api/otp/verify` | none | `{phone, code}` → PocketBase auth response `{token, record}`. ≤ 5 attempts per code. Finds or creates the user by phone. | `[planned]` |
+| `POST /api/otp/request` | none | `{phone}` → `{ok, retryAfter}` (`otp.pb.js`). The phone is normalised to E.164 (`lib/phone.js`: `09…`, `9…`, `+989…`, `00989…`, Persian/Arabic digits, spaces/hyphens; anything else `PHONE_INVALID`). Limits: 3 per phone / 10 min, 10 per IP / hour → 429 `RATE_LIMITED` + `retryAfter`; a refused request writes nothing. 5-digit code (`mock`: always `123456`), stored as `salt$hmac-sha256`, 3-minute expiry, sent through `lib/sms.js` (`SMS_PROVIDER` = `kavenegar` Verify Lookup / `console` / `mock`). `retryAfter` on success is 0 unless that request used the phone's last slot. The answer is identical whether or not the phone has an account. | `[live]` |
+| `POST /api/otp/verify` | none | `{phone, code}` (code 5–6 digits) → `{token, record}`, the shape of PocketBase's auth response, built by the route with `record.newAuthToken()` (365 days). Only the latest code for the phone counts. Each try spends an attempt atomically before the compare (constant-time); a wrong code → `OTP_WRONG` + `attemptsLeft`; after 5 → `OTP_LOCKED`, even for the right code; expired, used or never requested → `OTP_EXPIRED`. A used code is burnt, not deleted, so it still counts toward the rate limit. Finds or creates the user by phone. | `[live]` |
 | `GET /api/me` | user | `{user, entitlement, profileUpdatedAt}`; also refreshes `lastSeenAt`. | `[live]` |
 | `PATCH /api/me/profile` | user | `{profile}` → stored if `updatedAt` is newer. Equal is not newer. | `[live]` |
 | `POST /api/sync/push` | user | `{events: ReviewEvent[]}` (≤ 500) → `{accepted, duplicates}`. Insert-ignore by id; `user` set from auth, never from the body. | `[planned]` |
@@ -691,13 +695,18 @@ PocketBase bearer token. Because PocketBase serializes each handler into its own
 | `POST /api/admin/grant` | superuser | `{phone, note}` → creates the user if missing and an entitlement with `source: manual`. | `[planned]` |
 | `GET /api/admin/sourcemap/:sha/:file` | superuser | Serves a source map from `/opt/kl/sourcemaps/` for symbolication. | `[planned]` |
 
-Crons (`pb_hooks/cron.pb.js`): purge expired `otp_codes` hourly; `reconcileUnverified` every 15
+Crons (`pb_hooks/cron.pb.js`): `otp_purge` `[live]` hourly deletes `otp_codes` whose `expiresAt` is
+more than an hour past — not at expiry, because a row still counts toward the IP limit's
+one-hour window; `reconcileUnverified` every 15
 minutes (Zarinpal `unverified` → verify any successful-but-unverified authority we own; this is
 the safety net for a user who closed the browser during the redirect); mark `pending` payments
 older than 2 hours `expired`.
 
 Rate limits use PocketBase's built-in rate-limit rules where they fit (per route, per IP) and an
-in-hook counter where the key is a phone number or install id.
+in-hook counter where the key is a phone number or install id. The OTP limits are in-hook counts
+over `otp_codes` (PocketBase's rules cannot key on a phone). A per-IP count needs the real client
+IP: migration `1758700000_trusted_proxy.js` trusts `X-Forwarded-For`, rightmost value, which is
+safe only because PocketBase listens on `127.0.0.1` behind Caddy alone (§14.3, how-why §5.7).
 
 ### 8.3 Payment rules
 
@@ -1015,8 +1024,13 @@ through the superuser-only `POST /api/collections/users/impersonate/:id`.
 
 Covered today: the migrations apply from empty and every collection has the rules of §8.1;
 `config`, `health`, `me` and `me/profile` including newer-wins; the `withRoute` envelope, its codes
-and its structured log line with the phone masked and secrets hashed. Still to cover as the routes
-land: OTP rate limits, push idempotency, pull paging, content gate refusing an unentitled user,
+and its structured log line with the phone masked and secrets hashed; OTP (`otp.test.ts`): the
+console happy path, hashing at rest, single use, same user on a second login, 5 wrong codes →
+locked, expiry, both rate limits with `retryAfter` and `Retry-After`, phone normalisation, the
+purge cron, `mock` accepting `123456` only, an unknown provider and Kavenegar without a key.
+The harness takes env overrides (`startServer({env})`) and exposes the process `output()`, which
+is where the console provider's code is read from. Still to cover as the routes land: push
+idempotency, pull paging, content gate refusing an unentitled user,
 quote/request for each `codeStatus`, callback with a wrong amount, callback replay,
 `reconcileUnverified`. The e2e job exercises every route end to end.
 
@@ -1050,7 +1064,7 @@ protection requires `ci`, `server` and `e2e`.
 ## 18. Configuration and secrets
 
 `.env.example` is the list of record. Server (`/opt/kl/.env`): `SMS_PROVIDER`
-(`kavenegar`|`console`), `SMS_API_KEY`, `SMS_OTP_TEMPLATE`, `ZARINPAL_MERCHANT_ID`,
+(`kavenegar`|`console`|`mock`), `SMS_API_KEY`, `SMS_OTP_TEMPLATE`, `ZARINPAL_MERCHANT_ID`,
 `ZARINPAL_SANDBOX` (`0`|`1`), `ZARINPAL_CALLBACK_URL`, `PUBLIC_APP_ORIGIN`, `CONTENT_DIR`,
 `SOURCEMAP_DIR`, `BACKUP_S3_ENDPOINT`, `BACKUP_S3_BUCKET`, `BACKUP_S3_KEY`, `BACKUP_S3_SECRET`.
 Local bootstrap (`.env.local`, git-ignored, used once): `VPS_IP`, `VPS_ROOT_PASSWORD`. DNS is

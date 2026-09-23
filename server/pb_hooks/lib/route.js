@@ -264,6 +264,7 @@ function withRoute(name, handler, opts) {
     let userId = '';
     let installId = '';
     let payload = null;
+    let pub = null;
 
     try {
       // The install id comes from the header first, so it is known even when the body is the
@@ -297,6 +298,7 @@ function withRoute(name, handler, opts) {
         status = err.status;
         code = err.code;
         errMessage = err.message;
+        pub = err.pub;
       } else {
         // Anything the handler did not name is a bug in this server, not in the request. The
         // client is told nothing about it; the log gets the whole thing.
@@ -305,6 +307,14 @@ function withRoute(name, handler, opts) {
         errMessage = String(err?.message || err);
       }
       payload = { error: { code: code, message: errMessage } };
+      if (pub) {
+        for (const key of Object.keys(pub)) payload[key] = pub[key];
+        // RFC 9110: a 429 says when to come back. The body carries the same number for clients
+        // that cannot read headers (a CORS-restricted fetch).
+        if (typeof pub.retryAfter === 'number') {
+          e.response.header().set('Retry-After', String(pub.retryAfter));
+        }
+      }
     }
 
     const ms = Date.now() - startedAt;

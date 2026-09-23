@@ -37,6 +37,8 @@ interface RequestOptions {
 interface ServerErrorBody {
   readonly error?: { readonly code?: string; readonly message?: string };
   readonly retryAfter?: number;
+  /** `OTP_WRONG` only: how many tries the current code has left. */
+  readonly attemptsLeft?: number;
 }
 
 function retryAfterOf(response: Response, body: ServerErrorBody | null): number | null {
@@ -54,7 +56,7 @@ function retryAfterOf(response: Response, body: ServerErrorBody | null): number 
  * - `fetch` rejected (offline, DNS, filtering)  → `NETWORK`
  * - `401`                                       → `UNAUTHORIZED`
  * - `429`                                       → `RATE_LIMITED`, `data.retryAfter` in seconds
- * - a body of `{error:{code}}`                  → `SERVER_<CODE>`
+ * - a body of `{error:{code}}`                  → `SERVER_<CODE>` (`data.attemptsLeft` when sent)
  * - anything else                               → `HTTP_<status>`
  */
 async function toError(response: Response, route: string): Promise<AppError> {
@@ -78,7 +80,8 @@ async function toError(response: Response, route: string): Promise<AppError> {
   }
   const code = body?.error?.code;
   if (typeof code === 'string' && code.length > 0) {
-    return new AppError(`SERVER_${code.toUpperCase()}`, message, data);
+    const extra = typeof body?.attemptsLeft === 'number' ? { attemptsLeft: body.attemptsLeft } : {};
+    return new AppError(`SERVER_${code.toUpperCase()}`, message, { ...data, ...extra });
   }
   return new AppError(`HTTP_${response.status}`, message, data);
 }

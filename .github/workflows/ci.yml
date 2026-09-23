@@ -145,6 +145,8 @@ jobs:
       - name: Build
         run: pnpm build
 
+      # playwright.config.ts starts two servers: `vite preview` on 4173 and, from the binary above,
+      # PocketBase on 8091 with SMS_PROVIDER=mock (server/scripts/e2e.mjs); preview proxies /api.
       - name: E2E
         run: pnpm e2e
 

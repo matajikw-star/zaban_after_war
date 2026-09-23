@@ -190,6 +190,19 @@ describe('AppError mapping', () => {
     expect(err.message).toBe('شمارهٔ نامعتبر');
   });
 
+  it('carries attemptsLeft from an OTP_WRONG body', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () =>
+        jsonResponse(400, { error: { code: 'OTP_WRONG', message: 'wrong code' }, attemptsLeft: 3 }),
+      ),
+    );
+
+    const err = await rejection(otpRequest('09120000000'));
+    expect(err.code).toBe('SERVER_OTP_WRONG');
+    expect(err.data).toMatchObject({ attemptsLeft: 3, status: 400 });
+  });
+
   it('maps a coded error on a 500 too', async () => {
     vi.stubGlobal(
       'fetch',

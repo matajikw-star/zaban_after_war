@@ -448,7 +448,7 @@ src/
   db/                 dexie.ts (schema), repo.ts (typed reads/writes; the only file that touches Dexie)
   engine/             thin adapters over @kl/core (fold cache, rng, clock) + index.ts, the bound API
   net/                api.ts (typed fetch wrappers for every route in §8)
-  sync/               backup.ts (state machine), download.ts (state machine)
+  sync/               backup.ts (state machine), download.ts (state machine), login-merge.ts (ticket 03)
   log/                breadcrumbs.ts, errors.ts (capture + report), snapshot.ts
   content/            manifest.ts — the §8.2 manifest shape (the package shape is @kl/content)
   errors.ts           AppError (§17.4)
@@ -588,7 +588,7 @@ because the service worker answers every navigation with `index.html` (§7.7).
 | `/word/:id` | Word detail `[live]` | `screens/word/WordDetail.tsx`: every sense, confusables, exam history, a review timeline (one dot per event, grade 1 filled), «این را بلدم», a flag sheet (3 reasons → `outbox` kind `flag`). |
 | `/progress` | Progress `[live]` | Percent with the one-sentence rule («هر بار که یک کلمه در کنکور آمده، یک امتیاز»), conquered/total, a hand-rolled SVG 30-day bar chart (`engine/chart-data.ts`, pure), pace estimate vs exam date with a goal nudge when `verdict === 'behind'`. Bottom nav. |
 | `/paywall` | Paywall | The pace argument, what is included, price with strike-through, «خرید» → login if anonymous → `/checkout`. «بعداً» returns to study (early-pool cards keep the app usable). **Placeholder until Phase 5:** the argument and «بعداً» are live; the price and «خرید» arrive with payment. |
-| `/login` | Phone + OTP — **online** | States: `enterPhone → sending → enterCode → verifying → done`; errors: rate-limited (shows retry-after), wrong code (attempts left), network (retry). Explains why the number is needed (restore + purchase). |
+| `/login` **[live]** | Phone + OTP — **online** | `screens/login/machine.ts` (pure, total, unit-tested): `enterPhone → sending → enterCode → verifying → done`; errors: `rateLimited` (shows retry-after in minutes; retry or change number), `wrongCode` (`wrong` with attempts left, or `expired` / `locked` → resend), `networkError` (retries whichever request failed; offline shows a Persian explanation, never a crash). `flow.ts` performs the two requests with injected deps and never throws. Explains why the number is needed (backup, restore, purchase). The phone is sent as typed — the server normalises it; the code accepts Persian digits. On success: `stores/auth.ts` `signIn` writes `userId` + phone + token to `kv.auth`, then `sync/login-merge.ts` `runLoginMerge(userId)` — **a no-op until ticket 03**, the one call site the merge plugs into. Then home if a profile exists, else `/onboarding` (`destinationAfterLogin`). |
 | `/checkout` | Price, discount code — **online** | `quote` on code entry; «پرداخت» → `pay/request` → redirect to Zarinpal. |
 | `/purchase/result` | Callback landing — **online** | `?status=ok|failed`; on ok: fetch `/api/me`, cache entitlement, start download, show progress; on failed: reason + retry. If a `pendingPayment` exists on next launch, ask `/api/pay/status/:id` before assuming failure. |
 | `/settings` | Settings `[live]`* | Account (phone or «ورود» → `/login`), goal (minutes → `goalFromMinutes`), exam date (Jalali text input via `date-fns-jalali`), field (`content/field-codes.json`, named codes only), theme, backup row + manual button (calls `sync/backup.ts`'s `run()`), download row (state only), «نصب برنامه» (opens the install sheet — the install paragraph below), «گزارش مشکل» → `reportError('user_report', …)`, about + version + support link. *Local parts are fully wired; account/backup/download show live store state but `run()` is still a stub until Phase 4/5. |
@@ -1006,7 +1006,11 @@ produces a schedule where a word can be conquered in exactly 7 days but the medi
 - Unit: state machines (`backup`, `download`) with a fake API and fake clock — every state and
   every transition, including interrupted downloads and 429s.
 - E2E (Playwright, Android-sized viewport, against a real PocketBase started by the test runner
-  with `SMS_PROVIDER=console` and a Zarinpal mock route): onboarding → 10 reviews → **offline**
+  — `playwright.config.ts`'s second `webServer`, `server/scripts/e2e.mjs`, `127.0.0.1:8091`, a
+  throwaway `pb_data`, `SMS_PROVIDER=mock` so the code is `123456` — reached through
+  `vite preview`'s `/api` proxy, same-origin as behind Caddy; and a Zarinpal mock route). Built
+  so far: `login.spec.ts` (mock-code login → home, `kv.auth` survives a reload and the token
+  answers `/api/me`; a wrong code shows the tries left; offline explains itself). The target: onboarding → 10 reviews → **offline**
   (`context.setOffline(true)`) → 10 more reviews → back online → backup happens → paywall at the
   limit → login with the console OTP → checkout with a discount code → mock gateway → result →
   paid download → offline → study from the paid package → reload → state intact. Second spec:

@@ -35,7 +35,15 @@ export default defineConfig(({ mode }) => {
     // some dev machines, and a server that only bound `::1` was unreachable from tools (curl,
     // Playwright's own readiness probe) that dial `127.0.0.1`.
     server: { port: 5173, strictPort: true, host: '127.0.0.1' },
-    preview: { port: 4173, strictPort: true, host: '127.0.0.1' },
+    preview: {
+      port: 4173,
+      strictPort: true,
+      host: '127.0.0.1',
+      // The e2e PocketBase (server/scripts/e2e.mjs). Same-origin /api, like Caddy in production;
+      // 127.0.0.1, never `localhost`, for the reason above. Nothing listens there outside e2e,
+      // and the app's own study loop never calls /api, so a plain `pnpm preview` is unaffected.
+      proxy: { '/api': { target: 'http://127.0.0.1:8091', changeOrigin: false } },
+    },
     build: {
       // Uploaded per build sha at deploy time so a production stack symbolicates (§14.4).
       sourcemap: true,

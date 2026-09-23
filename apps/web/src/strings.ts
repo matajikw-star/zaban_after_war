@@ -280,6 +280,33 @@ export const strings = {
     installContinue: 'ادامه',
     installNow: 'نصب برنامه',
   },
+
+  /** `/login` (what.md §7.8). The screen needs the internet; everything else does not. */
+  login: {
+    why: 'با شمارهٔ موبایل وارد شوید تا پیشرفت شما پشتیبان‌گیری شود، روی گوشی تازه برگردد و بتوانید نسخهٔ کامل را بخرید.',
+    phoneLabel: 'شمارهٔ موبایل',
+    phonePlaceholder: '۰۹۱۲۱۲۳۴۵۶۷',
+    send: 'ارسال کد',
+    sending: 'در حال ارسال…',
+    phoneInvalid: 'این شماره یک موبایل ایرانی معتبر نیست.',
+    failed: 'مشکلی پیش آمد. کمی بعد دوباره تلاش کنید.',
+    /** Followed by the number itself, isolated left-to-right in the markup. */
+    codeSentTo: 'کد ورود پیامک شد به',
+    codeLabel: 'کد ورود',
+    verify: 'ورود',
+    verifying: 'در حال بررسی…',
+    wrongCode: (left: string) => `کد اشتباه است. ${left} تلاش دیگر باقی مانده.`,
+    codeExpired: 'این کد منقضی شده است. یک کد تازه بگیرید.',
+    codeLocked: 'تعداد تلاش‌ها تمام شد. یک کد تازه بگیرید.',
+    resend: 'ارسال دوبارهٔ کد',
+    changePhone: 'تغییر شماره',
+    rateLimited: (minutes: string) =>
+      `درخواست‌ها بیش از حد مجاز شد. ${minutes} دقیقهٔ دیگر دوباره تلاش کنید.`,
+    network:
+      'اتصال به اینترنت برقرار نیست. ورود به اینترنت نیاز دارد؛ مرور واژه‌ها بدون اینترنت هم کار می‌کند.',
+    retry: 'تلاش دوباره',
+    done: 'وارد شدید.',
+  },
 } as const;
 
 export type Strings = typeof strings;

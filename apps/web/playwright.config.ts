@@ -24,10 +24,21 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
   projects: [{ name: 'android', use: { ...devices['Pixel 7'], ...(channel ? { channel } : {}) } }],
-  webServer: {
-    command: 'pnpm preview',
-    url: 'http://127.0.0.1:4173',
-    reuseExistingServer: !process.env.CI,
-    timeout: 120_000,
-  },
+  webServer: [
+    {
+      command: 'pnpm preview',
+      url: 'http://127.0.0.1:4173',
+      reuseExistingServer: !process.env.CI,
+      timeout: 120_000,
+    },
+    {
+      // A real PocketBase with this repo's hooks and migrations, SMS_PROVIDER=mock (code 123456),
+      // on a throwaway pb_data (server/scripts/e2e.mjs). `vite preview` proxies /api to it, so the
+      // app talks same-origin exactly as it will behind Caddy (what.md §16.2).
+      command: 'pnpm --filter @kl/server pb:e2e',
+      url: 'http://127.0.0.1:8091/api/health',
+      reuseExistingServer: !process.env.CI,
+      timeout: 180_000,
+    },
+  ],
 });

@@ -20,8 +20,10 @@ describe('transition', () => {
     }
   });
 
-  it('walks backward one step at a time on back, for every step', () => {
-    for (let i = 1; i < ORDER.length; i += 1) {
+  it('walks backward one step at a time on back, for every non-terminal step', () => {
+    // `done` is excluded: it is terminal (below), so `back` from it stays at `done` rather
+    // than returning to `install`.
+    for (let i = 1; i < ORDER.length - 1; i += 1) {
       expect(transition(ORDER[i] as OnboardingStep, 'back')).toBe(ORDER[i - 1]);
     }
   });

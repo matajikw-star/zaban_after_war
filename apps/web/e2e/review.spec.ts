@@ -1,49 +1,14 @@
 import { expect, type Page, test } from '@playwright/test';
+import { DEFAULT_E2E_PROFILE, seedProfile } from './helpers.ts';
 
 /**
  * The review loop end to end, against the built app (`what.md` §7.8).
  *
- * Onboarding is still a placeholder, so the profile is written straight into `kv` — the same
- * record `/onboarding` will write, in the same table, so the app cannot tell the difference.
- * Everything after that is the real screen: the real queue, the real event log, the real fold.
+ * The profile is written straight into `kv` via the shared `seedProfile` helper — the same
+ * record `/onboarding`'s finish handler writes, in the same table, so the app cannot tell the
+ * difference. Everything after that is the real screen: the real queue, the real event log, the
+ * real fold.
  */
-
-interface Profile {
-  readonly minutesPerDay: number;
-  readonly dailyGoal: number;
-  readonly examDate: number | null;
-  readonly fieldCode: string | null;
-  readonly updatedAt: number;
-}
-
-const PROFILE: Profile = {
-  minutesPerDay: 20,
-  // `goalFromMinutes(20)`. Well above the ten answers below, so the goal sheet stays shut and
-  // the loop under test is the loop being asserted on.
-  dailyGoal: 200,
-  examDate: null,
-  fieldCode: null,
-  updatedAt: 1_700_000_000_000,
-};
-
-async function seedProfile(page: Page, profile: Profile): Promise<void> {
-  await page.evaluate(async (value) => {
-    await new Promise<void>((resolve, reject) => {
-      const open = indexedDB.open('konkur-leitner');
-      open.onerror = () => reject(open.error);
-      open.onsuccess = () => {
-        const db = open.result;
-        const tx = db.transaction('kv', 'readwrite');
-        tx.objectStore('kv').put({ key: 'profile', value });
-        tx.oncomplete = () => {
-          db.close();
-          resolve();
-        };
-        tx.onerror = () => reject(tx.error);
-      };
-    });
-  }, profile);
-}
 
 async function countEvents(page: Page): Promise<number> {
   return page.evaluate(async () => {
@@ -67,7 +32,7 @@ async function countEvents(page: Page): Promise<number> {
 test('ten reviews are graded, fed back, and still in the log after a reload', async ({ page }) => {
   // The first load is what creates the database; the profile goes in behind it.
   await page.goto('/');
-  await seedProfile(page, PROFILE);
+  await seedProfile(page, DEFAULT_E2E_PROFILE);
 
   await page.goto('/review');
 
@@ -115,7 +80,7 @@ test('«این کلمه اشکال دارد» records a flag in the outbox witho
   page,
 }) => {
   await page.goto('/');
-  await seedProfile(page, PROFILE);
+  await seedProfile(page, DEFAULT_E2E_PROFILE);
   await page.goto('/review');
 
   await expect(page.getByTestId('review-word')).toBeVisible();

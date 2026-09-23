@@ -68,12 +68,7 @@ export function PlacementStep({ onLeave }: PlacementStepProps) {
         >
           {strings.onboarding.placementDontKnow}
         </Button>
-        <Button
-          data-testid="placement-know"
-          variant="primary"
-          block
-          onClick={() => choose('know')}
-        >
+        <Button data-testid="placement-know" variant="primary" block onClick={() => choose('know')}>
           {strings.onboarding.placementKnow}
         </Button>
       </div>

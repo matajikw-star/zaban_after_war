@@ -1,9 +1,11 @@
 /** `/session/summary` (`what.md` §7.8): the counters from `stores/session`, plus the streak. */
 
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { streak } from '../../engine/index.ts';
 import { useSessionStore } from '../../stores/session.ts';
 import { strings } from '../../strings.ts';
+import { requestBackup } from '../../sync/backup-live.ts';
 import { Button } from '../../ui/Button.tsx';
 import { Card } from '../../ui/Card.tsx';
 import { faNumber, faPercent } from '../../ui/format.ts';
@@ -14,6 +16,11 @@ export function SessionSummary() {
   const correct = useSessionStore((state) => state.correct);
   const conquered = useSessionStore((state) => state.conquered);
   const streakInfo = streak();
+
+  // The end of a study session is a backup trigger (§7.4). Fire and forget: never blocks.
+  useEffect(() => {
+    void requestBackup('session-end');
+  }, []);
 
   const accuracy = presentations > 0 ? (correct / presentations) * 100 : 0;
 

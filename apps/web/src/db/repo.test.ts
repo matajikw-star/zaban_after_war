@@ -12,6 +12,7 @@ import {
   kvGet,
   kvSet,
   lastEvents,
+  markAllUnsynced,
   markSynced,
   outboxAll,
   outboxDelete,
@@ -82,14 +83,30 @@ describe('events', () => {
       event('remote', 'bear', 2000),
     ]);
 
-    expect(inserted).toBe(1);
+    expect(inserted.map((e) => e.id)).toEqual(['remote']);
     expect(await eventCount()).toBe(2);
     // The local event is still waiting for its own push to succeed.
     expect((await unsyncedEvents()).map((e) => e.id)).toEqual(['local']);
   });
 
-  it('insertPulled with nothing to insert reports zero', async () => {
-    expect(await insertPulled([])).toBe(0);
+  it('insertPulled with nothing to insert reports nothing', async () => {
+    expect(await insertPulled([])).toEqual([]);
+  });
+
+  it('insertPulled keeps one copy of an id repeated within the same page', async () => {
+    const inserted = await insertPulled([event('x', 'bear', 1), event('x', 'bear', 1)]);
+    expect(inserted).toHaveLength(1);
+    expect(await eventCount()).toBe(1);
+  });
+
+  it('markAllUnsynced puts every event back in the push queue and deletes nothing', async () => {
+    await appendEvent(event('a', 'abandon', 1000));
+    await insertPulled([event('b', 'bear', 2000)]);
+    expect(await unsyncedCount()).toBe(1);
+
+    expect(await markAllUnsynced()).toBe(2);
+    expect(await unsyncedCount()).toBe(2);
+    expect(await eventCount()).toBe(2);
   });
 });
 

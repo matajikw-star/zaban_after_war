@@ -3,7 +3,7 @@
  * `transition(state, event)` with a breadcrumb on every change — the same discipline as
  * `sync/backup.ts`'s machine.
  *
- * Unlike `sync/backup.ts` (whose `run()` is still a stub), this one is fully wired: `register.ts`
+ * Like `sync/backup.ts`'s runner, this one is fully wired: `register.ts`
  * is the only real caller of the runtime functions below (`noteNeedRefresh`, `onRegistered`,
  * `applyUpdate`, `setUpdateSwFn`), and everything else in this file is pure, which is what the
  * unit tests exercise directly with a fake registration and a fake `updateSW`.

@@ -549,6 +549,34 @@ Ticket `dev-server/03`. Server half.
 - **`withRoute` gained `maxBodyBytes`.** The 32 KB cap of §15 cannot hold 500 events (~170 bytes
   each); `sync/push` takes 256 KB and everything else keeps 32 KB.
 
+Client half (`sync/backup.ts`, `backup-live.ts`, `login-merge.ts`):
+
+- **`RETRY` is gone; a retry is a `START` from `error`.** The skeleton's `error → RETRY → idle`
+  dropped the failure count, so every retry failed as "attempt 1" and the ladder never left one
+  minute. `pushing`/`pulling` now carry `failures`, which only a completed run resets.
+- **Which trigger may jump a backoff is a pure gate, `mayRunNow`.** `manual`, `online`, `login`
+  jump it; the interval, start and session end wait; nothing jumps a 429 (the server asked for
+  time); after a 401 only `login` or `manual` try, since no timer fixes a refused token.
+- **A trigger during a run is queued, not dropped.** The login merge re-queues every event and
+  then asks for a run; if a `start` run was already in flight it would have missed them until the
+  next interval. The latest queued trigger runs once, through the same gate.
+- **The login merge fires the backup and does not await it.** Awaiting would hold the user on
+  the login screen for as long as the network takes, which §0 forbids. Restore still works: the
+  fold cache notifies subscribers when the pull merges events in.
+- **Pulled events are merged into the fold cache, never reloaded from IndexedDB.** A reload reads
+  the table, awaits, then replaces the cache — a review recorded in between would vanish from
+  memory until the next launch. `mergeIntoFold` is synchronous and additive.
+- **The cursor is stored per user**, because `signOut` exists and a second account on the same
+  device must pull from the beginning, not from the first account's position.
+- **Session end also means the page going `hidden`.** On a phone, closing or switching away is
+  how most sessions end; «پایان» is the exception.
+- **The profile is reconciled in the login merge** (newer `updatedAt` wins), since without it a
+  restored device lands on onboarding instead of home. Continuous profile backup was left out of
+  this ticket (`what.md` §19).
+- **Outbox kinds whose route does not exist are kept.** Sending them now would 404, and a non-429
+  `4xx` drops an item — every error report and flag collected so far would be thrown away before
+  ticket 04 ever ships the routes.
+
 ## 6. How to extend this file
 
 

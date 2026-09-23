@@ -27,6 +27,7 @@ import { useAuthStore } from './stores/auth.ts';
 import { useContentStore } from './stores/content.ts';
 import { useSettingsStore } from './stores/settings.ts';
 import { strings } from './strings.ts';
+import { startBackup } from './sync/backup-live.ts';
 import { APP_VERSION } from './version.ts';
 import './index.css';
 
@@ -88,6 +89,10 @@ async function bootstrap(): Promise<void> {
   loadEvents(await allEvents());
 
   if (firstOpen) await recordFirstOpen(installId);
+
+  // After the fold, so a pull's re-fold adds to a loaded log. Not awaited: backup is never on
+  // the path to the first paint, and it does nothing at all for an anonymous install (§7.4).
+  startBackup().catch((err: unknown) => reportError('sync', err, { phase: 'bootstrap.backup' }));
 
   breadcrumb('log', 'bootstrap.done', { firstOpen, entitled });
 }

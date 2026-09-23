@@ -9,6 +9,7 @@ import {
   cachedEvents,
   currentFold,
   loadEvents,
+  mergeIntoFold,
   resetFoldCache,
   subscribeToFold,
 } from './fold-cache.ts';
@@ -111,5 +112,34 @@ describe('recordReview', () => {
     expect(state?.lapseCount).toBe(1);
     // High water never decreases: progress does not go backwards (§5.2).
     expect(state?.highWaterBox).toBe(2);
+  });
+});
+
+describe('mergeIntoFold', () => {
+  it('adds pulled events to the cache, skips known ids, and keeps a review recorded meanwhile', () => {
+    loadEvents([event('a', 'abandon', T0 - 5000)]);
+    // A review lands while the pull is in flight.
+    appendToFold(event('b', 'bear', T0 - 1000));
+
+    let notified = 0;
+    subscribeToFold(() => {
+      notified += 1;
+    });
+    mergeIntoFold([event('a', 'abandon', T0 - 5000), event('c', 'cite', T0 - 3000)]);
+
+    expect(cachedEvents().map((e) => e.id)).toEqual(['a', 'b', 'c']);
+    expect(currentFold().items.has('cite')).toBe(true);
+    expect(currentFold().items.has('bear')).toBe(true);
+    expect(notified).toBe(1);
+  });
+
+  it('does not re-fold when nothing is new', () => {
+    loadEvents([event('a', 'abandon', T0)]);
+    let notified = 0;
+    subscribeToFold(() => {
+      notified += 1;
+    });
+    mergeIntoFold([event('a', 'abandon', T0)]);
+    expect(notified).toBe(0);
   });
 });

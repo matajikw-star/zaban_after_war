@@ -233,7 +233,8 @@ export function failureFromError(err: unknown): LoginFailure {
  * Where `done` goes. The simplest rule consistent with §7.8's onboarding guard: a device that
  * already has a profile goes home; one that does not (a returning user on a fresh install, who
  * came here from «قبلاً حساب داشتم») finishes onboarding first, because Home would send it there
- * anyway. Restoring the profile from the server is the login merge's job (ticket 03).
+ * anyway. The login merge (`sync/login-merge.ts`) runs before this is asked and adopts the
+ * server's profile when there is one, so a restored account lands home.
  */
 export function destinationAfterLogin(hasProfile: boolean): '/' | '/onboarding' {
   return hasProfile ? '/' : '/onboarding';

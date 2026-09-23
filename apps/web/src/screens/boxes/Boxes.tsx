@@ -41,7 +41,9 @@ function BoxColumn({
           : 'border-[var(--border)] bg-[var(--bg-elevated)] text-[var(--fg)]'
       }`}
     >
-      <span className="text-h6 font-medium">{faNumber(count)}</span>
+      <span className="text-h6 font-medium" data-testid={`box-count-${box}`}>
+        {faNumber(count)}
+      </span>
       <span className="text-caption">{strings.boxes.boxPrefix(faNumber(box))}</span>
     </button>
   );

@@ -1,8 +1,7 @@
 /**
  * Every network call the app makes (`what.md` §8.2, §17.8).
  *
- * The server does not exist yet — these types *are* the contract, and `pb_hooks/` is written
- * against them in Phase 4. One `request()` underneath them all attaches the bearer token, logs a
+ * These types are the contract `pb_hooks/` is written against. One `request()` underneath them all attaches the bearer token, logs a
  * `net` breadcrumb and maps every failure to an `AppError` code, so no caller anywhere has to
  * look at a `Response`.
  *
@@ -160,8 +159,13 @@ export interface EntitlementResponse {
   readonly grantedAt: number | null;
 }
 
+/** `/api/me`'s user: the stored profile is whatever a device last PATCHed, or null. */
+export interface MeUser extends AuthUser {
+  readonly profile: unknown;
+}
+
 export interface MeResponse {
-  readonly user: AuthUser;
+  readonly user: MeUser;
   readonly entitlement: EntitlementResponse;
   readonly profileUpdatedAt: number | null;
 }

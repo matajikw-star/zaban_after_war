@@ -35,6 +35,24 @@ export function appendToFold(event: ReviewEvent): Fold {
   return refold('append');
 }
 
+/**
+ * Adds events a pull brought in and re-folds (§7.4). Synchronous and additive, never a reload
+ * from the database: a review recorded while the pull was in flight is already in the cache and
+ * must not be dropped by a list read before it was written. Ids already cached are skipped.
+ */
+export function mergeIntoFold(incoming: readonly ReviewEvent[]): Fold {
+  const known = new Set(events.map((e) => e.id));
+  let added = 0;
+  for (const event of incoming) {
+    if (known.has(event.id)) continue;
+    known.add(event.id);
+    events.push(event);
+    added += 1;
+  }
+  if (added === 0) return current;
+  return refold('pull');
+}
+
 export function currentFold(): Fold {
   return current;
 }

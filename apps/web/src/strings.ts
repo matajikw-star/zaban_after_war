@@ -119,6 +119,13 @@ export const strings = {
     goalBody: 'می‌توانی همین‌جا استراحت کنی، یا اگر حالش را داری ادامه بدهی.',
     goalContinue: 'ادامه می‌دهم',
     goalFinish: 'پایان جلسه',
+
+    // Once, after 50 presentations on an anonymous install (what.md §7.4).
+    saveProgressTitle: 'ذخیرهٔ پیشرفت با شمارهٔ موبایل',
+    saveProgressBody:
+      'پیشرفتت الان فقط روی همین گوشی است. با شمارهٔ موبایل وارد شو تا خودکار پشتیبان‌گیری شود و روی هر گوشی دیگری برگردد.',
+    saveProgressAccept: 'ورود با شمارهٔ موبایل',
+    saveProgressLater: 'بعداً',
   },
 
   /** The paywall (what.md §7.8). Placeholder copy until Phase 5 builds the real screen. */
@@ -205,6 +212,10 @@ export const strings = {
     backupError: 'پشتیبان‌گیری در انتظار اینترنت',
     backupNow: 'پشتیبان‌گیری الان',
     backupNever: 'هنوز پشتیبان‌گیری نشده',
+    backupLast: (when: string) => `آخرین پشتیبان‌گیری: ${when}`,
+    backupAnonymous: 'پیشرفت فقط روی همین دستگاه ذخیره شده است.',
+    backupSaveProgress: 'ذخیرهٔ پیشرفت با شمارهٔ موبایل',
+    backupRelogin: 'برای ادامهٔ پشتیبان‌گیری دوباره وارد شوید',
     downloadTitle: 'دانلود واژه‌ها',
     downloadNone: 'نیازی به دانلود نیست',
     downloadChecking: 'در حال بررسی…',

@@ -10,6 +10,7 @@ function deps() {
     installId: 'device-1',
     persistStorage: vi.fn().mockResolvedValue(true),
     navigate: vi.fn(),
+    reportError: vi.fn(),
   };
 }
 
@@ -69,5 +70,30 @@ describe('createFinishOnboarding', () => {
       examDate: null,
       fieldCode: null,
     });
+  });
+
+  it('rethrows a failed profile write, stays off home, and lets a retry finish', async () => {
+    const d = deps();
+    d.setProfile.mockRejectedValueOnce(new Error('idb closed'));
+    const finish = createFinishOnboarding(d);
+
+    await expect(finish(INPUT)).rejects.toThrow('idb closed');
+    expect(d.queueBeacon).not.toHaveBeenCalled();
+    expect(d.navigate).not.toHaveBeenCalled();
+
+    await finish(INPUT);
+    expect(d.setProfile).toHaveBeenCalledTimes(2);
+    expect(d.navigate).toHaveBeenCalledWith('/');
+  });
+
+  it('reports a failed beacon but still navigates home', async () => {
+    const d = deps();
+    d.queueBeacon.mockRejectedValue(new Error('quota'));
+    const finish = createFinishOnboarding(d);
+
+    await finish(INPUT);
+
+    expect(d.reportError).toHaveBeenCalledWith(expect.any(Error), 'onboarding.beacon');
+    expect(d.navigate).toHaveBeenCalledWith('/');
   });
 });

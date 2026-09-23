@@ -7,6 +7,10 @@
  * Idempotent by construction: `createFinishOnboarding` closes over a `fired` flag, so a second
  * call — the machine re-entering `done` under React's dev-mode double effect, or two rapid taps
  * on the last step — is a no-op rather than a second profile write or a second beacon.
+ *
+ * Failure: a profile write that rejects re-arms the finisher and rethrows, so the caller can put
+ * the user back on the last step to try again. A beacon that fails to queue is only reported —
+ * telemetry never keeps a user out of the app.
  */
 
 import { now } from '../../engine/clock.ts';
@@ -28,6 +32,8 @@ export interface FinishOnboardingDeps {
    *  browser refuses or does not support persistence. Never throws. */
   readonly persistStorage: () => Promise<boolean>;
   readonly navigate: (path: string) => void;
+  /** Logs a non-fatal failure (the beacon) without stopping the finish. */
+  readonly reportError: (err: unknown, phase: string) => void;
 }
 
 /** The real `persistStorage` dep. Feature-detects, catches, and never rejects or blocks. */
@@ -51,14 +57,23 @@ export function createFinishOnboarding(deps: FinishOnboardingDeps): FinishOnboar
     if (fired) return;
     fired = true;
 
-    await deps.setProfile({
-      minutesPerDay: input.minutesPerDay,
-      examDate: input.examDate,
-      fieldCode: input.fieldCode,
-    });
+    try {
+      await deps.setProfile({
+        minutesPerDay: input.minutesPerDay,
+        examDate: input.examDate,
+        fieldCode: input.fieldCode,
+      });
+    } catch (err) {
+      fired = false;
+      throw err;
+    }
 
     const event: BeaconEvent = { name: 'onboarding_done', at: now(), appVersion: APP_VERSION };
-    await deps.queueBeacon(deps.installId, [event]);
+    try {
+      await deps.queueBeacon(deps.installId, [event]);
+    } catch (err) {
+      deps.reportError(err, 'onboarding.beacon');
+    }
 
     // Best-effort: never blocks reaching home, whatever the browser decides.
     await deps.persistStorage();

@@ -12,6 +12,7 @@ import type { ReactNode } from 'react';
 import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { outboxEnqueue } from '../../db/repo.ts';
+import { reportError } from '../../log/errors.ts';
 import type { BeaconEvent } from '../../net/api.ts';
 import { useAuthStore } from '../../stores/auth.ts';
 import { useSettingsStore } from '../../stores/settings.ts';
@@ -49,6 +50,7 @@ export function Onboarding() {
       installId: useAuthStore.getState().installId,
       persistStorage: requestPersistentStorage,
       navigate: (path) => navigate(path, { replace: true }),
+      reportError: (err, phase) => void reportError('error', err, { phase }),
     }),
   ).current;
 
@@ -56,7 +58,11 @@ export function Onboarding() {
     const nextStep = transition(step, event);
     setStep(nextStep);
     if (nextStep === 'done') {
-      void finish({ minutesPerDay, examDate, fieldCode });
+      // A failed profile write puts the user back on the last step, where «ادامه» retries it.
+      finish({ minutesPerDay, examDate, fieldCode }).catch((err: unknown) => {
+        setStep('install');
+        void reportError('error', err, { phase: 'onboarding.finish' });
+      });
     }
   }
 

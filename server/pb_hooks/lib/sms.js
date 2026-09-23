@@ -44,6 +44,12 @@ function newCode(provider) {
   return $security.randomStringWithAlphabet(CODE_LENGTH, '0123456789');
 }
 
+/** Removes every form of the API key (raw and URL-encoded) from a string bound for the log. */
+function redactKey(text, apiKey) {
+  if (!apiKey) return text;
+  return text.split(encodeURIComponent(apiKey)).join('***').split(apiKey).join('***');
+}
+
 function sendKavenegar(app, phone, code) {
   const apiKey = env.get('SMS_API_KEY');
   const template = env.get('SMS_OTP_TEMPLATE');
@@ -53,7 +59,7 @@ function sendKavenegar(app, phone, code) {
 
   // https://kavenegar.com/rest.html#sms-Lookup — the key is part of the path, which is why the
   // URL is never logged.
-  const url = `https://api.kavenegar.com/v1/${encodeURIComponent(apiKey)}/verify/lookup.json`;
+  const url = `${env.get('SMS_API_BASE')}/v1/${encodeURIComponent(apiKey)}/verify/lookup.json`;
   const body =
     `receptor=${encodeURIComponent(toLocal(phone))}` +
     `&token=${encodeURIComponent(code)}` +
@@ -70,8 +76,10 @@ function sendKavenegar(app, phone, code) {
     });
   } catch (err) {
     app.logger().error('sms.send', 'provider', 'kavenegar', 'phone', maskPhone(phone), 'status', 0);
+    // Go's transport errors quote the full URL (`Post "https://…/<key>/verify/…": …`), so the key
+    // is cut out before the message reaches the log.
     throw new AppError(CODES.SMS_FAILED, 'kavenegar unreachable', 502, {
-      cause: String(err?.message || err),
+      cause: redactKey(String(err?.message || err), apiKey),
     });
   }
 
@@ -146,4 +154,4 @@ function send(app, provider, phone, code) {
   );
 }
 
-module.exports = { providerName, newCode, send, PROVIDERS, MOCK_CODE, CODE_LENGTH };
+module.exports = { providerName, newCode, send, redactKey, PROVIDERS, MOCK_CODE, CODE_LENGTH };

@@ -11,6 +11,7 @@
 const DEFAULTS = {
   SMS_PROVIDER: 'kavenegar',
   SMS_OTP_TEMPLATE: 'kl-otp',
+  SMS_API_BASE: 'https://api.kavenegar.com',
   ZARINPAL_SANDBOX: '0',
   ZARINPAL_CALLBACK_URL: 'https://app.konkurleitner.com/api/pay/callback',
   PUBLIC_APP_ORIGIN: 'https://app.konkurleitner.com',

@@ -1068,7 +1068,7 @@ protection requires `ci`, `server` and `e2e`.
 ## 18. Configuration and secrets
 
 `.env.example` is the list of record. Server (`/opt/kl/.env`): `SMS_PROVIDER`
-(`kavenegar`|`console`|`mock`), `SMS_API_KEY`, `SMS_OTP_TEMPLATE`, `ZARINPAL_MERCHANT_ID`,
+(`kavenegar`|`console`|`mock`), `SMS_API_KEY`, `SMS_OTP_TEMPLATE`, `SMS_API_BASE` (default `https://api.kavenegar.com`; tests only), `ZARINPAL_MERCHANT_ID`,
 `ZARINPAL_SANDBOX` (`0`|`1`), `ZARINPAL_CALLBACK_URL`, `PUBLIC_APP_ORIGIN`, `CONTENT_DIR`,
 `SOURCEMAP_DIR`, `BACKUP_S3_ENDPOINT`, `BACKUP_S3_BUCKET`, `BACKUP_S3_KEY`, `BACKUP_S3_SECRET`.
 Local bootstrap (`.env.local`, git-ignored, used once): `VPS_IP`, `VPS_ROOT_PASSWORD`. DNS is

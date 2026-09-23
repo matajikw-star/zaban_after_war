@@ -458,3 +458,32 @@ describe('kavenegar without a key', () => {
     expect(response.body.error.code).toBe('SMS_FAILED');
   });
 });
+
+describe('kavenegar unreachable', () => {
+  // A closed local port instead of Kavenegar: the transport error Go raises quotes the full URL,
+  // and the URL carries the API key. None of it may reach the log or stdout.
+  const KEY = 'TEST-KEY-must-never-be-logged';
+  let kv: Server;
+
+  beforeAll(async () => {
+    kv = await startServer({
+      env: { SMS_PROVIDER: 'kavenegar', SMS_API_KEY: KEY, SMS_API_BASE: 'http://127.0.0.1:1' },
+    });
+  });
+
+  afterAll(async () => {
+    await kv?.stop();
+  });
+
+  it('answers SMS_FAILED and never logs the API key', async () => {
+    const response = await request(kv, '09121200002', '10.9.0.2');
+    expect(response.status).toBe(502);
+    expect(response.body.error.code).toBe('SMS_FAILED');
+    expect(JSON.stringify(response.body)).not.toContain(KEY);
+
+    const lines = await kv.logsFor('otp.request');
+    expect(lines.length).toBeGreaterThan(0);
+    expect(JSON.stringify(lines)).not.toContain(KEY);
+    expect(kv.output()).not.toContain(KEY);
+  });
+});

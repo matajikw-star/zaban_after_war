@@ -554,7 +554,7 @@ server response (`/api/me` or the purchase result). Read offline forever; never 
 check that says `none` while the cache says `full` is logged as a `client_errors` record and the
 cache is **kept** until the owner acts — the app never revokes on its own.
 
-### 7.7 Service worker and updates
+### 7.7 Service worker and updates [live]
 
 - Precache: app shell, fonts, `content/free.json` — Workbox revisions it by its own content
   hash (computed at `generateSW` time from the file's bytes); Vite does not rename or hash the
@@ -580,8 +580,8 @@ because the service worker answers every navigation with `index.html` (§7.7).
 
 | Route | Screen | States / notes |
 |---|---|---|
-| `/onboarding` **[live]** | 3 slides (what it is, the exam-frequency claim, Leitner in one picture) → minutes/day → exam date (Jalali picker, skippable) → field (skippable, from `content/field-codes.json`) → placement (skippable) → install nudge | Writes `profile`; `beacon onboarding_done`. Install nudge is UI only — `beforeinstallprompt` wiring is ticket 05. |
-| `/` | Home `[live]` | Goal ring (today's presentations / goal), streak, progress %, conquered count, one primary button «شروع مرور», the update chip (renders when `kv.swUpdateAvailable`; wired in ticket 05), backup status dot (from `stores/sync`, hidden when anonymous), bottom nav to `/boxes`, `/progress`, `/settings`. Also owns the once-only redirect to `/season` (`kv.seasonShownFor`). |
+| `/onboarding` **[live]** | 3 slides (what it is, the exam-frequency claim, Leitner in one picture) → minutes/day → exam date (Jalali picker, skippable) → field (skippable, from `content/field-codes.json`) → placement (skippable) → install nudge | Writes `profile`; `beacon onboarding_done`. Install nudge shows the real per-context install affordance — «نصب برنامه» when `beforeinstallprompt` was captured, the copy-link fallback in an in-app browser, the iOS Share instruction — the same detection and copy as `/settings`'s install sheet. Continuing is never gated on it. |
+| `/` | Home `[live]` | Goal ring (today's presentations / goal), streak, progress %, conquered count, one primary button «شروع مرور», the update chip («نسخهٔ جدید آماده است — اعمال», renders when `stores/pwa.ts`'s `updateReady` is set by `pwa/update.ts`'s state machine; tap calls `applyUpdate()`, §7.7), backup status dot (from `stores/sync`, hidden when anonymous), bottom nav to `/boxes`, `/progress`, `/settings`. Also owns the once-only redirect to `/season` (`kv.seasonShownFor`). |
 | `/review` **[live]** | Card | Front: word, exam badge («۱ بار در کنکور، سال ۱۴۰۲»), tap to reveal. Back: translations + one sentence (the exam stem for answer-words, else the authored example); «بیشتر» expands definition, other senses, confusables, exam history, and «راهنمای یادگیری» is its own collapsed disclosure. Buttons: «بلد نبودم» / «بلد بودم»; overflow (⋯): «این را بلدم» (know), «این کلمه اشکال دارد» (flag sheet with 3 reasons → `outbox` `flag`). Feedback: box change and «دفعهٔ بعد: ۲ روز دیگر», ~900 ms or a tap. Goal reached → congratulation sheet, once per Tehran day (`kv.goalSheetShownDay`), never blocking. `kv.presentationsBeforePaywall` counts up while the entitlement is `none`; at `freePresentationLimit` → `/paywall`, once per session, `beacon paywall_shown`. Beacons `first_review`, `reviews_10`, `reviews_100` on crossing. «پایان» → `/session/summary`. |
 | `/session/summary` | End of session `[live]` | Presentations, accuracy, conquered today (from `stores/session`), streak (from `engine.streak`); «ادامه» or «خانه». |
 | `/boxes` | Leitner boxes `[live]` | Five columns with counts (`boxCounts`) plus «دیده‌نشده»; tap a box → inline list of words in it with next-due relative time (`ui/relative-time.ts`); tap a word → `/word/:id`. Bottom nav. |
@@ -591,13 +591,16 @@ because the service worker answers every navigation with `index.html` (§7.7).
 | `/login` | Phone + OTP — **online** | States: `enterPhone → sending → enterCode → verifying → done`; errors: rate-limited (shows retry-after), wrong code (attempts left), network (retry). Explains why the number is needed (restore + purchase). |
 | `/checkout` | Price, discount code — **online** | `quote` on code entry; «پرداخت» → `pay/request` → redirect to Zarinpal. |
 | `/purchase/result` | Callback landing — **online** | `?status=ok|failed`; on ok: fetch `/api/me`, cache entitlement, start download, show progress; on failed: reason + retry. If a `pendingPayment` exists on next launch, ask `/api/pay/status/:id` before assuming failure. |
-| `/settings` | Settings `[live]`* | Account (phone or «ورود» → `/login`), goal (minutes → `goalFromMinutes`), exam date (Jalali text input via `date-fns-jalali`), field (`content/field-codes.json`, named codes only), theme, backup row + manual button (calls `sync/backup.ts`'s `run()`), download row (state only), «نصب برنامه» (placeholder, ticket 05), «گزارش مشکل» → `reportError('user_report', …)`, about + version + support link. *Local parts are fully wired; account/backup/download show live store state but `run()` is still a stub until Phase 4/5. |
+| `/settings` | Settings `[live]`* | Account (phone or «ورود» → `/login`), goal (minutes → `goalFromMinutes`), exam date (Jalali text input via `date-fns-jalali`), field (`content/field-codes.json`, named codes only), theme, backup row + manual button (calls `sync/backup.ts`'s `run()`), download row (state only), «نصب برنامه» (opens the install sheet — the install paragraph below), «گزارش مشکل» → `reportError('user_report', …)`, about + version + support link. *Local parts are fully wired; account/backup/download show live store state but `run()` is still a stub until Phase 4/5. |
 | `/season` | Season summary `[live]` | Shown once when the exam date passes (`engine/season.ts`, pure): conquered, days studied, presentations; «تاریخ جدید» → `/settings`. |
 
-Install prompt: on Android Chrome, `beforeinstallprompt` is captured and offered as a sheet at
-the end of onboarding and from settings. In-app browsers (Telegram, Instagram) do not fire it —
-the app detects them (UA sniff) and shows «در Chrome باز کنید» with a copy-link button. iOS shows
-the Share → Add to Home Screen instruction. The landing page also offers the APK.
+Install prompt **[live]**: on Android Chrome, `beforeinstallprompt` is captured (`pwa/install.ts`,
+listener attached synchronously in `main.tsx`'s `bootstrap()`, ahead of any `await`, since the
+event fires once and only ever that early) and offered as a sheet at the end of onboarding and
+from settings (`screens/install/InstallSheet.tsx`, `screens/onboarding/InstallStep.tsx`). In-app
+browsers (Telegram, Instagram, Facebook) do not fire it — the app detects them (UA sniff) and
+shows «در Chrome باز کنید» with a copy-link button. iOS shows the Share → Add to Home Screen
+instruction. The landing page also offers the APK.
 
 ### 7.9 Design system — **decided 2026-09-18** (ADR-0020)
 

@@ -8,8 +8,7 @@ commit. The reasoning behind any of it is not here: it is in `how-why.md` and in
 How to read the status marks: `[planned]` = specified, no code yet · `[building]` = a ticket is
 open · `[live]` = on `main` and deployed. A builder session flips the mark when it ships.
 
-Last full revision: 2026-09-17 (the development plan). Design system: **pending the owner's
-choice** — see §7.9.
+Last full revision: 2026-09-17 (the development plan). Design system: decided 2026-09-18 — see §7.9.
 
 ---
 
@@ -93,29 +92,32 @@ not be reachable on the app origin.
 
 ```
 apps/
-  web/            the PWA (Vite + React + TS + Tailwind)                     [planned]
-  landing/        the one-page marketing site (Vite, static)                [planned]
-  admin/          the owner's stats dashboard (Vite + React, tiny)          [planned]
+  web/            the PWA (Vite + React + TS + Tailwind)                     [building — scaffold]
+  landing/        the one-page marketing site (Vite, static)                [building — placeholder]
+  admin/          the owner's stats dashboard (Vite + React, tiny)          [building — scaffold]
 packages/
-  core/           the SRS engine: pure functions, exhaustively tested       [building — types exist, superseded]
-  content/        JSON schemas, lint, package builder                       [building — lint exists]
-  design/         design tokens (CSS variables), fonts, shared base styles  [planned]
+  core/           the SRS engine: pure functions, exhaustively tested       [live]
+  content/        JSON schemas, lint, package builder                       [live]
+  design/         design tokens (CSS variables), fonts, shared base styles  [building — tokens + Vazirmatn]
 server/
-  pb_hooks/       PocketBase JS hooks (routes, crons)                        [planned]
-  pb_migrations/  collections and API rules                                  [planned]
-  Caddyfile, systemd/, deploy/   VPS configuration and deploy scripts       [planned]
-  POCKETBASE_VERSION            the pinned binary version                    [planned]
-android/          Bubblewrap TWA project (twa-manifest.json); keystore NOT in git [planned]
-tools/            simulator, error/log readers, deploy, backup pull          [partly]
+  pb_hooks/       PocketBase JS hooks (routes, crons)                        [building]
+  pb_migrations/  collections and API rules                                  [live]
+  Caddyfile, systemd/, deploy/   VPS configuration and deploy scripts       [building]
+  POCKETBASE_VERSION            the pinned binary version                    [building — 0.40.2]
+android/          Bubblewrap TWA project (twa-manifest.json); keystore NOT in git [building — README]
+tools/            simulator, error/log readers, deploy, backup pull, budget  [building — budget works, rest stubs]
 content/          the lexicon, exams, hints (the asset)                      [live]
 extraction/       the scan → lexicon pipeline (Python)                       [live]
 docs/spec/        this file and how-why.md
 docs/runbooks/    operational procedures (deploy, debug-from-log, restore)
 ```
 
-Workspace: pnpm, Node ≥ 22, TypeScript strict, Biome, Vitest. Root scripts: `test`, `lint`,
-`typecheck`, `build`, `content:lint`, plus (planned) `content:build`, `e2e`, `deploy`, `errors`,
-`logs`, `simulate`.
+Workspace: pnpm, Node ≥ 22, TypeScript strict, Biome, Vitest, Playwright. Root scripts, all
+registered: `test`, `test:watch`, `lint`, `format`, `typecheck` (`tsc --build` for the composite
+packages, then `pnpm -r typecheck` for the apps, which are `noEmit`), `build`, `budget`, `e2e`,
+`content:lint`, `content:build` (§6, real), and the `tools/` entry points `simulate`, `errors`,
+`logs`, `flags`, `deploy` — those five are still stubs that print `not implemented` and exit 1.
+`deploy` must be run as `pnpm run deploy`: bare `pnpm deploy` is pnpm's own subcommand.
 
 ---
 
@@ -180,18 +182,25 @@ export interface ItemState {
   readonly box: Box;               // live schedule box
   readonly highWaterBox: Box;      // never decreases; drives progress
   readonly lastReviewedAt: number;
-  readonly dueAt: number;          // lastReviewedAt + INTERVAL_MS[box]
+  readonly dueAt: number;          // lastReviewedAt + params.intervalsMs[box]
   readonly reviewCount: number;
   readonly lapseCount: number;
 }
 
-export interface Fold {
-  readonly items: ReadonlyMap<ItemId, ItemState>;
-  readonly byDay: ReadonlyMap<DayKey, DayStats>;   // Tehran-local day → {presentations, correct, conquered, introduced}
-  readonly lastEventAt: number;
+export interface DayStats {
+  readonly presentations: number;   // every event, whatever its kind or grade
+  readonly correct: number;         // events with grade 1, `know` included
+  readonly conquered: number;       // highWaterBox first reached 5 today, through a `review` only
+  readonly introduced: number;      // items whose first event ever fell today
 }
 
-export type DayKey = number; // floor((at + TEHRAN_OFFSET_MS) / DAY_MS)
+export interface Fold {
+  readonly items: ReadonlyMap<ItemId, ItemState>;
+  readonly byDay: ReadonlyMap<DayKey, DayStats>;   // Tehran-local day → DayStats
+  readonly lastEventAt: number;                    // 0 for an empty log
+}
+
+export type DayKey = number; // floor((at + TEHRAN_OFFSET_MS) / DAY_MS), in day.ts
 
 export interface ContentItem {            // the engine's view of a word; the card has more
   readonly id: ItemId;
@@ -215,43 +224,63 @@ export interface Params {                 // one object, one file: params.ts. Tu
 
 ### 5.2 The fold
 
-`fold(events: ReviewEvent[], params): Fold`
+`fold(events: readonly ReviewEvent[], params: Params): Fold` — `fold.ts`, with
+`isConquered(state)` alongside it.
 
-- Sort by `(at, id)`; ignore exact-duplicate ids (sync can deliver the same event twice).
+- Sort by `(at, id)`; ignore exact-duplicate ids (sync can deliver the same event twice). The
+  array it is given is never mutated.
+- An item with no events yet is treated as box 1 and already due, so its first `review` with
+  grade 1 promotes it to box 2. That is what makes the seven-day minimum (1 + 2 + 4 days)
+  reachable.
 - `review` grade 1 → `box = min(box+1, 5)` **only if** `at ≥ dueAt` (interval elapsed); an
   early correct answer leaves the box unchanged. Grade 0 → `box = 1`, `lapseCount++`, always.
-- `know` → `box = 5`.
+- `know` → `box = 5`, whatever the grade recorded on it, and it never counts a lapse.
 - `highWaterBox = max(highWaterBox, box)` after every event.
-- `dueAt = at + intervalsMs[box]` after every event.
+- `dueAt = at + intervalsMs[box]` after every event — an early answer therefore postpones the
+  next due date without promoting the card.
+- `reviewCount` counts every event for the item, `know` included.
 - A word is **conquered** when `highWaterBox === 5`. It keeps being scheduled (box 5 every 8
   days) but its progress contribution is already full.
-- `byDay` counts presentations (every event), correct answers, words conquered that day (first
-  time `highWaterBox` reaches 5), words introduced that day (first event for the id).
+- `byDay` counts presentations (every event), correct answers (grade 1), words conquered that
+  day (first time `highWaterBox` reaches 5 **through a `review`**; a `know` never counts, since
+  this number feeds the introduction budget), words introduced that day (first event for the id).
 - Property: folding a shuffled log gives the same `Fold` (tested with fast-check).
 
 ### 5.3 Progress, streak, pace
 
 ```ts
 progress(fold, content): { percent: number; conquered: number; total: number; weightEarned: number; weightTotal: number }
-//   Σ over content items of (highWaterBox/5 × weight) / Σ weight. Unseen items contribute 0.
+//   Σ over content items of (highWaterBox/5 × weight) / Σ weight, as a percentage (0..100, and 0
+//   when the content carries no weight at all). Unseen items contribute 0.
 //   weight = timesTested; context-only words (weight 0) never move the percentage. Never decreases.
+//   `conquered` and `total` count content items, context words included.
 
 streak(fold, dailyGoal, now, params): { days: number; todayCounts: boolean }
-//   A day counts when presentations ≥ max(10, ceil(goal × streakMinFraction)). Consecutive
-//   Tehran-local days ending today or yesterday. Yesterday-only keeps the streak alive; today not yet counted.
+//   A day counts when presentations ≥ max(STREAK_MIN_PRESENTATIONS, ceil(goal × streakMinFraction)).
+//   The floor of 10 is a constant in streak.ts, not a tunable. Consecutive Tehran-local days ending
+//   today or yesterday. Yesterday-only keeps the streak alive; today not yet counted.
 
 paceEstimate(fold, content, dailyGoal, examDate, now, params):
   { remainingSteps: number; stepsPerDay: number; daysNeeded: number; daysLeft: number; verdict: 'ahead' | 'ok' | 'behind' }
 //   remainingSteps = Σ (5 − highWaterBox) over seen items + 5 × unseen items (weight > 0 only).
-//   stepsPerDay = goal × accuracy(last 7 days, default 0.8) × 0.9 (the 0.9 covers early answers that do not promote).
-//   verdict 'behind' when daysNeeded > daysLeft × 1.1; the UI nudges the goal up.
+//   stepsPerDay = goal × accuracy(last 7 days, default 0.8) × EARLY_ANSWER_FACTOR = 0.9 (the 0.9
+//   covers early answers that do not promote). `recentAccuracy(fold, now, params)` is exported too.
+//   daysLeft = max(0, whole Tehran days from now to examDate); daysNeeded = ceil(remainingSteps / stepsPerDay),
+//   0 when nothing is left and Infinity when the goal is 0.
+//   verdict 'behind' when daysNeeded > daysLeft × 1.1, 'ahead' when < daysLeft × 0.7, else 'ok';
+//   the UI nudges the goal up on 'behind'.
 ```
 
 ### 5.4 Queue: what card comes next
 
-`nextCard(fold, content, recent: ItemId[], now, dailyGoal, rng, params): { itemId; source: 'due' | 'new' | 'conquered' | 'early' } | null`
+`nextCard(fold, content, recent: readonly ItemId[], now, dailyGoal, rng: () => number, params): { itemId; source: 'due' | 'new' | 'conquered' | 'early' } | null`
 
-Order of pools, first non-empty wins:
+`recent` is **most-recent-first**: `recent[0]` is the card the user just saw. `rng` returns a
+number in [0, 1).
+
+Order of pools, first non-empty wins — except that pool 2 is tested **before** pool 1, because its
+own guard is "pool 1 is thin": reading the order literally would leave `minDuePool` dead, since a
+non-empty due pool would always win and an empty one is thinner than any threshold.
 
 1. **Due, not conquered** — `box < 5`, `dueAt ≤ now`. Weighted random: weight
    `(1 + overdueDays) × boxDrawFactor[box]`, computed **per word** (never per box). The
@@ -266,12 +295,22 @@ Order of pools, first non-empty wins:
 4. **Early** — not-yet-due words, soonest-due first. Grade 1 does not promote; grade 0 demotes.
    This pool is why the app can never say "you are done".
 
-`null` only when the content is empty. The UI never shows an empty-queue state.
+Every pool is drawn from the content package: an item the fold knows but the package does not
+carry has no card, so it is ignored. Pools 3 and 4 break a tie on `itemId`, so the queue is
+reproducible from the same fold.
+
+`null` only when no content item can be shown at all — empty content, or content that the fold has
+never touched and the budget cannot introduce. The UI never shows an empty-queue state.
+
+Three helpers ship with it, all pure: `introductionBudget(fold, dailyGoal, now, params)` returning
+`{ floor, cap, budget, introduced, remaining }`, and, for the boxes screen,
+`dueCounts(fold, now): Record<Box, number>` and
+`boxCounts(fold, content): { byBox: Record<Box, number>; unseen: number }`.
 
 ### 5.5 Daily goal from onboarding
 
 `goalFromMinutes(minutes) = max(50, minutes × 10)` presentations; onboarding offers 10 / 20 / 30 /
-45 minutes. The exam date only feeds `paceEstimate`; it never changes intervals.
+45 minutes (`ONBOARDING_MINUTES`). The exam date only feeds `paceEstimate`; it never changes intervals.
 
 ### 5.6 Placement
 
@@ -279,11 +318,42 @@ Onboarding offers the top 100 words by rank as a swipe list: «بلدم» emits 
 «بلد نیستم» emits nothing (the word will be introduced normally). Skippable, and the first thing
 cut if time is short.
 
-### 5.7 Simulator (`tools/simulate`)
+### 5.7 Simulator (`tools/simulate`) `[live]`
 
 Replays a synthetic user (accuracy profile, minutes/day, days) through the real engine and prints
 the schedule, introductions, conquests per day, and the pace estimate versus reality. Parameter
 tuning is a conversation about its output, never about vibes.
+
+`pnpm simulate --minutes M --days D --accuracy A` (`A` a constant or five comma-separated
+per-box values); `--words N` caps to the top N words by the §6.2 rank order, `--seed`, `--exam-days`
+and `--json` round it out. The default word set and its weights are read from `content/lexicon`
+at run time, never hard-coded.
+
+**Measured, 2026-09-18** — seed 20260918, the full lexicon (1,776 words with `timesTested > 0`),
+90 days, constant accuracy 0.85:
+
+| minutes/day | conquest days (min · p25 · median · p75 · max) | all conquered by | pace estimate at day 0 | error |
+|---|---|---|---|---|
+| 10 | 7 · 8 · 8 · 11 · 44 | not within 90 days (1,321/1,776) | day 124 | n/a |
+| 20 | 7 · 7 · 8 · 11 · 36 | day 81 | day 62 | −19 days |
+| 45 | 7 · 7 · 8 · 11 · 51 | day 68 | day 28 | −40 days |
+
+The seven-day floor holds in every run. The median does not — it lands at 8 days, not the
+2–3 weeks the simulator's own ticket assumed before it was built: with 200+ presentations/day
+against 1,776 words, review capacity so outstrips due-load that most words are reviewed almost
+exactly on the day they come due, so most words ride the ladder's 7-day minimum (1 + 2 + 4 days)
+with barely any slack. This is a real finding, not a bug, and no parameter in `params.ts` was
+changed to produce it — the fast median is a property of this content size and these goals, and
+whether it is desirable (fast wins keep motivation up) or not (the app should feel more like a
+multi-week course) is a product call for the owner, not an engine one.
+
+The pace estimate is a **lower bound**, not a forecast: it counts remaining box-steps against a
+naive `goal × accuracy × 0.9` throughput and ignores the ladder's fixed wait times, so it always
+finishes optimistic — the gap widens as the daily goal grows (−19 days at 20 min, −40 at 45),
+since a bigger goal buys speed only up to the point where the ladder's own intervals become the
+bottleneck instead of review capacity. This is a property of the estimate's definition (§5.3),
+not a bug; no parameter was changed here either. If a tighter exam-readiness estimate is wanted,
+that is a `paceEstimate` formula change, to be made from this data, not from vibes.
 
 ---
 
@@ -293,7 +363,7 @@ Content ships as **exactly two packages**, built by `packages/content` in CI fro
 
 | Package | Contents | Delivery |
 |---|---|---|
-| `free` | the first 150 words by rank (exclusions applied) with hints | Part of the PWA build, precached by the service worker. Offline from first launch. |
+| `free` | the 150 lowest-rank shipping words, with hints where approved | Part of the PWA build, precached by the service worker. Offline from first launch. |
 | `paid` | **all** words (the free 150 included), with hints where approved | One file, entitlement-gated, downloaded once after purchase into IndexedDB. Replaces `free` as the active package. |
 
 A content update is a new version of the same two files; the client swaps a package atomically
@@ -326,31 +396,47 @@ interface WordCard {
 
 ### 6.2 Build rules
 
-- `rank` = order by `stats.priority` desc, then `timesTested` desc, then `firstYear` desc, then
-  id. Frozen per version; a new year's words get appended ranks. Existing users' progress is
-  keyed by id, so re-ranking never touches their state.
+- **Rank is frozen forever, not just per version.** `packages/content/ranks.json` maps id →
+  rank, committed. A word not yet in the file — because it just gained a first sense, or was
+  never excluded before — gets the next rank by `stats.priority` desc, then `timesTested` desc,
+  then `firstYear` desc, then id asc, appended after the current maximum. An id already in the
+  file keeps its rank whatever the build recomputes for it. Existing users' progress is keyed
+  by id, so re-ranking never touches their state. One caveat this creates: a higher-priority
+  word that gains senses later is appended after words that shipped earlier at lower priority,
+  so the free-150 boundary can shift by one word as word data completes — no progress is lost,
+  since it is keyed by id (`how-why.md` §5).
 - `packages/content/exclusions.json` lists ids that never ship (non-words such as `as-like`,
-  see `.scratch/word-data/issues/04`). Ids stay frozen; only shipping is decided here.
+  see `.scratch/word-data/issues/04-non-words-and-latin-phrases.md`). Ids stay frozen; only
+  shipping is decided here.
 - A word ships without `hint` when its hint file is missing or unapproved. **The free 150 must
   all have approved hints before launch**; the rest may ship without and gain hints in updates.
 - Words with empty `senses` are **excluded from both packages** until their word data is
   written (895 of 2,098 done on 2026-09-17). The paid package therefore grows with content
-  updates until the lexicon is complete; the build prints the count.
+  updates until the lexicon is complete; the build prints `shipping N of M words`.
 - The exam stem is joined from `content/exams/`, never duplicated into `examples`.
-- The blank marker in stems is normalised to `.....` at build time (17 stems use hyphens).
-- `pnpm content:build` writes `apps/web/public/content/free.json` (hashed by Vite) and
-  `server/content/paid.json` plus `manifest.json` `{ free: {version, hash, bytes}, paid: {version, hash, bytes} }`.
+- The blank marker in stems is normalised to `.....` at build time (34 stems use a run of
+  hyphens instead of dots, measured 2026-09-18 — this ticket's own count; the earlier figure of
+  17 was never re-verified against the full corpus).
+- `pnpm content:build` writes `apps/web/public/content/free.json` and `server/content/paid.json`
+  plain (Vite does not hash or rename either — see §7.7), plus `manifest.json`
+  `{ free: {version, hash, bytes}, paid: {version, hash, bytes} }`. `packages/content/versions.json`
+  holds the last-written `{version, hash}` per package so the version string
+  (`YYYY-MM-DD.N`) is reproducible: unchanged content keeps its version; changed content mints
+  `N+1` the same day or `.1` on a new day.
 
 ### 6.3 Size
 
-2,098 words × ~1.3 KB ≈ 2.7 MB raw, ≈ 650 KB gzipped (Caddy compresses). The free package is
-≈ 200 KB raw. Both are well inside IndexedDB norms.
+Measured 2026-09-18, 893 of 2,098 words shipping (word data incomplete — see above): `paid`
+is 1.36 MB raw, 352 KB gzipped; `free` (150 words) is 303 KB raw, 74 KB gzipped. Both scale
+roughly linearly with word count, so the full 2,098-word `paid` package is projected at
+≈ 3.2 MB raw, ≈ 830 KB gzipped once word data is complete — still well inside IndexedDB norms.
+Caddy gzips in production; the numbers above are measured with `node:zlib`, not a live server.
 
 ---
 
 ## 7. The client app (`apps/web`)
 
-### 7.1 Shape
+### 7.1 Shape [live]
 
 ```
 src/
@@ -360,10 +446,12 @@ src/
   ui/                 shadcn-style primitives (Button, Sheet, Dialog, Progress, ...)
   stores/             zustand: auth.ts, content.ts, session.ts, sync.ts, settings.ts
   db/                 dexie.ts (schema), repo.ts (typed reads/writes; the only file that touches Dexie)
-  engine/             thin adapters over @kl/core (fold cache, rng, clock)
-  net/                api.ts (typed fetch wrappers for every route in §8), pocketbase.ts (SDK instance)
-  sync/               backup.ts (state machine), download.ts (state machine)
+  engine/             thin adapters over @kl/core (fold cache, rng, clock) + index.ts, the bound API
+  net/                api.ts (typed fetch wrappers for every route in §8)
+  sync/               backup.ts (state machine), download.ts (state machine), login-merge.ts (ticket 03)
   log/                breadcrumbs.ts, errors.ts (capture + report), snapshot.ts
+  content/            manifest.ts — the §8.2 manifest shape (the package shape is @kl/content)
+  errors.ts           AppError (§17.4)
   strings.ts          every Persian UI string, keyed; no string literals in components
   version.ts          APP_VERSION + BUILD_SHA injected by Vite
 ```
@@ -371,7 +459,15 @@ src/
 Rules: a screen reads stores and calls repo/net functions; it never touches Dexie or fetch
 directly. Every async operation is a named state machine with its states listed in this file.
 
-### 7.2 Identity on the device
+`net/pocketbase.ts` was planned and is not built: the app talks to our own routes (§8.2) and
+never to PocketBase's generic collection API, so the SDK would be a dependency with no caller.
+
+Bootstrap order in `main.tsx`: install error capture → open the database → mint or read the
+`installId` → load auth and settings from `kv` → load the content package the entitlement allows
+→ fold the review log → mount. A content package that cannot be loaded is reported and **not**
+fatal: the shell, the settings and the existing review log all still work without it.
+
+### 7.2 Identity on the device [live]
 
 - `installId` — UUIDv7 minted on first launch, stored in `kv`. Tags every event as `device`.
 - `userId` + auth token — only after OTP login; stored in `kv` (not localStorage, so one place
@@ -379,18 +475,23 @@ directly. Every async operation is a named state machine with its states listed 
   An expired token never blocks study; it only pauses backup until the next successful refresh
   or re-login, and the settings screen shows that quietly.
 
-### 7.3 Dexie schema (`db/dexie.ts`, version 1)
+### 7.3 Dexie schema (`db/dexie.ts`, version 1) [live]
 
 | Table | Key | Indexes | Purpose |
 |---|---|---|---|
 | `events` | `id` | `synced`, `itemId`, `at` | Every `ReviewEvent`, local and pulled. `synced: 0|1`. |
 | `outbox` | `seq` (auto) | `kind`, `createdAt` | Non-progress uploads: `flag`, `beacon`, `error`. `{kind, payload, attempts, lastError}`. |
 | `packages` | `packageId` | | `{packageId, version, hash, bytes, json}` — the whole package as one record. |
-| `kv` | `key` | | `installId`, `auth`, `profile`, `entitlement`, `syncCursor`, `lastBackupAt`, `onboarding`, `pendingPayment`, `presentationsBeforePaywall`, `swUpdateAvailable`. |
+| `kv` | `key` | | `installId`, `auth`, `profile`, `entitlement`, `syncCursor`, `lastBackupAt`, `onboarding`, `pendingPayment`, `presentationsBeforePaywall`, `goalSheetShownDay`, `swUpdateAvailable`, `theme`, `downloadReceivedBytes`. |
 
 Schema changes are Dexie versions with upgrade functions; never delete `events`.
 
-### 7.4 Backup (sync) state machine — `sync/backup.ts`
+The `kv` keys are a TypeScript union in `db/dexie.ts`, so a typo is a compile error and the set
+above is enumerable. `theme` (§7.9's manual override) and `downloadReceivedBytes` (§7.5's resume
+point) were added in the app-shell ticket; `goalSheetShownDay` (the Tehran `dayKey` the
+goal-reached sheet last appeared on) in the review ticket.
+
+### 7.4 Backup (sync) state machine — `sync/backup.ts` [building]
 
 The owner's word for this is **backup**; the mechanism is ADR-0002's event-log union.
 
@@ -418,7 +519,14 @@ open; immediately after login; a manual button in settings.
 Anonymous installs are not backed up (there is no identity to restore to). The app asks the user
 to «ذخیرهٔ پیشرفت با شمارهٔ موبایل» once after 50 presentations and always from settings.
 
-### 7.5 Content download state machine — `sync/download.ts`
+Built so far: the state union, the pure `transition(state, event)` (total — every state answers
+every event — and tested as a full table) and the backoff ladder. `run()` is a stub that logs one
+breadcrumb; the push, the outbox drain and the pull are wired in Phase 4. Two transitions the
+spec did not name, decided here: a `START` while a run is in flight is ignored rather than
+restarting it, and a `START` from `error` **does** run immediately, because it is the manual
+button in settings and a user who taps it should not wait out an hour's backoff.
+
+### 7.5 Content download state machine — `sync/download.ts` [building]
 
 States: `none → checking → downloading(progress) → verifying → installed` and `error(reason)`
 with the same backoff as backup. Runs when online and entitled and `packages.paid` is missing or
@@ -433,16 +541,25 @@ older than the manifest's version.
 - The paywall-result screen and settings show progress («دانلود واژه‌ها ۶۳٪ — با اینترنت ادامه
   پیدا می‌کند»). Study continues on whatever package is active during the download.
 
-### 7.6 Entitlement on the device
+Built so far: the state union and the pure `transition(state, event)`, total over six states and
+eight events and tested as a full 48-cell table; `run()` is a stub until Phase 5. `installed`
+carries the version it installed, and `error → RETRY` returns to `none` rather than to the
+interrupted step, so the next attempt re-reads the manifest — the received byte count is in `kv`
+and the `Range` header makes restarting from the top nearly free.
+
+### 7.6 Entitlement on the device [building]
 
 `kv.entitlement = { status: 'none' | 'full', source, grantedAt, checkedAt }`. Written only from a
 server response (`/api/me` or the purchase result). Read offline forever; never expires. An online
 check that says `none` while the cache says `full` is logged as a `client_errors` record and the
 cache is **kept** until the owner acts — the app never revokes on its own.
 
-### 7.7 Service worker and updates
+### 7.7 Service worker and updates [live]
 
-- Precache: app shell, fonts, `content/free.<hash>.json`. Navigation fallback to `index.html`.
+- Precache: app shell, fonts, `content/free.json` — Workbox revisions it by its own content
+  hash (computed at `generateSW` time from the file's bytes); Vite does not rename or hash the
+  file itself, since it ships from `apps/web/public/` untouched. Navigation fallback to
+  `index.html`.
 - `registerType: 'prompt'`. A new version is downloaded in the background; the app shows a small
   «نسخهٔ جدید آماده است — اعمال» chip on the home screen and applies on tap or on the next cold
   start. Never mid-session.
@@ -455,35 +572,59 @@ cache is **kept** until the owner acts — the app never revokes on its own.
 
 All screens work offline unless marked **online**. Persian copy lives in `strings.ts`.
 
+**Every route below exists as of the app-shell ticket**, in one flat `createBrowserRouter` table
+in `routes.tsx`, inside a root layout that owns the theme attribute and the React error boundary.
+The rows marked **[live]** are built; the rest are placeholders that render their Persian title,
+each waiting on its own ticket. A path that matches nothing renders a Persian not-found screen inside the same layout,
+because the service worker answers every navigation with `index.html` (§7.7).
+
 | Route | Screen | States / notes |
 |---|---|---|
-| `/onboarding` | 3 slides (what it is, the exam-frequency claim, Leitner in one picture) → minutes/day → exam date (Jalali picker, skippable) → field (skippable, from `content/field-codes.json`) → placement (skippable) → install nudge | Writes `profile`; `beacon onboarding_done`. |
-| `/` | Home | Goal ring (today's presentations / goal), streak, progress %, conquered count, one primary button «شروع مرور», the update chip, backup status dot. |
-| `/review` | Card | Front: word, exam badge («۱ بار در کنکور، سال ۱۴۰۲»), tap to reveal. Back: translations + one sentence (the exam stem for answer-words, else the authored example); «بیشتر» expands definition, hint, other senses, confusables, exam history. Buttons: «بلد نبودم» / «بلد بودم»; overflow: «این را بلدم» (know), «این کلمه اشکال دارد» (flag sheet with 3 reasons). Feedback: box change and «دفعهٔ بعد: ۲ روز دیگر». Goal reached → congratulation sheet suggesting a break, never blocking. Paywall trigger → `/paywall`. |
-| `/session/summary` | End of session | Presentations, accuracy, conquered today, streak; «ادامه» or «خانه». |
-| `/boxes` | Leitner boxes | Five columns with counts; tap → list of words in that box with next-due; tap word → `/word/:id`. |
-| `/word/:id` | Word detail | Full card plus history (every review as a dot on a timeline), «این را بلدم», flag. |
-| `/progress` | Progress | Percent with the one-sentence rule («هر بار که یک کلمه در کنکور آمده، یک امتیاز»), conquered/total, 30-day bar chart, pace estimate vs exam date with a goal nudge. |
-| `/paywall` | Paywall | The pace argument, what is included, price with strike-through, «خرید» → login if anonymous → `/checkout`. «بعداً» returns to study (early-pool cards keep the app usable). |
-| `/login` | Phone + OTP — **online** | States: `enterPhone → sending → enterCode → verifying → done`; errors: rate-limited (shows retry-after), wrong code (attempts left), network (retry). Explains why the number is needed (restore + purchase). |
+| `/onboarding` **[live]** | 3 slides (what it is, the exam-frequency claim, Leitner in one picture) → minutes/day → exam date (Jalali picker, skippable) → field (skippable, from `content/field-codes.json`) → placement (skippable) → install nudge | Writes `profile`; `beacon onboarding_done`. Install nudge shows the real per-context install affordance — «نصب برنامه» when `beforeinstallprompt` was captured, the copy-link fallback in an in-app browser, the iOS Share instruction — the same detection and copy as `/settings`'s install sheet. Continuing is never gated on it. |
+| `/` | Home `[live]` | Goal ring (today's presentations / goal), streak, progress %, conquered count, one primary button «شروع مرور», the update chip («نسخهٔ جدید آماده است — اعمال», renders when `stores/pwa.ts`'s `updateReady` is set by `pwa/update.ts`'s state machine; tap calls `applyUpdate()`, §7.7), backup status dot (from `stores/sync`, hidden when anonymous), bottom nav to `/boxes`, `/progress`, `/settings`. Also owns the once-only redirect to `/season` (`kv.seasonShownFor`). |
+| `/review` **[live]** | Card | Front: word, exam badge («۱ بار در کنکور، سال ۱۴۰۲»), tap to reveal. Back: translations + one sentence (the exam stem for answer-words, else the authored example); «بیشتر» expands definition, other senses, confusables, exam history, and «راهنمای یادگیری» is its own collapsed disclosure. Buttons: «بلد نبودم» / «بلد بودم»; overflow (⋯): «این را بلدم» (know), «این کلمه اشکال دارد» (flag sheet with 3 reasons → `outbox` `flag`). Feedback: box change and «دفعهٔ بعد: ۲ روز دیگر», ~900 ms or a tap. Goal reached → congratulation sheet, once per Tehran day (`kv.goalSheetShownDay`), never blocking. `kv.presentationsBeforePaywall` counts up while the entitlement is `none`; at `freePresentationLimit` → `/paywall`, once per session, `beacon paywall_shown`. Beacons `first_review`, `reviews_10`, `reviews_100` on crossing. «پایان» → `/session/summary`. |
+| `/session/summary` | End of session `[live]` | Presentations, accuracy, conquered today (from `stores/session`), streak (from `engine.streak`); «ادامه» or «خانه». |
+| `/boxes` | Leitner boxes `[live]` | Five columns with counts (`boxCounts`) plus «دیده‌نشده»; tap a box → inline list of words in it with next-due relative time (`ui/relative-time.ts`); tap a word → `/word/:id`. Bottom nav. |
+| `/word/:id` | Word detail `[live]` | `screens/word/WordDetail.tsx`: every sense, confusables, exam history, a review timeline (one dot per event, grade 1 filled), «این را بلدم», a flag sheet (3 reasons → `outbox` kind `flag`). |
+| `/progress` | Progress `[live]` | Percent with the one-sentence rule («هر بار که یک کلمه در کنکور آمده، یک امتیاز»), conquered/total, a hand-rolled SVG 30-day bar chart (`engine/chart-data.ts`, pure), pace estimate vs exam date with a goal nudge when `verdict === 'behind'`. Bottom nav. |
+| `/paywall` | Paywall | The pace argument, what is included, price with strike-through, «خرید» → login if anonymous → `/checkout`. «بعداً» returns to study (early-pool cards keep the app usable). **Placeholder until Phase 5:** the argument and «بعداً» are live; the price and «خرید» arrive with payment. |
+| `/login` **[live]** | Phone + OTP — **online** | `screens/login/machine.ts` (pure, total, unit-tested): `enterPhone → sending → enterCode → verifying → done`; errors: `rateLimited` (shows retry-after in minutes; retry or change number), `wrongCode` (`wrong` with attempts left, or `expired` / `locked` → resend), `networkError` (retries whichever request failed; offline shows a Persian explanation, never a crash). `flow.ts` performs the two requests with injected deps and never throws. Explains why the number is needed (backup, restore, purchase). The phone is sent as typed — the server normalises it; the code accepts Persian digits. On success: `stores/auth.ts` `signIn` writes `userId` + phone + token to `kv.auth`, then `sync/login-merge.ts` `runLoginMerge(userId)` — **a no-op until ticket 03**, the one call site the merge plugs into. Then home if a profile exists, else `/onboarding` (`destinationAfterLogin`). |
 | `/checkout` | Price, discount code — **online** | `quote` on code entry; «پرداخت» → `pay/request` → redirect to Zarinpal. |
 | `/purchase/result` | Callback landing — **online** | `?status=ok|failed`; on ok: fetch `/api/me`, cache entitlement, start download, show progress; on failed: reason + retry. If a `pendingPayment` exists on next launch, ask `/api/pay/status/:id` before assuming failure. |
-| `/settings` | Settings | Account (phone / login / logout), goal, exam date, field, backup status + manual backup, download status, install app, «گزارش مشکل» (diagnostic report, §10.4), about + version + support link. |
-| `/season` | Season summary | Shown once when the exam date passes: numbers, prompt to set a new date. |
+| `/settings` | Settings `[live]`* | Account (phone or «ورود» → `/login`), goal (minutes → `goalFromMinutes`), exam date (Jalali text input via `date-fns-jalali`), field (`content/field-codes.json`, named codes only), theme, backup row + manual button (calls `sync/backup.ts`'s `run()`), download row (state only), «نصب برنامه» (opens the install sheet — the install paragraph below), «گزارش مشکل» → `reportError('user_report', …)`, about + version + support link. *Local parts are fully wired; account/backup/download show live store state but `run()` is still a stub until Phase 4/5. |
+| `/season` | Season summary `[live]` | Shown once when the exam date passes (`engine/season.ts`, pure): conquered, days studied, presentations; «تاریخ جدید» → `/settings`. |
 
-Install prompt: on Android Chrome, `beforeinstallprompt` is captured and offered as a sheet at
-the end of onboarding and from settings. In-app browsers (Telegram, Instagram) do not fire it —
-the app detects them (UA sniff) and shows «در Chrome باز کنید» with a copy-link button. iOS shows
-the Share → Add to Home Screen instruction. The landing page also offers the APK.
+Install prompt **[live]**: on Android Chrome, `beforeinstallprompt` is captured (`pwa/install.ts`,
+listener attached synchronously in `main.tsx`'s `bootstrap()`, ahead of any `await`, since the
+event fires once and only ever that early) and offered as a sheet at the end of onboarding and
+from settings (`screens/install/InstallSheet.tsx`, `screens/onboarding/InstallStep.tsx`). In-app
+browsers (Telegram, Instagram, Facebook) do not fire it — the app detects them (UA sniff) and
+shows «در Chrome باز کنید» with a copy-link button. iOS shows the Share → Add to Home Screen
+instruction. The landing page also offers the APK.
 
-### 7.9 Design system — **pending**
+### 7.9 Design system — **decided 2026-09-18** (ADR-0020)
 
-The owner is choosing a reference system (candidates given 2026-09-17: Geist, Linear, Apple HIG,
-Material 3, Sonnat, Untitled UI). Once chosen, this section records: the token set in
-`packages/design/tokens.css` (colour scale, one accent, radius, spacing, type scale), the Persian
-face (default Vazirmatn, self-hosted, with a system fallback stack), motion rules (150–250 ms,
-reduced-motion respected), and the one mockup screen approved before app code starts. Until then
-no component is styled beyond tokens.
+- **Components:** the shadcn/ui pattern — Radix primitives copied into `apps/web/src/ui/`,
+  styled with Tailwind v4 utilities and the tokens below. No component library at runtime.
+- **Look:** "liquid glass" in the shadcn idiom — translucent surfaces (`backdrop-filter: blur`),
+  large radius (24 px cards, 12 px controls, full-round pills), soft one-pixel borders, no drop
+  shadows heavier than `shadow-sm`, dark cards allowed on a light ground for emphasis.
+- **Palette:** monochrome. One neutral gray scale (50–950) plus pure black and white; a light
+  theme and a dark theme (`prefers-color-scheme` with a manual override in settings). **Colour
+  is reserved for the two grading buttons** («بلد بودم» green, «بلد نبودم» red) and destructive
+  confirmations. Everything else, including progress rings and charts, is gray-scale.
+- **Typography:** Sonnat's type scale — 16 px base; h1 56/1.29, h2 48/1.33, h3 32/1.5,
+  h4 24/1.67, h5 20/1.8, h6 18/1.78, subtitle 16/1.75, subtitle-sm 14/1.71, body 16/1.63,
+  body-sm 14/1.57, caption 12/1.67, caption-sm 10/1.8; headings and subtitles weight 500, body
+  400. Persian face: **Vazirmatn** (self-hosted woff2, weights 400/500/700, SIL OFL) with the
+  fallback stack `Vazirmatn, Tahoma, Arial, sans-serif`. Sonnat's own face is IRANSans, which is
+  commercial; if the owner buys a web licence the swap is one `@font-face` block in
+  `packages/design/fonts.css`. Latin (the English word on the card) uses the same face.
+- **Tokens:** `packages/design/tokens.css` defines every colour, radius, spacing and type step
+  as CSS variables on `:root` and `[data-theme="dark"]`; Tailwind v4 reads them through
+  `@theme`. Motion 150–250 ms, `prefers-reduced-motion` respected.
+- **Hints on the card** are collapsed by default behind «راهنمای یادگیری»; a word without a
+  hint shows «راهنمای این کلمه به‌زودی اضافه می‌شود» inside the same disclosure.
 
 Fixed regardless of choice: mobile-first at 360–430 px, RTL, minimum tap target 44 px, Persian
 digits via `Intl.NumberFormat('fa-IR')`, no more than one primary action per screen, no
@@ -493,7 +634,7 @@ decorative illustration on the review card.
 
 ## 8. The server (PocketBase)
 
-### 8.1 Collections (`pb_migrations/`)
+### 8.1 Collections (`pb_migrations/`) `[live]`
 
 `users` is the auth collection; every other collection is ours. API rules are the security
 boundary; hooks add behaviour.
@@ -511,42 +652,61 @@ boundary; hooks add behaviour.
 | `client_errors` | see §10.1 | create via route; read superuser. |
 | `app_config` | single record: `listPrice`, `salePrice`, `freePresentationLimit`, `minAppVersion`, `supportUrl`, `notice` | public read; superuser write. |
 
+In `pb_migrations/1758000000_init.js` a rule of `""` means anyone and `null` means nobody through
+the REST API — only a hook (which writes with `app.save()`, bypassing rules) or a superuser. The
+`users` collection is PocketBase's default one, edited rather than created: `passwordAuth` off,
+`authToken.duration` 365 days, `email` made optional because the OTP flow creates an account from
+a phone number alone. `app_config` is seeded by the same migration with 450000 / 290000 / 100.
+
 ### 8.2 Routes (`pb_hooks/`)
 
-Every route is registered through `lib/route.js` → `withRoute(name, handler)`, which validates
-input, catches everything, logs a structured record (§10.2) and answers `{ error: { code, message } }`
-with a stable `code`. Bodies are JSON. Auth is the PocketBase bearer token.
+Every route is registered through `lib/route.js` → `withRoute(name, handler, opts)`, which
+authenticates (`opts.auth` is `none` / `user` / `superuser` / `optional`), validates the body
+against `opts.schema`, caps it at 32 KB, catches everything, logs one structured record (§10.2)
+and answers `{ error: { code, message } }` with a stable `code` — one of `BAD_INPUT`,
+`UNAUTHORIZED`, `FORBIDDEN`, `NOT_FOUND`, `RATE_LIMITED`, `INTERNAL`, and for OTP
+`PHONE_INVALID`, `OTP_WRONG`, `OTP_EXPIRED`, `OTP_LOCKED`, `SMS_FAILED` (502),
+`SMS_PROVIDER_UNKNOWN` (500). A few errors carry one extra top-level number next to `error`:
+`retryAfter` (seconds) on every 429, which also sets the `Retry-After` header, and
+`attemptsLeft` on `OTP_WRONG`. Bodies are JSON. Auth is the
+PocketBase bearer token. Because PocketBase serializes each handler into its own isolated context,
+`withRoute` is required and applied *inside* the handler, not around it (see how-why §5.4).
 
-| Route | Auth | Body → Response |
-|---|---|---|
-| `GET /api/config` | none | `app_config` fields. |
-| `POST /api/otp/request` | none | `{phone}` → `{ok, retryAfter}`. Limits: 3 per phone / 10 min, 10 per IP / hour. 5-digit code, 3-minute expiry, sent with the SMS provider's OTP template. |
-| `POST /api/otp/verify` | none | `{phone, code}` → PocketBase auth response `{token, record}`. ≤ 5 attempts per code. Finds or creates the user by phone. |
-| `GET /api/me` | user | `{user, entitlement, profileUpdatedAt}`; also refreshes `lastSeenAt`. |
-| `PATCH /api/me/profile` | user | `{profile}` → stored if `updatedAt` is newer. |
-| `POST /api/sync/push` | user | `{events: ReviewEvent[]}` (≤ 500) → `{accepted, duplicates}`. Insert-ignore by id; `user` set from auth, never from the body. |
-| `GET /api/sync/pull?since=&limit=` | user | `{events, cursor, more}`. Cursor = `created` + id. |
-| `GET /api/content/manifest` | none | `{free: {version, hash, bytes}, paid: {version, hash, bytes}}`. |
-| `GET /api/content/paid` | user + entitled | The file, with `Range` support. 20 per user per day. |
-| `POST /api/pay/quote` | user | `{code?}` → `{listPrice, salePrice, discountAmount, payable, codeStatus: 'ok'|'invalid'|'expired'|'exhausted'|'used'}`. |
-| `POST /api/pay/request` | user | `{code?}` → `{paymentId, gatewayUrl}`. Creates the pending payment, applies the code, calls Zarinpal `request`. A `payable` of 0 (100 % code) grants directly and returns `{paymentId, granted: true}`. |
-| `GET /api/pay/callback` | none (Zarinpal) | `?Authority=&Status=` → verifies with Zarinpal using the stored `payable`, flips the payment, creates the entitlement, increments the code's `usedCount`, then `302` to `/purchase/result?status=ok&ref=`, or `…?status=failed&reason=`. Idempotent (Zarinpal code 101 = already verified). |
-| `GET /api/pay/status/:id` | user (own) | `{status, refId}`. |
-| `POST /api/flags` | optional | `{installId, itemId, reason, appVersion, at}` → `{ok}`. 50 per install per day. |
-| `POST /api/beacon` | optional | `{installId, events: [{name, at, appVersion}]}` → `{ok}`. Unknown names rejected. |
-| `POST /api/client-errors` | optional | one record (§10.1) → `{ok, deduped}`. 30 per install per day; same fingerprint within an hour increments `count` instead of inserting. |
-| `GET /api/health` | none | `{ok, version, time}`. |
-| `GET /api/admin/stats?range=` | superuser | Aggregates for the dashboard (§11.2). |
-| `POST /api/admin/grant` | superuser | `{phone, note}` → creates the user if missing and an entitlement with `source: manual`. |
-| `GET /api/admin/sourcemap/:sha/:file` | superuser | Serves a source map from `/opt/kl/sourcemaps/` for symbolication. |
+| Route | Auth | Body → Response | |
+|---|---|---|---|
+| `GET /api/config` | none | `app_config` fields. | `[live]` |
+| `POST /api/otp/request` | none | `{phone}` → `{ok, retryAfter}` (`otp.pb.js`). The phone is normalised to E.164 (`lib/phone.js`: `09…`, `9…`, `+989…`, `00989…`, Persian/Arabic digits, spaces/hyphens; anything else `PHONE_INVALID`). Limits: 3 per phone / 10 min, 10 per IP / hour → 429 `RATE_LIMITED` + `retryAfter`; a refused request writes nothing. 5-digit code (`mock`: always `123456`), stored as `salt$hmac-sha256`, 3-minute expiry, sent through `lib/sms.js` (`SMS_PROVIDER` = `kavenegar` Verify Lookup / `console` / `mock`). `retryAfter` on success is 0 unless that request used the phone's last slot. The answer is identical whether or not the phone has an account. | `[live]` |
+| `POST /api/otp/verify` | none | `{phone, code}` (code 5–6 digits) → `{token, record}`, the shape of PocketBase's auth response, built by the route with `record.newAuthToken()` (365 days). Only the latest code for the phone counts. Each try spends an attempt atomically before the compare (constant-time); a wrong code → `OTP_WRONG` + `attemptsLeft`; after 5 → `OTP_LOCKED`, even for the right code; expired, used or never requested → `OTP_EXPIRED`. A used code is burnt, not deleted, so it still counts toward the rate limit. Finds or creates the user by phone. | `[live]` |
+| `GET /api/me` | user | `{user, entitlement, profileUpdatedAt}`; also refreshes `lastSeenAt`. | `[live]` |
+| `PATCH /api/me/profile` | user | `{profile}` → stored if `updatedAt` is newer. Equal is not newer. | `[live]` |
+| `POST /api/sync/push` | user | `{events: ReviewEvent[]}` (≤ 500) → `{accepted, duplicates}`. Insert-ignore by id; `user` set from auth, never from the body. | `[planned]` |
+| `GET /api/sync/pull?since=&limit=` | user | `{events, cursor, more}`. Cursor = `created` + id. | `[planned]` |
+| `GET /api/content/manifest` | none | `{free: {version, hash, bytes}, paid: {version, hash, bytes}}`. | `[planned]` |
+| `GET /api/content/paid` | user + entitled | The file, with `Range` support. 20 per user per day. | `[planned]` |
+| `POST /api/pay/quote` | user | `{code?}` → `{listPrice, salePrice, discountAmount, payable, codeStatus: 'ok'|'invalid'|'expired'|'exhausted'|'used'}`. | `[planned]` |
+| `POST /api/pay/request` | user | `{code?}` → `{paymentId, gatewayUrl}`. Creates the pending payment, applies the code, calls Zarinpal `request`. A `payable` of 0 (100 % code) grants directly and returns `{paymentId, granted: true}`. | `[planned]` |
+| `GET /api/pay/callback` | none (Zarinpal) | `?Authority=&Status=` → verifies with Zarinpal using the stored `payable`, flips the payment, creates the entitlement, increments the code's `usedCount`, then `302` to `/purchase/result?status=ok&ref=`, or `…?status=failed&reason=`. Idempotent (Zarinpal code 101 = already verified). | `[planned]` |
+| `GET /api/pay/status/:id` | user (own) | `{status, refId}`. | `[planned]` |
+| `POST /api/flags` | optional | `{installId, itemId, reason, appVersion, at}` → `{ok}`. 50 per install per day. | `[planned]` |
+| `POST /api/beacon` | optional | `{installId, events: [{name, at, appVersion}]}` → `{ok}`. Unknown names rejected. | `[planned]` |
+| `POST /api/client-errors` | optional | one record (§10.1) → `{ok, deduped}`. 30 per install per day; same fingerprint within an hour increments `count` instead of inserting. | `[planned]` |
+| `GET /api/health` | none | `{ok, version, time}`. `version` is `<pocketbase>+hooks.<n>`. Registered as a middleware, not a route: PocketBase owns this path (how-why §5.4). | `[live]` |
+| `GET /api/admin/stats?range=` | superuser | Aggregates for the dashboard (§11.2). | `[planned]` |
+| `POST /api/admin/grant` | superuser | `{phone, note}` → creates the user if missing and an entitlement with `source: manual`. | `[planned]` |
+| `GET /api/admin/sourcemap/:sha/:file` | superuser | Serves a source map from `/opt/kl/sourcemaps/` for symbolication. | `[planned]` |
 
-Crons (`pb_hooks/cron.pb.js`): purge expired `otp_codes` hourly; `reconcileUnverified` every 15
+Crons (`pb_hooks/cron.pb.js`): `otp_purge` `[live]` hourly deletes `otp_codes` whose `expiresAt` is
+more than an hour past — not at expiry, because a row still counts toward the IP limit's
+one-hour window; `reconcileUnverified` every 15
 minutes (Zarinpal `unverified` → verify any successful-but-unverified authority we own; this is
 the safety net for a user who closed the browser during the redirect); mark `pending` payments
 older than 2 hours `expired`.
 
 Rate limits use PocketBase's built-in rate-limit rules where they fit (per route, per IP) and an
-in-hook counter where the key is a phone number or install id.
+in-hook counter where the key is a phone number or install id. The OTP limits are in-hook counts
+over `otp_codes` (PocketBase's rules cannot key on a phone). A per-IP count needs the real client
+IP: migration `1758700000_trusted_proxy.js` trusts `X-Forwarded-For`, rightmost value, which is
+safe only because PocketBase listens on `127.0.0.1` behind Caddy alone (§14.3, how-why §5.7).
 
 ### 8.3 Payment rules
 
@@ -601,7 +761,7 @@ the old progress → if entitled, paid download starts → done.
 
 Goal: any bug is fixable by an agent from the log record alone. Three layers.
 
-### 10.1 Client error record (`client_errors`)
+### 10.1 Client error record (`client_errors`) [live] (client side)
 
 Captured by `log/errors.ts` from `window.onerror`, `unhandledrejection`, a top-level React error
 boundary, service-worker errors, and explicit `reportError(kind, err, data)` calls in the state
@@ -728,7 +888,7 @@ Detects in-app browsers and tells the user to open in Chrome. No JavaScript beyo
 
 ## 14. Infrastructure and deployment
 
-### 14.1 The machine
+### 14.1 The machine `[building]`
 
 One Parspack **VPS2**: 1 vCPU, 2 GB RAM, 40 GB SSD, Ubuntu 24.04 LTS, Iran location (100 GB/month
 traffic, which is ~150,000 paid-package downloads). PocketBase and Caddy idle under 200 MB; this
@@ -742,7 +902,7 @@ tier carries thousands of users, and Parspack resizes in place if it ever does n
   with `EnvironmentFile=/opt/kl/.env` (mode 600, owner `kl`).
 - Directories: `/opt/kl/{pb_public,pb_hooks,pb_migrations,content,landing,admin,sourcemaps,backups}`.
 
-### 14.2 Caddyfile (shape)
+### 14.2 Caddyfile (shape) `[building]`
 
 ```
 konkurleitner.com, www.konkurleitner.com {
@@ -846,7 +1006,11 @@ produces a schedule where a word can be conquered in exactly 7 days but the medi
 - Unit: state machines (`backup`, `download`) with a fake API and fake clock — every state and
   every transition, including interrupted downloads and 429s.
 - E2E (Playwright, Android-sized viewport, against a real PocketBase started by the test runner
-  with `SMS_PROVIDER=console` and a Zarinpal mock route): onboarding → 10 reviews → **offline**
+  — `playwright.config.ts`'s second `webServer`, `server/scripts/e2e.mjs`, `127.0.0.1:8091`, a
+  throwaway `pb_data`, `SMS_PROVIDER=mock` so the code is `123456` — reached through
+  `vite preview`'s `/api` proxy, same-origin as behind Caddy; and a Zarinpal mock route). Built
+  so far: `login.spec.ts` (mock-code login → home, `kv.auth` survives a reload and the token
+  answers `/api/me`; a wrong code shows the tries left; offline explains itself). The target: onboarding → 10 reviews → **offline**
   (`context.setOffline(true)`) → 10 more reviews → back online → backup happens → paywall at the
   limit → login with the console OTP → checkout with a discount code → mock gateway → result →
   paid download → offline → study from the paid package → reload → state intact. Second spec:
@@ -855,15 +1019,31 @@ produces a schedule where a word can be conquered in exactly 7 days but the medi
 
 ### 16.3 Server
 
-The e2e job exercises every route. A small Vitest API suite additionally covers: OTP rate limits,
-push idempotency, pull paging, content gate refusing an unentitled user, quote/request for each
-`codeStatus`, callback with a wrong amount, callback replay, `reconcileUnverified`.
+`server/test/` (Vitest, `pnpm test:server`) starts the pinned PocketBase binary on a random port
+against an empty temp `pb_data` with this repo's hooks and migrations, creates a superuser through
+the CLI, and exercises the routes over real HTTP — API rules, goja semantics and the error
+envelope do not exist in a mock. It is a separate job from `ci`, because the root `pnpm test` must
+stay runnable without the binary. `users` has password auth disabled, so a test gets a user token
+through the superuser-only `POST /api/collections/users/impersonate/:id`.
+
+Covered today: the migrations apply from empty and every collection has the rules of §8.1;
+`config`, `health`, `me` and `me/profile` including newer-wins; the `withRoute` envelope, its codes
+and its structured log line with the phone masked and secrets hashed; OTP (`otp.test.ts`): the
+console happy path, hashing at rest, single use, same user on a second login, 5 wrong codes →
+locked, expiry, both rate limits with `retryAfter` and `Retry-After`, phone normalisation, the
+purge cron, `mock` accepting `123456` only, an unknown provider and Kavenegar without a key.
+The harness takes env overrides (`startServer({env})`) and exposes the process `output()`, which
+is where the console provider's code is read from. Still to cover as the routes land: push
+idempotency, pull paging, content gate refusing an unentitled user,
+quote/request for each `codeStatus`, callback with a wrong amount, callback replay,
+`reconcileUnverified`. The e2e job exercises every route end to end.
 
 ### 16.4 CI jobs
 
-`ci` (lint, typecheck, unit, build, budget) on every PR; `e2e` on every PR (downloads the pinned
-PocketBase binary); `deploy` on `main` if SSH works; `android` on tags. Branch protection requires
-`ci` and `e2e`.
+`ci` (lint, typecheck, unit, build, budget) on every PR; `server` on every PR (the API suite,
+§16.3); `e2e` on every PR; `deploy` on `main` if SSH works; `android` on tags. `server` and `e2e`
+download the pinned PocketBase binary into `server/.pb/` and share one cache key. Branch
+protection requires `ci`, `server` and `e2e`.
 
 ---
 
@@ -888,7 +1068,7 @@ PocketBase binary); `deploy` on `main` if SSH works; `android` on tags. Branch p
 ## 18. Configuration and secrets
 
 `.env.example` is the list of record. Server (`/opt/kl/.env`): `SMS_PROVIDER`
-(`kavenegar`|`console`), `SMS_API_KEY`, `SMS_OTP_TEMPLATE`, `ZARINPAL_MERCHANT_ID`,
+(`kavenegar`|`console`|`mock`), `SMS_API_KEY`, `SMS_OTP_TEMPLATE`, `SMS_API_BASE` (default `https://api.kavenegar.com`; tests only), `ZARINPAL_MERCHANT_ID`,
 `ZARINPAL_SANDBOX` (`0`|`1`), `ZARINPAL_CALLBACK_URL`, `PUBLIC_APP_ORIGIN`, `CONTENT_DIR`,
 `SOURCEMAP_DIR`, `BACKUP_S3_ENDPOINT`, `BACKUP_S3_BUCKET`, `BACKUP_S3_KEY`, `BACKUP_S3_SECRET`.
 Local bootstrap (`.env.local`, git-ignored, used once): `VPS_IP`, `VPS_ROOT_PASSWORD`. DNS is
@@ -902,7 +1082,7 @@ GitHub: `DEPLOY_HOST`, `DEPLOY_USER`, `DEPLOY_SSH_KEY`, `ANDROID_KEYSTORE_B64`,
 
 ## 19. Known limitations and open items
 
-- **Design system** and the **Persian app name** are pending the owner (§7.9, `VITE_APP_NAME`).
+- The **Persian app name** is pending the owner (`VITE_APP_NAME`); the design system is decided (§7.9).
 - **Hints do not exist yet** (0 of 2,098); the free 150 need approved hints before launch.
 - **Word data is 895 of 2,098**; the paid package grows with content updates until complete.
 - iOS: no install prompt API; storage for a home-screen PWA is persistent in practice but not

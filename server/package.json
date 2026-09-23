@@ -1,0 +1,17 @@
+{
+  "name": "@kl/server",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "PocketBase hooks, migrations and deployment for konkurleitner.com",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "pb:download": "node scripts/download-pocketbase.mjs",
+    "pb:dev": "node scripts/dev.mjs",
+    "pb:e2e": "node scripts/e2e.mjs"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.4"
+  }
+}

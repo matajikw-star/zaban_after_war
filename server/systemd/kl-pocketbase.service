@@ -1,0 +1,65 @@
+# The one long-running process on the VPS (what.md §14.1). Installed to
+# /etc/systemd/system/kl-pocketbase.service by server/deploy/bootstrap.sh.
+#
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now kl-pocketbase
+#   sudo systemctl status kl-pocketbase
+#   journalctl -u kl-pocketbase -f
+
+[Unit]
+Description=Konkur Leitner PocketBase
+Documentation=https://github.com/konkurleitner/konkour-leitner/blob/main/docs/spec/what.md
+After=network.target
+Wants=network-online.target
+
+# A crash loop must not hide itself: after 5 restarts in 60s systemd gives up and the unit shows
+# as failed, which is what monitoring (§14.6) alerts on. These two live in [Unit], not [Service].
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=kl
+Group=kl
+WorkingDirectory=/opt/kl
+
+# Secrets live here and nowhere else: mode 600, owner kl (constitution §5, what.md §18).
+# `-` so the unit still starts if the file is missing — the hooks warn about what is unset
+# rather than refusing to serve the study loop.
+EnvironmentFile=-/opt/kl/.env
+
+ExecStart=/opt/kl/pocketbase serve \
+  --dir /opt/kl/pb_data \
+  --hooksDir /opt/kl/pb_hooks \
+  --migrationsDir /opt/kl/pb_migrations \
+  --publicDir /opt/kl/pb_public \
+  --http 127.0.0.1:8090
+
+# Caddy is the only thing that talks to this port; PocketBase never faces the internet directly.
+
+Restart=always
+RestartSec=5
+
+# The study loop must survive a slow SQLite checkpoint, so no aggressive timeouts.
+TimeoutStopSec=30
+KillSignal=SIGTERM
+
+# Hardening. PocketBase needs to write pb_data, content, sourcemaps and backups, and nothing else.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/kl
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+
+# 2 GB of RAM total, shared with Caddy (§14.1). PocketBase idles far below this; the cap is here
+# so a runaway hook is killed rather than taking the machine with it.
+MemoryMax=1G
+LimitNOFILE=8192
+
+[Install]
+WantedBy=multi-user.target

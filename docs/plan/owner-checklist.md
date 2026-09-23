@@ -41,10 +41,10 @@ First login and key install: `docs/runbooks/server-setup.md` §1 (owner, once).
   (If they require the app name in the text, use the placeholder name for now; the template is
   edited once the Persian name is chosen.)
 - API key: **received 2026-09-18**. The owner adds it to `.env.local` as `SMS_API_KEY=`
-  (Claude is not permitted to write credentials to disk). Template `kl-otp` submitted;
-  Kavenegar's review needs `app.konkurleitner.com` reachable over HTTPS, which the placeholder
-  site in `server/deploy/` provides. Also complete «احراز هویت»: until then SMS goes only to
-  the owner's own number.
+  (Claude is not permitted to write credentials to disk). Template `kl-otp` **approved,
+  2026-09-18**. Still open: «احراز هویت» — until it completes SMS goes only to the owner's
+  own number, so staging runs `SMS_PROVIDER=mock` (fixed code `123456`) and the owner can
+  try the real path on their own phone with `SMS_PROVIDER=kavenegar`.
 - Credit: the 550,000 rial (55,000 toman) already on the account covers a few hundred OTPs —
   enough for beta; top up before launch.
 

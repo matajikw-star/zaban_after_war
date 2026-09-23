@@ -1,0 +1,47 @@
+{
+  "id": "fig",
+  "lemma": "fig",
+  "level": "B1",
+  "senses": [
+    {
+      "pos": "n",
+      "ipa": "/fɪɡ/",
+      "definition": "a soft sweet fruit full of small seeds",
+      "translations": ["انجیر"],
+      "synonyms": [],
+      "antonyms": [],
+      "examples": [
+        { "en": "Dried figs are sold at the market.", "fa": "انجیر خشک در بازار فروخته می‌شود." }
+      ],
+      "testedIn": [{ "paperId": "arshad-9999-p01", "questionNo": 3 }]
+    }
+  ],
+  "confusables": [],
+  "homograph": { "suspected": false, "note": null },
+  "occurrences": [
+    {
+      "occurrenceType": "tested",
+      "paperId": "arshad-9999-p01",
+      "part": "vocabulary",
+      "questionNo": 3,
+      "optionIndex": 0,
+      "isAnswer": true,
+      "reach": 1,
+      "surface": "fig",
+      "year": 9999
+    }
+  ],
+  "stats": {
+    "byYear": { "9999": 1 },
+    "answersByYear": { "9999": 1 },
+    "distinctYears": 1,
+    "firstYear": 9999,
+    "lastYear": 9999,
+    "priority": 10,
+    "timesAsAnswer": 1,
+    "timesAsContext": 0,
+    "timesAsDistractor": 0,
+    "timesTested": 1
+  },
+  "status": "draft"
+}

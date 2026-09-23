@@ -25,3 +25,12 @@ gate, 100 % code grants without the gateway; client download machine tests with 
 streams; Playwright: paywall → login → checkout with a 50 % code → mock gateway → result → paid
 package downloaded → offline → study from it → reload. Marks `live`. The real 1,000-toman
 verification is done by the owner's request later and recorded in §8.3.
+
+## Hard requirement added 2026-09-24 (from the OTP review)
+
+While `SMS_PROVIDER=mock`, `/api/otp/verify` accepts `123456` for **any** phone number, so anyone
+can sign in as anyone. That is acceptable only while accounts hold nothing of value. Therefore:
+every payment route (`/api/pay/*`) and the paid-content download must refuse with an error code
+(e.g. `PAYMENT_DISABLED_MOCK_SMS`, 503) whenever `SMS_PROVIDER=mock`, and an API test must prove
+it. Payment goes live only after the owner's Kavenegar identity verification and a switch to
+`SMS_PROVIDER=kavenegar`.

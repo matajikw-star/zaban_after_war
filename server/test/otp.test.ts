@@ -360,9 +360,14 @@ describe('the purge cron', () => {
     const run = await server.asSuperuser('POST', '/api/crons/otp_purge');
     expect(run.status).toBe(204);
 
-    expect(
-      (await server.asSuperuser('GET', `/api/collections/otp_codes/records/${old.body.id}`)).status,
-    ).toBe(404);
+    // PocketBase answers 204 and runs the job in the background, so poll until the old row is gone.
+    const status = (id: string) =>
+      server.asSuperuser('GET', `/api/collections/otp_codes/records/${id}`).then((r) => r.status);
+    const deadline = Date.now() + 5000;
+    while ((await status(old.body.id)) !== 404 && Date.now() < deadline) {
+      await new Promise((resolve) => setTimeout(resolve, 50));
+    }
+    expect(await status(old.body.id)).toBe(404);
     expect(
       (await server.asSuperuser('GET', `/api/collections/otp_codes/records/${recent.body.id}`))
         .status,

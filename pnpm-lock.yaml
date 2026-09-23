@@ -204,6 +204,9 @@ importers:
       uuid:
         specifier: 14.0.2
         version: 14.0.2
+      workbox-window:
+        specifier: 7.4.1
+        version: 7.4.1
       zustand:
         specifier: 5.0.15
         version: 5.0.15(@types/react@19.3.0)(react@19.3.0)

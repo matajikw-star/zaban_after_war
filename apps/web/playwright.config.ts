@@ -19,13 +19,14 @@ export default defineConfig({
   workers: process.env.CI ? 1 : '50%',
   reporter: [['html', { outputFolder: 'playwright-report', open: 'never' }], ['list']],
   use: {
-    baseURL: 'http://localhost:4173',
+    // IPv4 explicitly — see the matching comment in `vite.config.ts`.
+    baseURL: 'http://127.0.0.1:4173',
     trace: 'on-first-retry',
   },
   projects: [{ name: 'android', use: { ...devices['Pixel 7'], ...(channel ? { channel } : {}) } }],
   webServer: {
     command: 'pnpm preview',
-    url: 'http://localhost:4173',
+    url: 'http://127.0.0.1:4173',
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
   },

@@ -213,7 +213,7 @@ export const strings = {
     downloadInstalled: 'نصب‌شده',
     downloadError: 'دانلود در انتظار اینترنت',
     installTitle: 'نصب برنامه',
-    installComingSoon: 'به‌زودی از همین‌جا قابل نصب است',
+    installInstalledLabel: 'نصب‌شده',
     reportTitle: 'گزارش مشکل',
     reportNotePlaceholder: 'توضیح مشکل (اختیاری)',
     reportSubmit: 'ارسال گزارش',
@@ -229,6 +229,56 @@ export const strings = {
     daysStudied: 'روز مطالعه',
     presentations: 'ارائه',
     newDate: 'تاریخ جدید',
+  },
+
+  /** The install sheet (`what.md` §7.8's install paragraph), opened from settings. */
+  install: {
+    sheetTitle: 'نصب برنامه',
+    installAction: 'نصب',
+    inAppBrowserBody: 'برای نصب، این صفحه را در Chrome باز کنید.',
+    copyLink: 'کپی لینک',
+    copied: 'کپی شد',
+    iosBody:
+      'برای نصب: دکمهٔ اشتراک‌گذاری (Share) را بزنید، سپس «Add to Home Screen» را انتخاب کنید.',
+    installedBody: 'برنامه نصب شده است.',
+    unavailableBody: 'نصب مستقیم در این مرورگر ممکن نیست؛ برای نصب از Chrome استفاده کنید.',
+  },
+
+  /** `/onboarding` (what.md §7.8 row 1, §5.5–5.6). Appended as one block by ticket dev-web/02. */
+  onboarding: {
+    slide1Title: 'کنکور لایتنر',
+    slide1Body: 'واژه‌هایی را مرور کنید که واقعاً در آزمون‌های ارشد و دکتری کنکور آمده‌اند.',
+    slide2Title: 'بر اساس فرکانس کنکور',
+    slide2Body:
+      'هر واژه بر اساس تعداد دفعاتی که در کنکورهای واقعی سال‌های اخیر آمده، اولویت‌بندی می‌شود.',
+    slide3Title: 'جعبه‌های لایتنر',
+    slide3Body:
+      'هر واژه در یکی از پنج جعبه جا می‌گیرد؛ اگر بلد باشید یک جعبه جلو می‌رود، اگر نه به جعبهٔ اول برمی‌گردد.',
+    haveAccount: 'قبلاً حساب داشتم',
+    next: 'بعدی',
+    back: 'بازگشت',
+    skip: 'رد کردن',
+    minutesTitle: 'چقدر وقت برای مطالعه دارید؟',
+    minutesCaption: 'در هر روز',
+    examDateTitle: 'تاریخ کنکور شما کی است؟',
+    examDateYear: 'سال',
+    examDateMonth: 'ماه',
+    examDateDay: 'روز',
+    examDateYearLabel: 'سال کنکور',
+    examDateMonthLabel: 'ماه کنکور',
+    examDateDayLabel: 'روز کنکور',
+    fieldTitle: 'رشتهٔ تحصیلی شما چیست؟',
+    fieldNone: 'انتخاب نشده',
+    placementTitle: 'کدام واژه‌ها را بلدید؟',
+    placementBody: 'این مرحله اختیاری است و به شخصی‌سازی مسیر یادگیری شما کمک می‌کند.',
+    placementCounter: (n: string, total: string) => `${n} از ${total}`,
+    placementKnow: 'بلدم',
+    placementDontKnow: 'بلد نیستم',
+    placementDone: 'همهٔ واژه‌ها بررسی شد.',
+    installTitle: 'برنامه را نصب کنید',
+    installBody: 'با نصب برنامه، کنکور لایتنر حتی بدون اینترنت هم در دسترس شماست.',
+    installContinue: 'ادامه',
+    installNow: 'نصب برنامه',
   },
 } as const;
 

@@ -47,6 +47,9 @@ export interface SettingsState {
   readonly theme: ThemeChoice;
   readonly profile: Profile;
   readonly loaded: boolean;
+  /** True once a profile exists — at `kv.profile` on `load()`, or after `setProfile`. Ticket
+   *  02's guard: a returning user (this is true) never sees `/onboarding`. */
+  readonly hasProfile: boolean;
   load: () => Promise<void>;
   setTheme: (theme: ThemeChoice) => Promise<void>;
   setProfile: (patch: ProfilePatch) => Promise<void>;
@@ -56,13 +59,19 @@ export const useSettingsStore = create<SettingsState>()((set, get) => ({
   theme: 'system',
   profile: DEFAULT_PROFILE,
   loaded: false,
+  hasProfile: false,
 
   load: async () => {
     const [theme, profile] = await Promise.all([
       kvGet<ThemeChoice>('theme'),
       kvGet<Profile>('profile'),
     ]);
-    set({ theme: theme ?? 'system', profile: profile ?? DEFAULT_PROFILE, loaded: true });
+    set({
+      theme: theme ?? 'system',
+      profile: profile ?? DEFAULT_PROFILE,
+      loaded: true,
+      hasProfile: profile !== undefined,
+    });
     breadcrumb('log', 'settings.load', {
       theme: theme ?? 'system',
       hasProfile: profile !== undefined,
@@ -85,7 +94,7 @@ export const useSettingsStore = create<SettingsState>()((set, get) => ({
       fieldCode: patch.fieldCode === undefined ? previous.fieldCode : patch.fieldCode,
       updatedAt: now(),
     };
-    set({ profile: next });
+    set({ profile: next, hasProfile: true });
     await kvSet('profile', next);
     breadcrumb('log', 'settings.setProfile', {
       minutesPerDay: next.minutesPerDay,

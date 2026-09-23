@@ -72,10 +72,13 @@ function leadingToken(text: string): string {
 
 test.describe('the offline screens agree on the same numbers', () => {
   test.beforeEach(async ({ page }) => {
-    // First boot: creates the database and its tables (Dexie runs on the very first load).
+    // First boot: creates the database and its tables (Dexie runs on the very first load). That
+    // first load has no profile yet, so it lands on `/onboarding`; navigating to `/` again after
+    // seeding (rather than a plain reload, which would just reload `/onboarding`) is what lands
+    // on Home with the profile the settings store now finds.
     await page.goto('/');
     await seedProgress(page);
-    await page.reload();
+    await page.goto('/');
   });
 
   test('home shows the goal ring, the streak and a progress line', async ({ page }) => {

@@ -22,6 +22,7 @@ import { shouldShowGoalSheet, todayKey } from '../../engine/goal-sheet.ts';
 import { nextCard, presentationsToday, recordReview } from '../../engine/index.ts';
 import { countPresentation } from '../../engine/paywall-counter.ts';
 import { beaconsCrossed } from '../../engine/review-beacons.ts';
+import { shouldPromptSaveProgress } from '../../engine/save-progress-prompt.ts';
 import { breadcrumb } from '../../log/breadcrumbs.ts';
 import { reportError } from '../../log/errors.ts';
 import type { BeaconEvent, BeaconName, FlagBody } from '../../net/api.ts';
@@ -40,6 +41,7 @@ import { type FlagReason, FlagSheet } from './FlagSheet.tsx';
 import { GoalReachedSheet } from './GoalReachedSheet.tsx';
 import { GradeBar } from './GradeBar.tsx';
 import { OverflowMenu } from './OverflowMenu.tsx';
+import { SaveProgressSheet } from './SaveProgressSheet.tsx';
 import { Toast } from './Toast.tsx';
 
 /** How long «ثبت شد» stays up. Same order as the feedback pause, and for the same reason. */
@@ -72,6 +74,7 @@ export function Review() {
   const [feedback, setFeedback] = useState<FeedbackState | null>(null);
   const [flagOpen, setFlagOpen] = useState(false);
   const [goalOpen, setGoalOpen] = useState(false);
+  const [saveOpen, setSaveOpen] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   /** True from the tap that answers until the feedback is on screen; blocks a double answer. */
   const [busy, setBusy] = useState(false);
@@ -153,16 +156,28 @@ export function Review() {
 
       const goal = useSettingsStore.getState().profile.dailyGoal;
       const today = todayKey();
-      if (
-        shouldShowGoalSheet({
-          presentationsToday: presentationsToday(),
-          dailyGoal: goal,
-          lastShownDay: await kvGet<number>('goalSheetShownDay'),
-          today,
-        })
-      ) {
+      const goalDue = shouldShowGoalSheet({
+        presentationsToday: presentationsToday(),
+        dailyGoal: goal,
+        lastShownDay: await kvGet<number>('goalSheetShownDay'),
+        today,
+      });
+      if (goalDue) {
         await kvSet('goalSheetShownDay', today);
         setGoalOpen(true);
+      }
+
+      if (
+        shouldPromptSaveProgress({
+          loggedIn: useAuthStore.getState().userId !== null,
+          presentations: totalAfter,
+          alreadyShown: (await kvGet<boolean>('saveProgressPromptShown')) === true,
+          otherSheetOpen: goalDue,
+        })
+      ) {
+        await kvSet('saveProgressPromptShown', true);
+        breadcrumb('nav', 'review.saveProgressPrompt', { presentations: totalAfter });
+        setSaveOpen(true);
       }
     },
     [busy, cardOf, navigate],
@@ -281,6 +296,14 @@ export function Review() {
         onFinish={() => {
           setGoalOpen(false);
           void navigate('/session/summary');
+        }}
+      />
+      <SaveProgressSheet
+        open={saveOpen}
+        onOpenChange={setSaveOpen}
+        onAccept={() => {
+          setSaveOpen(false);
+          void navigate('/login');
         }}
       />
       {toast === null ? null : <Toast message={toast} />}

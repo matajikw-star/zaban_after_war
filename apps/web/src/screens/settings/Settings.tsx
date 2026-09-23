@@ -1,10 +1,10 @@
 /**
  * `/settings` (`what.md` §7.8, §7.4, §7.5, §7.6, §10.4).
  *
- * Local parts are fully wired: goal, exam date, field, theme, the diagnostic report. Account,
- * backup and download show whatever state the stores already carry — `sync/backup.ts`'s and
- * `sync/download.ts`'s `run()` are stubs until Phase 4/5 (§7.4, §7.5), so the manual backup
- * button calls the real (currently no-op) `run()` rather than faking a result.
+ * Local parts are fully wired: goal, exam date, field, theme, the diagnostic report. The backup
+ * row reads `stores/sync.ts` and its button asks `sync/backup-live.ts` for a `manual` run
+ * (§7.4). The download row shows the store's state only; `sync/download.ts`'s `run()` is a stub
+ * until Phase 5 (§7.5).
  */
 
 import { goalFromMinutes, ONBOARDING_MINUTES } from '@kl/core';
@@ -21,7 +21,8 @@ import { usePwaStore } from '../../stores/pwa.ts';
 import { type ThemeChoice, useSettingsStore } from '../../stores/settings.ts';
 import { useSyncStore } from '../../stores/sync.ts';
 import { strings } from '../../strings.ts';
-import { run as runBackup } from '../../sync/backup.ts';
+import type { BackupState } from '../../sync/backup.ts';
+import { requestBackup } from '../../sync/backup-live.ts';
 import { Button } from '../../ui/Button.tsx';
 import { Card, CardTitle } from '../../ui/Card.tsx';
 import { faNumber, faPercent } from '../../ui/format.ts';
@@ -46,16 +47,23 @@ function Section({ title, children }: { readonly title: string; readonly childre
   );
 }
 
-function backupStatusText(name: string): string {
-  switch (name) {
+/**
+ * §7.4: the only failure the user is ever shown is «پشتیبان‌گیری در انتظار اینترنت». A token the
+ * server no longer accepts is not a failure of theirs to read about; it is a quiet ask to log in
+ * again (§7.2), because retrying on its own will never fix it.
+ */
+function backupStatusText(state: BackupState, offlineWithPending: boolean): string {
+  switch (state.name) {
     case 'pushing':
       return strings.settings.backupPushing;
     case 'pulling':
       return strings.settings.backupPulling;
     case 'error':
-      return strings.settings.backupError;
+      return state.reason === 'UNAUTHORIZED'
+        ? strings.settings.backupRelogin
+        : strings.settings.backupError;
     default:
-      return strings.settings.backupIdle;
+      return offlineWithPending ? strings.settings.backupError : strings.settings.backupIdle;
   }
 }
 
@@ -130,6 +138,9 @@ export function Settings() {
   const backup = useSyncStore((state) => state.backup);
   const download = useSyncStore((state) => state.download);
   const lastBackupAt = useSyncStore((state) => state.lastBackupAt);
+  const unsyncedCount = useSyncStore((state) => state.unsyncedCount);
+  const offlineWithPending = globalThis.navigator?.onLine === false && unsyncedCount > 0;
+  const needsRelogin = backup.name === 'error' && backup.reason === 'UNAUTHORIZED';
   const installPrompt = usePwaStore((state) => state.installPrompt);
   const [installOpen, setInstallOpen] = useState(false);
 
@@ -155,8 +166,12 @@ export function Settings() {
 
       <Section title={strings.settings.accountTitle}>
         {phone === null ? (
-          <Button variant="secondary" onClick={() => void navigate('/login')}>
-            {strings.settings.accountLoggedOut}
+          <Button
+            variant="secondary"
+            onClick={() => void navigate('/login')}
+            data-testid="settings-login"
+          >
+            {strings.settings.backupSaveProgress}
           </Button>
         ) : (
           <p dir="ltr" className="text-body">
@@ -239,15 +254,35 @@ export function Settings() {
       </Section>
 
       <Section title={strings.settings.backupTitle}>
-        <p className="text-body-sm text-[var(--fg-muted)]">{backupStatusText(backup.name)}</p>
-        <p className="text-caption text-[var(--fg-muted)]">
-          {lastBackupAt === null
-            ? strings.settings.backupNever
-            : new Date(lastBackupAt).toLocaleString('fa-IR')}
-        </p>
-        <Button variant="secondary" size="sm" onClick={() => void runBackup()}>
-          {strings.settings.backupNow}
-        </Button>
+        {phone === null ? (
+          // Anonymous installs are not backed up (§7.4): there is no identity to restore to.
+          <p className="text-body-sm text-[var(--fg-muted)]">{strings.settings.backupAnonymous}</p>
+        ) : (
+          <>
+            <p className="text-body-sm text-[var(--fg-muted)]" data-testid="backup-status">
+              {backupStatusText(backup, offlineWithPending)}
+            </p>
+            <p className="text-caption text-[var(--fg-muted)]" data-testid="backup-last">
+              {lastBackupAt === null
+                ? strings.settings.backupNever
+                : strings.settings.backupLast(new Date(lastBackupAt).toLocaleString('fa-IR'))}
+            </p>
+            {needsRelogin ? (
+              <Button variant="secondary" size="sm" onClick={() => void navigate('/login')}>
+                {strings.settings.accountLoggedOut}
+              </Button>
+            ) : (
+              <Button
+                variant="secondary"
+                size="sm"
+                onClick={() => void requestBackup('manual')}
+                data-testid="backup-now"
+              >
+                {strings.settings.backupNow}
+              </Button>
+            )}
+          </>
+        )}
       </Section>
 
       <Section title={strings.settings.downloadTitle}>

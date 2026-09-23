@@ -53,6 +53,9 @@ export interface SettingsState {
   load: () => Promise<void>;
   setTheme: (theme: ThemeChoice) => Promise<void>;
   setProfile: (patch: ProfilePatch) => Promise<void>;
+  /** The login merge (§7.4): the server's profile was newer, so it is taken whole, `updatedAt`
+   *  included — re-stamping it would make this device's copy look newer than it is. */
+  replaceProfile: (profile: Profile) => Promise<void>;
 }
 
 export const useSettingsStore = create<SettingsState>()((set, get) => ({
@@ -100,6 +103,16 @@ export const useSettingsStore = create<SettingsState>()((set, get) => ({
       minutesPerDay: next.minutesPerDay,
       dailyGoal: next.dailyGoal,
       hasExamDate: next.examDate !== null,
+    });
+  },
+
+  replaceProfile: async (profile) => {
+    const next: Profile = { ...profile, dailyGoal: goalFromMinutes(profile.minutesPerDay) };
+    set({ profile: next, hasProfile: true });
+    await kvSet('profile', next);
+    breadcrumb('log', 'settings.replaceProfile', {
+      minutesPerDay: next.minutesPerDay,
+      updatedAt: next.updatedAt,
     });
   },
 }));

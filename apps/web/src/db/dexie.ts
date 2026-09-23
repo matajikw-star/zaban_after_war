@@ -55,6 +55,7 @@ export type KvKey =
   | 'auth'
   | 'profile'
   | 'entitlement'
+  /** `{userId, cursor}` — the pull cursor of §7.4, per user (`sync/backup.ts` `SyncCursor`). */
   | 'syncCursor'
   | 'lastBackupAt'
   | 'onboarding'
@@ -66,7 +67,9 @@ export type KvKey =
   | 'theme'
   | 'downloadReceivedBytes'
   /** The `examDate` (epoch ms) the season screen was last shown for — shows it once (§7.8). */
-  | 'seasonShownFor';
+  | 'seasonShownFor'
+  /** True once «ذخیرهٔ پیشرفت با شمارهٔ موبایل» has been offered after 50 presentations (§7.4). */
+  | 'saveProgressPromptShown';
 
 export interface KvRow {
   readonly key: KvKey;

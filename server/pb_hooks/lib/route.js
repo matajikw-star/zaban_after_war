@@ -179,12 +179,16 @@ function validate(body, schema) {
 
 /** The unvalidated body, plus the size cap. Read before validation so a rejected request can
  *  still be logged with its (redacted) input — that is the line an agent debugs from. */
-function rawBody(e) {
+function rawBody(e, maxBytes) {
   // Content-Length is the only size we can see before PocketBase has parsed the body; a body
   // without one is bounded by PocketBase's own limits and by the per-field checks below.
   const declared = parseInt(e.request.header.get('Content-Length') || '0', 10);
-  if (declared > MAX_BODY_BYTES) {
-    throw new AppError(CODES.BAD_INPUT, 'body is larger than 32 KB', 413);
+  if (declared > maxBytes) {
+    throw new AppError(
+      CODES.BAD_INPUT,
+      `body is larger than ${Math.round(maxBytes / 1024)} KB`,
+      413,
+    );
   }
 
   try {
@@ -246,13 +250,17 @@ function installIdOf(e, body) {
 /**
  * @param {string}   name    the route's stable log name, e.g. 'me.profile'
  * @param {function} handler (ctx) => body — ctx is { e, app, auth, body, name, installId }
- * @param {object}   [opts]  { auth: 'none'|'user'|'superuser'|'optional', schema, status }
+ * @param {object}   [opts]  { auth: 'none'|'user'|'superuser'|'optional', schema, status,
+ *                            maxBodyBytes (default 32 KB) }
  * @returns {function} a PocketBase route handler
  */
 function withRoute(name, handler, opts) {
   const options = opts || {};
   const mode = options.auth || 'none';
   const okStatus = options.status || 200;
+  // 32 KB for everything except a route that says otherwise: sync.push carries up to 500 events
+  // (~150 bytes each), which is what §15's "500 events per push" costs on the wire.
+  const maxBodyBytes = options.maxBodyBytes || MAX_BODY_BYTES;
 
   return (e) => {
     const startedAt = Date.now();
@@ -276,7 +284,7 @@ function withRoute(name, handler, opts) {
 
       let body = {};
       if (options.schema) {
-        const raw = rawBody(e);
+        const raw = rawBody(e, maxBodyBytes);
         // Redact before validating: a request rejected for a bad field still has to log what it
         // sent, or the failure is undebuggable.
         loggedInput = redact(raw);

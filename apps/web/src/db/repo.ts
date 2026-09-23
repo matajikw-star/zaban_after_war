@@ -70,21 +70,42 @@ export async function markSynced(ids: readonly string[]): Promise<void> {
 }
 
 /**
- * Inserts events pulled from the server. Already-known ids are left untouched — in particular a
- * local event still waiting to be pushed keeps `synced = 0` until its own push succeeds.
+ * Inserts events pulled from the server and returns the ones that were new to this device — the
+ * caller re-folds with exactly those (§7.4). Already-known ids are left untouched — in particular
+ * a local event still waiting to be pushed keeps `synced = 0` until its own push succeeds. One
+ * transaction, so the "is it known" read and the write cannot be split by another writer.
  */
-export async function insertPulled(events: readonly ReviewEvent[]): Promise<number> {
-  if (events.length === 0) return 0;
-  const known = new Set(
-    (await db.events
-      .where('id')
-      .anyOf(events.map((e) => e.id))
-      .primaryKeys()) as string[],
-  );
-  const fresh = events.filter((e) => !known.has(e.id)).map((e) => toRow(e, 1));
-  if (fresh.length > 0) await db.events.bulkPut(fresh);
+export async function insertPulled(events: readonly ReviewEvent[]): Promise<ReviewEvent[]> {
+  if (events.length === 0) return [];
+  const fresh = await db.transaction('rw', db.events, async () => {
+    const known = new Set(
+      (await db.events
+        .where('id')
+        .anyOf(events.map((e) => e.id))
+        .primaryKeys()) as string[],
+    );
+    const seen = new Set<string>();
+    const out: ReviewEvent[] = [];
+    for (const event of events) {
+      if (known.has(event.id) || seen.has(event.id)) continue;
+      seen.add(event.id);
+      out.push(event);
+    }
+    if (out.length > 0) await db.events.bulkAdd(out.map((e) => toRow(e, 1)));
+    return out;
+  });
   breadcrumb('sync', 'repo.insertPulled', { received: events.length, inserted: fresh.length });
-  return fresh.length;
+  return fresh;
+}
+
+/**
+ * The login merge (§7.4): every local event goes back into the push queue. The server
+ * insert-ignores by id, so re-sending what it already has costs bandwidth, never data.
+ */
+export async function markAllUnsynced(): Promise<number> {
+  const count = await db.events.toCollection().modify({ synced: 0 });
+  breadcrumb('sync', 'repo.markAllUnsynced', { count });
+  return count;
 }
 
 /** The last N events by `at`, newest first — the tail an error snapshot carries (§10.1). */

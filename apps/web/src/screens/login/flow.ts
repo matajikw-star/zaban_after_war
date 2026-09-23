@@ -16,7 +16,7 @@ export interface LoginDeps {
   readonly verifyCode: (phone: string, code: string) => Promise<OtpVerifyResponse>;
   /** `stores/auth.ts`'s `signIn`: `userId` + token into `kv` (§7.2). */
   readonly signIn: (auth: AuthRecord) => Promise<void>;
-  /** `sync/login-merge.ts`'s `runLoginMerge` — ticket 03 fills it in. */
+  /** `sync/login-merge.ts`'s `runLoginMerge` (what.md §7.4): re-queue, profile, fire a backup. */
   readonly afterLogin: (userId: string) => Promise<void>;
   readonly reportError: (err: unknown, phase: string) => void;
 }

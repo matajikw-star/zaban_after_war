@@ -448,7 +448,7 @@ src/
   db/                 dexie.ts (schema), repo.ts (typed reads/writes; the only file that touches Dexie)
   engine/             thin adapters over @kl/core (fold cache, rng, clock) + index.ts, the bound API
   net/                api.ts (typed fetch wrappers for every route in §8)
-  sync/               backup.ts (state machine), download.ts (state machine), login-merge.ts (ticket 03)
+  sync/               backup.ts (machine + runner), backup-live.ts (real deps + triggers), download.ts (state machine), login-merge.ts
   log/                breadcrumbs.ts, errors.ts (capture + report), snapshot.ts
   content/            manifest.ts — the §8.2 manifest shape (the package shape is @kl/content)
   errors.ts           AppError (§17.4)
@@ -482,49 +482,83 @@ fatal: the shell, the settings and the existing review log all still work withou
 | `events` | `id` | `synced`, `itemId`, `at` | Every `ReviewEvent`, local and pulled. `synced: 0|1`. |
 | `outbox` | `seq` (auto) | `kind`, `createdAt` | Non-progress uploads: `flag`, `beacon`, `error`. `{kind, payload, attempts, lastError}`. |
 | `packages` | `packageId` | | `{packageId, version, hash, bytes, json}` — the whole package as one record. |
-| `kv` | `key` | | `installId`, `auth`, `profile`, `entitlement`, `syncCursor`, `lastBackupAt`, `onboarding`, `pendingPayment`, `presentationsBeforePaywall`, `goalSheetShownDay`, `swUpdateAvailable`, `theme`, `downloadReceivedBytes`. |
+| `kv` | `key` | | `installId`, `auth`, `profile`, `entitlement`, `syncCursor`, `lastBackupAt`, `onboarding`, `pendingPayment`, `presentationsBeforePaywall`, `goalSheetShownDay`, `swUpdateAvailable`, `theme`, `downloadReceivedBytes`, `seasonShownFor`, `saveProgressPromptShown`. |
 
 Schema changes are Dexie versions with upgrade functions; never delete `events`.
 
 The `kv` keys are a TypeScript union in `db/dexie.ts`, so a typo is a compile error and the set
 above is enumerable. `theme` (§7.9's manual override) and `downloadReceivedBytes` (§7.5's resume
 point) were added in the app-shell ticket; `goalSheetShownDay` (the Tehran `dayKey` the
-goal-reached sheet last appeared on) in the review ticket.
+goal-reached sheet last appeared on) in the review ticket; `saveProgressPromptShown` (§7.4's
+once-only prompt) in the sync ticket, which also fixed `syncCursor`'s value as `{userId, cursor}`.
 
-### 7.4 Backup (sync) state machine — `sync/backup.ts` [building]
+### 7.4 Backup (sync) state machine — `sync/backup.ts` [live]
 
 The owner's word for this is **backup**; the mechanism is ADR-0002's event-log union.
+`sync/backup.ts` holds the pure machine and `createBackupRunner(deps)`, which performs a run with
+every effect injected (database, network, clock, timers) and is unit-tested with a fake server
+and a fake clock; `sync/backup-live.ts` binds the real dependencies and the triggers, and exports
+`startBackup()` (called once from `main.tsx`, after the fold, not awaited) and
+`requestBackup(trigger)` (fire and forget, never throws).
 
-States: `idle → pushing → pulling → idle` with `error(reason)` returning to `idle` after a backoff
-(1 min, 5 min, 15 min, then hourly). Runs only when `navigator.onLine` and logged in.
+States: `idle → pushing → pulling → idle`. A failure goes to `error(reason, attempt, retryAt)`;
+a retry is a `START` from `error`, so the count of consecutive failures survives it and the
+backoff climbs 1 min, 5 min, 15 min, then hourly. `pushing`/`pulling` carry `failures` (the
+count so far, 0 unless retrying); a completed run resets it. A 429's `retryAfter` is honoured:
+the wait is the longer of it and the ladder's step. Runs only when `navigator.onLine` and logged
+in; offline or anonymous, a trigger is a breadcrumb and nothing else.
 
-Triggers: app start; `online` event; end of a study session; every 5 minutes while the app is
-open; immediately after login; a manual button in settings.
+Triggers (`BackupTrigger`): `start` (app start); `online` (the window event); `session-end`
+(`/session/summary` mounting, and the page going `hidden` — on a phone that is how a session
+usually ends); `interval` (every 5 minutes while the app is open); `login` (the login merge);
+`manual` (the settings button); `retry` (the backoff timer). **One run at a time:** a trigger
+during a run is remembered (the latest wins) and runs once after it. During a backoff only
+`manual`, `online` and `login` jump the wait; nothing jumps a 429; after a 401 only `login` or
+`manual` try again (retrying cannot fix a token the server refuses).
 
-- **Push:** `events where synced = 0`, batches of 500, `POST /api/sync/push`. Server inserts,
-  ignoring ids it already has. On `200`, mark those ids `synced = 1`. Also drains `outbox`
-  (each kind to its route; an item is deleted only on `2xx`; `4xx` other than 429 drops it
-  with a breadcrumb — the record is malformed and retrying will not help).
-- **Pull:** `GET /api/sync/pull?since=<cursor>` in pages; insert unknown ids with `synced = 1`;
-  store the cursor. A pull that brings new events triggers a re-fold.
-- Never blocks UI. Never shows an error to the user beyond «پشتیبان‌گیری در انتظار اینترنت»
-  in settings. Failures log a breadcrumb; repeated failures (≥ 5) log one `client_errors` record
-  of kind `sync`.
-- **Login merge:** after OTP succeeds on a device that already has local events, set every local
-  event to `synced = 0` and run push then pull. Push is idempotent by id, so re-sending is safe;
-  nothing local is ever deleted. Profile: local wins if newer (`updatedAt`).
-- **Restore on a fresh device:** login → pull everything → fold → progress is back. If the
-  server says entitled, the paid download (§7.5) starts immediately.
+- **Push:** `events where synced = 0`, batches of 500, `POST /api/sync/push`. An id is marked
+  `synced = 1` only after the server answered for its whole batch (`accepted + duplicates` must
+  equal the batch size, else `SYNC_PUSH_MISMATCH` and nothing is marked). A crash between the push
+  and the mark re-sends the batch next run, and the server's insert-ignore keeps one copy. Then
+  the `outbox` drains, oldest first: each kind to its route; `2xx` deletes; a non-429, non-401
+  `4xx` drops the item with a breadcrumb (the record is malformed and retrying will not help);
+  anything else records the failure on the item and stops the drain until the next run. The
+  outbox never fails the progress backup. Kinds whose route does not exist yet stay queued with a
+  `backup.outbox.kept` breadcrumb: `OUTBOX_ROUTES_LIVE` in `backup-live.ts` is all `false` until
+  ticket dev-server/04 ships `/api/flags`, `/api/beacon`, `/api/client-errors`.
+- **Pull:** `GET /api/sync/pull?since=<cursor>` in pages of 500; unknown ids are inserted with
+  `synced = 1` (one Dexie transaction, `repo.insertPulled`, which returns exactly the new ones),
+  handed to `engine/fold-cache.ts` `mergeIntoFold` — additive and synchronous, so a review
+  recorded while the pull was in flight is never dropped — and only then is the cursor stored.
+  A crash in between re-pulls the page harmlessly. `kv.syncCursor` is `{userId, cursor}`: a
+  cursor belonging to another account is ignored and the pull starts from the beginning. A page
+  that says `more` without moving the cursor fails the run (`SYNC_PULL_STALLED`) rather than
+  looping. A device pulls its own pushed events back once; they are already known and cost ~40
+  bytes each.
+- A completed run writes `kv.lastBackupAt` and `stores/sync.ts`; the unsynced count in the store
+  is refreshed after every run and every recorded review (the home screen's backup dot).
+- Never blocks UI. The user sees no error beyond «پشتیبان‌گیری در انتظار اینترنت» in settings
+  (for any `error`, or offline with unsynced events); a 401 shows «برای ادامهٔ پشتیبان‌گیری دوباره
+  وارد شوید» with a login button instead, quietly (§7.2). Every trigger, transition, batch and
+  failure is a breadcrumb; the **fifth** consecutive failure files one `client_errors` record of
+  kind `sync` (the session dedupe of §10.1 keeps it to one).
+- **Login merge** (`sync/login-merge.ts`, called by `/login` after the token is in `kv`): every
+  local event goes back to `synced = 0` (`repo.markAllUnsynced`), then the profile, then a
+  `login` backup run that is **fired, not awaited** — a slow network never holds the login
+  screen. Push is idempotent by id, so re-sending is safe; nothing local is ever deleted. Profile:
+  `GET /api/me`; the side with the newer `updatedAt` wins (equal is not newer) — the server's is
+  adopted whole with `settings.replaceProfile`, or the local one is sent with
+  `PATCH /api/me/profile`. A malformed server profile is ignored. A failure here is a breadcrumb,
+  never a failed login. Ongoing profile changes after login are not yet backed up (§19).
+- **Restore on a fresh device:** login → the merge adopts the server's profile (so the user lands
+  on home, not onboarding) → the pull brings every event back → re-fold → progress is back. If
+  the server says entitled, the paid download (§7.5) starts immediately (Phase 5).
 
-Anonymous installs are not backed up (there is no identity to restore to). The app asks the user
-to «ذخیرهٔ پیشرفت با شمارهٔ موبایل» once after 50 presentations and always from settings.
-
-Built so far: the state union, the pure `transition(state, event)` (total — every state answers
-every event — and tested as a full table) and the backoff ladder. `run()` is a stub that logs one
-breadcrumb; the push, the outbox drain and the pull are wired in Phase 4. Two transitions the
-spec did not name, decided here: a `START` while a run is in flight is ignored rather than
-restarting it, and a `START` from `error` **does** run immediately, because it is the manual
-button in settings and a user who taps it should not wait out an hour's backoff.
+Anonymous installs are not backed up (there is no identity to restore to). The review screen
+offers «ذخیرهٔ پیشرفت با شمارهٔ موبایل» once (`kv.saveProgressPromptShown`) after 50
+presentations on an anonymous install, never on top of the goal sheet
+(`engine/save-progress-prompt.ts`, `screens/review/SaveProgressSheet.tsx`); settings offers it
+always, as the account row's button.
 
 ### 7.5 Content download state machine — `sync/download.ts` [building]
 
@@ -582,16 +616,16 @@ because the service worker answers every navigation with `index.html` (§7.7).
 |---|---|---|
 | `/onboarding` **[live]** | 3 slides (what it is, the exam-frequency claim, Leitner in one picture) → minutes/day → exam date (Jalali picker, skippable) → field (skippable, from `content/field-codes.json`) → placement (skippable) → install nudge | Writes `profile`; `beacon onboarding_done`. Install nudge shows the real per-context install affordance — «نصب برنامه» when `beforeinstallprompt` was captured, the copy-link fallback in an in-app browser, the iOS Share instruction — the same detection and copy as `/settings`'s install sheet. Continuing is never gated on it. |
 | `/` | Home `[live]` | Goal ring (today's presentations / goal), streak, progress %, conquered count, one primary button «شروع مرور», the update chip («نسخهٔ جدید آماده است — اعمال», renders when `stores/pwa.ts`'s `updateReady` is set by `pwa/update.ts`'s state machine; tap calls `applyUpdate()`, §7.7), backup status dot (from `stores/sync`, hidden when anonymous), bottom nav to `/boxes`, `/progress`, `/settings`. Also owns the once-only redirect to `/season` (`kv.seasonShownFor`). |
-| `/review` **[live]** | Card | Front: word, exam badge («۱ بار در کنکور، سال ۱۴۰۲»), tap to reveal. Back: translations + one sentence (the exam stem for answer-words, else the authored example); «بیشتر» expands definition, other senses, confusables, exam history, and «راهنمای یادگیری» is its own collapsed disclosure. Buttons: «بلد نبودم» / «بلد بودم»; overflow (⋯): «این را بلدم» (know), «این کلمه اشکال دارد» (flag sheet with 3 reasons → `outbox` `flag`). Feedback: box change and «دفعهٔ بعد: ۲ روز دیگر», ~900 ms or a tap. Goal reached → congratulation sheet, once per Tehran day (`kv.goalSheetShownDay`), never blocking. `kv.presentationsBeforePaywall` counts up while the entitlement is `none`; at `freePresentationLimit` → `/paywall`, once per session, `beacon paywall_shown`. Beacons `first_review`, `reviews_10`, `reviews_100` on crossing. «پایان» → `/session/summary`. |
-| `/session/summary` | End of session `[live]` | Presentations, accuracy, conquered today (from `stores/session`), streak (from `engine.streak`); «ادامه» or «خانه». |
+| `/review` **[live]** | Card | Front: word, exam badge («۱ بار در کنکور، سال ۱۴۰۲»), tap to reveal. Back: translations + one sentence (the exam stem for answer-words, else the authored example); «بیشتر» expands definition, other senses, confusables, exam history, and «راهنمای یادگیری» is its own collapsed disclosure. Buttons: «بلد نبودم» / «بلد بودم»; overflow (⋯): «این را بلدم» (know), «این کلمه اشکال دارد» (flag sheet with 3 reasons → `outbox` `flag`). Feedback: box change and «دفعهٔ بعد: ۲ روز دیگر», ~900 ms or a tap. Goal reached → congratulation sheet, once per Tehran day (`kv.goalSheetShownDay`), never blocking. `kv.presentationsBeforePaywall` counts up while the entitlement is `none`; at `freePresentationLimit` → `/paywall`, once per session, `beacon paywall_shown`. Beacons `first_review`, `reviews_10`, `reviews_100` on crossing. Once, after 50 presentations on an anonymous install, «ذخیرهٔ پیشرفت با شمارهٔ موبایل» (§7.4) → `/login` or «بعداً». «پایان» → `/session/summary`. |
+| `/session/summary` | End of session `[live]` | Presentations, accuracy, conquered today (from `stores/session`), streak (from `engine.streak`); «ادامه» or «خانه». Mounting it is the `session-end` backup trigger (§7.4). |
 | `/boxes` | Leitner boxes `[live]` | Five columns with counts (`boxCounts`) plus «دیده‌نشده»; tap a box → inline list of words in it with next-due relative time (`ui/relative-time.ts`); tap a word → `/word/:id`. Bottom nav. |
 | `/word/:id` | Word detail `[live]` | `screens/word/WordDetail.tsx`: every sense, confusables, exam history, a review timeline (one dot per event, grade 1 filled), «این را بلدم», a flag sheet (3 reasons → `outbox` kind `flag`). |
 | `/progress` | Progress `[live]` | Percent with the one-sentence rule («هر بار که یک کلمه در کنکور آمده، یک امتیاز»), conquered/total, a hand-rolled SVG 30-day bar chart (`engine/chart-data.ts`, pure), pace estimate vs exam date with a goal nudge when `verdict === 'behind'`. Bottom nav. |
 | `/paywall` | Paywall | The pace argument, what is included, price with strike-through, «خرید» → login if anonymous → `/checkout`. «بعداً» returns to study (early-pool cards keep the app usable). **Placeholder until Phase 5:** the argument and «بعداً» are live; the price and «خرید» arrive with payment. |
-| `/login` **[live]** | Phone + OTP — **online** | `screens/login/machine.ts` (pure, total, unit-tested): `enterPhone → sending → enterCode → verifying → done`; errors: `rateLimited` (shows retry-after in minutes; retry or change number), `wrongCode` (`wrong` with attempts left, or `expired` / `locked` → resend), `networkError` (retries whichever request failed; offline shows a Persian explanation, never a crash). `flow.ts` performs the two requests with injected deps and never throws. Explains why the number is needed (backup, restore, purchase). The phone is sent as typed — the server normalises it; the code accepts Persian digits. On success: `stores/auth.ts` `signIn` writes `userId` + phone + token to `kv.auth`, then `sync/login-merge.ts` `runLoginMerge(userId)` — **a no-op until ticket 03**, the one call site the merge plugs into. Then home if a profile exists, else `/onboarding` (`destinationAfterLogin`). |
+| `/login` **[live]** | Phone + OTP — **online** | `screens/login/machine.ts` (pure, total, unit-tested): `enterPhone → sending → enterCode → verifying → done`; errors: `rateLimited` (shows retry-after in minutes; retry or change number), `wrongCode` (`wrong` with attempts left, or `expired` / `locked` → resend), `networkError` (retries whichever request failed; offline shows a Persian explanation, never a crash). `flow.ts` performs the two requests with injected deps and never throws. Explains why the number is needed (backup, restore, purchase). The phone is sent as typed — the server normalises it; the code accepts Persian digits. On success: `stores/auth.ts` `signIn` writes `userId` + phone + token to `kv.auth`, then `sync/login-merge.ts` `runLoginMerge(userId)` — the login merge of §7.4 (re-queue every local event, reconcile the profile, fire a `login` backup run without awaiting it). Then home if a profile exists, else `/onboarding` (`destinationAfterLogin`). |
 | `/checkout` | Price, discount code — **online** | `quote` on code entry; «پرداخت» → `pay/request` → redirect to Zarinpal. |
 | `/purchase/result` | Callback landing — **online** | `?status=ok|failed`; on ok: fetch `/api/me`, cache entitlement, start download, show progress; on failed: reason + retry. If a `pendingPayment` exists on next launch, ask `/api/pay/status/:id` before assuming failure. |
-| `/settings` | Settings `[live]`* | Account (phone or «ورود» → `/login`), goal (minutes → `goalFromMinutes`), exam date (Jalali text input via `date-fns-jalali`), field (`content/field-codes.json`, named codes only), theme, backup row + manual button (calls `sync/backup.ts`'s `run()`), download row (state only), «نصب برنامه» (opens the install sheet — the install paragraph below), «گزارش مشکل» → `reportError('user_report', …)`, about + version + support link. *Local parts are fully wired; account/backup/download show live store state but `run()` is still a stub until Phase 4/5. |
+| `/settings` | Settings `[live]`* | Account (phone, or «ذخیرهٔ پیشرفت با شمارهٔ موبایل» → `/login`), goal (minutes → `goalFromMinutes`), exam date (Jalali text input via `date-fns-jalali`), field (`content/field-codes.json`, named codes only), theme, backup row (status, last backup time; anonymous: «پیشرفت فقط روی همین دستگاه ذخیره شده است.») + manual button (`requestBackup('manual')`, §7.4), download row (state only), «نصب برنامه» (opens the install sheet — the install paragraph below), «گزارش مشکل» → `reportError('user_report', …)`, about + version + support link. *Local parts and backup are fully wired; the account row's logged-out button is «ذخیرهٔ پیشرفت با شمارهٔ موبایل» → `/login`; download shows live store state but its `run()` is a stub until Phase 5. |
 | `/season` | Season summary `[live]` | Shown once when the exam date passes (`engine/season.ts`, pure): conquered, days studied, presentations; «تاریخ جدید» → `/settings`. |
 
 Install prompt **[live]**: on Android Chrome, `beforeinstallprompt` is captured (`pwa/install.ts`,
@@ -662,7 +696,8 @@ a phone number alone. `app_config` is seeded by the same migration with 450000 /
 
 Every route is registered through `lib/route.js` → `withRoute(name, handler, opts)`, which
 authenticates (`opts.auth` is `none` / `user` / `superuser` / `optional`), validates the body
-against `opts.schema`, caps it at 32 KB, catches everything, logs one structured record (§10.2)
+against `opts.schema`, caps it at 32 KB (`opts.maxBodyBytes` raises it for one route:
+`sync/push` takes 256 KB, what 500 events cost), catches everything, logs one structured record (§10.2)
 and answers `{ error: { code, message } }` with a stable `code` — one of `BAD_INPUT`,
 `UNAUTHORIZED`, `FORBIDDEN`, `NOT_FOUND`, `RATE_LIMITED`, `INTERNAL`, and for OTP
 `PHONE_INVALID`, `OTP_WRONG`, `OTP_EXPIRED`, `OTP_LOCKED`, `SMS_FAILED` (502),
@@ -679,8 +714,8 @@ PocketBase bearer token. Because PocketBase serializes each handler into its own
 | `POST /api/otp/verify` | none | `{phone, code}` (code 5–6 digits) → `{token, record}`, the shape of PocketBase's auth response, built by the route with `record.newAuthToken()` (365 days). Only the latest code for the phone counts. Each try spends an attempt atomically before the compare (constant-time); a wrong code → `OTP_WRONG` + `attemptsLeft`; after 5 → `OTP_LOCKED`, even for the right code; expired, used or never requested → `OTP_EXPIRED`. A used code is burnt, not deleted, so it still counts toward the rate limit. Finds or creates the user by phone. | `[live]` |
 | `GET /api/me` | user | `{user, entitlement, profileUpdatedAt}`; also refreshes `lastSeenAt`. | `[live]` |
 | `PATCH /api/me/profile` | user | `{profile}` → stored if `updatedAt` is newer. Equal is not newer. | `[live]` |
-| `POST /api/sync/push` | user | `{events: ReviewEvent[]}` (≤ 500) → `{accepted, duplicates}`. Insert-ignore by id; `user` set from auth, never from the body. | `[planned]` |
-| `GET /api/sync/pull?since=&limit=` | user | `{events, cursor, more}`. Cursor = `created` + id. | `[planned]` |
+| `POST /api/sync/push` | user | `{events: ReviewEvent[]}` (≤ 500, else `BAD_INPUT`) → `{accepted, duplicates}` (`sync.pb.js`, `lib/sync.js`). `INSERT OR IGNORE` by id in one transaction, so a replayed or overlapping batch stores each event once and never edits the first copy. `user` comes from the token; a `user` in the body or on an event is dropped. Each event is checked (lowercase UUID id, `itemId` 1–64 chars, `at` a non-negative integer, `kind` `review`/`know`, `grade` 0/1, `device` ≤ 64 chars); **one malformed event rejects the whole batch** with `BAD_INPUT` naming `events[i]`, and nothing of it is stored. An `at` more than a year from the server clock is stored as sent and logged once per push (`flag: at_out_of_range`). An id that already belongs to another user is left untouched, counted in `duplicates`, and logged (`flag: id_conflict`). | `[live]` |
+| `GET /api/sync/pull?since=&limit=` | user | `{events, cursor, more}`, only the caller's events, ordered by `(created, id)`. `limit` 1–1000, default 500. `cursor` is `"<created>|<id>"` of the last event returned — opaque to the client, which passes it back as `since`; an empty page returns the `since` it was given, a fresh account `''`. A malformed `since` or `limit` → `BAD_INPUT`. Every push stamps all its rows with one `created` strictly greater than any this user already has (`max(now, previous + 1 ms)`, inside the write transaction), so an event that becomes visible later can never sort behind a cursor already handed out — even across two pushes in the same millisecond or a server clock step (how-why §5.8). | `[live]` |
 | `GET /api/content/manifest` | none | `{free: {version, hash, bytes}, paid: {version, hash, bytes}}`. | `[planned]` |
 | `GET /api/content/paid` | user + entitled | The file, with `Range` support. 20 per user per day. | `[planned]` |
 | `POST /api/pay/quote` | user | `{code?}` → `{listPrice, salePrice, discountAmount, payable, codeStatus: 'ok'|'invalid'|'expired'|'exhausted'|'used'}`. | `[planned]` |
@@ -1004,13 +1039,21 @@ produces a schedule where a word can be conquered in exactly 7 days but the medi
 ### 16.2 `apps/web`
 
 - Unit: state machines (`backup`, `download`) with a fake API and fake clock — every state and
-  every transition, including interrupted downloads and 429s.
+  every transition, including interrupted downloads and 429s. Backup (`sync/backup.test.ts`,
+  `login-merge.test.ts`): the full table, the ladder climbing through real retries, 429 with
+  `retryAfter`, offline, 401, a failure mid-push, a crash between push and mark (the server keeps
+  one copy — asserted), a crash between a pulled page and its cursor, a user change mid-run,
+  one-run-at-a-time under a burst of triggers, the outbox rules, the per-user cursor.
 - E2E (Playwright, Android-sized viewport, against a real PocketBase started by the test runner
   — `playwright.config.ts`'s second `webServer`, `server/scripts/e2e.mjs`, `127.0.0.1:8091`, a
   throwaway `pb_data`, `SMS_PROVIDER=mock` so the code is `123456` — reached through
   `vite preview`'s `/api` proxy, same-origin as behind Caddy; and a Zarinpal mock route). Built
   so far: `login.spec.ts` (mock-code login → home, `kv.auth` survives a reload and the token
-  answers `/api/me`; a wrong code shows the tries left; offline explains itself). The target: onboarding → 10 reviews → **offline**
+  answers `/api/me`; a wrong code shows the tries left; offline explains itself) and
+  `sync.spec.ts` (study 10 anonymously → log in → the backup leaves nothing unsynced and the
+  server holds 10 → a new browser context, i.e. a fresh device, lands on onboarding → log in with
+  the same phone → the 10 events are back in IndexedDB and `/boxes` shows the same counts, also
+  after a reload). The target: onboarding → 10 reviews → **offline**
   (`context.setOffline(true)`) → 10 more reviews → back online → backup happens → paywall at the
   limit → login with the console OTP → checkout with a discount code → mock gateway → result →
   paid download → offline → study from the paid package → reload → state intact. Second spec:
@@ -1033,8 +1076,14 @@ console happy path, hashing at rest, single use, same user on a second login, 5 
 locked, expiry, both rate limits with `retryAfter` and `Retry-After`, phone normalisation, the
 purge cron, `mock` accepting `123456` only, an unknown provider and Kavenegar without a key.
 The harness takes env overrides (`startServer({env})`) and exposes the process `output()`, which
-is where the console provider's code is read from. Still to cover as the routes land: push
-idempotency, pull paging, content gate refusing an unentitled user,
+is where the console provider's code is read from. Sync (`sync.test.ts`): push idempotency (same batch twice, an overlapping retry, a tampered
+replay keeps the first copy), 500 accepted and 501 rejected with nothing stored, every malformed
+field rejecting the whole batch, the out-of-range `at` log flag, pull paging at seven page sizes
+across three pushes with no gap or duplicate, id order inside one push's shared `created`, push
+and pull interleaved fifteen times, two concurrent pushes, cross-user isolation (B cannot pull
+A's events, cannot overwrite them by id, a forged `user` is ignored, A's cursor opens nothing of
+B's), 401 without a token, 403 for a superuser, and the generic collection API still shut. Still
+to cover as the routes land: content gate refusing an unentitled user,
 quote/request for each `codeStatus`, callback with a wrong amount, callback replay,
 `reconcileUnverified`. The e2e job exercises every route end to end.
 
@@ -1089,5 +1138,11 @@ GitHub: `DEPLOY_HOST`, `DEPLOY_USER`, `DEPLOY_SSH_KEY`, `ANDROID_KEYSTORE_B64`,
   guaranteed by Apple. The audience is overwhelmingly Android; iOS is supported, not optimised.
 - Anonymous progress is not backed up until the user gives a phone number — a deliberate trade
   against asking for a number on first launch.
+- The **profile** is reconciled only at login (§7.4): a goal or exam date changed afterwards on
+  one device reaches another only at that device's next login. Events are always backed up.
+- The **outbox drains only inside a backup run**, which needs a logged-in user; an anonymous
+  install's flags, beacons and error reports stay queued. Ticket dev-server/04 flips
+  `OUTBOX_ROUTES_LIVE` and has to drain for anonymous installs too (the drain is already
+  separate from the progress push and never fails it).
 - Push notifications: none (see `wiki/web-push-in-iran.md`).
 - Real-exam mode, per-field views, Bazaar build, referral codes: after launch.

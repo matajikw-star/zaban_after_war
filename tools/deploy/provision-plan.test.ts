@@ -74,8 +74,11 @@ describe('buildProvisionPlan', () => {
     const log = find('record:')?.command ?? '';
     expect(log).toContain('abc1234 provision tester');
     expect(log).toContain('chown kl:kl /opt/kl/deploys.log');
-    // the date is read on the VPS, not here
-    expect(log).toContain('\\$(date -u');
+    // the date substitution is double-quoted, concatenated straight onto the single-quoted
+    // fields with no space, so a shell joins them into one word (dev-server/05 #1); the `\''`
+    // right before it is the whole-command shellQuote closing and reopening around that
+    // pre-existing quote — see plan.ts's logAppendRemoteCommand.
+    expect(log).toContain(`'\\''"$(date -u +%Y-%m-%dT%H:%M:%SZ)"`);
   });
 
   it('never starts PocketBase itself — the first deploy server does', () => {

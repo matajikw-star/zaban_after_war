@@ -148,12 +148,11 @@ export const strings = {
 
   word: {
     know: 'این را بلدم',
+    // The three reasons themselves are `screens/review/FlagSheet.tsx`'s `FLAG_REASONS` (codes with
+    // `review.flagTranslation` / `flagExample` / `flagHint` as labels) — one set, reused here
+    // rather than duplicated (ticket dev-web/07).
     flag: 'این کلمه اشکال دارد',
     flagTitle: 'دلیل مشکل چیست؟',
-    flagReasonWrongTranslation: 'ترجمه اشتباه است',
-    flagReasonBadExample: 'مثال نامربوط است',
-    flagReasonOther: 'مشکل دیگر',
-    flagSubmit: 'ارسال گزارش',
     flagSent: 'گزارش شما ثبت شد',
     historyTitle: 'تاریخچهٔ مرور',
     noHistory: 'هنوز مروری ثبت نشده',

@@ -209,10 +209,13 @@ export interface PayStatusResponse {
   readonly refId: string | null;
 }
 
+/** The `reason` enum of the `word_flags` collection (what.md §8.1, §8.2). */
+export type FlagReason = 'translation' | 'example' | 'hint';
+
 export interface FlagBody {
   readonly installId: string;
   readonly itemId: string;
-  readonly reason: string;
+  readonly reason: FlagReason;
   readonly appVersion: string;
   readonly at: number;
 }

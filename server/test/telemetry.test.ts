@@ -73,6 +73,23 @@ describe('POST /api/flags', () => {
     expect(list.body.items[0].user).toBe(user.id);
   });
 
+  it('accepts every reason code the client sends — both screens use the same three', async () => {
+    // `/review` and `/word/:id` both build this body through `engine/flag-body.ts`'s
+    // `buildFlagBody` (ticket dev-web/07); this is the full set `FLAG_REASONS` offers.
+    for (const reason of ['translation', 'example', 'hint']) {
+      const response = await server.api<any>('POST', '/api/flags', {
+        body: {
+          installId: installId(),
+          itemId: 'attribute',
+          reason,
+          appVersion: '0.1.0',
+          at: 1_700_000_000_000,
+        },
+      });
+      expect(response.status).toBe(200);
+    }
+  });
+
   it('rejects an unknown reason with BAD_INPUT', async () => {
     const id = installId();
     const response = await server.api<any>('POST', '/api/flags', {

@@ -8,7 +8,7 @@ commit. The reasoning behind any of it is not here: it is in `how-why.md` and in
 How to read the status marks: `[planned]` = specified, no code yet · `[building]` = a ticket is
 open · `[live]` = on `main` and deployed. A builder session flips the mark when it ships.
 
-Last full revision: 2026-09-17 (the development plan). Design system: decided 2026-09-18 — see §7.9.
+Last full revision: 2026-09-17 (the development plan). Design system: decided 2026-09-18, live on every screen 2026-09-24 — see §7.9.
 
 ---
 
@@ -640,7 +640,7 @@ browsers (Telegram, Instagram, Facebook) do not fire it — the app detects them
 shows «در Chrome باز کنید» with a copy-link button. iOS shows the Share → Add to Home Screen
 instruction. The landing page also offers the APK.
 
-### 7.9 Design system — **decided 2026-09-18** (ADR-0020)
+### 7.9 Design system [live] — decided 2026-09-18 (ADR-0020), applied to every screen 2026-09-24
 
 - **Components:** the shadcn/ui pattern — Radix primitives copied into `apps/web/src/ui/`,
   styled with Tailwind v4 utilities and the tokens below. No component library at runtime.
@@ -660,13 +660,39 @@ instruction. The landing page also offers the APK.
   `packages/design/fonts.css`. Latin (the English word on the card) uses the same face.
 - **Tokens:** `packages/design/tokens.css` defines every colour, radius, spacing and type step
   as CSS variables on `:root` and `[data-theme="dark"]`; Tailwind v4 reads them through
-  `@theme`. Motion 150–250 ms, `prefers-reduced-motion` respected.
+  `@theme`. Motion 150–250 ms, `prefers-reduced-motion` respected. Beyond the scale and the
+  semantic `--bg`/`--fg`/`--border` set: `--bg-muted` (inset panels, hover fills),
+  `--glass-bg`/`--glass-border` (the glass — a dark hairline on light, a lighter-than-ground fill
+  on dark so it never goes muddy), `--glass-bg-strong` (glass floating over content: sheets,
+  dialogs, menus), `--overlay` (the scrim), `--bg-glow` (a soft monochrome glow at the top of the
+  page for the glass to sit in). `--success` is green-700 and `--danger` red-600, both ≥ 4.5:1
+  against the white grading-button label.
+- **Glass is two utilities**, `glass` and `glass-strong` (`@utility` in `apps/web/src/index.css`):
+  every card, chip, bar, sheet, dialog and menu uses one of them, so the look is defined once.
+  Primitives in `apps/web/src/ui/`: `Button`, `Card`, `Chip`, `Dialog`, `Sheet`, `Disclosure`,
+  `Input`, `Select` (the native picker, chevron on the inline end), `Segmented` (one choice among
+  a few, as one pill — minutes per day, theme), `Tabs`, `Switch`, `Progress`. `ui/cn.ts` teaches
+  `tailwind-merge` the type scale; without it `text-h6` reads as a colour and a button loses its
+  text colour.
 - **Hints on the card** are collapsed by default behind «راهنمای یادگیری»; a word without a
   hint shows «راهنمای این کلمه به‌زودی اضافه می‌شود» inside the same disclosure.
 
 Fixed regardless of choice: mobile-first at 360–430 px, RTL, minimum tap target 44 px, Persian
 digits via `Intl.NumberFormat('fa-IR')`, no more than one primary action per screen, no
-decorative illustration on the review card.
+decorative illustration on the review card. Every Latin run (the word, a definition, an example)
+carries `dir="ltr"` and `lang="en"`. An error is said in words and an icon, never in red.
+
+**What holds the rules** (ticket dev-web/06): `apps/web/src/design-rules.test.ts`, part of
+`pnpm test`, fails on Persian text outside `strings.ts` (a comment may quote copy), on any
+Tailwind palette colour but `neutral` or an arbitrary colour in a class, and on
+`--success`/`--danger` outside the grading buttons. Each exception is a file in an allowlist with
+its reason — today `ui/format.ts` for the «٪» sign, and `ui/Button.tsx` and
+`screens/review/GradeBar.tsx` for the two accents. The visual record is
+`apps/web/e2e/design-screens.spec.ts`: every offline screen and state at 360 and 430 px in both
+themes, as PNGs in `apps/web/e2e/__screenshots__/`. It is a recording tool, not an assertion, and
+is skipped unless `KL_SCREENSHOTS=1` (fonts render differently per OS):
+`pnpm build && KL_SCREENSHOTS=1 pnpm e2e design-screens` (plus `KL_E2E_CHANNEL=msedge` where
+Playwright's Chromium cannot be downloaded); look at the images and commit them with the change.
 
 ---
 

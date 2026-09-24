@@ -62,6 +62,7 @@ describe('migrations', () => {
       'beacons',
       'client_errors',
       'app_config',
+      'content_downloads',
     ]) {
       expect(names, expected).toContain(expected);
     }
@@ -125,7 +126,14 @@ describe('migrations', () => {
     }
 
     // Nothing through the REST API at all.
-    for (const name of ['discount_codes', 'otp_codes', 'word_flags', 'beacons', 'client_errors']) {
+    for (const name of [
+      'discount_codes',
+      'otp_codes',
+      'word_flags',
+      'beacons',
+      'client_errors',
+      'content_downloads',
+    ]) {
       const c = await collection(name);
       expect(rules(c), name).toEqual([null, null, null, null, null]);
     }
@@ -143,6 +151,32 @@ describe('migrations', () => {
 
     const otp = await collection('otp_codes');
     expect(otp.indexes).toContain('CREATE INDEX `idx_otp_codes_phone` ON `otp_codes` (`phone`)');
+
+    const downloads = await collection('content_downloads');
+    expect(downloads.indexes).toContain(
+      'CREATE INDEX `idx_content_downloads_user_created` ON `content_downloads` (`user`, `created`)',
+    );
+  });
+
+  it('holds payment integrity in the schema (1759000000_payment.js)', async () => {
+    const payments = await collection('payments');
+    expect(fieldNames(payments)).toEqual(expect.arrayContaining(['failReason', 'expiresAt']));
+    // One payment per authority: the callback finds its payment by it.
+    expect(payments.indexes).toContain(
+      "CREATE UNIQUE INDEX `idx_payments_authority` ON `payments` (`authority`) WHERE `authority` != ''",
+    );
+
+    const entitlements = await collection('entitlements');
+    // One entitlement per user and product: the database's backstop for callback idempotency.
+    expect(entitlements.indexes).toContain(
+      'CREATE UNIQUE INDEX `idx_entitlements_user_product` ON `entitlements` (`user`, `product`)',
+    );
+    expect(entitlements.fields.find((f) => f.name === 'source')?.values).toEqual([
+      'zarinpal',
+      'manual',
+      'bazaar',
+      'discount',
+    ]);
   });
 
   it('seeds one app_config record', async () => {

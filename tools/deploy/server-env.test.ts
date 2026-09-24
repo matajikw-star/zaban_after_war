@@ -41,6 +41,8 @@ describe('parseServerSection', () => {
       'SMS_OTP_TEMPLATE',
       'ZARINPAL_MERCHANT_ID',
       'ZARINPAL_SANDBOX',
+      'ZARINPAL_PROVIDER',
+      'ZARINPAL_API_BASE',
       'ZARINPAL_CALLBACK_URL',
       'PUBLIC_APP_ORIGIN',
       'CONTENT_DIR',

@@ -14,3 +14,41 @@ cronAdd('otp_purge', '0 * * * *', () => {
     $app.logger().error('cron', 'job', 'otp_purge', 'err', String(err?.message || err));
   }
 });
+
+// Every 15 minutes: verify payments Zarinpal holds as paid but that never came back through the
+// callback — the user closed the browser during the redirect (lib/pay.js reconcileUnverified).
+// Makes no gateway call unless one of our own payments is still open. Not gated on mock SMS: it
+// only settles money already taken, for the account that paid it.
+cronAdd('reconcile_unverified', '*/15 * * * *', () => {
+  const pay = require(`${__hooks}/lib/pay.js`);
+  try {
+    const result = pay.reconcileUnverified($app, Date.now());
+    $app
+      .logger()
+      .info(
+        'cron',
+        'job',
+        'reconcile_unverified',
+        'checked',
+        result.checked,
+        'verified',
+        result.verified,
+        'skipped',
+        result.skipped,
+      );
+  } catch (err) {
+    $app.logger().error('cron', 'job', 'reconcile_unverified', 'err', String(err?.message || err));
+  }
+});
+
+// Every 5 minutes: a payment still pending past its expiresAt (created + 2 h) becomes `expired`.
+// A late callback for it still verifies — `expired` is not `failed`.
+cronAdd('expire_pending', '*/5 * * * *', () => {
+  const pay = require(`${__hooks}/lib/pay.js`);
+  try {
+    const expired = pay.expirePending($app, Date.now());
+    $app.logger().info('cron', 'job', 'expire_pending', 'expired', expired);
+  } catch (err) {
+    $app.logger().error('cron', 'job', 'expire_pending', 'err', String(err?.message || err));
+  }
+});

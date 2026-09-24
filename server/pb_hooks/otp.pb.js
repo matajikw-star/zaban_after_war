@@ -69,6 +69,7 @@ routerAdd('POST', '/api/otp/verify', (e) => {
   const { withRoute, AppError, CODES } = require(`${__hooks}/lib/route.js`);
   const { normalizeIranMobile, asciiDigits } = require(`${__hooks}/lib/phone.js`);
   const otp = require(`${__hooks}/lib/otp.js`);
+  const users = require(`${__hooks}/lib/users.js`);
 
   return withRoute(
     'otp.verify',
@@ -105,30 +106,8 @@ routerAdd('POST', '/api/otp/verify', (e) => {
 
       otp.burn(ctx.app, row.id, Date.now());
 
-      // Find or create. The unique index on `phone` settles a race between two first logins:
-      // the loser's save fails and it finds the winner's record.
-      let user = null;
-      try {
-        user = ctx.app.findFirstRecordByData('users', 'phone', phone);
-      } catch (_err) {
-        user = null;
-      }
-      if (!user) {
-        const created = new Record(ctx.app.findCollectionByNameOrId('users'));
-        created.set('phone', phone);
-        // An auth record must have a password; password auth is disabled, so nobody can use it.
-        created.setPassword($security.randomString(40));
-        try {
-          ctx.app.save(created);
-          user = created;
-        } catch (err) {
-          try {
-            user = ctx.app.findFirstRecordByData('users', 'phone', phone);
-          } catch (_err) {
-            throw err;
-          }
-        }
-      }
+      // Find or create (lib/users.js; the unique index on `phone` settles a first-login race).
+      const user = users.findOrCreateByPhone(ctx.app, phone).user;
 
       // Built here rather than with $apis.recordAuthResponse, which writes its own body and would
       // collide with withRoute's (how-why §5.7). Same {token, record} shape; the record marshals

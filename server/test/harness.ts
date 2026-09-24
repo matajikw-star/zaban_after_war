@@ -60,6 +60,11 @@ export interface Server {
 export interface StartOptions {
   /** Overrides for the child's environment, e.g. `{ SMS_PROVIDER: 'mock' }`. */
   readonly env?: Record<string, string>;
+  /**
+   * `--publicDir`, as the VPS runs it (systemd/kl-pocketbase.service): PocketBase then serves the
+   * directory on `GET /{path...}` with an index.html fallback. Unset = PocketBase's default.
+   */
+  readonly publicDir?: string;
 }
 
 function randomPort(): number {
@@ -99,6 +104,10 @@ export async function startServer(options: StartOptions = {}): Promise<Server> {
     SMS_API_KEY: 'test-key',
     ZARINPAL_MERCHANT_ID: 'test-merchant',
     ZARINPAL_SANDBOX: '1',
+    // Never the real Zarinpal from a test: a closed port unless the test starts
+    // test/zarinpal-stub.ts and overrides this with its URL.
+    ZARINPAL_API_BASE: 'http://127.0.0.1:1',
+    ZARINPAL_CALLBACK_URL: `${url}/api/pay/callback`,
     PUBLIC_APP_ORIGIN: url,
     BACKUP_S3_ENDPOINT: 'test',
     BACKUP_S3_KEY: 'test',
@@ -137,6 +146,7 @@ export async function startServer(options: StartOptions = {}): Promise<Server> {
       hooksDir,
       '--migrationsDir',
       migrationsDir,
+      ...(options.publicDir ? ['--publicDir', options.publicDir] : []),
     ],
     { env, stdio: ['ignore', 'pipe', 'pipe'] },
   );

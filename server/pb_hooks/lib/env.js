@@ -13,6 +13,7 @@ const DEFAULTS = {
   SMS_OTP_TEMPLATE: 'kl-otp',
   SMS_API_BASE: 'https://api.kavenegar.com',
   ZARINPAL_SANDBOX: '0',
+  ZARINPAL_PROVIDER: 'zarinpal',
   ZARINPAL_CALLBACK_URL: 'https://app.konkurleitner.com/api/pay/callback',
   PUBLIC_APP_ORIGIN: 'https://app.konkurleitner.com',
   CONTENT_DIR: '/opt/kl/content',
@@ -33,6 +34,7 @@ const REQUIRED = [
 const ENUMS = {
   SMS_PROVIDER: ['kavenegar', 'console', 'mock'],
   ZARINPAL_SANDBOX: ['0', '1'],
+  ZARINPAL_PROVIDER: ['zarinpal', 'mock'],
 };
 
 /** @returns {string} the environment value, the documented default, or ''. */
@@ -54,6 +56,25 @@ function bool(name) {
  */
 function isConsoleSms() {
   return get('SMS_PROVIDER') === 'console';
+}
+
+/**
+ * True when SMS_PROVIDER is `mock`: every phone signs in with 123456, so an account proves
+ * nothing and every payment route refuses (lib/pay.js, PAYMENT_DISABLED_MOCK_SMS).
+ */
+function isMockSms() {
+  return get('SMS_PROVIDER') === 'mock';
+}
+
+/**
+ * Zarinpal's origin. ZARINPAL_API_BASE wins when set (tests point it at a local stub, the way
+ * SMS_API_BASE works for Kavenegar); otherwise ZARINPAL_SANDBOX picks the sandbox or the live
+ * host. Never a default in DEFAULTS, because the right default depends on ZARINPAL_SANDBOX.
+ */
+function zarinpalBase() {
+  const explicit = $os.getenv('ZARINPAL_API_BASE');
+  if (explicit) return explicit.replace(/\/+$/, '');
+  return bool('ZARINPAL_SANDBOX') ? 'https://sandbox.zarinpal.com' : 'https://payment.zarinpal.com';
 }
 
 /**
@@ -92,6 +113,14 @@ function check(app) {
     problems.push('SMS_PROVIDER=mock on a production origin: every phone logs in with 123456');
   }
 
+  // The mock gateway grants an entitlement without taking money: CI and e2e only.
+  if (
+    get('ZARINPAL_PROVIDER') === 'mock' &&
+    get('PUBLIC_APP_ORIGIN').indexOf('konkurleitner.com') !== -1
+  ) {
+    problems.push('ZARINPAL_PROVIDER=mock on a production origin: purchases grant without payment');
+  }
+
   if (problems.length === 0) {
     app
       .logger()
@@ -105,4 +134,14 @@ function check(app) {
   return problems;
 }
 
-module.exports = { get, bool, isConsoleSms, check, DEFAULTS, REQUIRED, ENUMS };
+module.exports = {
+  get,
+  bool,
+  isConsoleSms,
+  isMockSms,
+  zarinpalBase,
+  check,
+  DEFAULTS,
+  REQUIRED,
+  ENUMS,
+};

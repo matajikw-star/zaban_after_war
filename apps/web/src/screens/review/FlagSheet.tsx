@@ -6,14 +6,18 @@
  * network from here — flagging a word offline has to work, and the drain of §7.4 owns the send.
  */
 
+import type { FlagReason } from '../../net/api.ts';
 import { strings } from '../../strings.ts';
 import { Button } from '../../ui/Button.tsx';
 import { SheetContent, SheetRoot } from '../../ui/Sheet.tsx';
 
-/** The `reason` enum of the `word_flags` collection. */
-export type FlagReason = 'translation' | 'example' | 'hint';
+export type { FlagReason };
 
-const REASONS: readonly { readonly reason: FlagReason; readonly label: string }[] = [
+/**
+ * The three reasons, codes with their Persian labels. The one set — `/word/:id` reuses it rather
+ * than inventing its own (ticket dev-web/07, `what.md` §7.8, §8.1 `word_flags`).
+ */
+export const FLAG_REASONS: readonly { readonly reason: FlagReason; readonly label: string }[] = [
   { reason: 'translation', label: strings.review.flagTranslation },
   { reason: 'example', label: strings.review.flagExample },
   { reason: 'hint', label: strings.review.flagHint },
@@ -30,7 +34,7 @@ export function FlagSheet({ open, onOpenChange, onFlag }: FlagSheetProps) {
     <SheetRoot open={open} onOpenChange={onOpenChange}>
       <SheetContent title={strings.review.flag} description={strings.review.flagQuestion}>
         <div className="flex flex-col gap-2">
-          {REASONS.map(({ reason, label }) => (
+          {FLAG_REASONS.map(({ reason, label }) => (
             <Button
               key={reason}
               variant="secondary"

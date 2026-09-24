@@ -14,23 +14,20 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { outboxEnqueue } from '../../db/repo.ts';
 import { now } from '../../engine/clock.ts';
+import { buildFlagBody } from '../../engine/flag-body.ts';
 import { cachedEvents } from '../../engine/fold-cache.ts';
 import { recordReview } from '../../engine/index.ts';
 import { useFold } from '../../engine/use-fold.ts';
 import { breadcrumb } from '../../log/breadcrumbs.ts';
+import { useAuthStore } from '../../stores/auth.ts';
 import { strings } from '../../strings.ts';
 import { Button } from '../../ui/Button.tsx';
 import { Card, CardBody, CardTitle } from '../../ui/Card.tsx';
 import { Disclosure } from '../../ui/Disclosure.tsx';
 import { faNumber, faYear } from '../../ui/format.ts';
 import { SheetClose, SheetContent, SheetRoot, SheetTrigger } from '../../ui/Sheet.tsx';
-import { BOTTOM_NAV_SPACER_CLASS } from '../layout/BottomNav.tsx';
-
-const FLAG_REASONS: readonly string[] = [
-  strings.word.flagReasonWrongTranslation,
-  strings.word.flagReasonBadExample,
-  strings.word.flagReasonOther,
-];
+import { APP_VERSION } from '../../version.ts';
+import { FLAG_REASONS } from '../review/FlagSheet.tsx';
 
 function ReviewTimeline({ itemId }: { readonly itemId: ItemId }) {
   useFold();
@@ -69,8 +66,13 @@ function ReviewTimeline({ itemId }: { readonly itemId: ItemId }) {
 function FlagSheet({ itemId }: { readonly itemId: ItemId }) {
   const [sent, setSent] = useState(false);
 
-  async function submit(reason: string): Promise<void> {
-    await outboxEnqueue('flag', { itemId, reason, at: now() });
+  async function submit(reason: (typeof FLAG_REASONS)[number]['reason']): Promise<void> {
+    const body = buildFlagBody(itemId, reason, {
+      installId: useAuthStore.getState().installId,
+      appVersion: APP_VERSION,
+      at: now(),
+    });
+    await outboxEnqueue('flag', body);
     breadcrumb('tap', 'word.flag', { itemId, reason });
     setSent(true);
   }
@@ -81,9 +83,9 @@ function FlagSheet({ itemId }: { readonly itemId: ItemId }) {
         <p className="text-body-sm text-[var(--fg-muted)]">{strings.word.flagSent}</p>
       ) : (
         <div className="flex flex-col gap-2">
-          {FLAG_REASONS.map((reason) => (
+          {FLAG_REASONS.map(({ reason, label }) => (
             <Button key={reason} variant="secondary" block onClick={() => void submit(reason)}>
-              {reason}
+              {label}
             </Button>
           ))}
         </div>
@@ -107,7 +109,7 @@ export function WordDetail({ card }: { readonly card: WordCard }) {
   }
 
   return (
-    <main className={`flex flex-1 flex-col gap-4 pt-2 ${BOTTOM_NAV_SPACER_CLASS}`}>
+    <main className="flex flex-1 flex-col gap-4 pt-2">
       <div className="flex items-center gap-2">
         <button
           type="button"

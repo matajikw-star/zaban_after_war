@@ -251,7 +251,10 @@ function installIdOf(e, body) {
  * @param {string}   name    the route's stable log name, e.g. 'me.profile'
  * @param {function} handler (ctx) => body — ctx is { e, app, auth, body, name, installId }
  * @param {object}   [opts]  { auth: 'none'|'user'|'superuser'|'optional', schema, status,
- *                            maxBodyBytes (default 32 KB) }
+ *                            maxBodyBytes (default 32 KB), guard }
+ *                           `guard` is a function called before anything else — before auth,
+ *                           before the body is read — that throws an AppError to refuse the
+ *                           request outright (the payment routes' mock-SMS gate, lib/pay.js).
  * @returns {function} a PocketBase route handler
  */
 function withRoute(name, handler, opts) {
@@ -278,6 +281,8 @@ function withRoute(name, handler, opts) {
       // The install id comes from the header first, so it is known even when the body is the
       // thing that is broken.
       installId = installIdOf(e, null);
+
+      if (options.guard) options.guard();
 
       const auth = requireAuth(e, mode);
       if (auth) userId = auth.id;
@@ -335,6 +340,17 @@ function withRoute(name, handler, opts) {
       return e.blob(status, payload.contentType, payload.bytes);
     }
 
+    // The payment callback answers a browser, not a fetch: a 302 to the result screen.
+    if (payload && payload.__redirect === true) {
+      return e.redirect(302, payload.url);
+    }
+
+    // A file from disk through Go's http.ServeContent (e.fileFS), which is what gives the paid
+    // package its Range / 206 / Content-Range / 416 handling without any parsing of ours.
+    if (payload && payload.__file === true) {
+      return e.fileFS(payload.fsys, payload.name);
+    }
+
     return e.json(status, payload);
   };
 }
@@ -342,6 +358,16 @@ function withRoute(name, handler, opts) {
 /** A handler returns this to answer with raw bytes instead of the JSON envelope. */
 function blobResponse(contentType, bytes) {
   return { __blob: true, contentType: contentType, bytes: bytes };
+}
+
+/** A handler returns this to answer with a 302 to `url` instead of the JSON envelope. */
+function redirectResponse(url) {
+  return { __redirect: true, url: url };
+}
+
+/** A handler returns this to serve `name` from the fs.FS `fsys` (Range-aware). */
+function fileResponse(fsys, name) {
+  return { __file: true, fsys: fsys, name: name };
 }
 
 /** One line per request. §10.2 fixes the attribute names; tools/logs reads them. */
@@ -374,6 +400,8 @@ function log(app, name, userId, installId, ms, status, code, errMessage, input) 
 module.exports = {
   withRoute,
   blobResponse,
+  redirectResponse,
+  fileResponse,
   // exported for the routes that need them and for the tests
   AppError,
   CODES,

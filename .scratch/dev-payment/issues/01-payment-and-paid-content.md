@@ -34,3 +34,73 @@ every payment route (`/api/pay/*`) and the paid-content download must refuse wit
 (e.g. `PAYMENT_DISABLED_MOCK_SMS`, 503) whenever `SMS_PROVIDER=mock`, and an API test must prove
 it. Payment goes live only after the owner's Kavenegar identity verification and a switch to
 `SMS_PROVIDER=kavenegar`.
+
+## Comments
+
+### 2026-09-24 — server half done on `feat/payment-server`; client half pending
+
+Status left at `ready-for-agent`: the ticket resolves only when the client half and the
+Playwright journey land. The contract is `docs/spec/what.md` §8.2 (rows marked `[live]`), §8.3
+and §7.5/§7.6; the decisions are `docs/spec/how-why.md` §5.14.
+
+Per route (`server/pb_hooks/pay.pb.js`, `content.pb.js`, rules in `lib/pay.js`, gateway in
+`lib/zarinpal.js`):
+
+- **Gate.** While `SMS_PROVIDER=mock` every `/api/pay/*` route and `GET /api/content/paid` answer
+  503 `PAYMENT_DISABLED_MOCK_SMS` before auth, body, writes or gateway calls
+  (`test/payment-gate.test.ts`). `manifest`, `me`, `admin/grant` are not gated.
+- **`POST /api/pay/quote`** `{code?}` → `{listPrice, salePrice, discountAmount, payable,
+  codeStatus, code}`; `codeStatus` ∈ `none | ok | invalid | expired | exhausted | used |
+  already-entitled`. Every status and the §8.3 order are tested.
+- **`POST /api/pay/request`** `{code?}` → `{paymentId, gatewayUrl}` or `{paymentId, granted: true}`
+  (100 % code, no gateway call, entitlement `source: discount`). Errors `ALREADY_ENTITLED` 409,
+  `DISCOUNT_REJECTED` 400 + `codeStatus`, `GATEWAY_FAILED` 502.
+- **`GET /api/pay/callback`** → 302 to `/purchase/result?status=ok&ref=&paymentId=` ·
+  `status=failed&reason=cancelled|amount_mismatch|not_paid|unknown_payment&paymentId=` ·
+  `status=pending&paymentId=` (gateway unreachable; poll status). Replay, 4 concurrent callbacks,
+  wrong amount, cancelled, not paid all tested.
+- **`GET /api/pay/status/:id`** → `{paymentId, status, refId, failReason, entitled}`; another
+  user's id is `NOT_FOUND`.
+- **`POST /api/admin/grant`** (superuser) `{phone, note?}` → `{userId, entitlementId, created}`,
+  idempotent.
+- **`GET /api/content/manifest`** → `{free, paid}`; **`GET /api/content/paid`** → 200 / 206 with
+  `Content-Range` / 416, `ETag` = paid hash (send `If-Range`), `X-Content-Version`,
+  `NOT_ENTITLED` 403, 21st fetch in 24 h → 429 `RATE_LIMITED` + `retryAfter`.
+- **Crons** `reconcile_unverified` (15 min) and `expire_pending` (5 min; pending past
+  `expiresAt` = created + 2 h), run in tests via `POST /api/crons/<id>`.
+- **Schema** `pb_migrations/1759000000_payment.js`: `payments.failReason/expiresAt`, unique
+  authority, unique (`user`, `product`) on entitlements, `discount` source, `content_downloads`.
+- **Env** `ZARINPAL_PROVIDER` (`zarinpal`|`mock`) and `ZARINPAL_API_BASE` (tests only), in
+  `.env.example` and §18.
+
+For the client agent — things the e2e journey will need that are **not** done here:
+
+1. `server/scripts/e2e.mjs` runs `SMS_PROVIDER=mock`, so every payment route is gated there. The
+   journey needs that server on `SMS_PROVIDER=console` (the code is printed to stdout as
+   `sms.console phone=… code=NNNNN`, which is how `server/test/otp.test.ts` reads it) — or a
+   second PocketBase for the payment spec. Changing it is a client-half decision; the existing
+   e2e specs log in with `123456` today.
+2. The same script sets neither `ZARINPAL_PROVIDER=mock`, `ZARINPAL_CALLBACK_URL` (the mock gateway
+   redirects to it; it must be the e2e server's `/api/pay/callback`) nor `CONTENT_DIR` (should be
+   `server/content`, which `pnpm content:build` fills); `PUBLIC_APP_ORIGIN` is already the preview
+   origin, which is where the callback's 302 lands.
+3. Mock-gateway `refId`s look like `MOCK-0123456789`; the real ones are numbers.
+
+Still open for the owner: the real 1,000-toman verification (§8.3), which is also where the
+Zarinpal v4 field names in `lib/zarinpal.js` get confirmed (how-why §5.14 lists them).
+
+### 2026-09-24 — lead review: two fixes on `feat/payment-server`
+
+1. **A 100 % code's last use could go to every racer.** The free-grant path checked `maxUses`
+   only in `quote()`, outside the transaction, then counted the use unconditionally: eight users
+   racing for a `maxUses: 1` free code got 4–7 packages in the new test (red before the fix, three
+   runs). Now the grant claims the use first inside its transaction
+   (`… WHERE code = ? AND usedCount < maxUses`); a lost claim saves nothing and answers
+   `DISCOUNT_REJECTED` + `codeStatus: exhausted`. The paid path still counts unconditionally, on
+   purpose (the user has paid; the overrun is logged as `pay.code_over_limit`).
+2. **Unknown `/api/*` paths answered `200 text/html`** on staging (pb_public's index fallback).
+   A middleware in `core.pb.js` now answers the JSON envelope, 404 `NOT_FOUND`, for any method, but
+   only when the router's matched pattern is not under `/api` — so no real route is shadowed. A
+   method-less `/api/{path...}` route panics PocketBase 0.40.2 at startup (tried). Client note:
+   a 404 `NOT_FOUND` from a route the client expects to exist means the server is older than the
+   client.

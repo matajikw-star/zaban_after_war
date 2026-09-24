@@ -51,3 +51,95 @@ export async function seedProfile(
     });
   }, profile);
 }
+
+/**
+ * Writes one `kv` record — the theme choice (`kv.theme`, the value the settings screen writes),
+ * a once-only flag, anything keyed. Same contract as `seedProfile`: the database must exist, and
+ * the page must navigate afterwards for the stores to read it.
+ */
+export async function seedKv(page: Page, key: string, value: unknown): Promise<void> {
+  await page.evaluate(
+    async (record) => {
+      await new Promise<void>((resolve, reject) => {
+        const open = indexedDB.open('konkur-leitner');
+        open.onerror = () => reject(open.error);
+        open.onsuccess = () => {
+          const db = open.result;
+          const tx = db.transaction('kv', 'readwrite');
+          tx.objectStore('kv').put(record);
+          tx.oncomplete = () => {
+            db.close();
+            resolve();
+          };
+          tx.onerror = () => reject(tx.error);
+        };
+      });
+    },
+    { key, value },
+  );
+}
+
+/**
+ * Seeds `kv.profile` and ten `ReviewEvent`s straight into IndexedDB (`db/dexie.ts`: the database
+ * is `konkur-leitner`, version 1, tables `events`/`outbox`/`packages`/`kv`); the caller then navigates so
+ * `main.tsx`'s bootstrap folds them for real. Real word ids from the built `free.json` package
+ * (`perilous`, `derive`) so the content-dependent screens have something to show.
+ */
+export async function seedProgress(page: Page): Promise<void> {
+  await page.evaluate(async () => {
+    const DB_NAME = 'konkur-leitner';
+    const now = Date.now();
+    const DAY_MS = 24 * 60 * 60 * 1000;
+
+    const profile = {
+      minutesPerDay: 10,
+      dailyGoal: 50,
+      examDate: null,
+      fieldCode: null,
+      updatedAt: now,
+    };
+
+    const events: Array<{
+      id: string;
+      itemId: string;
+      at: number;
+      kind: 'review';
+      grade: 0 | 1;
+      device: string;
+      synced: 0;
+    }> = [];
+    let n = 0;
+    for (const itemId of ['perilous', 'derive']) {
+      for (let i = 0; i < 5; i += 1) {
+        n += 1;
+        events.push({
+          id: `seed-${itemId}-${i}`,
+          itemId,
+          // Spread across the last few days, oldest to newest, so the 30-day chart has more than
+          // one bar lit and no event lands in the future.
+          at: now - (10 - n) * (DAY_MS / 3),
+          kind: 'review',
+          grade: i === 0 ? 0 : 1,
+          device: 'e2e-device',
+          synced: 0,
+        });
+      }
+    }
+
+    const db = await new Promise<IDBDatabase>((resolve, reject) => {
+      const request = indexedDB.open(DB_NAME);
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error);
+    });
+
+    await new Promise<void>((resolve, reject) => {
+      const tx = db.transaction(['kv', 'events'], 'readwrite');
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(tx.error);
+      tx.objectStore('kv').put({ key: 'profile', value: profile });
+      for (const event of events) tx.objectStore('events').put(event);
+    });
+
+    db.close();
+  });
+}

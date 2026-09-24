@@ -15,7 +15,19 @@ const OFFLINE_REASONS: ReadonlySet<string> = new Set([
   'DOWNLOAD_STALLED',
 ]);
 
-export function downloadStatusText(state: DownloadState, entitled: boolean): string {
+/**
+ * `paidOnDevice`: the content store has the paid package loaded for this account. A failure then
+ * is only a failed update check — on a filtered network `navigator.onLine` stays true, so the
+ * runner tries and fails often — and every word the user studies is already here. Saying
+ * «در انتظار اینترنت» there would read as "your purchase is missing". The failure is still on
+ * the ladder and still reported (§7.5); only the words change.
+ */
+export function downloadStatusText(
+  state: DownloadState,
+  entitled: boolean,
+  paidOnDevice = false,
+): string {
+  if (state.name === 'error' && paidOnDevice) return strings.download.installed;
   switch (state.name) {
     case 'none':
       return entitled ? strings.download.waiting : strings.download.none;
@@ -38,9 +50,10 @@ export function downloadStatusText(state: DownloadState, entitled: boolean): str
 }
 
 /** A retry button makes sense: failed, and not something a tap cannot hurry (a 429, the gate). */
-export function downloadCanRetry(state: DownloadState): boolean {
+export function downloadCanRetry(state: DownloadState, paidOnDevice = false): boolean {
   return (
     state.name === 'error' &&
+    !paidOnDevice &&
     state.reason !== 'RATE_LIMITED' &&
     state.reason !== 'SERVER_PAYMENT_DISABLED_MOCK_SMS'
   );

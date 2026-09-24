@@ -14,6 +14,7 @@ import { useNavigate, useSearchParams } from 'react-router';
 import { queueBeacon } from '../../log/beacon.ts';
 import { reportError } from '../../log/errors.ts';
 import { useAuthStore } from '../../stores/auth.ts';
+import { useContentStore } from '../../stores/content.ts';
 import { useSyncStore } from '../../stores/sync.ts';
 import { strings } from '../../strings.ts';
 import { requestDownload } from '../../sync/download-live.ts';
@@ -92,6 +93,8 @@ export function PurchaseResult() {
     }
   }, [state, params, dispatch]);
 
+  // The paid words are loaded for this account: a failed update check must not read as missing.
+  const paidOnDevice = useContentStore((s) => s.active === 'paid');
   const percent = downloadPercent(download);
   const here = `/purchase/result?${params.toString()}`;
 
@@ -127,12 +130,12 @@ export function PurchaseResult() {
               data-testid="purchase-download-status"
               data-state={download.name}
             >
-              {downloadStatusText(download, entitled)}
+              {downloadStatusText(download, entitled, paidOnDevice)}
             </p>
             {percent !== null ? (
               <ProgressBar value={percent} ariaLabel={strings.download.progressLabel} />
             ) : null}
-            {downloadCanRetry(download) ? (
+            {downloadCanRetry(download, paidOnDevice) ? (
               <Button
                 variant="secondary"
                 size="sm"

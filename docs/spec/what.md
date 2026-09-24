@@ -629,6 +629,10 @@ designed. A 401 or 403 waits for a login, a fresh entitlement or a tap rather th
 waits out `retryAfter` and nothing jumps it. The purchase result and settings show the state
 through `ui/download-status.ts` («دانلود واژه‌ها ۶۳٪ — با اینترنت ادامه پیدا می‌کند», a progress
 bar, a retry where a tap can help). Study continues on whatever package is active meanwhile.
+While the paid package is loaded for this account, an `error` (a failed update check — frequent
+on a filtered network, where `navigator.onLine` stays true) reads «همهٔ واژه‌ها روی این دستگاه
+آماده‌اند» with no retry button; the machine still climbs its ladder and reports as above, and
+`data-state` still says `error`. Decided 2026-09-25 from the purchase journey's finding.
 
 The server half is `[live]` (§8.2 `content/manifest`, `content/paid`): a resume gets 206 with
 `Content-Range`; `ETag` is the manifest's paid hash, so sending `If-Range` makes a resume across a

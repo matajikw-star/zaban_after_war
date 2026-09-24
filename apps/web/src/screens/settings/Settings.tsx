@@ -18,6 +18,7 @@ import { useNavigate } from 'react-router';
 import fieldCodesJson from '../../../../../content/field-codes.json';
 import { reportError } from '../../log/errors.ts';
 import { useAuthStore } from '../../stores/auth.ts';
+import { useContentStore } from '../../stores/content.ts';
 import { usePwaStore } from '../../stores/pwa.ts';
 import { type ThemeChoice, useSettingsStore } from '../../stores/settings.ts';
 import { useSyncStore } from '../../stores/sync.ts';
@@ -147,6 +148,8 @@ export function Settings() {
     if (isValid(parsed)) void setProfile({ examDate: parsed.getTime() });
   }
 
+  // The paid words are loaded for this account: a failed update check must not read as missing.
+  const paidOnDevice = useContentStore((state) => state.active === 'paid');
   const percent = downloadPercent(download);
 
   return (
@@ -271,12 +274,12 @@ export function Settings() {
           data-testid="settings-download-status"
           data-state={download.name}
         >
-          {downloadStatusText(download, entitled)}
+          {downloadStatusText(download, entitled, paidOnDevice)}
         </p>
         {percent !== null ? (
           <ProgressBar value={percent} ariaLabel={strings.download.progressLabel} />
         ) : null}
-        {downloadCanRetry(download) ? (
+        {downloadCanRetry(download, paidOnDevice) ? (
           <Button
             variant="secondary"
             size="sm"

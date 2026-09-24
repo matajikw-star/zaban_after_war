@@ -54,3 +54,19 @@ describe('downloadCanRetry', () => {
     expect(downloadCanRetry({ name: 'installed', version: 'v' })).toBe(false);
   });
 });
+
+describe('a failed update check while the paid package is on the device', () => {
+  // A filtered or captive network keeps navigator.onLine true, so the runner checks the manifest,
+  // fails, and the machine sits in `error`. The words the user studies are all there: say so.
+  it('says the words are ready, whatever the cause, and offers no retry', () => {
+    for (const reason of ['NETWORK', 'DOWNLOAD_STALLED', 'HASH_MISMATCH', 'STORAGE_FULL']) {
+      expect(downloadStatusText(error(reason), true, true)).toBe(strings.download.installed);
+      expect(downloadCanRetry(error(reason), true)).toBe(false);
+    }
+  });
+
+  it('still names the failure when no paid package is on the device', () => {
+    expect(downloadStatusText(error('NETWORK'), true, false)).toBe(strings.download.errorOffline);
+    expect(downloadCanRetry(error('NETWORK'), false)).toBe(true);
+  });
+});

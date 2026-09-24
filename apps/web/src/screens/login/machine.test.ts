@@ -10,6 +10,7 @@ import {
   type LoginEvent,
   type LoginFailure,
   type LoginState,
+  loginPathFor,
   normalizeCodeInput,
   transition,
 } from './machine.ts';
@@ -244,5 +245,32 @@ describe('input helpers', () => {
   it('destinationAfterLogin: home with a profile, onboarding without', () => {
     expect(destinationAfterLogin(true)).toBe('/');
     expect(destinationAfterLogin(false)).toBe('/onboarding');
+  });
+
+  it('destinationAfterLogin: back to checkout or the purchase result when asked, nowhere else', () => {
+    expect(destinationAfterLogin(true, '/checkout')).toBe('/checkout');
+    expect(destinationAfterLogin(false, '/checkout')).toBe('/checkout');
+    expect(destinationAfterLogin(true, '/purchase/result?status=ok&paymentId=abc')).toBe(
+      '/purchase/result?status=ok&paymentId=abc',
+    );
+    for (const bad of [
+      null,
+      '',
+      'checkout',
+      '//evil.example/checkout',
+      'https://evil.example/checkout',
+      '/settings',
+      '/checkout-x',
+    ]) {
+      expect(destinationAfterLogin(true, bad)).toBe('/');
+    }
+  });
+
+  it('loginPathFor encodes the way back', () => {
+    const path = loginPathFor('/purchase/result?status=ok&paymentId=abc');
+    expect(path.startsWith('/login?next=')).toBe(true);
+    expect(new URLSearchParams(path.split('?')[1]).get('next')).toBe(
+      '/purchase/result?status=ok&paymentId=abc',
+    );
   });
 });

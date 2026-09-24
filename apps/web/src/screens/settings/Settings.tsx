@@ -3,8 +3,9 @@
  *
  * Local parts are fully wired: goal, exam date, field, theme, the diagnostic report. The backup
  * row reads `stores/sync.ts` and its button asks `sync/backup-live.ts` for a `manual` run
- * (§7.4). The download row shows the store's state only; `sync/download.ts`'s `run()` is a stub
- * until Phase 5 (§7.5).
+ * (§7.4). The download row shows the cached entitlement (§7.6) and the download machine's
+ * state and progress (§7.5); a failure a tap can help offers a retry (`requestDownload('manual')`),
+ * and a free user gets the way to the paywall.
  */
 
 import { goalFromMinutes, ONBOARDING_MINUTES } from '@kl/core';
@@ -23,10 +24,13 @@ import { useSyncStore } from '../../stores/sync.ts';
 import { strings } from '../../strings.ts';
 import type { BackupState } from '../../sync/backup.ts';
 import { requestBackup } from '../../sync/backup-live.ts';
+import { requestDownload } from '../../sync/download-live.ts';
 import { Button } from '../../ui/Button.tsx';
 import { Card, CardTitle } from '../../ui/Card.tsx';
-import { faNumber, faPercent } from '../../ui/format.ts';
+import { downloadCanRetry, downloadPercent, downloadStatusText } from '../../ui/download-status.ts';
+import { faNumber } from '../../ui/format.ts';
 import { Input } from '../../ui/Input.tsx';
+import { ProgressBar } from '../../ui/Progress.tsx';
 import { Segmented } from '../../ui/Segmented.tsx';
 import { Select } from '../../ui/Select.tsx';
 import { SheetClose, SheetContent, SheetRoot, SheetTrigger } from '../../ui/Sheet.tsx';
@@ -65,23 +69,6 @@ function backupStatusText(state: BackupState, offlineWithPending: boolean): stri
         : strings.settings.backupError;
     default:
       return offlineWithPending ? strings.settings.backupError : strings.settings.backupIdle;
-  }
-}
-
-function downloadStatusText(name: string, percent: number | null): string {
-  switch (name) {
-    case 'checking':
-      return strings.settings.downloadChecking;
-    case 'downloading':
-      return strings.settings.downloadProgress(faPercent(percent ?? 0));
-    case 'verifying':
-      return strings.settings.downloadVerifying;
-    case 'installed':
-      return strings.settings.downloadInstalled;
-    case 'error':
-      return strings.settings.downloadError;
-    default:
-      return strings.settings.downloadNone;
   }
 }
 
@@ -138,6 +125,7 @@ export function Settings() {
   const setTheme = useSettingsStore((state) => state.setTheme);
   const backup = useSyncStore((state) => state.backup);
   const download = useSyncStore((state) => state.download);
+  const entitled = useAuthStore((state) => state.entitlement.status === 'full');
   const lastBackupAt = useSyncStore((state) => state.lastBackupAt);
   const unsyncedCount = useSyncStore((state) => state.unsyncedCount);
   const offlineWithPending = globalThis.navigator?.onLine === false && unsyncedCount > 0;
@@ -159,7 +147,7 @@ export function Settings() {
     if (isValid(parsed)) void setProfile({ examDate: parsed.getTime() });
   }
 
-  const downloadPercent = download.name === 'downloading' ? download.percent : null;
+  const percent = downloadPercent(download);
 
   return (
     <main className={`flex flex-1 flex-col gap-4 pt-2 ${BOTTOM_NAV_SPACER_CLASS}`}>
@@ -274,9 +262,40 @@ export function Settings() {
       </Section>
 
       <Section title={strings.settings.downloadTitle}>
-        <p className="text-body-sm text-[var(--fg-muted)]">
-          {downloadStatusText(download.name, downloadPercent)}
+        <p className="text-body-sm font-medium" data-testid="settings-entitlement">
+          {entitled ? strings.settings.entitlementFull : strings.settings.entitlementNone}
         </p>
+        <p
+          className="text-body-sm text-[var(--fg-muted)]"
+          role="status"
+          data-testid="settings-download-status"
+          data-state={download.name}
+        >
+          {downloadStatusText(download, entitled)}
+        </p>
+        {percent !== null ? (
+          <ProgressBar value={percent} ariaLabel={strings.download.progressLabel} />
+        ) : null}
+        {downloadCanRetry(download) ? (
+          <Button
+            variant="secondary"
+            size="sm"
+            onClick={() => void requestDownload('manual')}
+            data-testid="settings-download-retry"
+          >
+            {strings.download.retry}
+          </Button>
+        ) : null}
+        {entitled ? null : (
+          <Button
+            variant="secondary"
+            size="sm"
+            onClick={() => void navigate('/paywall')}
+            data-testid="settings-buy"
+          >
+            {strings.settings.buyFull}
+          </Button>
+        )}
       </Section>
 
       <Section title={strings.settings.installTitle}>

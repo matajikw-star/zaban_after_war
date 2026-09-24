@@ -236,6 +236,26 @@ export function failureFromError(err: unknown): LoginFailure {
  * anyway. The login merge (`sync/login-merge.ts`) runs before this is asked and adopts the
  * server's profile when there is one, so a restored account lands home.
  */
-export function destinationAfterLogin(hasProfile: boolean): '/' | '/onboarding' {
+export function destinationAfterLogin(hasProfile: boolean, next: string | null = null): string {
+  const back = safeNext(next);
+  if (back !== null) return back;
   return hasProfile ? '/' : '/onboarding';
+}
+
+/**
+ * The screens that send a user to `/login` and want them back (§7.8: login is required before
+ * checkout, and a payment result needs the account that paid). Anything else — another path, an
+ * absolute URL, `//evil.example` — is ignored, so `?next=` can never become an open redirect.
+ */
+const RETURNABLE_PATHS: ReadonlySet<string> = new Set(['/checkout', '/purchase/result']);
+
+export function safeNext(next: string | null): string | null {
+  if (next === null || !next.startsWith('/') || next.startsWith('//')) return null;
+  const path = next.split(/[?#]/, 1)[0] ?? '';
+  return RETURNABLE_PATHS.has(path) ? next : null;
+}
+
+/** `/login?next=…` for a screen that wants the user back after login. */
+export function loginPathFor(next: string): string {
+  return `/login?${new URLSearchParams({ next }).toString()}`;
 }

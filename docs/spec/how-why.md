@@ -577,6 +577,90 @@ Client half (`sync/backup.ts`, `backup-live.ts`, `login-merge.ts`):
   `4xx` drops an item — every error report and flag collected so far would be thrown away before
   ticket 04 ever ships the routes.
 
+### 5.9 Flags, beacons, client errors, the log tools and deploy (ticket dev-server/04, 2026-09-24)
+
+Server (`pb_hooks/telemetry.pb.js`, `lib/telemetry.js`):
+
+- **Daily caps are rolling 24h windows keyed on `installId`**, the same shape as `otp.js`'s
+  phone/IP limits (`countSince`/`secondsUntilFree` against `created`), not calendar days — no
+  midnight cliff for a burst of installs to pile up on.
+- **Beacons get a cap this file never fixed a number for.** What.md §8.2 said "unknown names
+  rejected" for `POST /api/beacon` but named no daily limit the way flags (50) and client-errors
+  (30) got one. Decided here: 200 rows/install/day, 20 events/call — generous for the 13 fixed
+  names of §8.4 even on a very active day, still bounded. `what.md` §8.2 now says so.
+- **`client_errors` dedupe never counts against the cap.** The cap check runs only on the insert
+  path; the same fingerprint from the same install within the hour only ever increments one
+  row's `count`. Otherwise a render loop hammering one bug could burn an install's whole day of
+  quota reporting the same duplicate over and over.
+- **`withRoute` gained `blobResponse(contentType, bytes)`.** The sourcemap route answers with
+  file bytes, not the `{error}`/data JSON envelope every other route uses; a handler returns
+  `blobResponse(...)` and `withRoute` calls `e.blob(...)` instead of `e.json(...)` — logging,
+  auth and error handling stay identical, only the last line branches.
+- **The sourcemap route's `{sha}/{file}` params are checked against a strict allow-list, not
+  sanitised.** Verified against the real binary (see the top of this file's rule on verifying
+  PocketBase APIs): PocketBase's router matches path segments on the *undecoded* URL, so
+  `/api/admin/sourcemap/X/..%2f..%2fetc%2fpasswd` still routes to the handler with
+  `pathValue('file')` returning the *decoded* string `../../etc/passwd` — a single `{file}`
+  segment can carry a slash if the client percent-encodes it. `sha` must match
+  `^[0-9a-f]{7,40}$` and `file` must match `^[A-Za-z0-9][A-Za-z0-9._-]*\.map$` (no `/` in the
+  character class at all) before either reaches `$os.readFile`, which is the only thing that
+  makes the traversal impossible regardless of encoding.
+
+Client (`sync/backup.ts`, `backup-live.ts`):
+
+- **`OUTBOX_ROUTES_LIVE` flips to `true` for all three kinds** now that the routes exist
+  (`what.md` §19's open item).
+- **An anonymous install now drains its outbox.** `request()` used to return immediately when
+  `deps.userId()` was null; it now calls a new `drainAnonymousOutbox()` first (still gated on
+  `isOnline()`), which never touches the `idle → pushing → pulling → idle` state machine — that
+  machine describes the review-event log, which still requires a login and is unaffected. The
+  existing `outboxRouteLive` gate and 2xx/4xx/429 handling inside `drainOutbox()` did not need to
+  change; only when it runs did.
+
+Tools (`tools/errors`, `tools/logs`, `tools/flags`, `tools/deploy`, all `tools/lib/`):
+
+- **One new dependency: `source-map` (0.7.6).** `tools/errors` needs a real sourcemap consumer to
+  turn a minified `line:column` back into a TypeScript source position; hand-rolling a VLQ
+  decoder is exactly the kind of code this codebase does not want to own. It runs fine under
+  plain Node (`node --experimental-strip-types`) with no bundler: the package's own CJS build
+  reads its `mappings.wasm` from disk relative to itself, so nothing is fetched at runtime (no
+  conflict with ADR-0005 — that rule is about the shipped PWA, and this is a dev-only CLI tool).
+- **`tools/` gained a `lib/` of its own** (`env.ts`, `pb.ts`, `args.ts`, `symbolicate.ts`),
+  shared by all four server-facing tools rather than duplicated four times. `.env.local` reading
+  is five lines of `KEY=VALUE` parsing, not a `dotenv` dependency — boring enough that the
+  dependency would have cost more than it saved (§17.9).
+- **Symbolicating a real error needed a real throw from the real built bundle**, not a synthetic
+  stack string: `apps/web/e2e/errors.spec.ts` (the third spec `what.md` §16.2 already planned)
+  first threw via `page.evaluate`, and the resulting `Error#stack` pointed at Playwright's own
+  `eval` wrapper, not at `assets/index-*.js` — nothing to symbolicate. `main.tsx` now has a
+  three-line hook, armed only by `?__e2eThrow=1`, that throws for real after bootstrap finishes;
+  it ships in every build (a query-param check like `import.meta.env.DEV` would get tree-shaken
+  out, along with the real minified position this test needs) but a real user can never trigger
+  it by accident.
+- **`server/scripts/e2e.mjs` now upserts a fixed superuser** before `serve` starts, the same CLI
+  call `server/test/harness.ts` uses. No e2e spec had needed superuser access before this one;
+  `playwright.config.ts` also now copies the just-built `apps/web/dist/assets/*.map` into a temp
+  `SOURCEMAP_DIR` under the real build sha before that webServer starts, so `errors.spec.ts` has
+  a real sourcemap to resolve against.
+- **`tools/deploy` ships as TypeScript modules (`args.ts`, `refusal.ts`, `plan.ts`, `git.ts`,
+  `index.ts`), not shell scripts**, so the argument parsing and the refuse-or-not decision are
+  plain, fast, dependency-free unit tests (`tools/deploy/*.test.ts`) instead of something only
+  provable by actually running a deploy. `plan.ts` is pure — it turns a target list into a list
+  of `{description, command}` strings — so `--dry-run` and a real run share exactly one source of
+  the commands, and the plan itself (never-rsync, `.new`-then-swap, restart-before-health-check,
+  build-before-ship) is asserted as data.
+- **No rsync.** `what.md` §14.4 said rsync when this ticket started; the machine actually
+  available has `ssh` and `tar` but no `rsync`, so every transfer is `tar czf - | ssh … tar xzf -`
+  into a `.new` sibling directory. `what.md` is corrected in the same commit as the code, per
+  §17.10's own rule.
+- **The atomic swap is two renames, not one `mv`.** `mv new old` cannot replace a populated
+  directory in one step (Linux `rename()` refuses a non-empty target), so the swap moves the old
+  directory aside, moves the new one into place, then removes the old one — each rename is
+  individually atomic, and the whole swap is a live directory for all but a few milliseconds.
+- **The first real deploy is still to do.** This ticket built and tested the tool and proved
+  `--dry-run` against this repository; it never connected to `app.konkurleitner.com`. `what.md`
+  §14.4 is marked `[built, not yet deployed]` until the lead runs it for real.
+
 ## 6. How to extend this file
 
 

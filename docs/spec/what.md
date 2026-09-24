@@ -722,13 +722,13 @@ PocketBase bearer token. Because PocketBase serializes each handler into its own
 | `POST /api/pay/request` | user | `{code?}` → `{paymentId, gatewayUrl}`. Creates the pending payment, applies the code, calls Zarinpal `request`. A `payable` of 0 (100 % code) grants directly and returns `{paymentId, granted: true}`. | `[planned]` |
 | `GET /api/pay/callback` | none (Zarinpal) | `?Authority=&Status=` → verifies with Zarinpal using the stored `payable`, flips the payment, creates the entitlement, increments the code's `usedCount`, then `302` to `/purchase/result?status=ok&ref=`, or `…?status=failed&reason=`. Idempotent (Zarinpal code 101 = already verified). | `[planned]` |
 | `GET /api/pay/status/:id` | user (own) | `{status, refId}`. | `[planned]` |
-| `POST /api/flags` | optional | `{installId, itemId, reason, appVersion, at}` → `{ok}`. 50 per install per day. | `[planned]` |
-| `POST /api/beacon` | optional | `{installId, events: [{name, at, appVersion}]}` → `{ok}`. Unknown names rejected. | `[planned]` |
-| `POST /api/client-errors` | optional | one record (§10.1) → `{ok, deduped}`. 30 per install per day; same fingerprint within an hour increments `count` instead of inserting. | `[planned]` |
+| `POST /api/flags` | optional | `{installId, itemId, reason, appVersion, at}` → `{ok}`. 50 per install per day (`telemetry.js`). | `[live]` |
+| `POST /api/beacon` | optional | `{installId, events: [{name, at, appVersion}]}` → `{ok}`. Unknown names rejected (whole call, naming the index); at most 20 events per call, 200 per install per day — no number was fixed here originally, decided in ticket dev-server/04. | `[live]` |
+| `POST /api/client-errors` | optional | one record (§10.1) → `{ok, deduped}`. 30 per install per day; same fingerprint from the same install within an hour increments `count` instead of inserting, and never counts against the cap. | `[live]` |
 | `GET /api/health` | none | `{ok, version, time}`. `version` is `<pocketbase>+hooks.<n>`. Registered as a middleware, not a route: PocketBase owns this path (how-why §5.4). | `[live]` |
 | `GET /api/admin/stats?range=` | superuser | Aggregates for the dashboard (§11.2). | `[planned]` |
 | `POST /api/admin/grant` | superuser | `{phone, note}` → creates the user if missing and an entitlement with `source: manual`. | `[planned]` |
-| `GET /api/admin/sourcemap/:sha/:file` | superuser | Serves a source map from `/opt/kl/sourcemaps/` for symbolication. | `[planned]` |
+| `GET /api/admin/sourcemap/:sha/:file` | superuser | Serves a source map from `SOURCEMAP_DIR` (`/opt/kl/sourcemaps/<sha>/<file>`) for `tools/errors` to symbolicate against. `sha` and `file` are checked against a strict allow-list (`[0-9a-f]{7,40}` / a plain `*.map` name, no `/`) before either touches a filesystem path — PocketBase's router matches `{sha}/{file}` on undecoded path segments, so a percent-encoded slash inside `file` (`..%2f..%2fetc%2fpasswd`) still decodes to a value the allow-list rejects. | `[live]` |
 
 Crons (`pb_hooks/cron.pb.js`): `otp_purge` `[live]` hourly deletes `otp_codes` whose `expiresAt` is
 more than an hour past — not at expiry, because a row still counts toward the IP limit's
@@ -837,7 +837,7 @@ visible in the admin UI and readable through `/api/logs` as superuser. Payment a
 additionally log one line per external call (`zarinpal.request`, `sms.send`) with the provider's
 status and reference, never the secret.
 
-### 10.3 Tools that turn logs into a fix
+### 10.3 Tools that turn logs into a fix `[live]`
 
 - `pnpm errors --since 24h [--kind payment] [--fingerprint X] [--user PHONE]` — pulls
   `client_errors` as superuser, **symbolicates** stacks against the source maps for that
@@ -971,24 +971,34 @@ product** (free plan, DNS-only — proxying off), nameservers `hail.parspack.net
 `star.parspack.net`. Done 2026-09-18; procedure and the two problems hit along the way are in
 `docs/runbooks/server-setup.md`.
 
-### 14.4 Deploy procedure
+### 14.4 Deploy procedure `[built, not yet deployed]`
 
-`pnpm deploy <target>` with targets `web`, `server`, `content`, `landing`, `admin`, `all`
-(`tools/deploy/*.sh`, rsync over SSH as `kl`):
+`pnpm run deploy -- <target>` with targets `web`, `server`, `content`, `landing`, `admin`, `all`
+(`tools/deploy/`, TypeScript, run by `node --experimental-strip-types`). **Not rsync**: the
+machines this runs on have `ssh` and `tar` but no `rsync` (found in ticket dev-server/04, which
+corrected this section) — every transfer is `tar czf - | ssh kl@host tar xzf -` into a `.new`
+sibling directory, then swapped in with two renames (the old directory moved aside, the new one
+moved into place, the old one removed) rather than one `mv`, because `rename()` on Linux refuses
+to replace a populated directory in a single step. `docs/runbooks/deploy.md` has the details;
+`tools/deploy/plan.ts` is the one place the actual commands are generated.
 
-1. Refuses unless the working tree is clean and `HEAD` equals `origin/main`.
-2. `web`: build → rsync `apps/web/dist/` → `/opt/kl/pb_public/` (atomic: rsync to
-   `pb_public.new`, then `mv`) → upload `*.map` to `/opt/kl/sourcemaps/<sha>/` and delete them
-   from `pb_public`.
-3. `server`: rsync `pb_hooks/`, `pb_migrations/` → `systemctl restart kl-pocketbase` (migrations
-   run on start) → `curl /api/health`.
-4. `content`: `pnpm content:build` → rsync `server/content/` (the paid package + manifest).
-5. Append to `/opt/kl/deploys.log` and print the line for `wiki/log.md`.
+1. Refuses unless the working tree is clean and `HEAD` equals `origin/main`; `--allow-branch
+   <branch>` lifts the branch check only, for a staging deploy, with a loud warning.
+   `--dry-run` prints every command and runs none.
+2. `web`: build → ship everything except `*.map` to `/opt/kl/pb_public/` → ship the `*.map`
+   files separately to `/opt/kl/sourcemaps/<sha>/`, never into `pb_public`.
+3. `server`: ship `pb_hooks/`, `pb_migrations/` → `systemctl restart kl-pocketbase` (migrations
+   run on start) → `curl /api/health` on the VPS itself.
+4. `content`: `pnpm content:build` → ship `server/content/` (the paid package + manifest).
+5. `landing` / `admin`: build → ship to `/opt/kl/landing` / `/opt/kl/admin`.
+6. Append to `/opt/kl/deploys.log` and to `wiki/log.md`.
 
-The same scripts run from GitHub Actions on push to `main` **if** the runner can reach the VPS
+The same script runs from GitHub Actions on push to `main` **if** the runner can reach the VPS
 over SSH (tested in Phase 4). If it cannot, deploys run from the owner's machine through Claude
-Code with the same scripts; CI still gates every PR. Either way the deployed artefact is a
-clean build of `main`.
+Code with the same script; CI still gates every PR. Either way the deployed artefact is a
+clean build of `main`. The first real run against `app.konkurleitner.com` is still to do — this
+ticket built and unit-tested the tool (`tools/deploy/*.test.ts`: the argument parsing, the
+refusal rules) and proved `--dry-run` against this repository, but never connected to the VPS.
 
 ### 14.5 Server-state backups
 
@@ -1057,7 +1067,10 @@ produces a schedule where a word can be conquered in exactly 7 days but the medi
   (`context.setOffline(true)`) → 10 more reviews → back online → backup happens → paywall at the
   limit → login with the console OTP → checkout with a discount code → mock gateway → result →
   paid download → offline → study from the paid package → reload → state intact. Second spec:
-  restore on a fresh context. Third: an error is captured and symbolicates.
+  restore on a fresh context. Third (`errors.spec.ts`, built): a real throw from the built bundle
+  (a query-param-gated hook in `main.tsx`, never armed for a real user) is captured, drains
+  through the outbox with no login (ticket dev-server/04), and `tools/errors` resolves its stack
+  against the sourcemap for that build — proving symbolication against a real build, not a mock.
 - Bundle budget: app shell ≤ 300 KB gzipped, checked in CI (ADR-0005).
 
 ### 16.3 Server
@@ -1140,9 +1153,10 @@ GitHub: `DEPLOY_HOST`, `DEPLOY_USER`, `DEPLOY_SSH_KEY`, `ANDROID_KEYSTORE_B64`,
   against asking for a number on first launch.
 - The **profile** is reconciled only at login (§7.4): a goal or exam date changed afterwards on
   one device reaches another only at that device's next login. Events are always backed up.
-- The **outbox drains only inside a backup run**, which needs a logged-in user; an anonymous
-  install's flags, beacons and error reports stay queued. Ticket dev-server/04 flips
-  `OUTBOX_ROUTES_LIVE` and has to drain for anonymous installs too (the drain is already
-  separate from the progress push and never fails it).
+- ~~The outbox drains only inside a backup run, which needs a logged-in user~~ — fixed in ticket
+  dev-server/04: `OUTBOX_ROUTES_LIVE` is now `true` for `flag`/`beacon`/`error`, and
+  `sync/backup.ts`'s runner drains the outbox for an anonymous install too (every trigger, not
+  only inside a login-gated push/pull run — §7.4, `apps/web/e2e/errors.spec.ts` proves it end to
+  end). The review-event log itself still needs a login to back up; that has not changed.
 - Push notifications: none (see `wiki/web-push-in-iran.md`).
 - Real-exam mode, per-field views, Bazaar build, referral codes: after launch.

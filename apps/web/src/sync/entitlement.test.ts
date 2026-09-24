@@ -2,7 +2,15 @@ import { describe, expect, it } from 'vitest';
 import { AppError } from '../errors.ts';
 import type { EntitlementResponse, MeResponse } from '../net/api.ts';
 import { type Entitlement, NO_ENTITLEMENT } from '../stores/auth.ts';
-import { type EntitlementMerge, mergeEntitlement, refreshEntitlement } from './entitlement.ts';
+import {
+  adoptFor,
+  type EntitlementMerge,
+  entitlementFor,
+  followEntitlement,
+  mergeEntitlement,
+  readEntitlements,
+  refreshEntitlement,
+} from './entitlement.ts';
 
 const AT = 1_760_000_000_000;
 
@@ -139,5 +147,88 @@ describe('refreshEntitlement', () => {
     await expect(refreshEntitlement(deps)).resolves.toBe('none');
     expect(rec.entitled).toBe(0);
     expect(rec.reports).toEqual([]);
+  });
+});
+
+// ---------------------------------------------------------------------------- per account
+//
+// Ticket dev-payment/01 lead review: the cache is scoped to the account it was granted to. A
+// shared phone — A buys, signs out, B signs in — must not hand B the paid package, file a
+// mismatch every launch, or run a download the server refuses.
+
+describe('entitlements per account', () => {
+  it('reads the stored map; a legacy record with no userId belongs to nobody', () => {
+    expect(readEntitlements({ byUser: { a: FULL } })).toEqual({ a: FULL });
+    for (const legacy of [FULL, undefined, null, 'full', { byUser: null }, { byUser: [] }]) {
+      expect(readEntitlements(legacy)).toEqual({});
+    }
+    // A malformed entry is dropped; the rest are kept.
+    expect(readEntitlements({ byUser: { a: FULL, b: { status: 'paid' }, c: 7 } })).toEqual({
+      a: FULL,
+    });
+  });
+
+  it('counts only for the account signed in now; signed out or another account is none', () => {
+    const map = { a: FULL };
+    expect(entitlementFor(map, 'a')).toBe(FULL);
+    expect(entitlementFor(map, 'b')).toBe(NO_ENTITLEMENT);
+    expect(entitlementFor(map, null)).toBe(NO_ENTITLEMENT);
+  });
+
+  it("B's none is kept beside A's full, never over it, and is not a mismatch", () => {
+    const { map, merge } = adoptFor({ a: FULL }, 'b', SERVER_NONE, AT);
+    expect(map.a).toBe(FULL);
+    expect(map.b).toEqual({ status: 'none', source: null, grantedAt: null, checkedAt: AT });
+    expect(merge.mismatch).toBe(false);
+  });
+
+  it('within one account the never-revoke rule and the mismatch report still hold', () => {
+    const { map, merge } = adoptFor({ a: FULL }, 'a', SERVER_NONE, AT);
+    expect(map.a).toBe(FULL);
+    expect(merge.mismatch).toBe(true);
+    expect(adoptFor({}, 'a', SERVER_FULL, AT).map.a?.status).toBe('full');
+  });
+});
+
+describe('followEntitlement (the loaded package follows the account)', () => {
+  function recorder() {
+    const rec = { loads: [] as boolean[], downloads: 0, reports: [] as unknown[] };
+    const deps = {
+      loadContent: async (entitled: boolean) => {
+        rec.loads.push(entitled);
+      },
+      requestDownload: () => {
+        rec.downloads += 1;
+      },
+      reportError: (err: unknown) => {
+        rec.reports.push(err);
+      },
+    };
+    return { rec, deps };
+  }
+
+  it('full → none loads the free package and asks for no download', async () => {
+    const { rec, deps } = recorder();
+    await followEntitlement('full', 'none', deps);
+    expect(rec).toEqual({ loads: [false], downloads: 0, reports: [] });
+  });
+
+  it('none → full loads the stored paid package and asks the download to check it', async () => {
+    const { rec, deps } = recorder();
+    await followEntitlement('none', 'full', deps);
+    expect(rec).toEqual({ loads: [true], downloads: 1, reports: [] });
+  });
+
+  it('no change does nothing; a failed load is reported, never thrown', async () => {
+    const { rec, deps } = recorder();
+    await followEntitlement('none', 'none', deps);
+    expect(rec.loads).toEqual([]);
+    await expect(
+      followEntitlement('none', 'full', {
+        ...deps,
+        loadContent: () => Promise.reject(new Error('IDB')),
+      }),
+    ).resolves.toBeUndefined();
+    expect(rec.reports).toHaveLength(1);
   });
 });

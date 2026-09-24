@@ -79,8 +79,11 @@ export function isTerminal(outcome: PaymentOutcome): boolean {
 
 export interface PaymentStatusDeps {
   readonly status: (paymentId: string) => Promise<PayStatusResponse>;
-  /** `stores/auth.ts` `adoptServerEntitlement`. */
-  readonly adopt: (server: EntitlementResponse) => Promise<unknown>;
+  /**
+   * `stores/auth.ts` `adoptServerEntitlement`, for the account the request was made as (captured
+   * before it was sent, so a sign-out mid-request cannot move the grant to another account).
+   */
+  readonly adopt: (server: EntitlementResponse, userId: string | null) => Promise<unknown>;
   /** `/api/me` for the entitlement's `source` and `grantedAt`, fired after `entitled`. */
   readonly refreshEntitlement: () => Promise<unknown>;
   readonly readPending: () => Promise<PendingPayment | null>;
@@ -118,6 +121,7 @@ export async function checkPayment(
   deps: PaymentStatusDeps,
   paymentId: string,
 ): Promise<PaymentOutcome> {
+  const askedAs = deps.userId();
   let answer: PayStatusResponse;
   try {
     answer = await deps.status(paymentId);
@@ -131,7 +135,7 @@ export async function checkPayment(
   let outcome: PaymentOutcome;
   if (answer.entitled === true) {
     try {
-      await deps.adopt({ status: 'full', source: null, grantedAt: null });
+      await deps.adopt({ status: 'full', source: null, grantedAt: null }, askedAs);
     } catch (err) {
       // The server's yes stands; the next `/api/me` will cache it. Say so, and carry on.
       deps.reportError(err, { phase: 'pay.status.adopt', paymentId });

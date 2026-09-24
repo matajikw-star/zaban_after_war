@@ -23,7 +23,7 @@ import {
 
 export const paymentDeps: PaymentStatusDeps = {
   status: payStatus,
-  adopt: (server) => useAuthStore.getState().adoptServerEntitlement(server),
+  adopt: (server, userId) => useAuthStore.getState().adoptServerEntitlement(server, userId),
   refreshEntitlement: refreshEntitlementNow,
   readPending: async () => {
     const stored = await kvGet<unknown>('pendingPayment');

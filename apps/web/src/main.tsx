@@ -29,7 +29,7 @@ import { useSettingsStore } from './stores/settings.ts';
 import { strings } from './strings.ts';
 import { startBackup } from './sync/backup-live.ts';
 import { startDownload } from './sync/download-live.ts';
-import { refreshEntitlementNow } from './sync/entitlement-live.ts';
+import { followEntitlementNow, refreshEntitlementNow } from './sync/entitlement-live.ts';
 import { recoverPendingPaymentNow } from './sync/payment-live.ts';
 import { APP_VERSION } from './version.ts';
 import './index.css';
@@ -101,6 +101,8 @@ async function bootstrap(): Promise<void> {
   // download runner first, so an entitlement found by the other two has a runner to start. A
   // `pendingPayment` is asked about before anything assumes it failed; offline leaves it for
   // the next launch. The cached entitlement is refreshed, never revoked (`sync/entitlement.ts`).
+  // From here on, a sign-in or sign-out switches the loaded package without a reload (§7.6).
+  followEntitlementNow();
   startDownload()
     .then(() => {
       if (useAuthStore.getState().userId === null) return;

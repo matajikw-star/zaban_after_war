@@ -7,12 +7,100 @@
  *
  * `mergeEntitlement` is that rule as a pure function; `refreshEntitlement` asks `/api/me` and
  * applies it, with every effect injected so `entitlement.test.ts` drives it with fakes.
+ *
+ * **Per account.** The cache is `kv.entitlement = { byUser: { [userId]: Entitlement } }`: a
+ * grant counts only while the account it was granted to is signed in, so a shared phone never
+ * hands one account's purchase to the next (the same reasoning as the per-user sync cursor,
+ * how-why §5.8). A map rather than one record keyed by userId, because B's `none` must sit
+ * beside A's `full`, not replace it — A signing back in regains the paid package offline.
  */
 
 import { AppError, toAppError } from '../errors.ts';
 import { breadcrumb } from '../log/breadcrumbs.ts';
 import type { EntitlementResponse, MeResponse } from '../net/api.ts';
-import type { Entitlement } from '../stores/auth.ts';
+import type { Entitlement, EntitlementStatus } from '../stores/auth.ts';
+
+/** What every device holds for an account it has no record for — and for nobody signed in. */
+export const NO_ENTITLEMENT: Entitlement = {
+  status: 'none',
+  source: null,
+  grantedAt: null,
+  checkedAt: 0,
+};
+
+/** `kv.entitlement`'s value: one record per account this device has seen answered. */
+export type EntitlementsByUser = Readonly<Record<string, Entitlement>>;
+
+function isEntitlement(value: unknown): value is Entitlement {
+  const v = value as Partial<Entitlement> | null | undefined;
+  return (
+    v !== null &&
+    typeof v === 'object' &&
+    (v.status === 'full' || v.status === 'none') &&
+    typeof v.checkedAt === 'number'
+  );
+}
+
+/**
+ * The stored map. Anything else — including the pre-account `{status, …}` record staging builds
+ * wrote — belongs to nobody and reads as empty; the next `/api/me` fills the account in.
+ */
+export function readEntitlements(stored: unknown): EntitlementsByUser {
+  const byUser = (stored as { byUser?: unknown } | null | undefined)?.byUser;
+  if (byUser === null || typeof byUser !== 'object' || Array.isArray(byUser)) return {};
+  const out: Record<string, Entitlement> = {};
+  for (const [userId, value] of Object.entries(byUser)) {
+    if (isEntitlement(value)) out[userId] = value;
+  }
+  return out;
+}
+
+/** The entitlement that counts now: the signed-in account's, or none. */
+export function entitlementFor(map: EntitlementsByUser, userId: string | null): Entitlement {
+  if (userId === null) return NO_ENTITLEMENT;
+  return map[userId] ?? NO_ENTITLEMENT;
+}
+
+/** A server answer about `userId`, merged into that account's record only. */
+export function adoptFor(
+  map: EntitlementsByUser,
+  userId: string,
+  server: unknown,
+  at: number,
+): { readonly map: EntitlementsByUser; readonly merge: EntitlementMerge } {
+  const cached = entitlementFor(map, userId);
+  const merge = mergeEntitlement(cached, server, at);
+  if (merge.next === cached) return { map, merge };
+  return { map: { ...map, [userId]: merge.next }, merge };
+}
+
+export interface FollowDeps {
+  /** `stores/content.ts` `load`: the stored paid package when entitled, else the free one. */
+  readonly loadContent: (entitled: boolean) => Promise<void>;
+  /** Ask the download to check the paid package (§7.5); it fetches only what is missing. */
+  readonly requestDownload: () => void;
+  readonly reportError: (err: unknown) => void;
+}
+
+/**
+ * The effective entitlement changed (a sign-in, a sign-out, a server answer): load the package
+ * it allows, without a reload. Never throws.
+ */
+export async function followEntitlement(
+  previous: EntitlementStatus,
+  next: EntitlementStatus,
+  deps: FollowDeps,
+): Promise<void> {
+  if (previous === next) return;
+  breadcrumb('log', 'entitlement.follow', { from: previous, to: next });
+  try {
+    await deps.loadContent(next === 'full');
+  } catch (err) {
+    deps.reportError(err);
+    return;
+  }
+  if (next === 'full') deps.requestDownload();
+}
 
 export interface EntitlementMerge {
   readonly next: Entitlement;

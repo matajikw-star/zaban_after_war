@@ -10,7 +10,7 @@
  */
 
 import type { ContentPackage } from '@kl/content';
-import { kvDelete, kvGet, kvSet, packageMeta } from '../db/repo.ts';
+import { kvDelete, kvGet, kvSet, packageMeta, putPackage } from '../db/repo.ts';
 import { now } from '../engine/clock.ts';
 import { AppError } from '../errors.ts';
 import { queueBeacon } from '../log/beacon.ts';
@@ -150,7 +150,15 @@ const liveDeps: DownloadDeps = {
   clearPartial: () => kvDelete('downloadReceivedBytes'),
   storageFree,
   verify: verifyPaidPackage,
-  install: (pkg: ContentPackage, bytes: number) => useContentStore.getState().install(pkg, bytes),
+  install: async (pkg: ContentPackage, bytes: number) => {
+    // Stored either way; loaded only if the account signed in now is entitled — a sign-out during
+    // the download must not switch the next account onto the paid package (§7.6).
+    if (useAuthStore.getState().entitlement.status === 'full') {
+      await useContentStore.getState().install(pkg, bytes);
+    } else {
+      await putPackage(pkg, bytes);
+    }
+  },
 
   publishState: (state) => useSyncStore.getState().setDownload(state),
   onInstalled: () => {

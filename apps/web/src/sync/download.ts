@@ -12,13 +12,13 @@
  *
  * 1. `GET /api/content/manifest`. The stored paid package already has the manifest's hash →
  *    `installed`, nothing fetched.
- * 2. Bytes already stored for *this* hash (`kv.downloadPartial`) are resumed:
+ * 2. Bytes already stored for *this* hash (`kv.downloadReceivedBytes`) are resumed:
  *    `Range: bytes=<n>-` with `If-Range: "<hash>"`. A 206 must start exactly at `n`; a 200 means
  *    the server sent the whole file (its content moved on, or it ignored the range), so the stored
  *    bytes are dropped and the count restarts at 0. A 416 means the stored bytes run past the file:
  *    they are dropped and the file is fetched whole, once, in the same run.
  * 3. The body streams into memory; every 256 KB, and whenever the stream breaks, what arrived is
- *    written to `kv.downloadPartial`, so neither a dropped connection nor a killed tab costs the
+ *    written to `kv.downloadReceivedBytes`, so neither a dropped connection nor a killed tab costs the
  *    bytes already received. Fewer bytes than the manifest promised is `DOWNLOAD_TRUNCATED`.
  * 4. Verify (`package-hash.ts`): UTF-8 JSON, a paid package, sha256 of canonical `items` equal to
  *    the manifest hash. A mismatch drops the stored bytes, so the next attempt starts clean.
@@ -246,7 +246,7 @@ function failure(
  */
 export type DownloadTrigger = 'start' | 'online' | 'entitled' | 'login' | 'manual' | 'retry';
 
-/** `kv.downloadPartial`: the bytes received so far and the manifest hash they belong to. */
+/** `kv.downloadReceivedBytes`: the bytes received so far and the manifest hash they belong to. */
 export interface PartialDownload {
   readonly hash: string;
   readonly version: string;
@@ -320,6 +320,13 @@ export const REPORT_IMMEDIATELY: ReadonlySet<string> = new Set([
 ]);
 
 /**
+ * Refusals that are the server working as designed, never a record however long they last:
+ * payment and the paid file are switched off while SMS is mock (§8.2's gate), so an entitled
+ * account on staging (an admin grant) sits here, retrying on the ladder, until the switch.
+ */
+export const NEVER_REPORT: ReadonlySet<string> = new Set(['SERVER_PAYMENT_DISABLED_MOCK_SMS']);
+
+/**
  * The gate, as in backup: off the backoff anything runs; on it, a trigger that means "something
  * changed" jumps the wait. A 429 is the server asking for time, so nothing jumps it. A 401 or a
  * refused entitlement will not heal by retrying, so only a login, a fresh entitlement or the
@@ -332,7 +339,9 @@ export function mayRunNow(state: DownloadState, trigger: DownloadTrigger, at: nu
     return trigger === 'login' || trigger === 'manual' || trigger === 'entitled';
   }
   if (at >= state.retryAt) return true;
-  return trigger === 'manual' || trigger === 'online' || trigger === 'login' || trigger === 'entitled';
+  return (
+    trigger === 'manual' || trigger === 'online' || trigger === 'login' || trigger === 'entitled'
+  );
 }
 
 /** Retrying on a timer cannot fix these; a trigger from the user or the server must. */
@@ -439,10 +448,14 @@ export function createDownloadRunner(deps: DownloadDeps): DownloadRunner {
 
       if (response.etag !== null && response.etag !== etag) {
         await deps.clearPartial();
-        throw new AppError('DOWNLOAD_CONTENT_CHANGED', 'the paid file is not the one the manifest named', {
-          expected: etag,
-          etag: response.etag,
-        });
+        throw new AppError(
+          'DOWNLOAD_CONTENT_CHANGED',
+          'the paid file is not the one the manifest named',
+          {
+            expected: etag,
+            etag: response.etag,
+          },
+        );
       }
 
       if (response.status === 206) {
@@ -557,6 +570,7 @@ export function createDownloadRunner(deps: DownloadDeps): DownloadRunner {
       breadcrumb('download', 'download.failed', { code: error.code, status: statusOf(error) });
       if (
         state.name === 'error' &&
+        !NEVER_REPORT.has(error.code) &&
         (REPORT_IMMEDIATELY.has(error.code) || state.attempt === REPORT_AT_ATTEMPT)
       ) {
         deps.reportError(error, { attempt: state.attempt, reason: state.reason });

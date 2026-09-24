@@ -459,7 +459,9 @@ describe('a download run', () => {
     // The resumed run's count starts at the stored bytes, not at zero.
     const resumed = h.published.filter((s) => s.name === 'downloading').slice(-1)[0];
     expect(resumed).toMatchObject({ received: file.bytes.length });
-    expect(h.published).toContainEqual(expect.objectContaining({ name: 'downloading', received: cut }));
+    expect(h.published).toContainEqual(
+      expect.objectContaining({ name: 'downloading', received: cut }),
+    );
   });
 
   it('resumes after a truncated response (the stream ended early without an error)', async () => {
@@ -486,7 +488,9 @@ describe('a download run', () => {
     await runner.request('entitled');
 
     const during = h.partialWrites.filter((n) => n < file.bytes.length);
-    expect(during.length).toBeGreaterThanOrEqual(Math.floor(file.bytes.length / PERSIST_EVERY_BYTES));
+    expect(during.length).toBeGreaterThanOrEqual(
+      Math.floor(file.bytes.length / PERSIST_EVERY_BYTES),
+    );
     expect(runner.state().name).toBe('installed');
   });
 
@@ -523,7 +527,11 @@ describe('a download run', () => {
     const h = harness(file);
     // More bytes than the file: they cannot be a prefix of it.
     const junk = new Uint8Array(file.bytes.length + 10);
-    h.kv.partial = { hash: file.hash, version: 'v1', bytes: junk.subarray(0, file.bytes.length - 1) };
+    h.kv.partial = {
+      hash: file.hash,
+      version: 'v1',
+      bytes: junk.subarray(0, file.bytes.length - 1),
+    };
     h.setServer((from, ifRange) =>
       from > 0
         ? Promise.reject(new AppError('HTTP_416', 'range', { status: 416 }))
@@ -643,9 +651,7 @@ describe('a download run refused by the server', () => {
   }
 
   it('403 NOT_ENTITLED: reported, not retried on a timer, retried on a fresh entitlement', async () => {
-    const { h, runner } = await refused(
-      new AppError('SERVER_NOT_ENTITLED', 'no', { status: 403 }),
-    );
+    const { h, runner } = await refused(new AppError('SERVER_NOT_ENTITLED', 'no', { status: 403 }));
     expect(runner.state()).toMatchObject({ reason: 'SERVER_NOT_ENTITLED' });
     expect(h.reports.map(codeOf)).toEqual(['SERVER_NOT_ENTITLED']);
     expect(h.timers).toEqual([]);
@@ -773,5 +779,207 @@ describe('when a download may start at all', () => {
     expect(manifests).toBe(2);
     expect(h.fetches).toHaveLength(1);
     expect(runner.state().name).toBe('installed');
+  });
+});
+
+// ============================================================================ the hard cases
+//
+// The lead's list for ticket dev-payment/01 part A: an interrupted stream resumed after a reload,
+// a hash mismatch, an ETag that changed between two attempts, going offline mid-body, and a crash
+// in each window between "bytes stored" and "package swapped". Each asserts the two invariants
+// §7.5 rests on: the package the user studies from is never half-written, and a good package is
+// never deleted by a failed replacement.
+
+describe('the hard cases', () => {
+  it('a stream cut mid-body resumes after a reload: a new runner picks the bytes up from kv', async () => {
+    const file = await buildPackage('v1', 400);
+    const h = harness(file);
+    const cut = 7_321; // not a chunk boundary
+    h.setServer(serve(file, { cutAfter: cut }));
+    await createDownloadRunner(h.deps).request('entitled');
+    expect(h.kv.partial?.bytes.length).toBe(cut);
+
+    // The tab died; a fresh launch builds a fresh runner over the same storage.
+    h.setServer(serve(file));
+    const relaunched = createDownloadRunner(h.deps);
+    await relaunched.init();
+    expect(relaunched.state().name).toBe('none');
+    await relaunched.request('start');
+
+    expect(h.fetches.at(-1)).toEqual({ from: cut, ifRange: `"${file.hash}"` });
+    expect(relaunched.state()).toEqual({ name: 'installed', version: 'v1' });
+    // Byte for byte: the resumed package is the one the manifest described.
+    expect(h.installed[0]?.hash).toBe(file.hash);
+    expect(h.installed[0]?.items).toHaveLength(400);
+    expect(h.kv.partial).toBeNull();
+  });
+
+  it('a stream cut twice resumes twice, each from its own byte', async () => {
+    const file = await buildPackage('v1', 400);
+    const h = harness(file);
+    const runner = createDownloadRunner(h.deps);
+    h.setServer(serve(file, { cutAfter: 3_000 }));
+    await runner.request('entitled');
+    // The second attempt resumes at 3 000 and is cut again 4 000 bytes further on.
+    h.setServer(serve(file, { cutAfter: 4_000 }));
+    await runner.request('online');
+    expect(h.kv.partial?.bytes.length).toBe(7_000);
+    h.setServer(serve(file));
+    await runner.request('online');
+
+    expect(h.fetches.map((f) => f.from)).toEqual([0, 3_000, 7_000]);
+    expect(runner.state().name).toBe('installed');
+    expect(h.installed[0]?.hash).toBe(file.hash);
+  });
+
+  it('offline mid-download: the bytes are kept, nothing runs while offline, `online` resumes', async () => {
+    const file = await buildPackage('v1', 300);
+    const h = harness(file);
+    const runner = createDownloadRunner(h.deps);
+    h.setServer(serve(file, { cutAfter: 5_000 }));
+    await runner.request('entitled');
+    h.env.online = false;
+
+    // The backoff timer fires while the phone is still offline: nothing is fetched.
+    h.env.now = AT + 60_000;
+    await runner.request('retry');
+    expect(h.fetches).toHaveLength(1);
+    expect(runner.state()).toMatchObject({ name: 'error', reason: 'DOWNLOAD_INTERRUPTED' });
+    expect(h.kv.partial?.bytes.length).toBe(5_000);
+
+    h.env.online = true;
+    h.setServer(serve(file));
+    await runner.request('online');
+    expect(h.fetches[1]).toEqual({ from: 5_000, ifRange: `"${file.hash}"` });
+    expect(runner.state().name).toBe('installed');
+  });
+
+  it('the ETag changed between attempts and the manifest already says so: whole new file', async () => {
+    const v1 = await buildPackage('v1', 200);
+    const v2 = await buildPackage('v2', 210);
+    const h = harness(v1);
+    const runner = createDownloadRunner(h.deps);
+    h.setServer(serve(v1, { cutAfter: 4_000 }));
+    await runner.request('entitled');
+    expect(h.kv.partial?.hash).toBe(v1.hash);
+
+    h.setManifestFor(v2);
+    h.setServer(serve(v2));
+    await runner.request('online');
+
+    // v1's bytes were never offered to v2's file: a whole fetch, no Range, no If-Range.
+    expect(h.fetches[1]).toEqual({ from: 0, ifRange: null });
+    expect(runner.state()).toEqual({ name: 'installed', version: 'v2' });
+    expect(h.installed.map((p) => p.hash)).toEqual([v2.hash]);
+  });
+
+  it('the ETag changed between attempts before the manifest caught up: refused, then whole', async () => {
+    const v1 = await buildPackage('v1', 200);
+    const v2 = await buildPackage('v2', 210);
+    const h = harness(v1);
+    const runner = createDownloadRunner(h.deps);
+    h.setServer(serve(v1, { cutAfter: 4_000 }));
+    await runner.request('entitled');
+
+    // The file moved to v2 while the manifest still names v1. If-Range "v1" does not match, so
+    // Go answers a whole 200 with v2's ETag — not the file this run was asked for.
+    h.setServer(serve(v2));
+    await runner.request('online');
+    expect(h.fetches[1]).toEqual({ from: 4_000, ifRange: `"${v1.hash}"` });
+    expect(runner.state()).toMatchObject({ name: 'error', reason: 'DOWNLOAD_CONTENT_CHANGED' });
+    expect(h.kv.partial).toBeNull();
+    expect(h.installed).toEqual([]);
+
+    h.setManifestFor(v2);
+    await runner.request('online');
+    expect(h.fetches[2]).toEqual({ from: 0, ifRange: null });
+    expect(runner.state()).toEqual({ name: 'installed', version: 'v2' });
+    expect(h.installed.map((p) => p.hash)).toEqual([v2.hash]);
+  });
+
+  it('a hash mismatch never installs, keeps the old package, and the retry starts from byte 0', async () => {
+    const previous = await buildPackage('v1', 10);
+    const promised = await buildPackage('v2', 50);
+    const corrupt = promised.bytes.slice();
+    corrupt[new TextDecoder().decode(corrupt).indexOf('"word 3"') + 6] = 0x38;
+    const h = harness(promised);
+    h.kv.installed = { version: 'v1', hash: previous.hash };
+    const runner = createDownloadRunner(h.deps);
+    h.setServer(serve({ ...promised, bytes: corrupt }));
+    await runner.request('start');
+    expect(runner.state()).toMatchObject({ reason: 'HASH_MISMATCH' });
+    expect(h.kv.installed).toEqual({ version: 'v1', hash: previous.hash });
+
+    h.setServer(serve(promised));
+    await runner.request('manual');
+    expect(h.fetches.map((f) => f.from)).toEqual([0, 0]);
+    expect(runner.state()).toEqual({ name: 'installed', version: 'v2' });
+    expect(h.installed.map((p) => p.hash)).toEqual([promised.hash]);
+  });
+
+  it('crash after the last byte was stored, before the swap: the relaunch installs without a fetch', async () => {
+    const file = await buildPackage('v1', 60);
+    let crash = true;
+    const h = harness(file, {
+      install: async (pkg) => {
+        if (crash) throw new Error('the tab was killed');
+        h.installed.push(pkg);
+        h.kv.installed = { version: pkg.version, hash: pkg.hash };
+      },
+    });
+    await createDownloadRunner(h.deps).request('entitled');
+    expect(h.kv.partial?.bytes.length).toBe(file.bytes.length);
+    expect(h.kv.installed).toBeNull();
+
+    crash = false;
+    await createDownloadRunner(h.deps).request('start');
+    expect(h.fetches).toHaveLength(1);
+    expect(h.kv.installed).toEqual({ version: 'v1', hash: file.hash });
+    expect(h.kv.partial).toBeNull();
+  });
+
+  it('crash after the swap, before the stored bytes were cleared: the relaunch fetches nothing', async () => {
+    const file = await buildPackage('v1', 20);
+    const h = harness(file);
+    h.kv.installed = { version: 'v1', hash: file.hash };
+    h.kv.partial = { hash: file.hash, version: 'v1', bytes: file.bytes.slice() };
+
+    const runner = createDownloadRunner(h.deps);
+    await runner.init();
+    await runner.request('start');
+
+    expect(h.fetches).toEqual([]);
+    expect(runner.state()).toEqual({ name: 'installed', version: 'v1' });
+    expect(h.kv.partial).toBeNull();
+  });
+
+  it('a failed swap of an update leaves the previous package installed', async () => {
+    const v1 = await buildPackage('v1', 10);
+    const v2 = await buildPackage('v2', 12);
+    const h = harness(v2, {
+      install: async () => {
+        throw new Error('QuotaExceededError');
+      },
+    });
+    h.kv.installed = { version: 'v1', hash: v1.hash };
+    const runner = createDownloadRunner(h.deps);
+    await runner.init();
+    await runner.request('start');
+
+    expect(runner.state()).toMatchObject({ name: 'error', reason: 'INSTALL_FAILED' });
+    expect(h.kv.installed).toEqual({ version: 'v1', hash: v1.hash });
+    expect(h.reports.map(codeOf)).toEqual(['INSTALL_FAILED']);
+  });
+
+  it('503 PAYMENT_DISABLED_MOCK_SMS is never reported, not even at the fifth failure', async () => {
+    const file = await buildPackage('v1', 5);
+    const h = harness(file);
+    h.setServer(() =>
+      Promise.reject(new AppError('SERVER_PAYMENT_DISABLED_MOCK_SMS', 'gated', { status: 503 })),
+    );
+    const runner = createDownloadRunner(h.deps);
+    for (let i = 0; i < REPORT_AT_ATTEMPT + 2; i += 1) await runner.request('manual');
+    expect(runner.state()).toMatchObject({ attempt: REPORT_AT_ATTEMPT + 2 });
+    expect(h.reports).toEqual([]);
   });
 });

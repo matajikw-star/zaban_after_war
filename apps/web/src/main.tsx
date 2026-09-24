@@ -28,6 +28,9 @@ import { useContentStore } from './stores/content.ts';
 import { useSettingsStore } from './stores/settings.ts';
 import { strings } from './strings.ts';
 import { startBackup } from './sync/backup-live.ts';
+import { startDownload } from './sync/download-live.ts';
+import { refreshEntitlementNow } from './sync/entitlement-live.ts';
+import { recoverPendingPaymentNow } from './sync/payment-live.ts';
 import { APP_VERSION } from './version.ts';
 import './index.css';
 
@@ -93,6 +96,18 @@ async function bootstrap(): Promise<void> {
   // After the fold, so a pull's re-fold adds to a loaded log. Not awaited: backup is never on
   // the path to the first paint, and it does nothing at all for an anonymous install (§7.4).
   startBackup().catch((err: unknown) => reportError('sync', err, { phase: 'bootstrap.backup' }));
+
+  // Paid content (§7.5, §7.6, §7.8), none of it awaited and none of it on the first paint. The
+  // download runner first, so an entitlement found by the other two has a runner to start. A
+  // `pendingPayment` is asked about before anything assumes it failed; offline leaves it for
+  // the next launch. The cached entitlement is refreshed, never revoked (`sync/entitlement.ts`).
+  startDownload()
+    .then(() => {
+      if (useAuthStore.getState().userId === null) return;
+      void refreshEntitlementNow();
+      void recoverPendingPaymentNow();
+    })
+    .catch((err: unknown) => reportError('download', err, { phase: 'bootstrap.download' }));
 
   breadcrumb('log', 'bootstrap.done', { firstOpen, entitled });
 

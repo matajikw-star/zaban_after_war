@@ -26,7 +26,11 @@ function isServerEntitlement(value: unknown): value is EntitlementResponse {
 }
 
 /** A malformed answer changes nothing: it is not a server response about entitlement. */
-export function mergeEntitlement(cached: Entitlement, server: unknown, at: number): EntitlementMerge {
+export function mergeEntitlement(
+  cached: Entitlement,
+  server: unknown,
+  at: number,
+): EntitlementMerge {
   if (!isServerEntitlement(server)) return { next: cached, mismatch: false };
   if (server.status === 'full') {
     return {
@@ -42,7 +46,10 @@ export function mergeEntitlement(cached: Entitlement, server: unknown, at: numbe
     };
   }
   if (cached.status === 'full') return { next: cached, mismatch: true };
-  return { next: { status: 'none', source: null, grantedAt: null, checkedAt: at }, mismatch: false };
+  return {
+    next: { status: 'none', source: null, grantedAt: null, checkedAt: at },
+    mismatch: false,
+  };
 }
 
 export interface RefreshDeps {
@@ -51,7 +58,8 @@ export interface RefreshDeps {
   readonly adopt: (server: EntitlementResponse) => Promise<EntitlementMerge>;
   /** The cache went (or stayed) `full`: start or resume the paid download (§7.5). */
   readonly onEntitled: () => void;
-  readonly reportMismatch: (err: AppError) => void;
+  /** A mismatch (§7.6) or a cache write that failed: a `client_errors` record. */
+  readonly reportError: (err: AppError) => void;
 }
 
 export type RefreshOutcome = 'full' | 'none' | 'failed';
@@ -65,9 +73,16 @@ export async function refreshEntitlement(deps: RefreshDeps): Promise<RefreshOutc
     breadcrumb('net', 'entitlement.refreshFailed', { code: toAppError(err, 'ME_FAILED').code });
     return 'failed';
   }
-  const merge = await deps.adopt(me.entitlement);
+  let merge: EntitlementMerge;
+  try {
+    merge = await deps.adopt(me.entitlement);
+  } catch (err) {
+    // The device could not store the answer (IndexedDB refused): the cache is as it was.
+    deps.reportError(toAppError(err, 'ENTITLEMENT_STORE_FAILED'));
+    return 'failed';
+  }
   if (merge.mismatch) {
-    deps.reportMismatch(
+    deps.reportError(
       new AppError('ENTITLEMENT_MISMATCH', 'the server says none while the device holds full', {
         cachedSource: merge.next.source,
         cachedGrantedAt: merge.next.grantedAt,

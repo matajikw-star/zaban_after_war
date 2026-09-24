@@ -155,6 +155,18 @@ export async function getPackage(packageId: PackageId): Promise<ContentPackage |
   return row?.json ?? null;
 }
 
+/** A stored package's version and hash without the package: what the download compares (§7.5). */
+export async function packageMeta(
+  packageId: PackageId,
+): Promise<{ readonly version: string; readonly hash: string } | null> {
+  const row = await db.packages.get(packageId);
+  return row === undefined ? null : { version: row.version, hash: row.hash };
+}
+
+/**
+ * One `put` of one row: IndexedDB commits it whole or not at all, so a crash mid-write leaves the
+ * previous package in place (§7.5's atomic swap).
+ */
 export async function putPackage(pkg: ContentPackage, bytes: number): Promise<void> {
   await db.packages.put({
     packageId: pkg.packageId,

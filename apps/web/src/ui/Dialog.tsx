@@ -30,12 +30,11 @@ export function DialogContent({
 }: DialogContentProps) {
   return (
     <RadixDialog.Portal>
-      <RadixDialog.Overlay className="fixed inset-0 z-40 bg-black/40 backdrop-blur-[2px]" />
+      <RadixDialog.Overlay className="fixed inset-0 z-40 bg-[var(--overlay)] backdrop-blur-[2px]" />
       <RadixDialog.Content
         className={cn(
           'fixed left-1/2 top-1/2 z-50 w-[min(28rem,calc(100vw-2rem))] -translate-x-1/2 -translate-y-1/2',
-          'rounded-[var(--radius-card)] border border-[var(--glass-border)] bg-[var(--glass-bg)]',
-          'p-6 shadow-sm backdrop-blur-[var(--glass-blur)] outline-none',
+          'glass-strong rounded-[var(--radius-card)] border p-6 shadow-sm outline-none',
           className,
         )}
         {...props}

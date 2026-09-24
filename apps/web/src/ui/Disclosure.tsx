@@ -21,8 +21,8 @@ export function Disclosure({ label, defaultOpen = false, children, className }: 
       <Collapsible.Trigger
         className={cn(
           'flex min-h-11 w-full items-center justify-between gap-2 rounded-[var(--radius-control)]',
-          'px-3 text-body-sm font-medium text-[var(--fg)] outline-none',
-          'transition-colors duration-[var(--motion-fast)] hover:bg-[var(--border)]',
+          'px-3 text-subtitle-sm font-medium text-[var(--fg)] outline-none',
+          'transition-colors duration-[var(--motion-fast)] hover:bg-[var(--bg-muted)]',
           'focus-visible:ring-2 focus-visible:ring-[var(--fg)]',
         )}
       >
@@ -46,7 +46,7 @@ export function Disclosure({ label, defaultOpen = false, children, className }: 
           />
         </svg>
       </Collapsible.Trigger>
-      <Collapsible.Content className="px-3 pt-2 text-body-sm text-[var(--fg-muted)]">
+      <Collapsible.Content className="px-3 pt-1 pb-2 text-body-sm text-[var(--fg-muted)]">
         {children}
       </Collapsible.Content>
     </Collapsible.Root>

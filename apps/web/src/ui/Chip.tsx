@@ -14,8 +14,7 @@ const chip = cva(
       tone: {
         neutral: 'border border-[var(--border)] bg-[var(--bg-elevated)] text-[var(--fg-muted)]',
         solid: 'bg-[var(--fg)] text-[var(--bg)]',
-        glass:
-          'border border-[var(--glass-border)] bg-[var(--glass-bg)] text-[var(--fg)] backdrop-blur-[var(--glass-blur)]',
+        glass: 'glass border text-[var(--fg)]',
       },
     },
     defaultVariants: { tone: 'neutral' },

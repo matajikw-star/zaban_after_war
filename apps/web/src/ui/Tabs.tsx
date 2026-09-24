@@ -14,8 +14,7 @@ export function TabsList({ className, ...props }: ComponentProps<typeof RadixTab
   return (
     <RadixTabs.List
       className={cn(
-        'inline-flex items-center gap-1 rounded-[var(--radius-pill)] border border-[var(--glass-border)]',
-        'bg-[var(--glass-bg)] p-1 backdrop-blur-[var(--glass-blur)]',
+        'glass inline-flex items-center gap-1 rounded-[var(--radius-pill)] border p-1',
         className,
       )}
       {...props}

@@ -29,19 +29,19 @@ export function SheetContent({
 }: SheetContentProps) {
   return (
     <RadixDialog.Portal>
-      <RadixDialog.Overlay className="fixed inset-0 z-40 bg-black/40 backdrop-blur-[2px]" />
+      <RadixDialog.Overlay className="fixed inset-0 z-40 bg-[var(--overlay)] backdrop-blur-[2px]" />
       <RadixDialog.Content
         className={cn(
           'fixed inset-x-0 bottom-0 z-50 max-h-[85dvh] overflow-y-auto',
-          'rounded-t-[var(--radius-card)] border-t border-[var(--glass-border)] bg-[var(--glass-bg)]',
-          'px-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-3 shadow-sm backdrop-blur-[var(--glass-blur)] outline-none',
+          'glass-strong mx-auto max-w-[430px] rounded-t-[var(--radius-card)] border border-b-0',
+          'px-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-3 shadow-sm outline-none',
           className,
         )}
         {...props}
       >
         <div
           aria-hidden="true"
-          className="mx-auto mb-4 h-1 w-10 rounded-[var(--radius-pill)] bg-[var(--border)]"
+          className="mx-auto mb-4 h-1 w-10 rounded-[var(--radius-pill)] bg-[var(--fg-muted)] opacity-40"
         />
         <RadixDialog.Title className="text-h6 font-medium">{title}</RadixDialog.Title>
         {description === undefined ? null : (

@@ -13,8 +13,11 @@
   --color-fg: var(--fg);
   --color-fg-muted: var(--fg-muted);
   --color-border: var(--border);
+  --color-bg-muted: var(--bg-muted);
   --color-glass-bg: var(--glass-bg);
+  --color-glass-bg-strong: var(--glass-bg-strong);
   --color-glass-border: var(--glass-border);
+  --color-overlay: var(--overlay);
   --color-success: var(--success);
   --color-danger: var(--danger);
 
@@ -51,6 +54,23 @@
   --text-caption-sm--line-height: var(--leading-caption-sm);
 }
 
+/* The two glass surfaces of ADR-0020 as one utility each, so a card, the bottom bar, a sheet and
+   a menu can never drift apart: translucent fill, one-pixel hairline, blur. `glass-strong` is for
+   surfaces that float over other content (sheets, dialogs, menus) and must stay legible. */
+@utility glass {
+  border-color: var(--glass-border);
+  background-color: var(--glass-bg);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
+}
+
+@utility glass-strong {
+  border-color: var(--glass-border);
+  background-color: var(--glass-bg-strong);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
+}
+
 html {
   background-color: var(--bg);
 }
@@ -58,6 +78,9 @@ html {
 body {
   margin: 0;
   background-color: var(--bg);
+  /* A soft monochrome glow at the top of the page: the glass needs something to sit in. */
+  background-image: radial-gradient(150% 70% at 50% -20%, var(--bg-glow), transparent 75%);
+  background-repeat: no-repeat;
   color: var(--fg);
   font-family: var(--font-fa);
   font-size: var(--text-body);

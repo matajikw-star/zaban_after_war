@@ -28,4 +28,9 @@ IFS= read -r email || true
 IFS= read -r password || true
 [ -n "${email:-}" ] && [ -n "${password:-}" ] || fail "expected the email and the password on stdin, one per line"
 
+# `runuser` otherwise inherits this script's cwd — /root, unreadable by kl — as the child's
+# cwd, which it then fails to stat (ticket dev-server/05 #5); the child never needs a particular
+# cwd, so `/` (readable by anyone) is as good a fix as any.
+cd /
+
 runuser -u kl -- /opt/kl/pocketbase superuser upsert "$email" "$password" --dir /opt/kl/pb_data

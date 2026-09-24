@@ -707,13 +707,14 @@ boundary; hooks add behaviour.
 |---|---|---|
 | `users` (auth) | `phone` (text, unique, E.164), `profile` (json: minutes, goal, examDate, fieldCode, updatedAt), `lastSeenAt` | list/view: `@request.auth.id = id`; create/update via hooks only. |
 | `review_events` | `id` (text, 36 chars, UUIDv7 — the id field's pattern is widened), `user` (rel), `itemId`, `at` (number), `kind`, `grade`, `device` | No direct API access; only the sync routes. |
-| `entitlements` | `user` (rel), `product` (`full`), `source` (`zarinpal` / `manual` / `bazaar`), `payment` (rel, optional), `grantedAt`, `note` | view: own; write: hooks/superuser only. |
-| `payments` | `user`, `listPrice`, `salePrice`, `discountCode` (text), `discountAmount`, `payable`, `authority`, `refId`, `cardPan`, `status` (`pending`/`verified`/`failed`/`expired`), `verifiedAt`, `raw` (json) | view: own; write: hooks only. |
+| `entitlements` | `user` (rel), `product` (`full`), `source` (`zarinpal` / `manual` / `bazaar` / `discount` — a 100 % code), `payment` (rel, optional), `grantedAt`, `note`. **Unique (`user`, `product`)**. | view: own; write: hooks/superuser only. |
+| `payments` | `user`, `listPrice`, `salePrice`, `discountCode` (text), `discountAmount`, `payable`, `authority` (unique when non-empty), `refId`, `cardPan`, `status` (`pending`/`verified`/`failed`/`expired`), `failReason` (`cancelled`/`amount_mismatch`/`not_paid`/`gateway_error`), `verifiedAt`, `expiresAt` (created + 2 h), `raw` (json: the gateway's request and verify answers) | view: own; write: hooks only. |
 | `discount_codes` | `code` (unique, uppercase), `type` (`percent`/`fixed`), `value`, `maxUses`, `usedCount`, `perUserOnce` (bool), `expiresAt`, `active`, `note` | superuser only. Managed in the PB admin UI. |
 | `otp_codes` | `phone`, `codeHash`, `expiresAt`, `attempts`, `ip` | hooks only. Purged by cron. |
 | `word_flags` | `user` (optional), `installId`, `itemId`, `reason` (`translation`/`example`/`hint`), `appVersion`, `at` | create via route; read superuser. |
 | `beacons` | `installId`, `user` (optional), `name` (enum, §8.4), `at`, `appVersion` | create via route; read superuser. |
 | `client_errors` | see §10.1 | create via route; read superuser. |
+| `content_downloads` | `user` (rel), `packageId`, `version`, `range` (the `Range` header as sent), `created` | hooks only. One row per paid-package fetch served: the 20-per-day count and the owner's evidence (ADR-0004). |
 | `app_config` | single record: `listPrice`, `salePrice`, `freePresentationLimit`, `minAppVersion`, `supportUrl`, `notice` | public read; superuser write. |
 
 In `pb_migrations/1758000000_init.js` a rule of `""` means anyone and `null` means nobody through
@@ -721,6 +722,9 @@ the REST API — only a hook (which writes with `app.save()`, bypassing rules) o
 `users` collection is PocketBase's default one, edited rather than created: `passwordAuth` off,
 `authToken.duration` 365 days, `email` made optional because the OTP flow creates an account from
 a phone number alone. `app_config` is seeded by the same migration with 450000 / 290000 / 100.
+`1759000000_payment.js` adds what payment needed: `payments.failReason` and `expiresAt`, the
+unique `authority` index, the `discount` source, the unique (`user`, `product`) index on
+`entitlements` (the database's backstop for callback idempotency) and `content_downloads`.
 
 ### 8.2 Routes (`pb_hooks/`)
 

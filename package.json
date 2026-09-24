@@ -24,6 +24,9 @@
     "content:build": "node --experimental-strip-types tools/content-build/index.ts",
     "content:lint": "pnpm --filter @kl/content run lint:content"
   },
+  "dependencies": {
+    "source-map": "^0.7.6"
+  },
   "devDependencies": {
     "@biomejs/biome": "^2.5.12",
     "@types/node": "^22.20.1",

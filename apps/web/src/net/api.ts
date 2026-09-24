@@ -38,6 +38,8 @@ interface ServerErrorBody {
   readonly retryAfter?: number;
   /** `OTP_WRONG` only: how many tries the current code has left. */
   readonly attemptsLeft?: number;
+  /** `DISCOUNT_REJECTED` only: why the code was refused, as `pay/quote` would say it. */
+  readonly codeStatus?: string;
 }
 
 function retryAfterOf(response: Response, body: ServerErrorBody | null): number | null {
@@ -55,7 +57,8 @@ function retryAfterOf(response: Response, body: ServerErrorBody | null): number 
  * - `fetch` rejected (offline, DNS, filtering)  → `NETWORK`
  * - `401`                                       → `UNAUTHORIZED`
  * - `429`                                       → `RATE_LIMITED`, `data.retryAfter` in seconds
- * - a body of `{error:{code}}`                  → `SERVER_<CODE>` (`data.attemptsLeft` when sent)
+ * - a body of `{error:{code}}`                  → `SERVER_<CODE>` (`data.attemptsLeft` and
+ *                                                 `data.codeStatus` when sent)
  * - anything else                               → `HTTP_<status>`
  */
 async function toError(response: Response, route: string): Promise<AppError> {
@@ -79,7 +82,10 @@ async function toError(response: Response, route: string): Promise<AppError> {
   }
   const code = body?.error?.code;
   if (typeof code === 'string' && code.length > 0) {
-    const extra = typeof body?.attemptsLeft === 'number' ? { attemptsLeft: body.attemptsLeft } : {};
+    const extra = {
+      ...(typeof body?.attemptsLeft === 'number' ? { attemptsLeft: body.attemptsLeft } : {}),
+      ...(typeof body?.codeStatus === 'string' ? { codeStatus: body.codeStatus } : {}),
+    };
     return new AppError(`SERVER_${code.toUpperCase()}`, message, { ...data, ...extra });
   }
   return new AppError(`HTTP_${response.status}`, message, data);
@@ -156,7 +162,8 @@ export interface OtpVerifyResponse {
 export interface EntitlementResponse {
   readonly status: 'none' | 'full';
   readonly source: string | null;
-  readonly grantedAt: number | null;
+  /** PocketBase datetime text, as stored (`2026-09-24 10:00:00.000Z`). */
+  readonly grantedAt: string | null;
 }
 
 /** `/api/me`'s user: the stored profile is whatever a device last PATCHed, or null. */
@@ -181,7 +188,9 @@ export interface SyncPullResponse {
   readonly more: boolean;
 }
 
+/** `pay/quote`'s `codeStatus` (what.md §8.2). `none`: no code was sent. */
 export type DiscountCodeStatus =
+  | 'none'
   | 'ok'
   | 'invalid'
   | 'expired'
@@ -189,12 +198,15 @@ export type DiscountCodeStatus =
   | 'used'
   | 'already-entitled';
 
+/** Toman throughout. The client only displays these; it never computes a price (§8.3). */
 export interface PayQuoteResponse {
   readonly listPrice: number;
   readonly salePrice: number;
   readonly discountAmount: number;
   readonly payable: number;
   readonly codeStatus: DiscountCodeStatus;
+  /** The normalised code when `codeStatus` is `ok`, else null. */
+  readonly code: string | null;
 }
 
 /** A 100 % code grants directly and returns no gateway URL (§8.2). */
@@ -204,9 +216,15 @@ export interface PayRequestResponse {
   readonly granted?: boolean;
 }
 
+export type PaymentStatus = 'pending' | 'verified' | 'failed' | 'expired';
+
 export interface PayStatusResponse {
-  readonly status: 'pending' | 'paid' | 'failed' | 'expired';
+  readonly paymentId: string;
+  readonly status: PaymentStatus;
   readonly refId: string | null;
+  readonly failReason: string | null;
+  /** Whether the caller holds a `full` entitlement now, from any source. */
+  readonly entitled: boolean;
 }
 
 /** The `reason` enum of the `word_flags` collection (what.md §8.1, §8.2). */
@@ -307,25 +325,39 @@ export function contentManifest(): Promise<ContentManifest> {
   return request({ method: 'GET', route: '/api/content/manifest', auth: false });
 }
 
+export interface ContentPaidOptions {
+  /** Resume from this byte (`Range: bytes=<from>-`). Omitted or 0: the whole file. */
+  readonly from?: number;
+  /** The ETag the stored bytes came from: a server whose file changed answers a whole 200. */
+  readonly ifRange?: string;
+  readonly signal?: AbortSignal;
+}
+
 /**
  * The raw `Response`, because §7.5 streams this into a buffer and resumes with `Range`. It is the
  * one route that does not hand back parsed JSON.
  */
-export function contentPaid(rangeFrom?: number, signal?: AbortSignal): Promise<Response> {
+export function contentPaid(options: ContentPaidOptions = {}): Promise<Response> {
+  const headers: Record<string, string> = {};
+  if (options.from !== undefined && options.from > 0) {
+    headers.range = `bytes=${options.from}-`;
+    if (options.ifRange !== undefined) headers['if-range'] = options.ifRange;
+  }
   return request({
     method: 'GET',
     route: '/api/content/paid',
     raw: true,
-    ...(rangeFrom === undefined ? {} : { headers: { range: `bytes=${rangeFrom}-` } }),
-    ...(signal === undefined ? {} : { signal }),
+    headers,
+    ...(options.signal === undefined ? {} : { signal: options.signal }),
   });
 }
 
+/** An empty code is sent as no code, so the answer is `none`, never `invalid`. */
 export function payQuote(code?: string): Promise<PayQuoteResponse> {
   return request({
     method: 'POST',
     route: '/api/pay/quote',
-    body: code === undefined ? {} : { code },
+    body: code === undefined || code === '' ? {} : { code },
   });
 }
 
@@ -333,7 +365,7 @@ export function payRequest(code?: string): Promise<PayRequestResponse> {
   return request({
     method: 'POST',
     route: '/api/pay/request',
-    body: code === undefined ? {} : { code },
+    body: code === undefined || code === '' ? {} : { code },
   });
 }
 

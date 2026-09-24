@@ -65,7 +65,12 @@ export type KvKey =
   | 'goalSheetShownDay'
   | 'swUpdateAvailable'
   | 'theme'
-  | 'downloadReceivedBytes'
+  /**
+   * `{hash, version, bytes: Uint8Array}` — the paid package's bytes received so far, and the
+   * manifest hash they belong to, so the next attempt resumes with `Range` (§7.5). Deleted once
+   * the package is installed or the bytes are found to be stale.
+   */
+  | 'downloadPartial'
   /** The `examDate` (epoch ms) the season screen was last shown for — shows it once (§7.8). */
   | 'seasonShownFor'
   /** True once «ذخیرهٔ پیشرفت با شمارهٔ موبایل» has been offered after 50 presentations (§7.4). */

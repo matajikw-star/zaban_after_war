@@ -10,14 +10,17 @@ import { create } from 'zustand';
 import { kvDelete, kvGet, kvSet } from '../db/repo.ts';
 import { now } from '../engine/clock.ts';
 import { breadcrumb } from '../log/breadcrumbs.ts';
+import type { EntitlementResponse } from '../net/api.ts';
+import { type EntitlementMerge, mergeEntitlement } from '../sync/entitlement.ts';
 
 export type EntitlementStatus = 'none' | 'full';
 
 export interface Entitlement {
   readonly status: EntitlementStatus;
-  /** `purchase` | `manual` | `code` — whatever the server said granted it. */
+  /** `zarinpal` | `manual` | `discount` — whatever the server said granted it. */
   readonly source: string | null;
-  readonly grantedAt: number | null;
+  /** Verbatim from the server: PocketBase datetime text. */
+  readonly grantedAt: string | null;
   readonly checkedAt: number;
 }
 
@@ -46,10 +49,14 @@ export interface AuthState {
   load: (installId: string) => Promise<void>;
   signIn: (auth: AuthRecord) => Promise<void>;
   signOut: () => Promise<void>;
-  setEntitlement: (entitlement: Entitlement) => Promise<void>;
+  /**
+   * The only writer of `kv.entitlement`: a server answer, merged by `sync/entitlement.ts`'s
+   * never-revoke rule (§7.6). There is deliberately no plain setter.
+   */
+  adoptServerEntitlement: (server: EntitlementResponse) => Promise<EntitlementMerge>;
 }
 
-export const useAuthStore = create<AuthState>()((set) => ({
+export const useAuthStore = create<AuthState>()((set, get) => ({
   installId: '',
   userId: null,
   phone: null,
@@ -89,11 +96,19 @@ export const useAuthStore = create<AuthState>()((set) => ({
     breadcrumb('log', 'auth.signOut');
   },
 
-  setEntitlement: async (entitlement) => {
-    const stamped: Entitlement = { ...entitlement, checkedAt: entitlement.checkedAt || now() };
-    set({ entitlement: stamped });
-    await kvSet('entitlement', stamped);
-    breadcrumb('log', 'auth.setEntitlement', { status: stamped.status, source: stamped.source });
+  adoptServerEntitlement: async (server) => {
+    const merge = mergeEntitlement(get().entitlement, server, now());
+    if (merge.next !== get().entitlement) {
+      await kvSet('entitlement', merge.next);
+      set({ entitlement: merge.next });
+    }
+    breadcrumb('log', 'auth.adoptServerEntitlement', {
+      server: server?.status ?? null,
+      device: merge.next.status,
+      source: merge.next.source,
+      mismatch: merge.mismatch,
+    });
+    return merge;
   },
 }));
 

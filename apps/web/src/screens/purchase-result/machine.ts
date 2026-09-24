@@ -19,10 +19,10 @@ export type ResultState =
   | { readonly name: 'entitled'; readonly refId: string | null }
   | { readonly name: 'stillPending'; readonly paymentId: string }
   | { readonly name: 'failed'; readonly reason: string }
-  /** The server could not be reached; `then` is the question a retry asks again. */
+  /** The server could not be reached; `retries` is the question a retry asks again. */
   | {
       readonly name: 'offline';
-      readonly then: 'confirm' | 'wait';
+      readonly retries: 'confirm' | 'wait';
       readonly paymentId: string | null;
     }
   | { readonly name: 'loginNeeded' }
@@ -106,7 +106,7 @@ function compute(state: ResultState, event: ResultEvent): ResultState {
           : { name: 'waiting', paymentId: state.paymentId };
       }
       if (event.type === 'OFFLINE') {
-        return { name: 'offline', then: 'confirm', paymentId: state.paymentId };
+        return { name: 'offline', retries: 'confirm', paymentId: state.paymentId };
       }
       return state;
     }
@@ -117,13 +117,13 @@ function compute(state: ResultState, event: ResultEvent): ResultState {
       if (event.type === 'STILL_PENDING')
         return { name: 'stillPending', paymentId: state.paymentId };
       if (event.type === 'OFFLINE')
-        return { name: 'offline', then: 'wait', paymentId: state.paymentId };
+        return { name: 'offline', retries: 'wait', paymentId: state.paymentId };
       return state;
     }
 
     case 'offline':
       if (event.type !== 'RETRY') return state;
-      if (state.then === 'confirm') return { name: 'confirming', paymentId: state.paymentId };
+      if (state.retries === 'confirm') return { name: 'confirming', paymentId: state.paymentId };
       return state.paymentId === null
         ? { name: 'failed', reason: 'unknown_payment' }
         : { name: 'waiting', paymentId: state.paymentId };

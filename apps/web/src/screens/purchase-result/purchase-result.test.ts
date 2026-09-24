@@ -63,7 +63,7 @@ describe('result transitions', () => {
 
   it('offline retries the question it could not ask', () => {
     const a = transition(confirming, { type: 'OFFLINE' });
-    expect(a).toEqual({ name: 'offline', then: 'confirm', paymentId: 'p1' });
+    expect(a).toEqual({ name: 'offline', retries: 'confirm', paymentId: 'p1' });
     expect(transition(a, { type: 'RETRY' })).toEqual(confirming);
     const b = transition(waiting, { type: 'OFFLINE' });
     expect(transition(b, { type: 'RETRY' })).toEqual(waiting);

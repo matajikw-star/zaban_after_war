@@ -328,8 +328,20 @@ function withRoute(name, handler, opts) {
     const ms = Date.now() - startedAt;
     log($app, name, userId, installId, ms, status, code, errMessage, loggedInput);
 
+    // A handler that wants to answer with bytes rather than JSON (the sourcemap route) returns
+    // `blobResponse(...)` instead of a plain object. Everything else about the envelope —
+    // auth, caps, the log line, error handling — stays identical.
+    if (payload && payload.__blob === true) {
+      return e.blob(status, payload.contentType, payload.bytes);
+    }
+
     return e.json(status, payload);
   };
+}
+
+/** A handler returns this to answer with raw bytes instead of the JSON envelope. */
+function blobResponse(contentType, bytes) {
+  return { __blob: true, contentType: contentType, bytes: bytes };
 }
 
 /** One line per request. §10.2 fixes the attribute names; tools/logs reads them. */
@@ -361,6 +373,7 @@ function log(app, name, userId, installId, ms, status, code, errMessage, input) 
 
 module.exports = {
   withRoute,
+  blobResponse,
   // exported for the routes that need them and for the tests
   AppError,
   CODES,

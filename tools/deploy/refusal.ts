@@ -63,3 +63,19 @@ export function checkRefusal(status: GitStatus, allowBranch: string | null): Ref
 
   return OK;
 }
+
+/**
+ * What the entry points do with a refusal. A real run obeys it. `--dry-run` runs nothing, so it
+ * never obeys it — it carries the reason along to print as a loud warning above the plan, which
+ * is how a deploy is previewed from a branch that is not (yet) at its remote ref.
+ */
+export type Gate =
+  | { readonly kind: 'run' }
+  | { readonly kind: 'refuse'; readonly reason: string }
+  | { readonly kind: 'preview'; readonly wouldRefuse: string | null };
+
+export function gate(refusal: RefusalCheck, dryRun: boolean): Gate {
+  if (dryRun) return { kind: 'preview', wouldRefuse: refusal.refuse ? refusal.reason : null };
+  if (refusal.refuse) return { kind: 'refuse', reason: refusal.reason ?? 'refused' };
+  return { kind: 'run' };
+}

@@ -1013,13 +1013,21 @@ the one place the actual commands are generated.
    <branch>` replaces that comparison with `HEAD` equals `origin/<branch>` instead (never the
    dirty-tree check), for a staging deploy, with a loud warning — a local branch checked out
    under that name proves nothing on its own; it is HEAD's sha against the pushed ref's sha.
-   `--dry-run` prints every command and runs none.
-2. `web`: build → ship everything except `*.map` to `/opt/kl/pb_public/` → ship the `*.map`
-   files separately to `/opt/kl/sourcemaps/<sha>/`, never into `pb_public`.
-3. `server`: ship `pb_hooks/`, `pb_migrations/` → `systemctl restart kl-pocketbase` (migrations
-   run on start) → poll `/api/health` on the VPS itself for up to 30s; a timeout exits non-zero
-   with `DEPLOY_HEALTH_TIMEOUT`.
-4. `content`: `pnpm content:build` → ship `server/content/` (the paid package + manifest).
+   `--dry-run` prints every command and runs none — on any branch and any tree: when a real run
+   would be refused it prints the reason as a loud `DEPLOY WOULD BE REFUSED` warning and then
+   the plan (`refusal.ts` → `gate()`). Every `ssh` is `ssh -o BatchMode=yes [-i
+   <DEPLOY_SSH_KEY_FILE>]`, so a key or host-key problem fails a step instead of hanging it.
+2. `web`: `pnpm content:build` (skipped when `content` ran earlier in the same deploy) → build →
+   refuse with `DEPLOY_NO_FREE_PACKAGE` unless `dist/content/free.json` exists → ship everything
+   except `*.map` to `/opt/kl/pb_public/` (so the free package is served from there, §6) → ship
+   the `*.map` files separately to `/opt/kl/sourcemaps/<sha>/`, never into `pb_public`.
+3. `server`: ship `pb_hooks/`, `pb_migrations/` → `sudo -n /bin/systemctl restart
+   kl-pocketbase` as `kl` (the exact command bootstrap.sh's sudoers line allows; migrations run on
+   start), refused with `DEPLOY_NO_ENV` while `/opt/kl/.env` is missing, since a restart also
+   starts a stopped unit → poll `/api/health` on the VPS itself for up to 30s; a timeout exits
+   non-zero with `DEPLOY_HEALTH_TIMEOUT`.
+4. `content`: `pnpm content:build` → ship `server/content/` (`paid.json` + `manifest.json`) to
+   `/opt/kl/content`, the server's `CONTENT_DIR`.
 5. `landing` / `admin`: build → ship to `/opt/kl/landing` / `/opt/kl/admin`.
 6. Append to `/opt/kl/deploys.log` and to `wiki/log.md`.
 
@@ -1176,7 +1184,9 @@ done (§14.3) and needs no key — it is managed by hand in Parspack's CDN panel
 GitHub: `DEPLOY_HOST`, `DEPLOY_USER`, `DEPLOY_SSH_KEY`, `ANDROID_KEYSTORE_B64`,
 `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`. Build: `VITE_API_ORIGIN`, `VITE_APP_NAME`
 (the deferred Persian name — one constant). Local tools (`.env.local`, git-ignored):
-`KL_API_ORIGIN`, `KL_ADMIN_EMAIL`, `KL_ADMIN_PASSWORD`.
+`KL_API_ORIGIN`, `KL_ADMIN_EMAIL`, `KL_ADMIN_PASSWORD`, and for `pnpm run deploy` the GitHub
+names above (`DEPLOY_HOST`, `DEPLOY_USER`) plus `DEPLOY_SSH_KEY_FILE` — a path to the key file
+(`~` expanded), local only, since CI holds the key itself in `DEPLOY_SSH_KEY`.
 
 ---
 

@@ -11,29 +11,42 @@
 // measured in milliseconds.
 
 import type { Target } from './args.ts';
+import { sshPrefix } from './ssh.ts';
 
 export interface DeployContext {
   readonly sha: string;
   readonly host: string;
   readonly user: string;
+  /** DEPLOY_SSH_KEY_FILE, `~`-expanded; `null` = ssh's own defaults (see ssh.ts). */
+  readonly keyFile: string | null;
   /** Who ran it — goes on the `/opt/kl/deploys.log` line (what.md §10.5). */
   readonly who: string;
 }
 
+/** A secret the runner pipes into a step's stdin — named here, supplied only at run time. */
+export type StdinSource = 'server-env' | 'superuser-credentials';
+
 export interface Step {
-  readonly target: Target | 'log';
+  readonly target: Target | 'log' | 'provision';
   readonly description: string;
-  /** One line, run through `bash -c` — pipes and `ssh … "…"` are expected. */
+  /** One line, run through `bash -c` — pipes and `ssh … "…"` are expected. Never a secret. */
   readonly command: string;
+  /** Set only by provision-plan.ts: the step reads that secret on stdin. The plan names it; the
+   *  value never enters a Step, so printing a plan cannot print a secret. */
+  readonly stdin?: StdinSource;
 }
 
-function remoteOf(ctx: DeployContext): string {
-  return `${ctx.user}@${ctx.host}`;
+/** `ssh -o BatchMode=yes [-i key] user@host` — see ssh.ts. */
+function ssh(ctx: DeployContext): string {
+  return sshPrefix({ user: ctx.user, host: ctx.host, keyFile: ctx.keyFile });
 }
 
 /** what.md §14.4: the server target polls before declaring success, since a restart is not
  *  instant. `HEALTH_TIMEOUT_S` is a budget, not a promise the server is up by then. */
 const HEALTH_TIMEOUT_S = 30;
+
+/** Must match bootstrap.sh's sudoers line character for character — sudo compares the path. */
+export const RESTART_POCKETBASE = '/bin/systemctl restart kl-pocketbase';
 const HEALTH_POLL_INTERVAL_S = 1;
 
 /** DEPLOY_HEALTH_TIMEOUT: a distinct, greppable string so a failed deploy's exit is diagnosable
@@ -50,7 +63,7 @@ function healthCheckCommand(ctx: DeployContext): string {
     `fi; ` +
     `sleep ${HEALTH_POLL_INTERVAL_S}; ` +
     `done`;
-  return `ssh ${remoteOf(ctx)} "${remoteScript}"`;
+  return `${ssh(ctx)} "${remoteScript}"`;
 }
 
 /** `local/dir/` → `remoteDir.new` → swapped into `remoteDir`. Two steps, always in this order. */
@@ -69,13 +82,13 @@ function shipAndSwap(
       description: `${label}: ship`,
       command:
         `tar czf -${exclude} -C ${localDir} . | ` +
-        `ssh ${remoteOf(ctx)} "rm -rf ${remoteDir}.new && mkdir -p ${remoteDir}.new && tar xzf - -C ${remoteDir}.new"`,
+        `${ssh(ctx)} "rm -rf ${remoteDir}.new && mkdir -p ${remoteDir}.new && tar xzf - -C ${remoteDir}.new"`,
     },
     {
       target,
       description: `${label}: swap in`,
       command:
-        `ssh ${remoteOf(ctx)} "` +
+        `${ssh(ctx)} "` +
         `[ -d ${remoteDir} ] && mv ${remoteDir} ${remoteDir}.prev; ` +
         `mv ${remoteDir}.new ${remoteDir}; ` +
         `rm -rf ${remoteDir}.prev"`,
@@ -104,11 +117,19 @@ function serverSteps(ctx: DeployContext): Step[] {
       '/opt/kl/pb_migrations',
       ctx,
     ),
-    // Migrations run on start (what.md §14.4): the restart is what applies them.
+    // Migrations run on start (what.md §14.4): the restart is what applies them. `kl` is not
+    // root: bootstrap.sh grants it NOPASSWD sudo for exactly `/bin/systemctl restart
+    // kl-pocketbase` (and caddy's restart/reload/status), so the full path must match that
+    // sudoers line, and `-n` makes sudo fail instead of prompting. A restart also *starts* a
+    // stopped unit — this is how the first deploy after `pnpm run provision` brings PocketBase
+    // up — so it refuses while /opt/kl/.env is missing rather than start without secrets.
     {
       target: 'server',
       description: 'server: restart kl-pocketbase',
-      command: `ssh ${remoteOf(ctx)} "systemctl restart kl-pocketbase"`,
+      command:
+        `${ssh(ctx)} "` +
+        `test -f /opt/kl/.env || { echo 'DEPLOY_NO_ENV: /opt/kl/.env is missing - run pnpm run provision first' >&2; exit 1; }; ` +
+        `sudo -n ${RESTART_POCKETBASE}"`,
     },
     {
       target: 'server',
@@ -118,16 +139,40 @@ function serverSteps(ctx: DeployContext): Step[] {
   ];
 }
 
-function webSteps(ctx: DeployContext): Step[] {
+/**
+ * The free package (`free.json`) is not in git: `pnpm content:build` writes it to
+ * `apps/web/public/content/`, Vite copies it to `dist/content/`, and PocketBase serves it from
+ * pb_public with the site (what.md §6). A web build without it ships a site with no words — and
+ * the swap would delete the copy already live. So `web` builds the content first unless the
+ * `content` target already did in this run, and refuses to ship a dist without the file.
+ */
+function webSteps(ctx: DeployContext, contentBuiltEarlier: boolean): Step[] {
+  const build: Step[] = contentBuiltEarlier
+    ? []
+    : [
+        {
+          target: 'web',
+          description: 'web: build the free package',
+          command: 'pnpm content:build',
+        },
+      ];
   return [
+    ...build,
     { target: 'web', description: 'web: build', command: 'pnpm --filter @kl/web build' },
+    {
+      target: 'web',
+      description: 'web: check the free package is in the build',
+      command:
+        'test -s apps/web/dist/content/free.json || ' +
+        "{ echo 'DEPLOY_NO_FREE_PACKAGE: apps/web/dist/content/free.json is missing' >&2; exit 1; }",
+    },
     ...shipAndSwap('web', 'web: site', 'apps/web/dist', '/opt/kl/pb_public', ctx, true),
     {
       target: 'web',
       description: 'web: ship source maps',
       command:
         `cd apps/web/dist && find . -name '*.map' | tar czf - -T - | ` +
-        `ssh ${remoteOf(ctx)} "mkdir -p /opt/kl/sourcemaps/${ctx.sha} && tar xzf - -C /opt/kl/sourcemaps/${ctx.sha}"`,
+        `${ssh(ctx)} "mkdir -p /opt/kl/sourcemaps/${ctx.sha} && tar xzf - -C /opt/kl/sourcemaps/${ctx.sha}"`,
     },
   ];
 }
@@ -150,10 +195,11 @@ function adminSteps(ctx: DeployContext): Step[] {
   ];
 }
 
-const BUILDERS: Record<Target, (ctx: DeployContext) => Step[]> = {
+const BUILDERS: Record<Target, (ctx: DeployContext, targets: readonly Target[]) => Step[]> = {
   content: contentSteps,
   server: serverSteps,
-  web: webSteps,
+  // args.ts orders `content` before `web`, so when both are asked for the content is built once.
+  web: (ctx, targets) => webSteps(ctx, targets.includes('content')),
   landing: landingSteps,
   admin: adminSteps,
 };
@@ -169,11 +215,11 @@ function logStep(ctx: DeployContext, targets: readonly Target[]): Step {
   return {
     target: 'log',
     description: 'record: append /opt/kl/deploys.log',
-    command: `ssh ${remoteOf(ctx)} "echo '${line}' >> /opt/kl/deploys.log"`,
+    command: `${ssh(ctx)} "echo '${line}' >> /opt/kl/deploys.log"`,
   };
 }
 
 export function buildPlan(targets: readonly Target[], ctx: DeployContext): Step[] {
-  const steps = targets.flatMap((target) => BUILDERS[target](ctx));
+  const steps = targets.flatMap((target) => BUILDERS[target](ctx, targets));
   return [...steps, logStep(ctx, targets)];
 }

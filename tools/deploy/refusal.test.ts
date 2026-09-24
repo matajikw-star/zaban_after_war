@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { checkRefusal, type GitStatus } from './refusal.ts';
+import { checkRefusal, type GitStatus, gate } from './refusal.ts';
 
 const clean: GitStatus = {
   dirty: false,
@@ -87,5 +87,32 @@ describe('checkRefusal', () => {
     const result = checkRefusal(unresolved, 'develop');
     expect(result.refuse).toBe(true);
     expect(result.reason).toMatch(/could not resolve origin\/develop/);
+  });
+});
+
+describe('gate', () => {
+  const refused = { refuse: true, reason: 'HEAD (bbb222) is not origin/main (aaa111)' };
+  const allowed = { refuse: false, reason: null };
+
+  it('a real run obeys a refusal', () => {
+    expect(gate(refused, false)).toEqual({ kind: 'refuse', reason: refused.reason });
+  });
+
+  it('a real run with no refusal runs', () => {
+    expect(gate(allowed, false)).toEqual({ kind: 'run' });
+  });
+
+  it('--dry-run never stops on a refusal: it previews and carries the reason as a warning', () => {
+    expect(gate(refused, true)).toEqual({ kind: 'preview', wouldRefuse: refused.reason });
+  });
+
+  it('--dry-run with nothing to refuse previews with no warning', () => {
+    expect(gate(allowed, true)).toEqual({ kind: 'preview', wouldRefuse: null });
+  });
+
+  it('a dirty tree: the dry run still previews, the real run is still refused', () => {
+    const dirty = checkRefusal({ ...clean, dirty: true }, null);
+    expect(gate(dirty, true).kind).toBe('preview');
+    expect(gate(dirty, false).kind).toBe('refuse');
   });
 });

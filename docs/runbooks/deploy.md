@@ -13,7 +13,16 @@ VPS; nobody edits files on the server by hand.
   locally" — a local branch literally named `develop` with commits `origin/develop` does not
   have is refused exactly like any other unpushed branch. Push first.
 - `DEPLOY_HOST` and `DEPLOY_USER` (default `kl`) come from `.env.local` or the environment —
-  never from source. `.env.example` documents both.
+  never from source. `.env.example` documents both. `DEPLOY_SSH_KEY_FILE` (optional) is the
+  private key file to use, e.g. `~/.ssh/kl_root.pem` (`~` is expanded; the same key works for
+  `kl`, since bootstrap copied root's `authorized_keys`); without it ssh uses its own defaults.
+- Every `ssh` runs with `-o BatchMode=yes`: a refused key, a passphrase prompt or an unknown
+  host key fails the step instead of hanging the deploy. So connect once by hand first
+  (`ssh -i ~/.ssh/kl_root.pem kl@$DEPLOY_HOST true`) so the host key is in `known_hosts`, and
+  use a key without a passphrase or one already loaded in `ssh-agent`.
+- The `kl` user is not root. It restarts PocketBase through the one NOPASSWD sudo rule
+  bootstrap.sh gave it, as `sudo -n /bin/systemctl restart kl-pocketbase` — the path must match
+  the sudoers line exactly, and `-n` makes a missing rule an error rather than a prompt.
 - This machine has `ssh` and `tar` but no `rsync`, so every transfer is `tar | ssh … tar x`
   rather than rsync — what.md §14.4 said rsync originally; that line was corrected in the same
   commit that shipped this script (ticket dev-server/04).
@@ -34,16 +43,30 @@ pnpm run deploy all --allow-branch develop         # staging, loudly
 ```
 
 Targets: `web`, `server`, `content`, `landing`, `admin`, `all`. `--dry-run` is always safe, on
-any branch, on any tree — use it first when unsure what a deploy will do.
+any branch, on any tree: it runs nothing and always prints the plan. When a real run would be
+refused — a dirty tree, or `HEAD` not at `origin/main` / `origin/<allow-branch>` — it prints
+`DEPLOY WOULD BE REFUSED: <reason>` loudly first, then the plan, so a deploy can be previewed
+from a branch that is ahead of its remote. The refusal still stops every real run. Without
+`DEPLOY_HOST` set, a dry run prints `<DEPLOY_HOST unset>` in its place; a real run refuses.
 
 ## What each target does
 
-- **`content`** — `pnpm content:build`, then ships `server/content/` (the paid package plus the
-  manifest) to `/opt/kl/content`.
+- **`content`** — `pnpm content:build`, then ships `server/content/` (`paid.json` plus
+  `manifest.json`) to `/opt/kl/content` — the server's `CONTENT_DIR`, where the content routes (`[planned]`, what.md §8.2)
+  will read them. The free package does not go here; it ships with `web`.
 - **`server`** — ships `pb_hooks/` and `pb_migrations/` to `/opt/kl/pb_hooks` and
-  `/opt/kl/pb_migrations`, restarts `kl-pocketbase` (migrations run on start), then
-  `curl`s `/api/health` on the VPS itself.
-- **`web`** — builds `apps/web`, ships everything except `*.map` to `/opt/kl/pb_public`
+  `/opt/kl/pb_migrations`, restarts `kl-pocketbase` with `sudo -n` (migrations run on start),
+  then polls `/api/health` on the VPS itself. The restart refuses with `DEPLOY_NO_ENV` while
+  `/opt/kl/.env` is missing: a restart also *starts* a stopped unit, and PocketBase must never
+  come up without its env (run `pnpm run provision` first).
+- **`web`** — runs `pnpm content:build` first (unless `content` is part of the same run and
+  already did), because the free package `free.json` is not in git: `content:build` writes it
+  to `apps/web/public/content/`, Vite copies it into `dist/content/free.json`, and PocketBase
+  serves it from `pb_public` with the site. A dist without it fails the deploy
+  (`DEPLOY_NO_FREE_PACKAGE`) instead of swapping in a site with no words. When `content/`
+  changed, deploy `content web` together, so the free file and the manifest in
+  `/opt/kl/content` describe the same build. Then it builds `apps/web`, ships everything
+  except `*.map` to `/opt/kl/pb_public`
   (PocketBase serves this directly), and ships the `*.map` files separately to
   `/opt/kl/sourcemaps/<sha>/` — never into `pb_public`, so a client can never fetch its own
   source map. `tools/errors` reads them back through the superuser-only

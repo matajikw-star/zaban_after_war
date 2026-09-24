@@ -33,5 +33,10 @@ pnpm (`12.3.4`) does not strip that separator for `run` (pnpm/pnpm#13295), so it
 `extraction/RUNBOOK.md`.
 
 Credentials for the server-facing tools come from `.env.local` (`KL_API_ORIGIN`,
-`KL_ADMIN_EMAIL`, `KL_ADMIN_PASSWORD`, plus `DEPLOY_HOST`/`DEPLOY_USER` for `deploy`) and never
-from source (what.md §18).
+`KL_ADMIN_EMAIL`, `KL_ADMIN_PASSWORD`, plus `DEPLOY_HOST`/`DEPLOY_USER`/`DEPLOY_SSH_KEY_FILE`
+for `deploy`) and never from source (what.md §18). Every `ssh` the deploy runs is
+`ssh -o BatchMode=yes [-i <DEPLOY_SSH_KEY_FILE>]`, so it fails instead of prompting.
+
+`--dry-run` always prints the plan and runs nothing. When a real run would be refused (dirty
+tree, HEAD not at `origin/main` or `origin/<allow-branch>`), the dry run says so in a loud
+warning first; the refusal itself only ever stops a real run.

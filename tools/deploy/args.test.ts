@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { ALL_TARGETS, parseDeployArgs } from './args.ts';
+import { ALL_TARGETS, parseDeployArgs, parseProvisionArgs } from './args.ts';
 
 describe('parseDeployArgs', () => {
   it('parses one target', () => {
@@ -53,5 +53,26 @@ describe('parseDeployArgs', () => {
 
   it('rejects --allow-branch with no value', () => {
     expect(() => parseDeployArgs(['web', '--allow-branch'])).toThrow(/needs a branch name/);
+  });
+});
+
+describe('parseProvisionArgs', () => {
+  it('takes no target: bare provision is a real run from main', () => {
+    expect(parseProvisionArgs([])).toEqual({ allowBranch: null, dryRun: false });
+  });
+
+  it('accepts --dry-run and --allow-branch in either form', () => {
+    expect(parseProvisionArgs(['--dry-run', '--allow-branch', 'develop'])).toEqual({
+      allowBranch: 'develop',
+      dryRun: true,
+    });
+    expect(parseProvisionArgs(['--allow-branch=develop']).allowBranch).toBe('develop');
+  });
+
+  it('rejects a target, an unknown flag, and the literal -- pnpm 12 passes through', () => {
+    expect(() => parseProvisionArgs(['web'])).toThrow(/unexpected argument web/);
+    expect(() => parseProvisionArgs(['--force'])).toThrow(/unexpected argument --force/);
+    expect(() => parseProvisionArgs(['--', '--dry-run'])).toThrow(/unexpected argument --/);
+    expect(() => parseProvisionArgs(['--allow-branch'])).toThrow(/needs a branch name/);
   });
 });

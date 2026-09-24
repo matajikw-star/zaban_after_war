@@ -73,3 +73,42 @@ export function parseDeployArgs(argv: readonly string[]): DeployArgs {
 
   return { targets, allowBranch, dryRun };
 }
+
+export interface ProvisionArgs {
+  readonly allowBranch: string | null;
+  readonly dryRun: boolean;
+}
+
+/**
+ * `pnpm run provision [--dry-run] [--allow-branch <branch>]` — the same flags as deploy, with the
+ * same meaning, and no targets: provisioning is one thing.
+ */
+export function parseProvisionArgs(argv: readonly string[]): ProvisionArgs {
+  let allowBranch: string | null = null;
+  let dryRun = false;
+
+  for (let i = 0; i < argv.length; i++) {
+    const arg = argv[i];
+    if (arg === undefined) continue;
+    if (arg === '--dry-run') {
+      dryRun = true;
+      continue;
+    }
+    if (arg === '--allow-branch') {
+      const next = argv[i + 1];
+      if (next === undefined) throw new Error('--allow-branch needs a branch name');
+      allowBranch = next;
+      i++;
+      continue;
+    }
+    if (arg.startsWith('--allow-branch=')) {
+      allowBranch = arg.slice('--allow-branch='.length);
+      continue;
+    }
+    throw new Error(
+      `unexpected argument ${arg} (provision takes only --dry-run and --allow-branch <branch>)`,
+    );
+  }
+
+  return { allowBranch, dryRun };
+}

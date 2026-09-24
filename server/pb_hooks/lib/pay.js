@@ -213,7 +213,32 @@ function grant(tx, userId, source, paymentId, note, nowMs) {
   return { record: row, created: true };
 }
 
-/** One more use of `code`. Atomic; a use past maxUses (two payments in flight) is logged. */
+/**
+ * Take one use of `code` only if one is left: atomic, `usedCount < maxUses` in the UPDATE itself.
+ * The 100 % grant path uses this — nothing has been paid, so a code with no use left is refused.
+ *
+ * @returns {boolean} true when the use was claimed
+ */
+function claimUse(tx, code) {
+  return (
+    tx
+      .db()
+      .newQuery(
+        'UPDATE discount_codes SET usedCount = usedCount + 1 ' +
+          'WHERE code = {:code} AND usedCount < maxUses',
+      )
+      .bind({ code: code })
+      .execute()
+      .rowsAffected() === 1
+  );
+}
+
+/**
+ * One more use of `code`, unconditionally. Atomic; a use past maxUses (two payments in flight on
+ * a code's last use) is logged as `pay.code_over_limit`, never refused. The paid path uses this
+ * on purpose: by the time it runs the user has paid the discounted price, so the discount is
+ * honoured and the owner sees the overrun in the log. Contrast claimUse, for 100 % grants.
+ */
 function countUse(tx, app, code, paymentId) {
   if (!code) return;
   const result = tx
@@ -282,11 +307,20 @@ function requestPayment(app, user, rawCode, nowMs) {
   if (q.payable === 0) {
     let paymentId = '';
     let alreadyEntitled = false;
+    let exhausted = false;
     // Nothing is thrown inside the transaction callback: an AppError crossing the Go boundary
-    // loses its code, so the refusal is carried out as a flag and thrown after.
+    // loses its code, so each refusal is carried out as a flag and thrown after.
     app.runInTransaction((tx) => {
       if (entitlementOf(tx, user.id)) {
         alreadyEntitled = true;
+        return;
+      }
+      // The use is claimed first, conditionally: quote() read usedCount outside this transaction,
+      // so several users can arrive here for a code's last use. Only one claim succeeds; the
+      // others grant nothing and save nothing. (No money was taken, so refusing is free — unlike
+      // the paid path, where countUse only logs an over-limit use.)
+      if (!claimUse(tx, q.code)) {
+        exhausted = true;
         return;
       }
       const row = newPayment(tx, user.id, q, nowMs);
@@ -296,10 +330,18 @@ function requestPayment(app, user, rawCode, nowMs) {
       tx.save(row);
       paymentId = row.id;
       grant(tx, user.id, 'discount', row.id, `discount code ${q.code}`, nowMs);
-      countUse(tx, app, q.code, row.id);
     });
     if (alreadyEntitled) {
       throw new AppError(CODES.ALREADY_ENTITLED, 'this account already holds the full package');
+    }
+    if (exhausted) {
+      throw new AppError(
+        CODES.DISCOUNT_REJECTED,
+        'discount code is exhausted',
+        400,
+        { codeStatus: 'exhausted' },
+        { codeStatus: 'exhausted' },
+      );
     }
     app
       .logger()

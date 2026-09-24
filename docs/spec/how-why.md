@@ -861,7 +861,13 @@ What `what.md` §8.2/§8.3 did not already fix, and why each went the way it did
 - **A 100 % code grants with `source: discount`**, a new `entitlements.source` value, in one
   transaction with its payment row (`payable: 0`, `verified`) and the code's use, and the
   entitlement check is repeated inside the transaction so two taps cannot both grant. `manual`
-  would have mixed the owner's gifts with public codes in every count.
+  would have mixed the owner's gifts with public codes in every count. *Fixed at review
+  (2026-09-24):* the first version checked `maxUses` only in `quote()`, outside the transaction,
+  and counted the use unconditionally, so eight users racing for a 100 % code's last use got 4–7
+  free packages in the test. The grant now claims the use first with
+  `UPDATE … SET usedCount = usedCount + 1 WHERE code = ? AND usedCount < maxUses` and grants only
+  if that changed a row. The paid path keeps the unconditional count on purpose: the user has
+  already paid the discounted price, so an overrun is honoured and logged, not refused.
 - **`maxUses` 0 means exhausted, not unlimited**, because §8.3 says `usedCount < maxUses` and a
   code the owner saved without a limit should fail closed, not give the product away. A blank
   `expiresAt` never expires. Percent discounts round down (`floor`), so a code never takes more

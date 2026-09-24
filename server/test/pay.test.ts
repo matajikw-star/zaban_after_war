@@ -394,6 +394,40 @@ describe('POST /api/pay/request', () => {
     expect((await codeRecord('FREE100')).usedCount).toBe(1);
   });
 
+  it("a 100 % code's last use goes to exactly one of several users racing for it", async () => {
+    await makeCode({ code: 'LASTFREE', type: 'percent', value: 100, maxUses: 1 });
+    const racers = await Promise.all(
+      Array.from({ length: 8 }, () => server.createUser(nextPhone())),
+    );
+    const before = stub.calls.length;
+
+    const results = await Promise.all(racers.map((u) => request(u.token, 'LASTFREE')));
+
+    const granted = results.filter((r) => r.status === 200);
+    const refused = results.filter((r) => r.status !== 200);
+    expect(granted, JSON.stringify(results.map((r) => r.body))).toHaveLength(1);
+    expect(granted[0]?.body.granted).toBe(true);
+    for (const r of refused) {
+      expect(r.status).toBe(400);
+      expect(r.body.error.code).toBe('DISCOUNT_REJECTED');
+      expect(r.body.codeStatus).toBe('exhausted');
+    }
+    expect((await codeRecord('LASTFREE')).usedCount).toBe(1);
+
+    let entitled = 0;
+    for (const u of racers) entitled += (await entitlements(u.id)).length;
+    expect(entitled).toBe(1);
+
+    // The losers have no payment row either: nothing is saved for a refused grant.
+    const filter = encodeURIComponent("discountCode='LASTFREE'");
+    const rows = await server.asSuperuser<any>(
+      'GET',
+      `/api/collections/payments/records?filter=${filter}`,
+    );
+    expect(rows.body.items).toHaveLength(1);
+    expect(stub.calls.length).toBe(before);
+  });
+
   it('already-entitled is refused and never reaches the gateway', async () => {
     const phone = nextPhone();
     const user = await server.createUser(phone);

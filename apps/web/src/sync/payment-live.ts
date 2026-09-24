@@ -55,6 +55,12 @@ export function writePendingPayment(paymentId: string, userId: string): Promise<
   return kvSet('pendingPayment', record);
 }
 
+/** Clears `kv.pendingPayment` when it names this payment (an ok result, settled by `/api/me`). */
+export async function settlePendingPayment(paymentId: string): Promise<void> {
+  const pending = await paymentDeps.readPending();
+  if (pending !== null && pending.paymentId === paymentId) await paymentDeps.clearPending();
+}
+
 /** At launch, fire and forget. Offline leaves the record for the next launch. */
 export function recoverPendingPaymentNow(): Promise<RecoveryOutcome> {
   return recoverPendingPayment(paymentDeps);

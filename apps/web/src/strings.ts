@@ -192,7 +192,8 @@ export const strings = {
       'پرداخت هنوز تأیید نشده است. اگر مبلغی از حساب شما کم شده، به‌محض تأیید، نسخهٔ کامل خودبه‌خود فعال می‌شود.',
     checkAgain: 'بررسی دوباره',
     entitled: 'نسخهٔ کامل فعال شد.',
-    refId: (ref: string) => `کد پیگیری: ${ref}`,
+    /** Followed by the bank's reference, isolated left-to-right in the markup. */
+    refIdLabel: 'کد پیگیری:',
     startReview: 'شروع مرور',
     failedTitle: 'پرداخت انجام نشد.',
     reasons: {

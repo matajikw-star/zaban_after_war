@@ -31,8 +31,7 @@ export function BottomNav() {
     <nav
       className={cn(
         'fixed inset-x-0 bottom-0 z-30 mx-auto flex w-full max-w-[430px] items-stretch justify-around',
-        'border-t border-[var(--glass-border)] bg-[var(--glass-bg)] backdrop-blur-[var(--glass-blur)]',
-        'px-2 pb-[env(safe-area-inset-bottom,0px)]',
+        'glass border-t px-2 pb-[env(safe-area-inset-bottom,0px)]',
       )}
     >
       {ITEMS.map(({ to, label, Icon }) => (
@@ -42,12 +41,23 @@ export function BottomNav() {
           end={to === '/'}
           className={({ isActive }) =>
             cn(
-              'flex min-h-11 flex-1 flex-col items-center justify-center gap-0.5 py-2 text-caption',
-              isActive ? 'text-[var(--fg)] font-medium' : 'text-[var(--fg-muted)]',
+              'group flex min-h-11 flex-1 flex-col items-center justify-center gap-0.5 py-2 text-caption outline-none',
+              'transition-colors duration-[var(--motion-fast)]',
+              isActive ? 'font-medium text-[var(--fg)]' : 'text-[var(--fg-muted)]',
             )
           }
         >
-          <Icon size={22} aria-hidden="true" />
+          {/* The active tab gets a filled pill behind its icon — shape, not colour, says "here". */}
+          <span
+            className={cn(
+              'flex h-7 w-14 items-center justify-center rounded-[var(--radius-pill)]',
+              'transition-colors duration-[var(--motion-fast)]',
+              'group-focus-visible:ring-2 group-focus-visible:ring-[var(--fg)]',
+              'group-aria-[current=page]:bg-[var(--bg-muted)]',
+            )}
+          >
+            <Icon size={20} aria-hidden="true" />
+          </span>
           <span>{label}</span>
         </NavLink>
       ))}

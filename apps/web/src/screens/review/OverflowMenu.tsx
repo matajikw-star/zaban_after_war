@@ -19,7 +19,7 @@ export interface OverflowMenuProps {
 const item = cn(
   'flex min-h-11 w-full cursor-default items-center rounded-[var(--radius-control)] px-3',
   'text-body-sm text-[var(--fg)] outline-none select-none',
-  'data-[highlighted]:bg-[var(--border)]',
+  'data-[highlighted]:bg-[var(--bg-muted)]',
 );
 
 export function OverflowMenu({ onKnow, onFlag, disabled }: OverflowMenuProps) {
@@ -28,7 +28,7 @@ export function OverflowMenu({ onKnow, onFlag, disabled }: OverflowMenuProps) {
       <DropdownMenu.Trigger
         aria-label={strings.review.overflow}
         disabled={disabled}
-        className="flex size-11 items-center justify-center rounded-[var(--radius-control)] text-h6 text-[var(--fg)] outline-none hover:bg-[var(--border)] focus-visible:ring-2 focus-visible:ring-[var(--fg)] disabled:opacity-50"
+        className="flex size-11 items-center justify-center rounded-[var(--radius-control)] text-h6 text-[var(--fg)] outline-none hover:bg-[var(--bg-muted)] focus-visible:ring-2 focus-visible:ring-[var(--fg)] disabled:opacity-50"
         data-testid="review-overflow"
       >
         <span aria-hidden="true">⋯</span>
@@ -37,7 +37,7 @@ export function OverflowMenu({ onKnow, onFlag, disabled }: OverflowMenuProps) {
         <DropdownMenu.Content
           align="start"
           sideOffset={4}
-          className="z-50 min-w-48 rounded-[var(--radius-card)] border border-[var(--glass-border)] bg-[var(--glass-bg)] p-1 shadow-sm backdrop-blur-[var(--glass-blur)]"
+          className="glass-strong z-50 min-w-48 rounded-[var(--radius-card)] border p-1.5 shadow-sm"
         >
           <DropdownMenu.Item className={item} onSelect={onKnow} data-testid="review-know">
             {strings.review.know}

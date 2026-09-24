@@ -318,6 +318,28 @@ export const strings = {
     retry: 'تلاش دوباره',
     done: 'وارد شدید.',
   },
+
+  /** Joiners that are copy in all but name: they only exist because the text is Persian. */
+  format: {
+    /** Between the items of a Persian list: «مرفه، ثروتمند». */
+    listSeparator: '، ',
+  },
+
+  /** `ui/relative-time.ts`. The number arrives already in Persian digits. */
+  relativeTime: {
+    now: 'الان',
+    minutesAhead: (n: string) => `${n} دقیقه دیگر`,
+    hoursAhead: (n: string) => `${n} ساعت دیگر`,
+    daysAhead: (n: string) => `${n} روز دیگر`,
+    minutesAgo: (n: string) => `${n} دقیقه پیش`,
+    hoursAgo: (n: string) => `${n} ساعت پیش`,
+    daysAgo: (n: string) => `${n} روز پیش`,
+  },
+
+  notFound: {
+    body: 'این نشانی در برنامه وجود ندارد.',
+    home: 'بازگشت به خانه',
+  },
 } as const;
 
 export type Strings = typeof strings;

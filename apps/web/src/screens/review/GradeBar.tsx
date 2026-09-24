@@ -18,7 +18,7 @@ export interface GradeBarProps {
 export function GradeBar({ onGrade, disabled }: GradeBarProps) {
   return (
     <div className="fixed inset-x-0 bottom-0 z-30 flex justify-center">
-      <div className="flex w-full max-w-[430px] gap-3 border-t border-[var(--glass-border)] bg-[var(--glass-bg)] px-4 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-[var(--glass-blur)]">
+      <div className="glass flex w-full max-w-[430px] gap-3 border-t px-4 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
         <Button
           variant="danger"
           size="lg"

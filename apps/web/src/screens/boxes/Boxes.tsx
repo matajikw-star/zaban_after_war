@@ -16,6 +16,7 @@ import { useFold } from '../../engine/use-fold.ts';
 import { useContentStore } from '../../stores/content.ts';
 import { strings } from '../../strings.ts';
 import { Card } from '../../ui/Card.tsx';
+import { cn } from '../../ui/cn.ts';
 import { faNumber } from '../../ui/format.ts';
 import { relativeTime } from '../../ui/relative-time.ts';
 import { BOTTOM_NAV_SPACER_CLASS, BottomNav } from '../layout/BottomNav.tsx';
@@ -35,16 +36,20 @@ function BoxColumn({
     <button
       type="button"
       onClick={() => onSelect(box)}
-      className={`flex min-h-11 flex-1 flex-col items-center gap-1 rounded-[var(--radius-control)] border p-3 transition-colors ${
-        selected
-          ? 'border-transparent bg-[var(--fg)] text-[var(--bg)]'
-          : 'border-[var(--border)] bg-[var(--bg-elevated)] text-[var(--fg)]'
-      }`}
+      aria-pressed={selected}
+      className={cn(
+        'flex min-h-11 min-w-0 flex-1 flex-col items-center gap-1 rounded-[var(--radius-control)] border px-1 py-3',
+        'transition-colors duration-[var(--motion-fast)] outline-none',
+        'focus-visible:ring-2 focus-visible:ring-[var(--fg)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)]',
+        selected ? 'border-transparent bg-[var(--fg)] text-[var(--bg)]' : 'glass text-[var(--fg)]',
+      )}
     >
-      <span className="text-h6 font-medium" data-testid={`box-count-${box}`}>
+      <span className="text-h5 font-medium" data-testid={`box-count-${box}`}>
         {faNumber(count)}
       </span>
-      <span className="text-caption">{strings.boxes.boxPrefix(faNumber(box))}</span>
+      <span className="text-caption whitespace-nowrap">
+        {strings.boxes.boxPrefix(faNumber(box))}
+      </span>
     </button>
   );
 }
@@ -64,8 +69,8 @@ export function Boxes() {
   const at = now();
 
   return (
-    <main className={`flex flex-1 flex-col gap-4 pt-4 ${BOTTOM_NAV_SPACER_CLASS}`}>
-      <h1 className="text-h5 font-medium">{strings.screens.boxes}</h1>
+    <main className={`flex flex-1 flex-col gap-4 pt-2 ${BOTTOM_NAV_SPACER_CLASS}`}>
+      <h1 className="flex min-h-11 items-center text-h5 font-medium">{strings.screens.boxes}</h1>
 
       <div className="flex gap-2">
         {BOXES.map((box) => (
@@ -84,7 +89,7 @@ export function Boxes() {
       </p>
 
       {selected === null ? null : (
-        <Card className="flex flex-col gap-2">
+        <Card className="flex flex-col px-4 py-2">
           {rows.length === 0 ? (
             <p className="text-body-sm text-[var(--fg-muted)]">{strings.boxes.empty}</p>
           ) : (
@@ -98,9 +103,9 @@ export function Boxes() {
                     <button
                       type="button"
                       onClick={() => void navigate(`/word/${row.itemId}`)}
-                      className="flex min-h-11 w-full items-center justify-between gap-2 py-2 text-start"
+                      className="flex min-h-12 w-full items-center justify-between gap-2 py-2 text-start outline-none focus-visible:ring-2 focus-visible:ring-[var(--fg)]"
                     >
-                      <span className="text-body font-medium" dir="ltr">
+                      <span className="text-body font-medium" dir="ltr" lang="en">
                         {card?.lemma ?? row.itemId}
                       </span>
                       <span className="text-caption text-[var(--fg-muted)]">{dueLabel}</span>

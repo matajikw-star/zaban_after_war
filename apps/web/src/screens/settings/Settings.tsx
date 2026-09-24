@@ -27,8 +27,9 @@ import { Button } from '../../ui/Button.tsx';
 import { Card, CardTitle } from '../../ui/Card.tsx';
 import { faNumber, faPercent } from '../../ui/format.ts';
 import { Input } from '../../ui/Input.tsx';
+import { Segmented } from '../../ui/Segmented.tsx';
+import { Select } from '../../ui/Select.tsx';
 import { SheetClose, SheetContent, SheetRoot, SheetTrigger } from '../../ui/Sheet.tsx';
-import { Switch } from '../../ui/Switch.tsx';
 import { APP_VERSION, BUILD_SHA } from '../../version.ts';
 import { InstallSheet } from '../install/InstallSheet.tsx';
 import { BOTTOM_NAV_SPACER_CLASS, BottomNav } from '../layout/BottomNav.tsx';
@@ -161,8 +162,8 @@ export function Settings() {
   const downloadPercent = download.name === 'downloading' ? download.percent : null;
 
   return (
-    <main className={`flex flex-1 flex-col gap-4 pt-4 ${BOTTOM_NAV_SPACER_CLASS}`}>
-      <h1 className="text-h5 font-medium">{strings.screens.settings}</h1>
+    <main className={`flex flex-1 flex-col gap-4 pt-2 ${BOTTOM_NAV_SPACER_CLASS}`}>
+      <h1 className="flex min-h-11 items-center text-h5 font-medium">{strings.screens.settings}</h1>
 
       <Section title={strings.settings.accountTitle}>
         {phone === null ? (
@@ -181,18 +182,15 @@ export function Settings() {
       </Section>
 
       <Section title={strings.settings.goalTitle}>
-        <div className="flex flex-wrap gap-2">
-          {ONBOARDING_MINUTES.map((minutes) => (
-            <Button
-              key={minutes}
-              variant={profile.minutesPerDay === minutes ? 'primary' : 'secondary'}
-              size="sm"
-              onClick={() => void setProfile({ minutesPerDay: minutes })}
-            >
-              {strings.settings.minutesOption(faNumber(minutes))}
-            </Button>
-          ))}
-        </div>
+        <Segmented
+          ariaLabel={strings.settings.goalTitle}
+          options={ONBOARDING_MINUTES.map((minutes) => ({
+            value: minutes,
+            label: strings.settings.minutesOption(faNumber(minutes)),
+          }))}
+          value={profile.minutesPerDay}
+          onChange={(minutes) => void setProfile({ minutesPerDay: minutes })}
+        />
         <p className="text-caption text-[var(--fg-muted)]">
           {strings.settings.dailyGoalCaption(faNumber(goalFromMinutes(profile.minutesPerDay)))}
         </p>
@@ -214,12 +212,12 @@ export function Settings() {
       </Section>
 
       <Section title={strings.settings.fieldTitle}>
-        <select
+        <Select
+          aria-label={strings.settings.fieldTitle}
           value={profile.fieldCode ?? ''}
           onChange={(event) =>
             void setProfile({ fieldCode: event.target.value === '' ? null : event.target.value })
           }
-          className="min-h-11 w-full rounded-[var(--radius-control)] border border-[var(--border)] bg-[var(--bg-elevated)] px-3 text-body outline-none focus-visible:border-[var(--fg)]"
         >
           <option value="">{strings.settings.fieldNone}</option>
           {Object.entries(FIELD_CODES).map(([code, name]) => (
@@ -227,30 +225,20 @@ export function Settings() {
               {name}
             </option>
           ))}
-        </select>
+        </Select>
       </Section>
 
       <Section title={strings.settings.themeTitle}>
-        <div className="flex gap-4">
-          {(
-            [
-              { choice: 'system', label: strings.settings.themeSystem },
-              { choice: 'light', label: strings.settings.themeLight },
-              { choice: 'dark', label: strings.settings.themeDark },
-            ] as const satisfies readonly { choice: ThemeChoice; label: string }[]
-          ).map(({ choice, label }) => (
-            <div key={choice} className="flex items-center gap-2 text-body-sm">
-              <Switch
-                ariaLabel={label}
-                checked={theme === choice}
-                onCheckedChange={(checked) => {
-                  if (checked) void setTheme(choice);
-                }}
-              />
-              <span>{label}</span>
-            </div>
-          ))}
-        </div>
+        <Segmented<ThemeChoice>
+          ariaLabel={strings.settings.themeTitle}
+          options={[
+            { value: 'system', label: strings.settings.themeSystem },
+            { value: 'light', label: strings.settings.themeLight },
+            { value: 'dark', label: strings.settings.themeDark },
+          ]}
+          value={theme}
+          onChange={(choice) => void setTheme(choice)}
+        />
       </Section>
 
       <Section title={strings.settings.backupTitle}>

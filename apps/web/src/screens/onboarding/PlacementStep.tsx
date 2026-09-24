@@ -56,7 +56,12 @@ export function PlacementStep({ onLeave }: PlacementStepProps) {
       <p className="text-caption text-[var(--fg-muted)]">
         {strings.onboarding.placementCounter(faNumber(index + 1), faNumber(pool.length))}
       </p>
-      <p data-testid="placement-word" dir="ltr" className="text-h3 font-medium">
+      <p
+        data-testid="placement-word"
+        dir="ltr"
+        lang="en"
+        className="text-h3 font-medium tracking-tight"
+      >
         {lemma}
       </p>
       <div className="flex w-full gap-2">
@@ -68,7 +73,13 @@ export function PlacementStep({ onLeave }: PlacementStepProps) {
         >
           {strings.onboarding.placementDontKnow}
         </Button>
-        <Button data-testid="placement-know" variant="primary" block onClick={() => choose('know')}>
+        {/* Both answers weigh the same — and the footer's «بعدی» is this screen's one primary. */}
+        <Button
+          data-testid="placement-know"
+          variant="secondary"
+          block
+          onClick={() => choose('know')}
+        >
           {strings.onboarding.placementKnow}
         </Button>
       </div>

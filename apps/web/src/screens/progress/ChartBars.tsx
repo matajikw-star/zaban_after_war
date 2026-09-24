@@ -36,7 +36,14 @@ export function ChartBars({ days }: { readonly days: readonly ChartDay[] }) {
             y={y}
             width={barWidth}
             height={barHeight}
-            fill={day.isToday ? 'var(--fg)' : 'var(--border)'}
+            rx={Math.min(2, barWidth / 2)}
+            fill={
+              day.isToday
+                ? 'var(--fg)'
+                : day.presentations > 0
+                  ? 'var(--fg-muted)'
+                  : 'var(--border)'
+            }
           />
         );
       })}

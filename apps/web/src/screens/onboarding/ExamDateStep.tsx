@@ -10,11 +10,10 @@ import { useState } from 'react';
 import { now } from '../../engine/clock.ts';
 import { strings } from '../../strings.ts';
 import { faNumber } from '../../ui/format.ts';
+import { Select } from '../../ui/Select.tsx';
 
 const JALALI_FORMAT = 'yyyy/MM/dd';
 const YEAR_RANGE = 6;
-const SELECT_CLASS =
-  'min-h-11 flex-1 rounded-[var(--radius-control)] border border-[var(--border)] bg-[var(--bg-elevated)] px-3 text-body outline-none focus-visible:border-[var(--fg)]';
 
 function pad2(n: number): string {
   return String(n).padStart(2, '0');
@@ -62,12 +61,12 @@ export function ExamDateStep({ examDate, onChange }: ExamDateStepProps) {
   }
 
   return (
-    <div className="flex flex-1 flex-col justify-center gap-6">
-      <h1 className="text-h5 font-medium">{strings.onboarding.examDateTitle}</h1>
+    <div className="flex flex-1 flex-col justify-center gap-5">
+      <h1 className="text-center text-h5 font-medium">{strings.onboarding.examDateTitle}</h1>
       <div className="flex gap-2" dir="ltr">
-        <select
+        <Select
+          className="flex-1"
           aria-label={strings.onboarding.examDateDayLabel}
-          className={SELECT_CLASS}
           value={day}
           onChange={(event) => commit(year, month, event.target.value)}
         >
@@ -77,10 +76,10 @@ export function ExamDateStep({ examDate, onChange }: ExamDateStepProps) {
               {faNumber(d)}
             </option>
           ))}
-        </select>
-        <select
+        </Select>
+        <Select
+          className="flex-1"
           aria-label={strings.onboarding.examDateMonthLabel}
-          className={SELECT_CLASS}
           value={month}
           onChange={(event) => commit(year, event.target.value, day)}
         >
@@ -90,10 +89,10 @@ export function ExamDateStep({ examDate, onChange }: ExamDateStepProps) {
               {faNumber(m)}
             </option>
           ))}
-        </select>
-        <select
+        </Select>
+        <Select
+          className="flex-1"
           aria-label={strings.onboarding.examDateYearLabel}
-          className={SELECT_CLASS}
           value={year}
           onChange={(event) => commit(event.target.value, month, day)}
         >
@@ -103,7 +102,7 @@ export function ExamDateStep({ examDate, onChange }: ExamDateStepProps) {
               {faNumber(y)}
             </option>
           ))}
-        </select>
+        </Select>
       </div>
     </div>
   );

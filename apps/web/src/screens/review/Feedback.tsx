@@ -31,19 +31,27 @@ export function Feedback({ lemma, boxBefore, boxAfter, nextDue, onDismiss }: Fee
     <button
       type="button"
       onClick={onDismiss}
-      className="flex flex-1 flex-col items-center justify-center gap-3 text-center"
+      className="flex flex-1 flex-col items-center justify-center gap-4 rounded-[var(--radius-card)] text-center outline-none focus-visible:ring-2 focus-visible:ring-[var(--fg)]"
       data-testid="review-feedback"
     >
-      <span dir="ltr" className="text-h6 font-medium text-[var(--fg-muted)]">
+      <span dir="ltr" lang="en" className="text-h4 font-medium tracking-tight">
         {lemma}
       </span>
-      <span className="flex items-center gap-2 text-h5 font-medium">
-        <span className="text-[var(--fg-muted)]">{boxLabel(boxBefore)}</span>
+      <span className="flex items-center gap-3 text-subtitle font-medium">
+        <span className="rounded-[var(--radius-pill)] border border-[var(--border)] px-4 py-1.5 text-[var(--fg-muted)]">
+          {boxLabel(boxBefore)}
+        </span>
         {/* The arrow points right-to-left with the page: "from" is on the right. */}
-        <span aria-hidden="true">←</span>
-        <span>{boxLabel(boxAfter)}</span>
+        <span aria-hidden="true" className="text-[var(--fg-muted)]">
+          ←
+        </span>
+        <span className="rounded-[var(--radius-pill)] bg-[var(--fg)] px-4 py-1.5 text-[var(--bg)]">
+          {boxLabel(boxAfter)}
+        </span>
       </span>
-      {conquered ? <span className="text-body-sm">{strings.review.conquered}</span> : null}
+      {conquered ? (
+        <span className="text-subtitle-sm font-medium">{strings.review.conquered}</span>
+      ) : null}
       <span className="text-body-sm text-[var(--fg-muted)]" data-testid="review-next-due">
         {nextDue}
       </span>

@@ -11,6 +11,7 @@
  */
 
 import type { Box, Grade, ReviewEventKind } from '@kl/core';
+import { ChevronRight } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { kvGet, kvSet, outboxEnqueue } from '../../db/repo.ts';
@@ -222,17 +223,24 @@ export function Review() {
 
   return (
     <main className="flex flex-1 flex-col pb-24">
-      <header className="flex items-center justify-between gap-2">
-        <Button
-          variant="ghost"
-          size="sm"
-          aria-label={strings.review.back}
-          onClick={() => void navigate('/')}
-        >
-          <span aria-hidden="true">›</span>
-        </Button>
-        <span className="text-body-sm text-[var(--fg-muted)]">{strings.screens.review}</span>
-        <div className="flex items-center gap-1">
+      {/* Three columns, so the title sits in the true centre whatever the two sides hold. In RTL
+          the first column is the right edge: back, where a back arrow is expected. */}
+      <header className="grid grid-cols-[1fr_auto_1fr] items-center gap-2">
+        <div className="flex justify-start">
+          <Button
+            variant="ghost"
+            size="sm"
+            className="w-11 px-0"
+            aria-label={strings.review.back}
+            onClick={() => void navigate('/')}
+          >
+            <ChevronRight size={22} aria-hidden="true" />
+          </Button>
+        </div>
+        <span className="text-subtitle-sm font-medium text-[var(--fg-muted)]">
+          {strings.screens.review}
+        </span>
+        <div className="flex items-center justify-end gap-1">
           <OverflowMenu onKnow={onKnow} onFlag={() => setFlagOpen(true)} disabled={card === null} />
           <Button
             variant="ghost"
@@ -246,16 +254,19 @@ export function Review() {
       </header>
 
       {feedback !== null ? (
-        <Feedback
-          lemma={feedback.lemma}
-          boxBefore={feedback.boxBefore}
-          boxAfter={feedback.boxAfter}
-          nextDue={feedback.nextDue}
-          onDismiss={() => {
-            setFeedback(null);
-            draw();
-          }}
-        />
+        // The same glass frame as the card, so the screen does not jump between the two.
+        <Card className="mt-3 flex flex-1 flex-col p-0">
+          <Feedback
+            lemma={feedback.lemma}
+            boxBefore={feedback.boxBefore}
+            boxAfter={feedback.boxAfter}
+            nextDue={feedback.nextDue}
+            onDismiss={() => {
+              setFeedback(null);
+              draw();
+            }}
+          />
+        </Card>
       ) : word === null ? (
         <div className="flex flex-1 items-center justify-center">
           <p className="text-body-sm text-[var(--fg-muted)]" data-testid="review-empty">

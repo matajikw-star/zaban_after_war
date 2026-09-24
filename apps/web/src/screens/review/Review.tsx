@@ -17,6 +17,7 @@ import { useNavigate } from 'react-router';
 import { kvGet, kvSet, outboxEnqueue } from '../../db/repo.ts';
 import { nextDueText } from '../../engine/card-content.ts';
 import { now } from '../../engine/clock.ts';
+import { buildFlagBody } from '../../engine/flag-body.ts';
 import { currentParams } from '../../engine/fold-cache.ts';
 import { itemBox, totalPresentations } from '../../engine/fold-reads.ts';
 import { shouldShowGoalSheet, todayKey } from '../../engine/goal-sheet.ts';
@@ -26,7 +27,7 @@ import { beaconsCrossed } from '../../engine/review-beacons.ts';
 import { shouldPromptSaveProgress } from '../../engine/save-progress-prompt.ts';
 import { breadcrumb } from '../../log/breadcrumbs.ts';
 import { reportError } from '../../log/errors.ts';
-import type { BeaconEvent, BeaconName, FlagBody } from '../../net/api.ts';
+import type { BeaconEvent, BeaconName } from '../../net/api.ts';
 import { useAuthStore } from '../../stores/auth.ts';
 import { useContentStore } from '../../stores/content.ts';
 import { useSessionStore } from '../../stores/session.ts';
@@ -205,13 +206,11 @@ export function Review() {
     const current = useSessionStore.getState().card;
     if (current === null) return;
     setFlagOpen(false);
-    const body: FlagBody = {
+    const body = buildFlagBody(current.itemId, reason, {
       installId: useAuthStore.getState().installId,
-      itemId: current.itemId,
-      reason,
       appVersion: APP_VERSION,
       at: now(),
-    };
+    });
     // Into the outbox, never over the wire from here: flagging a word offline has to work.
     void outboxEnqueue('flag', body).then(
       () => setToast(strings.review.flagRecorded),

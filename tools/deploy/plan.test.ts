@@ -40,6 +40,19 @@ describe('buildPlan', () => {
     );
   });
 
+  it('server health check polls /api/health with a timeout instead of a single racy curl', () => {
+    const steps = buildPlan(['server'], ctx);
+    const health = steps.find((s) => s.description === 'server: health check');
+    expect(health?.command).toContain('until curl -sf http://127.0.0.1:8090/api/health');
+    expect(health?.command).toContain('sleep 1');
+    // failure exits non-zero with a distinct, greppable message
+    expect(health?.command).toContain('DEPLOY_HEALTH_TIMEOUT');
+    expect(health?.command).toContain('exit 1');
+    // the timeout arithmetic must be escaped so it runs on the remote shell, not the local one
+    // building this command string
+    expect(health?.command).toContain('\\$((n +');
+  });
+
   it('content builds before it ships', () => {
     const steps = buildPlan(['content'], ctx);
     const order = steps.map((s) => s.description);

@@ -31,6 +31,28 @@ function remoteOf(ctx: DeployContext): string {
   return `${ctx.user}@${ctx.host}`;
 }
 
+/** what.md §14.4: the server target polls before declaring success, since a restart is not
+ *  instant. `HEALTH_TIMEOUT_S` is a budget, not a promise the server is up by then. */
+const HEALTH_TIMEOUT_S = 30;
+const HEALTH_POLL_INTERVAL_S = 1;
+
+/** DEPLOY_HEALTH_TIMEOUT: a distinct, greppable string so a failed deploy's exit is diagnosable
+ *  from its output alone (what.md §17.4's "errors carry codes", applied to a CLI exit instead of
+ *  an AppError). All `$`-arithmetic is backslash-escaped so it runs on the remote shell, not the
+ *  local one that builds this command (the same trick `logStep` already uses for `\$(date …)`). */
+function healthCheckCommand(ctx: DeployContext): string {
+  const remoteScript =
+    `n=0; until curl -sf http://127.0.0.1:8090/api/health >/dev/null; do ` +
+    `n=\\$((n + ${HEALTH_POLL_INTERVAL_S})); ` +
+    `if [ \\$n -ge ${HEALTH_TIMEOUT_S} ]; then ` +
+    `echo 'DEPLOY_HEALTH_TIMEOUT: kl-pocketbase did not answer /api/health within ${HEALTH_TIMEOUT_S}s' >&2; ` +
+    `exit 1; ` +
+    `fi; ` +
+    `sleep ${HEALTH_POLL_INTERVAL_S}; ` +
+    `done`;
+  return `ssh ${remoteOf(ctx)} "${remoteScript}"`;
+}
+
 /** `local/dir/` → `remoteDir.new` → swapped into `remoteDir`. Two steps, always in this order. */
 function shipAndSwap(
   target: Target,
@@ -91,7 +113,7 @@ function serverSteps(ctx: DeployContext): Step[] {
     {
       target: 'server',
       description: 'server: health check',
-      command: `ssh ${remoteOf(ctx)} "curl -sf http://127.0.0.1:8090/api/health"`,
+      command: healthCheckCommand(ctx),
     },
   ];
 }

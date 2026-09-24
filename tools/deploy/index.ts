@@ -56,7 +56,7 @@ async function main(): Promise<void> {
   await loadDotEnvLocal();
   const args = parseDeployArgs(process.argv.slice(2));
 
-  const status = readGitStatus();
+  const status = readGitStatus(args.allowBranch);
   const refusal = checkRefusal(status, args.allowBranch);
 
   if (args.allowBranch !== null && !refusal.refuse) {

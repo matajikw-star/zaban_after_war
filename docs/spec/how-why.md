@@ -820,6 +820,74 @@ about 2 % of a day's guesses count against one targeted phone (with the extra ca
 10 per IP / hour, 5 attempts per code, 3-minute expiry). Revisit if the server logs ever show
 repeated `OTP_WRONG` bursts against one phone from many IPs.
 
+### 5.14 Payment, server half (ticket dev-payment/01, 2026-09-24)
+
+What `what.md` §8.2/§8.3 did not already fix, and why each went the way it did:
+
+- **The mock-SMS gate is an error code, not a missing route.** While `SMS_PROVIDER=mock` every
+  `/api/pay/*` route and `GET /api/content/paid` answer 503 `PAYMENT_DISABLED_MOCK_SMS`. 503 rather
+  than 403 because the refusal is about how the server is configured, not about the caller, and it
+  lifts by itself when SMS becomes real. It runs as `withRoute`'s new `opts.guard`, before auth and
+  before the body, so an anonymous call, a valid token and a malformed body all get the same answer
+  and nothing is written. Not registering the routes under mock was the alternative; rejected
+  because the client then sees a 404 it cannot tell from a deploy fault, and staging could not show
+  that the routes exist. `admin/grant` and `manifest` are not gated: the first is owner-only and
+  what it grants cannot be downloaded while the gate is up; the second is public metadata. The
+  reconcile cron is not gated either — it only settles money already taken, for the account that
+  paid it — and it makes no gateway call at all unless we hold an open payment, so staging (with no
+  payments) never calls Zarinpal every 15 minutes.
+- **`ZARINPAL_API_BASE` mirrors `SMS_API_BASE`.** Tests start a local Zarinpal v4 stand-in
+  (`server/test/zarinpal-stub.ts`) and point this at it; the harness defaults it to a closed port,
+  so a test that forgets the stub fails instead of reaching Zarinpal. Empty in production: the host
+  is then chosen by `ZARINPAL_SANDBOX`. `ZARINPAL_PROVIDER=mock` is a separate switch for CI/e2e —
+  no network at all, the gateway URL is our own callback with `Status=OK` — and `lib/env.js`
+  reports it on a production origin the way it reports `SMS_PROVIDER=console`.
+- **Idempotency is a conditional flip plus a unique index.** The callback, a replay of it, the
+  reconcile cron and Zarinpal's 101 all funnel into `settle()`, which flips the payment with
+  `UPDATE … SET status='verified' … WHERE id=? AND status != 'verified'` inside a transaction; only
+  the call that changed a row creates the entitlement and counts the code. A verified payment's
+  replay answers from our own row and never calls the gateway. Behind that, migration
+  `1759000000_payment.js` puts a unique (`user`, `product`) index on `entitlements`, so even a bug
+  in the hooks cannot write a second `full`. A test holds four callbacks inside a slow verify at
+  once; with the `status != 'verified'` condition removed it counts the code four times (checked).
+- **The amount check is Zarinpal's.** v4 `verify` takes the amount and answers -50 when it differs
+  from what was paid; we always send the `payable` stored on our row, never an amount from a
+  request, a query string or the `unVerified` list (whose `amount` unit we could not confirm). -50
+  fails the payment and logs `pay.amount_mismatch` at error level. -51/-53/-54 fail it as
+  `not_paid`; every other code, or no answer, leaves the payment untouched and redirects to
+  `status=pending` — marking a payment failed when the user may have paid is the one mistake here
+  that costs a customer, and reconcile can still settle it. For the same reason `expired` and
+  `failed` payments can still become `verified`.
+- **A 100 % code grants with `source: discount`**, a new `entitlements.source` value, in one
+  transaction with its payment row (`payable: 0`, `verified`) and the code's use, and the
+  entitlement check is repeated inside the transaction so two taps cannot both grant. `manual`
+  would have mixed the owner's gifts with public codes in every count.
+- **`maxUses` 0 means exhausted, not unlimited**, because §8.3 says `usedCount < maxUses` and a
+  code the owner saved without a limit should fail closed, not give the product away. A blank
+  `expiresAt` never expires. Percent discounts round down (`floor`), so a code never takes more
+  than it says. `usedCount` counts at verification, so two payments in flight can take a code one
+  past its limit; that is logged (`pay.code_over_limit`), never refused after money is taken.
+- **The paid file is served by `e.fileFS` → Go's `http.ServeContent`**, not by slicing bytes in
+  goja: Range, 206, `Content-Range`, 416 and `If-Range` come from the standard library. The `ETag`
+  is the manifest's paid hash, so a resume across a content update gets the new file whole. The
+  20-per-day cap counts every served fetch, Range ones included, in a new `content_downloads`
+  collection — also the owner's evidence if a paid account is ever used to redistribute the file.
+- **Callback redirects carry `paymentId`** (`/purchase/result?status=…&paymentId=…`), which the
+  table in §8.2 did not have: the result screen needs it to poll `status/:id` when the answer is
+  `pending`, and to show which payment a failure was.
+- **Error codes added**: `PAYMENT_DISABLED_MOCK_SMS` 503, `ALREADY_ENTITLED` 409,
+  `DISCOUNT_REJECTED` 400 (with `codeStatus` next to `error`, so the client maps it with the same
+  table as `quote`), `GATEWAY_FAILED` 502, `NOT_ENTITLED` 403. `quote` gained `codeStatus: 'none'`
+  for "no code sent", and `status/:id` gained `failReason` and `entitled`.
+
+Unverified, and said so in `what.md` §8.3: the Zarinpal v4 shapes in `lib/zarinpal.js` — the
+paths, `merchant_id`/`amount`/`currency`/`callback_url`/`metadata` on request, `authority` in
+`data`, `ref_id`/`card_pan` on verify, the `errors.code` envelope on failure, the `-50`/`-51`/
+`-53`/`-54` meanings, `unVerified.json` answering `data.authorities[].authority` — are from
+Zarinpal's public v4 documentation, not from a live answer; whether `verify` accepts `currency`
+is also not confirmed. The owner's real 1,000-toman payment (ticket "done when") is where each is
+checked, and a wrong one fails safe: an unknown answer leaves the payment `pending`.
+
 ## 6. How to extend this file
 
 

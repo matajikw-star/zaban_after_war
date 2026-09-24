@@ -585,10 +585,17 @@ carries the version it installed, and `error → RETRY` returns to `none` rather
 interrupted step, so the next attempt re-reads the manifest — the received byte count is in `kv`
 and the `Range` header makes restarting from the top nearly free.
 
+The server half is `[live]` (§8.2 `content/manifest`, `content/paid`): a resume gets 206 with
+`Content-Range`; `ETag` is the manifest's paid hash, so sending `If-Range` makes a resume across a
+content update come back as a whole-file 200; a range at or past the end is 416; 20 fetches per
+user per day, each Range fetch counting; 503 `PAYMENT_DISABLED_MOCK_SMS` while SMS is mock.
+
 ### 7.6 Entitlement on the device [building]
 
 `kv.entitlement = { status: 'none' | 'full', source, grantedAt, checkedAt }`. Written only from a
-server response (`/api/me` or the purchase result). Read offline forever; never expires. An online
+server response (`/api/me`, or the purchase result: `GET /api/pay/status/:id` answers `entitled`;
+a `pay/request` answering `granted: true` — a 100 % code — is followed by `/api/me` for `source`
+and `grantedAt`). Read offline forever; never expires. An online
 check that says `none` while the cache says `full` is logged as a `client_errors` record and the
 cache is **kept** until the owner acts — the app never revokes on its own.
 
@@ -736,9 +743,11 @@ against `opts.schema`, caps it at 32 KB (`opts.maxBodyBytes` raises it for one r
 and answers `{ error: { code, message } }` with a stable `code` — one of `BAD_INPUT`,
 `UNAUTHORIZED`, `FORBIDDEN`, `NOT_FOUND`, `RATE_LIMITED`, `INTERNAL`, and for OTP
 `PHONE_INVALID`, `OTP_WRONG`, `OTP_EXPIRED`, `OTP_LOCKED`, `SMS_FAILED` (502),
-`SMS_PROVIDER_UNKNOWN` (500). A few errors carry one extra top-level number next to `error`:
-`retryAfter` (seconds) on every 429, which also sets the `Retry-After` header, and
-`attemptsLeft` on `OTP_WRONG`. Bodies are JSON, except where a handler returns
+`SMS_PROVIDER_UNKNOWN` (500), and for payment `PAYMENT_DISABLED_MOCK_SMS` (503),
+`ALREADY_ENTITLED` (409), `DISCOUNT_REJECTED` (400), `GATEWAY_FAILED` (502), `NOT_ENTITLED` (403).
+A few errors carry one extra top-level value next to `error`:
+`retryAfter` (seconds) on every 429, which also sets the `Retry-After` header,
+`attemptsLeft` on `OTP_WRONG`, and `codeStatus` (a string, as in `pay/quote`) on `DISCOUNT_REJECTED`. Bodies are JSON, except where a handler returns
 `blobResponse` (raw bytes), `redirectResponse` (a 302 — the payment callback) or `fileResponse`
 (a file served through Go's `http.ServeContent`, which is what gives the paid package its
 `Range` handling); the auth, the guard, the log line and the error envelope are the same for all. Auth is the
@@ -754,26 +763,36 @@ PocketBase bearer token. Because PocketBase serializes each handler into its own
 | `PATCH /api/me/profile` | user | `{profile}` → stored if `updatedAt` is newer. Equal is not newer. | `[live]` |
 | `POST /api/sync/push` | user | `{events: ReviewEvent[]}` (≤ 500, else `BAD_INPUT`) → `{accepted, duplicates}` (`sync.pb.js`, `lib/sync.js`). `INSERT OR IGNORE` by id in one transaction, so a replayed or overlapping batch stores each event once and never edits the first copy. `user` comes from the token; a `user` in the body or on an event is dropped. Each event is checked (lowercase UUID id, `itemId` 1–64 chars, `at` a non-negative integer, `kind` `review`/`know`, `grade` 0/1, `device` ≤ 64 chars); **one malformed event rejects the whole batch** with `BAD_INPUT` naming `events[i]`, and nothing of it is stored. An `at` more than a year from the server clock is stored as sent and logged once per push (`flag: at_out_of_range`). An id that already belongs to another user is left untouched, counted in `duplicates`, and logged (`flag: id_conflict`). | `[live]` |
 | `GET /api/sync/pull?since=&limit=` | user | `{events, cursor, more}`, only the caller's events, ordered by `(created, id)`. `limit` 1–1000, default 500. `cursor` is `"<created>|<id>"` of the last event returned — opaque to the client, which passes it back as `since`; an empty page returns the `since` it was given, a fresh account `''`. A malformed `since` or `limit` → `BAD_INPUT`. Every push stamps all its rows with one `created` strictly greater than any this user already has (`max(now, previous + 1 ms)`, inside the write transaction), so an event that becomes visible later can never sort behind a cursor already handed out — even across two pushes in the same millisecond or a server clock step (how-why §5.8). | `[live]` |
-| `GET /api/content/manifest` | none | `{free: {version, hash, bytes}, paid: {version, hash, bytes}}`. | `[planned]` |
-| `GET /api/content/paid` | user + entitled | The file, with `Range` support. 20 per user per day. | `[planned]` |
-| `POST /api/pay/quote` | user | `{code?}` → `{listPrice, salePrice, discountAmount, payable, codeStatus: 'ok'|'invalid'|'expired'|'exhausted'|'used'}`. | `[planned]` |
-| `POST /api/pay/request` | user | `{code?}` → `{paymentId, gatewayUrl}`. Creates the pending payment, applies the code, calls Zarinpal `request`. A `payable` of 0 (100 % code) grants directly and returns `{paymentId, granted: true}`. | `[planned]` |
-| `GET /api/pay/callback` | none (Zarinpal) | `?Authority=&Status=` → verifies with Zarinpal using the stored `payable`, flips the payment, creates the entitlement, increments the code's `usedCount`, then `302` to `/purchase/result?status=ok&ref=`, or `…?status=failed&reason=`. Idempotent (Zarinpal code 101 = already verified). | `[planned]` |
-| `GET /api/pay/status/:id` | user (own) | `{status, refId}`. | `[planned]` |
+| `GET /api/content/manifest` | none | `{free: {version, hash, bytes}, paid: {version, hash, bytes}}`, read from `CONTENT_DIR/manifest.json` (`content.pb.js`), `Cache-Control: no-cache`. A missing or incomplete manifest → 500 `INTERNAL`. | `[live]` |
+| `GET /api/content/paid` | user + entitled, **gated** | `CONTENT_DIR/paid.json`, served by Go's `http.ServeContent`: 200 whole file; `Range: bytes=<n>-` → 206 with `Content-Range: bytes <n>-<last>/<size>`; a range past the end → 416 (`Content-Range: bytes */<size>`, plain-text body, not the JSON envelope). `ETag` is `"<manifest.paid.hash>"` and `If-Range` is honoured, so a resume across a content update gets the whole new file with a 200. Also `X-Content-Version: <manifest.paid.version>`, `Cache-Control: private, no-cache`. No entitlement → 403 `NOT_ENTITLED`. 20 fetches per user per rolling 24 h — every 200/206/416 counts, a Range fetch included; the 21st → 429 `RATE_LIMITED` + `retryAfter`. Each served fetch writes a `content_downloads` row. Paid file missing → 500 `INTERNAL`. | `[live]` |
+| `POST /api/pay/quote` | user, **gated** | `{code?}` → `{listPrice, salePrice, discountAmount, payable, codeStatus, code}` (`pay.pb.js`, `lib/pay.js`). `codeStatus`: `none` (no code sent) · `ok` · `invalid` · `expired` · `exhausted` · `used` · `already-entitled` (wins over any code; prices then plain). `code` is the normalised code (trimmed, uppercase, Persian digits → ASCII) when `ok`, else `null`. When the status is not `ok`, `discountAmount` is 0 and `payable` = `salePrice`. Toman. | `[live]` |
+| `POST /api/pay/request` | user, **gated** | `{code?}` → `{paymentId, gatewayUrl}`: re-quotes on the server (any price or amount in the body is ignored), creates the `pending` payment (`expiresAt` = now + 2 h), calls Zarinpal `request` for `payable` with `currency: "IRT"`, stores the authority; `gatewayUrl` is `<zarinpal>/pg/StartPay/<authority>` (mock: our own callback URL with `Status=OK`). A `payable` of 0 (100 % code) never calls the gateway: payment `verified`, entitlement `source: discount`, code counted, all in one transaction → `{paymentId, granted: true}`. Errors: `ALREADY_ENTITLED` 409 (nothing charged); `DISCOUNT_REJECTED` 400 + `codeStatus` (nothing written); `GATEWAY_FAILED` 502 (payment `failed`, `failReason: gateway_error`). | `[live]` |
+| `GET /api/pay/callback` | none (Zarinpal), **gated** | `?Authority=&Status=` → always a `302` to `${PUBLIC_APP_ORIGIN}/purchase/result?…` once past the gate: `status=ok&ref=<refId>&paymentId=<id>` · `status=failed&reason=<cancelled|amount_mismatch|not_paid>&paymentId=<id>` · `status=failed&reason=unknown_payment` (no such authority) · `status=pending&paymentId=<id>` (the gateway could not be asked: the payment stays as it was; poll `status/:id`; the next callback or `reconcile_unverified` settles it). `Status` other than `OK` → `failed/cancelled` without calling the gateway. Otherwise verifies for the **stored** `payable`; Zarinpal 100 or 101 → the payment flips to `verified` once (a conditional update inside a transaction), and only the call that flips it creates the entitlement (`source: zarinpal`) and increments the code's `usedCount`. A replay of a verified payment answers from our own state and never calls the gateway. `expired` and `failed` payments can still verify (a late callback for money actually taken). | `[live]` |
+| `GET /api/pay/status/:id` | user (own), **gated** | `{paymentId, status: 'pending'|'verified'|'failed'|'expired', refId: string|null, failReason: string|null, entitled: boolean}`. `entitled` is whether the caller holds a `full` entitlement now, from any source. Another user's payment or a malformed id → 404 `NOT_FOUND`. | `[live]` |
 | `POST /api/flags` | optional | `{installId, itemId, reason, appVersion, at}` → `{ok}`. 50 per install per day (`telemetry.js`). | `[live]` |
 | `POST /api/beacon` | optional | `{installId, events: [{name, at, appVersion}]}` → `{ok}`. Unknown names rejected (whole call, naming the index); at most 20 events per call, 200 per install per day — no number was fixed here originally, decided in ticket dev-server/04. | `[live]` |
 | `POST /api/client-errors` | optional | one record (§10.1) → `{ok, deduped}`. 30 per install per day; same fingerprint from the same install within an hour increments `count` instead of inserting, and never counts against the cap. | `[live]` |
 | `GET /api/health` | none | `{ok, version, time}`. `version` is `<pocketbase>+hooks.<n>`. Registered as a middleware, not a route: PocketBase owns this path (how-why §5.4). | `[live]` |
 | `GET /api/admin/stats?range=` | superuser | Aggregates for the dashboard (§11.2). | `[planned]` |
-| `POST /api/admin/grant` | superuser | `{phone, note}` → creates the user if missing and an entitlement with `source: manual`. | `[planned]` |
+| `POST /api/admin/grant` | superuser | `{phone, note?}` → `{userId, entitlementId, created}`. Normalises the phone like OTP (`PHONE_INVALID` otherwise), creates the user if missing and an entitlement with `source: manual`. Idempotent: a phone already entitled answers `created: false` and its entitlement is left as it is. Not gated on mock SMS. | `[live]` |
 | `GET /api/admin/sourcemap/:sha/:file` | superuser | Serves a source map from `SOURCEMAP_DIR` (`/opt/kl/sourcemaps/<sha>/<file>`) for `tools/errors` to symbolicate against. `sha` and `file` are checked against a strict allow-list (`[0-9a-f]{7,40}` / a plain `*.map` name, no `/`) before either touches a filesystem path — PocketBase's router matches `{sha}/{file}` on undecoded path segments, so a percent-encoded slash inside `file` (`..%2f..%2fetc%2fpasswd`) still decodes to a value the allow-list rejects. | `[live]` |
 
 Crons (`pb_hooks/cron.pb.js`): `otp_purge` `[live]` hourly deletes `otp_codes` whose `expiresAt` is
 more than an hour past — not at expiry, because a row still counts toward the IP limit's
-one-hour window; `reconcileUnverified` every 15
-minutes (Zarinpal `unverified` → verify any successful-but-unverified authority we own; this is
-the safety net for a user who closed the browser during the redirect); mark `pending` payments
-older than 2 hours `expired`.
+one-hour window; `reconcile_unverified` `[live]` every 15
+minutes (Zarinpal `unVerified` → verify, for the stored `payable`, every listed authority that is
+ours and not yet `verified`; the safety net for a user who closed the browser during the redirect;
+it calls the gateway only when one of our payments from the last 7 days has an authority and is
+not `verified`, so a server with no open payments makes no calls; not gated on mock SMS — it only
+settles money already taken); `expire_pending` `[live]` every 5 minutes marks `pending` payments
+past their `expiresAt` (created + 2 h) `expired`. Each runs on demand with
+`POST /api/crons/<id>` (superuser), which is how the API suite drives them.
+
+**The mock-SMS gate** `[live]`: while `SMS_PROVIDER=mock`, every `/api/pay/*` route and
+`GET /api/content/paid` answer 503 `PAYMENT_DISABLED_MOCK_SMS` before auth, before the body and
+before any write or gateway call (`lib/pay.js` `guard`, passed as `withRoute`'s `opts.guard`) —
+under mock SMS every phone signs in with `123456`, so an account proves nothing. `manifest`, `me`
+and `admin/grant` are not gated. The gate lifts only with a switch to `SMS_PROVIDER=kavenegar`.
 
 Rate limits `[live]`: PocketBase's built-in limiter (per rule, per client IP) where the key is an
 address, and an in-hook count where the key is a phone number or install id. Migration
@@ -802,18 +821,37 @@ behind Caddy alone (§14.3, how-why §5.7). DNS has `A` records only; if an `AAA
 added, per-IP rules need revisiting, since PocketBase keys on the full IPv6 address and one
 machine can hold a whole /64.
 
-### 8.3 Payment rules
+### 8.3 Payment rules `[live]` (server; the real 1,000-toman verification is still to do)
 
 - Prices are read from `app_config` on the server at request time; the client only displays.
 - Amounts are toman everywhere; Zarinpal v4 is called with `currency: "IRT"` on both `request`
   and `verify`, so no merchant-panel setting is involved. Verified once in Phase 5 with a real
-  1,000-toman payment and recorded here.
-- Verification compares the amount; a mismatch fails the payment and logs an error.
+  1,000-toman payment and recorded here — **not yet done**; until then the v4 field names in
+  `lib/zarinpal.js` are from Zarinpal's public docs, not from a live answer (how-why §5.14).
+- Verification compares the amount: `verify` is always sent the `payable` stored on our row, never
+  an amount from a request, a query string or the unverified list, and Zarinpal answers -50 when it
+  differs from what was paid. -50 fails the payment (`failReason: amount_mismatch`) and logs a
+  `pay.amount_mismatch` error. -51 / -53 / -54 fail it as `not_paid`; any other answer, or none,
+  leaves it for the next callback or the reconcile cron.
+- The gateway is `ZARINPAL_PROVIDER`: `zarinpal` (sandbox or live by `ZARINPAL_SANDBOX`, or
+  `ZARINPAL_API_BASE` when set — tests only) or `mock` (CI/e2e: `request` answers our own callback
+  URL with `Status=OK`, `verify` always succeeds; reported as a boot problem on the real origin).
 - A user who already holds an entitlement gets `codeStatus: 'already-entitled'` from `quote` and
   `request` refuses to charge twice.
 - Discount code validation order: exists → active → not expired → `usedCount < maxUses` → not
   already used by this user when `perUserOnce` → compute. All on the server; the client never
-  computes a price.
+  computes a price. A code that does not match `^[A-Z0-9_-]{1,32}$` after normalising, or whose
+  value cannot make a price (a percent outside 1–100, a fixed amount below 1), counts as not
+  existing (`invalid`); an inactive code is also `invalid` — the user is never told which.
+  `maxUses` is a hard ceiling (0 or blank = `exhausted`, never "unlimited"); a blank `expiresAt`
+  never expires. "Used by this user" = a `verified` payment of theirs carrying the code.
+- The discount is taken off `salePrice` (`listPrice` is only displayed): percent →
+  `floor(salePrice × value / 100)`, fixed → `min(value, salePrice)`; `payable = salePrice − discount`.
+  `usedCount` is incremented once, when the payment is verified (or at once for a 100 % grant);
+  two payments in flight on a code's last use can take it past `maxUses` — logged as
+  `pay.code_over_limit`, never refused after the money is taken.
+- A payment verified for a user who already holds an entitlement (two payments in flight) is kept
+  `verified`, grants nothing new, and logs `pay.double_payment` for the owner to refund by hand.
 - Refunds are manual (owner, in the Zarinpal panel); the owner then deletes the entitlement in
   the PB admin UI. The client keeps its cache until the next online `/api/me` — see §7.6.
 
@@ -1148,10 +1186,14 @@ written to the dashboard's overview as a warning). External uptime monitoring is
 
 - Secrets only in `/opt/kl/.env` and GitHub secrets; names in `.env.example`.
 - OTP: limits in §8.2; codes hashed at rest; 3-minute expiry; 5 attempts.
-- Payment: verification is server-to-server with the amount; entitlement never written from a
-  client request; callback idempotent.
-- Content: the paid file only through the gated route, 20 fetches per user per day; the free
-  file is public by design.
+- Payment: verification is server-to-server with the stored amount; entitlement never written from
+  a client request; callback idempotent (one conditional flip per payment, and a unique
+  (`user`, `product`) index on `entitlements`). While `SMS_PROVIDER=mock` every payment route and
+  the paid download refuse outright (`PAYMENT_DISABLED_MOCK_SMS`, §8.2), because under mock SMS
+  anyone can sign in as anyone; `ZARINPAL_PROVIDER=mock` on the real origin is a boot problem.
+- Content: the paid file only through the gated route, 20 fetches per user per rolling day, each
+  one logged in `content_downloads` (evidence if an account is used to redistribute it); the
+  free file is public by design.
 - Sync: `user` always from the auth token; a body cannot write another user's events; 500 events
   per push; a wildly out-of-range `at` (± 1 year) is stored but flagged in server logs.
 - Client errors / flags / beacons: per-install daily caps, and per-IP limits (client-errors 120 /
@@ -1231,10 +1273,22 @@ B's), 401 without a token, 403 for a superuser, and the generic collection API s
 limits (`rate-limits.test.ts`): the exact rule list with no `/api/` catch-all; each telemetry
 route refusing one IP that rotates `installId` past its per-IP limit, storing nothing for the
 refused call and still serving another IP; superuser login limited per IP even with the right
-password. Still
-to cover as the routes land: content gate refusing an unentitled user,
-quote/request for each `codeStatus`, callback with a wrong amount, callback replay,
-`reconcileUnverified`. The e2e job exercises every route end to end.
+password. Payment
+(`pay.test.ts`, against `test/zarinpal-stub.ts`, a local Zarinpal v4 stand-in that
+`ZARINPAL_API_BASE` points at — the harness defaults that variable to a closed port, so no test
+can reach Zarinpal): every `codeStatus` and the §8.3 order, rounding, prices read at request time;
+`request` sending `payable` with `IRT`, `DISCOUNT_REJECTED` writing nothing, a 100 % code granting
+without a gateway call, `ALREADY_ENTITLED`, `GATEWAY_FAILED`; the callback's ok path, a replay, four
+concurrent callbacks with a slow verify (one entitlement, one use), cancelled, not paid, a wrong
+amount (failed, error logged), an unknown authority, a gateway that cannot answer; `status/:id` in
+each state and for another user; `admin/grant` refused to users, creating and idempotent; both
+crons, including a late callback for an expired payment and reconcile refusing a wrong amount; the
+mock gateway end to end. Content (`content.test.ts`): manifest, 401, `NOT_ENTITLED`, a whole file,
+206 ranges byte-exact across multi-byte text, a stale `If-Range`, 416, the 21st fetch refused per
+user, a missing `CONTENT_DIR`. The gate (`payment-gate.test.ts`): a server with `SMS_PROVIDER=mock`
+answering 503 `PAYMENT_DISABLED_MOCK_SMS` on every gated route, with and without a token and to a
+malformed body, writing nothing and calling no gateway; the ungated routes untouched; both mocks
+reported on the production origin. The e2e job exercises every route end to end.
 
 ### 16.4 CI jobs
 
@@ -1267,7 +1321,9 @@ protection requires `ci`, `server` and `e2e`.
 
 `.env.example` is the list of record. Server (`/opt/kl/.env`): `SMS_PROVIDER`
 (`kavenegar`|`console`|`mock`), `SMS_API_KEY`, `SMS_OTP_TEMPLATE`, `SMS_API_BASE` (default `https://api.kavenegar.com`; tests only), `ZARINPAL_MERCHANT_ID`,
-`ZARINPAL_SANDBOX` (`0`|`1`), `ZARINPAL_CALLBACK_URL`, `PUBLIC_APP_ORIGIN`, `CONTENT_DIR`,
+`ZARINPAL_SANDBOX` (`0`|`1`), `ZARINPAL_PROVIDER` (`zarinpal`|`mock`, default `zarinpal`),
+`ZARINPAL_API_BASE` (tests only; empty = the sandbox or live host by `ZARINPAL_SANDBOX`),
+`ZARINPAL_CALLBACK_URL`, `PUBLIC_APP_ORIGIN`, `CONTENT_DIR`,
 `SOURCEMAP_DIR`, `BACKUP_S3_ENDPOINT`, `BACKUP_S3_BUCKET`, `BACKUP_S3_KEY`, `BACKUP_S3_SECRET`.
 Local bootstrap (`.env.local`, git-ignored, used once): `VPS_IP`, `VPS_ROOT_PASSWORD`. DNS is
 done (§14.3) and needs no key — it is managed by hand in Parspack's CDN panel.

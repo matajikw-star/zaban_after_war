@@ -20,6 +20,12 @@ const CODES = {
   OTP_LOCKED: 'OTP_LOCKED',
   SMS_FAILED: 'SMS_FAILED',
   SMS_PROVIDER_UNKNOWN: 'SMS_PROVIDER_UNKNOWN',
+  // Payment and paid content (what.md §8.2, §8.3; ticket dev-payment/01).
+  PAYMENT_DISABLED_MOCK_SMS: 'PAYMENT_DISABLED_MOCK_SMS',
+  ALREADY_ENTITLED: 'ALREADY_ENTITLED',
+  DISCOUNT_REJECTED: 'DISCOUNT_REJECTED',
+  GATEWAY_FAILED: 'GATEWAY_FAILED',
+  NOT_ENTITLED: 'NOT_ENTITLED',
 };
 
 /** The HTTP status each code answers with unless the thrower says otherwise. */
@@ -36,6 +42,13 @@ const STATUS_BY_CODE = {
   OTP_LOCKED: 400,
   SMS_FAILED: 502,
   SMS_PROVIDER_UNKNOWN: 500,
+  // 503, not 403: the refusal is about how this server is configured (SMS_PROVIDER=mock lets
+  // anyone sign in as anyone), not about the caller, and it lifts on its own once SMS is real.
+  PAYMENT_DISABLED_MOCK_SMS: 503,
+  ALREADY_ENTITLED: 409,
+  DISCOUNT_REJECTED: 400,
+  GATEWAY_FAILED: 502,
+  NOT_ENTITLED: 403,
 };
 
 /**
@@ -44,7 +57,8 @@ const STATUS_BY_CODE = {
  * @param {number} [status] HTTP status; defaults to the code's own
  * @param {any}    [data]   extra context for the log line, never sent to the client
  * @param {object} [pub]    extra top-level fields the client DOES see, next to `error`
- *                          (`retryAfter` on a 429, `attemptsLeft` on OTP_WRONG). Flat numbers only.
+ *                          (`retryAfter` on a 429, `attemptsLeft` on OTP_WRONG, `codeStatus` on
+ *                          DISCOUNT_REJECTED). Flat scalars only.
  */
 function AppError(code, message, status, data, pub) {
   const base = Error.call(this, message || code);

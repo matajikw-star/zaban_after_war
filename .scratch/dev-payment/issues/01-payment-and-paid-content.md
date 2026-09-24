@@ -88,3 +88,19 @@ For the client agent — things the e2e journey will need that are **not** done 
 
 Still open for the owner: the real 1,000-toman verification (§8.3), which is also where the
 Zarinpal v4 field names in `lib/zarinpal.js` get confirmed (how-why §5.14 lists them).
+
+### 2026-09-24 — lead review: two fixes on `feat/payment-server`
+
+1. **A 100 % code's last use could go to every racer.** The free-grant path checked `maxUses`
+   only in `quote()`, outside the transaction, then counted the use unconditionally: eight users
+   racing for a `maxUses: 1` free code got 4–7 packages in the new test (red before the fix, three
+   runs). Now the grant claims the use first inside its transaction
+   (`… WHERE code = ? AND usedCount < maxUses`); a lost claim saves nothing and answers
+   `DISCOUNT_REJECTED` + `codeStatus: exhausted`. The paid path still counts unconditionally, on
+   purpose (the user has paid; the overrun is logged as `pay.code_over_limit`).
+2. **Unknown `/api/*` paths answered `200 text/html`** on staging (pb_public's index fallback).
+   A middleware in `core.pb.js` now answers the JSON envelope, 404 `NOT_FOUND`, for any method, but
+   only when the router's matched pattern is not under `/api` — so no real route is shadowed. A
+   method-less `/api/{path...}` route panics PocketBase 0.40.2 at startup (tried). Client note:
+   a 404 `NOT_FOUND` from a route the client expects to exist means the server is older than the
+   client.

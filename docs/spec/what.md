@@ -725,7 +725,8 @@ a phone number alone. `app_config` is seeded by the same migration with 450000 /
 ### 8.2 Routes (`pb_hooks/`)
 
 Every route is registered through `lib/route.js` → `withRoute(name, handler, opts)`, which
-authenticates (`opts.auth` is `none` / `user` / `superuser` / `optional`), validates the body
+runs `opts.guard` first when one is given (a function that throws to refuse the request before
+auth or body — the payment routes' mock-SMS gate), authenticates (`opts.auth` is `none` / `user` / `superuser` / `optional`), validates the body
 against `opts.schema`, caps it at 32 KB (`opts.maxBodyBytes` raises it for one route:
 `sync/push` takes 256 KB, what 500 events cost), catches everything, logs one structured record (§10.2)
 and answers `{ error: { code, message } }` with a stable `code` — one of `BAD_INPUT`,
@@ -733,7 +734,10 @@ and answers `{ error: { code, message } }` with a stable `code` — one of `BAD_
 `PHONE_INVALID`, `OTP_WRONG`, `OTP_EXPIRED`, `OTP_LOCKED`, `SMS_FAILED` (502),
 `SMS_PROVIDER_UNKNOWN` (500). A few errors carry one extra top-level number next to `error`:
 `retryAfter` (seconds) on every 429, which also sets the `Retry-After` header, and
-`attemptsLeft` on `OTP_WRONG`. Bodies are JSON. Auth is the
+`attemptsLeft` on `OTP_WRONG`. Bodies are JSON, except where a handler returns
+`blobResponse` (raw bytes), `redirectResponse` (a 302 — the payment callback) or `fileResponse`
+(a file served through Go's `http.ServeContent`, which is what gives the paid package its
+`Range` handling); the auth, the guard, the log line and the error envelope are the same for all. Auth is the
 PocketBase bearer token. Because PocketBase serializes each handler into its own isolated context,
 `withRoute` is required and applied *inside* the handler, not around it (see how-why §5.4).
 

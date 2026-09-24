@@ -165,3 +165,13 @@ in a browser (only the fakes and `rangeStartOf`'s parser) — part B's journey i
 proof; Playwright's `setOffline` mid-body is how to prove resume there. No component tests (the
 repo has none; screens are pure machine + flow, rendering proven in e2e). The paywall's anonymous
 `pay/quote` produces a 401 line in the server log per anonymous paywall view — by design.
+
+### 2026-09-25 — part A, lead review fixes
+
+1. `7a7b870` (lead): Caddy's `encode zstd gzip` rewrites the ETag to `"<hash>-gzip"`;
+   `download.ts` `etagMatches()` accepts it.
+2. `c2be4c2`: the entitlement cache is per account — `kv.entitlement = {byUser: {[userId]: …}}`,
+   `none` when signed out or for another account, answers keyed by the account they were asked
+   as, the loaded package follows sign-in/out without a reload, a legacy record belongs to nobody.
+   what.md §7.3/§7.6/§16.2, how-why §5.16. For part B: a journey that signs out and in as another
+   phone should now see the free package and no download; the same phone back sees paid, offline.

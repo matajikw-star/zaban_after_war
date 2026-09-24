@@ -499,7 +499,9 @@ goal-reached sheet last appeared on) in the review ticket; `saveProgressPromptSh
 once-only prompt) in the sync ticket, which also fixed `syncCursor`'s value as `{userId, cursor}`.
 The payment ticket fixed two more values: `downloadReceivedBytes` is `{hash, version, bytes}` —
 the received bytes themselves, not only their count, because a resume after a reload needs
-them — and `pendingPayment` is `{paymentId, userId, startedAt}`.
+them — and `pendingPayment` is `{paymentId, userId, startedAt}`. Its lead review fixed
+`entitlement` as `{byUser: {[userId]: Entitlement}}`, one record per account (§7.6); a
+pre-account `{status, …}` value reads as belonging to nobody.
 
 ### 7.4 Backup (sync) state machine — `sync/backup.ts` [live]
 
@@ -635,20 +637,41 @@ user per day, each Range fetch counting; 503 `PAYMENT_DISABLED_MOCK_SMS` while S
 
 ### 7.6 Entitlement on the device [building]
 
-`kv.entitlement = { status: 'none' | 'full', source, grantedAt, checkedAt }` — `source` is
-`zarinpal` | `discount` | `manual`, `grantedAt` PocketBase's datetime text, verbatim. Written
-only from a server response, through `stores/auth.ts` `adoptServerEntitlement`, which applies
-`sync/entitlement.ts` `mergeEntitlement` — there is deliberately no plain setter. The responses:
+`kv.entitlement = { byUser: { [userId]: { status: 'none' | 'full', source, grantedAt, checkedAt } } }`
+— `source` is `zarinpal` | `discount` | `manual`, `grantedAt` PocketBase's datetime text,
+verbatim.
+
+**Per account.** A record counts only while the account it belongs to is signed in:
+`stores/auth.ts`'s `entitlement` is `byUser[userId]`, or `none` when signed out or when the
+account has no record. So on a shared phone — A buys, signs out, B signs in — B gets the free
+package, no download runs, and nothing is reported. `signIn`/`signOut` rescope it at once, and
+`sync/entitlement-live.ts` `followEntitlementNow` (subscribed in `main.tsx`) reloads the content
+store on every change of the effective status — free ↔ paid without a reload, the loads run in
+turn so the last one always matches the current account — and on becoming `full` asks the
+download to check the package (it fetches nothing when the stored hash is current). The stored
+`packages.paid` is never deleted, so A signing back in has it offline, with no network call. A
+download that finishes after a sign-out stores the package but does not load it. The records sit
+side by side in one small map rather than one record tagged with a `userId`, so B's `none` can
+never overwrite A's `full`. A value without `byUser` (written by pre-account staging builds)
+belongs to nobody; the next `/api/me` fills the account in.
+
+Written only from a server response, through `stores/auth.ts`
+`adoptServerEntitlement(server, userId)`, which applies `sync/entitlement.ts` `mergeEntitlement`
+to that account's record — `userId` is the account the request was made as, captured before it
+was sent, so an answer that arrives after a sign-out or an account switch lands in the right
+record; with no account it is dropped. There is deliberately no plain setter. The responses:
 `/api/me` (at launch when logged in, after a login, on a purchase result of `ok`), and
 `GET /api/pay/status/:id` answering `entitled: true` (cached as `full`, then `/api/me` fills in
 `source` and `grantedAt`). A 100 % code's `granted: true` lands on `/purchase/result?status=ok`,
 which asks `/api/me`. Read offline forever; never expires.
 
-**Never revoked by the device.** A network error, a 401, a 5xx, the 503 gate or a malformed body
-changes nothing (`refreshEntitlement` never throws, and a failed cache write is reported and
-changes nothing either). An online `/api/me` that says `none` while the cache says `full` keeps
-the cache and files one `client_errors` record (`ENTITLEMENT_MISMATCH`, kind `payment`) — a
-refund is the owner's act (§8.3). A cached `full` starts the download (§7.5).
+**Never revoked by the device, within one account.** A network error, a 401, a 5xx, the 503 gate
+or a malformed body changes nothing (`refreshEntitlement` never throws; a failed cache write is
+reported, and the answer holds in memory for the session). An online `/api/me` that says `none`
+while that account's record says `full` keeps the record and files one `client_errors` record
+(`ENTITLEMENT_MISMATCH`, kind `payment`) — a refund is the owner's act (§8.3). Another account's
+`none` is not a mismatch: it is that account's own record. A cached `full` starts the download
+(§7.5).
 
 **`kv.pendingPayment`** (`sync/payment-status.ts`): `/checkout` writes `{paymentId, userId,
 startedAt}` just before it redirects to the gateway (a failed write is reported and the payment
@@ -1302,7 +1325,10 @@ produces a schedule where a word can be conquered in exactly 7 days but the medi
   update swap keeping the old package, 403/429/503/404, the stall watchdog, `Content-Range`
   parsing. Entitlement and payment (`entitlement.test.ts`, `payment-status.test.ts`): never
   revoked by 401/5xx/503/malformed answers, every `pay/status` outcome, launch recovery kept
-  offline and cleared on a terminal answer, the polling bounds. Screens are tested as pure
+  offline and cleared on a terminal answer, the polling bounds; the shared-phone scenario over
+  the real stores (`entitlement-account.test.ts`: A full → sign out → none → B none with no
+  mismatch → A back full and on the paid package with no network call; a late answer lands in
+  its own account's record; a legacy record belongs to nobody). Screens are tested as pure
   machines plus never-throwing flows (`screens/{login,paywall,checkout,purchase-result}/*.test.ts`).
 - E2E (Playwright, Android-sized viewport, against a real PocketBase started by the test runner
   — `playwright.config.ts`'s second `webServer`, `server/scripts/e2e.mjs`, `127.0.0.1:8091`, a

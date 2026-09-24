@@ -938,6 +938,29 @@ headers, then 30 s without a body byte abandons the stream, keeping what arrived
 **`?next=` on `/login` is an allowlist** (`/checkout`, `/purchase/result`), so a crafted link can
 never turn the login screen into an open redirect.
 
+### 5.16 The entitlement cache is per account (lead review of dev-payment/01 part A, 2026-09-25)
+
+**Problem.** The cache was one record for the device. On a shared phone — A buys and signs
+out, B signs in — the never-revoke rule kept `full`, so B studied the paid package, every
+launch filed `ENTITLEMENT_MISMATCH`, and the download's 403 `NOT_ENTITLED` was reported.
+
+**Decision** (the same reasoning as §5.8's per-user sync cursor): a record counts only while
+the account it was granted to is signed in; signed out or signed in as someone else, the device
+treats the entitlement as `none`. "Never revoked by the device" still holds within one account.
+The stored paid package is never deleted, so A signing back in regains it offline; only which
+package the content store loads changes, and a subscription switches it free ↔ paid without a
+reload.
+
+**Storage: one small map, `{byUser: {[userId]: Entitlement}}`**, rather than one record tagged
+with a `userId`, because the tagged record would have to be overwritten by B's `none` — losing
+A's `full` until A's next online `/api/me`, i.e. A offline would lose the paid package. The map
+is a few records at most. A pre-account value (staging builds) reads as belonging to nobody:
+nobody holds a real paid entitlement yet, and the next `/api/me` fills it in.
+
+**Answers are keyed by the account they were asked as**, captured before the request is sent,
+not by whoever is signed in when the answer arrives — otherwise a sign-out during `/api/me`
+could file A's `full` under B.
+
 ## 6. How to extend this file
 
 

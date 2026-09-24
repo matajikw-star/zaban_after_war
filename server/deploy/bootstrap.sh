@@ -22,6 +22,9 @@ if ! id -u "$KL_USER" >/dev/null 2>&1; then
   adduser --disabled-password --gecos "" "$KL_USER"
 fi
 usermod -aG sudo "$KL_USER"
+# So `kl` can read `journalctl -u kl-pocketbase` (debug-from-log.md) without sudo — idempotent,
+# same as the line above (ticket dev-server/05 #3).
+usermod -aG systemd-journal "$KL_USER"
 echo "${KL_USER} ALL=(ALL) NOPASSWD: /bin/systemctl restart kl-pocketbase, /bin/systemctl restart caddy, /bin/systemctl reload caddy, /bin/systemctl status kl-pocketbase, /bin/systemctl status caddy" \
   > /etc/sudoers.d/kl-deploy
 chmod 440 /etc/sudoers.d/kl-deploy

@@ -47,6 +47,11 @@ done
 
 changed=""
 
+echo "== journal access"
+# Bootstrap already ran on the VPS before this was added (ticket dev-server/05 #3), so it is
+# repeated here too — idempotent, same as bootstrap.sh's usermod -aG.
+usermod -aG systemd-journal "$KL_USER"
+
 echo "== pocketbase binary"
 (cd "$STAGE" && sha256sum --quiet -c pocketbase.sha256) || fail "pocketbase checksum mismatch in ${STAGE}"
 chmod 755 "${STAGE}/pocketbase"

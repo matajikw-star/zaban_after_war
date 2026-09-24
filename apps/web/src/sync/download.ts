@@ -359,6 +359,18 @@ function retryAfterMsOf(err: AppError): number | undefined {
   return typeof data?.retryAfter === 'number' ? data.retryAfter * 1000 : undefined;
 }
 
+/**
+ * Whether a response's `ETag` names the package with this hash. Caddy's `encode` (§14.2) rewrites
+ * a strong `"<hash>"` to `"<hash>-gzip"` (or `-zstd`, `-br`) when it compresses, and a proxy may
+ * weaken it to `W/"…"`; every browser asks for compression, so on the real server the exact tag
+ * never arrives. Verified against staging's Caddy on 2026-09-25. The sha256 check after the
+ * download stays the real guarantee; this only catches a file that moved on mid-download early.
+ */
+export function etagMatches(etag: string, hash: string): boolean {
+  const tag = etag.trim().replace(/^W\//, '');
+  return tag === `"${hash}"` || /^"(.+)-(gzip|zstd|br|deflate)"$/.exec(tag)?.[1] === hash;
+}
+
 function concat(chunks: readonly Uint8Array[], length: number): Uint8Array {
   if (chunks.length === 1 && chunks[0]?.length === length) return chunks[0];
   const out = new Uint8Array(length);
@@ -446,7 +458,7 @@ export function createDownloadRunner(deps: DownloadDeps): DownloadRunner {
         throw error;
       }
 
-      if (response.etag !== null && response.etag !== etag) {
+      if (response.etag !== null && !etagMatches(response.etag, expected.hash)) {
         await deps.clearPartial();
         throw new AppError(
           'DOWNLOAD_CONTENT_CHANGED',

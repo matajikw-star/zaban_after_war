@@ -8,6 +8,7 @@ import {
   type DownloadDeps,
   type DownloadEvent,
   type DownloadState,
+  etagMatches,
   type InstalledPackage,
   mayRunNow,
   type PaidResponse,
@@ -395,6 +396,20 @@ function codeOf(report: { err: unknown } | undefined): string | undefined {
   return report?.err instanceof AppError ? report.err.code : undefined;
 }
 
+describe('etagMatches', () => {
+  it('matches the strong tag, a weak one and every suffix Caddy writes when it compresses', () => {
+    for (const tag of ['"abc"', 'W/"abc"', '"abc-gzip"', '"abc-zstd"', '"abc-br"', ' "abc" ']) {
+      expect(etagMatches(tag, 'abc')).toBe(true);
+    }
+  });
+
+  it('refuses another hash, an unknown suffix and an unquoted tag', () => {
+    for (const tag of ['"abd"', '"abc-foo"', '"xabc-gzip"', 'abc', '"abc"x', '']) {
+      expect(etagMatches(tag, 'abc')).toBe(false);
+    }
+  });
+});
+
 describe('a download run', () => {
   it('downloads, verifies and installs the paid package', async () => {
     const file = await buildPackage('2026-09-30.1', 40);
@@ -589,6 +604,24 @@ describe('a download run', () => {
 
     expect(runner.state()).toMatchObject({ reason: 'DOWNLOAD_CONTENT_CHANGED' });
     expect(h.kv.partial).toBeNull();
+  });
+
+  it("accepts the ETag Caddy's compression rewrites, and resumes through it", async () => {
+    // Staging's Caddy (`encode zstd gzip`) answers `"<hash>-gzip"` to every browser.
+    const file = await buildPackage('v1', 300);
+    const h = harness(file);
+    h.setServer(serve(file, { etag: `"${file.hash}-gzip"`, cutAfter: 5_000 }));
+    const runner = createDownloadRunner(h.deps);
+
+    await runner.request('entitled');
+    expect(runner.state()).toMatchObject({ name: 'error', reason: 'DOWNLOAD_INTERRUPTED' });
+    expect(h.kv.partial?.bytes.length).toBe(5_000);
+
+    h.setServer(serve(file, { etag: `W/"${file.hash}-zstd"` }));
+    await runner.request('online');
+
+    expect(h.fetches[1]).toEqual({ from: 5_000, ifRange: `"${file.hash}"` });
+    expect(runner.state()).toEqual({ name: 'installed', version: 'v1' });
   });
 
   it('refuses a 206 that starts at the wrong byte', async () => {

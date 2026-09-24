@@ -596,7 +596,10 @@ the settings row is right offline.
    file, and the count restarts at 0; a 416 drops the stored bytes and fetches the file whole,
    once, in the same run. A response whose `ETag` is not the manifest hash (the file moved on
    before the manifest did) is refused as `DOWNLOAD_CONTENT_CHANGED` and its bytes dropped; the
-   next run reads the new manifest and fetches whole.
+   next run reads the new manifest and fetches whole. "Names the manifest hash" means
+   `"<hash>"`, `W/"<hash>"` or `"<hash>-gzip|zstd|br|deflate"`: Caddy's `encode` (§14.2) appends
+   the encoding to a strong tag whenever it compresses, which it does for every browser (checked
+   on staging 2026-09-25; a compressed 206 still carries the uncompressed `Content-Range`).
 3. The body streams into memory; every 256 KB, and whenever the stream breaks, what arrived is
    written to `kv.downloadReceivedBytes`, so neither a dropped connection nor a killed tab loses
    it. No headers within 30 s, or no body bytes for 30 s, abandons the request

@@ -14,7 +14,7 @@ export function Toast({ message }: ToastProps) {
   return (
     <div
       role="status"
-      className="pointer-events-none fixed inset-x-0 bottom-24 z-40 flex justify-center px-4"
+      className="pointer-events-none fixed inset-x-0 bottom-28 z-40 flex justify-center px-4"
       data-testid="review-toast"
     >
       <span className="rounded-[var(--radius-pill)] bg-[var(--fg)] px-4 py-2 text-body-sm text-[var(--bg)] shadow-sm">

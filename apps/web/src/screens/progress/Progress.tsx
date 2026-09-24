@@ -42,10 +42,10 @@ export function Progress() {
   };
 
   return (
-    <main className={`flex flex-1 flex-col gap-4 pt-4 ${BOTTOM_NAV_SPACER_CLASS}`}>
-      <h1 className="text-h5 font-medium">{strings.screens.progress}</h1>
+    <main className={`flex flex-1 flex-col gap-4 pt-2 ${BOTTOM_NAV_SPACER_CLASS}`}>
+      <h1 className="flex min-h-11 items-center text-h5 font-medium">{strings.screens.progress}</h1>
 
-      <Card className="flex flex-col gap-2">
+      <Card className="flex flex-col gap-3">
         <p className="text-h3 font-medium">{faPercent(progressInfo.percent)}</p>
         <ProgressBar value={progressInfo.percent} ariaLabel={strings.a11y.progressBar} />
         <p className="text-caption text-[var(--fg-muted)]">{strings.progress.ruleSentence}</p>
@@ -58,7 +58,7 @@ export function Progress() {
       </Card>
 
       <Card className="flex flex-col gap-2">
-        <h2 className="text-body-sm font-medium">{strings.progress.chartTitle}</h2>
+        <h2 className="text-subtitle-sm font-medium">{strings.progress.chartTitle}</h2>
         <ChartBars days={chart} />
       </Card>
 

@@ -22,7 +22,7 @@ import { strings } from '../../strings.ts';
 import { Button } from '../../ui/Button.tsx';
 import { Card, CardBody, CardTitle } from '../../ui/Card.tsx';
 import { Disclosure } from '../../ui/Disclosure.tsx';
-import { faNumber } from '../../ui/format.ts';
+import { faNumber, faYear } from '../../ui/format.ts';
 import { SheetClose, SheetContent, SheetRoot, SheetTrigger } from '../../ui/Sheet.tsx';
 import { BOTTOM_NAV_SPACER_CLASS } from '../layout/BottomNav.tsx';
 
@@ -107,37 +107,45 @@ export function WordDetail({ card }: { readonly card: WordCard }) {
   }
 
   return (
-    <main className={`flex flex-1 flex-col gap-4 pt-4 ${BOTTOM_NAV_SPACER_CLASS}`}>
+    <main className={`flex flex-1 flex-col gap-4 pt-2 ${BOTTOM_NAV_SPACER_CLASS}`}>
       <div className="flex items-center gap-2">
         <button
           type="button"
           onClick={() => void navigate(-1)}
           aria-label={strings.word.back}
-          className="flex h-11 w-11 items-center justify-center rounded-[var(--radius-control)] hover:bg-[var(--border)]"
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[var(--radius-control)] outline-none transition-colors duration-[var(--motion-fast)] hover:bg-[var(--bg-muted)] focus-visible:ring-2 focus-visible:ring-[var(--fg)]"
         >
-          <ChevronRight aria-hidden="true" />
+          <ChevronRight size={22} aria-hidden="true" />
         </button>
-        <h1 className="text-h4 font-medium" dir="ltr">
+        <h1 className="min-w-0 text-h4 font-medium tracking-tight break-words" dir="ltr" lang="en">
           {card.lemma}
         </h1>
       </div>
 
       {card.senses.map((sense) => (
         <Card key={`${sense.pos}:${sense.definition}`}>
-          <CardTitle>
-            {sense.pos}
+          {/* Part of speech and IPA are both Latin: one left-to-right line, each isolated. */}
+          <CardTitle dir="ltr" className="flex flex-wrap items-baseline gap-x-2 text-start">
+            <span className="text-subtitle-sm font-medium text-[var(--fg-muted)]">{sense.pos}</span>
             {sense.ipa === null ? null : (
-              <span className="ms-2 text-body-sm font-normal text-[var(--fg-muted)]" dir="ltr">
-                {sense.ipa}
-              </span>
+              <span className="text-body-sm font-normal text-[var(--fg-muted)]">{sense.ipa}</span>
             )}
           </CardTitle>
-          <CardBody className="flex flex-col gap-2 pt-2">
-            <p className="text-body text-[var(--fg)]">{sense.translations.join('، ')}</p>
-            <p>{sense.definition}</p>
+          <CardBody className="flex flex-col gap-3 pt-2">
+            <p className="text-h6 font-medium text-[var(--fg)]">
+              {sense.translations.join(strings.format.listSeparator)}
+            </p>
+            <p dir="ltr" lang="en">
+              {sense.definition}
+            </p>
             {sense.examples.map((example) => (
-              <div key={example.en} className="flex flex-col gap-0.5">
-                <p dir="ltr">{example.en}</p>
+              <div
+                key={example.en}
+                className="flex flex-col gap-1 rounded-[var(--radius-control)] bg-[var(--bg-muted)] p-3"
+              >
+                <p dir="ltr" lang="en" className="text-body text-[var(--fg)]">
+                  {example.en}
+                </p>
                 <p>{example.fa}</p>
               </div>
             ))}
@@ -145,39 +153,43 @@ export function WordDetail({ card }: { readonly card: WordCard }) {
         </Card>
       ))}
 
-      {card.confusables.length === 0 ? null : (
-        <Disclosure label={strings.word.confusablesTitle}>
-          <ul className="flex flex-col gap-1">
-            {card.confusables.map((confusable) => (
-              <li key={confusable.word}>
-                <span dir="ltr" className="font-medium text-[var(--fg)]">
-                  {confusable.word}
-                </span>
-                {' — '}
-                {confusable.note}
-              </li>
-            ))}
-          </ul>
-        </Disclosure>
-      )}
-
-      <Disclosure label={strings.word.examTitle} defaultOpen>
-        {card.exam.timesTested === 0 ? (
-          <p>{strings.word.noExam}</p>
-        ) : (
-          <div className="flex flex-col gap-1">
-            <p>{strings.word.examTimesTested(faNumber(card.exam.timesTested))}</p>
-            <p dir="ltr">
-              {strings.word.examYears(card.exam.years.map((y) => faNumber(y)).join('، '))}
-            </p>
-          </div>
+      <Card className="flex flex-col gap-1 p-2">
+        {card.confusables.length === 0 ? null : (
+          <Disclosure label={strings.word.confusablesTitle}>
+            <ul className="flex flex-col gap-1">
+              {card.confusables.map((confusable) => (
+                <li key={confusable.word}>
+                  <bdi dir="ltr" lang="en" className="font-medium text-[var(--fg)]">
+                    {confusable.word}
+                  </bdi>
+                  {' — '}
+                  {confusable.note}
+                </li>
+              ))}
+            </ul>
+          </Disclosure>
         )}
-      </Disclosure>
 
-      <div className="flex flex-col gap-1">
-        <h2 className="text-body-sm font-medium">{strings.word.historyTitle}</h2>
-        <ReviewTimeline itemId={card.id} />
-      </div>
+        <Disclosure label={strings.word.examTitle} defaultOpen>
+          {card.exam.timesTested === 0 ? (
+            <p>{strings.word.noExam}</p>
+          ) : (
+            <div className="flex flex-col gap-1">
+              <p>{strings.word.examTimesTested(faNumber(card.exam.timesTested))}</p>
+              <p>
+                {strings.word.examYears(
+                  card.exam.years.map((y) => faYear(y)).join(strings.format.listSeparator),
+                )}
+              </p>
+            </div>
+          )}
+        </Disclosure>
+
+        <div className="flex flex-col gap-1 px-3 pt-2 pb-1">
+          <h2 className="text-subtitle-sm font-medium">{strings.word.historyTitle}</h2>
+          <ReviewTimeline itemId={card.id} />
+        </div>
+      </Card>
 
       <div className="mt-auto flex gap-2 pt-4">
         <Button variant="secondary" block onClick={() => void knowIt()}>

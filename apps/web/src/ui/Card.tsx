@@ -7,7 +7,8 @@ import type { HTMLAttributes } from 'react';
 import { cn } from './cn.ts';
 
 export interface CardProps extends HTMLAttributes<HTMLDivElement> {
-  /** A dark card on the light ground, for the one thing on a screen that must be looked at. */
+  /** The inverted card — dark on the light ground, light on the dark one — for the one thing on
+   *  a screen that must be looked at. */
   readonly emphasis?: boolean;
 }
 
@@ -16,9 +17,7 @@ export function Card({ className, emphasis = false, ...props }: CardProps) {
     <div
       className={cn(
         'rounded-[var(--radius-card)] border p-5 shadow-sm',
-        emphasis
-          ? 'border-transparent bg-[var(--color-neutral-900)] text-[var(--color-neutral-50)]'
-          : 'border-[var(--glass-border)] bg-[var(--glass-bg)] backdrop-blur-[var(--glass-blur)]',
+        emphasis ? 'border-transparent bg-[var(--fg)] text-[var(--bg)]' : 'glass',
         className,
       )}
       {...props}

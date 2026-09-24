@@ -19,9 +19,10 @@ import { useSettingsStore } from '../../stores/settings.ts';
 import { useSyncStore } from '../../stores/sync.ts';
 import { strings } from '../../strings.ts';
 import { Button } from '../../ui/Button.tsx';
+import { Card } from '../../ui/Card.tsx';
 import { Chip } from '../../ui/Chip.tsx';
 import { faNumber, faPercent } from '../../ui/format.ts';
-import { ProgressRing } from '../../ui/Progress.tsx';
+import { ProgressBar, ProgressRing } from '../../ui/Progress.tsx';
 import { BOTTOM_NAV_SPACER_CLASS, BottomNav } from '../layout/BottomNav.tsx';
 import { useOnboardingRedirect } from '../onboarding/redirect.ts';
 
@@ -68,33 +69,51 @@ export function Home() {
   const backedUp = backup.name === 'idle' && unsyncedCount === 0;
 
   return (
-    <main
-      className={`flex flex-1 flex-col items-center gap-6 pt-4 text-center ${BOTTOM_NAV_SPACER_CLASS}`}
-    >
-      <h1 className="text-h4 font-medium">{strings.appName}</h1>
+    <main className={`flex flex-1 flex-col gap-4 pt-2 ${BOTTOM_NAV_SPACER_CLASS}`}>
+      <header className="flex min-h-11 items-center justify-between gap-3">
+        <h1 className="text-h5 font-medium">{strings.appName}</h1>
+        {showBackupDot ? (
+          <div className="flex items-center gap-2 text-caption text-[var(--fg-muted)]">
+            <span
+              aria-hidden="true"
+              className={
+                backedUp
+                  ? 'inline-block h-2 w-2 rounded-full bg-[var(--fg-muted)]'
+                  : 'inline-block h-2 w-2 rounded-full border border-[var(--fg-muted)]'
+              }
+            />
+            <span>{backedUp ? strings.home.backupSynced : strings.home.backupPending}</span>
+          </div>
+        ) : null}
+      </header>
 
       {updateReady ? (
         <button
           type="button"
-          className="appearance-none bg-transparent p-0"
+          className="flex min-h-11 items-center justify-center self-center rounded-[var(--radius-pill)] outline-none focus-visible:ring-2 focus-visible:ring-[var(--fg)]"
           onClick={() => void applyUpdate()}
         >
           <Chip tone="solid">{strings.home.updateReady}</Chip>
         </button>
       ) : null}
 
-      <div className="flex flex-col items-center gap-2">
+      <Card className="flex flex-col items-center gap-3 py-7">
         <ProgressRing
           value={ringValue}
+          size={168}
+          strokeWidth={12}
           label={faNumber(today)}
           caption={strings.home.goalOf(faNumber(goal))}
           ariaLabel={strings.a11y.goalRing}
         />
-        <span className="text-body-sm text-[var(--fg-muted)]">{strings.home.todayGoalCaption}</span>
-      </div>
+        <span className="text-subtitle-sm font-medium text-[var(--fg-muted)]">
+          {strings.home.todayGoalCaption}
+        </span>
+      </Card>
 
-      <div className="flex flex-col items-center gap-3">
-        <Chip>{strings.home.streakDays(faNumber(streakInfo.days))}</Chip>
+      <Card className="flex flex-col gap-3 p-4">
+        <Chip className="self-start">{strings.home.streakDays(faNumber(streakInfo.days))}</Chip>
+        <ProgressBar value={progressInfo.percent} ariaLabel={strings.a11y.progressBar} />
         <p className="text-body-sm text-[var(--fg-muted)]">
           {strings.home.progressLine(
             faPercent(progressInfo.percent),
@@ -102,25 +121,14 @@ export function Home() {
             faNumber(progressInfo.total),
           )}
         </p>
+      </Card>
+
+      {/* The one primary action, low on the screen where the thumb already is. */}
+      <div className="mt-auto pt-2">
+        <Button variant="primary" size="lg" block onClick={() => void navigate('/review')}>
+          {strings.home.startReview}
+        </Button>
       </div>
-
-      <Button variant="primary" size="lg" onClick={() => void navigate('/review')}>
-        {strings.home.startReview}
-      </Button>
-
-      {showBackupDot ? (
-        <div className="flex items-center gap-2 text-caption text-[var(--fg-muted)]">
-          <span
-            aria-hidden="true"
-            className={
-              backedUp
-                ? 'inline-block h-2 w-2 rounded-full bg-[var(--fg-muted)]'
-                : 'inline-block h-2 w-2 rounded-full border border-[var(--fg-muted)]'
-            }
-          />
-          <span>{backedUp ? strings.home.backupSynced : strings.home.backupPending}</span>
-        </div>
-      ) : null}
 
       <BottomNav />
     </main>

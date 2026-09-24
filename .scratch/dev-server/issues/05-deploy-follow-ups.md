@@ -117,3 +117,6 @@ Not verified (deliberately, per "never connect to the VPS"): the real `--hooksWa
 against the actual Linux binary, the real `systemd-journal` group grant, and the real
 `superuser.sh` cwd fix — all three need the lead's re-run of `provision` on the VPS, exactly as
 the ticket's "Done when" says. e2e not run — no `apps/` code touched.
+
+**Lead verification on the VPS (2026-09-24, `4eefbb9`):** provision + `deploy all` re-run back to
+back, no refusal; all five fixes observed on the server (see `wiki/log.md` review line). Done.

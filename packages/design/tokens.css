@@ -27,14 +27,26 @@
   --fg: var(--color-neutral-950);
   --fg-muted: var(--color-neutral-500);
   --border: var(--color-neutral-200);
+  /* A step off the ground: inset panels (the sentence on the card), hover and pressed fills. */
+  --bg-muted: var(--color-neutral-100);
+  /* The soft light the glass sits in: a monochrome glow at the top of the page, so a
+     translucent surface has something to be translucent against. */
+  --bg-glow: var(--color-white);
 
-  /* Liquid glass: translucent surface + one-pixel border + blur. No heavy shadows. */
-  --glass-bg: rgba(255, 255, 255, 0.6);
-  --glass-border: rgba(255, 255, 255, 0.4);
+  /* Liquid glass: translucent surface + one-pixel border + blur. No heavy shadows. The border
+     is a dark hairline on the light ground — a white one would vanish into it. */
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(9, 9, 11, 0.08);
   --glass-blur: 16px;
+  /* Glass that floats over other content (sheets, dialogs, menus): more opaque, so the text on
+     it never competes with what is blurred behind it. */
+  --glass-bg-strong: rgba(255, 255, 255, 0.9);
+  /* The scrim behind a sheet or a dialog. */
+  --overlay: rgba(9, 9, 11, 0.4);
 
-  /* The only two colours in the product. */
-  --success: #16a34a;
+  /* The only two colours in the product. Tailwind green-700 / red-600: both clear 4.5:1 against
+     white text at the grading buttons' 18 px medium label, which green-600 does not. */
+  --success: #15803d;
   --danger: #dc2626;
 
   /* Radii: 24 px cards, 12 px controls, full-round pills. */
@@ -87,9 +99,14 @@
     --fg: var(--color-neutral-50);
     --fg-muted: var(--color-neutral-400);
     --border: var(--color-neutral-800);
+    --bg-muted: var(--color-neutral-800);
+    --bg-glow: rgba(63, 63, 70, 0.35);
 
-    --glass-bg: rgba(0, 0, 0, 0.4);
-    --glass-border: rgba(255, 255, 255, 0.08);
+    /* Lighter than the ground, not darker: black glass on a near-black page is mud. */
+    --glass-bg: rgba(39, 39, 42, 0.5);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-bg-strong: rgba(24, 24, 27, 0.92);
+    --overlay: rgba(0, 0, 0, 0.6);
   }
 }
 
@@ -101,9 +118,14 @@
   --fg: var(--color-neutral-50);
   --fg-muted: var(--color-neutral-400);
   --border: var(--color-neutral-800);
+  --bg-muted: var(--color-neutral-800);
+  --bg-glow: rgba(63, 63, 70, 0.35);
 
-  --glass-bg: rgba(0, 0, 0, 0.4);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  /* Lighter than the ground, not darker: black glass on a near-black page is mud. */
+  --glass-bg: rgba(39, 39, 42, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-bg-strong: rgba(24, 24, 27, 0.92);
+  --overlay: rgba(0, 0, 0, 0.6);
 }
 
 @media (prefers-reduced-motion: reduce) {

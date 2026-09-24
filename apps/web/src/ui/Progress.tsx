@@ -79,7 +79,7 @@ export function ProgressRing({
         />
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-0.5">
-        {label === undefined ? null : <span className="text-h4 font-medium">{label}</span>}
+        {label === undefined ? null : <span className="text-h3 font-medium">{label}</span>}
         {caption === undefined ? null : (
           <span className="text-caption text-[var(--fg-muted)]">{caption}</span>
         )}

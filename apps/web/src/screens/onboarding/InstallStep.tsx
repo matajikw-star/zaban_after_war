@@ -35,7 +35,9 @@ export function InstallStep() {
       <p className="text-body text-[var(--fg-muted)]">{strings.onboarding.installBody}</p>
 
       {context === 'native' ? (
-        <Button variant="primary" disabled={pending} onClick={() => void install()}>
+        // Secondary: the footer's «ادامه» is the screen's one primary action (§7.9), and
+        // installing is a side action that must never look like the way forward.
+        <Button variant="secondary" disabled={pending} onClick={() => void install()}>
           {strings.onboarding.installNow}
         </Button>
       ) : null}

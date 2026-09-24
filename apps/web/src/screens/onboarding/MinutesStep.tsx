@@ -5,8 +5,9 @@
 
 import { goalFromMinutes, ONBOARDING_MINUTES } from '@kl/core';
 import { strings } from '../../strings.ts';
-import { Button } from '../../ui/Button.tsx';
+
 import { faNumber } from '../../ui/format.ts';
+import { Segmented } from '../../ui/Segmented.tsx';
 
 export interface MinutesStepProps {
   readonly minutesPerDay: number;
@@ -15,20 +16,18 @@ export interface MinutesStepProps {
 
 export function MinutesStep({ minutesPerDay, onChange }: MinutesStepProps) {
   return (
-    <div className="flex flex-1 flex-col justify-center gap-6">
-      <h1 className="text-h5 font-medium">{strings.onboarding.minutesTitle}</h1>
-      <div className="flex flex-wrap gap-2">
-        {ONBOARDING_MINUTES.map((minutes) => (
-          <Button
-            key={minutes}
-            variant={minutesPerDay === minutes ? 'primary' : 'secondary'}
-            onClick={() => onChange(minutes)}
-          >
-            {strings.settings.minutesOption(faNumber(minutes))}
-          </Button>
-        ))}
-      </div>
-      <p className="text-caption text-[var(--fg-muted)]">
+    <div className="flex flex-1 flex-col justify-center gap-5">
+      <h1 className="text-center text-h5 font-medium">{strings.onboarding.minutesTitle}</h1>
+      <Segmented
+        ariaLabel={strings.onboarding.minutesTitle}
+        options={ONBOARDING_MINUTES.map((minutes) => ({
+          value: minutes,
+          label: strings.settings.minutesOption(faNumber(minutes)),
+        }))}
+        value={minutesPerDay}
+        onChange={onChange}
+      />
+      <p className="text-center text-caption text-[var(--fg-muted)]">
         {strings.settings.dailyGoalCaption(faNumber(goalFromMinutes(minutesPerDay)))}
       </p>
     </div>

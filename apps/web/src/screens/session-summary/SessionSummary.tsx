@@ -51,11 +51,12 @@ export function SessionSummary() {
         </div>
       </Card>
 
-      <div className="flex w-full gap-2">
-        <Button variant="primary" block onClick={() => void navigate('/review')}>
+      {/* Stacked, not side by side: the one primary on top, the way out quieter below it. */}
+      <div className="flex w-full flex-col gap-2">
+        <Button variant="primary" size="lg" block onClick={() => void navigate('/review')}>
           {strings.summary.continue}
         </Button>
-        <Button variant="secondary" block onClick={() => void navigate('/')}>
+        <Button variant="ghost" block onClick={() => void navigate('/')}>
           {strings.summary.home}
         </Button>
       </div>

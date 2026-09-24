@@ -133,7 +133,7 @@ export function examBadge(card: WordCard): ExamBadge | null {
 export function examBadgeText(badge: ExamBadge): string {
   const times = `${faNumber(badge.times)} ${strings.review.examTimes}`;
   if (badge.lastYear === null) return times;
-  return `${times}، ${strings.review.examLastYear} ${faYear(badge.lastYear)}`;
+  return `${times}${strings.format.listSeparator}${strings.review.examLastYear} ${faYear(badge.lastYear)}`;
 }
 
 /**

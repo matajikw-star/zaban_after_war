@@ -21,15 +21,7 @@ import { parseDeployArgs } from './args.ts';
 import { readGitStatus } from './git.ts';
 import { buildPlan, type DeployContext } from './plan.ts';
 import { checkRefusal, gate } from './refusal.ts';
-import {
-  announceGate,
-  appendWikiLog,
-  deployHost,
-  deployKeyFile,
-  printPlan,
-  runPlan,
-  whoAmI,
-} from './run.ts';
+import { announceGate, deployHost, deployKeyFile, printPlan, runPlan, whoAmI } from './run.ts';
 
 async function main(): Promise<void> {
   await loadDotEnvLocal();
@@ -71,9 +63,11 @@ async function main(): Promise<void> {
 
   runPlan(steps);
 
+  // Ticket dev-server/05 #4: the tool used to append this itself, which left `wiki/log.md`
+  // dirty after a real run — `provision` followed by `deploy` was then refused (dirty tree) by
+  // the very refusal check above. The lead commits this line instead.
   const line = `deploy | ${args.targets.join(',')} | ${sha} | ${ctx.who} | ${new Date().toISOString()}`;
-  await appendWikiLog(line);
-  console.log(`\nappended to wiki/log.md: ${line}`);
+  console.log(`\nwiki/log.md line: ${line}`);
 }
 
 try {

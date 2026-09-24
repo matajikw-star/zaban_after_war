@@ -11,7 +11,7 @@
 // measured in milliseconds.
 
 import type { Target } from './args.ts';
-import { sshPrefix } from './ssh.ts';
+import { shellQuote, sshPrefix } from './ssh.ts';
 
 export interface DeployContext {
   readonly sha: string;
@@ -209,13 +209,36 @@ export function deployLogLine(ctx: DeployContext, targets: readonly Target[]): s
   return `${ctx.sha} ${targets.join(',')} ${ctx.who} <deployed-at>`;
 }
 
+/**
+ * The shell text that appends one line to `/opt/kl/deploys.log`, run **on the VPS**, with the
+ * date read there — not on whichever machine builds this plan (ticket dev-server/05 #1: the
+ * previous version put the whole line, date included, inside one single-quoted word, so
+ * `$(date …)` never expanded anywhere, local or remote — it just sat there as literal text).
+ *
+ * `fields` (sha, targets or `provision`, and `who` from git `user.name`, which is arbitrary,
+ * user-controlled text) is `shellQuote`d as one word, immediately followed — no space, so POSIX
+ * shells join the two into a single word — by a **double**-quoted `$(date …)`. Only the double
+ * quoted segment performs a substitution, so it is whichever shell parses this text *last* that
+ * reads the clock: this function returns plain, unescaped shell text (real `'`, `"`, `$`, all of
+ * it), and it is up to the caller to get that text past every shell in between unmolested —
+ * `logStep` and `buildProvisionPlan` both do that with one more `shellQuote` around the whole
+ * result, the same trick applied recursively, which is what keeps `who` from ever executing no
+ * matter how many shells this string passes through before a shell finally interprets it.
+ */
+export function logAppendRemoteCommand(fields: string): string {
+  return `echo ${shellQuote(`${fields} `)}"$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> /opt/kl/deploys.log`;
+}
+
 function logStep(ctx: DeployContext, targets: readonly Target[]): Step {
-  // `\$(...)` so the date is read on the VPS, not on whichever machine runs this script.
-  const line = `${ctx.sha} ${targets.join(',')} ${ctx.who} \\$(date -u +%Y-%m-%dT%H:%M:%SZ)`;
+  const fields = `${ctx.sha} ${targets.join(',')} ${ctx.who}`;
   return {
     target: 'log',
     description: 'record: append /opt/kl/deploys.log',
-    command: `${ssh(ctx)} "echo '${line}' >> /opt/kl/deploys.log"`,
+    // shellQuote around the whole remote command (not `"…"`) so this string survives the local
+    // `bash -c` that parses the full `Step.command` (run.ts) as inert, single-quoted text — see
+    // logAppendRemoteCommand's own comment for why a plain `"…"` wrap here would have let a `$`,
+    // backtick or `"` in `who` execute locally, before ssh ever saw it.
+    command: `${ssh(ctx)} ${shellQuote(logAppendRemoteCommand(fields))}`,
   };
 }
 

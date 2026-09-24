@@ -31,9 +31,16 @@ EnvironmentFile=-/opt/kl/.env
 ExecStart=/opt/kl/pocketbase serve \
   --dir /opt/kl/pb_data \
   --hooksDir /opt/kl/pb_hooks \
+  --hooksWatch=false \
   --migrationsDir /opt/kl/pb_migrations \
   --publicDir /opt/kl/pb_public \
   --http 127.0.0.1:8090
+
+# --hooksWatch=false (flag confirmed against the real 0.40.2 `serve --help`): without it,
+# PocketBase restarts itself the moment pb_hooks changes on disk, which fires mid-deploy — the
+# `server` target ships pb_hooks before pb_migrations (plan.ts's serverSteps), so a self-restart
+# in that gap briefly runs new hooks against old migrations (ticket dev-server/05 #2). The
+# deploy's own `sudo -n systemctl restart` (after both are shipped) is the only restart now.
 
 # Caddy is the only thing that talks to this port; PocketBase never faces the internet directly.
 

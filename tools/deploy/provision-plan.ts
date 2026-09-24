@@ -13,8 +13,8 @@
 //
 // PocketBase is started afterwards by the first `pnpm run deploy server`, not here.
 
-import type { Step } from './plan.ts';
-import { sshPrefix } from './ssh.ts';
+import { logAppendRemoteCommand, type Step } from './plan.ts';
+import { shellQuote, sshPrefix } from './ssh.ts';
 
 export const PROVISION_USER = 'root';
 export const KIT_DIR = '/root/kl-provision';
@@ -33,7 +33,7 @@ function ssh(ctx: ProvisionContext): string {
 }
 
 export function buildProvisionPlan(ctx: ProvisionContext): Step[] {
-  const line = `${ctx.sha} provision ${ctx.who} \\$(date -u +%Y-%m-%dT%H:%M:%SZ)`;
+  const fields = `${ctx.sha} provision ${ctx.who}`;
   return [
     {
       target: 'provision',
@@ -74,7 +74,10 @@ export function buildProvisionPlan(ctx: ProvisionContext): Step[] {
       target: 'log',
       description: 'record: append /opt/kl/deploys.log',
       // Appended as root, so the file is handed back to kl — `pnpm run deploy` appends as kl.
-      command: `${ssh(ctx)} "echo '${line}' >> /opt/kl/deploys.log && chown kl:kl /opt/kl/deploys.log"`,
+      // See plan.ts's logAppendRemoteCommand for why this is shellQuote'd whole rather than
+      // wrapped in `"…"` (dev-server/05 #1: the date must expand on the VPS, and `who` — git
+      // `user.name`, arbitrary — must not be able to inject into or break the command).
+      command: `${ssh(ctx)} ${shellQuote(`${logAppendRemoteCommand(fields)} && chown kl:kl /opt/kl/deploys.log`)}`,
     },
   ];
 }

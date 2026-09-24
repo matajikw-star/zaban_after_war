@@ -886,9 +886,10 @@ device being online.
 
 ### 10.5 Deploy log
 
-Every deploy appends `sha, version, who, when, what` to `/opt/kl/deploys.log` on the server and a
-line to `wiki/log.md`. `APP_VERSION` and `BUILD_SHA` are shown in settings, so a screenshot from
-a user identifies the build.
+Every deploy appends `sha, version, who, when, what` to `/opt/kl/deploys.log` on the server and
+prints the matching `wiki/log.md` line for the operator to paste and commit (`tools/deploy` does
+not write to this repo's own tree — ticket dev-server/05 #4). `APP_VERSION` and `BUILD_SHA` are
+shown in settings, so a screenshot from a user identifies the build.
 
 ---
 
@@ -948,29 +949,36 @@ Detects in-app browsers and tells the user to open in Chrome. No JavaScript beyo
 
 ## 14. Infrastructure and deployment
 
-### 14.1 The machine `[bootstrapped; PocketBase built, not yet deployed]`
+### 14.1 The machine `[live]` (staging, `SMS_PROVIDER=mock`)
 
 One Parspack **VPS2**: 1 vCPU, 2 GB RAM, 40 GB SSD, Ubuntu 24.04 LTS, Iran location (100 GB/month
 traffic, which is ~150,000 paid-package downloads). PocketBase and Caddy idle under 200 MB; this
 tier carries thousands of users, and Parspack resizes in place if it ever does not. Setup is
 `docs/runbooks/server-setup.md`, in two scripted halves: `server/deploy/bootstrap.sh` (done
-2026-09-18) and `pnpm run provision` → `server/deploy/install.sh` (built, not yet run — §14.4):
+2026-09-18) and `pnpm run provision` → `server/deploy/install.sh` (both run 2026-09-24, staging —
+§14.4):
 
 - user `kl` (SSH keys only, password auth off; root with a key until PocketBase is deployed,
   then `PermitRootLogin no` as a separate, deliberate step — deploy.md), `ufw` allowing
   22/80/443, unattended security upgrades, `fail2ban` on SSH. `kl`'s sudo is NOPASSWD for
-  exactly `/bin/systemctl restart kl-pocketbase`, `restart`/`reload caddy` and `status` of both.
+  exactly `/bin/systemctl restart kl-pocketbase`, `restart`/`reload caddy` and `status` of both,
+  and `kl` is also in the `systemd-journal` group (bootstrap.sh and, idempotently, install.sh —
+  ticket dev-server/05 #3) so it can read `journalctl -u kl-pocketbase` without sudo.
 - Caddy from the official apt repo (bootstrap; serving `Caddyfile.bootstrap`'s placeholder with
   working TLS until provision installs `server/Caddyfile`, only after `caddy validate` passes).
   PocketBase binary at the pinned version under `/opt/kl/pocketbase` (owner `kl`, 755), from
   the release zip verified against both its `checksums.txt` and the pin in
   `server/POCKETBASE_SHA256`; `pb_data` at `/opt/kl/pb_data`; systemd unit
   `kl-pocketbase.service` (enabled by provision, first started by `deploy server`) with
-  `EnvironmentFile=/opt/kl/.env` (mode 600, owner `kl`, written by provision from memory).
-  Superuser created by provision (`server/deploy/superuser.sh`).
+  `EnvironmentFile=/opt/kl/.env` (mode 600, owner `kl`, written by provision from memory) and
+  `--hooksWatch=false` on `ExecStart` — without it PocketBase restarts itself the moment
+  `pb_hooks` changes on disk, which fired mid-deploy (new hooks briefly ran against old
+  migrations, since `server` ships `pb_hooks` before `pb_migrations`); the deploy's own restart
+  is now the only restart (ticket dev-server/05 #2). Superuser created by provision
+  (`server/deploy/superuser.sh`).
 - Directories: `/opt/kl/{pb_public,pb_hooks,pb_migrations,content,landing,admin,sourcemaps,backups}`.
 
-### 14.2 Caddyfile (shape) `[built, not yet deployed]`
+### 14.2 Caddyfile (shape) `[live]`
 
 ```
 konkurleitner.com, www.konkurleitner.com {
@@ -1010,7 +1018,7 @@ product** (free plan, DNS-only — proxying off), nameservers `hail.parspack.net
 `star.parspack.net`. Done 2026-09-18; procedure and the two problems hit along the way are in
 `docs/runbooks/server-setup.md`.
 
-### 14.4 Deploy procedure `[built, not yet deployed]`
+### 14.4 Deploy procedure `[live]` (staging, `SMS_PROVIDER=mock`)
 
 `pnpm run deploy <target>` with targets `web`, `server`, `content`, `landing`, `admin`, `all`
 (`tools/deploy/`, TypeScript, run by `node --experimental-strip-types`) — no `--` before the
@@ -1044,33 +1052,47 @@ the one place the actual commands are generated.
 4. `content`: `pnpm content:build` → ship `server/content/` (`paid.json` + `manifest.json`) to
    `/opt/kl/content`, the server's `CONTENT_DIR`.
 5. `landing` / `admin`: build → ship to `/opt/kl/landing` / `/opt/kl/admin`.
-6. Append to `/opt/kl/deploys.log` and to `wiki/log.md`.
+6. Append to `/opt/kl/deploys.log`, and print the matching `wiki/log.md` line rather than write
+   it (`tools/deploy` never touches this repo's own tree — a real run used to append it, which
+   left the tree dirty and refused the very next run's own clean-tree check; ticket
+   dev-server/05 #4). Paste and commit the printed line.
 
 The same script runs from GitHub Actions on push to `main` **if** the runner can reach the VPS
 over SSH (tested in Phase 4). If it cannot, deploys run from the owner's machine through Claude
 Code with the same script; CI still gates every PR. Either way the deployed artefact is a
-clean build of `main`. The first real run against `app.konkurleitner.com` is still to do — this
-ticket built and unit-tested the tool (`tools/deploy/*.test.ts`: the argument parsing, the
-refusal rules and the dry-run gate, the plans, the env builder) and proved `--dry-run` against
-this repository, but never connected to the VPS.
+clean build of `main`. **First deployed 2026-09-24, `4c6a9ef`** (staging, `--allow-branch
+develop`, `SMS_PROVIDER=mock`): health, TLS, admin-only `/_/`, and a mock OTP round trip all
+verified over HTTPS from outside — `wiki/log.md`. Watching that run found five tooling defects,
+none blocking (ticket dev-server/05): the deploy-log line's `$(date …)` never expanded, on
+either shell, because it sat inside one single-quoted word all the way through (fixed —
+`logAppendRemoteCommand` in `plan.ts`, now double-quotes just the substitution and single-quotes
+everything else, safe against anything `who`, git's `user.name`, might contain); PocketBase
+restarted itself mid-deploy on the `pb_hooks` swap, before `pb_migrations` shipped (fixed —
+`--hooksWatch=false`, §14.1); `kl` could not read `journalctl -u kl-pocketbase` (fixed — the
+`systemd-journal` group, §14.1); the tools dirtied `wiki/log.md` (fixed — printed, not written,
+above); `superuser.sh` warned about its working directory (fixed — `cd /` before `runuser`,
+below).
 
 **One-time install — `pnpm run provision [--dry-run] [--allow-branch <b>]`**
-`[built, not yet deployed]` (`tools/deploy/provision.ts`, plan in `provision-plan.ts`). The only
-step that runs as root (it writes `/etc/systemd` and `/etc/caddy`, which `kl`'s sudo cannot);
-same refusal and dry-run preview as `deploy`. Locally it downloads the pinned linux_amd64
-release (the VPS may not reach GitHub) and accepts it only if its sha256 matches both the
-release's `checksums.txt` and `server/POCKETBASE_SHA256` — bump that pin with
-`POCKETBASE_VERSION`. It then ships an install kit to root-only `/root/kl-provision`, streams
-`/opt/kl/.env` from memory over ssh stdin (built by `server-env.ts` from `.env.example`'s VPS /
-PocketBase names: staging overrides `SMS_PROVIDER=mock` and `ZARINPAL_SANDBOX=1` fixed in
-code, then `.env.local`, then the documented non-secret defaults; refuses a missing required
-name or a value systemd would misread; a dry run masks every value from `.env.local`), runs
-`server/deploy/install.sh` (idempotent: binary, unit enabled but not started, env swap, real
-Caddyfile after `caddy validate`, restarts only a running PocketBase whose binary/unit/env
-changed) and `server/deploy/superuser.sh` (credentials on stdin; they are in the upsert's argv
-for about a second on the VPS — PocketBase's CLI takes no other form). PocketBase is first
-started by the next `deploy server`. The sequence, the checks after it and the separate
-`PermitRootLogin no` step are `docs/runbooks/deploy.md` → "First deploy (one time)".
+`[live]` (staging) (`tools/deploy/provision.ts`, plan in `provision-plan.ts`). The only step that
+runs as root (it writes `/etc/systemd` and `/etc/caddy`, which `kl`'s sudo cannot); same refusal
+and dry-run preview as `deploy`. Locally it downloads the pinned linux_amd64 release (the VPS may
+not reach GitHub) and accepts it only if its sha256 matches both the release's `checksums.txt`
+and `server/POCKETBASE_SHA256` — bump that pin with `POCKETBASE_VERSION`. It then ships an
+install kit to root-only `/root/kl-provision`, streams `/opt/kl/.env` from memory over ssh stdin
+(built by `server-env.ts` from `.env.example`'s VPS / PocketBase names: staging overrides
+`SMS_PROVIDER=mock` and `ZARINPAL_SANDBOX=1` fixed in code, then `.env.local`, then the
+documented non-secret defaults; refuses a missing required name or a value systemd would
+misread; a dry run masks every value from `.env.local`), runs `server/deploy/install.sh`
+(idempotent: binary, unit enabled but not started, env swap, real Caddyfile after `caddy
+validate`, restarts only a running PocketBase whose binary/unit/env changed, and — since
+bootstrap already ran on this VPS before ticket dev-server/05 added the `systemd-journal` group
+— repeats that `usermod` idempotently too) and `server/deploy/superuser.sh` (credentials on
+stdin; they are in the upsert's argv for about a second on the VPS — PocketBase's CLI takes no
+other form; `cd /` before `runuser` so it does not inherit this script's unreadable-by-`kl` cwd,
+`/root` — ticket dev-server/05 #5). PocketBase is first started by the next `deploy server`. The
+sequence, the checks after it and the separate `PermitRootLogin no` step are
+`docs/runbooks/deploy.md` → "First deploy (one time)".
 
 ### 14.5 Server-state backups
 

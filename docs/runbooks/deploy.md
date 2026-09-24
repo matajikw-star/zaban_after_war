@@ -26,6 +26,10 @@ VPS; nobody edits files on the server by hand.
 - This machine has `ssh` and `tar` but no `rsync`, so every transfer is `tar | ssh … tar x`
   rather than rsync — what.md §14.4 said rsync originally; that line was corrected in the same
   commit that shipped this script (ticket dev-server/04).
+- On Windows, run deploys from a short path. The `web` build fails with "The system cannot find
+  the path specified (os error 3)" when the repo is checked out under a long one (e.g. this
+  session's Claude scratchpad, under `AppData\Local\Temp\…`) — Windows' `MAX_PATH`. A worktree
+  at a short path (`.claude/worktrees/kl-deploy` worked) avoids it.
 
 ## Running it
 
@@ -80,8 +84,10 @@ missing. (A single `mv` cannot replace a populated directory in one step — `re
 refuses a non-empty target — which is why it is two renames rather than one.)
 
 Every run appends one line to `/opt/kl/deploys.log` on the VPS (`sha, targets, who, when`) and
-the same line to `wiki/log.md` in this repo (what.md §10.5) — commit that change along with
-whatever the deploy shipped.
+prints the matching `wiki/log.md` line for you to paste (what.md §10.5) — the tool does not write
+it itself (ticket dev-server/05 #4: it used to, which left the tree dirty after a real run, so a
+`provision` immediately followed by a `deploy` was refused by the tool's own clean-tree check).
+Paste the printed line into `wiki/log.md` and commit it along with whatever the deploy shipped.
 
 ## After a `server` deploy
 
@@ -104,15 +110,19 @@ debug-from-log runbook's §5).
 
 ## First deploy (one time)
 
-Status: **built, never run.** Nobody has run `provision` or a real `deploy` against the VPS —
-what.md §14 marks both `[built, not yet deployed]`. Everything below is exercised only by
-`--dry-run`, by `tools/deploy/*.test.ts`, and (for the binary download and the install kit's
-tarball) locally; `server/deploy/install.sh` has been through `bash -n` but has never executed
-on a Linux machine. The lead runs it, in this order, and each step is its own decision.
+Status: **done, 2026-09-24** (`4c6a9ef`, staging, `--allow-branch develop`) — `provision` then
+`deploy all` against the VPS; health, TLS, admin-only `/_/` and a mock OTP round trip all
+verified over HTTPS from outside (`wiki/log.md`; what.md §14 marks `[live]`). Watching that run
+found five tooling defects, all fixed by ticket dev-server/05 (the date in the deploy-log line,
+PocketBase self-restarting mid-deploy, `kl` unable to read the journal, the tools dirtying
+`wiki/log.md`, and `superuser.sh`'s cwd warning — see what.md §14.4's paragraph and §14.1 for
+the detail). Re-running `provision` on the VPS to apply the `--hooksWatch=false`,
+`systemd-journal` and `superuser.sh` fixes is the lead's job; the section below is still the
+procedure for that and for any future from-scratch provision.
 
-The VPS today (server-setup.md): bootstrapped — user `kl` with the narrow sudo, Caddy serving
-the placeholder `Caddyfile.bootstrap` on all three hostnames with working TLS, `/opt/kl/*`
-directories — and nothing of PocketBase.
+The VPS at first provision (server-setup.md): bootstrapped — user `kl` with the narrow sudo,
+Caddy serving the placeholder `Caddyfile.bootstrap` on all three hostnames with working TLS,
+`/opt/kl/*` directories — and nothing of PocketBase.
 
 ### 0. Local prerequisites
 
@@ -171,7 +181,8 @@ the same `--dry-run` preview. What it does (`tools/deploy/provision.ts`; the pla
    they are in its argv, visible to root and `kl` via `ps` on the VPS. They are in no shell
    history (a non-interactive ssh command is not recorded), not on the local command line,
    and not in any file.
-6. Removes `/root/kl-provision`; appends to `/opt/kl/deploys.log` and `wiki/log.md`.
+6. Removes `/root/kl-provision`; appends to `/opt/kl/deploys.log` and prints the `wiki/log.md`
+   line for you to paste.
 
 **The env it writes.** Exactly the names under `# --- VPS / PocketBase` in `.env.example`. A
 value comes from, in order: a **staging override fixed in code** — `SMS_PROVIDER=mock`,

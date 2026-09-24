@@ -3,9 +3,7 @@
 // modules (args, refusal, plan, provision-plan, server-env, ssh); this file only carries them out.
 
 import { execFileSync } from 'node:child_process';
-import { appendFile } from 'node:fs/promises';
 import { homedir } from 'node:os';
-import path from 'node:path';
 import { optionalEnv, requireEnv } from '../lib/env.ts';
 import { repoRoot } from './git.ts';
 import type { StdinSource, Step } from './plan.ts';
@@ -86,9 +84,4 @@ export function runPlan(
       });
     }
   }
-}
-
-/** what.md §10.5: every deploy (and the provision) also leaves a line in this repo's wiki log. */
-export async function appendWikiLog(line: string): Promise<void> {
-  await appendFile(path.join(repoRoot, 'wiki', 'log.md'), `${line}\n`, 'utf8');
 }

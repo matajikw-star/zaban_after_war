@@ -24,7 +24,10 @@ never be mistaken for one that succeeded.
 the one dependency this ticket added; see `how-why.md` §5, 2026-09-24).
 
 **`deploy` must be run as `pnpm run deploy`.** Bare `pnpm deploy` is one of pnpm's own
-subcommands and shadows the script; every other entry here works either way.
+subcommands and shadows the script; every other entry here works either way. Do not put `--`
+before its arguments (`pnpm run deploy web`, not `pnpm run deploy -- web`) — this repo's pinned
+pnpm (`12.3.4`) does not strip that separator for `run` (pnpm/pnpm#13295), so it would reach
+`tools/deploy/args.ts` as a literal token and be rejected as an unknown flag.
 
 `keepawake.py` belongs to the extraction pipeline, not to the application; see
 `extraction/RUNBOOK.md`.

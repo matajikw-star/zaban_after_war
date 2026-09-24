@@ -7,8 +7,11 @@ VPS; nobody edits files on the server by hand.
 
 - The working tree must be clean and `HEAD` must equal `origin/main` — the tool refuses
   otherwise. A staging deploy from another branch (`develop`, typically) needs
-  `--allow-branch <branch>`, which lifts only the branch check, never the dirty-tree one, and
-  prints a loud warning that this is not a `main` deploy.
+  `--allow-branch <branch>`, which swaps the comparison to `origin/<branch>` instead of
+  `origin/main` (never the dirty-tree check) and prints a loud warning that this is not a `main`
+  deploy. It is still a HEAD-equals-that-remote-ref check, not "what is this branch called
+  locally" — a local branch literally named `develop` with commits `origin/develop` does not
+  have is refused exactly like any other unpushed branch. Push first.
 - `DEPLOY_HOST` and `DEPLOY_USER` (default `kl`) come from `.env.local` or the environment —
   never from source. `.env.example` documents both.
 - This machine has `ssh` and `tar` but no `rsync`, so every transfer is `tar | ssh … tar x`
@@ -17,13 +20,17 @@ VPS; nobody edits files on the server by hand.
 
 ## Running it
 
-Bare `pnpm deploy` is shadowed by one of pnpm's own subcommands — always `pnpm run deploy`:
+Bare `pnpm deploy` is shadowed by one of pnpm's own subcommands — always `pnpm run deploy`. On
+this repo's pinned pnpm (`12.3.4`), `run` is one of pnpm's "specially escaped" commands
+(pnpm/pnpm#13295): a `--` separator between `deploy` and the script's own arguments is **not**
+stripped, and reaches the script as a literal `"--"` token, which `tools/deploy/args.ts` then
+rejects as an unknown flag. Pass the target and flags straight after `deploy`, with no `--`:
 
 ```
-pnpm run deploy -- web                              # one target
-pnpm run deploy -- all                               # content, server, web, landing, admin, in order
-pnpm run deploy -- server --dry-run                  # print every command, run nothing
-pnpm run deploy -- all --allow-branch develop         # staging, loudly
+pnpm run deploy web                              # one target
+pnpm run deploy all                               # content, server, web, landing, admin, in order
+pnpm run deploy server --dry-run                  # print every command, run nothing
+pnpm run deploy all --allow-branch develop         # staging, loudly
 ```
 
 Targets: `web`, `server`, `content`, `landing`, `admin`, `all`. `--dry-run` is always safe, on
@@ -55,7 +62,9 @@ whatever the deploy shipped.
 
 ## After a `server` deploy
 
-`pnpm run deploy -- server` already health-checks before returning. If it failed:
+`pnpm run deploy server` already health-checks before returning (a 30s poll loop, not a single
+racy request right after the restart — `DEPLOY_HEALTH_TIMEOUT` on the VPS-side output if it
+never comes up). If it failed:
 
 1. `pnpm logs --since 15m --route health` — did the process even come back up?
 2. `ssh kl@$DEPLOY_HOST systemctl status kl-pocketbase` — a migration that fails on start leaves

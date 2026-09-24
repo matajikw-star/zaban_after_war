@@ -117,7 +117,10 @@ registered: `test`, `test:watch`, `lint`, `format`, `typecheck` (`tsc --build` f
 packages, then `pnpm -r typecheck` for the apps, which are `noEmit`), `build`, `budget`, `e2e`,
 `content:lint`, `content:build` (§6, real), and the `tools/` entry points `simulate`, `errors`,
 `logs`, `flags`, `deploy` — those five are still stubs that print `not implemented` and exit 1.
-`deploy` must be run as `pnpm run deploy`: bare `pnpm deploy` is pnpm's own subcommand.
+`deploy` must be run as `pnpm run deploy`: bare `pnpm deploy` is pnpm's own subcommand. On this
+repo's pinned pnpm (`12.3.4`) a `--` separator before the script's own arguments is not stripped
+and reaches the script as a literal token — pass targets/flags straight after `deploy`, e.g.
+`pnpm run deploy web --dry-run`, never `pnpm run deploy -- web`.
 
 ---
 
@@ -973,22 +976,28 @@ product** (free plan, DNS-only — proxying off), nameservers `hail.parspack.net
 
 ### 14.4 Deploy procedure `[built, not yet deployed]`
 
-`pnpm run deploy -- <target>` with targets `web`, `server`, `content`, `landing`, `admin`, `all`
-(`tools/deploy/`, TypeScript, run by `node --experimental-strip-types`). **Not rsync**: the
-machines this runs on have `ssh` and `tar` but no `rsync` (found in ticket dev-server/04, which
-corrected this section) — every transfer is `tar czf - | ssh kl@host tar xzf -` into a `.new`
-sibling directory, then swapped in with two renames (the old directory moved aside, the new one
-moved into place, the old one removed) rather than one `mv`, because `rename()` on Linux refuses
-to replace a populated directory in a single step. `docs/runbooks/deploy.md` has the details;
-`tools/deploy/plan.ts` is the one place the actual commands are generated.
+`pnpm run deploy <target>` with targets `web`, `server`, `content`, `landing`, `admin`, `all`
+(`tools/deploy/`, TypeScript, run by `node --experimental-strip-types`) — no `--` before the
+target: this repo's pinned pnpm (`12.3.4`) does not strip it, and `tools/deploy/args.ts` rejects
+the literal `"--"` token as an unknown flag (found in ticket dev-server/04, which corrected this
+section; `docs/runbooks/deploy.md` and `tools/README.md` say so too). **Not rsync**: the
+machines this runs on have `ssh` and `tar` but no `rsync` (found in the same ticket) — every
+transfer is `tar czf - | ssh kl@host tar xzf -` into a `.new` sibling directory, then swapped in
+with two renames (the old directory moved aside, the new one moved into place, the old one
+removed) rather than one `mv`, because `rename()` on Linux refuses to replace a populated
+directory in a single step. `docs/runbooks/deploy.md` has the details; `tools/deploy/plan.ts` is
+the one place the actual commands are generated.
 
 1. Refuses unless the working tree is clean and `HEAD` equals `origin/main`; `--allow-branch
-   <branch>` lifts the branch check only, for a staging deploy, with a loud warning.
+   <branch>` replaces that comparison with `HEAD` equals `origin/<branch>` instead (never the
+   dirty-tree check), for a staging deploy, with a loud warning — a local branch checked out
+   under that name proves nothing on its own; it is HEAD's sha against the pushed ref's sha.
    `--dry-run` prints every command and runs none.
 2. `web`: build → ship everything except `*.map` to `/opt/kl/pb_public/` → ship the `*.map`
    files separately to `/opt/kl/sourcemaps/<sha>/`, never into `pb_public`.
 3. `server`: ship `pb_hooks/`, `pb_migrations/` → `systemctl restart kl-pocketbase` (migrations
-   run on start) → `curl /api/health` on the VPS itself.
+   run on start) → poll `/api/health` on the VPS itself for up to 30s; a timeout exits non-zero
+   with `DEPLOY_HEALTH_TIMEOUT`.
 4. `content`: `pnpm content:build` → ship `server/content/` (the paid package + manifest).
 5. `landing` / `admin`: build → ship to `/opt/kl/landing` / `/opt/kl/admin`.
 6. Append to `/opt/kl/deploys.log` and to `wiki/log.md`.

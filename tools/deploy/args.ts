@@ -2,7 +2,9 @@
 // it is unit-tested without a real git repo or a real VPS.
 //
 // Bare `pnpm deploy` is shadowed by one of pnpm's own subcommands, so this only ever runs as
-// `pnpm run deploy -- <target...> [--dry-run] [--allow-branch <branch>]` (tools/README.md).
+// `pnpm run deploy <target...> [--dry-run] [--allow-branch <branch>]` (tools/README.md) — with
+// no `--` separator: this repo's pinned pnpm (12.3.4) passes it through as a literal argument
+// instead of stripping it, which is exactly the "unknown flag" this file would then reject.
 
 export type Target = 'web' | 'server' | 'content' | 'landing' | 'admin';
 

@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 // Builds, ships and health-checks a release on the VPS (what.md §14.4). Run as `pnpm run deploy`
-// — bare `pnpm deploy` is one of pnpm's own subcommands and shadows this script.
+// — bare `pnpm deploy` is one of pnpm's own subcommands and shadows this script. No `--` before
+// the arguments: this repo's pinned pnpm (12.3.4) does not strip it (pnpm/pnpm#13295), and it
+// would reach parseDeployArgs as a literal "--" token, rejected as an unknown flag.
 //
-//   pnpm run deploy -- <web|server|content|landing|admin|all> [--dry-run] [--allow-branch <b>]
+//   pnpm run deploy <web|server|content|landing|admin|all> [--dry-run] [--allow-branch <b>]
 //
 // Refuses unless the working tree is clean and HEAD equals origin/main; `--allow-branch <branch>`
 // lifts the branch check (never the dirty-tree one) for a staging deploy from that branch, and

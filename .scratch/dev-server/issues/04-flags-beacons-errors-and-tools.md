@@ -105,3 +105,17 @@ What shipped:
   reflect what is live; §14.4 marked `[built, not yet deployed]` and corrected for the two bugs
   and the `pnpm run deploy` invocation above; `docs/runbooks/deploy.md` corrected the same way;
   `how-why.md` §5.9 records the original decisions; this session's fixes are in `wiki/log.md`.
+- 2026-09-24, third session (lead's review follow-up; running notes, a kill loses nothing):
+  - **A. Per-IP rate limits — done.** Migration `1758800000_rate_limits.js` switches PocketBase's
+    limiter on with an explicit list that *replaces* the four disabled defaults (enabling alone
+    would have switched on a `/api/` 300/10 s catch-all): `POST /api/client-errors` 120/h,
+    `POST /api/beacon` 300/h, `POST /api/flags` 300/h, `_superusers:auth` 3/10 s. Hour windows,
+    not the proposed 60/min, because 60/min still lets one IP write ≈ 2.8 GB/day of error rows;
+    no `/api/` catch-all because of carrier-grade NAT (how-why §5.11 has the numbers). Label
+    syntax and window semantics checked against the 0.40.2 binary and its source
+    (`apis/middlewares_rate_limit.go`). `down` verified with `migrate down 1`: restores exactly
+    the four defaults, disabled. `server/test/rate-limits.test.ts` (5 tests) proves the rules,
+    a 429 for one IP rotating installIds on each telemetry route with no row written for the
+    refused call and another IP still served, and superuser login limited per IP. No per-IP
+    daily row ceiling: would need client IPs on permanent rows (§15, no PII). Also found and
+    fixed a false harness comment: `superuser upsert` does not apply this repo's JS migrations.

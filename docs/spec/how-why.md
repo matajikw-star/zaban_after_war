@@ -691,6 +691,63 @@ typecheck`, `pnpm test` (518 passed), `pnpm test:server` twice (110 passed each 
 build`, `pnpm budget` (215.9 KB of 300 KB gzip), `KL_E2E_CHANNEL=msedge pnpm e2e` (17 passed).
 Still never connected to the VPS; the first real deploy remains the lead's.
 
+### 5.11 Per-IP rate limits (ticket dev-server/04, 2026-09-24, third session)
+
+The lead's review found two holes. The telemetry routes are anonymous and capped per
+`installId` — a value the client chooses, so a script that mints a new one per call walks around
+every cap and can write 32 KB `client_errors` rows until the disk fills. And §15 claimed "PB's
+built-in rate limit on superuser auth", but no migration had ever switched PocketBase's limiter
+on. Migration `1758800000_rate_limits.js` does, with an explicit rule list.
+
+**What was verified, not assumed.** The label syntax comes from the 0.40.2 binary's own
+`types.d.ts` and from `apis/middlewares_rate_limit.go` at the `v0.40.2` tag: `METHOD /path`
+matches one custom route exactly; `<collection>:auth` is the tag on a collection's built-in auth
+endpoints; the window is fixed and opens at a key's first request; a request with a superuser
+token is never limited; counters are in memory. A fresh install ships four rules with the
+limiter off (`*:auth` 2/3 s, `*:create` 20/5 s, `/api/batch` 3/1 s, `/api/` 300/10 s) — so
+merely setting `enabled: true` would have switched on a catch-all nobody chose. The migration
+replaces the list; its `down` restores exactly those four, disabled (checked with `migrate down
+1` and the stored settings read back).
+
+**Numbers.** The first proposal was 60 per 60 s per telemetry route. That caps the *rate* but not
+the *total*: 60/min is 86,400 calls a day from one address, ≈ 2.8 GB of 32 KB error rows — a
+40 GB disk filled by one machine in about two weeks, by a handful in days. An hour window bounds
+the total instead:
+
+| Route | Rule | Worst case, one IP, one day |
+|---|---|---|
+| `client-errors` | 120 / 3600 s | 2,880 rows × 32 KB ≈ 90 MB |
+| `beacon` | 300 / 3600 s | 7,200 calls × ≤ 20 small rows ≈ 50 MB with indexes |
+| `flags` | 300 / 3600 s | 7,200 small rows ≈ 2 MB |
+| `_superusers:auth` | 3 / 10 s | 25,920 guesses against a ≥ 20-char password |
+
+It also suits the real client better: one device can have a 100-row outbox backlog
+(`OUTBOX_BATCH`), which a 60-per-minute rule would cut at 61; an hourly bucket of 120/300 takes
+it in one drain. The superuser rule uses the `_superusers:auth` tag rather than the
+`auth-with-password` path so it covers every superuser login method, not just the one enabled
+today.
+
+**Carrier-grade NAT — why there is no `/api/` catch-all.** Iranian mobile carriers put many
+subscribers behind one public IPv4 address; one address can carry hundreds of students at once.
+A per-IP ceiling on everything would throttle exactly the traffic that matters — a login restore
+pulls events in pages of 500, a backup pushes in batches of 500 — and nothing on that path needs
+it: every study-path route is authenticated and bounded per user (body caps, 500 events per push,
+the user from the token). The per-IP rules therefore sit only where there is no user to key on:
+the three anonymous telemetry writes, and superuser login. On those, CGNAT costs little: a
+student sends a handful of telemetry calls a day, so hundreds share an hourly bucket
+comfortably, and when an abuser on the same address empties it, the others' reports wait in their
+outbox (a 429 is kept and retried, never dropped — `sync/backup.ts`) for at most the hour. The
+OTP routes keep their in-hook limits (3 per phone / 10 min, 10 per IP / hour); PocketBase's rules
+cannot key on a phone, and those numbers were not loosened.
+
+**Not done, deliberately.** A per-IP *daily* ceiling on telemetry rows (an in-hook count, as
+`otp.js` does) was weighed and left out: the hourly rules already bound one address to tens of
+MB a day, and keying rows on IP would mean storing client IPs on rows that live forever — §15
+says no PII beyond the phone number. What still fills the disk is many addresses at once; the
+answer to that is the disk alert of §14.6 (planned), not a per-IP rule. Also noted: DNS has `A`
+records only. PocketBase keys on the full address, so if an `AAAA` record is ever added, one
+machine with a /64 has 2^64 buckets and these rules need revisiting first.
+
 ## 6. How to extend this file
 
 

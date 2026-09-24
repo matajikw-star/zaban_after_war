@@ -740,11 +740,32 @@ minutes (Zarinpal `unverified` → verify any successful-but-unverified authorit
 the safety net for a user who closed the browser during the redirect); mark `pending` payments
 older than 2 hours `expired`.
 
-Rate limits use PocketBase's built-in rate-limit rules where they fit (per route, per IP) and an
-in-hook counter where the key is a phone number or install id. The OTP limits are in-hook counts
-over `otp_codes` (PocketBase's rules cannot key on a phone). A per-IP count needs the real client
-IP: migration `1758700000_trusted_proxy.js` trusts `X-Forwarded-For`, rightmost value, which is
-safe only because PocketBase listens on `127.0.0.1` behind Caddy alone (§14.3, how-why §5.7).
+Rate limits `[live]`: PocketBase's built-in limiter (per rule, per client IP) where the key is an
+address, and an in-hook count where the key is a phone number or install id. Migration
+`1758800000_rate_limits.js` switches the limiter on with exactly these rules — replacing, not
+adding to, the four defaults PocketBase ships disabled:
+
+| Rule label | Limit per IP | Why |
+|---|---|---|
+| `POST /api/client-errors` | 120 / hour | the one collection with 32 KB rows; bounds one IP to ≈ 90 MB/day worst case |
+| `POST /api/beacon` | 300 / hour | ≤ 20 small rows per call |
+| `POST /api/flags` | 300 / hour | one small row per call |
+| `_superusers:auth` | 3 / 10 s | every superuser login method (password, OTP, OAuth2) |
+
+There is **no `/api/` catch-all**: a carrier-grade NAT address can carry hundreds of students,
+and everything on the study path (sync, `me`, profile) is authenticated and bounded per user
+already, so a per-IP ceiling there would only ever throttle legitimate users (how-why §5.11).
+The limiter's own 429 is PocketBase's envelope (`{status: 429, message, data}`), without
+`retryAfter` or a `Retry-After` header; the client maps any 429 to `RATE_LIMITED` by status and
+its outbox keeps the item for the next run (§7.4). It skips requests that carry a superuser
+token, its fixed window opens at a key's first request, and its counters live in memory — a
+restart or a settings save resets them. The per-install daily caps above still apply underneath.
+The OTP limits are in-hook counts over `otp_codes` (PocketBase's rules cannot key on a phone).
+A per-IP count needs the real client IP: migration `1758700000_trusted_proxy.js` trusts
+`X-Forwarded-For`, rightmost value, which is safe only because PocketBase listens on `127.0.0.1`
+behind Caddy alone (§14.3, how-why §5.7). DNS has `A` records only; if an `AAAA` record is ever
+added, per-IP rules need revisiting, since PocketBase keys on the full IPv6 address and one
+machine can hold a whole /64.
 
 ### 8.3 Payment rules
 
@@ -1035,10 +1056,14 @@ written to the dashboard's overview as a warning). External uptime monitoring is
   file is public by design.
 - Sync: `user` always from the auth token; a body cannot write another user's events; 500 events
   per push; a wildly out-of-range `at` (± 1 year) is stored but flagged in server logs.
-- Client errors / flags / beacons: per-install daily caps; bodies capped at 32 KB; no free text
-  except the optional `userNote` (500 chars), which is only ever read by the owner.
-- Admin: PB admin UI reachable only on the admin origin; superuser password ≥ 20 chars; PB's
-  built-in rate limit on `/api/collections/_superusers/auth-with-password`.
+- Client errors / flags / beacons: per-install daily caps, and per-IP limits (client-errors 120 /
+  hour, beacon and flags 300 / hour — §8.2) so that rotating the client-chosen `installId` no
+  longer walks around them; bodies capped at 32 KB; no free text except the optional `userNote`
+  (500 chars), which is only ever read by the owner.
+- Admin: PB admin UI reachable only on the admin origin; superuser password ≥ 20 chars
+  (`pnpm run provision` refuses a shorter `KL_ADMIN_PASSWORD`); PB's built-in rate limit on
+  superuser login, 3 per 10 s per IP (`_superusers:auth`, which covers
+  `/api/collections/_superusers/auth-with-password` — §8.2, `server/test/rate-limits.test.ts`).
 - No PII beyond the phone number is collected. The privacy line on the landing page says so.
 
 ---
@@ -1104,7 +1129,11 @@ field rejecting the whole batch, the out-of-range `at` log flag, pull paging at 
 across three pushes with no gap or duplicate, id order inside one push's shared `created`, push
 and pull interleaved fifteen times, two concurrent pushes, cross-user isolation (B cannot pull
 A's events, cannot overwrite them by id, a forged `user` is ignored, A's cursor opens nothing of
-B's), 401 without a token, 403 for a superuser, and the generic collection API still shut. Still
+B's), 401 without a token, 403 for a superuser, and the generic collection API still shut. Rate
+limits (`rate-limits.test.ts`): the exact rule list with no `/api/` catch-all; each telemetry
+route refusing one IP that rotates `installId` past its per-IP limit, storing nothing for the
+refused call and still serving another IP; superuser login limited per IP even with the right
+password. Still
 to cover as the routes land: content gate refusing an unentitled user,
 quote/request for each `codeStatus`, callback with a wrong amount, callback replay,
 `reconcileUnverified`. The e2e job exercises every route end to end.

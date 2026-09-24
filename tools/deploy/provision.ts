@@ -20,15 +20,7 @@ import type { StdinSource } from './plan.ts';
 import { linuxAssetName, prepareLinuxBinary } from './pocketbase-release.ts';
 import { buildProvisionPlan, PROVISION_USER, type ProvisionContext } from './provision-plan.ts';
 import { checkRefusal, gate } from './refusal.ts';
-import {
-  announceGate,
-  appendWikiLog,
-  deployHost,
-  deployKeyFile,
-  printPlan,
-  runPlan,
-  whoAmI,
-} from './run.ts';
+import { announceGate, deployHost, deployKeyFile, printPlan, runPlan, whoAmI } from './run.ts';
 import {
   buildServerEnv,
   describeServerEnv,
@@ -97,9 +89,9 @@ async function main(): Promise<void> {
     source === 'server-env' ? serverEnv.content : superuser;
   runPlan(steps, secrets);
 
+  // Ticket dev-server/05 #4: printed, not appended — see index.ts's matching comment.
   const line = `deploy | provision | ${sha} | ${ctx.who} | ${new Date().toISOString()}`;
-  await appendWikiLog(line);
-  console.log(`\nappended to wiki/log.md: ${line}`);
+  console.log(`\nwiki/log.md line: ${line}`);
 
   console.log(
     '\nprovisioned. Next: `pnpm run deploy all` (its server step starts PocketBase), then the ' +

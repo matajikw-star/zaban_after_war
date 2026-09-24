@@ -58,11 +58,13 @@ test/                        the Vitest API suite (§16.3) — starts a real bin
 scripts/                     download-pocketbase.mjs (the pinned binary), dev.mjs         [live]
 Caddyfile                    three origins, TLS, /api proxy                          [building]
 systemd/kl-pocketbase.service  the unit that runs the binary as user `kl`            [building]
-deploy/                      one-time machine bootstrap                                 [exists]
-  bootstrap.sh, Caddyfile.bootstrap, placeholder.html
+deploy/                      the VPS's one-time scripts (docs/runbooks/deploy.md)
+  bootstrap.sh, Caddyfile.bootstrap, placeholder.html   machine bootstrap        [run 2026-09-18]
+  install.sh, superuser.sh   PocketBase install, run as root by `pnpm run provision` [built, not yet run]
 content/                     built paid.json + manifest.json — git-ignored,           [planned]
                              shipped by the deploy script, served by content.pb.js
 POCKETBASE_VERSION           the pinned binary version; CI downloads exactly this tag     [live]
+POCKETBASE_SHA256            sha256 of that version's linux_amd64 zip — provision ships it only on a match [live]
 .pb/                         the downloaded binary and the local dev database — git-ignored
 ```
 

@@ -11,6 +11,7 @@ step and no bundler here. Every one is registered as a root `pnpm` script.
 | `pnpm logs` | `tools/logs/index.ts` | Tails and filters the server's structured logs (§10.2, §10.3). | working |
 | `pnpm flags` | `tools/flags/index.ts` | Lists and resolves user-submitted word flags (§10.3). | working |
 | `pnpm run deploy` | `tools/deploy/index.ts` | Builds, ships and health-checks a release on the VPS (§14.4). | working (never yet run against the real VPS — the lead's first real deploy is still to do) |
+| `pnpm run provision` | `tools/deploy/provision.ts` | One-time, as root: installs the verified PocketBase binary, its unit, `/opt/kl/.env` (from memory) and the real Caddyfile, and creates the superuser (§14.4). | working (never yet run against the real VPS) |
 | `pnpm content:build` | `tools/content-build/index.ts` | Builds `free.json`, `paid.json` and the manifest (§6.2). | working |
 | `pnpm budget` | `tools/budget/index.mjs` | Fails if the gzipped app shell exceeds 300 KB (ADR-0005, §16.2). | working |
 | `pnpm e2e` | `apps/web` Playwright | Runs the Playwright suite against the built app (§16.2). | working |

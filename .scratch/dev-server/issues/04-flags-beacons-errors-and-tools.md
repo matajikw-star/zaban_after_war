@@ -119,3 +119,17 @@ What shipped:
     refused call and another IP still served, and superuser login limited per IP. No per-IP
     daily row ceiling: would need client IPs on permanent rows (§15, no PII). Also found and
     fixed a false harness comment: `superuser upsert` does not apply this repo's JS migrations.
+  - **B. tools/deploy fixes — done** (commit `afe8496`). `sudo -n /bin/systemctl restart
+    kl-pocketbase` (test reads bootstrap.sh's sudoers line) + `DEPLOY_NO_ENV` guard; optional
+    `DEPLOY_SSH_KEY_FILE` → `-i`, always `BatchMode=yes`; `--dry-run` now previews with a loud
+    "WOULD BE REFUSED" warning (pure `gate()` in refusal.ts), a real run still refuses. Found a
+    real bug: `deploy web` on a clean checkout shipped a dist with no `free.json` (checked both
+    ways locally) — web now runs `content:build` unless `content` did, and refuses a dist
+    without `dist/content/free.json`. `content` ships `paid.json` + `manifest.json` to
+    `/opt/kl/content` = `CONTENT_DIR` — correct as it was.
+  - **C. One-time install — built, never run.** `pnpm run provision [--dry-run]
+    [--allow-branch]` (tools/deploy/provision.ts; pure: provision-plan.ts, server-env.ts,
+    pocketbase-release.ts, all unit-tested), `server/deploy/install.sh` + `superuser.sh`,
+    `server/POCKETBASE_SHA256` pin. Download + double checksum + extraction + kit tarball
+    exercised locally; `install.sh` only `bash -n` (no Linux here). Runbook: deploy.md →
+    "First deploy (one time)".

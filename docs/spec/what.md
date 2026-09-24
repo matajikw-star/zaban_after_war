@@ -102,10 +102,10 @@ packages/
 server/
   pb_hooks/       PocketBase JS hooks (routes, crons)                        [building]
   pb_migrations/  collections and API rules                                  [live]
-  Caddyfile, systemd/, deploy/   VPS configuration and deploy scripts       [building]
+  Caddyfile, systemd/, deploy/   VPS configuration; bootstrap.sh (run), install.sh + superuser.sh [built, not yet run]
   POCKETBASE_VERSION            the pinned binary version                    [building — 0.40.2]
 android/          Bubblewrap TWA project (twa-manifest.json); keystore NOT in git [building — README]
-tools/            simulator, error/log readers, deploy, backup pull, budget  [building — budget works, rest stubs]
+tools/            simulator, error/log readers, deploy + provision, budget   [live; deploy/provision never run against the VPS; backup pull planned]
 content/          the lexicon, exams, hints (the asset)                      [live]
 extraction/       the scan → lexicon pipeline (Python)                       [live]
 docs/spec/        this file and how-why.md
@@ -115,9 +115,10 @@ docs/runbooks/    operational procedures (deploy, debug-from-log, restore)
 Workspace: pnpm, Node ≥ 22, TypeScript strict, Biome, Vitest, Playwright. Root scripts, all
 registered: `test`, `test:watch`, `lint`, `format`, `typecheck` (`tsc --build` for the composite
 packages, then `pnpm -r typecheck` for the apps, which are `noEmit`), `build`, `budget`, `e2e`,
-`content:lint`, `content:build` (§6, real), and the `tools/` entry points `simulate`, `errors`,
-`logs`, `flags`, `deploy` — those five are still stubs that print `not implemented` and exit 1.
-`deploy` must be run as `pnpm run deploy`: bare `pnpm deploy` is pnpm's own subcommand. On this
+`content:lint`, `content:build` (§6, real), and the `tools/` entry points `simulate` (§5.7),
+`errors`, `logs`, `flags` (§10.3), `deploy` and `provision` (§14.4) — all implemented (none is a
+stub any more; `tools/README.md` has the table). `deploy` and `provision` have never been run
+against the real VPS. `deploy` must be run as `pnpm run deploy`: bare `pnpm deploy` is pnpm's own subcommand. On this
 repo's pinned pnpm (`12.3.4`) a `--` separator before the script's own arguments is not stripped
 and reaches the script as a literal token — pass targets/flags straight after `deploy`, e.g.
 `pnpm run deploy web --dry-run`, never `pnpm run deploy -- web`.
@@ -947,21 +948,29 @@ Detects in-app browsers and tells the user to open in Chrome. No JavaScript beyo
 
 ## 14. Infrastructure and deployment
 
-### 14.1 The machine `[building]`
+### 14.1 The machine `[bootstrapped; PocketBase built, not yet deployed]`
 
 One Parspack **VPS2**: 1 vCPU, 2 GB RAM, 40 GB SSD, Ubuntu 24.04 LTS, Iran location (100 GB/month
 traffic, which is ~150,000 paid-package downloads). PocketBase and Caddy idle under 200 MB; this
 tier carries thousands of users, and Parspack resizes in place if it ever does not. Setup is
-`docs/runbooks/server-setup.md` (planned) and is scripted in `server/deploy/bootstrap.sh`:
+`docs/runbooks/server-setup.md`, in two scripted halves: `server/deploy/bootstrap.sh` (done
+2026-09-18) and `pnpm run provision` → `server/deploy/install.sh` (built, not yet run — §14.4):
 
-- user `kl` (no root login, SSH keys only, password auth off), `ufw` allowing 22/80/443,
-  unattended security upgrades, `fail2ban` on SSH.
-- Caddy from the official apt repo. PocketBase binary at the pinned version under
-  `/opt/kl/pocketbase`, `pb_data` at `/opt/kl/pb_data`, systemd unit `kl-pocketbase.service`
-  with `EnvironmentFile=/opt/kl/.env` (mode 600, owner `kl`).
+- user `kl` (SSH keys only, password auth off; root with a key until PocketBase is deployed,
+  then `PermitRootLogin no` as a separate, deliberate step — deploy.md), `ufw` allowing
+  22/80/443, unattended security upgrades, `fail2ban` on SSH. `kl`'s sudo is NOPASSWD for
+  exactly `/bin/systemctl restart kl-pocketbase`, `restart`/`reload caddy` and `status` of both.
+- Caddy from the official apt repo (bootstrap; serving `Caddyfile.bootstrap`'s placeholder with
+  working TLS until provision installs `server/Caddyfile`, only after `caddy validate` passes).
+  PocketBase binary at the pinned version under `/opt/kl/pocketbase` (owner `kl`, 755), from
+  the release zip verified against both its `checksums.txt` and the pin in
+  `server/POCKETBASE_SHA256`; `pb_data` at `/opt/kl/pb_data`; systemd unit
+  `kl-pocketbase.service` (enabled by provision, first started by `deploy server`) with
+  `EnvironmentFile=/opt/kl/.env` (mode 600, owner `kl`, written by provision from memory).
+  Superuser created by provision (`server/deploy/superuser.sh`).
 - Directories: `/opt/kl/{pb_public,pb_hooks,pb_migrations,content,landing,admin,sourcemaps,backups}`.
 
-### 14.2 Caddyfile (shape) `[building]`
+### 14.2 Caddyfile (shape) `[built, not yet deployed]`
 
 ```
 konkurleitner.com, www.konkurleitner.com {
@@ -984,9 +993,15 @@ admin.konkurleitner.com {
 }
 ```
 
-TLS: Caddy's automatic Let's Encrypt with ZeroSSL fallback. If neither CA is reachable from the
-Iranian IP (verified on day one of Phase 4), the fallback is ArvanCloud's free CDN in front with
-its edge certificate — recorded here if it happens.
+The real file is `server/Caddyfile` (adds the `noindex` header, JSON access logs, the APK
+content type); `pnpm run provision` installs it over `Caddyfile.bootstrap` only after
+`caddy validate` passes, keeping the old one and restoring it if the reload fails (§14.4).
+
+TLS: Caddy's automatic Let's Encrypt, **pinned** (`acme_ca` in the global block): ZeroSSL, Caddy's
+other default issuer, returned a malformed response from this VPS on 2026-09-18, and Let's
+Encrypt alone has been verified working here (server-setup.md). Were it ever unreachable too,
+the fallback is ArvanCloud's free CDN in front with its edge certificate — recorded here if it
+happens.
 
 ### 14.3 DNS
 
@@ -1036,7 +1051,26 @@ over SSH (tested in Phase 4). If it cannot, deploys run from the owner's machine
 Code with the same script; CI still gates every PR. Either way the deployed artefact is a
 clean build of `main`. The first real run against `app.konkurleitner.com` is still to do — this
 ticket built and unit-tested the tool (`tools/deploy/*.test.ts`: the argument parsing, the
-refusal rules) and proved `--dry-run` against this repository, but never connected to the VPS.
+refusal rules and the dry-run gate, the plans, the env builder) and proved `--dry-run` against
+this repository, but never connected to the VPS.
+
+**One-time install — `pnpm run provision [--dry-run] [--allow-branch <b>]`**
+`[built, not yet deployed]` (`tools/deploy/provision.ts`, plan in `provision-plan.ts`). The only
+step that runs as root (it writes `/etc/systemd` and `/etc/caddy`, which `kl`'s sudo cannot);
+same refusal and dry-run preview as `deploy`. Locally it downloads the pinned linux_amd64
+release (the VPS may not reach GitHub) and accepts it only if its sha256 matches both the
+release's `checksums.txt` and `server/POCKETBASE_SHA256` — bump that pin with
+`POCKETBASE_VERSION`. It then ships an install kit to root-only `/root/kl-provision`, streams
+`/opt/kl/.env` from memory over ssh stdin (built by `server-env.ts` from `.env.example`'s VPS /
+PocketBase names: staging overrides `SMS_PROVIDER=mock` and `ZARINPAL_SANDBOX=1` fixed in
+code, then `.env.local`, then the documented non-secret defaults; refuses a missing required
+name or a value systemd would misread; a dry run masks every value from `.env.local`), runs
+`server/deploy/install.sh` (idempotent: binary, unit enabled but not started, env swap, real
+Caddyfile after `caddy validate`, restarts only a running PocketBase whose binary/unit/env
+changed) and `server/deploy/superuser.sh` (credentials on stdin; they are in the upsert's argv
+for about a second on the VPS — PocketBase's CLI takes no other form). PocketBase is first
+started by the next `deploy server`. The sequence, the checks after it and the separate
+`PermitRootLogin no` step are `docs/runbooks/deploy.md` → "First deploy (one time)".
 
 ### 14.5 Server-state backups
 

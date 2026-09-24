@@ -21,6 +21,7 @@
     "logs": "node --experimental-strip-types tools/logs/index.ts",
     "flags": "node --experimental-strip-types tools/flags/index.ts",
     "deploy": "node --experimental-strip-types tools/deploy/index.ts",
+    "provision": "node --experimental-strip-types tools/deploy/provision.ts",
     "content:build": "node --experimental-strip-types tools/content-build/index.ts",
     "content:lint": "pnpm --filter @kl/content run lint:content"
   },

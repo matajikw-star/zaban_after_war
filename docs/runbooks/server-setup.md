@@ -72,8 +72,10 @@ the URL to give Kavenegar's support for the `kl-otp` template review.
 ## 4. After bootstrap
 
 - Root password login is disabled; root with key still works until PocketBase is deployed,
-  after which `PermitRootLogin no` is set (Phase 4).
-- Everything else (PocketBase, real Caddyfile, deploy scripts) is Phase 4 of
-  `docs/plan/implementation-plan.md`.
+  after which `PermitRootLogin no` is set (Phase 4) — the exact commands, and what closing it
+  costs, are step 4 of `docs/runbooks/deploy.md` → "First deploy (one time)".
+- PocketBase, the real Caddyfile and `/opt/kl/.env` are installed by `pnpm run provision`
+  (`server/deploy/install.sh`, run as root), then started by the first `pnpm run deploy all` —
+  the same runbook section. Built, not yet run against this machine.
 - Re-running `server/deploy/bootstrap.sh` at any point is safe (idempotent); it will not touch
   DNS or the ACME issuer setting since those live in `Caddyfile.bootstrap`, not the script.

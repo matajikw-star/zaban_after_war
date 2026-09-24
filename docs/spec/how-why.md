@@ -748,6 +748,69 @@ answer to that is the disk alert of §14.6 (planned), not a per-IP rule. Also no
 records only. PocketBase keys on the full address, so if an `AAAA` record is ever added, one
 machine with a /64 has 2^64 buckets and these rules need revisiting first.
 
+### 5.12 Deploy fixes and the one-time install (ticket dev-server/04, 2026-09-24, third session)
+
+The lead's review of `tools/deploy` found what no dry run could: the plan was right as text and
+wrong against the machine.
+
+- **`kl` cannot run `systemctl restart`.** bootstrap.sh gives `kl` NOPASSWD sudo for exactly
+  `/bin/systemctl restart kl-pocketbase` (and caddy's restart/reload/status of both). The step
+  is now `sudo -n` with that exact path — sudo matches the command as written, and `-n` turns
+  a missing rule into an error instead of a password prompt nobody will answer. A unit test
+  reads bootstrap.sh's sudoers line so the two cannot drift. Because a restart also *starts* a
+  stopped unit, the same step refuses (`DEPLOY_NO_ENV`) while `/opt/kl/.env` is missing.
+- **No key, and prompts.** `DEPLOY_SSH_KEY_FILE` (optional, `~` expanded) → `-i`, and every ssh
+  is `BatchMode=yes`. Considered `StrictHostKeyChecking=accept-new` to spare the first manual
+  connection; rejected — trusting an unseen host key silently is exactly what a first manual
+  `ssh … true` exists to prevent, and the lead already has the host in `known_hosts`.
+- **`--dry-run` was documented as always safe but exited on the refusal.** Chose to make the
+  code match the docs, not the reverse: a dry run runs nothing, so a refusal has nothing to
+  protect there, and previewing a deploy from a branch ahead of its remote is the common case.
+  `gate()` is the pure seam; a real run is still refused.
+- **`deploy web` on a clean checkout shipped no words.** `free.json` is git-ignored; only
+  `pnpm content:build` puts it in `apps/web/public/content/`, whence Vite copies it into
+  `dist/`. A web deploy from CI, or right after a clone, would have swapped in a `pb_public`
+  without it and deleted the live one. Verified both ways before fixing. `web` now builds the
+  content first unless `content` already did in the same run, and refuses a dist without it.
+  Not done: making `web` imply the `content` target. The two are coupled — the free file's hash
+  is in the manifest `content` ships — but the manifest route is still `[planned]`, and a
+  rebuild from an unchanged `content/` reproduces the same content `hash` and an identical
+  manifest (checked: only `builtAt` differs between two builds); the runbook says to deploy
+  `content web` together when `content/` changed.
+
+**The one-time install** is a separate command, `pnpm run provision`, not a `deploy` target: it
+is the one thing that runs as root, it happens once, and `deploy all` must never reach it by
+accident. Decisions:
+
+- **The binary is fetched locally, verified twice, and shipped.** github.com may be filtered
+  from an Iranian VPS. The zip must match the release's `checksums.txt` *and* a sha256 pinned in
+  git (`server/POCKETBASE_SHA256`): `checksums.txt` comes from the same place as the zip, so on
+  its own it only catches corruption; the pin catches a release asset that changed after it was
+  reviewed. `install.sh` re-checks the extracted binary's hash and `--version` on the VPS.
+- **The kit goes to `/root/kl-provision` (mode 700), not `/opt/kl/deploy`.** Everything under
+  `/opt/kl` is `kl`'s; a script root runs from a directory `kl` can write is an escalation path.
+- **`/opt/kl/.env` never touches a local disk.** Built in memory from `.env.example`'s VPS /
+  PocketBase section (so a local-tool secret like `KL_ADMIN_PASSWORD` cannot reach the server
+  file), streamed over ssh stdin into `install -m 600 -o kl -g kl /dev/stdin`. The staging
+  overrides `SMS_PROVIDER=mock` and `ZARINPAL_SANDBOX=1` are constants, not flags: shipping
+  `kavenegar` from this step has to be impossible, not merely unlikely, and under mock SMS no
+  real money may move. `install.sh` swaps `.env.new` in only when it differs, so a changed env
+  can restart a running PocketBase and an unchanged one does not.
+- **`install.sh` never starts PocketBase.** It enables the unit; the first `deploy server`
+  starts it once hooks and migrations exist. Found while checking this: `superuser upsert` does
+  *not* apply this repo's JS migrations on 0.40.2 — only `serve` / `migrate up` do (the test
+  harness's comment said otherwise and was corrected).
+- **The superuser's credentials are on stdin**, read by `superuser.sh`. Residual: PocketBase's
+  CLI accepts them only as arguments, so they are in the upsert's argv for about a second,
+  readable by root and `kl` on the VPS. Accepted, and written down rather than hidden.
+- **The Caddyfile is validated before it is installed**, the old one kept and restored if the
+  reload fails — a bad Caddyfile takes down TLS for all three origins.
+
+Unverified, and said so in the runbook: `install.sh` has passed `bash -n` and nothing else —
+there is no Linux machine here to run it on (no WSL, no Docker), and the VPS is off-limits to
+this session. The download, checksum, extraction and the kit's tarball were exercised locally;
+`server/Caddyfile` adapts cleanly under Caddy 2.11.4.
+
 ## 6. How to extend this file
 
 

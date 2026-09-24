@@ -661,6 +661,36 @@ Tools (`tools/errors`, `tools/logs`, `tools/flags`, `tools/deploy`, all `tools/l
   `--dry-run` against this repository; it never connected to `app.konkurleitner.com`. `what.md`
   §14.4 is marked `[built, not yet deployed]` until the lead runs it for real.
 
+### 5.10 Finishing `tools/deploy` (ticket dev-server/04, 2026-09-24, second session)
+
+§5.9's `tools/deploy` paragraphs describe the salvage as if it had already been proved; it had
+not (commit `7366e02`, `wip(tools): deploy tool and docs, unverified` — never run through lint,
+typecheck, test or `--dry-run`). This session ran every check and found two real bugs, both now
+fixed:
+
+- **`--allow-branch <branch>` compared the checked-out branch's *name*, not its commit.**
+  `refusal.test.ts` even had a test titled "allows a clean tree on exactly that branch, HEAD
+  mismatch or not" — which is the bug stated as a spec. A local branch created and named
+  `develop` with commits that were never pushed would have passed `--allow-branch develop` and
+  shipped them to staging. `refusal.ts`/`git.ts` now resolve `origin/<allowBranch>` and compare
+  its sha against HEAD, the same shape as the `origin/main` check it replaces.
+- **The server health check was a single `curl -sf` right after `systemctl restart`**, racing
+  the restart with no retry. Replaced with a bash poll loop, 30s budget, 1s interval, that exits
+  non-zero with a distinct `DEPLOY_HEALTH_TIMEOUT` message on failure — greppable from a failed
+  CI run or a lead's terminal without re-reading `plan.ts`.
+- **`pnpm run deploy -- <target>`, written throughout the salvaged docs and code comments, does
+  not work on this repo's pinned pnpm (`12.3.4`).** `run` is one of pnpm's specially-escaped
+  commands (pnpm/pnpm#13295): a `--` separator is not stripped and reaches the script as a
+  literal `"--"` argument, which `args.ts` correctly rejects as an unknown flag. Every mention
+  is corrected to `pnpm run deploy <target>`, no separator.
+
+Verified in full this session (branch `feat/server-telemetry-and-tools` cannot itself pass
+either refusal check right now, being ahead of both `origin/main` and `origin/develop`, so both
+refusal messages were demonstrated directly instead of chased past): `pnpm lint`, `pnpm
+typecheck`, `pnpm test` (518 passed), `pnpm test:server` twice (110 passed each run), `pnpm
+build`, `pnpm budget` (215.9 KB of 300 KB gzip), `KL_E2E_CHANNEL=msedge pnpm e2e` (17 passed).
+Still never connected to the VPS; the first real deploy remains the lead's.
+
 ## 6. How to extend this file
 
 

@@ -36,6 +36,13 @@ to connect to the VPS or run a real deploy — **the first staging/real deploy t
 `app.konkurleitner.com` is still to do**, by the lead, per that instruction; everything else in
 "Done when" is met.
 
+The routes, client-outbox and `tools/errors`/`tools/logs`/`tools/flags` bullets below were
+finished and verified in commits `c939b01..07e0d17`, before the session that wrote this comment
+died mid-work. `tools/deploy` was salvaged unverified (commit `7366e02`, `wip(tools): deploy
+tool and docs, unverified`) — a follow-up session ran it through lint/typecheck/test/build/
+budget/e2e, found and fixed two real bugs in it, and corrected the `pnpm run deploy` invocation
+shown everywhere in the docs. Details below.
+
 What shipped:
 
 - `POST /api/flags`, `POST /api/beacon`, `POST /api/client-errors`,
@@ -61,11 +68,40 @@ What shipped:
   `src/main.tsx`, not the minified `assets/*.js` position it started from.
 - `tools/deploy` (`args.ts`, `refusal.ts`, `plan.ts`, `git.ts`, `index.ts`) — targets
   `web`/`server`/`content`/`landing`/`admin`/`all`, refuses on a dirty tree or `HEAD ≠
-  origin/main`, `--allow-branch` for staging, `--dry-run`. No rsync on this machine, so every
-  transfer is `tar | ssh … tar x` into a `.new` sibling, swapped in with two renames (Linux
-  `rename()` cannot replace a populated directory in one step) — `what.md` §14.4 corrected in
-  the same commit. 24 unit tests for the argument parsing, the refusal rules and the plan's
-  shape; `--dry-run` proved against this repository. Never connected to the VPS.
+  origin/main`, `--allow-branch <branch>` for staging (HEAD must equal `origin/<branch>`),
+  `--dry-run`. No rsync on this machine, so every transfer is `tar | ssh … tar x` into a `.new`
+  sibling, swapped in with two renames (Linux `rename()` cannot replace a populated directory in
+  one step) — `what.md` §14.4 corrected in the same commit. **Two bugs found and fixed in the
+  salvaged code, in this follow-up session (commit `8bb611f`):**
+  1. `--allow-branch <branch>` compared the *local checkout's branch name* against `<branch>`
+     (`refusal.test.ts` even asserted "allows … HEAD mismatch or not"), so a local branch
+     literally named `develop` with unpushed commits would pass the override — exactly the
+     unreviewed-code-reaches-the-VPS case the refusal exists to stop. Fixed to compare HEAD's
+     sha against `origin/<branch>`'s sha instead, which is what this ticket's own instructions,
+     and `what.md` §14.4's plain reading, always said.
+  2. The `server` target's health check was one `curl -sf` immediately after
+     `systemctl restart`, racing the restart. Replaced with a 30s poll loop that exits non-zero
+     with `DEPLOY_HEALTH_TIMEOUT` on timeout.
+
+  Also found: this repo's pinned pnpm (`12.3.4`) does not strip a `--` separator for `run`
+  (pnpm/pnpm#13295) — `pnpm run deploy -- web`, the form used everywhere in the salvaged docs
+  and comments, fails with "unknown flag --". Every doc and comment now says
+  `pnpm run deploy web` instead (commit `4469672`).
+
+  Verified this session: `pnpm lint`, `pnpm typecheck`, `pnpm test` (518 passed, incl. 27 deploy
+  unit tests — up from the salvage's 24 because of the new refusal/health-check cases), `pnpm
+  test:server` run twice (110 passed both times), `pnpm build`, `pnpm budget` (215.9 KB of
+  300 KB), `KL_E2E_CHANNEL=msedge pnpm e2e` (17 passed). `--dry-run` itself could not be run to
+  a successful printout from this branch — it correctly refuses here, on both the dirty-tree
+  check and, once committed, on `HEAD ≠ origin/main` and (with `--allow-branch develop`) on
+  `HEAD ≠ origin/develop`, since this branch is genuinely ahead of both; both refusal messages
+  were demonstrated on a clean, committed tree instead. The plan `--dry-run` would print for
+  `all` was demonstrated honestly by calling the real, unmodified `buildPlan()` directly with a
+  placeholder context (not a real host) — content → server (ship, swap, restart, poll-health) →
+  web (ship excluding `*.map`, ship maps to `/opt/kl/sourcemaps/<sha>`, swap) → landing → admin
+  → the `deploys.log` line, in that order. **Still never connected to the VPS and never ran a
+  real deploy**, per this ticket's instruction; the first real run is the lead's.
 - Docs: `what.md` §8.2 rows, §10.3, §16.2's third e2e spec, §19's outbox gap all flipped to
-  reflect what is live; §14.4 marked `[built, not yet deployed]`; `docs/runbooks/deploy.md`
-  written; `how-why.md` §5.9 records the decisions above in full.
+  reflect what is live; §14.4 marked `[built, not yet deployed]` and corrected for the two bugs
+  and the `pnpm run deploy` invocation above; `docs/runbooks/deploy.md` corrected the same way;
+  `how-why.md` §5.9 records the original decisions; this session's fixes are in `wiki/log.md`.

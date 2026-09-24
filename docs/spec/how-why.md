@@ -811,6 +811,15 @@ there is no Linux machine here to run it on (no WSL, no Docker), and the VPS is 
 this session. The download, checksum, extraction and the kit's tarball were exercised locally;
 `server/Caddyfile` adapts cleanly under Caddy 2.11.4.
 
+### 5.13 OTP keeps one limit per phone (2026-09-24, owner decision)
+
+Proposed at the OTP review: add a second cap of 10 codes per phone per 24 h on top of 3 per phone
+per 10 min, because the 10-minute window alone lets a distributed attacker who rotates IPs make
+about 2 % of a day's guesses count against one targeted phone (with the extra cap, about
+0.05 %). The owner declined: the limits stay as `what.md` §8.2 states them (3 per phone / 10 min,
+10 per IP / hour, 5 attempts per code, 3-minute expiry). Revisit if the server logs ever show
+repeated `OTP_WRONG` bursts against one phone from many IPs.
+
 ## 6. How to extend this file
 
 

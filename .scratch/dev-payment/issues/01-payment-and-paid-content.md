@@ -104,3 +104,15 @@ Zarinpal v4 field names in `lib/zarinpal.js` get confirmed (how-why §5.14 lists
    method-less `/api/{path...}` route panics PocketBase 0.40.2 at startup (tried). Client note:
    a 404 `NOT_FOUND` from a route the client expects to exist means the server is older than the
    client.
+
+### 2026-09-25 — client half part A
+
+Branch `feat/payment-client-2` (from the WIP `e8e46eb` + `origin/develop`). In progress:
+
+- [x] Step 1, sync layer: `sync/download.ts` (+ `download-live.ts`), `entitlement.ts`
+  (+ `entitlement-live.ts`), `payment-status.ts` (+ `payment-live.ts`), tests. Committed.
+- [ ] Step 2, screens `/paywall`, `/checkout`, `/purchase/result`; login returns to checkout.
+- [ ] Step 3, `pendingPayment` recovery on launch (wired in `main.tsx` in step 1; tested in
+  `payment-status.test.ts`).
+- [ ] Step 4, settings download row.
+- [ ] Docs: what.md §7.5, §7.6, §7.8; wiki/log.md.

@@ -145,8 +145,11 @@ jobs:
       - name: Build
         run: pnpm build
 
-      # playwright.config.ts starts two servers: `vite preview` on 4173 and, from the binary above,
-      # PocketBase on 8091 with SMS_PROVIDER=mock (server/scripts/e2e.mjs); preview proxies /api.
+      # playwright.config.ts starts two preview + PocketBase pairs from the build and binary above
+      # (server/scripts/e2e.mjs; each preview proxies /api to its own PocketBase):
+      # - 4173 → 8091, SMS_PROVIDER=mock, payment gated: every spec but the purchase journey;
+      # - 4174 → 8092, console OTP, mock Zarinpal, server/content (needs `content:build` above),
+      #   prices and codes seeded: the `payment` project, payment-journey.spec.ts.
       - name: E2E
         run: pnpm e2e
 

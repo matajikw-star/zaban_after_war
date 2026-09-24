@@ -37,15 +37,15 @@ import {
 } from './backup.ts';
 
 /**
- * Which outbox kinds have a server route. None yet: `/api/flags`, `/api/beacon` and
- * `/api/client-errors` are ticket dev-server/04. Until a kind is `true` its items stay queued —
- * sending them now would 404, and a non-429 4xx drops an item, which would throw away every
- * report and flag collected so far. Ticket 04 flips these as it ships each route.
+ * Which outbox kinds have a server route. All three shipped in ticket dev-server/04:
+ * `/api/flags`, `/api/beacon` and `/api/client-errors`. Flipping one back to `false` would leave
+ * its items queued — sending them would 404, and a non-429 4xx drops an item, which would throw
+ * away every report and flag collected so far — so this only ever goes false→true, never back.
  */
 export const OUTBOX_ROUTES_LIVE: Readonly<Record<OutboxKind, boolean>> = {
-  flag: false,
-  beacon: false,
-  error: false,
+  flag: true,
+  beacon: true,
+  error: true,
 };
 
 function sendOutbox(kind: OutboxKind, payload: unknown): Promise<unknown> {

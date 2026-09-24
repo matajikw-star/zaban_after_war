@@ -102,10 +102,10 @@ packages/
 server/
   pb_hooks/       PocketBase JS hooks (routes, crons)                        [building]
   pb_migrations/  collections and API rules                                  [live]
-  Caddyfile, systemd/, deploy/   VPS configuration and deploy scripts       [building]
+  Caddyfile, systemd/, deploy/   VPS configuration; bootstrap.sh (run), install.sh + superuser.sh [built, not yet run]
   POCKETBASE_VERSION            the pinned binary version                    [building — 0.40.2]
 android/          Bubblewrap TWA project (twa-manifest.json); keystore NOT in git [building — README]
-tools/            simulator, error/log readers, deploy, backup pull, budget  [building — budget works, rest stubs]
+tools/            simulator, error/log readers, deploy + provision, budget   [live; deploy/provision never run against the VPS; backup pull planned]
 content/          the lexicon, exams, hints (the asset)                      [live]
 extraction/       the scan → lexicon pipeline (Python)                       [live]
 docs/spec/        this file and how-why.md
@@ -115,9 +115,13 @@ docs/runbooks/    operational procedures (deploy, debug-from-log, restore)
 Workspace: pnpm, Node ≥ 22, TypeScript strict, Biome, Vitest, Playwright. Root scripts, all
 registered: `test`, `test:watch`, `lint`, `format`, `typecheck` (`tsc --build` for the composite
 packages, then `pnpm -r typecheck` for the apps, which are `noEmit`), `build`, `budget`, `e2e`,
-`content:lint`, `content:build` (§6, real), and the `tools/` entry points `simulate`, `errors`,
-`logs`, `flags`, `deploy` — those five are still stubs that print `not implemented` and exit 1.
-`deploy` must be run as `pnpm run deploy`: bare `pnpm deploy` is pnpm's own subcommand.
+`content:lint`, `content:build` (§6, real), and the `tools/` entry points `simulate` (§5.7),
+`errors`, `logs`, `flags` (§10.3), `deploy` and `provision` (§14.4) — all implemented (none is a
+stub any more; `tools/README.md` has the table). `deploy` and `provision` have never been run
+against the real VPS. `deploy` must be run as `pnpm run deploy`: bare `pnpm deploy` is pnpm's own subcommand. On this
+repo's pinned pnpm (`12.3.4`) a `--` separator before the script's own arguments is not stripped
+and reaches the script as a literal token — pass targets/flags straight after `deploy`, e.g.
+`pnpm run deploy web --dry-run`, never `pnpm run deploy -- web`.
 
 ---
 
@@ -722,13 +726,13 @@ PocketBase bearer token. Because PocketBase serializes each handler into its own
 | `POST /api/pay/request` | user | `{code?}` → `{paymentId, gatewayUrl}`. Creates the pending payment, applies the code, calls Zarinpal `request`. A `payable` of 0 (100 % code) grants directly and returns `{paymentId, granted: true}`. | `[planned]` |
 | `GET /api/pay/callback` | none (Zarinpal) | `?Authority=&Status=` → verifies with Zarinpal using the stored `payable`, flips the payment, creates the entitlement, increments the code's `usedCount`, then `302` to `/purchase/result?status=ok&ref=`, or `…?status=failed&reason=`. Idempotent (Zarinpal code 101 = already verified). | `[planned]` |
 | `GET /api/pay/status/:id` | user (own) | `{status, refId}`. | `[planned]` |
-| `POST /api/flags` | optional | `{installId, itemId, reason, appVersion, at}` → `{ok}`. 50 per install per day. | `[planned]` |
-| `POST /api/beacon` | optional | `{installId, events: [{name, at, appVersion}]}` → `{ok}`. Unknown names rejected. | `[planned]` |
-| `POST /api/client-errors` | optional | one record (§10.1) → `{ok, deduped}`. 30 per install per day; same fingerprint within an hour increments `count` instead of inserting. | `[planned]` |
+| `POST /api/flags` | optional | `{installId, itemId, reason, appVersion, at}` → `{ok}`. 50 per install per day (`telemetry.js`). | `[live]` |
+| `POST /api/beacon` | optional | `{installId, events: [{name, at, appVersion}]}` → `{ok}`. Unknown names rejected (whole call, naming the index); at most 20 events per call, 200 per install per day — no number was fixed here originally, decided in ticket dev-server/04. | `[live]` |
+| `POST /api/client-errors` | optional | one record (§10.1) → `{ok, deduped}`. 30 per install per day; same fingerprint from the same install within an hour increments `count` instead of inserting, and never counts against the cap. | `[live]` |
 | `GET /api/health` | none | `{ok, version, time}`. `version` is `<pocketbase>+hooks.<n>`. Registered as a middleware, not a route: PocketBase owns this path (how-why §5.4). | `[live]` |
 | `GET /api/admin/stats?range=` | superuser | Aggregates for the dashboard (§11.2). | `[planned]` |
 | `POST /api/admin/grant` | superuser | `{phone, note}` → creates the user if missing and an entitlement with `source: manual`. | `[planned]` |
-| `GET /api/admin/sourcemap/:sha/:file` | superuser | Serves a source map from `/opt/kl/sourcemaps/` for symbolication. | `[planned]` |
+| `GET /api/admin/sourcemap/:sha/:file` | superuser | Serves a source map from `SOURCEMAP_DIR` (`/opt/kl/sourcemaps/<sha>/<file>`) for `tools/errors` to symbolicate against. `sha` and `file` are checked against a strict allow-list (`[0-9a-f]{7,40}` / a plain `*.map` name, no `/`) before either touches a filesystem path — PocketBase's router matches `{sha}/{file}` on undecoded path segments, so a percent-encoded slash inside `file` (`..%2f..%2fetc%2fpasswd`) still decodes to a value the allow-list rejects. | `[live]` |
 
 Crons (`pb_hooks/cron.pb.js`): `otp_purge` `[live]` hourly deletes `otp_codes` whose `expiresAt` is
 more than an hour past — not at expiry, because a row still counts toward the IP limit's
@@ -737,11 +741,32 @@ minutes (Zarinpal `unverified` → verify any successful-but-unverified authorit
 the safety net for a user who closed the browser during the redirect); mark `pending` payments
 older than 2 hours `expired`.
 
-Rate limits use PocketBase's built-in rate-limit rules where they fit (per route, per IP) and an
-in-hook counter where the key is a phone number or install id. The OTP limits are in-hook counts
-over `otp_codes` (PocketBase's rules cannot key on a phone). A per-IP count needs the real client
-IP: migration `1758700000_trusted_proxy.js` trusts `X-Forwarded-For`, rightmost value, which is
-safe only because PocketBase listens on `127.0.0.1` behind Caddy alone (§14.3, how-why §5.7).
+Rate limits `[live]`: PocketBase's built-in limiter (per rule, per client IP) where the key is an
+address, and an in-hook count where the key is a phone number or install id. Migration
+`1758800000_rate_limits.js` switches the limiter on with exactly these rules — replacing, not
+adding to, the four defaults PocketBase ships disabled:
+
+| Rule label | Limit per IP | Why |
+|---|---|---|
+| `POST /api/client-errors` | 120 / hour | the one collection with 32 KB rows; bounds one IP to ≈ 90 MB/day worst case |
+| `POST /api/beacon` | 300 / hour | ≤ 20 small rows per call |
+| `POST /api/flags` | 300 / hour | one small row per call |
+| `_superusers:auth` | 3 / 10 s | every superuser login method (password, OTP, OAuth2) |
+
+There is **no `/api/` catch-all**: a carrier-grade NAT address can carry hundreds of students,
+and everything on the study path (sync, `me`, profile) is authenticated and bounded per user
+already, so a per-IP ceiling there would only ever throttle legitimate users (how-why §5.11).
+The limiter's own 429 is PocketBase's envelope (`{status: 429, message, data}`), without
+`retryAfter` or a `Retry-After` header; the client maps any 429 to `RATE_LIMITED` by status and
+its outbox keeps the item for the next run (§7.4). It skips requests that carry a superuser
+token, its fixed window opens at a key's first request, and its counters live in memory — a
+restart or a settings save resets them. The per-install daily caps above still apply underneath.
+The OTP limits are in-hook counts over `otp_codes` (PocketBase's rules cannot key on a phone).
+A per-IP count needs the real client IP: migration `1758700000_trusted_proxy.js` trusts
+`X-Forwarded-For`, rightmost value, which is safe only because PocketBase listens on `127.0.0.1`
+behind Caddy alone (§14.3, how-why §5.7). DNS has `A` records only; if an `AAAA` record is ever
+added, per-IP rules need revisiting, since PocketBase keys on the full IPv6 address and one
+machine can hold a whole /64.
 
 ### 8.3 Payment rules
 
@@ -837,7 +862,7 @@ visible in the admin UI and readable through `/api/logs` as superuser. Payment a
 additionally log one line per external call (`zarinpal.request`, `sms.send`) with the provider's
 status and reference, never the secret.
 
-### 10.3 Tools that turn logs into a fix
+### 10.3 Tools that turn logs into a fix `[live]`
 
 - `pnpm errors --since 24h [--kind payment] [--fingerprint X] [--user PHONE]` — pulls
   `client_errors` as superuser, **symbolicates** stacks against the source maps for that
@@ -923,21 +948,29 @@ Detects in-app browsers and tells the user to open in Chrome. No JavaScript beyo
 
 ## 14. Infrastructure and deployment
 
-### 14.1 The machine `[building]`
+### 14.1 The machine `[bootstrapped; PocketBase built, not yet deployed]`
 
 One Parspack **VPS2**: 1 vCPU, 2 GB RAM, 40 GB SSD, Ubuntu 24.04 LTS, Iran location (100 GB/month
 traffic, which is ~150,000 paid-package downloads). PocketBase and Caddy idle under 200 MB; this
 tier carries thousands of users, and Parspack resizes in place if it ever does not. Setup is
-`docs/runbooks/server-setup.md` (planned) and is scripted in `server/deploy/bootstrap.sh`:
+`docs/runbooks/server-setup.md`, in two scripted halves: `server/deploy/bootstrap.sh` (done
+2026-09-18) and `pnpm run provision` → `server/deploy/install.sh` (built, not yet run — §14.4):
 
-- user `kl` (no root login, SSH keys only, password auth off), `ufw` allowing 22/80/443,
-  unattended security upgrades, `fail2ban` on SSH.
-- Caddy from the official apt repo. PocketBase binary at the pinned version under
-  `/opt/kl/pocketbase`, `pb_data` at `/opt/kl/pb_data`, systemd unit `kl-pocketbase.service`
-  with `EnvironmentFile=/opt/kl/.env` (mode 600, owner `kl`).
+- user `kl` (SSH keys only, password auth off; root with a key until PocketBase is deployed,
+  then `PermitRootLogin no` as a separate, deliberate step — deploy.md), `ufw` allowing
+  22/80/443, unattended security upgrades, `fail2ban` on SSH. `kl`'s sudo is NOPASSWD for
+  exactly `/bin/systemctl restart kl-pocketbase`, `restart`/`reload caddy` and `status` of both.
+- Caddy from the official apt repo (bootstrap; serving `Caddyfile.bootstrap`'s placeholder with
+  working TLS until provision installs `server/Caddyfile`, only after `caddy validate` passes).
+  PocketBase binary at the pinned version under `/opt/kl/pocketbase` (owner `kl`, 755), from
+  the release zip verified against both its `checksums.txt` and the pin in
+  `server/POCKETBASE_SHA256`; `pb_data` at `/opt/kl/pb_data`; systemd unit
+  `kl-pocketbase.service` (enabled by provision, first started by `deploy server`) with
+  `EnvironmentFile=/opt/kl/.env` (mode 600, owner `kl`, written by provision from memory).
+  Superuser created by provision (`server/deploy/superuser.sh`).
 - Directories: `/opt/kl/{pb_public,pb_hooks,pb_migrations,content,landing,admin,sourcemaps,backups}`.
 
-### 14.2 Caddyfile (shape) `[building]`
+### 14.2 Caddyfile (shape) `[built, not yet deployed]`
 
 ```
 konkurleitner.com, www.konkurleitner.com {
@@ -960,9 +993,15 @@ admin.konkurleitner.com {
 }
 ```
 
-TLS: Caddy's automatic Let's Encrypt with ZeroSSL fallback. If neither CA is reachable from the
-Iranian IP (verified on day one of Phase 4), the fallback is ArvanCloud's free CDN in front with
-its edge certificate — recorded here if it happens.
+The real file is `server/Caddyfile` (adds the `noindex` header, JSON access logs, the APK
+content type); `pnpm run provision` installs it over `Caddyfile.bootstrap` only after
+`caddy validate` passes, keeping the old one and restoring it if the reload fails (§14.4).
+
+TLS: Caddy's automatic Let's Encrypt, **pinned** (`acme_ca` in the global block): ZeroSSL, Caddy's
+other default issuer, returned a malformed response from this VPS on 2026-09-18, and Let's
+Encrypt alone has been verified working here (server-setup.md). Were it ever unreachable too,
+the fallback is ArvanCloud's free CDN in front with its edge certificate — recorded here if it
+happens.
 
 ### 14.3 DNS
 
@@ -971,24 +1010,67 @@ product** (free plan, DNS-only — proxying off), nameservers `hail.parspack.net
 `star.parspack.net`. Done 2026-09-18; procedure and the two problems hit along the way are in
 `docs/runbooks/server-setup.md`.
 
-### 14.4 Deploy procedure
+### 14.4 Deploy procedure `[built, not yet deployed]`
 
-`pnpm deploy <target>` with targets `web`, `server`, `content`, `landing`, `admin`, `all`
-(`tools/deploy/*.sh`, rsync over SSH as `kl`):
+`pnpm run deploy <target>` with targets `web`, `server`, `content`, `landing`, `admin`, `all`
+(`tools/deploy/`, TypeScript, run by `node --experimental-strip-types`) — no `--` before the
+target: this repo's pinned pnpm (`12.3.4`) does not strip it, and `tools/deploy/args.ts` rejects
+the literal `"--"` token as an unknown flag (found in ticket dev-server/04, which corrected this
+section; `docs/runbooks/deploy.md` and `tools/README.md` say so too). **Not rsync**: the
+machines this runs on have `ssh` and `tar` but no `rsync` (found in the same ticket) — every
+transfer is `tar czf - | ssh kl@host tar xzf -` into a `.new` sibling directory, then swapped in
+with two renames (the old directory moved aside, the new one moved into place, the old one
+removed) rather than one `mv`, because `rename()` on Linux refuses to replace a populated
+directory in a single step. `docs/runbooks/deploy.md` has the details; `tools/deploy/plan.ts` is
+the one place the actual commands are generated.
 
-1. Refuses unless the working tree is clean and `HEAD` equals `origin/main`.
-2. `web`: build → rsync `apps/web/dist/` → `/opt/kl/pb_public/` (atomic: rsync to
-   `pb_public.new`, then `mv`) → upload `*.map` to `/opt/kl/sourcemaps/<sha>/` and delete them
-   from `pb_public`.
-3. `server`: rsync `pb_hooks/`, `pb_migrations/` → `systemctl restart kl-pocketbase` (migrations
-   run on start) → `curl /api/health`.
-4. `content`: `pnpm content:build` → rsync `server/content/` (the paid package + manifest).
-5. Append to `/opt/kl/deploys.log` and print the line for `wiki/log.md`.
+1. Refuses unless the working tree is clean and `HEAD` equals `origin/main`; `--allow-branch
+   <branch>` replaces that comparison with `HEAD` equals `origin/<branch>` instead (never the
+   dirty-tree check), for a staging deploy, with a loud warning — a local branch checked out
+   under that name proves nothing on its own; it is HEAD's sha against the pushed ref's sha.
+   `--dry-run` prints every command and runs none — on any branch and any tree: when a real run
+   would be refused it prints the reason as a loud `DEPLOY WOULD BE REFUSED` warning and then
+   the plan (`refusal.ts` → `gate()`). Every `ssh` is `ssh -o BatchMode=yes [-i
+   <DEPLOY_SSH_KEY_FILE>]`, so a key or host-key problem fails a step instead of hanging it.
+2. `web`: `pnpm content:build` (skipped when `content` ran earlier in the same deploy) → build →
+   refuse with `DEPLOY_NO_FREE_PACKAGE` unless `dist/content/free.json` exists → ship everything
+   except `*.map` to `/opt/kl/pb_public/` (so the free package is served from there, §6) → ship
+   the `*.map` files separately to `/opt/kl/sourcemaps/<sha>/`, never into `pb_public`.
+3. `server`: ship `pb_hooks/`, `pb_migrations/` → `sudo -n /bin/systemctl restart
+   kl-pocketbase` as `kl` (the exact command bootstrap.sh's sudoers line allows; migrations run on
+   start), refused with `DEPLOY_NO_ENV` while `/opt/kl/.env` is missing, since a restart also
+   starts a stopped unit → poll `/api/health` on the VPS itself for up to 30s; a timeout exits
+   non-zero with `DEPLOY_HEALTH_TIMEOUT`.
+4. `content`: `pnpm content:build` → ship `server/content/` (`paid.json` + `manifest.json`) to
+   `/opt/kl/content`, the server's `CONTENT_DIR`.
+5. `landing` / `admin`: build → ship to `/opt/kl/landing` / `/opt/kl/admin`.
+6. Append to `/opt/kl/deploys.log` and to `wiki/log.md`.
 
-The same scripts run from GitHub Actions on push to `main` **if** the runner can reach the VPS
+The same script runs from GitHub Actions on push to `main` **if** the runner can reach the VPS
 over SSH (tested in Phase 4). If it cannot, deploys run from the owner's machine through Claude
-Code with the same scripts; CI still gates every PR. Either way the deployed artefact is a
-clean build of `main`.
+Code with the same script; CI still gates every PR. Either way the deployed artefact is a
+clean build of `main`. The first real run against `app.konkurleitner.com` is still to do — this
+ticket built and unit-tested the tool (`tools/deploy/*.test.ts`: the argument parsing, the
+refusal rules and the dry-run gate, the plans, the env builder) and proved `--dry-run` against
+this repository, but never connected to the VPS.
+
+**One-time install — `pnpm run provision [--dry-run] [--allow-branch <b>]`**
+`[built, not yet deployed]` (`tools/deploy/provision.ts`, plan in `provision-plan.ts`). The only
+step that runs as root (it writes `/etc/systemd` and `/etc/caddy`, which `kl`'s sudo cannot);
+same refusal and dry-run preview as `deploy`. Locally it downloads the pinned linux_amd64
+release (the VPS may not reach GitHub) and accepts it only if its sha256 matches both the
+release's `checksums.txt` and `server/POCKETBASE_SHA256` — bump that pin with
+`POCKETBASE_VERSION`. It then ships an install kit to root-only `/root/kl-provision`, streams
+`/opt/kl/.env` from memory over ssh stdin (built by `server-env.ts` from `.env.example`'s VPS /
+PocketBase names: staging overrides `SMS_PROVIDER=mock` and `ZARINPAL_SANDBOX=1` fixed in
+code, then `.env.local`, then the documented non-secret defaults; refuses a missing required
+name or a value systemd would misread; a dry run masks every value from `.env.local`), runs
+`server/deploy/install.sh` (idempotent: binary, unit enabled but not started, env swap, real
+Caddyfile after `caddy validate`, restarts only a running PocketBase whose binary/unit/env
+changed) and `server/deploy/superuser.sh` (credentials on stdin; they are in the upsert's argv
+for about a second on the VPS — PocketBase's CLI takes no other form). PocketBase is first
+started by the next `deploy server`. The sequence, the checks after it and the separate
+`PermitRootLogin no` step are `docs/runbooks/deploy.md` → "First deploy (one time)".
 
 ### 14.5 Server-state backups
 
@@ -1016,10 +1098,14 @@ written to the dashboard's overview as a warning). External uptime monitoring is
   file is public by design.
 - Sync: `user` always from the auth token; a body cannot write another user's events; 500 events
   per push; a wildly out-of-range `at` (± 1 year) is stored but flagged in server logs.
-- Client errors / flags / beacons: per-install daily caps; bodies capped at 32 KB; no free text
-  except the optional `userNote` (500 chars), which is only ever read by the owner.
-- Admin: PB admin UI reachable only on the admin origin; superuser password ≥ 20 chars; PB's
-  built-in rate limit on `/api/collections/_superusers/auth-with-password`.
+- Client errors / flags / beacons: per-install daily caps, and per-IP limits (client-errors 120 /
+  hour, beacon and flags 300 / hour — §8.2) so that rotating the client-chosen `installId` no
+  longer walks around them; bodies capped at 32 KB; no free text except the optional `userNote`
+  (500 chars), which is only ever read by the owner.
+- Admin: PB admin UI reachable only on the admin origin; superuser password ≥ 20 chars
+  (`pnpm run provision` refuses a shorter `KL_ADMIN_PASSWORD`); PB's built-in rate limit on
+  superuser login, 3 per 10 s per IP (`_superusers:auth`, which covers
+  `/api/collections/_superusers/auth-with-password` — §8.2, `server/test/rate-limits.test.ts`).
 - No PII beyond the phone number is collected. The privacy line on the landing page says so.
 
 ---
@@ -1057,7 +1143,10 @@ produces a schedule where a word can be conquered in exactly 7 days but the medi
   (`context.setOffline(true)`) → 10 more reviews → back online → backup happens → paywall at the
   limit → login with the console OTP → checkout with a discount code → mock gateway → result →
   paid download → offline → study from the paid package → reload → state intact. Second spec:
-  restore on a fresh context. Third: an error is captured and symbolicates.
+  restore on a fresh context. Third (`errors.spec.ts`, built): a real throw from the built bundle
+  (a query-param-gated hook in `main.tsx`, never armed for a real user) is captured, drains
+  through the outbox with no login (ticket dev-server/04), and `tools/errors` resolves its stack
+  against the sourcemap for that build — proving symbolication against a real build, not a mock.
 - Bundle budget: app shell ≤ 300 KB gzipped, checked in CI (ADR-0005).
 
 ### 16.3 Server
@@ -1082,7 +1171,11 @@ field rejecting the whole batch, the out-of-range `at` log flag, pull paging at 
 across three pushes with no gap or duplicate, id order inside one push's shared `created`, push
 and pull interleaved fifteen times, two concurrent pushes, cross-user isolation (B cannot pull
 A's events, cannot overwrite them by id, a forged `user` is ignored, A's cursor opens nothing of
-B's), 401 without a token, 403 for a superuser, and the generic collection API still shut. Still
+B's), 401 without a token, 403 for a superuser, and the generic collection API still shut. Rate
+limits (`rate-limits.test.ts`): the exact rule list with no `/api/` catch-all; each telemetry
+route refusing one IP that rotates `installId` past its per-IP limit, storing nothing for the
+refused call and still serving another IP; superuser login limited per IP even with the right
+password. Still
 to cover as the routes land: content gate refusing an unentitled user,
 quote/request for each `codeStatus`, callback with a wrong amount, callback replay,
 `reconcileUnverified`. The e2e job exercises every route end to end.
@@ -1125,7 +1218,9 @@ done (§14.3) and needs no key — it is managed by hand in Parspack's CDN panel
 GitHub: `DEPLOY_HOST`, `DEPLOY_USER`, `DEPLOY_SSH_KEY`, `ANDROID_KEYSTORE_B64`,
 `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`. Build: `VITE_API_ORIGIN`, `VITE_APP_NAME`
 (the deferred Persian name — one constant). Local tools (`.env.local`, git-ignored):
-`KL_API_ORIGIN`, `KL_ADMIN_EMAIL`, `KL_ADMIN_PASSWORD`.
+`KL_API_ORIGIN`, `KL_ADMIN_EMAIL`, `KL_ADMIN_PASSWORD`, and for `pnpm run deploy` the GitHub
+names above (`DEPLOY_HOST`, `DEPLOY_USER`) plus `DEPLOY_SSH_KEY_FILE` — a path to the key file
+(`~` expanded), local only, since CI holds the key itself in `DEPLOY_SSH_KEY`.
 
 ---
 
@@ -1140,9 +1235,10 @@ GitHub: `DEPLOY_HOST`, `DEPLOY_USER`, `DEPLOY_SSH_KEY`, `ANDROID_KEYSTORE_B64`,
   against asking for a number on first launch.
 - The **profile** is reconciled only at login (§7.4): a goal or exam date changed afterwards on
   one device reaches another only at that device's next login. Events are always backed up.
-- The **outbox drains only inside a backup run**, which needs a logged-in user; an anonymous
-  install's flags, beacons and error reports stay queued. Ticket dev-server/04 flips
-  `OUTBOX_ROUTES_LIVE` and has to drain for anonymous installs too (the drain is already
-  separate from the progress push and never fails it).
+- ~~The outbox drains only inside a backup run, which needs a logged-in user~~ — fixed in ticket
+  dev-server/04: `OUTBOX_ROUTES_LIVE` is now `true` for `flag`/`beacon`/`error`, and
+  `sync/backup.ts`'s runner drains the outbox for an anonymous install too (every trigger, not
+  only inside a login-gated push/pull run — §7.4, `apps/web/e2e/errors.spec.ts` proves it end to
+  end). The review-event log itself still needs a login to back up; that has not changed.
 - Push notifications: none (see `wiki/web-push-in-iran.md`).
 - Real-exam mode, per-field views, Bazaar build, referral codes: after launch.

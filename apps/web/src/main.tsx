@@ -95,6 +95,18 @@ async function bootstrap(): Promise<void> {
   startBackup().catch((err: unknown) => reportError('sync', err, { phase: 'bootstrap.backup' }));
 
   breadcrumb('log', 'bootstrap.done', { firstOpen, entitled });
+
+  // e2e only (`apps/web/e2e/errors.spec.ts`, ticket dev-server/04, what.md §16.2's planned "an
+  // error is captured and symbolicates"): a real throw from the real built bundle is the only way
+  // to get a stack frame `tools/errors` can resolve against a real sourcemap — `page.evaluate`'s
+  // injected script has none. Outside this exact query param it never runs, so a real user is
+  // never affected; the `setTimeout` puts the throw outside bootstrap()'s own promise chain, so
+  // it reaches `window.onerror` the same way an unrelated bug would.
+  if (new URLSearchParams(window.location.search).get('__e2eThrow') === '1') {
+    setTimeout(() => {
+      throw new Error('kl-deliberate-e2e-error');
+    }, 0);
+  }
 }
 
 function mount(): void {

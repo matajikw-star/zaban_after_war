@@ -13,6 +13,11 @@
  * database, the network, the clock, the timers — is a dependency, so `backup.test.ts` drives it
  * with a fake server and a fake clock. `backup-live.ts` binds the real ones and the triggers.
  *
+ * An anonymous install (`deps.userId()` is null) skips push/pull entirely — there is no account
+ * to key the review-event log by — but still drains the outbox: flags, beacons and error reports
+ * are keyed on installId alone and the server accepts them without a login (ticket dev-server/04,
+ * §19). That drain never touches the `idle → pushing → pulling → idle` machine.
+ *
  * Why a run can never lose or double an event:
  * - An event is marked `synced` only after the server has answered for every id in its batch.
  *   A crash in between leaves it unsynced; the next push re-sends it and the server insert-ignores
@@ -171,7 +176,11 @@ export type TimerHandle = unknown;
 export interface BackupDeps {
   readonly now: () => number;
   readonly isOnline: () => boolean;
-  /** The logged-in user, or null. Anonymous installs are not backed up (§7.4). */
+  /**
+   * The logged-in user, or null. An anonymous install's review-event log is never backed up
+   * (§7.4) — that needs an account to key the log by — but its outbox still drains (ticket
+   * dev-server/04, §19).
+   */
   readonly userId: () => string | null;
 
   readonly unsyncedEvents: (limit: number) => Promise<ReviewEvent[]>;
@@ -430,6 +439,26 @@ export function createBackupRunner(deps: BackupDeps): BackupRunner {
     }
   }
 
+  /**
+   * Ticket dev-server/04, what.md §19: an anonymous install has no review-event log to back up —
+   * that still requires a login — but its outbox (flags, beacons, error reports) is keyed on
+   * installId alone and the routes accept it, so there is no reason to leave those queued until
+   * whenever the user eventually logs in. This never touches `state`/`dispatch`: the
+   * `idle → pushing → pulling → idle` machine is about the review-event log, and an anonymous
+   * drain has none of that to report.
+   */
+  async function drainAnonymousOutbox(): Promise<void> {
+    running = true;
+    try {
+      await drainOutbox();
+    } finally {
+      running = false;
+    }
+    const next = queued;
+    queued = null;
+    if (next !== null) await request(next);
+  }
+
   async function request(trigger: BackupTrigger): Promise<void> {
     if (running) {
       queued = trigger;
@@ -439,6 +468,7 @@ export function createBackupRunner(deps: BackupDeps): BackupRunner {
     const userId = deps.userId();
     if (userId === null) {
       breadcrumb('sync', 'backup.trigger', { trigger, outcome: 'anonymous' });
+      if (deps.isOnline()) await drainAnonymousOutbox();
       return;
     }
     if (!deps.isOnline()) {

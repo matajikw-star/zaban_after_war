@@ -106,8 +106,10 @@ export async function startServer(options: StartOptions = {}): Promise<Server> {
     ...options.env,
   };
 
-  // The superuser is created before `serve`, which is also what first applies the migrations to
-  // the empty directory — so a failing migration fails here, loudly, not as a mystery 404 later.
+  // The superuser is created before `serve`. This does NOT apply this repo's JS migrations —
+  // checked against 0.40.2: after `superuser upsert` only PocketBase's own Go migrations are in
+  // `_migrations`; `serve` (or `migrate up`) applies ours, and a failing one makes `serve` exit,
+  // which waitForHealth reports with the process output.
   await execFileAsync(
     binary,
     [

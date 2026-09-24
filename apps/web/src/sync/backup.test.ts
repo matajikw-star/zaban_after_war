@@ -742,6 +742,49 @@ describe('triggers', () => {
     expect(server.pullCalls).toBe(0);
   });
 
+  it('an anonymous install still drains its outbox — flags, beacons, error reports need no login', async () => {
+    device.user = null;
+    device.live = { flag: true, beacon: true, error: true };
+    device.outbox = [
+      { seq: 1, kind: 'flag', payload: { seq: 1 }, attempts: 0, createdAt: AT, lastError: null },
+      { seq: 2, kind: 'beacon', payload: { seq: 2 }, attempts: 0, createdAt: AT, lastError: null },
+    ];
+
+    await runner.request('manual');
+
+    expect(device.sent.map((s) => s.kind)).toEqual(['flag', 'beacon']);
+    expect(device.outbox).toEqual([]);
+    // Still true: no review event ever reaches the server without a login.
+    expect(server.pushCalls).toEqual([]);
+    expect(server.pullCalls).toBe(0);
+  });
+
+  it('an anonymous install offline drains nothing', async () => {
+    device.user = null;
+    device.online = false;
+    device.live = { flag: true, beacon: true, error: true };
+    device.outbox = [
+      { seq: 1, kind: 'flag', payload: { seq: 1 }, attempts: 0, createdAt: AT, lastError: null },
+    ];
+
+    await runner.request('manual');
+
+    expect(device.sent).toEqual([]);
+    expect(device.outbox).toHaveLength(1);
+  });
+
+  it('an anonymous install keeps items whose route is not live yet, same as a logged-in one', async () => {
+    device.user = null;
+    device.outbox = [
+      { seq: 1, kind: 'flag', payload: { seq: 1 }, attempts: 0, createdAt: AT, lastError: null },
+    ];
+
+    await runner.request('manual');
+
+    expect(device.sent).toEqual([]);
+    expect(device.outbox).toHaveLength(1);
+  });
+
   it('the interval runs every 5 minutes', async () => {
     runner.startInterval();
     runner.startInterval(); // idempotent

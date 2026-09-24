@@ -577,6 +577,249 @@ Client half (`sync/backup.ts`, `backup-live.ts`, `login-merge.ts`):
   `4xx` drops an item — every error report and flag collected so far would be thrown away before
   ticket 04 ever ships the routes.
 
+### 5.9 Flags, beacons, client errors, the log tools and deploy (ticket dev-server/04, 2026-09-24)
+
+Server (`pb_hooks/telemetry.pb.js`, `lib/telemetry.js`):
+
+- **Daily caps are rolling 24h windows keyed on `installId`**, the same shape as `otp.js`'s
+  phone/IP limits (`countSince`/`secondsUntilFree` against `created`), not calendar days — no
+  midnight cliff for a burst of installs to pile up on.
+- **Beacons get a cap this file never fixed a number for.** What.md §8.2 said "unknown names
+  rejected" for `POST /api/beacon` but named no daily limit the way flags (50) and client-errors
+  (30) got one. Decided here: 200 rows/install/day, 20 events/call — generous for the 13 fixed
+  names of §8.4 even on a very active day, still bounded. `what.md` §8.2 now says so.
+- **`client_errors` dedupe never counts against the cap.** The cap check runs only on the insert
+  path; the same fingerprint from the same install within the hour only ever increments one
+  row's `count`. Otherwise a render loop hammering one bug could burn an install's whole day of
+  quota reporting the same duplicate over and over.
+- **`withRoute` gained `blobResponse(contentType, bytes)`.** The sourcemap route answers with
+  file bytes, not the `{error}`/data JSON envelope every other route uses; a handler returns
+  `blobResponse(...)` and `withRoute` calls `e.blob(...)` instead of `e.json(...)` — logging,
+  auth and error handling stay identical, only the last line branches.
+- **The sourcemap route's `{sha}/{file}` params are checked against a strict allow-list, not
+  sanitised.** Verified against the real binary (see the top of this file's rule on verifying
+  PocketBase APIs): PocketBase's router matches path segments on the *undecoded* URL, so
+  `/api/admin/sourcemap/X/..%2f..%2fetc%2fpasswd` still routes to the handler with
+  `pathValue('file')` returning the *decoded* string `../../etc/passwd` — a single `{file}`
+  segment can carry a slash if the client percent-encodes it. `sha` must match
+  `^[0-9a-f]{7,40}$` and `file` must match `^[A-Za-z0-9][A-Za-z0-9._-]*\.map$` (no `/` in the
+  character class at all) before either reaches `$os.readFile`, which is the only thing that
+  makes the traversal impossible regardless of encoding.
+
+Client (`sync/backup.ts`, `backup-live.ts`):
+
+- **`OUTBOX_ROUTES_LIVE` flips to `true` for all three kinds** now that the routes exist
+  (`what.md` §19's open item).
+- **An anonymous install now drains its outbox.** `request()` used to return immediately when
+  `deps.userId()` was null; it now calls a new `drainAnonymousOutbox()` first (still gated on
+  `isOnline()`), which never touches the `idle → pushing → pulling → idle` state machine — that
+  machine describes the review-event log, which still requires a login and is unaffected. The
+  existing `outboxRouteLive` gate and 2xx/4xx/429 handling inside `drainOutbox()` did not need to
+  change; only when it runs did.
+
+Tools (`tools/errors`, `tools/logs`, `tools/flags`, `tools/deploy`, all `tools/lib/`):
+
+- **One new dependency: `source-map` (0.7.6).** `tools/errors` needs a real sourcemap consumer to
+  turn a minified `line:column` back into a TypeScript source position; hand-rolling a VLQ
+  decoder is exactly the kind of code this codebase does not want to own. It runs fine under
+  plain Node (`node --experimental-strip-types`) with no bundler: the package's own CJS build
+  reads its `mappings.wasm` from disk relative to itself, so nothing is fetched at runtime (no
+  conflict with ADR-0005 — that rule is about the shipped PWA, and this is a dev-only CLI tool).
+- **`tools/` gained a `lib/` of its own** (`env.ts`, `pb.ts`, `args.ts`, `symbolicate.ts`),
+  shared by all four server-facing tools rather than duplicated four times. `.env.local` reading
+  is five lines of `KEY=VALUE` parsing, not a `dotenv` dependency — boring enough that the
+  dependency would have cost more than it saved (§17.9).
+- **Symbolicating a real error needed a real throw from the real built bundle**, not a synthetic
+  stack string: `apps/web/e2e/errors.spec.ts` (the third spec `what.md` §16.2 already planned)
+  first threw via `page.evaluate`, and the resulting `Error#stack` pointed at Playwright's own
+  `eval` wrapper, not at `assets/index-*.js` — nothing to symbolicate. `main.tsx` now has a
+  three-line hook, armed only by `?__e2eThrow=1`, that throws for real after bootstrap finishes;
+  it ships in every build (a query-param check like `import.meta.env.DEV` would get tree-shaken
+  out, along with the real minified position this test needs) but a real user can never trigger
+  it by accident.
+- **`server/scripts/e2e.mjs` now upserts a fixed superuser** before `serve` starts, the same CLI
+  call `server/test/harness.ts` uses. No e2e spec had needed superuser access before this one;
+  `playwright.config.ts` also now copies the just-built `apps/web/dist/assets/*.map` into a temp
+  `SOURCEMAP_DIR` under the real build sha before that webServer starts, so `errors.spec.ts` has
+  a real sourcemap to resolve against.
+- **`tools/deploy` ships as TypeScript modules (`args.ts`, `refusal.ts`, `plan.ts`, `git.ts`,
+  `index.ts`), not shell scripts**, so the argument parsing and the refuse-or-not decision are
+  plain, fast, dependency-free unit tests (`tools/deploy/*.test.ts`) instead of something only
+  provable by actually running a deploy. `plan.ts` is pure — it turns a target list into a list
+  of `{description, command}` strings — so `--dry-run` and a real run share exactly one source of
+  the commands, and the plan itself (never-rsync, `.new`-then-swap, restart-before-health-check,
+  build-before-ship) is asserted as data.
+- **No rsync.** `what.md` §14.4 said rsync when this ticket started; the machine actually
+  available has `ssh` and `tar` but no `rsync`, so every transfer is `tar czf - | ssh … tar xzf -`
+  into a `.new` sibling directory. `what.md` is corrected in the same commit as the code, per
+  §17.10's own rule.
+- **The atomic swap is two renames, not one `mv`.** `mv new old` cannot replace a populated
+  directory in one step (Linux `rename()` refuses a non-empty target), so the swap moves the old
+  directory aside, moves the new one into place, then removes the old one — each rename is
+  individually atomic, and the whole swap is a live directory for all but a few milliseconds.
+- **The first real deploy is still to do.** This ticket built and tested the tool and proved
+  `--dry-run` against this repository; it never connected to `app.konkurleitner.com`. `what.md`
+  §14.4 is marked `[built, not yet deployed]` until the lead runs it for real.
+
+### 5.10 Finishing `tools/deploy` (ticket dev-server/04, 2026-09-24, second session)
+
+§5.9's `tools/deploy` paragraphs describe the salvage as if it had already been proved; it had
+not (commit `7366e02`, `wip(tools): deploy tool and docs, unverified` — never run through lint,
+typecheck, test or `--dry-run`). This session ran every check and found two real bugs, both now
+fixed:
+
+- **`--allow-branch <branch>` compared the checked-out branch's *name*, not its commit.**
+  `refusal.test.ts` even had a test titled "allows a clean tree on exactly that branch, HEAD
+  mismatch or not" — which is the bug stated as a spec. A local branch created and named
+  `develop` with commits that were never pushed would have passed `--allow-branch develop` and
+  shipped them to staging. `refusal.ts`/`git.ts` now resolve `origin/<allowBranch>` and compare
+  its sha against HEAD, the same shape as the `origin/main` check it replaces.
+- **The server health check was a single `curl -sf` right after `systemctl restart`**, racing
+  the restart with no retry. Replaced with a bash poll loop, 30s budget, 1s interval, that exits
+  non-zero with a distinct `DEPLOY_HEALTH_TIMEOUT` message on failure — greppable from a failed
+  CI run or a lead's terminal without re-reading `plan.ts`.
+- **`pnpm run deploy -- <target>`, written throughout the salvaged docs and code comments, does
+  not work on this repo's pinned pnpm (`12.3.4`).** `run` is one of pnpm's specially-escaped
+  commands (pnpm/pnpm#13295): a `--` separator is not stripped and reaches the script as a
+  literal `"--"` argument, which `args.ts` correctly rejects as an unknown flag. Every mention
+  is corrected to `pnpm run deploy <target>`, no separator.
+
+Verified in full this session (branch `feat/server-telemetry-and-tools` cannot itself pass
+either refusal check right now, being ahead of both `origin/main` and `origin/develop`, so both
+refusal messages were demonstrated directly instead of chased past): `pnpm lint`, `pnpm
+typecheck`, `pnpm test` (518 passed), `pnpm test:server` twice (110 passed each run), `pnpm
+build`, `pnpm budget` (215.9 KB of 300 KB gzip), `KL_E2E_CHANNEL=msedge pnpm e2e` (17 passed).
+Still never connected to the VPS; the first real deploy remains the lead's.
+
+### 5.11 Per-IP rate limits (ticket dev-server/04, 2026-09-24, third session)
+
+The lead's review found two holes. The telemetry routes are anonymous and capped per
+`installId` — a value the client chooses, so a script that mints a new one per call walks around
+every cap and can write 32 KB `client_errors` rows until the disk fills. And §15 claimed "PB's
+built-in rate limit on superuser auth", but no migration had ever switched PocketBase's limiter
+on. Migration `1758800000_rate_limits.js` does, with an explicit rule list.
+
+**What was verified, not assumed.** The label syntax comes from the 0.40.2 binary's own
+`types.d.ts` and from `apis/middlewares_rate_limit.go` at the `v0.40.2` tag: `METHOD /path`
+matches one custom route exactly; `<collection>:auth` is the tag on a collection's built-in auth
+endpoints; the window is fixed and opens at a key's first request; a request with a superuser
+token is never limited; counters are in memory. A fresh install ships four rules with the
+limiter off (`*:auth` 2/3 s, `*:create` 20/5 s, `/api/batch` 3/1 s, `/api/` 300/10 s) — so
+merely setting `enabled: true` would have switched on a catch-all nobody chose. The migration
+replaces the list; its `down` restores exactly those four, disabled (checked with `migrate down
+1` and the stored settings read back).
+
+**Numbers.** The first proposal was 60 per 60 s per telemetry route. That caps the *rate* but not
+the *total*: 60/min is 86,400 calls a day from one address, ≈ 2.8 GB of 32 KB error rows — a
+40 GB disk filled by one machine in about two weeks, by a handful in days. An hour window bounds
+the total instead:
+
+| Route | Rule | Worst case, one IP, one day |
+|---|---|---|
+| `client-errors` | 120 / 3600 s | 2,880 rows × 32 KB ≈ 90 MB |
+| `beacon` | 300 / 3600 s | 7,200 calls × ≤ 20 small rows ≈ 50 MB with indexes |
+| `flags` | 300 / 3600 s | 7,200 small rows ≈ 2 MB |
+| `_superusers:auth` | 3 / 10 s | 25,920 guesses against a ≥ 20-char password |
+
+It also suits the real client better: one device can have a 100-row outbox backlog
+(`OUTBOX_BATCH`), which a 60-per-minute rule would cut at 61; an hourly bucket of 120/300 takes
+it in one drain. The superuser rule uses the `_superusers:auth` tag rather than the
+`auth-with-password` path so it covers every superuser login method, not just the one enabled
+today.
+
+**Carrier-grade NAT — why there is no `/api/` catch-all.** Iranian mobile carriers put many
+subscribers behind one public IPv4 address; one address can carry hundreds of students at once.
+A per-IP ceiling on everything would throttle exactly the traffic that matters — a login restore
+pulls events in pages of 500, a backup pushes in batches of 500 — and nothing on that path needs
+it: every study-path route is authenticated and bounded per user (body caps, 500 events per push,
+the user from the token). The per-IP rules therefore sit only where there is no user to key on:
+the three anonymous telemetry writes, and superuser login. On those, CGNAT costs little: a
+student sends a handful of telemetry calls a day, so hundreds share an hourly bucket
+comfortably, and when an abuser on the same address empties it, the others' reports wait in their
+outbox (a 429 is kept and retried, never dropped — `sync/backup.ts`) for at most the hour. The
+OTP routes keep their in-hook limits (3 per phone / 10 min, 10 per IP / hour); PocketBase's rules
+cannot key on a phone, and those numbers were not loosened.
+
+**Not done, deliberately.** A per-IP *daily* ceiling on telemetry rows (an in-hook count, as
+`otp.js` does) was weighed and left out: the hourly rules already bound one address to tens of
+MB a day, and keying rows on IP would mean storing client IPs on rows that live forever — §15
+says no PII beyond the phone number. What still fills the disk is many addresses at once; the
+answer to that is the disk alert of §14.6 (planned), not a per-IP rule. Also noted: DNS has `A`
+records only. PocketBase keys on the full address, so if an `AAAA` record is ever added, one
+machine with a /64 has 2^64 buckets and these rules need revisiting first.
+
+### 5.12 Deploy fixes and the one-time install (ticket dev-server/04, 2026-09-24, third session)
+
+The lead's review of `tools/deploy` found what no dry run could: the plan was right as text and
+wrong against the machine.
+
+- **`kl` cannot run `systemctl restart`.** bootstrap.sh gives `kl` NOPASSWD sudo for exactly
+  `/bin/systemctl restart kl-pocketbase` (and caddy's restart/reload/status of both). The step
+  is now `sudo -n` with that exact path — sudo matches the command as written, and `-n` turns
+  a missing rule into an error instead of a password prompt nobody will answer. A unit test
+  reads bootstrap.sh's sudoers line so the two cannot drift. Because a restart also *starts* a
+  stopped unit, the same step refuses (`DEPLOY_NO_ENV`) while `/opt/kl/.env` is missing.
+- **No key, and prompts.** `DEPLOY_SSH_KEY_FILE` (optional, `~` expanded) → `-i`, and every ssh
+  is `BatchMode=yes`. Considered `StrictHostKeyChecking=accept-new` to spare the first manual
+  connection; rejected — trusting an unseen host key silently is exactly what a first manual
+  `ssh … true` exists to prevent, and the lead already has the host in `known_hosts`.
+- **`--dry-run` was documented as always safe but exited on the refusal.** Chose to make the
+  code match the docs, not the reverse: a dry run runs nothing, so a refusal has nothing to
+  protect there, and previewing a deploy from a branch ahead of its remote is the common case.
+  `gate()` is the pure seam; a real run is still refused.
+- **`deploy web` on a clean checkout shipped no words.** `free.json` is git-ignored; only
+  `pnpm content:build` puts it in `apps/web/public/content/`, whence Vite copies it into
+  `dist/`. A web deploy from CI, or right after a clone, would have swapped in a `pb_public`
+  without it and deleted the live one. Verified both ways before fixing. `web` now builds the
+  content first unless `content` already did in the same run, and refuses a dist without it.
+  Not done: making `web` imply the `content` target. The two are coupled — the free file's hash
+  is in the manifest `content` ships — but the manifest route is still `[planned]`, and a
+  rebuild from an unchanged `content/` reproduces the same content `hash` and an identical
+  manifest (checked: only `builtAt` differs between two builds); the runbook says to deploy
+  `content web` together when `content/` changed.
+
+**The one-time install** is a separate command, `pnpm run provision`, not a `deploy` target: it
+is the one thing that runs as root, it happens once, and `deploy all` must never reach it by
+accident. Decisions:
+
+- **The binary is fetched locally, verified twice, and shipped.** github.com may be filtered
+  from an Iranian VPS. The zip must match the release's `checksums.txt` *and* a sha256 pinned in
+  git (`server/POCKETBASE_SHA256`): `checksums.txt` comes from the same place as the zip, so on
+  its own it only catches corruption; the pin catches a release asset that changed after it was
+  reviewed. `install.sh` re-checks the extracted binary's hash and `--version` on the VPS.
+- **The kit goes to `/root/kl-provision` (mode 700), not `/opt/kl/deploy`.** Everything under
+  `/opt/kl` is `kl`'s; a script root runs from a directory `kl` can write is an escalation path.
+- **`/opt/kl/.env` never touches a local disk.** Built in memory from `.env.example`'s VPS /
+  PocketBase section (so a local-tool secret like `KL_ADMIN_PASSWORD` cannot reach the server
+  file), streamed over ssh stdin into `install -m 600 -o kl -g kl /dev/stdin`. The staging
+  overrides `SMS_PROVIDER=mock` and `ZARINPAL_SANDBOX=1` are constants, not flags: shipping
+  `kavenegar` from this step has to be impossible, not merely unlikely, and under mock SMS no
+  real money may move. `install.sh` swaps `.env.new` in only when it differs, so a changed env
+  can restart a running PocketBase and an unchanged one does not.
+- **`install.sh` never starts PocketBase.** It enables the unit; the first `deploy server`
+  starts it once hooks and migrations exist. Found while checking this: `superuser upsert` does
+  *not* apply this repo's JS migrations on 0.40.2 — only `serve` / `migrate up` do (the test
+  harness's comment said otherwise and was corrected).
+- **The superuser's credentials are on stdin**, read by `superuser.sh`. Residual: PocketBase's
+  CLI accepts them only as arguments, so they are in the upsert's argv for about a second,
+  readable by root and `kl` on the VPS. Accepted, and written down rather than hidden.
+- **The Caddyfile is validated before it is installed**, the old one kept and restored if the
+  reload fails — a bad Caddyfile takes down TLS for all three origins.
+
+Unverified, and said so in the runbook: `install.sh` has passed `bash -n` and nothing else —
+there is no Linux machine here to run it on (no WSL, no Docker), and the VPS is off-limits to
+this session. The download, checksum, extraction and the kit's tarball were exercised locally;
+`server/Caddyfile` adapts cleanly under Caddy 2.11.4.
+
+### 5.13 OTP keeps one limit per phone (2026-09-24, owner decision)
+
+Proposed at the OTP review: add a second cap of 10 codes per phone per 24 h on top of 3 per phone
+per 10 min, because the 10-minute window alone lets a distributed attacker who rotates IPs make
+about 2 % of a day's guesses count against one targeted phone (with the extra cap, about
+0.05 %). The owner declined: the limits stay as `what.md` §8.2 states them (3 per phone / 10 min,
+10 per IP / hour, 5 attempts per code, 3-minute expiry). Revisit if the server logs ever show
+repeated `OTP_WRONG` bursts against one phone from many IPs.
+
 ## 6. How to extend this file
 
 

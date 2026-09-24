@@ -60,6 +60,11 @@ export interface Server {
 export interface StartOptions {
   /** Overrides for the child's environment, e.g. `{ SMS_PROVIDER: 'mock' }`. */
   readonly env?: Record<string, string>;
+  /**
+   * `--publicDir`, as the VPS runs it (systemd/kl-pocketbase.service): PocketBase then serves the
+   * directory on `GET /{path...}` with an index.html fallback. Unset = PocketBase's default.
+   */
+  readonly publicDir?: string;
 }
 
 function randomPort(): number {
@@ -141,6 +146,7 @@ export async function startServer(options: StartOptions = {}): Promise<Server> {
       hooksDir,
       '--migrationsDir',
       migrationsDir,
+      ...(options.publicDir ? ['--publicDir', options.publicDir] : []),
     ],
     { env, stdio: ['ignore', 'pipe', 'pipe'] },
   );

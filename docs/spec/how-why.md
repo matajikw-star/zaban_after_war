@@ -886,6 +886,19 @@ What `what.md` §8.2/§8.3 did not already fix, and why each went the way it did
   table as `quote`), `GATEWAY_FAILED` 502, `NOT_ENTITLED` 403. `quote` gained `codeStatus: 'none'`
   for "no code sent", and `status/:id` gained `failReason` and `entitled`.
 
+*Added at review (2026-09-24):* **an unknown `/api/` path is a JSON 404, decided in a middleware.**
+Staging answered `GET /api/content/paid` — a route it did not have yet — with `200 text/html`:
+`--publicDir` makes PocketBase serve pb_public on `GET /{path...}` with an index.html fallback.
+A `/api/{path...}` route cannot fix it: PocketBase 0.40's router is Go's ServeMux, and a
+method-less `/api/{path...}` next to the static `GET /{path...}` panics at startup ("GET
+/{path...} matches fewer methods than /api/{path...}, but has a more general path pattern" —
+tried against the 0.40.2 binary). Per-method routes would avoid the panic but have to track every
+method PocketBase might register under `/api`. The middleware instead reads the pattern the mux
+matched (`e.request.pattern`) and answers only when a request under `/api/` landed on a pattern
+that is not under `/api` (the static fallback or PocketBase's `/` catch-all), so it cannot shadow a
+route of ours or PocketBase's; CORS preflights are answered by PocketBase before it runs. Proven in
+`server/test/api-not-found.test.ts` on a server started with a publicDir, as the VPS runs.
+
 Unverified, and said so in `what.md` §8.3: the Zarinpal v4 shapes in `lib/zarinpal.js` — the
 paths, `merchant_id`/`amount`/`currency`/`callback_url`/`metadata` on request, `authority` in
 `data`, `ref_id`/`card_pan` on verify, the `errors.code` envelope on failure, the `-50`/`-51`/

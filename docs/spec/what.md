@@ -750,7 +750,10 @@ A few errors carry one extra top-level value next to `error`:
 `attemptsLeft` on `OTP_WRONG`, and `codeStatus` (a string, as in `pay/quote`) on `DISCOUNT_REJECTED`. Bodies are JSON, except where a handler returns
 `blobResponse` (raw bytes), `redirectResponse` (a 302 — the payment callback) or `fileResponse`
 (a file served through Go's `http.ServeContent`, which is what gives the paid package its
-`Range` handling); the auth, the guard, the log line and the error envelope are the same for all. Auth is the
+`Range` handling); the auth, the guard, the log line and the error envelope are the same for all. Any `/api/…` path
+no route owns — any method — answers this envelope with 404 `NOT_FOUND` (log route `api.not_found`,
+`core.pb.js`) instead of falling through to pb_public's `index.html` with a 200; it acts only when
+the pattern the router matched is not itself under `/api`, so no real route is shadowed. Auth is the
 PocketBase bearer token. Because PocketBase serializes each handler into its own isolated context,
 `withRoute` is required and applied *inside* the handler, not around it (see how-why §5.4).
 
@@ -1291,7 +1294,11 @@ mock gateway end to end. Content (`content.test.ts`): manifest, 401, `NOT_ENTITL
 user, a missing `CONTENT_DIR`. The gate (`payment-gate.test.ts`): a server with `SMS_PROVIDER=mock`
 answering 503 `PAYMENT_DISABLED_MOCK_SMS` on every gated route, with and without a token and to a
 malformed body, writing nothing and calling no gateway; the ungated routes untouched; both mocks
-reported on the production origin. The e2e job exercises every route end to end.
+reported on the production origin. Unknown paths (`api-not-found.test.ts`, on a server with a
+publicDir and an index.html, as the VPS runs): GET, POST, PUT, PATCH, DELETE and HEAD under
+`/api/` answer 404 `NOT_FOUND` as JSON, while `/api/health`, our GET and POST routes, a CORS
+preflight, PocketBase's collections API and realtime, and the app shell on every non-`/api` path
+still answer as before. The e2e job exercises every route end to end.
 
 ### 16.4 CI jobs
 

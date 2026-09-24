@@ -72,6 +72,42 @@ routerUse((e) => {
   )(e);
 });
 
+// --- any unmatched /api/... -------------------------------------------------------------------
+// An /api/ path no route owns answers the JSON envelope with 404 NOT_FOUND. Without this, the
+// VPS (`--publicDir`, systemd/kl-pocketbase.service) answered `GET /api/<unknown>` with
+// `200 text/html` — PocketBase's pb_public index fallback — so a client talking to an older
+// server, or a typo'd path, saw success and then failed parsing JSON.
+//
+// A middleware, not a `/api/{path...}` route: PocketBase 0.40's router is Go's ServeMux, where a
+// method-less `/api/{path...}` conflicts with the static `GET /{path...}` (neither pattern is
+// more specific than the other) and would panic at startup. Instead this reads which pattern the
+// mux matched (`e.request.pattern`, Go's http.Request.Pattern): a request under /api/ whose
+// pattern is itself under /api belongs to a real route — ours or PocketBase's, whatever its
+// method — and is passed on untouched. Only a request that fell through to a fallback (the
+// static `GET /{path...}`, or PocketBase's own method-less `/` catch-all) is answered here, so
+// no real route can ever be shadowed. CORS preflights are answered by PocketBase's CORS
+// middleware, which runs before this one.
+
+routerUse((e) => {
+  const path = e.request.url.path;
+  if (path !== '/api' && path.indexOf('/api/') !== 0) return e.next();
+
+  // "GET /api/config", "/api/realtime", "/{path...}", "/" — the method and host come first.
+  const pattern = String(e.request.pattern || '');
+  const slash = pattern.indexOf('/');
+  const patternPath = slash === -1 ? '' : pattern.slice(slash);
+  if (patternPath === '/api' || patternPath.indexOf('/api/') === 0) return e.next();
+
+  const { withRoute, AppError, CODES } = require(`${__hooks}/lib/route.js`);
+  return withRoute(
+    'api.not_found',
+    () => {
+      throw new AppError(CODES.NOT_FOUND, `no route for ${e.request.method} ${path}`);
+    },
+    { auth: 'none' },
+  )(e);
+});
+
 // --- GET /api/me ------------------------------------------------------------------------------
 // The client calls this on every launch that has a network: it is where the device learns whether
 // it is still entitled (§7.6) and where the server learns the device is alive.

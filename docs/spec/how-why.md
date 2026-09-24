@@ -961,6 +961,33 @@ nobody holds a real paid entitlement yet, and the next `/api/me` fills it in.
 not by whoever is signed in when the answer arrives — otherwise a sign-out during `/api/me`
 could file A's `full` under B.
 
+### 5.17 The purchase journey's e2e server (ticket dev-payment/01 part B, 2026-09-25)
+
+**A second preview + PocketBase pair, not a switched first one.** The gated server
+(`SMS_PROVIDER=mock`) is what staging runs and what `payment-gate.spec.ts` proves; switching it to
+the console provider would have turned every existing login into a stdout read and lost the gate
+proof. A Playwright project per pair keeps each spec on the server it means, at the cost of two
+more processes (≈ 2 s of start-up).
+
+**Seeded by the script, not by the spec.** Prices and discount codes are written through the
+superuser API once, before the ready line Playwright waits for (`webServer.wait.stdout`). A spec
+logging in as superuser per test hit `_superusers:auth`'s 3-per-10-s limit in the arithmetic of a
+`--repeat-each=10` run; a client backdoor was never an option.
+
+**Each test sends its own `X-Forwarded-For`.** The OTP route allows 10 requests per IP per hour,
+keyed on `e.realIP()`, which trusts that header because production sits behind Caddy (checked by
+hand: 12 requests with 12 addresses all answered 200; without the header the 11th was 429). The
+test plays Caddy's part; no app or hook code knows about it.
+
+**The mid-body cut is a reload.** Chromium's offline emulation refused new requests but let the
+paid body that was already streaming finish (first run: the progress kept climbing after
+`setOffline(true)`). A reload kills the fetch with the document — the "killed tab" case of §7.5 —
+and the next document resumes with `Range`. A second CDP session (the throttle) must be detached
+before `setOffline`: its own `offline: false` kept `navigator.onLine` true, the runner ran, the
+manifest fetch failed, and the installed package showed «دانلود در انتظار اینترنت». Not an app
+bug under a real offline device (the runner skips while `navigator.onLine` is false), but the same
+display follows whenever `onLine` is true with no route out — noted for the owner, unchanged.
+
 ## 6. How to extend this file
 
 

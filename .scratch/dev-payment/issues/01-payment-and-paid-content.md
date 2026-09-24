@@ -1,6 +1,6 @@
 # 01 — Payment, discount codes, entitlement, paid content download
 
-Status: ready-for-agent
+Status: resolved
 Type: task
 Phase: 5
 Blocked by: dev-server/03
@@ -175,3 +175,53 @@ repo has none; screens are pure machine + flow, rendering proven in e2e). The pa
    as, the loaded package follows sign-in/out without a reload, a legacy record belongs to nobody.
    what.md §7.3/§7.6/§16.2, how-why §5.16. For part B: a journey that signs out and in as another
    phone should now see the free package and no download; the same phone back sees paid, offline.
+
+### 2026-09-25 — part B: the purchase journey, end to end
+
+Branch `feat/payment-e2e` (from `origin/develop`). Status → `resolved`.
+
+**Server wiring** (`server/scripts/e2e.mjs`, `apps/web/e2e/pay-server.ts`, `playwright.config.ts`):
+a second preview (:4174) + PocketBase (:8092) pair in its own Playwright project `payment`, because
+the gated pair must stay exactly staging's shape for `payment-gate.spec.ts` and the other specs.
+The payment PocketBase runs `SMS_PROVIDER=console`, `ZARINPAL_PROVIDER=mock`,
+`ZARINPAL_CALLBACK_URL=http://127.0.0.1:4174/api/pay/callback` (through the preview proxy, like
+Caddy in production), `CONTENT_DIR=server/content`, `PUBLIC_APP_ORIGIN=http://127.0.0.1:4174`;
+the script seeds prices and the codes `E2EHALF` (50 %) and `E2EFREE` (100 %) through the
+superuser API before printing the ready line Playwright waits for, and copies stdout to
+`%TEMP%/kl-e2e-pay-pocketbase.log`, where `consoleOtp()` reads the code. Each test sends its own
+`X-Forwarded-For` (PocketBase trusts it from Caddy), so the OTP's 10/h/IP limit does not end a
+repeat run — checked by hand first (12 addresses → 12× 200; one address → 429 at the 11th). No
+test hook in app or hook code. how-why §5.17.
+
+**Journey** (`e2e/payment-journey.spec.ts`): 149 of 150 free words seeded as known and
+`presentationsBeforePaywall` = 99, so the paywall comes from studying the real 100th card (not a
+navigation) → «خرید» → `/login?next=/checkout` → console OTP → `/checkout` → `E2EHALF`: status
+`ok`, discount 145,000 and payable 145,000 toman → «پرداخت» → mock callback → `/purchase/result`
+`entitled` → download throttled to 128 KB/s over CDP, the tab killed by a reload once a checkpoint
+is in `kv`, then resumed → `installed`; the responses are exactly `[200, 206]`, the 206 from the
+requested byte (≥ the checkpoint), byte-exact `Content-Range`, `If-Range` = `ETag` → offline →
+a paid-only card → reload offline → home counts 893 words, settings «نسخهٔ کامل» + `installed`,
+the next card is paid-only too. Second test: `E2EFREE` → payable 0 → `granted` → result →
+`installed`, and no request ever reaches `/api/pay/callback`. Server state after a run: no
+`client_errors`, payments `verified` (145000/`MOCK-…` and 0/`E2EFREE`), `content/paid` 200 ×4 and
+206 ×2 for 4 tests, warnings only the expected anonymous-quote 401s, env notes and mock-gateway
+lines.
+
+**Findings.** (1) `context.setOffline(true)` does not cut a body that is already streaming in
+Chromium — it kept downloading; the cut is a reload instead (the "killed tab" case). (2) A
+leftover CDP session with `offline: false` kept `navigator.onLine` true under `setOffline`: the
+runner then checked the manifest, failed, and settings showed «دانلود در انتظار اینترنت» for an
+installed package. Test artifact (fixed by detaching), not an app bug on a truly offline device.
+But the same display will appear whenever `navigator.onLine` is true with no route out (a
+captive or filtered network), because `installed + FAILED → error` by design. Not changed; it is
+the owner's call whether an installed package should stay `installed` when an update check fails.
+No app bug found; the real `ServeContent` Range handling matched the client on the first run.
+
+**Not done.** Sign-out → free → sign in again → paid offline: the app has no sign-out control,
+so the journey cannot reach it without a backdoor; the rules are unit-tested
+(`entitlement-account.test.ts`). The ETag Caddy rewrites (`-gzip`) is not in this setup (no
+Caddy); unit tests cover it.
+
+**Checks** (this machine, `KL_E2E_CHANNEL=msedge`): lint 0, typecheck 0, test 0 (729), test:server
+0 (175), build 0, budget 0 (227.4 KB), full e2e 0 (22 passed, 12 skipped; also 0 with
+`--workers=1`), `--project=payment --repeat-each=10` 0 (20/20).

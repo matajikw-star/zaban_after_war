@@ -107,12 +107,61 @@ Zarinpal v4 field names in `lib/zarinpal.js` get confirmed (how-why §5.14 lists
 
 ### 2026-09-25 — client half part A
 
-Branch `feat/payment-client-2` (from the WIP `e8e46eb` + `origin/develop`). In progress:
+Branch `feat/payment-client-2` (the WIP `e8e46eb` + `origin/develop` merged). Status unchanged:
+part B (the purchase journey) is what flips the marks to `[live]`.
 
-- [x] Step 1, sync layer: `sync/download.ts` (+ `download-live.ts`), `entitlement.ts`
-  (+ `entitlement-live.ts`), `payment-status.ts` (+ `payment-live.ts`), tests. Committed.
-- [ ] Step 2, screens `/paywall`, `/checkout`, `/purchase/result`; login returns to checkout.
-- [ ] Step 3, `pendingPayment` recovery on launch (wired in `main.tsx` in step 1; tested in
-  `payment-status.test.ts`).
-- [ ] Step 4, settings download row.
-- [ ] Docs: what.md §7.5, §7.6, §7.8; wiki/log.md.
+**Kept from the WIP**, after reading it against what.md §7.5/§7.6/§8.2 — it was sound: the
+download machine and runner (Range + If-Range, 200-for-206 restart, 416, ETag check, sha256
+verify, install only after verify) and its fake-server harness; `mergeEntitlement` (never
+revokes); `package-hash.ts` (the builder's canonical JSON, byte-checked against it); the
+`net/api.ts` contract fixes (`grantedAt` is PocketBase text, status `verified` not `paid`,
+`codeStatus: 'none'`, `DISCOUNT_REJECTED`'s `codeStatus`); `adoptServerEntitlement` as the only
+entitlement writer.
+
+**Rewritten or added, and why:**
+- The kv key back to the spec's `downloadReceivedBytes` (the WIP renamed it to
+  `downloadPartial`); its value holds the bytes, since a reload loses the in-memory buffer
+  (how-why §5.15).
+- 503 `PAYMENT_DISABLED_MOCK_SMS` never reported: the WIP filed a record at the fifth failure,
+  i.e. every staging account with an admin grant would have spammed `client_errors`.
+- `download-live.ts` did not exist: the real bindings, triggers, a 30 s headers timeout and a
+  30 s body-stall watchdog (a quiet mobile link would otherwise hold the run lock forever).
+- `payment-status.ts` had no tests and no polling: added `pollPayment` (bounded, < 3 min),
+  `verified`-without-entitlement is terminal (`inconsistent`), kv failures can no longer throw.
+  `refreshEntitlement` can no longer throw on a failed cache write.
+- The sync store breadcrumbed every download chunk; now only a change of state.
+- Screens, login `?next=`, settings row, launch wiring, e2e spec: all new.
+
+Tests: 714 unit (web 500; +90 over the WIP's 410), incl. the hard cases — cut mid-body then
+resumed by a fresh runner, cut twice, offline mid-body, ETag changed between attempts (with and
+without the manifest caught up), hash mismatch then retry from 0, crash before and after the swap,
+failed update swap keeps the old package, entitlement never downgraded by 401/5xx/503/junk.
+`e2e/payment-gate.spec.ts` (3, real Edge, gated server): calm paywall/checkout, «بعداً» works,
+anonymous checkout → login → back. lint, typecheck, test, build, budget (227.0 KB of 300 KB) all
+exit 0; full e2e 20 passed, 12 skipped (screenshot recorder). Server untouched.
+
+**For part B** (the journey): a second PocketBase with `SMS_PROVIDER=console`,
+`ZARINPAL_PROVIDER=mock`, `ZARINPAL_CALLBACK_URL` = that server's `/api/pay/callback`,
+`CONTENT_DIR=server/content`, `PUBLIC_APP_ORIGIN` = the preview origin. The contract the screens
+expose (all in what.md §7.8's rows):
+- Routes: `/paywall`, `/login?next=/checkout`, `/checkout`, `/purchase/result?status=…`,
+  `/settings`.
+- `data-testid`s: `paywall` (`data-state`), `paywall-buy`, `paywall-later`, `paywall-price`,
+  `payment-soon`; `checkout` (`data-state`), `checkout-code`, `checkout-apply`,
+  `checkout-code-status` (`data-code-status`), `checkout-payable`, `checkout-discount`,
+  `checkout-pay`, `checkout-retry`, `checkout-later`; `purchase-result` (`data-state`),
+  `purchase-entitled`, `purchase-download-status` (`data-state` = the download state, `installed`
+  when done), `purchase-start-review`, `purchase-failed` (`data-reason`), `purchase-retry`,
+  `purchase-check-again`; `settings-entitlement`, `settings-download-status` (`data-state`),
+  `settings-download-retry`, `settings-buy`. The progress bar is `role="progressbar"`.
+- kv: `pendingPayment` `{paymentId, userId, startedAt}` (written before the redirect, cleared on
+  a terminal answer), `entitlement`, `downloadReceivedBytes` `{hash, version, bytes}` (absent
+  once installed); the package lands in the `packages` table as `paid`.
+- With the mock gateway, `pay/request` → `gatewayUrl` is our own callback, so the browser goes
+  checkout → `/api/pay/callback` → 302 `/purchase/result?status=ok&ref=MOCK-…&paymentId=…`.
+
+**Uncertain / not done:** the paid download has never run against the real Go `ServeContent`
+in a browser (only the fakes and `rangeStartOf`'s parser) — part B's journey is the first real
+proof; Playwright's `setOffline` mid-body is how to prove resume there. No component tests (the
+repo has none; screens are pure machine + flow, rendering proven in e2e). The paywall's anonymous
+`pay/quote` produces a 401 line in the server log per anonymous paywall view — by design.

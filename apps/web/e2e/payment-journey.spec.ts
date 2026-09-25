@@ -113,6 +113,10 @@ async function studyOneCard(page: Page): Promise<string> {
   await page.getByTestId('review-reveal').click();
   await expect(page.getByTestId('review-back')).toBeVisible();
   await page.getByTestId('grade-knew').click();
+  // The screen leaves the revealed card only after the grade is in the log (`Review.tsx`
+  // `answer` awaits `recordReview`). A reload before that can abort the write, and the same
+  // card comes back: seen once on CI (PR #12), a test race, not an app bug.
+  await expect(page.getByTestId('review-back')).toBeHidden();
   return lemma;
 }
 

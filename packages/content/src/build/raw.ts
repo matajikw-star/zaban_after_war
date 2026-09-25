@@ -57,6 +57,11 @@ export interface LexiconEntry {
   readonly occurrences: readonly Occurrence[];
   readonly stats: LexiconStats;
   readonly status: 'draft' | 'approved';
+  /**
+   * Set on a word id that must never ship or count again — e.g. one minted only by a
+   * misreading (ADR-0021). The file and id stay forever; `occurrences` is empty.
+   */
+  readonly retired?: { readonly reason: string; readonly date: string };
 }
 
 export interface ExamQuestion {

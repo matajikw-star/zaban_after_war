@@ -218,6 +218,19 @@ async function main(): Promise<Finding[]> {
   // sense with at least one translation and one example. A word still awaiting word data
   // (empty `senses`, `provenance: null`) is incomplete by design, not a lint defect.
   for (const [fileName, entry] of lexiconFiles) {
+    // A retired id (ADR-0021) is the opposite: it must have no occurrences and never ships.
+    if (entry.retired !== undefined) {
+      if (entry.occurrences.length > 0 || !entry.retired.reason || !entry.retired.date) {
+        findings.push({
+          severity: 'blocking',
+          check: '4',
+          file: `content/lexicon/${fileName}.json`,
+          message:
+            'retired, but still has occurrences or lacks retired.reason/date — a retired id counts nothing',
+        });
+      }
+      continue;
+    }
     if (entry.occurrences.length === 0) {
       findings.push({
         severity: 'blocking',

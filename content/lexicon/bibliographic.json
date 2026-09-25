@@ -7,37 +7,25 @@
   "id": "bibliographic",
   "lemma": "bibliographic",
   "level": null,
-  "occurrences": [
-    {
-      "isAnswer": false,
-      "occurrenceType": "tested",
-      "optionIndex": 3,
-      "paperId": "arshad-1400-p12",
-      "part": "vocabulary",
-      "questionNo": 5,
-      "reach": 1,
-      "surface": "bibliographics",
-      "year": 1400
-    }
-  ],
+  "occurrences": [],
   "provenance": null,
+  "retired": {
+    "date": "2026-09-25",
+    "reason": "Minted only by a misreading: arshad-1400-p12 q5 transcribed option 4 as «bibliographics»; the kept paper arshad-1400-p03 and the other two transcripts of that test read «bibliographies» (lemma bibliography). No exam tests this word. Retired by owner decision, ticket dev-content/03, ADR-0021."
+  },
   "senses": [],
   "stats": {
     "answersByYear": {},
-    "byYear": {
-      "1400": 1
-    },
-    "distinctYears": 1,
-    "firstYear": 1400,
-    "lastYear": 1400,
-    "priority": 3,
+    "byYear": {},
+    "distinctYears": 0,
+    "firstYear": null,
+    "lastYear": null,
+    "priority": 0,
     "timesAsAnswer": 0,
     "timesAsContext": 0,
-    "timesAsDistractor": 1,
-    "timesTested": 1
+    "timesAsDistractor": 0,
+    "timesTested": 0
   },
   "status": "draft",
-  "surfaceForms": [
-    "bibliographics"
-  ]
+  "surfaceForms": []
 }

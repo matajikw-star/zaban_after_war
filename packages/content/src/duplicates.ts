@@ -183,7 +183,7 @@ function liveDuplicateFindings(papers: readonly DedupPaper[]): DuplicateFinding[
  * Check 16 (blocking): a `duplicateOf` claim holds — it names another paper of the same year
  * that is not itself retired, carries a reason, and the two really share stems.
  * Check 17 (warning): a retired question whose options differ from the kept paper's
- * same-numbered question. The lexicon fold takes a second lemma reading of an option only
+ * same-numbered question, until the disagreement is noted in that question's `uncertain[]`. The lexicon fold takes a second lemma reading of an option only
  * where the two transcripts agree on its text, so a disagreement is a misreading in one of them.
  */
 function retiredFindings(papers: readonly DedupPaper[]): DuplicateFinding[] {
@@ -228,7 +228,10 @@ function retiredFindings(papers: readonly DedupPaper[]): DuplicateFinding[] {
         counterpart !== undefined &&
         counterpart.options.length === question.options.length &&
         question.options.every((option, i) => sameOption(option, counterpart.options[i] ?? null));
-      if (!agrees) {
+      // A disagreement already written into the question's `uncertain[]` is on record, which
+      // is all this warning asks for (the fold books nothing from it either way).
+      const recorded = (question.uncertain?.length ?? 0) > 0;
+      if (!agrees && !recorded) {
         findings.push({
           severity: 'warning',
           check: '17',

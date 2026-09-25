@@ -416,6 +416,9 @@ interface WordCard {
 - `packages/content/exclusions.json` lists ids that never ship (non-words such as `as-like`,
   see `.scratch/word-data/issues/04-non-words-and-latin-phrases.md`). Ids stay frozen; only
   shipping is decided here.
+- A lexicon entry carrying `retired: { reason, date }` never ships and has no occurrences — an
+  id minted only by a misreading keeps its file forever but counts nothing (`bibliographic`,
+  2026-09-25, ADR-0021); `content:lint` check 4 blocks one that still has occurrences.
 - A word ships without `hint` when its hint file is missing or unapproved. **The free 150 must
   all have approved hints before launch**; the rest may ship without and gain hints in updates.
 - Words with empty `senses` are **excluded from both packages** until their word data is

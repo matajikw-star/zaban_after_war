@@ -287,4 +287,26 @@ describe('duplicatePaperFindings — check 17, a retired question that disagrees
     ]);
     expect(findings).toEqual([]);
   });
+
+  it("is quiet once the retired question's uncertain[] records the disagreement", () => {
+    const kept = paper('arshad-1400-p01', { questions: built(FOUR) });
+    const noted = built(FOUR).map((question) =>
+      question.no === 2
+        ? {
+            ...question,
+            options: ['a', 'b', 'c', 'bibliographics'],
+            uncertain: ['q2 option 4 reads «bibliographics»; arshad-1400-p01 reads «d»'],
+          }
+        : question,
+    );
+    const findings = duplicatePaperFindings([
+      kept,
+      paper('arshad-1400-p02', {
+        questions: noted,
+        duplicateOf: 'arshad-1400-p01',
+        duplicateReason: '4/4 stems match',
+      }),
+    ]);
+    expect(findings).toEqual([]);
+  });
 });

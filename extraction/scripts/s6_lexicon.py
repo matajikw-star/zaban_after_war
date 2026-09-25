@@ -193,6 +193,11 @@ def main() -> int:
         # context occurrences are.
         if prev and "domain" in prev:
             entry["domain"] = prev["domain"]
+        # A retired id (ADR-0021) stays retired: if an exam ever books it again,
+        # lint check 4 blocks and a human decides, rather than this fold silently
+        # un-retiring it.
+        if prev and "retired" in prev:
+            entry["retired"] = prev["retired"]
         if prev == entry:
             continue
         if not a.dry_run:

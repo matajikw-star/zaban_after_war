@@ -73,7 +73,10 @@ option on 164 of 165 questions.
 - `bibliographic` exists only because one duplicate transcript misread «bibliographies». No
   fold derives it any more; it keeps its stale occurrence on the retired paper, ships nothing
   (no senses) and is named by lint check 18 until the owner decides its fate. Ids are not
-  deleted by a script.
+  deleted by a script. *Owner decision, 2026-09-25:* the id is retired — its file keeps a
+  `retired: { reason, date }` field, empty `occurrences` and zeroed stats, never ships, and S6
+  carries the field through; the misreading is noted in 1400-p12 q5's `uncertain[]`, which
+  quiets check 17.
 - A future year that splits the same way is caught twice: S2's fold before any money is spent,
   and check 15 after S6, which `/complete-year` now runs.
 - A retired transcript is a free second reading. Where it agrees with a kept paper that

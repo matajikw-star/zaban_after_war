@@ -87,10 +87,16 @@ export interface PaymentStatusDeps {
   /** `/api/me` for the entitlement's `source` and `grantedAt`, fired after `entitled`. */
   readonly refreshEntitlement: () => Promise<unknown>;
   readonly readPending: () => Promise<PendingPayment | null>;
-  readonly clearPending: () => Promise<void>;
+  /**
+   * Removes `kv.pendingPayment` only if it names this payment, in one check-and-delete; true when
+   * this call removed it. Whoever removes it queues `purchase_done`, so it is queued once.
+   */
+  readonly clearPending: (paymentId: string) => Promise<boolean>;
   readonly userId: () => string | null;
-  /** Start the paid download (§7.5) and queue `purchase_done`. */
+  /** Start the paid download (§7.5). Every `entitled` answer asks; the runner makes it idempotent. */
   readonly onEntitled: () => void;
+  /** Queue `purchase_done` (§8.4) — only by the call whose clear removed the record. */
+  readonly onPurchased: () => void;
   readonly reportError: (err: unknown, data: unknown) => void;
 }
 
@@ -114,8 +120,9 @@ function outcomeOfError(err: unknown, deps: PaymentStatusDeps, paymentId: string
 
 /**
  * One `pay/status/:id` call and everything that follows from its answer: `entitled` caches the
- * entitlement, clears the pending record and starts the download; `failed`/`expired`/unknown
- * clear the record; `pending` and every transient failure keep it. Never throws.
+ * entitlement, starts the download and clears the pending record — queueing `purchase_done` only
+ * when this call is the one that removed it; `failed`/`expired`/unknown clear the record;
+ * `pending` and every transient failure keep it. Never throws.
  */
 export async function checkPayment(
   deps: PaymentStatusDeps,
@@ -159,19 +166,22 @@ export async function checkPayment(
   }
 
   if (outcome.kind === 'entitled' || outcome.kind === 'failed' || outcome.kind === 'inconsistent') {
-    await clearIfSame(deps, paymentId);
+    const cleared = await clearIfSame(deps, paymentId);
+    // A reload, a second poll or the ok landing that got there first finds no record: no beacon.
+    if (outcome.kind === 'entitled' && cleared) deps.onPurchased();
   }
   breadcrumb('net', 'payment.status', { outcome: outcome.kind, status: answer.status });
   return outcome;
 }
 
-async function clearIfSame(deps: PaymentStatusDeps, paymentId: string): Promise<void> {
+/** True when this call removed the record naming `paymentId`. */
+async function clearIfSame(deps: PaymentStatusDeps, paymentId: string): Promise<boolean> {
   try {
-    const pending = await deps.readPending();
-    if (pending !== null && pending.paymentId === paymentId) await deps.clearPending();
+    return await deps.clearPending(paymentId);
   } catch (err) {
     // Left in place, the record is asked about once more next launch and cleared then.
     deps.reportError(err, { phase: 'pay.pending.clear', paymentId });
+    return false;
   }
 }
 

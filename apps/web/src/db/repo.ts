@@ -206,6 +206,19 @@ export async function kvDelete(key: KvKey): Promise<void> {
   await db.kv.delete(key);
 }
 
+/**
+ * Deletes the row only when `holds(value)`, reading and deleting in one transaction, and says
+ * whether it did — so of two callers racing to settle the same record, exactly one wins.
+ */
+export async function kvDeleteIf(key: KvKey, holds: (value: unknown) => boolean): Promise<boolean> {
+  return db.transaction('rw', db.kv, async () => {
+    const row = await db.kv.get(key);
+    if (row === undefined || !holds(row.value)) return false;
+    await db.kv.delete(key);
+    return true;
+  });
+}
+
 // ---------------------------------------------------------------------------- lifecycle
 
 /** Opens the database during bootstrap so a failure is one named error, not a later mystery. */

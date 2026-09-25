@@ -255,12 +255,22 @@ describe('checkout flow', () => {
     expect(rec.started).toBe(1);
   });
 
-  it('a 100 % grant writes no pending record and goes straight to the result', async () => {
+  it('a 100 % grant writes the pending record too — its clear is what queues purchase_done', async () => {
     const { rec, deps } = flowDeps({
       request: async () => ({ paymentId: 'p9', granted: true }) as PayRequestResponse,
     });
     await expect(startPayment(deps, 'FREE')).resolves.toEqual({ type: 'GRANTED', paymentId: 'p9' });
-    expect(rec.pending).toEqual([]);
+    expect(rec.pending).toEqual([{ paymentId: 'p9', userId: 'user-a' }]);
+    expect(rec.started).toBe(0);
+  });
+
+  it('a 100 % grant whose record cannot be written is reported and still goes to the result', async () => {
+    const { rec, deps } = flowDeps({
+      request: async () => ({ paymentId: 'p9', granted: true }) as PayRequestResponse,
+      writePending: () => Promise.reject(new Error('IDB')),
+    });
+    await expect(startPayment(deps, 'FREE')).resolves.toEqual({ type: 'GRANTED', paymentId: 'p9' });
+    expect(rec.reports).toEqual(['checkout.writePending']);
   });
 
   it('a pending record that cannot be written is reported, and the payment still goes ahead', async () => {

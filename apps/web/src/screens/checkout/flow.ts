@@ -114,7 +114,12 @@ export async function startPayment(
     return toFailed(deps, err, 'checkout.request');
   }
 
-  if (response.granted === true) return { type: 'GRANTED', paymentId: response.paymentId };
+  if (response.granted === true) {
+    // Written for a grant too: `purchase_done` is queued by whichever path clears this record
+    // (`sync/payment-status.ts`), so without it a free code's purchase would never be counted.
+    await writePendingOrReport(deps, response.paymentId, userId);
+    return { type: 'GRANTED', paymentId: response.paymentId };
+  }
 
   if (!isGatewayUrl(response.gatewayUrl)) {
     deps.reportError(
@@ -126,11 +131,20 @@ export async function startPayment(
     return { type: 'FAILED', failure: { kind: 'failed' } };
   }
 
+  await writePendingOrReport(deps, response.paymentId, userId);
+  deps.onStarted();
+  return { type: 'REDIRECT', gatewayUrl: response.gatewayUrl };
+}
+
+/** A record that cannot be written is reported; the payment goes ahead (§7.6). */
+async function writePendingOrReport(
+  deps: CheckoutDeps,
+  paymentId: string,
+  userId: string,
+): Promise<void> {
   try {
-    await deps.writePending(response.paymentId, userId);
+    await deps.writePending(paymentId, userId);
   } catch (err) {
     deps.reportError(err, 'checkout.writePending');
   }
-  deps.onStarted();
-  return { type: 'REDIRECT', gatewayUrl: response.gatewayUrl };
 }

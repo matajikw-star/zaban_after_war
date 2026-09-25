@@ -2,7 +2,8 @@
  * The two questions `/purchase/result` asks, each turned into a `ResultEvent`. Neither throws.
  *
  * - `confirmOk`: the callback said ok, so ask `/api/me` (§7.8) — which caches the entitlement
- *   through the never-revoke merge and starts the download (`sync/entitlement.ts`).
+ *   through the never-revoke merge and starts the download (`sync/entitlement.ts`) — then settle
+ *   `kv.pendingPayment`, queueing `purchase_done` only if this call removed it.
  * - `waitForPayment`: ask `pay/status/:id` on the bounded backoff of `sync/payment-status.ts`,
  *   which caches, clears `kv.pendingPayment` on a terminal answer and starts the download itself.
  */
@@ -17,9 +18,9 @@ export interface ResultDeps {
   readonly refreshEntitlement: () => Promise<RefreshOutcome>;
   /** `sync/payment-status.ts` `pollPayment`, bound. */
   readonly poll: (paymentId: string) => Promise<PaymentOutcome>;
-  /** Clears `kv.pendingPayment` when it names this payment. */
-  readonly settlePending: (paymentId: string) => Promise<void>;
-  /** `purchase_done` (§8.4). */
+  /** Clears `kv.pendingPayment` when it names this payment; true when this call removed it. */
+  readonly settlePending: (paymentId: string) => Promise<boolean>;
+  /** `purchase_done` (§8.4), queued only when `settlePending` removed the record. */
   readonly onPurchased: () => void;
   readonly reportError: (err: unknown, phase: string) => void;
 }
@@ -33,14 +34,17 @@ export async function confirmOk(
   const outcome = await deps.refreshEntitlement();
   if (outcome === 'failed') return { type: 'OFFLINE' };
   if (outcome === 'none') return { type: 'NOT_YET' };
+  // `purchase_done` is queued once per payment, by whichever path removes its pending record: the
+  // launch recovery may have got there first, and a reload of this URL finds nothing to remove.
+  let settled = false;
   if (paymentId !== null) {
     try {
-      await deps.settlePending(paymentId);
+      settled = await deps.settlePending(paymentId);
     } catch (err) {
       deps.reportError(err, 'purchaseResult.settlePending');
     }
   }
-  deps.onPurchased();
+  if (settled) deps.onPurchased();
   return { type: 'ENTITLED', refId };
 }
 

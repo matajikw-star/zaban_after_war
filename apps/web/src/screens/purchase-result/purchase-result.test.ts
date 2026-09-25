@@ -1,6 +1,12 @@
 import { describe, expect, it } from 'vitest';
+import type { EntitlementResponse, PayStatusResponse } from '../../net/api.ts';
 import type { RefreshOutcome } from '../../sync/entitlement.ts';
-import type { PaymentOutcome } from '../../sync/payment-status.ts';
+import {
+  type PaymentOutcome,
+  type PaymentStatusDeps,
+  type PendingPayment,
+  recoverPendingPayment,
+} from '../../sync/payment-status.ts';
 import { confirmOk, type ResultDeps, waitForPayment } from './flow.ts';
 import {
   initialResultState,
@@ -103,8 +109,19 @@ describe('result transitions', () => {
   });
 });
 
-function deps(refresh: RefreshOutcome, poll: PaymentOutcome, userId: string | null = 'u') {
-  const rec = { settled: [] as string[], purchased: 0, polled: [] as string[], refreshed: 0 };
+function deps(
+  refresh: RefreshOutcome,
+  poll: PaymentOutcome,
+  userId: string | null = 'u',
+  settles = true,
+) {
+  const rec = {
+    settled: [] as string[],
+    purchased: 0,
+    polled: [] as string[],
+    refreshed: 0,
+    reports: [] as string[],
+  };
   const d: ResultDeps = {
     userId: () => userId,
     refreshEntitlement: async () => {
@@ -117,11 +134,14 @@ function deps(refresh: RefreshOutcome, poll: PaymentOutcome, userId: string | nu
     },
     settlePending: async (id) => {
       rec.settled.push(id);
+      return settles;
     },
     onPurchased: () => {
       rec.purchased += 1;
     },
-    reportError: () => undefined,
+    reportError: (_err, phase) => {
+      rec.reports.push(phase);
+    },
   };
   return { d, rec };
 }
@@ -132,6 +152,28 @@ describe('confirmOk', () => {
     await expect(confirmOk(d, 'p1', 'R')).resolves.toEqual({ type: 'ENTITLED', refId: 'R' });
     expect(rec.settled).toEqual(['p1']);
     expect(rec.purchased).toBe(1);
+  });
+
+  it('the record was already settled (a reload of the landing): entitled, no second purchase_done', async () => {
+    const { d, rec } = deps('full', { kind: 'pending' }, 'u', false);
+    await expect(confirmOk(d, 'p1', 'R')).resolves.toEqual({ type: 'ENTITLED', refId: 'R' });
+    expect(rec.settled).toEqual(['p1']);
+    expect(rec.purchased).toBe(0);
+  });
+
+  it('no payment id names no record: entitled, no purchase_done', async () => {
+    const { d, rec } = deps('full', { kind: 'pending' });
+    await expect(confirmOk(d, null, null)).resolves.toEqual({ type: 'ENTITLED', refId: null });
+    expect(rec.settled).toEqual([]);
+    expect(rec.purchased).toBe(0);
+  });
+
+  it('a record that cannot be settled is reported: entitled, no purchase_done', async () => {
+    const { d, rec } = deps('full', { kind: 'pending' });
+    const failing = { ...d, settlePending: () => Promise.reject(new Error('IDB closed')) };
+    await expect(confirmOk(failing, 'p1', null)).resolves.toMatchObject({ type: 'ENTITLED' });
+    expect(rec.purchased).toBe(0);
+    expect(rec.reports).toEqual(['purchaseResult.settlePending']);
   });
 
   it('none: not yet; failed: offline; nothing settled', async () => {
@@ -170,5 +212,80 @@ describe('waitForPayment', () => {
     const { d, rec } = deps('none', outcome);
     await expect(waitForPayment(d, 'p1')).resolves.toEqual(event);
     expect(rec.polled).toEqual(['p1']);
+  });
+});
+
+/**
+ * The gateway's 302 landing runs two paths for one payment: `main.tsx`'s launch recovery asks
+ * `pay/status`, and the result screen's `confirmOk` asks `/api/me`. They share one
+ * `kv.pendingPayment`, whose clear is one check-and-delete (`db/repo.ts` `kvDeleteIf`).
+ */
+describe('purchase_done: once per payment, whichever path clears the record', () => {
+  function shared() {
+    const kv = { pending: { paymentId: 'p1', userId: 'u', startedAt: 1 } as PendingPayment | null };
+    const counts = { purchased: 0, downloads: 0 };
+    const clear = async (paymentId: string) => {
+      if (kv.pending === null || kv.pending.paymentId !== paymentId) return false;
+      kv.pending = null;
+      return true;
+    };
+    const statusDeps: PaymentStatusDeps = {
+      status: async () =>
+        ({
+          paymentId: 'p1',
+          status: 'verified',
+          refId: 'R',
+          failReason: null,
+          entitled: true,
+        }) as PayStatusResponse,
+      adopt: async (_server: EntitlementResponse) => undefined,
+      refreshEntitlement: async () => undefined,
+      readPending: async () => kv.pending,
+      clearPending: clear,
+      userId: () => 'u',
+      onEntitled: () => {
+        counts.downloads += 1;
+      },
+      onPurchased: () => {
+        counts.purchased += 1;
+      },
+      reportError: () => undefined,
+    };
+    const resultDeps: ResultDeps = {
+      userId: () => 'u',
+      refreshEntitlement: async () => 'full',
+      poll: async () => ({ kind: 'pending' }),
+      settlePending: clear,
+      onPurchased: () => {
+        counts.purchased += 1;
+      },
+      reportError: () => undefined,
+    };
+    return { kv, counts, statusDeps, resultDeps };
+  }
+
+  it('recovery and confirmOk together, in either order or at once → exactly one', async () => {
+    const a = shared();
+    await recoverPendingPayment(a.statusDeps);
+    await confirmOk(a.resultDeps, 'p1', 'R');
+    expect(a.counts.purchased).toBe(1);
+    expect(a.counts.downloads).toBe(1);
+
+    const b = shared();
+    await confirmOk(b.resultDeps, 'p1', 'R');
+    await recoverPendingPayment(b.statusDeps);
+    expect(b.counts.purchased).toBe(1);
+
+    const c = shared();
+    await Promise.all([recoverPendingPayment(c.statusDeps), confirmOk(c.resultDeps, 'p1', 'R')]);
+    expect(c.counts.purchased).toBe(1);
+    expect(c.kv.pending).toBeNull();
+  });
+
+  it('a reload of the landing (a second confirmOk) queues nothing more', async () => {
+    const s = shared();
+    await expect(confirmOk(s.resultDeps, 'p1', 'R')).resolves.toMatchObject({ type: 'ENTITLED' });
+    await expect(confirmOk(s.resultDeps, 'p1', 'R')).resolves.toMatchObject({ type: 'ENTITLED' });
+    expect(s.counts.purchased).toBe(1);
   });
 });

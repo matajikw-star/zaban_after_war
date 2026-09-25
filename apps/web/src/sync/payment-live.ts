@@ -4,7 +4,7 @@
  * launch recovery in `main.tsx`.
  */
 
-import { kvDelete, kvGet, kvSet } from '../db/repo.ts';
+import { kvDeleteIf, kvGet, kvSet } from '../db/repo.ts';
 import { now } from '../engine/clock.ts';
 import { queueBeacon } from '../log/beacon.ts';
 import { reportError } from '../log/errors.ts';
@@ -29,10 +29,16 @@ export const paymentDeps: PaymentStatusDeps = {
     const stored = await kvGet<unknown>('pendingPayment');
     return isPendingPayment(stored) ? stored : null;
   },
-  clearPending: () => kvDelete('pendingPayment'),
+  clearPending: (paymentId) =>
+    kvDeleteIf(
+      'pendingPayment',
+      (stored) => isPendingPayment(stored) && stored.paymentId === paymentId,
+    ),
   userId: () => useAuthStore.getState().userId,
   onEntitled: () => {
     void requestDownload('entitled');
+  },
+  onPurchased: () => {
     void queueBeacon('purchase_done');
   },
   reportError: (err, data) => {
@@ -55,10 +61,12 @@ export function writePendingPayment(paymentId: string, userId: string): Promise<
   return kvSet('pendingPayment', record);
 }
 
-/** Clears `kv.pendingPayment` when it names this payment (an ok result, settled by `/api/me`). */
-export async function settlePendingPayment(paymentId: string): Promise<void> {
-  const pending = await paymentDeps.readPending();
-  if (pending !== null && pending.paymentId === paymentId) await paymentDeps.clearPending();
+/**
+ * Clears `kv.pendingPayment` when it names this payment (an ok result, settled by `/api/me`).
+ * True when this call removed it — the caller that did queues `purchase_done`.
+ */
+export function settlePendingPayment(paymentId: string): Promise<boolean> {
+  return paymentDeps.clearPending(paymentId);
 }
 
 /** At launch, fire and forget. Offline leaves the record for the next launch. */

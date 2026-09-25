@@ -32,6 +32,7 @@ function harness(status: StatusFn, pending: PendingPayment | null = PENDING) {
     adopted: [] as EntitlementResponse[],
     refreshed: 0,
     entitled: 0,
+    purchased: 0,
     reports: [] as Array<{ err: unknown; data: unknown }>,
     asked: [] as string[],
     slept: [] as number[],
@@ -50,12 +51,17 @@ function harness(status: StatusFn, pending: PendingPayment | null = PENDING) {
       rec.refreshed += 1;
     },
     readPending: async () => rec.pending,
-    clearPending: async () => {
+    clearPending: async (paymentId) => {
+      if (rec.pending === null || rec.pending.paymentId !== paymentId) return false;
       rec.pending = null;
+      return true;
     },
     userId: () => rec.userId,
     onEntitled: () => {
       rec.entitled += 1;
+    },
+    onPurchased: () => {
+      rec.purchased += 1;
     },
     reportError: (err, data) => {
       rec.reports.push({ err, data });
@@ -82,7 +88,7 @@ describe('isPendingPayment', () => {
 });
 
 describe('checkPayment', () => {
-  it('entitled: caches full, refreshes /api/me, starts the download, clears the record', async () => {
+  it('entitled: caches full, refreshes /api/me, starts the download, clears the record, queues purchase_done', async () => {
     const { rec, deps } = harness(async () =>
       answer({ status: 'verified', refId: 'MOCK-1', entitled: true }),
     );
@@ -94,6 +100,28 @@ describe('checkPayment', () => {
     expect(rec.refreshed).toBe(1);
     expect(rec.entitled).toBe(1);
     expect(rec.pending).toBeNull();
+    expect(rec.purchased).toBe(1);
+  });
+
+  it('entitled once the record is already gone (a reload, a second ask): download, no purchase_done', async () => {
+    const { rec, deps } = harness(async () => answer({ status: 'verified', entitled: true }));
+    await checkPayment(deps, 'pay123');
+    await checkPayment(deps, 'pay123');
+    expect(rec.entitled).toBe(2);
+    expect(rec.purchased).toBe(1);
+
+    const none = harness(async () => answer({ status: 'verified', entitled: true }), null);
+    await expect(checkPayment(none.deps, 'pay123')).resolves.toMatchObject({ kind: 'entitled' });
+    expect(none.rec.entitled).toBe(1);
+    expect(none.rec.purchased).toBe(0);
+  });
+
+  it('entitled for another payment than the record names: the record stays, no purchase_done', async () => {
+    const { rec, deps } = harness(async () => answer({ status: 'verified', entitled: true }));
+    await checkPayment(deps, 'another');
+    expect(rec.pending).toEqual(PENDING);
+    expect(rec.entitled).toBe(1);
+    expect(rec.purchased).toBe(0);
   });
 
   it('entitled even when caching fails: reported, the download still starts', async () => {
@@ -167,6 +195,29 @@ describe('checkPayment', () => {
     await expect(checkPayment(failing, 'pay123')).resolves.toMatchObject({ kind: 'failed' });
     expect(rec.reports).toHaveLength(1);
   });
+
+  it('entitled but the record cannot be cleared: download starts, purchase_done waits for the clear', async () => {
+    const { rec, deps } = harness(async () => answer({ status: 'verified', entitled: true }));
+    const failing = { ...deps, clearPending: () => Promise.reject(new Error('IDB closed')) };
+    await expect(checkPayment(failing, 'pay123')).resolves.toMatchObject({ kind: 'entitled' });
+    expect(rec.entitled).toBe(1);
+    expect(rec.purchased).toBe(0);
+    expect(rec.reports).toHaveLength(1);
+  });
+
+  it('no terminal answer other than entitled queues purchase_done', async () => {
+    for (const over of [
+      { status: 'pending' },
+      { status: 'failed', failReason: 'cancelled' },
+      { status: 'expired' },
+      { status: 'verified', entitled: false },
+    ] as const) {
+      const { rec, deps } = harness(async () => answer(over));
+      await checkPayment(deps, 'pay123');
+      expect(rec.purchased).toBe(0);
+      expect(rec.entitled).toBe(0);
+    }
+  });
 });
 
 describe('recoverPendingPayment (launch)', () => {
@@ -182,6 +233,7 @@ describe('recoverPendingPayment (launch)', () => {
     expect(rec.asked).toEqual(['pay123']);
     expect(rec.pending).toBeNull();
     expect(rec.entitled).toBe(1);
+    expect(rec.purchased).toBe(1);
   });
 
   it('offline: the record stays for the next launch', async () => {
@@ -222,6 +274,23 @@ describe('pollPayment (bounded backoff)', () => {
     await expect(pollPayment(deps, 'pay123')).resolves.toMatchObject({ kind: 'entitled' });
     expect(rec.asked).toHaveLength(3);
     expect(rec.slept).toEqual([2_000, 3_000]);
+    expect(rec.purchased).toBe(1);
+  });
+
+  it('reaching entitled after the record was already cleared queues no purchase_done', async () => {
+    const answers = [answer({}), answer({ status: 'verified', entitled: true })];
+    const { rec, deps } = harness(async () => answers.shift() ?? answer({}));
+    const racing = {
+      ...deps,
+      // The launch recovery (or the ok landing) settled it while this poll slept.
+      sleep: async (ms: number) => {
+        rec.slept.push(ms);
+        rec.pending = null;
+      },
+    };
+    await expect(pollPayment(racing, 'pay123')).resolves.toMatchObject({ kind: 'entitled' });
+    expect(rec.entitled).toBe(1);
+    expect(rec.purchased).toBe(0);
   });
 
   it('gives up after the last delay with the last answer, never more asks than delays + 1', async () => {

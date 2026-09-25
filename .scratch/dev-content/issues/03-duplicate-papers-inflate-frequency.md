@@ -164,3 +164,46 @@ fold does not.
    independent transcripts of the same test that agree with it option for option — stronger
    corroboration than the OCR. They could be cleared on that evidence.
 4. Unchanged and still blocking `content:lint`: the 12 check-1 findings of ticket 02.
+
+**2026-09-25 — Owner decisions, carried out** on `fix/duplicate-papers-followup`.
+
+1. **Free 150 re-ranked from the true counts.** Done the documented way: `ranks.json` emptied
+   to `{}` and `pnpm content:build` re-assigned all 893 shipping ids by the builder's own rule
+   (priority, `timesTested`, `firstYear` desc, id asc) — no hand ordering. Ranks are contiguous
+   1–893. The paid set is the same 893 ids and no card differs except its `rank`; `free.json`
+   267,352 bytes, both packages at version 2026-09-25.2. The freeze is enforced only by the
+   builder (append-only) and its test, not by lint; `what.md` §6.2 now records how a full
+   re-assignment is done and that it never happens after launch. No e2e or snapshot names a
+   specific free word (`payment-journey.spec.ts` reads `free.json` at run time), so none changed.
+   41 out / 41 in, `timesTested` before the duplicate fix → now:
+   - **Out:** account (4→1), acerbity (3→1), allocate (4→2), cautious (7→2), clarify (3→1),
+     concoct (3→1), concurrent (4→2), digress (4→1), drop (4→1), economical (5→2),
+     exaggeration (4→1), exceed (4→2), extent (4→2), extravagant (3→1), fascinate (5→2),
+     flexible (4→2), gist (3→1), impact (6→2), interpretation (3→1), interval (3→1),
+     intervention (4→2), laudable (3→1), manipulate (4→2), means (3→1), momentous (3→1),
+     obligation (4→2), obsolete (3→1), opponent (3→1), prosper (3→1), random (3→1),
+     redundant (4→2), regret (3→1), scrutinize (4→2), spill (3→1), strive (4→2),
+     successive (5→2), tangible (4→2), transient (4→2), triumph (3→1), veracity (3→1),
+     vulnerable (6→3).
+   - **In** (none was touched by the duplicates; 2→2 unless noted): adulation, benign,
+     besmirch, casual, cede, cloying, colloquial, commitment, crack, credible, disband,
+     diversity (3→3), divulge, elliptical, exert, expatriate (3→3), extrapolate, feeble, fetid,
+     fickle, flummery, ground, inconsequential, invective (3→3), lassitude, maintain,
+     mendacity, modesty, myopic, nullify, outcome, palpate, peregrination, perpetuate,
+     poignant, profound, settle, stake, tout, treacherous, vigorous.
+2. **`bibliographic` retired.** File and id kept; occurrences emptied, stats zeroed, and a new
+   optional lexicon field `retired: { reason, date }` — `isShippable` refuses it, lint check 4
+   accepts it only with no occurrences, S6 carries it through. The misreading is noted in
+   1400-p12 q5's `uncertain[]`, which is what quiets check 17 (a disagreement on record);
+   check 18 has nothing left to name.
+3. **`needs-owner-review` cleared** on 1399-p01, 1399-p04, 1400-p01, 1400-p03 → `extracted`,
+   via `status.py --mark … --note`, which now stores the decision, evidence and date as
+   `reviewNote` on the row in `extraction/state/papers.jsonl` (S2 preserves it). Evidence,
+   option for option by question number:
+   - 1399-p01 ← 1399-p03 (1103-1399, S5-clean) 15/15.
+   - 1399-p04 ← 1399-p05 (1104-1399) 15/15 — **weakest**: that copy was itself flagged by S5,
+     so neither transcript was ever OCR-corroborated; they only corroborate each other.
+   - 1400-p01 ← 1400-p04 (1125-1400, clean) 15/15, 1400-p06 (1103-1400, clean) 15/15.
+   - 1400-p03 ← 1400-p10 (1142-1400, clean) 15/15, 1400-p05 (1143-1400) 15/15,
+     1400-p12 (1156-1400) 14/15 (its own «bibliographics»).
+   10 papers remain `needs-owner-review` (2 each in 1398, 1399, 1400, 1402, 1403).

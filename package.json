@@ -23,6 +23,7 @@
     "deploy": "node --experimental-strip-types tools/deploy/index.ts",
     "provision": "node --experimental-strip-types tools/deploy/provision.ts",
     "content:build": "node --experimental-strip-types tools/content-build/index.ts",
+    "spec:check": "node --experimental-strip-types tools/spec-check/index.ts",
     "content:lint": "pnpm --filter @kl/content run lint:content"
   },
   "dependencies": {

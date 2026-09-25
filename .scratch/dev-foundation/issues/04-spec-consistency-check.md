@@ -1,6 +1,6 @@
 # 04 — CI check: what.md's code-mirroring tables agree with the code
 
-Status: ready-for-agent
+Status: resolved
 Type: task
 Phase: 7 (built first, before the scope-cut PR, so it verifies that PR)
 
@@ -42,3 +42,41 @@ parsing. Status marks (`[live]`, `[planned]`, …) are part of what the parser r
 - CI runs it; what.md §16 (Testing and CI) describes it; one `wiki/log.md` line.
 
 ## Comments
+
+Built as `tools/spec-check/` (parsers/comparisons split into small pure modules, each with its
+own `*.test.ts`, plus `index.ts` for the fs wiring — same shape as `tools/deploy/plan.ts`).
+`pnpm spec:check`, wired into the `ci` job of `.github/workflows/ci.yml` right after `pnpm test`.
+
+**Drift found and fixed (1 mismatch, real):** `VITE_SUPPORT_URL` is a real, working env var
+(`.env.example`, `apps/web/src/vite-env.d.ts`, read in `Settings.tsx` for the support link) that
+what.md §18 never listed. The code was right; what.md was stale — added to §18's Build line.
+
+**Scoping decisions, both documented in what.md in the same commit:**
+
+- **Error codes (§17):** §17 itself has no enumerated code list — only the general "errors carry
+  codes" `AppError` convention. The actual closed list of *server* codes is written once, in
+  §8.2's route-envelope paragraph, and matches `server/pb_hooks/lib/errors.js`'s `CODES` exactly
+  (17 codes, both sides). Per the ticket's own instruction ("if §17 lists only one of those,
+  compare only what §17 claims to list"), the check reads that §8.2 paragraph and compares only
+  the server side. The client's `AppError` code (`apps/web/src/errors.ts`) is not a fixed enum —
+  each call site names its own local failure mode (`DOWNLOAD_STALLED`, `SYNC_USER_CHANGED`, ...),
+  and `net/api.ts` passes a server code through as `SERVER_<code>` — so nothing in what.md
+  enumerates it and this check does not compare it. Added a one-sentence cross-reference to §17.4
+  saying so, rather than duplicating the code list into §17 (a second copy would just be a new
+  place for the two to drift).
+- **Routes — `GET /api/health`:** registered as a `routerUse` middleware, not `routerAdd`
+  (PocketBase 0.40 already owns that exact pattern; a second `routerAdd` on it panics at
+  startup — see core.pb.js's own comment). The checker treats a `routerUse` block that checks
+  `e.request.method !== '<M>'` and `e.request.url.path !== '<path>'` as registering that one
+  route, so this is counted rather than special-cased away.
+- **`[planned]`/`[deferred]` rows:** only `GET /api/admin/stats` carries `[planned]` today; no
+  `[deferred]` rows exist yet. The skip logic matches both literally, ready for either.
+
+No table shape needed to be made stricter — §8.1/§8.2 are proper pipe tables; §8.4/§18/§8.2's
+error-code sentence are backtick-quoted lists in prose, parsed the same way §8.4 already implied
+(a fixed, deliberately-formatted list, not free text).
+
+**Verification:** `pnpm spec:check` exits 0 on the final tree (also confirmed exit 1 with a
+deliberately renamed collection, both directions reported, then reverted); `pnpm lint`, `pnpm
+typecheck`, `pnpm test` (826 passed, 50 new in `tools/spec-check/`), `pnpm build`, `pnpm budget`
+(227.6 KB of 300 KB) all green.

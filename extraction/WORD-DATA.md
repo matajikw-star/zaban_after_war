@@ -59,8 +59,10 @@ Two things it will show you that matter:
 - **`keyConfidence: low` or an `uncertain[]` note** means the extraction was not
   sure. Write from the word, not from the shaky question, and say so in your
   report.
-- **20 papers carry `needs-owner-review`** (1403×2, 1402×2, 1400×7, 1399×7,
-  1398×2). A garbled-looking stem may be why. Same rule: write from the word.
+- **10 papers carry `needs-owner-review`** (2 each in 1398-1400, 1402, 1403, as of
+  2026-09-25; it was 20 before ADR-0021 retired duplicates and the owner cleared four
+  on their agreeing second transcripts). A garbled-looking stem may be why. Same
+  rule: write from the word.
 
 ## The rules the calibration settled
 

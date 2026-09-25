@@ -13,16 +13,7 @@
       "paperId": "arshad-1399-p01",
       "part": "grammar",
       "questionNo": 12,
-      "reach": 42,
-      "surface": "inert",
-      "year": 1399
-    },
-    {
-      "occurrenceType": "context",
-      "paperId": "arshad-1399-p03",
-      "part": "grammar",
-      "questionNo": 12,
-      "reach": 16,
+      "reach": 58,
       "surface": "inert",
       "year": 1399
     }
@@ -37,7 +28,7 @@
     "lastYear": null,
     "priority": 0,
     "timesAsAnswer": 0,
-    "timesAsContext": 2,
+    "timesAsContext": 1,
     "timesAsDistractor": 0,
     "timesTested": 0
   },

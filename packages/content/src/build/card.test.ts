@@ -79,6 +79,11 @@ describe('isShippable', () => {
   it('never ships an excluded id, even with senses', () => {
     expect(isShippable(baseEntry(), new Set(['attribute']))).toBe(false);
   });
+
+  it('never ships a retired id, even with senses', () => {
+    const retired = baseEntry({ retired: { reason: 'a misreading', date: '2026-09-25' } });
+    expect(isShippable(retired, new Set())).toBe(false);
+  });
 });
 
 describe('buildWordCard', () => {

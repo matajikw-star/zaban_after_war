@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 /**
  * The `lint` operation over `content/`. Checklist: `docs/plan/content-pipeline.md` → "Lint
- * checklist". Implements the blocking checks 1–5 and warnings 6, 10, 11, 12, 14; the rest of
- * the checklist (7, 8, 9, 13) needs judgement this script cannot make and stays a manual `query`.
+ * checklist". Implements the blocking checks 1–5 and warnings 6, 10, 11, 12, 14, and the
+ * duplicate-paper checks 15–18 (`./duplicates.ts`, ADR-0021); the rest of the checklist
+ * (7, 8, 9, 13) needs judgement this script cannot make and stays a manual `query`.
  *
  * Fixes nothing — a lint that auto-repairs hides the extraction problems this pipeline exists
  * to surface (`docs/plan/content-pipeline.md`). Exits 1 only when a blocking finding exists.
@@ -15,6 +16,7 @@ import { FREE_SIZE } from './build/build.ts';
 import { isShippable } from './build/card.ts';
 import { assignRanks } from './build/rank.ts';
 import type { ExamFile, ExamQuestion, HintFile, LexiconEntry } from './build/raw.ts';
+import { duplicatePaperFindings, retiredOccurrenceFindings } from './duplicates.ts';
 
 type Severity = 'blocking' | 'warning';
 
@@ -73,6 +75,8 @@ function validateExamFile(fileName: string, data: unknown): string[] {
   if (!isString(d.paperId)) problems.push('paperId missing or not a string');
   if (!isString(d.degree)) problems.push('degree missing or not a string');
   if (!isNumber(d.year)) problems.push('year missing or not a number');
+  if (d.duplicateOf !== undefined && !isString(d.duplicateOf))
+    problems.push('duplicateOf must be a paper id string when present');
   if (!Array.isArray(d.questions)) {
     problems.push('questions missing or not an array');
     return problems;
@@ -214,6 +218,19 @@ async function main(): Promise<Finding[]> {
   // sense with at least one translation and one example. A word still awaiting word data
   // (empty `senses`, `provenance: null`) is incomplete by design, not a lint defect.
   for (const [fileName, entry] of lexiconFiles) {
+    // A retired id (ADR-0021) is the opposite: it must have no occurrences and never ships.
+    if (entry.retired !== undefined) {
+      if (entry.occurrences.length > 0 || !entry.retired.reason || !entry.retired.date) {
+        findings.push({
+          severity: 'blocking',
+          check: '4',
+          file: `content/lexicon/${fileName}.json`,
+          message:
+            'retired, but still has occurrences or lacks retired.reason/date — a retired id counts nothing',
+        });
+      }
+      continue;
+    }
     if (entry.occurrences.length === 0) {
       findings.push({
         severity: 'blocking',
@@ -364,6 +381,20 @@ async function main(): Promise<Finding[]> {
       });
     });
   }
+
+  // --- Checks 15–18: duplicate papers (ADR-0021). 15 (blocking): two live papers of a year
+  // share more than MAX_SHARED_STEMS stems. 16 (blocking): a duplicateOf claim that does not
+  // hold. 17 (warning): a retired question whose options differ from its kept counterpart.
+  // 18: an occurrence on a retired paper — blocking when the word ships. ---
+  const exams = [...examFiles.values()];
+  findings.push(...duplicatePaperFindings(exams));
+  findings.push(
+    ...retiredOccurrenceFindings(
+      [...lexiconFiles.values()],
+      exams,
+      new Set(shippable.map((entry) => entry.id)),
+    ),
+  );
 
   return findings;
 }

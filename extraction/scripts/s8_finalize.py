@@ -98,10 +98,15 @@ def load_pairs():
 
 
 def build_surface_index():
-    """Every lowercase surface in every stem -> the questions it appears in."""
+    """Every lowercase surface in every stem -> the questions it appears in.
+
+    A paper retired with `duplicateOf` (ADR-0021) is skipped: its stems are the
+    kept paper's, and indexing both would count one sentence twice."""
     index = defaultdict(list)
     for f in sorted(EXAMS.glob("*.json")):
         d = json.loads(f.read_text(encoding="utf-8"))
+        if d.get("duplicateOf"):
+            continue
         paper_id = d.get("paperId") or f.stem
         m = re.search(r"-(\d{4})-", paper_id)
         year = int(m.group(1)) if m else 0

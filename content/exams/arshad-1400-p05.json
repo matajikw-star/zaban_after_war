@@ -2,6 +2,8 @@
   "paperId": "arshad-1400-p05",
   "degree": "arshad",
   "year": 1400,
+  "duplicateOf": "arshad-1400-p03",
+  "duplicateReason": "Same English test as arshad-1400-p03: 15/15 stems match (token-set Jaccard >= 0.6 after normalising case, punctuation and blanks); options agree on 15/15 questions by number. Split by S2 clustering; found 2026-09-25, ticket dev-content/03.",
   "groupCodes": ["1143", "1306", "1317", "1319", "1321"],
   "bookletCount": 5,
   "source": { "file": "1143-1400.pdf", "pages": [2, 3] },

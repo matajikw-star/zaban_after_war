@@ -8,6 +8,11 @@ that is a signal to add it rather than to invent a synonym.
 - **Source** — one raw exam paper as the owner received it, in `sources/raw/`. Immutable.
 - **Exam** — one sitting, identified by `<degree>-<year>-<field>` (e.g. `arshad-1402-zaban`).
   `degree` ∈ `arshad` | `doctora`. Year is the Persian (Jalali) year.
+- **Paper** — one distinct English test of one year, `arshad-<year>-pNN`, sat by every field
+  code in its `groupCodes`. The unit of ingest (ADR-0007); its id is permanent (ADR-0009). A
+  question counts once per paper, however many booklets carried it.
+- **Retired paper** — a paper id that turned out to hold another paper's test again. It keeps
+  its file and id and names the **kept paper** in `duplicateOf`; it adds no count (ADR-0021).
 - **Question** — one extracted multiple-choice item: stem, four options, key, and the exam it
   came from. Reproduced verbatim, including its flaws.
 - **Word** (also **lexicon entry**) — one vocabulary item the exams test. Carries the lemma,

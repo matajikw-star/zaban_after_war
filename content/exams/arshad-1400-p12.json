@@ -2,6 +2,8 @@
   "paperId": "arshad-1400-p12",
   "degree": "arshad",
   "year": 1400,
+  "duplicateOf": "arshad-1400-p03",
+  "duplicateReason": "Same English test as arshad-1400-p03: 15/15 stems match (token-set Jaccard >= 0.6 after normalising case, punctuation and blanks); options agree on 14/15 questions by number. Split by S2 clustering; found 2026-09-25, ticket dev-content/03.",
   "groupCodes": ["1156"],
   "bookletCount": 1,
   "source": { "file": "1156-1400.pdf", "pages": [2, 3] },
@@ -65,7 +67,7 @@
       "keySource": "inferred",
       "keyConfidence": "high",
       "testedWord": "account",
-      "uncertain": []
+      "uncertain": ["q5 option 4 is transcribed «bibliographics»; the kept paper arshad-1400-p03 and the other two transcripts of this test (p05, p10) read «bibliographies». Left verbatim; the fold books nothing from it (ADR-0021)."]
     },
     {
       "no": 6,

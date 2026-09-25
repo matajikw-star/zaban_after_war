@@ -64,29 +64,7 @@
       "paperId": "arshad-1400-p02",
       "part": "vocabulary",
       "questionNo": 2,
-      "reach": 30,
-      "surface": "derives",
-      "year": 1400
-    },
-    {
-      "isAnswer": false,
-      "occurrenceType": "tested",
-      "optionIndex": 1,
-      "paperId": "arshad-1400-p07",
-      "part": "vocabulary",
-      "questionNo": 2,
-      "reach": 2,
-      "surface": "derives",
-      "year": 1400
-    },
-    {
-      "isAnswer": false,
-      "occurrenceType": "tested",
-      "optionIndex": 1,
-      "paperId": "arshad-1400-p13",
-      "part": "vocabulary",
-      "questionNo": 2,
-      "reach": 1,
+      "reach": 33,
       "surface": "derives",
       "year": 1400
     },
@@ -97,18 +75,7 @@
       "paperId": "arshad-1399-p04",
       "part": "vocabulary",
       "questionNo": 8,
-      "reach": 12,
-      "surface": "derive",
-      "year": 1399
-    },
-    {
-      "isAnswer": false,
-      "occurrenceType": "tested",
-      "optionIndex": 1,
-      "paperId": "arshad-1399-p05",
-      "part": "vocabulary",
-      "questionNo": 8,
-      "reach": 10,
+      "reach": 22,
       "surface": "derive",
       "year": 1399
     }
@@ -151,10 +118,6 @@
         {
           "paperId": "arshad-1399-p04",
           "questionNo": 8
-        },
-        {
-          "paperId": "arshad-1399-p05",
-          "questionNo": 8
         }
       ],
       "translations": [
@@ -187,14 +150,6 @@
         {
           "paperId": "arshad-1400-p02",
           "questionNo": 2
-        },
-        {
-          "paperId": "arshad-1400-p07",
-          "questionNo": 2
-        },
-        {
-          "paperId": "arshad-1400-p13",
-          "questionNo": 2
         }
       ],
       "translations": [
@@ -210,8 +165,8 @@
       "1402": 1
     },
     "byYear": {
-      "1399": 2,
-      "1400": 3,
+      "1399": 1,
+      "1400": 1,
       "1401": 1,
       "1402": 2,
       "1404": 1
@@ -219,11 +174,11 @@
     "distinctYears": 5,
     "firstYear": 1399,
     "lastYear": 1404,
-    "priority": 23,
+    "priority": 20,
     "timesAsAnswer": 2,
     "timesAsContext": 0,
-    "timesAsDistractor": 7,
-    "timesTested": 9
+    "timesAsDistractor": 4,
+    "timesTested": 6
   },
   "status": "draft",
   "surfaceForms": [

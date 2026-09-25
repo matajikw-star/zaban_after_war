@@ -15,18 +15,7 @@
       "paperId": "arshad-1399-p02",
       "part": "vocabulary",
       "questionNo": 3,
-      "reach": 20,
-      "surface": "outline",
-      "year": 1399
-    },
-    {
-      "isAnswer": false,
-      "occurrenceType": "tested",
-      "optionIndex": 2,
-      "paperId": "arshad-1399-p06",
-      "part": "vocabulary",
-      "questionNo": 3,
-      "reach": 9,
+      "reach": 30,
       "surface": "outline",
       "year": 1399
     },
@@ -37,17 +26,6 @@
       "paperId": "arshad-1399-p10",
       "part": "vocabulary",
       "questionNo": 23,
-      "reach": 1,
-      "surface": "outline",
-      "year": 1399
-    },
-    {
-      "isAnswer": false,
-      "occurrenceType": "tested",
-      "optionIndex": 2,
-      "paperId": "arshad-1399-p11",
-      "part": "vocabulary",
-      "questionNo": 3,
       "reach": 1,
       "surface": "outline",
       "year": 1399
@@ -78,14 +56,6 @@
       "testedIn": [
         {
           "paperId": "arshad-1399-p02",
-          "questionNo": 3
-        },
-        {
-          "paperId": "arshad-1399-p06",
-          "questionNo": 3
-        },
-        {
-          "paperId": "arshad-1399-p11",
           "questionNo": 3
         }
       ],
@@ -126,16 +96,16 @@
   "stats": {
     "answersByYear": {},
     "byYear": {
-      "1399": 4
+      "1399": 2
     },
     "distinctYears": 1,
     "firstYear": 1399,
     "lastYear": 1399,
-    "priority": 6,
+    "priority": 4,
     "timesAsAnswer": 0,
     "timesAsContext": 0,
-    "timesAsDistractor": 4,
-    "timesTested": 4
+    "timesAsDistractor": 2,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [

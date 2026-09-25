@@ -15,7 +15,7 @@
       "paperId": "arshad-1399-p01",
       "part": "vocabulary",
       "questionNo": 7,
-      "reach": 42,
+      "reach": 58,
       "surface": "imprecise",
       "year": 1399
     },
@@ -26,40 +26,7 @@
       "paperId": "arshad-1399-p02",
       "part": "vocabulary",
       "questionNo": 6,
-      "reach": 20,
-      "surface": "imprecise",
-      "year": 1399
-    },
-    {
-      "isAnswer": false,
-      "occurrenceType": "tested",
-      "optionIndex": 0,
-      "paperId": "arshad-1399-p03",
-      "part": "vocabulary",
-      "questionNo": 7,
-      "reach": 16,
-      "surface": "imprecise",
-      "year": 1399
-    },
-    {
-      "isAnswer": false,
-      "occurrenceType": "tested",
-      "optionIndex": 0,
-      "paperId": "arshad-1399-p06",
-      "part": "vocabulary",
-      "questionNo": 6,
-      "reach": 9,
-      "surface": "imprecise",
-      "year": 1399
-    },
-    {
-      "isAnswer": false,
-      "occurrenceType": "tested",
-      "optionIndex": 0,
-      "paperId": "arshad-1399-p11",
-      "part": "vocabulary",
-      "questionNo": 6,
-      "reach": 1,
+      "reach": 30,
       "surface": "imprecise",
       "year": 1399
     }
@@ -97,18 +64,6 @@
         {
           "paperId": "arshad-1399-p02",
           "questionNo": 6
-        },
-        {
-          "paperId": "arshad-1399-p03",
-          "questionNo": 7
-        },
-        {
-          "paperId": "arshad-1399-p06",
-          "questionNo": 6
-        },
-        {
-          "paperId": "arshad-1399-p11",
-          "questionNo": 6
         }
       ],
       "translations": [
@@ -121,16 +76,16 @@
   "stats": {
     "answersByYear": {},
     "byYear": {
-      "1399": 5
+      "1399": 2
     },
     "distinctYears": 1,
     "firstYear": 1399,
     "lastYear": 1399,
-    "priority": 7,
+    "priority": 4,
     "timesAsAnswer": 0,
     "timesAsContext": 0,
-    "timesAsDistractor": 5,
-    "timesTested": 5
+    "timesAsDistractor": 2,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [

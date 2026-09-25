@@ -35,16 +35,27 @@ STATE = ROOT / "extraction" / "state"
 LEX = CONTENT / "lexicon"
 
 
-def question_index() -> dict:
-    """(paperId, questionNo) -> the part it sits in, and the paper's reach."""
+def question_index() -> tuple[dict, set]:
+    """(paperId, questionNo) -> the part it sits in, and the paper's reach; and
+    the ids of the papers retired with `duplicateOf` (ADR-0021).
+
+    A retired paper's stems are the kept paper's stems, so a context occurrence
+    there would count one sentence twice: main() drops it. The booklets that sat
+    a retired paper sat the kept one, so they count toward its reach, as in S6."""
+    exams = [json.loads(f.read_text(encoding="utf-8"))
+             for f in sorted((CONTENT / "exams").glob("*.json"))]
+    retired = {d["paperId"] for d in exams if d.get("duplicateOf")}
+    reach = {d["paperId"]: d.get("bookletCount", 1) for d in exams if not d.get("duplicateOf")}
+    for d in exams:
+        if d.get("duplicateOf"):
+            reach[d["duplicateOf"]] += d.get("bookletCount", 1)
     idx = {}
-    for f in sorted((CONTENT / "exams").glob("*.json")):
-        d = json.loads(f.read_text(encoding="utf-8"))
-        paper_id = d.get("paperId") or f.stem
-        reach = d.get("bookletCount", 1)
+    for d in exams:
+        if d["paperId"] in retired:
+            continue
         for q in d.get("questions", []):
-            idx[(paper_id, q.get("no"))] = {"part": q.get("part"), "reach": reach}
-    return idx
+            idx[(d["paperId"], q.get("no"))] = {"part": q.get("part"), "reach": reach[d["paperId"]]}
+    return idx, retired
 
 
 def main() -> int:
@@ -53,7 +64,7 @@ def main() -> int:
     a = ap.parse_args()
 
     sel = json.loads((STATE / "stem-vocab-selection.json").read_text(encoding="utf-8"))
-    qidx = question_index()
+    qidx, retired = question_index()
     LEX.mkdir(parents=True, exist_ok=True)
 
     created, merged, unchanged, conflicts = 0, 0, 0, []
@@ -69,6 +80,8 @@ def main() -> int:
 
         context = []
         for o in w["occurrences"]:
+            if o["paperId"] in retired:
+                continue   # the selection predates ADR-0021 and still names retired papers
             meta = qidx.get((o["paperId"], o["questionNo"]), {})
             context.append({
                 "occurrenceType": "context",

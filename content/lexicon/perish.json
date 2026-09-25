@@ -22,16 +22,7 @@
       "paperId": "arshad-1399-p04",
       "part": "vocabulary",
       "questionNo": 8,
-      "reach": 12,
-      "surface": "perished",
-      "year": 1399
-    },
-    {
-      "occurrenceType": "context",
-      "paperId": "arshad-1399-p05",
-      "part": "vocabulary",
-      "questionNo": 8,
-      "reach": 10,
+      "reach": 22,
       "surface": "perished",
       "year": 1399
     }
@@ -46,7 +37,7 @@
     "lastYear": null,
     "priority": 0,
     "timesAsAnswer": 0,
-    "timesAsContext": 3,
+    "timesAsContext": 2,
     "timesAsDistractor": 0,
     "timesTested": 0
   },

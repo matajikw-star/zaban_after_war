@@ -37,7 +37,7 @@
       "paperId": "arshad-1400-p01",
       "part": "vocabulary",
       "questionNo": 10,
-      "reach": 48,
+      "reach": 57,
       "surface": "perilous",
       "year": 1400
     },
@@ -48,62 +48,7 @@
       "paperId": "arshad-1400-p03",
       "part": "vocabulary",
       "questionNo": 3,
-      "reach": 23,
-      "surface": "perilous",
-      "year": 1400
-    },
-    {
-      "isAnswer": true,
-      "occurrenceType": "tested",
-      "optionIndex": 2,
-      "paperId": "arshad-1400-p04",
-      "part": "vocabulary",
-      "questionNo": 10,
-      "reach": 6,
-      "surface": "perilous",
-      "year": 1400
-    },
-    {
-      "isAnswer": true,
-      "occurrenceType": "tested",
-      "optionIndex": 3,
-      "paperId": "arshad-1400-p05",
-      "part": "vocabulary",
-      "questionNo": 3,
-      "reach": 5,
-      "surface": "perilous",
-      "year": 1400
-    },
-    {
-      "isAnswer": true,
-      "occurrenceType": "tested",
-      "optionIndex": 2,
-      "paperId": "arshad-1400-p06",
-      "part": "vocabulary",
-      "questionNo": 10,
-      "reach": 3,
-      "surface": "perilous",
-      "year": 1400
-    },
-    {
-      "isAnswer": true,
-      "occurrenceType": "tested",
-      "optionIndex": 3,
-      "paperId": "arshad-1400-p10",
-      "part": "vocabulary",
-      "questionNo": 3,
-      "reach": 1,
-      "surface": "perilous",
-      "year": 1400
-    },
-    {
-      "isAnswer": true,
-      "occurrenceType": "tested",
-      "optionIndex": 3,
-      "paperId": "arshad-1400-p12",
-      "part": "vocabulary",
-      "questionNo": 3,
-      "reach": 1,
+      "reach": 30,
       "surface": "perilous",
       "year": 1400
     },
@@ -162,26 +107,6 @@
           "questionNo": 3
         },
         {
-          "paperId": "arshad-1400-p04",
-          "questionNo": 10
-        },
-        {
-          "paperId": "arshad-1400-p05",
-          "questionNo": 3
-        },
-        {
-          "paperId": "arshad-1400-p06",
-          "questionNo": 10
-        },
-        {
-          "paperId": "arshad-1400-p10",
-          "questionNo": 3
-        },
-        {
-          "paperId": "arshad-1400-p12",
-          "questionNo": 3
-        },
-        {
           "paperId": "arshad-1399-p07",
           "questionNo": 14
         }
@@ -195,22 +120,22 @@
   ],
   "stats": {
     "answersByYear": {
-      "1400": 7
+      "1400": 2
     },
     "byYear": {
       "1399": 1,
-      "1400": 7,
+      "1400": 2,
       "1402": 1,
       "1403": 1
     },
     "distinctYears": 4,
     "firstYear": 1399,
     "lastYear": 1403,
-    "priority": 32,
-    "timesAsAnswer": 7,
+    "priority": 17,
+    "timesAsAnswer": 2,
     "timesAsContext": 0,
     "timesAsDistractor": 3,
-    "timesTested": 10
+    "timesTested": 5
   },
   "status": "draft",
   "surfaceForms": [

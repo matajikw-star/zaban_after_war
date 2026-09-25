@@ -44,6 +44,8 @@ want. The procedure is `extraction/RUNBOOK.md`; the reasoning is `extraction/PIP
 
 The unit of ingest is the **paper** (`arshad-<year>-pNN`), not the booklet: within a year many
 field codes sit the same English test. See `docs/adr/0007-paper-as-the-unit-of-ingest.md`.
+Two ids for one test (`content:lint` check 15) are resolved by retiring one with `duplicateOf`,
+never by deleting it — `docs/adr/0021-duplicate-papers-are-retired-not-deleted.md`.
 
 The rules that do not change, whatever runs them:
 

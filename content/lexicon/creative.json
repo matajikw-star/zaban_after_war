@@ -12,21 +12,10 @@
       "isAnswer": false,
       "occurrenceType": "tested",
       "optionIndex": 0,
-      "paperId": "arshad-1400-p04",
+      "paperId": "arshad-1400-p01",
       "part": "vocabulary",
       "questionNo": 9,
-      "reach": 6,
-      "surface": "creatively",
-      "year": 1400
-    },
-    {
-      "isAnswer": false,
-      "occurrenceType": "tested",
-      "optionIndex": 0,
-      "paperId": "arshad-1400-p06",
-      "part": "vocabulary",
-      "questionNo": 9,
-      "reach": 3,
+      "reach": 57,
       "surface": "creatively",
       "year": 1400
     }
@@ -56,11 +45,7 @@
       ],
       "testedIn": [
         {
-          "paperId": "arshad-1400-p04",
-          "questionNo": 9
-        },
-        {
-          "paperId": "arshad-1400-p06",
+          "paperId": "arshad-1400-p01",
           "questionNo": 9
         }
       ],
@@ -74,16 +59,16 @@
   "stats": {
     "answersByYear": {},
     "byYear": {
-      "1400": 2
+      "1400": 1
     },
     "distinctYears": 1,
     "firstYear": 1400,
     "lastYear": 1400,
-    "priority": 4,
+    "priority": 3,
     "timesAsAnswer": 0,
     "timesAsContext": 0,
-    "timesAsDistractor": 2,
-    "timesTested": 2
+    "timesAsDistractor": 1,
+    "timesTested": 1
   },
   "status": "draft",
   "surfaceForms": [

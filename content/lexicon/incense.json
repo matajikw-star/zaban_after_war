@@ -15,18 +15,7 @@
       "paperId": "arshad-1399-p04",
       "part": "vocabulary",
       "questionNo": 10,
-      "reach": 12,
-      "surface": "Incensed",
-      "year": 1399
-    },
-    {
-      "isAnswer": true,
-      "occurrenceType": "tested",
-      "optionIndex": 3,
-      "paperId": "arshad-1399-p05",
-      "part": "vocabulary",
-      "questionNo": 10,
-      "reach": 10,
+      "reach": 22,
       "surface": "Incensed",
       "year": 1399
     }
@@ -59,10 +48,6 @@
         {
           "paperId": "arshad-1399-p04",
           "questionNo": 10
-        },
-        {
-          "paperId": "arshad-1399-p05",
-          "questionNo": 10
         }
       ],
       "translations": [
@@ -92,19 +77,19 @@
   ],
   "stats": {
     "answersByYear": {
-      "1399": 2
+      "1399": 1
     },
     "byYear": {
-      "1399": 2
+      "1399": 1
     },
     "distinctYears": 1,
     "firstYear": 1399,
     "lastYear": 1399,
-    "priority": 8,
-    "timesAsAnswer": 2,
+    "priority": 5,
+    "timesAsAnswer": 1,
     "timesAsContext": 0,
     "timesAsDistractor": 0,
-    "timesTested": 2
+    "timesTested": 1
   },
   "status": "draft",
   "surfaceForms": [

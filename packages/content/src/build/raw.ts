@@ -57,6 +57,11 @@ export interface LexiconEntry {
   readonly occurrences: readonly Occurrence[];
   readonly stats: LexiconStats;
   readonly status: 'draft' | 'approved';
+  /**
+   * Set on a word id that must never ship or count again — e.g. one minted only by a
+   * misreading (ADR-0021). The file and id stay forever; `occurrences` is empty.
+   */
+  readonly retired?: { readonly reason: string; readonly date: string };
 }
 
 export interface ExamQuestion {
@@ -66,11 +71,17 @@ export interface ExamQuestion {
   readonly options: readonly string[];
   readonly key: number | null;
   readonly testedWord: string | null;
+  readonly uncertain?: readonly unknown[];
 }
 
 export interface ExamFile {
   readonly paperId: string;
   readonly year: number;
+  readonly bookletCount?: number;
+  /** Set on a retired paper: the paper whose questions this file duplicates (ADR-0021). */
+  readonly duplicateOf?: string;
+  readonly duplicateReason?: string;
+  readonly uncertain?: readonly unknown[];
   readonly questions: readonly ExamQuestion[];
 }
 

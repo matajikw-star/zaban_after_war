@@ -12,10 +12,10 @@
       "isAnswer": true,
       "occurrenceType": "tested",
       "optionIndex": 1,
-      "paperId": "arshad-1399-p06",
+      "paperId": "arshad-1399-p02",
       "part": "vocabulary",
       "questionNo": 8,
-      "reach": 9,
+      "reach": 30,
       "surface": "strictly",
       "year": 1399
     }
@@ -46,7 +46,7 @@
       ],
       "testedIn": [
         {
-          "paperId": "arshad-1399-p06",
+          "paperId": "arshad-1399-p02",
           "questionNo": 8
         }
       ],

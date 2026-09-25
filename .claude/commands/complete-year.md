@@ -90,11 +90,19 @@ answer at the wrong time.
    flagged after that: mark it `needs-owner-review` and move on. Never loop on
    one paper.
 
-7. **Fold into the lexicon.**
+7. **Fold into the lexicon, then check the year is not counted twice.**
 
    ```
    python extraction/scripts/s6_lexicon.py
+   pnpm content:lint
    ```
+
+   Check 15 must not name this year: two papers of one year sharing more than
+   three question stems are one English test under two ids, and every word in
+   them would be counted twice (ADR-0021). If it does, do what its message says —
+   add `duplicateOf` and a `duplicateReason` (the measured overlap) to the paper
+   it does not keep, never delete a file — re-run S6 and lint, and tell the user.
+   Checks 16–18 must be clean for this year too.
 
 8. **Commit the year.** One commit on the current branch:
    `content: extract <year> - <n> papers, <n> questions, <n> new words`

@@ -174,6 +174,18 @@ Run after any bulk change. Implemented as `pnpm content:lint`, and by Claude on 
 14. An entry whose `examples[].en` reproduces the stem of one of its own occurrences. The exam
     sentence is joined at build time and must never be duplicated as the authored example.
 
+**Duplicate papers** (ADR-0021; one measure, `packages/content/src/duplicates.ts`):
+
+15. *Blocking.* Two live papers of one year share more than `MAX_SHARED_STEMS` (3) stems —
+    one English test under two ids, so every question counts twice. The message names the
+    paper the kept-paper rule keeps.
+16. *Blocking.* A `duplicateOf` that names no paper, the paper itself, a retired paper or one
+    of another year; that has no `duplicateReason`; or whose two papers do not share stems.
+17. *Warning.* A retired paper's question whose options read differently from the kept
+    paper's same-numbered question — a misreading in one transcript, which books nothing.
+18. An occurrence on a retired paper. *Blocking* when the word ships (its card would count
+    the duplicate), a *warning* otherwise — an orphan of a misreading, for the owner to decide.
+
 Report findings ranked by severity, with file paths. Fix nothing silently — a lint that
 auto-repairs hides the extraction problems this pipeline exists to surface.
 

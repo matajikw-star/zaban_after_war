@@ -26,18 +26,7 @@
       "paperId": "arshad-1399-p04",
       "part": "vocabulary",
       "questionNo": 7,
-      "reach": 12,
-      "surface": "rivalry",
-      "year": 1399
-    },
-    {
-      "isAnswer": false,
-      "occurrenceType": "tested",
-      "optionIndex": 1,
-      "paperId": "arshad-1399-p05",
-      "part": "vocabulary",
-      "questionNo": 7,
-      "reach": 10,
+      "reach": 22,
       "surface": "rivalry",
       "year": 1399
     }
@@ -74,10 +63,6 @@
         {
           "paperId": "arshad-1399-p04",
           "questionNo": 7
-        },
-        {
-          "paperId": "arshad-1399-p05",
-          "questionNo": 7
         }
       ],
       "translations": [
@@ -92,17 +77,17 @@
       "1401": 1
     },
     "byYear": {
-      "1399": 2,
+      "1399": 1,
       "1401": 1
     },
     "distinctYears": 2,
     "firstYear": 1399,
     "lastYear": 1401,
-    "priority": 9,
+    "priority": 8,
     "timesAsAnswer": 1,
     "timesAsContext": 0,
-    "timesAsDistractor": 2,
-    "timesTested": 3
+    "timesAsDistractor": 1,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [

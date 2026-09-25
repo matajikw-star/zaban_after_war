@@ -17,10 +17,10 @@
       "isAnswer": false,
       "occurrenceType": "tested",
       "optionIndex": 3,
-      "paperId": "arshad-1400-p04",
+      "paperId": "arshad-1400-p01",
       "part": "vocabulary",
       "questionNo": 2,
-      "reach": 6,
+      "reach": 57,
       "surface": "involved",
       "year": 1400
     },
@@ -59,7 +59,7 @@
       ],
       "testedIn": [
         {
-          "paperId": "arshad-1400-p04",
+          "paperId": "arshad-1400-p01",
           "questionNo": 2
         },
         {

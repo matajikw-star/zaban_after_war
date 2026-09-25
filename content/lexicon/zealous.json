@@ -31,18 +31,7 @@
       "paperId": "arshad-1400-p03",
       "part": "vocabulary",
       "questionNo": 2,
-      "reach": 23,
-      "surface": "zealous",
-      "year": 1400
-    },
-    {
-      "isAnswer": true,
-      "occurrenceType": "tested",
-      "optionIndex": 0,
-      "paperId": "arshad-1400-p05",
-      "part": "vocabulary",
-      "questionNo": 2,
-      "reach": 5,
+      "reach": 30,
       "surface": "zealous",
       "year": 1400
     },
@@ -55,28 +44,6 @@
       "questionNo": 19,
       "reach": 1,
       "surface": "zealously",
-      "year": 1400
-    },
-    {
-      "isAnswer": true,
-      "occurrenceType": "tested",
-      "optionIndex": 0,
-      "paperId": "arshad-1400-p10",
-      "part": "vocabulary",
-      "questionNo": 2,
-      "reach": 1,
-      "surface": "zealous",
-      "year": 1400
-    },
-    {
-      "isAnswer": true,
-      "occurrenceType": "tested",
-      "optionIndex": 0,
-      "paperId": "arshad-1400-p12",
-      "part": "vocabulary",
-      "questionNo": 2,
-      "reach": 1,
-      "surface": "zealous",
       "year": 1400
     }
   ],
@@ -115,20 +82,8 @@
           "questionNo": 2
         },
         {
-          "paperId": "arshad-1400-p05",
-          "questionNo": 2
-        },
-        {
           "paperId": "arshad-1400-p08",
           "questionNo": 19
-        },
-        {
-          "paperId": "arshad-1400-p10",
-          "questionNo": 2
-        },
-        {
-          "paperId": "arshad-1400-p12",
-          "questionNo": 2
         }
       ],
       "translations": [
@@ -140,21 +95,21 @@
   ],
   "stats": {
     "answersByYear": {
-      "1400": 4,
+      "1400": 1,
       "1404": 1
     },
     "byYear": {
-      "1400": 5,
+      "1400": 2,
       "1404": 1
     },
     "distinctYears": 2,
     "firstYear": 1400,
     "lastYear": 1404,
-    "priority": 20,
-    "timesAsAnswer": 5,
+    "priority": 11,
+    "timesAsAnswer": 2,
     "timesAsContext": 0,
     "timesAsDistractor": 1,
-    "timesTested": 6
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [

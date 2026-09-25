@@ -17,10 +17,10 @@
       "isAnswer": true,
       "occurrenceType": "tested",
       "optionIndex": 1,
-      "paperId": "arshad-1399-p11",
+      "paperId": "arshad-1399-p02",
       "part": "cloze",
       "questionNo": 14,
-      "reach": 1,
+      "reach": 30,
       "surface": "In the meantime",
       "year": 1399
     }
@@ -48,7 +48,7 @@
       ],
       "testedIn": [
         {
-          "paperId": "arshad-1399-p11",
+          "paperId": "arshad-1399-p02",
           "questionNo": 14
         }
       ],

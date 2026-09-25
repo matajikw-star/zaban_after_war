@@ -6,6 +6,10 @@ script has to rewrite papers.jsonl.
 
     python extraction/scripts/status.py
     python extraction/scripts/status.py --mark arshad-1403-p01 extracted
+    python extraction/scripts/status.py --mark arshad-1403-p01 extracted --note "why"
+
+A `--note` is stored on the paper's row as `reviewNote` - the record of why a
+`needs-owner-review` flag was cleared (or set), with the evidence and the date.
 """
 from __future__ import annotations
 import argparse
@@ -17,7 +21,7 @@ from common import CONTENT, STATE, read_jsonl, write_jsonl
 STATUSES = ("pending", "extracted", "needs-owner-review")
 
 
-def mark(paper_id: str, status: str) -> int:
+def mark(paper_id: str, status: str, note: str | None = None) -> int:
     if status not in STATUSES:
         print(f"status must be one of {STATUSES}")
         return 1
@@ -26,6 +30,8 @@ def mark(paper_id: str, status: str) -> int:
     for p in papers:
         if p["paperId"] == paper_id:
             p["extraction"] = status
+            if note:
+                p["reviewNote"] = note
             hit = True
     if not hit:
         print(f"unknown paperId {paper_id}")
@@ -38,9 +44,10 @@ def mark(paper_id: str, status: str) -> int:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--mark", nargs=2, metavar=("PAPER_ID", "STATUS"))
+    ap.add_argument("--note", help="with --mark: why, stored as reviewNote on the row")
     a = ap.parse_args()
     if a.mark:
-        return mark(a.mark[0], a.mark[1])
+        return mark(a.mark[0], a.mark[1], a.note)
 
     booklets = read_jsonl(STATE / "booklets.jsonl")
     routes = read_jsonl(STATE / "routes.jsonl")
@@ -87,13 +94,20 @@ def main() -> int:
         print(f"crosscheck  {len(checks) - len(flagged)}/{len(checks)} clean"
               + (f"   flagged: {flagged[:6]}" if flagged else ""))
 
-    n_q = 0
+    n_q, n_retired = 0, 0
     for f in exams:
         try:
-            n_q += len(json.loads(f.read_text(encoding="utf-8")).get("questions", []))
+            exam = json.loads(f.read_text(encoding="utf-8"))
         except Exception:
-            pass
-    print(f"content     {len(exams)} exam files, {n_q} questions, {len(words)} lexicon words")
+            continue
+        # A retired duplicate (ADR-0021) keeps its file but its questions are
+        # the kept paper's, so they are not counted twice here either.
+        if exam.get("duplicateOf"):
+            n_retired += 1
+            continue
+        n_q += len(exam.get("questions", []))
+    print(f"content     {len(exams)} exam files ({n_retired} retired as duplicates), "
+          f"{n_q} questions, {len(words)} lexicon words")
 
     # --- what to run next -------------------------------------------------
     print("\nnext:")

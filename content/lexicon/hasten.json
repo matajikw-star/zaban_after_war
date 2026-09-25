@@ -26,29 +26,7 @@
       "paperId": "arshad-1399-p02",
       "part": "vocabulary",
       "questionNo": 3,
-      "reach": 20,
-      "surface": "hasten",
-      "year": 1399
-    },
-    {
-      "isAnswer": true,
-      "occurrenceType": "tested",
-      "optionIndex": 1,
-      "paperId": "arshad-1399-p06",
-      "part": "vocabulary",
-      "questionNo": 3,
-      "reach": 9,
-      "surface": "hasten",
-      "year": 1399
-    },
-    {
-      "isAnswer": true,
-      "occurrenceType": "tested",
-      "optionIndex": 1,
-      "paperId": "arshad-1399-p11",
-      "part": "vocabulary",
-      "questionNo": 3,
-      "reach": 1,
+      "reach": 30,
       "surface": "hasten",
       "year": 1399
     }
@@ -86,14 +64,6 @@
         {
           "paperId": "arshad-1399-p02",
           "questionNo": 3
-        },
-        {
-          "paperId": "arshad-1399-p06",
-          "questionNo": 3
-        },
-        {
-          "paperId": "arshad-1399-p11",
-          "questionNo": 3
         }
       ],
       "translations": [
@@ -128,20 +98,20 @@
   ],
   "stats": {
     "answersByYear": {
-      "1399": 3
+      "1399": 1
     },
     "byYear": {
-      "1399": 3,
+      "1399": 1,
       "1400": 1
     },
     "distinctYears": 2,
     "firstYear": 1399,
     "lastYear": 1400,
-    "priority": 14,
-    "timesAsAnswer": 3,
+    "priority": 8,
+    "timesAsAnswer": 1,
     "timesAsContext": 0,
     "timesAsDistractor": 1,
-    "timesTested": 4
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [

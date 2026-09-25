@@ -7,12 +7,12 @@ import type { ExamFile, LexiconEntry } from './raw.ts';
 import { joinStems } from './stems.ts';
 
 /**
- * A word ships when it has at least one sense (word data is written) and is not on the
+ * A word ships when it has at least one sense (word data is written), is not on the
  * exclusion list (`packages/content/exclusions.json`) — non-words such as `as-like` that were
- * tested but are not English (`.scratch/word-data/issues/04`).
+ * tested but are not English (`.scratch/word-data/issues/04`) — and is not `retired`.
  */
 export function isShippable(entry: LexiconEntry, exclusions: ReadonlySet<string>): boolean {
-  return entry.senses.length > 0 && !exclusions.has(entry.id);
+  return entry.senses.length > 0 && !exclusions.has(entry.id) && entry.retired === undefined;
 }
 
 function examYears(entry: LexiconEntry): number[] {

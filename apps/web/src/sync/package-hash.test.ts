@@ -61,6 +61,17 @@ describe('verifyPaidPackage', () => {
     expect(verified.items).toHaveLength(2);
   });
 
+  it("stores the verified hash, not the file's own claim of it", async () => {
+    // The installed record's hash is what the next "up to date" check compares with the
+    // manifest (§7.5 step 1); a wrong or missing `hash` field must not redownload every launch.
+    const { hash, pkg } = await paid();
+    for (const claim of [{ hash: 'not-the-hash' }, { hash: undefined }]) {
+      const verified = await verifyPaidPackage(encode({ ...pkg, ...claim }), hash);
+      expect(verified.hash).toBe(hash);
+      expect(verified.items).toHaveLength(2);
+    }
+  });
+
   it('refuses a package whose items differ from the hash: HASH_MISMATCH', async () => {
     const { hash, pkg } = await paid();
     const tampered = { ...pkg, items: [ITEMS[0]] };

@@ -614,7 +614,8 @@ no retry and no progress bar, whatever the machine state (`ui/download-status.ts
 4. Verify (`sync/package-hash.ts`): UTF-8 JSON, shaped like the paid package, and sha256 of the
    canonical JSON of `items` equal to `manifest.paid.hash` (the builder's `canonicalJson`, checked
    byte for byte against it in a test). A mismatch (`HASH_MISMATCH`) drops the stored bytes, so
-   the retry starts from byte 0.
+   the retry starts from byte 0. The package installed carries the hash that was verified, never
+   the file's own `hash` field, since step 1 compares it with the manifest.
 5. **Atomic swap:** `stores/content.ts` `install` writes `packages.paid` in one IndexedDB `put`
    — committed whole or not at all — and only then switches the content store to it; the stored
    bytes are cleared after. Nothing before this step touches the package the user studies from,

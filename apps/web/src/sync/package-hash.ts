@@ -83,5 +83,7 @@ export async function verifyPaidPackage(
       bytes: bytes.length,
     });
   }
-  return pkg as ContentPackage;
+  // The hash we checked, not the file's claim: the installed record's hash is what the next "up to
+  // date" check compares with the manifest, so a wrong `hash` field would redownload every launch.
+  return { ...(pkg as ContentPackage), hash: actual };
 }

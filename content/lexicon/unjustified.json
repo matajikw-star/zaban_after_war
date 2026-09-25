@@ -20,18 +20,7 @@
       "paperId": "arshad-1399-p01",
       "part": "vocabulary",
       "questionNo": 2,
-      "reach": 42,
-      "surface": "unjustified",
-      "year": 1399
-    },
-    {
-      "isAnswer": false,
-      "occurrenceType": "tested",
-      "optionIndex": 1,
-      "paperId": "arshad-1399-p03",
-      "part": "vocabulary",
-      "questionNo": 2,
-      "reach": 16,
+      "reach": 58,
       "surface": "unjustified",
       "year": 1399
     }
@@ -64,10 +53,6 @@
         {
           "paperId": "arshad-1399-p01",
           "questionNo": 2
-        },
-        {
-          "paperId": "arshad-1399-p03",
-          "questionNo": 2
         }
       ],
       "translations": [
@@ -80,16 +65,16 @@
   "stats": {
     "answersByYear": {},
     "byYear": {
-      "1399": 2
+      "1399": 1
     },
     "distinctYears": 1,
     "firstYear": 1399,
     "lastYear": 1399,
-    "priority": 4,
+    "priority": 3,
     "timesAsAnswer": 0,
     "timesAsContext": 0,
-    "timesAsDistractor": 2,
-    "timesTested": 2
+    "timesAsDistractor": 1,
+    "timesTested": 1
   },
   "status": "draft",
   "surfaceForms": [

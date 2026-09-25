@@ -15,29 +15,7 @@
       "paperId": "arshad-1400-p02",
       "part": "vocabulary",
       "questionNo": 7,
-      "reach": 30,
-      "surface": "extravagant",
-      "year": 1400
-    },
-    {
-      "isAnswer": true,
-      "occurrenceType": "tested",
-      "optionIndex": 3,
-      "paperId": "arshad-1400-p07",
-      "part": "vocabulary",
-      "questionNo": 7,
-      "reach": 2,
-      "surface": "extravagant",
-      "year": 1400
-    },
-    {
-      "isAnswer": true,
-      "occurrenceType": "tested",
-      "optionIndex": 3,
-      "paperId": "arshad-1400-p13",
-      "part": "vocabulary",
-      "questionNo": 7,
-      "reach": 1,
+      "reach": 33,
       "surface": "extravagant",
       "year": 1400
     }
@@ -70,14 +48,6 @@
       "testedIn": [
         {
           "paperId": "arshad-1400-p02",
-          "questionNo": 7
-        },
-        {
-          "paperId": "arshad-1400-p07",
-          "questionNo": 7
-        },
-        {
-          "paperId": "arshad-1400-p13",
           "questionNo": 7
         }
       ],
@@ -113,19 +83,19 @@
   ],
   "stats": {
     "answersByYear": {
-      "1400": 3
+      "1400": 1
     },
     "byYear": {
-      "1400": 3
+      "1400": 1
     },
     "distinctYears": 1,
     "firstYear": 1400,
     "lastYear": 1400,
-    "priority": 11,
-    "timesAsAnswer": 3,
+    "priority": 5,
+    "timesAsAnswer": 1,
     "timesAsContext": 0,
     "timesAsDistractor": 0,
-    "timesTested": 3
+    "timesTested": 1
   },
   "status": "draft",
   "surfaceForms": [

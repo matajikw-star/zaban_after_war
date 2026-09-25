@@ -13,6 +13,9 @@ Two things the owner asked to be first-class here:
   byYear     How often the word was tested in each Jalali year, so recency and
              persistence can both drive the curriculum.
 
+A paper retired with `duplicateOf` (ADR-0021) is folded as a second reading of
+the paper it duplicates, so one question counts once - see `collect`.
+
     python extraction/scripts/s6_lexicon.py --dry-run
     python extraction/scripts/s6_lexicon.py
 """
@@ -27,23 +30,55 @@ LEX = CONTENT / "lexicon"
 IN_SCOPE_PARTS = {"vocabulary", "cloze"}
 
 
+def same_text(a, b) -> bool:
+    return " ".join((a or "").split()).lower() == " ".join((b or "").split()).lower()
+
+
 def collect(exam_files: list) -> dict[str, dict]:
-    """Group every occurrence by word id, from every exam on disk."""
+    """Group every occurrence by word id, from every exam on disk.
+
+    A retired paper - one carrying `duplicateOf` (ADR-0021) - is the same English
+    test as the paper it names, split off by S2 clustering. It is folded as a
+    second reading of that paper, never as a paper of its own: its questions are
+    booked on the kept paper's id, question number, part and key, and a word the
+    kept reading already booked for that question is not booked again. So one
+    question counts once, while an option both transcripts agree on but lemmatise
+    differently (`creatively` read once as itself, once as `creative`) still
+    reaches both ids, as it would have in any other year. An option the two
+    transcripts disagree on is a misreading in one of them and books nothing -
+    `content:lint` check 17 reports it.
+    """
+    exams = [json.loads(f.read_text(encoding="utf-8")) for f in exam_files]
+    by_id = {e["paperId"]: e for e in exams}
+    # The booklets that sat a retired paper sat the kept one: its reach is theirs too.
+    reach = {e["paperId"]: e.get("bookletCount", 1) for e in exams if not e.get("duplicateOf")}
+    for e in exams:
+        if e.get("duplicateOf"):
+            reach[e["duplicateOf"]] += e.get("bookletCount", 1)
+
     acc: dict[str, dict] = defaultdict(lambda: {"lemmas": set(), "occ": []})
-    for f in exam_files:
-        exam = json.loads(f.read_text(encoding="utf-8"))
-        year, paper_id = exam["year"], exam["paperId"]
-        reach = exam.get("bookletCount", 1)
+    # (word id, paperId, questionNo): one occurrence per word per question, so a
+    # repeated option or a second transcript cannot inflate a word's frequency.
+    booked: set[tuple] = set()
+    # Kept papers first, so every occurrence both readings agree on comes from the kept one.
+    for exam in sorted(exams, key=lambda e: bool(e.get("duplicateOf"))):
+        counted = by_id[exam.get("duplicateOf") or exam["paperId"]]
+        year, paper_id = counted["year"], counted["paperId"]
+        counterpart = {q.get("no"): q for q in counted.get("questions", [])}
         for q in exam.get("questions", []):
-            part = q.get("part")
+            cq = q if counted is exam else counterpart.get(q.get("no"))
+            if cq is None:
+                continue
+            part = cq.get("part")
             if part not in IN_SCOPE_PARTS:
                 continue
-            options = q.get("options") or []
-            lemmas = q.get("optionLemmas") or options
-            key = q.get("key")
+            options = cq.get("options") or []
+            read = q.get("options") or []
+            lemmas = q.get("optionLemmas") or read
+            key = cq.get("key")
 
             norm = [((lemmas[i] if i < len(lemmas) else o) or o or "").strip().lower()
-                    for i, o in enumerate(options)]
+                    for i, o in enumerate(read)]
             # A question whose four options share one lemma tests grammar, not
             # vocabulary - "and formulated / who formulating / was formulated"
             # would otherwise book `formulate` four times for one item. The
@@ -52,28 +87,27 @@ def collect(exam_files: list) -> dict[str, dict]:
             if len({n for n in norm if n}) < 2:
                 continue
 
-            seen: set[str] = set()
             for i, opt in enumerate(options):
+                if i >= len(read) or not same_text(read[i], opt):
+                    continue
                 lemma = norm[i]
                 if not lemma or lemma in STOPWORDS:
                     continue
                 wid = slugify(lemma)
-                # One occurrence per distinct lemma per question, so a repeated
-                # option cannot inflate a word's frequency.
-                if not wid or wid in seen:
+                if not wid or (wid, paper_id, cq.get("no")) in booked:
                     continue
-                seen.add(wid)
+                booked.add((wid, paper_id, cq.get("no")))
                 acc[wid]["lemmas"].add(lemma)
                 acc[wid]["occ"].append({
                     "occurrenceType": "tested",
                     "paperId": paper_id,
                     "year": year,
-                    "questionNo": q.get("no"),
+                    "questionNo": cq.get("no"),
                     "part": part,
                     "optionIndex": i,
                     "surface": opt,
                     "isAnswer": (key == i),
-                    "reach": reach,
+                    "reach": reach[paper_id],
                 })
     return acc
 
@@ -119,6 +153,8 @@ def main() -> int:
     LEX.mkdir(parents=True, exist_ok=True)
 
     acc = collect(exam_files)
+    retired = {f.stem for f in exam_files
+               if json.loads(f.read_text(encoding="utf-8")).get("duplicateOf")}
     created, updated, frozen_conflicts = 0, 0, []
 
     for wid, data in sorted(acc.items()):
@@ -134,8 +170,10 @@ def main() -> int:
         # Context occurrences come from S8, not from the options, so this fold
         # cannot re-derive them. Carry them through, or re-running S6 would
         # silently delete the whole context-vocabulary pass.
+        # One on a retired paper is dropped: the kept paper carries the same stem
+        # (s8_fold.py and s8_finalize.py skip retired papers the same way).
         context = [o for o in (prev or {}).get("occurrences", [])
-                   if o.get("occurrenceType") == "context"]
+                   if o.get("occurrenceType") == "context" and o["paperId"] not in retired]
 
         entry = {
             "id": wid,                                  # frozen forever
@@ -175,6 +213,15 @@ def main() -> int:
         s = build_stats(d["occ"])
         print(f"  {wid:<22} tested {s['timesTested']:>2}x  "
               f"answer {s['timesAsAnswer']:>2}x  years {s['byYear']}")
+    # A lexicon file this fold no longer produces is never deleted here - word ids
+    # are frozen - so it is named, and content:lint check 18 keeps naming it.
+    orphans = sorted(
+        f.stem for f in LEX.glob("*.json")
+        if f.stem not in acc and any(
+            o.get("occurrenceType") == "tested"
+            for o in json.loads(f.read_text(encoding="utf-8")).get("occurrences", [])))
+    if orphans:
+        print(f"\ntested words this fold no longer derives (left untouched): {orphans}")
     if frozen_conflicts:
         print(f"\nFROZEN-ID CONFLICTS (resolve by hand): {frozen_conflicts}")
     return 0

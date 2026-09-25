@@ -26,18 +26,7 @@
       "paperId": "arshad-1399-p04",
       "part": "vocabulary",
       "questionNo": 4,
-      "reach": 12,
-      "surface": "stagnant",
-      "year": 1399
-    },
-    {
-      "isAnswer": true,
-      "occurrenceType": "tested",
-      "optionIndex": 2,
-      "paperId": "arshad-1399-p05",
-      "part": "vocabulary",
-      "questionNo": 4,
-      "reach": 10,
+      "reach": 22,
       "surface": "stagnant",
       "year": 1399
     }
@@ -70,10 +59,6 @@
       "testedIn": [
         {
           "paperId": "arshad-1399-p04",
-          "questionNo": 4
-        },
-        {
-          "paperId": "arshad-1399-p05",
           "questionNo": 4
         },
         {
@@ -114,20 +99,20 @@
   ],
   "stats": {
     "answersByYear": {
-      "1399": 2
+      "1399": 1
     },
     "byYear": {
-      "1399": 2,
+      "1399": 1,
       "1404": 1
     },
     "distinctYears": 2,
     "firstYear": 1399,
     "lastYear": 1404,
-    "priority": 11,
-    "timesAsAnswer": 2,
+    "priority": 8,
+    "timesAsAnswer": 1,
     "timesAsContext": 0,
     "timesAsDistractor": 1,
-    "timesTested": 3
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [

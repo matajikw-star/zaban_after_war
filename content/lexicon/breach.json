@@ -57,29 +57,7 @@
       "paperId": "arshad-1399-p02",
       "part": "vocabulary",
       "questionNo": 1,
-      "reach": 20,
-      "surface": "breach",
-      "year": 1399
-    },
-    {
-      "isAnswer": false,
-      "occurrenceType": "tested",
-      "optionIndex": 0,
-      "paperId": "arshad-1399-p06",
-      "part": "vocabulary",
-      "questionNo": 1,
-      "reach": 9,
-      "surface": "breach",
-      "year": 1399
-    },
-    {
-      "isAnswer": false,
-      "occurrenceType": "tested",
-      "optionIndex": 0,
-      "paperId": "arshad-1399-p11",
-      "part": "vocabulary",
-      "questionNo": 1,
-      "reach": 1,
+      "reach": 30,
       "surface": "breach",
       "year": 1399
     }
@@ -118,14 +96,6 @@
         },
         {
           "paperId": "arshad-1399-p02",
-          "questionNo": 1
-        },
-        {
-          "paperId": "arshad-1399-p06",
-          "questionNo": 1
-        },
-        {
-          "paperId": "arshad-1399-p11",
           "questionNo": 1
         }
       ],
@@ -169,18 +139,18 @@
       "1401": 1
     },
     "byYear": {
-      "1399": 3,
+      "1399": 1,
       "1401": 2,
       "1405": 1
     },
     "distinctYears": 3,
     "firstYear": 1399,
     "lastYear": 1405,
-    "priority": 14,
+    "priority": 12,
     "timesAsAnswer": 1,
     "timesAsContext": 0,
-    "timesAsDistractor": 5,
-    "timesTested": 6
+    "timesAsDistractor": 3,
+    "timesTested": 4
   },
   "status": "draft",
   "surfaceForms": [

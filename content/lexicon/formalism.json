@@ -16,7 +16,7 @@
       "paperId": "arshad-1400-p01",
       "part": "grammar",
       "questionNo": 13,
-      "reach": 48,
+      "reach": 57,
       "surface": "formalism",
       "year": 1400
     },
@@ -25,7 +25,7 @@
       "paperId": "arshad-1400-p01",
       "part": "grammar",
       "questionNo": 14,
-      "reach": 48,
+      "reach": 57,
       "surface": "formalism",
       "year": 1400
     },
@@ -34,61 +34,7 @@
       "paperId": "arshad-1400-p01",
       "part": "grammar",
       "questionNo": 15,
-      "reach": 48,
-      "surface": "formalism",
-      "year": 1400
-    },
-    {
-      "occurrenceType": "context",
-      "paperId": "arshad-1400-p04",
-      "part": "grammar",
-      "questionNo": 13,
-      "reach": 6,
-      "surface": "formalism",
-      "year": 1400
-    },
-    {
-      "occurrenceType": "context",
-      "paperId": "arshad-1400-p04",
-      "part": "grammar",
-      "questionNo": 14,
-      "reach": 6,
-      "surface": "formalism",
-      "year": 1400
-    },
-    {
-      "occurrenceType": "context",
-      "paperId": "arshad-1400-p04",
-      "part": "grammar",
-      "questionNo": 15,
-      "reach": 6,
-      "surface": "formalism",
-      "year": 1400
-    },
-    {
-      "occurrenceType": "context",
-      "paperId": "arshad-1400-p06",
-      "part": "grammar",
-      "questionNo": 13,
-      "reach": 3,
-      "surface": "formalism",
-      "year": 1400
-    },
-    {
-      "occurrenceType": "context",
-      "paperId": "arshad-1400-p06",
-      "part": "grammar",
-      "questionNo": 14,
-      "reach": 3,
-      "surface": "formalism",
-      "year": 1400
-    },
-    {
-      "occurrenceType": "context",
-      "paperId": "arshad-1400-p06",
-      "part": "grammar",
-      "questionNo": 15,
-      "reach": 3,
+      "reach": 57,
       "surface": "formalism",
       "year": 1400
     }
@@ -103,7 +49,7 @@
     "lastYear": null,
     "priority": 0,
     "timesAsAnswer": 0,
-    "timesAsContext": 9,
+    "timesAsContext": 3,
     "timesAsDistractor": 0,
     "timesTested": 0
   },

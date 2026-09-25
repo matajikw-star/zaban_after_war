@@ -20,18 +20,7 @@
       "paperId": "arshad-1399-p01",
       "part": "vocabulary",
       "questionNo": 6,
-      "reach": 42,
-      "surface": "recall",
-      "year": 1399
-    },
-    {
-      "isAnswer": true,
-      "occurrenceType": "tested",
-      "optionIndex": 2,
-      "paperId": "arshad-1399-p03",
-      "part": "vocabulary",
-      "questionNo": 6,
-      "reach": 16,
+      "reach": 58,
       "surface": "recall",
       "year": 1399
     },
@@ -76,10 +65,6 @@
           "questionNo": 6
         },
         {
-          "paperId": "arshad-1399-p03",
-          "questionNo": 6
-        },
-        {
           "paperId": "arshad-1399-p08",
           "questionNo": 31
         }
@@ -113,19 +98,19 @@
   ],
   "stats": {
     "answersByYear": {
-      "1399": 3
+      "1399": 2
     },
     "byYear": {
-      "1399": 3
+      "1399": 2
     },
     "distinctYears": 1,
     "firstYear": 1399,
     "lastYear": 1399,
-    "priority": 11,
-    "timesAsAnswer": 3,
+    "priority": 8,
+    "timesAsAnswer": 2,
     "timesAsContext": 0,
     "timesAsDistractor": 0,
-    "timesTested": 3
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [

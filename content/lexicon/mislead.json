@@ -17,10 +17,10 @@
       "isAnswer": true,
       "occurrenceType": "tested",
       "optionIndex": 3,
-      "paperId": "arshad-1399-p05",
+      "paperId": "arshad-1399-p04",
       "part": "vocabulary",
       "questionNo": 2,
-      "reach": 10,
+      "reach": 22,
       "surface": "misleading",
       "year": 1399
     }
@@ -51,7 +51,7 @@
       ],
       "testedIn": [
         {
-          "paperId": "arshad-1399-p05",
+          "paperId": "arshad-1399-p04",
           "questionNo": 2
         }
       ],

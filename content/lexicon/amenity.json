@@ -31,18 +31,7 @@
       "paperId": "arshad-1399-p01",
       "part": "vocabulary",
       "questionNo": 5,
-      "reach": 42,
-      "surface": "amenities",
-      "year": 1399
-    },
-    {
-      "isAnswer": false,
-      "occurrenceType": "tested",
-      "optionIndex": 3,
-      "paperId": "arshad-1399-p03",
-      "part": "vocabulary",
-      "questionNo": 5,
-      "reach": 16,
+      "reach": 58,
       "surface": "amenities",
       "year": 1399
     }
@@ -79,10 +68,6 @@
         {
           "paperId": "arshad-1399-p01",
           "questionNo": 5
-        },
-        {
-          "paperId": "arshad-1399-p03",
-          "questionNo": 5
         }
       ],
       "translations": [
@@ -97,17 +82,17 @@
       "1405": 1
     },
     "byYear": {
-      "1399": 2,
+      "1399": 1,
       "1405": 1
     },
     "distinctYears": 2,
     "firstYear": 1399,
     "lastYear": 1405,
-    "priority": 9,
+    "priority": 8,
     "timesAsAnswer": 1,
     "timesAsContext": 0,
-    "timesAsDistractor": 2,
-    "timesTested": 3
+    "timesAsDistractor": 1,
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [

@@ -15,29 +15,7 @@
       "paperId": "arshad-1400-p02",
       "part": "vocabulary",
       "questionNo": 1,
-      "reach": 30,
-      "surface": "imbalance",
-      "year": 1400
-    },
-    {
-      "isAnswer": false,
-      "occurrenceType": "tested",
-      "optionIndex": 2,
-      "paperId": "arshad-1400-p07",
-      "part": "vocabulary",
-      "questionNo": 1,
-      "reach": 2,
-      "surface": "imbalance",
-      "year": 1400
-    },
-    {
-      "isAnswer": false,
-      "occurrenceType": "tested",
-      "optionIndex": 2,
-      "paperId": "arshad-1400-p13",
-      "part": "vocabulary",
-      "questionNo": 1,
-      "reach": 1,
+      "reach": 33,
       "surface": "imbalance",
       "year": 1400
     }
@@ -70,14 +48,6 @@
         {
           "paperId": "arshad-1400-p02",
           "questionNo": 1
-        },
-        {
-          "paperId": "arshad-1400-p07",
-          "questionNo": 1
-        },
-        {
-          "paperId": "arshad-1400-p13",
-          "questionNo": 1
         }
       ],
       "translations": [
@@ -90,16 +60,16 @@
   "stats": {
     "answersByYear": {},
     "byYear": {
-      "1400": 3
+      "1400": 1
     },
     "distinctYears": 1,
     "firstYear": 1400,
     "lastYear": 1400,
-    "priority": 5,
+    "priority": 3,
     "timesAsAnswer": 0,
     "timesAsContext": 0,
-    "timesAsDistractor": 3,
-    "timesTested": 3
+    "timesAsDistractor": 1,
+    "timesTested": 1
   },
   "status": "draft",
   "surfaceForms": [

@@ -31,40 +31,7 @@
       "paperId": "arshad-1400-p03",
       "part": "vocabulary",
       "questionNo": 6,
-      "reach": 23,
-      "surface": "imbibe",
-      "year": 1400
-    },
-    {
-      "isAnswer": true,
-      "occurrenceType": "tested",
-      "optionIndex": 0,
-      "paperId": "arshad-1400-p05",
-      "part": "vocabulary",
-      "questionNo": 6,
-      "reach": 5,
-      "surface": "imbibe",
-      "year": 1400
-    },
-    {
-      "isAnswer": true,
-      "occurrenceType": "tested",
-      "optionIndex": 0,
-      "paperId": "arshad-1400-p10",
-      "part": "vocabulary",
-      "questionNo": 6,
-      "reach": 1,
-      "surface": "imbibe",
-      "year": 1400
-    },
-    {
-      "isAnswer": true,
-      "occurrenceType": "tested",
-      "optionIndex": 0,
-      "paperId": "arshad-1400-p12",
-      "part": "vocabulary",
-      "questionNo": 6,
-      "reach": 1,
+      "reach": 30,
       "surface": "imbibe",
       "year": 1400
     }
@@ -99,18 +66,6 @@
         {
           "paperId": "arshad-1400-p03",
           "questionNo": 6
-        },
-        {
-          "paperId": "arshad-1400-p05",
-          "questionNo": 6
-        },
-        {
-          "paperId": "arshad-1400-p10",
-          "questionNo": 6
-        },
-        {
-          "paperId": "arshad-1400-p12",
-          "questionNo": 6
         }
       ],
       "translations": [
@@ -142,20 +97,20 @@
   ],
   "stats": {
     "answersByYear": {
-      "1400": 4
+      "1400": 1
     },
     "byYear": {
-      "1400": 4,
+      "1400": 1,
       "1405": 1
     },
     "distinctYears": 2,
     "firstYear": 1400,
     "lastYear": 1405,
-    "priority": 17,
-    "timesAsAnswer": 4,
+    "priority": 8,
+    "timesAsAnswer": 1,
     "timesAsContext": 0,
     "timesAsDistractor": 1,
-    "timesTested": 5
+    "timesTested": 2
   },
   "status": "draft",
   "surfaceForms": [

@@ -232,11 +232,18 @@ def main() -> int:
     # were sat by exactly one code, so a term seen only there is pinned to one
     # discipline, while a term from `p01` (up to 60 codes) is simply general.
     paper_codes: dict[str, list[str]] = {}
+    exams = [json.loads(f.read_text(encoding="utf-8")) for f in exam_files]
+    for d in exams:
+        paper_codes.setdefault(d.get("duplicateOf") or d["paperId"], []).extend(
+            d.get("groupCodes") or [])
 
-    for f in exam_files:
-        d = json.loads(f.read_text(encoding="utf-8"))
+    for d in exams:
+        # A paper retired with `duplicateOf` (ADR-0021) is the kept paper's test
+        # again: counting its stems would double every word in them. Its field
+        # codes were folded into the kept paper's just above.
+        if d.get("duplicateOf"):
+            continue
         year, paper = d["year"], d["paperId"]
-        paper_codes[paper] = d.get("groupCodes") or []
         for q in d.get("questions", []):
             stem = q.get("stem") or ""
             for raw in re.findall(r"[A-Za-z][A-Za-z'\-]*", stem.lower()):

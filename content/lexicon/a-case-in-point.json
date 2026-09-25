@@ -12,10 +12,10 @@
       "isAnswer": false,
       "occurrenceType": "tested",
       "optionIndex": 2,
-      "paperId": "arshad-1399-p11",
+      "paperId": "arshad-1399-p02",
       "part": "cloze",
       "questionNo": 14,
-      "reach": 1,
+      "reach": 30,
       "surface": "A case in point",
       "year": 1399
     }
@@ -42,7 +42,7 @@
       ],
       "testedIn": [
         {
-          "paperId": "arshad-1399-p11",
+          "paperId": "arshad-1399-p02",
           "questionNo": 14
         }
       ],

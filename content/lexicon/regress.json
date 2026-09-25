@@ -42,29 +42,7 @@
       "paperId": "arshad-1400-p01",
       "part": "vocabulary",
       "questionNo": 8,
-      "reach": 48,
-      "surface": "regress",
-      "year": 1400
-    },
-    {
-      "isAnswer": false,
-      "occurrenceType": "tested",
-      "optionIndex": 3,
-      "paperId": "arshad-1400-p04",
-      "part": "vocabulary",
-      "questionNo": 8,
-      "reach": 6,
-      "surface": "regress",
-      "year": 1400
-    },
-    {
-      "isAnswer": false,
-      "occurrenceType": "tested",
-      "optionIndex": 3,
-      "paperId": "arshad-1400-p06",
-      "part": "vocabulary",
-      "questionNo": 8,
-      "reach": 3,
+      "reach": 57,
       "surface": "regress",
       "year": 1400
     }
@@ -106,14 +84,6 @@
         {
           "paperId": "arshad-1400-p01",
           "questionNo": 8
-        },
-        {
-          "paperId": "arshad-1400-p04",
-          "questionNo": 8
-        },
-        {
-          "paperId": "arshad-1400-p06",
-          "questionNo": 8
         }
       ],
       "translations": [
@@ -126,18 +96,18 @@
   "stats": {
     "answersByYear": {},
     "byYear": {
-      "1400": 3,
+      "1400": 1,
       "1401": 1,
       "1402": 1
     },
     "distinctYears": 3,
     "firstYear": 1400,
     "lastYear": 1402,
-    "priority": 11,
+    "priority": 9,
     "timesAsAnswer": 0,
     "timesAsContext": 0,
-    "timesAsDistractor": 5,
-    "timesTested": 5
+    "timesAsDistractor": 3,
+    "timesTested": 3
   },
   "status": "draft",
   "surfaceForms": [

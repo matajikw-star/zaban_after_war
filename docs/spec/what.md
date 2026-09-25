@@ -605,7 +605,8 @@ the settings row is right offline.
 3. The body streams into memory; every 256 KB, and whenever the stream breaks, what arrived is
    written to `kv.downloadReceivedBytes`, so neither a dropped connection nor a killed tab loses
    it. No headers within 30 s, or no body bytes for 30 s, abandons the request
-   (`DOWNLOAD_STALLED`), keeping the bytes. Fewer bytes than the manifest promised is
+   (`DOWNLOAD_STALLED`, `data.phase` `headers` or `body`; a real network failure stays
+   `NETWORK`), keeping the bytes. Fewer bytes than the manifest promised is
    `DOWNLOAD_TRUNCATED`. Refused to start with less free storage than 3× the package
    (`STORAGE_FULL`).
 4. Verify (`sync/package-hash.ts`): UTF-8 JSON, shaped like the paid package, and sha256 of the

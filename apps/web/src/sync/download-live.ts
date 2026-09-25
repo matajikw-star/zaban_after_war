@@ -63,7 +63,12 @@ export async function* chunksWithStallTimeout(
       let handle: unknown = null;
       const stalled = new Promise<never>((_, reject) => {
         handle = timers.setTimer(() => {
-          reject(new AppError('DOWNLOAD_STALLED', 'no bytes arrived for too long', { stallMs }));
+          reject(
+            new AppError('DOWNLOAD_STALLED', 'no bytes arrived for too long', {
+              phase: 'body',
+              stallMs,
+            }),
+          );
         }, stallMs);
       });
       let result: ReadableStreamReadResult<Uint8Array>;
@@ -85,19 +90,46 @@ const realTimers: StallTimers = {
   clearTimer: (handle) => globalThis.clearTimeout(handle as ReturnType<typeof setTimeout>),
 };
 
-async function fetchPaid(from: number, ifRange: string | null): Promise<PaidResponse> {
+/**
+ * The response of `send`, abandoned with `DOWNLOAD_STALLED` (`phase: 'headers'`) when its headers
+ * take longer than `timeoutMs`. The request is aborted too, but the abort is not what the caller
+ * sees: `net/api.ts` turns an abort into `NETWORK`, which would tell the log a stall was a lost
+ * connection. A real failure before the timeout keeps its own code.
+ */
+export async function responseWithHeadersTimeout(
+  send: (signal: AbortSignal) => Promise<Response>,
+  timeoutMs: number,
+  timers: StallTimers,
+): Promise<Response> {
   const controller = new AbortController();
-  const headersTimer = realTimers.setTimer(() => controller.abort(), HEADERS_TIMEOUT_MS);
-  let response: Response;
+  let handle: unknown = null;
+  const timedOut = new Promise<never>((_, reject) => {
+    handle = timers.setTimer(() => {
+      reject(
+        new AppError('DOWNLOAD_STALLED', 'no response headers arrived in time', {
+          phase: 'headers',
+          timeoutMs,
+        }),
+      );
+      controller.abort();
+    }, timeoutMs);
+  });
+  const sent = send(controller.signal);
+  // Once the timeout has won the race, the aborted request's own rejection is expected noise.
+  sent.catch(() => undefined);
   try {
-    response = await contentPaid({
-      from,
-      ...(ifRange === null ? {} : { ifRange }),
-      signal: controller.signal,
-    });
+    return await Promise.race([sent, timedOut]);
   } finally {
-    realTimers.clearTimer(headersTimer);
+    timers.clearTimer(handle);
   }
+}
+
+async function fetchPaid(from: number, ifRange: string | null): Promise<PaidResponse> {
+  const response = await responseWithHeadersTimeout(
+    (signal) => contentPaid({ from, ...(ifRange === null ? {} : { ifRange }), signal }),
+    HEADERS_TIMEOUT_MS,
+    realTimers,
+  );
   if (response.body === null) {
     throw new AppError('DOWNLOAD_NO_BODY', 'the paid package response has no body', {
       status: response.status,

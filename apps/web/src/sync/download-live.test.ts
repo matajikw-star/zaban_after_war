@@ -1,6 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { AppError } from '../errors.ts';
-import { chunksWithStallTimeout, rangeStartOf, type StallTimers } from './download-live.ts';
+import {
+  chunksWithStallTimeout,
+  rangeStartOf,
+  responseWithHeadersTimeout,
+  type StallTimers,
+} from './download-live.ts';
 
 describe('rangeStartOf (Go http.ServeContent `Content-Range`)', () => {
   it('reads the first byte of a 206', () => {
@@ -82,5 +87,66 @@ describe('chunksWithStallTimeout', () => {
     expect(got).toEqual([5]);
     expect(error).toBeInstanceOf(AppError);
     expect((error as AppError).code).toBe('DOWNLOAD_STALLED');
+    expect((error as AppError).data).toMatchObject({ phase: 'body' });
+  });
+});
+
+describe('responseWithHeadersTimeout', () => {
+  /** A request that answers only when told to, and rejects like `net/api.ts` does on an abort. */
+  function hangingSend() {
+    let seen: AbortSignal | null = null;
+    const send = (signal: AbortSignal) => {
+      seen = signal;
+      return new Promise<Response>((_, reject) => {
+        signal.addEventListener('abort', () => {
+          reject(new AppError('NETWORK', 'the request never reached the server'));
+        });
+      });
+    };
+    return { send, signal: () => seen as AbortSignal | null };
+  }
+
+  it('no headers in time is DOWNLOAD_STALLED (phase headers), not NETWORK, and aborts', async () => {
+    const { timers, fireLive } = manualTimers();
+    const { send, signal } = hangingSend();
+    const pending = responseWithHeadersTimeout(send, 1000, timers);
+    fireLive();
+    const error = await pending.then(
+      () => null,
+      (err: unknown) => err,
+    );
+    expect(error).toBeInstanceOf(AppError);
+    expect((error as AppError).code).toBe('DOWNLOAD_STALLED');
+    expect((error as AppError).data).toMatchObject({ phase: 'headers', timeoutMs: 1000 });
+    expect(signal()?.aborted).toBe(true);
+  });
+
+  it('a request that ignores the abort still ends as DOWNLOAD_STALLED', async () => {
+    const { timers, fireLive } = manualTimers();
+    const pending = responseWithHeadersTimeout(
+      () => new Promise<Response>(() => undefined),
+      1000,
+      timers,
+    );
+    fireLive();
+    await expect(pending).rejects.toMatchObject({ code: 'DOWNLOAD_STALLED' });
+  });
+
+  it('a real network failure is still NETWORK, and leaves no live timer', async () => {
+    const { timers, pending } = manualTimers();
+    const failing = () => Promise.reject(new AppError('NETWORK', 'offline'));
+    await expect(responseWithHeadersTimeout(failing, 1000, timers)).rejects.toMatchObject({
+      code: 'NETWORK',
+    });
+    expect(pending.every((t) => t.cleared)).toBe(true);
+  });
+
+  it('headers in time pass the response through and clear the timer', async () => {
+    const { timers, pending } = manualTimers();
+    const response = new Response('x', { status: 200 });
+    await expect(
+      responseWithHeadersTimeout(() => Promise.resolve(response), 1000, timers),
+    ).resolves.toBe(response);
+    expect(pending.every((t) => t.cleared)).toBe(true);
   });
 });

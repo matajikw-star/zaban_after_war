@@ -64,6 +64,45 @@ to survive that. They do: a paperId is pinned to its cluster, anchored for an
 extracted paper by the booklet its transcript was read from. It was not always
 so, and two 1405 papers swapped identities - ADR-0009.
 
+#### Why 1399 and 1400 split, and the two guards
+
+A false split was supposed to cost one redundant extraction. In 1399 and 1400 it
+cost far more: six papers came out as 17 paper ids, all 17 were transcribed, and
+every word they test was counted two to four times (`affluent`: 6, truly 3).
+
+The cause was the OCR, not the threshold. Tesseract reads `e` as `c` on some
+print runs and not on others - `becausc`, `applianccs`, `ccntral` - and those runs
+fell into different field codes' booklets. A fingerprint is a set of exact
+tokens, so every word containing an `e` became two different tokens, and two
+scans of one paper fell as low as Jaccard 0.33, under `THRESHOLD = 0.55`, while
+scans from the same print run still matched each other (medians 0.7-0.97), so
+each run became its own tidy cluster. Other years were spared only because their scans were read consistently:
+the lowest same-paper score was 0.55 in 1398 (exactly the threshold) and 0.66 or
+more in 1401-1405. Greedy clustering is not the culprit - it never merges two
+clusters, but single-link merging repairs only 2 of the 11 extra clusters.
+
+Measured by re-running S2's own clustering over the OCR cache, 2026-09-25:
+
+| fingerprint | 1399 clusters / papers | 1400 | other years | same-paper min J | different-paper max J |
+|---|---|---|---|---|---|
+| exact tokens (before) | 11 / 7 | 13 / 6 | exact | 0.33 | 0.16 |
+| `e` folded into `c` (now) | 7 / 7 | 6 / 6 | exact | 0.55 (1398; 0.62 in 1400) | 0.16 |
+
+**Guard 1, before any money is spent:** `s2_cluster.py` folds `e` into `c`
+(`fold_ocr_confusions`) before comparing. Re-clustering with it merged the 1399
+and 1400 clusters and changed no other year's row. 1398's weakest pair still sits
+at the threshold; a new year whose sizes look like 1399's did (many mid-sized
+clusters instead of two or three large ones plus singletons) deserves a look
+before extraction.
+
+**Guard 2, after extraction:** `content:lint` check 15 fails when two live papers
+of one year share more than `MAX_SHARED_STEMS` (3) question stems, measured by
+token-set Jaccard >= 0.6 on normalised stems (`packages/content/src/duplicates.ts`).
+`/complete-year` runs it after S6. The fix it asks for is mechanical - its
+message names the paper to keep - and follows ADR-0021: the other paper keeps its
+file and id, gains `duplicateOf` and `duplicateReason`, and S6 is re-run. It
+never deletes a transcript or reuses an id.
+
 ### Reading and grammar — located, never transcribed
 
 The English section is two things. زبان عمومی — Part A vocabulary and the Part B
@@ -153,7 +192,11 @@ rendered PNGs per paper.
 
 **`content/exams/<paperId>.json`** — the transcript. Schema and rules live in
 `.claude/agents/exam-extractor.md`, which is also the extractor's prompt, so the
-spec and the instruction cannot drift apart.
+spec and the instruction cannot drift apart. Two fields are added after
+extraction and never by the extractor: `duplicateOf` and `duplicateReason` retire
+a paper that turned out to be another paper's test again (ADR-0021). A retired
+paper is folded as a second reading of the kept one, so it adds no count, and it
+owns no row in `papers.jsonl`.
 
 **`content/lexicon/<word-id>.json`** — the fold. Every occurrence records
 `isAnswer`, and `stats` carries `byYear`, `timesAsAnswer` and a `priority` score:
@@ -166,6 +209,8 @@ ever been a distractor.
   most the item in flight.
 - **Idempotent.** S6 is a fold over all of `content/exams/`, so re-running after
   a re-extraction repairs rather than duplicates.
+- **One question counts once.** A paper id names one English test; two ids for
+  one test are a bug that `content:lint` check 15 blocks (ADR-0021).
 - **Context-cheap.** Page images never enter the orchestrator session. That is
   why one session can run many batches, and why resuming costs nothing.
 - **Ids are frozen.** Word ids are derived once and never rewritten (`CLAUDE.md`

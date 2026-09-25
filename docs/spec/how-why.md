@@ -988,6 +988,38 @@ manifest fetch failed, and the installed package showed «دانلود در ان
 bug under a real offline device (the runner skips while `navigator.onLine` is false), but the same
 display follows whenever `onLine` is true with no route out — noted for the owner, unchanged.
 
+### 5.18 Duplicate papers: one question counts once (ticket dev-content/03, 2026-09-25)
+
+**Problem.** In 1399 and 1400 six English tests had been split across 17 paper ids and all 17
+transcribed, so 226 shipping words were counted two to four times — `affluent` read «۶ بار در
+کنکور» for a word tested three times. This is the product's core claim, so it was fixed before
+anything that depends on it.
+
+**Decision — ADR-0021.** Every id stays; the extra papers are *retired* with `duplicateOf` and a
+measured `duplicateReason`, and the lexicon fold books their questions on the kept paper, once
+per word per question. The kept paper is the most complete transcription (most questions, fewest
+`uncertain[]`, then most booklets, then lowest id), a rule computable from the files alone.
+
+**Alternatives.** *Delete the duplicate transcripts* — rejected: ADR-0009 makes ids permanent, and
+the transcripts are an independent second reading worth keeping. *Keep the retired occurrences
+in `occurrences[]` with a flag* — rejected: every reader (stats, the card's stems, S10's
+validation, the build) would have to filter them, and one that forgot would re-inflate the count;
+moving them keeps the stats one fold. *Drop the retired papers' occurrences outright* — rejected
+once measured: the two transcripts lemmatised some options differently (`creatively` /
+`creative`), and twelve words, eight of them shipping, would have fallen to zero occurrences over
+a lemmatisation choice rather than an exam fact.
+
+**Measure.** Token-set Jaccard over normalised stems, threshold 0.6: cross-year best matches top
+out at 0.27, same-question pairs start at 0.69; character edit ratio was tried and separates worse
+(cross-year noise up to 0.53). Decided per paper (more than 3 shared stems), not per question.
+
+**Root cause.** The OCR's `e`/`c` confusion made S2's fingerprints of one paper disagree; S2 now
+folds the pair and recovers one cluster per paper in every routed year (`extraction/PIPELINE.md`).
+
+**Left to the owner.** Ranks are frozen, so the free 150 still reflects the inflated priorities
+(a from-scratch re-rank would swap 41 words); `bibliographic` is an orphan of a misreading; four
+kept papers flagged `needs-owner-review` now have an agreeing second transcript. See the ticket.
+
 ## 6. How to extend this file
 
 

@@ -417,6 +417,12 @@ interface WordCard {
 - Words with empty `senses` are **excluded from both packages** until their word data is
   written (895 of 2,098 done on 2026-09-17). The paid package therefore grows with content
   updates until the lexicon is complete; the build prints `shipping N of M words`.
+- `exam.timesTested`, `exam.years` and `weight` count **distinct questions**: one per
+  paper and question number, however many booklets carried it. A paper retired with
+  `duplicateOf` (the same English test under a second id) adds nothing — the lexicon fold books
+  its questions on the kept paper, so no stem appears twice on a card. `content:lint` blocks two
+  live papers of one year sharing more than three stems (check 15). `[live]` 2026-09-25,
+  ADR-0021.
 - The exam stem is joined from `content/exams/`, never duplicated into `examples`.
 - The blank marker in stems is normalised to `.....` at build time (34 stems use a run of
   hyphens instead of dots, measured 2026-09-18 — this ticket's own count; the earlier figure of
@@ -435,6 +441,8 @@ is 1.36 MB raw, 352 KB gzipped; `free` (150 words) is 303 KB raw, 74 KB gzipped.
 roughly linearly with word count, so the full 2,098-word `paid` package is projected at
 ≈ 3.2 MB raw, ≈ 830 KB gzipped once word data is complete — still well inside IndexedDB norms.
 Caddy gzips in production; the numbers above are measured with `node:zlib`, not a live server.
+Re-measured 2026-09-25 after the duplicate papers stopped repeating stems on cards (ADR-0021),
+same 893 words: `paid` 1.28 MB raw, 355 KB gzipped; `free` 256 KB raw, 73 KB gzipped.
 
 ---
 

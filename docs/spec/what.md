@@ -1462,10 +1462,23 @@ still answer as before. The e2e job exercises every route end to end.
 
 ### 16.4 CI jobs
 
-`ci` (lint, typecheck, unit, build, budget) on every PR; `server` on every PR (the API suite,
-§16.3); `e2e` on every PR; `deploy` on `main` if SSH works; `android` on tags. `server` and `e2e`
-download the pinned PocketBase binary into `server/.pb/` and share one cache key. Branch
+`ci` (lint, typecheck, unit, spec check, build, budget) on every PR; `server` on every PR (the API
+suite, §16.3); `e2e` on every PR; `deploy` on `main` if SSH works; `android` on tags. `server` and
+`e2e` download the pinned PocketBase binary into `server/.pb/` and share one cache key. Branch
 protection requires `ci`, `server` and `e2e`.
+
+**Spec check** (`pnpm spec:check`, `tools/spec-check/`) `[live]`: this file is normative
+(ADR-0014), but nothing enforced that until this ticket (dev-foundation/04). The check reads
+what.md and the code and compares, both directions, five tables: §8.1 collections vs. what
+`server/pb_migrations/*.js` creates (net of a later migration's own drop); §8.2 routes vs.
+`routerAdd(...)` in `server/pb_hooks/*.pb.js` (`[planned]`/`[deferred]` rows skipped; `GET
+/api/health`'s routerUse-middleware registration counted as a route, per §8.2); §8.4 beacon names
+vs. the client's `BeaconName` union (`apps/web/src/net/api.ts`) and the server's `BEACON_NAMES`
+(`server/pb_hooks/lib/telemetry.js`), independently; the server error codes named in §8.2's
+route-envelope paragraph vs. `errors.js`'s `CODES` (§17.4 — the client's `AppError` code is not a
+fixed enum and is not checked); §18 env var names vs. `.env.example`. One line per mismatch,
+naming the table, the name and the file to fix; exits 1 on any. No network, no LLM — see
+`tools/spec-check/*.test.ts` for the parser and comparison tests.
 
 ---
 
@@ -1476,7 +1489,11 @@ protection requires `ci`, `server` and `e2e`.
    function, a breadcrumb on every transition. No booleans like `isLoading && !hasError`.
 3. **No clever types.** Interfaces and unions; no conditional/mapped-type gymnastics in app code.
 4. **Errors carry codes.** `class AppError extends Error { code: string; data?: unknown }`.
-   Every `catch` either handles a named code or reports and rethrows. Never swallow.
+   Every `catch` either handles a named code or reports and rethrows. Never swallow. The closed
+   set of *server* codes is written once, in §8.2's route-envelope paragraph, and checked by
+   `pnpm spec:check` (§16.4) against `server/pb_hooks/lib/errors.js`'s `CODES`. The client's
+   `AppError` code is not a fixed enum — each call site names its own local failure mode, and
+   `net/api.ts` passes a server code through as `SERVER_<code>` — so nothing here enumerates it.
 5. **Persian only in `strings.ts`.** Components reference keys.
 6. **The engine is called through `engine/`**, never imported into components directly.
 7. **No `Date.now()` outside `engine/clock.ts`.** Tests inject the clock.
@@ -1499,7 +1516,8 @@ Local bootstrap (`.env.local`, git-ignored, used once): `VPS_IP`, `VPS_ROOT_PASS
 done (§14.3) and needs no key — it is managed by hand in Parspack's CDN panel.
 GitHub: `DEPLOY_HOST`, `DEPLOY_USER`, `DEPLOY_SSH_KEY`, `ANDROID_KEYSTORE_B64`,
 `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`. Build: `VITE_API_ORIGIN`, `VITE_APP_NAME`
-(the deferred Persian name — one constant). Local tools (`.env.local`, git-ignored):
+(the deferred Persian name — one constant), `VITE_SUPPORT_URL` (the Telegram link shown in
+settings and on the landing page; blank hides the row). Local tools (`.env.local`, git-ignored):
 `KL_API_ORIGIN`, `KL_ADMIN_EMAIL`, `KL_ADMIN_PASSWORD`, and for `pnpm run deploy` the GitHub
 names above (`DEPLOY_HOST`, `DEPLOY_USER`) plus `DEPLOY_SSH_KEY_FILE` — a path to the key file
 (`~` expanded), local only, since CI holds the key itself in `DEPLOY_SSH_KEY`.

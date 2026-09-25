@@ -36,6 +36,9 @@ jobs:
       - name: Test
         run: pnpm test
 
+      - name: Spec check
+        run: pnpm spec:check
+
       - name: Build content packages
         run: pnpm content:build
 

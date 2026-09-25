@@ -1,10 +1,10 @@
 {
   "free": {
-    "version": "2026-09-25.1",
-    "hash": "53fb7d3824738550682fe5daf6883f4df506abbb6b4112e2a92e50fb988ace20"
+    "version": "2026-09-25.2",
+    "hash": "e740464e65b29bd8de7d3b1c09c3cd432c7dd441b832705a832fab5e01f76163"
   },
   "paid": {
-    "version": "2026-09-25.1",
-    "hash": "78e5bf4fed5ec70debe7c80ccfba6631d977b7f723b97fdfb594017deb18bb88"
+    "version": "2026-09-25.2",
+    "hash": "d36976f1805c25fb6c92b6529060f13dbc8ae389e157d22b3e43de112560bbb9"
   }
 }

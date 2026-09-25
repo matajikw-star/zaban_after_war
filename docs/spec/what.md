@@ -409,6 +409,10 @@ interface WordCard {
   word that gains senses later is appended after words that shipped earlier at lower priority,
   so the free-150 boundary can shift by one word as word data completes — no progress is lost,
   since it is keyed by id (`how-why.md` §5).
+  **Re-assigning every rank** is done by emptying the file to `{}` and running
+  `pnpm content:build`, which assigns all shipping ids by the rule above. Done once, 2026-09-25,
+  prelaunch, by owner decision, after the duplicate-paper fix lowered 226 words' counts
+  (ADR-0021; 41 words swapped across the free-150 boundary). Never after launch.
 - `packages/content/exclusions.json` lists ids that never ship (non-words such as `as-like`,
   see `.scratch/word-data/issues/04-non-words-and-latin-phrases.md`). Ids stay frozen; only
   shipping is decided here.

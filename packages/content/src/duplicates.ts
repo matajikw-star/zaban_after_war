@@ -36,8 +36,9 @@ export function normalizeStem(stem: string): string {
 
 /** Token-set Jaccard of the two normalised stems: shared distinct words / all distinct words. */
 export function stemSimilarity(a: string, b: string): number {
-  const left = new Set(normalizeStem(a).split(' ').filter((w) => w.length > 0));
-  const right = new Set(normalizeStem(b).split(' ').filter((w) => w.length > 0));
+  const words = (stem: string) => normalizeStem(stem).split(' ').filter(Boolean);
+  const left = new Set(words(a));
+  const right = new Set(words(b));
   let shared = 0;
   for (const word of left) if (right.has(word)) shared += 1;
   const union = left.size + right.size - shared;
@@ -192,7 +193,8 @@ function retiredFindings(papers: readonly DedupPaper[]): DuplicateFinding[] {
   for (const retired of papers) {
     if (retired.duplicateOf === undefined) continue;
     const file = examPath(retired.paperId);
-    const fail = (message: string) => findings.push({ severity: 'blocking', check: '16', file, message });
+    const fail = (message: string) =>
+      findings.push({ severity: 'blocking', check: '16', file, message });
     const kept = byId.get(retired.duplicateOf);
 
     if (!retired.duplicateReason) fail('duplicateOf is set but duplicateReason is empty');

@@ -54,7 +54,9 @@ const STEMS = [
 describe('sharedStemCount', () => {
   it('counts the questions of one paper that are also in the other', () => {
     const a = { questions: STEMS.map((stem, i) => q(i + 1, stem)) };
-    const b = { questions: [q(1, STEMS[0] as string), q(2, 'Something else entirely, nothing alike.')] };
+    const b = {
+      questions: [q(1, STEMS[0] as string), q(2, 'Something else entirely, nothing alike.')],
+    };
     expect(sharedStemCount(a, b)).toBe(1);
   });
 
@@ -271,7 +273,10 @@ describe('duplicatePaperFindings — check 17, a retired question that disagrees
 
   it('ignores case and spacing in the options', () => {
     const kept = paper('arshad-1400-p01', { questions: built(FOUR) });
-    const shouted = built(FOUR).map((question) => ({ ...question, options: ['A', ' b', 'C', 'd'] }));
+    const shouted = built(FOUR).map((question) => ({
+      ...question,
+      options: ['A', ' b', 'C', 'd'],
+    }));
     const findings = duplicatePaperFindings([
       kept,
       paper('arshad-1400-p02', {

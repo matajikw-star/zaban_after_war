@@ -66,11 +66,17 @@ export interface ExamQuestion {
   readonly options: readonly string[];
   readonly key: number | null;
   readonly testedWord: string | null;
+  readonly uncertain?: readonly unknown[];
 }
 
 export interface ExamFile {
   readonly paperId: string;
   readonly year: number;
+  readonly bookletCount?: number;
+  /** Set on a retired paper: the paper whose questions this file duplicates (ADR-0021). */
+  readonly duplicateOf?: string;
+  readonly duplicateReason?: string;
+  readonly uncertain?: readonly unknown[];
   readonly questions: readonly ExamQuestion[];
 }
 

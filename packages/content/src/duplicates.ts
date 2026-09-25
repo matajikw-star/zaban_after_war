@@ -43,3 +43,73 @@ export function stemSimilarity(a: string, b: string): number {
   const union = left.size + right.size - shared;
   return union === 0 ? 0 : shared / union;
 }
+
+/** The part of an exam file this module reads — `raw.ts`'s `ExamFile` satisfies it. */
+export interface StemPaper {
+  readonly questions: readonly { readonly stem: string }[];
+}
+
+function matchedIn(from: StemPaper, to: StemPaper): number {
+  let count = 0;
+  for (const question of from.questions) {
+    const found = to.questions.some(
+      (other) => stemSimilarity(question.stem, other.stem) >= STEM_MATCH_THRESHOLD,
+    );
+    if (found) count += 1;
+  }
+  return count;
+}
+
+/**
+ * How many stems two papers share: the questions of one that have a match in the other, taken
+ * in whichever direction finds more, so the answer does not depend on argument order.
+ */
+export function sharedStemCount(a: StemPaper, b: StemPaper): number {
+  return Math.max(matchedIn(a, b), matchedIn(b, a));
+}
+
+/** The fields of `content/exams/<paperId>.json` the duplicate checks read. */
+export interface DedupPaper {
+  readonly paperId: string;
+  readonly year: number;
+  readonly bookletCount?: number;
+  /** Set on a retired paper: the paper id whose questions this file duplicates. */
+  readonly duplicateOf?: string;
+  /** Why, with the measured overlap. Required whenever `duplicateOf` is set. */
+  readonly duplicateReason?: string;
+  readonly uncertain?: readonly unknown[];
+  readonly questions: readonly {
+    readonly no: number;
+    readonly stem: string;
+    readonly options: readonly (string | null)[];
+    readonly uncertain?: readonly unknown[];
+  }[];
+}
+
+function uncertainCount(paper: DedupPaper): number {
+  let count = paper.uncertain?.length ?? 0;
+  for (const question of paper.questions) count += question.uncertain?.length ?? 0;
+  return count;
+}
+
+/**
+ * The kept-paper rule (ADR-0021): of papers that hold one English test, keep the most complete
+ * transcription — most questions, then fewest `uncertain[]` notes (the paper's and its
+ * questions'), then the most booklets (`bookletCount`), then the lowest paper id. Every input
+ * is in the exam files, so the choice is deterministic and re-derivable.
+ */
+export function chooseKept<T extends DedupPaper>(papers: readonly T[]): T {
+  const sorted = [...papers].sort((a, b) => {
+    if (a.questions.length !== b.questions.length) return b.questions.length - a.questions.length;
+    const uncertainA = uncertainCount(a);
+    const uncertainB = uncertainCount(b);
+    if (uncertainA !== uncertainB) return uncertainA - uncertainB;
+    const bookletsA = a.bookletCount ?? 1;
+    const bookletsB = b.bookletCount ?? 1;
+    if (bookletsA !== bookletsB) return bookletsB - bookletsA;
+    return a.paperId < b.paperId ? -1 : a.paperId > b.paperId ? 1 : 0;
+  });
+  const kept = sorted[0];
+  if (kept === undefined) throw new Error('chooseKept: no papers');
+  return kept;
+}

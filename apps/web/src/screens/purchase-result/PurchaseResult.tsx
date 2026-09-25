@@ -95,7 +95,7 @@ export function PurchaseResult() {
 
   // The paid words are loaded for this account: a failed update check must not read as missing.
   const paidOnDevice = useContentStore((s) => s.active === 'paid');
-  const percent = downloadPercent(download);
+  const percent = downloadPercent(download, entitled);
   const here = `/purchase/result?${params.toString()}`;
 
   return (
@@ -135,7 +135,7 @@ export function PurchaseResult() {
             {percent !== null ? (
               <ProgressBar value={percent} ariaLabel={strings.download.progressLabel} />
             ) : null}
-            {downloadCanRetry(download, paidOnDevice) ? (
+            {downloadCanRetry(download, entitled, paidOnDevice) ? (
               <Button
                 variant="secondary"
                 size="sm"

@@ -16,6 +16,11 @@ const OFFLINE_REASONS: ReadonlySet<string> = new Set([
 ]);
 
 /**
+ * `entitled`: the account signed in now holds `full` (§7.6). When it does not — signed out, or
+ * account B on a phone where A bought — no download runs for it and the free package is loaded,
+ * so the row says no download is needed, whatever the machine says: a stored `packages.paid`
+ * puts the machine in `installed` for whoever is signed in (§7.5).
+ *
  * `paidOnDevice`: the content store has the paid package loaded for this account. A failure then
  * is only a failed update check — on a filtered network `navigator.onLine` stays true, so the
  * runner tries and fails often — and every word the user studies is already here. Saying
@@ -27,10 +32,11 @@ export function downloadStatusText(
   entitled: boolean,
   paidOnDevice = false,
 ): string {
+  if (!entitled) return strings.download.none;
   if (state.name === 'error' && paidOnDevice) return strings.download.installed;
   switch (state.name) {
     case 'none':
-      return entitled ? strings.download.waiting : strings.download.none;
+      return strings.download.waiting;
     case 'checking':
       return strings.download.checking;
     case 'downloading':
@@ -49,9 +55,17 @@ export function downloadStatusText(
   }
 }
 
-/** A retry button makes sense: failed, and not something a tap cannot hurry (a 429, the gate). */
-export function downloadCanRetry(state: DownloadState, paidOnDevice = false): boolean {
+/**
+ * A retry button makes sense: an entitled account's failure, and not something a tap cannot hurry
+ * (a 429, the gate).
+ */
+export function downloadCanRetry(
+  state: DownloadState,
+  entitled: boolean,
+  paidOnDevice = false,
+): boolean {
   return (
+    entitled &&
     state.name === 'error' &&
     !paidOnDevice &&
     state.reason !== 'RATE_LIMITED' &&
@@ -59,7 +73,7 @@ export function downloadCanRetry(state: DownloadState, paidOnDevice = false): bo
   );
 }
 
-/** 0..100 while downloading, else null: the progress bar shows only then. */
-export function downloadPercent(state: DownloadState): number | null {
-  return state.name === 'downloading' ? state.percent : null;
+/** 0..100 while downloading for the entitled account, else null: the progress bar shows only then. */
+export function downloadPercent(state: DownloadState, entitled: boolean): number | null {
+  return entitled && state.name === 'downloading' ? state.percent : null;
 }

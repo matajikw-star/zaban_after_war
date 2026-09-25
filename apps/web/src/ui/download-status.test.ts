@@ -23,8 +23,8 @@ describe('downloadStatusText', () => {
       failures: 0,
     };
     expect(downloadStatusText(state, true)).toBe(strings.download.progress('۶۳٪'));
-    expect(downloadPercent(state)).toBe(63);
-    expect(downloadPercent({ name: 'installed', version: 'v' })).toBeNull();
+    expect(downloadPercent(state, true)).toBe(63);
+    expect(downloadPercent({ name: 'installed', version: 'v' }, true)).toBeNull();
   });
 
   it('names the cause of a failure in words, the connection ones alike', () => {
@@ -47,11 +47,11 @@ describe('downloadStatusText', () => {
 
 describe('downloadCanRetry', () => {
   it('offers a retry on a failure a tap can help, never on a 429 or the staging gate', () => {
-    expect(downloadCanRetry(error('NETWORK'))).toBe(true);
-    expect(downloadCanRetry(error('HASH_MISMATCH'))).toBe(true);
-    expect(downloadCanRetry(error('RATE_LIMITED'))).toBe(false);
-    expect(downloadCanRetry(error('SERVER_PAYMENT_DISABLED_MOCK_SMS'))).toBe(false);
-    expect(downloadCanRetry({ name: 'installed', version: 'v' })).toBe(false);
+    expect(downloadCanRetry(error('NETWORK'), true)).toBe(true);
+    expect(downloadCanRetry(error('HASH_MISMATCH'), true)).toBe(true);
+    expect(downloadCanRetry(error('RATE_LIMITED'), true)).toBe(false);
+    expect(downloadCanRetry(error('SERVER_PAYMENT_DISABLED_MOCK_SMS'), true)).toBe(false);
+    expect(downloadCanRetry({ name: 'installed', version: 'v' }, true)).toBe(false);
   });
 });
 
@@ -61,12 +61,46 @@ describe('a failed update check while the paid package is on the device', () => 
   it('says the words are ready, whatever the cause, and offers no retry', () => {
     for (const reason of ['NETWORK', 'DOWNLOAD_STALLED', 'HASH_MISMATCH', 'STORAGE_FULL']) {
       expect(downloadStatusText(error(reason), true, true)).toBe(strings.download.installed);
-      expect(downloadCanRetry(error(reason), true)).toBe(false);
+      expect(downloadCanRetry(error(reason), true, true)).toBe(false);
     }
   });
 
   it('still names the failure when no paid package is on the device', () => {
     expect(downloadStatusText(error('NETWORK'), true, false)).toBe(strings.download.errorOffline);
-    expect(downloadCanRetry(error('NETWORK'), false)).toBe(true);
+    expect(downloadCanRetry(error('NETWORK'), true, false)).toBe(true);
+  });
+});
+
+describe("another account, or nobody, on a device that holds A's paid package", () => {
+  // A stored packages.paid puts the machine in `installed` whoever is signed in (§7.5), but a
+  // signed-out user or account B gets the free package and no download runs (§7.6).
+  const states: DownloadState[] = [
+    { name: 'none' },
+    { name: 'installed', version: 'v' },
+    { name: 'checking', failures: 0 },
+    { name: 'downloading', version: 'v', received: 5, total: 10, percent: 50, failures: 0 },
+    { name: 'verifying', version: 'v', failures: 0 },
+    error('NETWORK'),
+    error('HASH_MISMATCH'),
+  ];
+
+  it('the row says no download is needed, whatever the machine state', () => {
+    for (const state of states) {
+      expect(downloadStatusText(state, false)).toBe(strings.download.none);
+      expect(downloadStatusText(state, false, true)).toBe(strings.download.none);
+    }
+  });
+
+  it('offers no retry and shows no progress bar', () => {
+    for (const state of states) {
+      expect(downloadCanRetry(state, false)).toBe(false);
+      expect(downloadPercent(state, false)).toBeNull();
+    }
+  });
+
+  it('the entitled account still reads installed', () => {
+    expect(downloadStatusText({ name: 'installed', version: 'v' }, true)).toBe(
+      strings.download.installed,
+    );
   });
 });

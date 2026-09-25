@@ -150,7 +150,7 @@ export function Settings() {
 
   // The paid words are loaded for this account: a failed update check must not read as missing.
   const paidOnDevice = useContentStore((state) => state.active === 'paid');
-  const percent = downloadPercent(download);
+  const percent = downloadPercent(download, entitled);
 
   return (
     <main className={`flex flex-1 flex-col gap-4 pt-2 ${BOTTOM_NAV_SPACER_CLASS}`}>
@@ -279,7 +279,7 @@ export function Settings() {
         {percent !== null ? (
           <ProgressBar value={percent} ariaLabel={strings.download.progressLabel} />
         ) : null}
-        {downloadCanRetry(download, paidOnDevice) ? (
+        {downloadCanRetry(download, entitled, paidOnDevice) ? (
           <Button
             variant="secondary"
             size="sm"

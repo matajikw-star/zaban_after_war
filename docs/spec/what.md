@@ -588,7 +588,9 @@ A run happens only when logged in, online and the cached entitlement (§7.6) is 
 time, a trigger during a run runs once after it. Triggers: app start, `online`, `entitled` (an
 `/api/me` refresh or a purchase result cached `full`), the settings retry (`manual`), the backoff
 timer. At start, a stored `packages.paid` puts the machine in `installed` before any network, so
-the settings row is right offline.
+the entitled account's settings row is right offline. The machine does not know whose package it
+is: for a signed-out user or another account (§7.6) the row says «نیازی به دانلود نیست», with
+no retry and no progress bar, whatever the machine state (`ui/download-status.ts`).
 
 1. `GET /api/content/manifest`. The stored paid package already has `manifest.paid.hash` →
    `installed`, nothing fetched.

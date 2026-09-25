@@ -28,9 +28,19 @@ test('home still renders from the precache with the free package while offline',
   // before the reload below can be answered by it.
   await page.evaluate(() => navigator.serviceWorker.ready);
 
-  // This navigation is the first one made after the worker went active, so it is the first one
-  // the worker actually controls.
-  await page.reload();
+  // Explicit navigation, not `page.reload()`: `seedProfile` writes `kv.profile` straight into
+  // IndexedDB, racing the app's own client-side redirect from `/` to `/onboarding` (no profile
+  // yet) that fires as soon as the first `goto` above mounts Home (`screens/onboarding/
+  // redirect.ts`). When that redirect wins, the page is already on `/onboarding` by the time
+  // this runs, and `/onboarding` has no guard sending a user who already has a profile back to
+  // Home (by design: `/onboarding` is a destination, not a route loader that reads settings on
+  // every entry - see `redirect.ts`'s own comment). A blind `reload()` would then keep reloading
+  // `/onboarding` forever, offline included - not a bug in the app, since the redirect decision
+  // was correct at the moment it ran, only in this test's assumption that `page.url()` is still
+  // `/` here. `goto('/')` is still the first navigation the now-active worker controls, and it
+  // matches every other spec's `seedProfile` pattern (`grep -n seedProfile apps/web/e2e/*.ts`),
+  // which all navigate explicitly rather than reloading whatever URL the redirect left behind.
+  await page.goto('/');
   await page.waitForFunction(() => navigator.serviceWorker.controller !== null, undefined, {
     timeout: 20_000,
   });

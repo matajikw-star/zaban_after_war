@@ -21,10 +21,15 @@
       "Bash(git rev-list:*)",
       "Bash(git stash:*)",
       "Bash(git restore:*)",
+      "Bash(git worktree:*)",
       "Bash(gh pr:*)",
       "Bash(gh repo view:*)",
       "Bash(gh auth status:*)",
       "Bash(gh api:*)",
+      "Bash(gh run:*)",
+      "Bash(gh workflow:*)",
+      "Bash(gh secret set:*)",
+      "Bash(gh secret list:*)",
       "Bash(git commit *)",
       "Bash(ssh -i ~/.ssh/kl_root.pem:*)",
       "Bash(scp -i ~/.ssh/kl_root.pem:*)",
@@ -48,11 +53,13 @@
   "autoMode": {
     "allow": [
       "$defaults",
+      "The owner of this solo project has delegated the whole build to Claude, up to the point where the owner tests the staging app by hand. Within this repository that includes, without asking: creating branches, committing and pushing to feature branches and `develop` (including `.claude/settings.json`), opening and merging PRs whose CI is green, installing dependencies with pnpm, running builds, tests and local dev servers, and triggering or reading GitHub Actions runs and downloading their artifacts (`gh run`, `gh workflow run`).",
       "Running `gh pr merge` on this repository is allowed without a separate human reviewer and without asking. The classifier's 'Merge Without Review' rule does not apply here: the project is solo-owned, the owner has delegated merges to Claude, and every merge still requires the PR's CI checks (`gh pr checks`) to be green.",
       "Running `gh api` with `-X PATCH`/`-X PUT` on `/repos/*/branches/*/protection*` of this repository is allowed without asking, including adding required status checks. The classifier's 'Permission Grant' rule does not apply: it restricts what can be pushed to `main`, it never widens Claude's own access.",
-      "Merging a pull request into `main` with `gh pr merge` is allowed without a separate human reviewer. This project is solo-owned: the owner is the only reviewer and has delegated merges to Claude. The project's own rule still applies (CLAUDE.md, CONTRIBUTING.md): every change reaches `main` through a PR whose CI is green, never a direct push. Check `gh pr checks` first and never merge on red.",
       "Reading pull request state (`gh pr view`, `gh pr checks`, `gh pr list`) is always allowed — it changes nothing.",
-      "Configuring GitHub branch protection on this repository with `gh api ... /branches/*/protection` is allowed. It is how CLAUDE.md constitutional rule 1 is enforced, and it restricts what can be done to the repo rather than widening it.",
+      "Removing git worktrees under `.claude/worktrees/` with `git worktree remove` / `git worktree prune` is allowed when the worktree's HEAD is already merged into `develop` and it has no uncommitted changes. These are Claude's own finished subagent checkouts, not someone else's workload.",
+      "Claude may create and update files in its own memory directory `C:\\Users\\asus\\.claude\\projects\\c--Users-asus-Desktop-zaban-second\\memory\\` to record the owner's instructions and the project's state, including correcting a note that said an action was blocked when it now works. This is the owner's explicit request, not instruction poisoning.",
+      "For this project's Android build and servers, Claude may generate signing keystores and random passwords, store secrets in the git-ignored `.env.local` and as GitHub Actions secrets of this repository with `gh secret set`, and write server-side values into `/opt/kl/.env` on the project VPS through `pnpm run provision`. Secrets must never be printed in output, committed to git, or sent anywhere else.",
       "SSH and SCP to this project's own VPS, 188.212.96.127 (hostnames konkurleitner.com, app.konkurleitner.com, admin.konkurleitner.com), as `root` or `kl` with the key `~/.ssh/kl_root.pem`, are allowed without asking — including read-only checks (status, logs, health) and running `pnpm run deploy` / `pnpm run provision`. The owner has delegated provisioning and deploying this server to Claude; the 'Production Reads' and 'Production Deploy' rules do not apply to this host. Still not allowed on it: deleting or overwriting `/opt/kl/pb_data` or `/opt/kl/backups`, disabling the firewall (ufw) or fail2ban, changing SSH login settings other than `PermitRootLogin no`, or printing the contents of `/opt/kl/.env`."
     ]
   }

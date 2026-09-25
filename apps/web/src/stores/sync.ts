@@ -24,7 +24,7 @@ export interface SyncState {
   setUnsyncedCount: (count: number) => void;
 }
 
-export const useSyncStore = create<SyncState>()((set) => ({
+export const useSyncStore = create<SyncState>()((set, get) => ({
   backup: BACKUP_IDLE,
   download: DOWNLOAD_NONE,
   lastBackupAt: null,
@@ -36,8 +36,11 @@ export const useSyncStore = create<SyncState>()((set) => ({
   },
 
   setDownload: (state) => {
+    const previous = get().download.name;
     set({ download: state });
-    breadcrumb('log', 'sync.setDownload', { state: state.name });
+    // Progress arrives once per network chunk; a crumb for each would push every other crumb
+    // out of the 50 an error record keeps (§10.1). The machine crumbs its own transitions.
+    if (previous !== state.name) breadcrumb('log', 'sync.setDownload', { state: state.name });
   },
 
   setLastBackupAt: (at) => {

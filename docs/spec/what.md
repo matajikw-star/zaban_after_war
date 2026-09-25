@@ -452,7 +452,9 @@ src/
   db/                 dexie.ts (schema), repo.ts (typed reads/writes; the only file that touches Dexie)
   engine/             thin adapters over @kl/core (fold cache, rng, clock) + index.ts, the bound API
   net/                api.ts (typed fetch wrappers for every route in §8)
-  sync/               backup.ts (machine + runner), backup-live.ts (real deps + triggers), download.ts (state machine), login-merge.ts
+  sync/               backup.ts (machine + runner), backup-live.ts (real deps + triggers), download.ts (machine + runner),
+                      download-live.ts, package-hash.ts (verify), entitlement.ts (+ -live), payment-status.ts (+ payment-live.ts),
+                      login-merge.ts
   log/                breadcrumbs.ts, errors.ts (capture + report), snapshot.ts
   content/            manifest.ts — the §8.2 manifest shape (the package shape is @kl/content)
   errors.ts           AppError (§17.4)
@@ -495,6 +497,11 @@ above is enumerable. `theme` (§7.9's manual override) and `downloadReceivedByte
 point) were added in the app-shell ticket; `goalSheetShownDay` (the Tehran `dayKey` the
 goal-reached sheet last appeared on) in the review ticket; `saveProgressPromptShown` (§7.4's
 once-only prompt) in the sync ticket, which also fixed `syncCursor`'s value as `{userId, cursor}`.
+The payment ticket fixed two more values: `downloadReceivedBytes` is `{hash, version, bytes}` —
+the received bytes themselves, not only their count, because a resume after a reload needs
+them — and `pendingPayment` is `{paymentId, userId, startedAt}`. Its lead review fixed
+`entitlement` as `{byUser: {[userId]: Entitlement}}`, one record per account (§7.6); a
+pre-account `{status, …}` value reads as belonging to nobody.
 
 ### 7.4 Backup (sync) state machine — `sync/backup.ts` [live]
 
@@ -556,7 +563,8 @@ during a run is remembered (the latest wins) and runs once after it. During a ba
   never a failed login. Ongoing profile changes after login are not yet backed up (§19).
 - **Restore on a fresh device:** login → the merge adopts the server's profile (so the user lands
   on home, not onboarding) → the pull brings every event back → re-fold → progress is back. If
-  the server says entitled, the paid download (§7.5) starts immediately (Phase 5).
+  the server says entitled, the paid download (§7.5) starts immediately: `/login` asks `/api/me`
+  after the merge (`sync/entitlement-live.ts`), and a cached `full` starts the download.
 
 Anonymous installs are not backed up (there is no identity to restore to). The review screen
 offers «ذخیرهٔ پیشرفت با شمارهٔ موبایل» once (`kv.saveProgressPromptShown`) after 50
@@ -564,40 +572,139 @@ presentations on an anonymous install, never on top of the goal sheet
 (`engine/save-progress-prompt.ts`, `screens/review/SaveProgressSheet.tsx`); settings offers it
 always, as the account row's button.
 
-### 7.5 Content download state machine — `sync/download.ts` [building]
+### 7.5 Content download state machine — `sync/download.ts` [live]
 
-States: `none → checking → downloading(progress) → verifying → installed` and `error(reason)`
-with the same backoff as backup. Runs when online and entitled and `packages.paid` is missing or
-older than the manifest's version.
+States: `none → checking → downloading(received, total, percent) → verifying → installed` and
+`error(reason, attempt, retryAt)` on the same ladder as backup (1 min, 5 min, 15 min, then
+hourly; a 429's `retryAfter` when longer). `transition(state, event)` is pure and total — six
+states × seven events (`CHECK`, `UP_TO_DATE`, `NEEDED`, `PROGRESS`, `COMPLETE`, `VERIFIED`,
+`FAILED`), tested as a full table — with a breadcrumb on every change of state name, never per
+chunk. `checking`/`downloading`/`verifying` carry `failures`, so a retry that fails again climbs
+the ladder; `error → CHECK` restarts from the manifest, since the stored bytes make that nearly
+free. `createDownloadRunner(deps)` performs a run with every effect injected;
+`sync/download-live.ts` binds the real ones.
 
-- `GET /api/content/manifest` → compare versions.
-- `GET /api/content/paid` with `Range` resumption: the response is written into an in-memory
-  buffer as it streams; on interruption, the received byte count is kept in `kv` and the next
-  attempt asks `Range: bytes=<n>-`. On completion: sha256 of the canonical `items` JSON must equal
-  `manifest.paid.hash`, else discard and retry.
-- Swap: write `packages.paid`, set `content.active = 'paid'`, keep `free` (harmless).
-- The paywall-result screen and settings show progress («دانلود واژه‌ها ۶۳٪ — با اینترنت ادامه
-  پیدا می‌کند»). Study continues on whatever package is active during the download.
+A run happens only when logged in, online and the cached entitlement (§7.6) is `full`; one at a
+time, a trigger during a run runs once after it. Triggers: app start, `online`, `entitled` (an
+`/api/me` refresh or a purchase result cached `full`), the settings retry (`manual`), the backoff
+timer. At start, a stored `packages.paid` puts the machine in `installed` before any network, so
+the entitled account's settings row is right offline. The machine does not know whose package it
+is: for a signed-out user or another account (§7.6) the row says «نیازی به دانلود نیست», with
+no retry and no progress bar, whatever the machine state (`ui/download-status.ts`).
 
-Built so far: the state union and the pure `transition(state, event)`, total over six states and
-eight events and tested as a full 48-cell table; `run()` is a stub until Phase 5. `installed`
-carries the version it installed, and `error → RETRY` returns to `none` rather than to the
-interrupted step, so the next attempt re-reads the manifest — the received byte count is in `kv`
-and the `Range` header makes restarting from the top nearly free.
+1. `GET /api/content/manifest`. The stored paid package already has `manifest.paid.hash` →
+   `installed`, nothing fetched.
+2. `kv.downloadReceivedBytes` holds bytes for *this* hash → resume with `Range: bytes=<n>-` and
+   `If-Range: "<hash>"`. Bytes for another hash are dropped first. A 206 must start exactly at
+   `n` (`Content-Range`), else `DOWNLOAD_RANGE_MISMATCH`; a 200 to a Range request is the whole
+   file, and the count restarts at 0; a 416 drops the stored bytes and fetches the file whole,
+   once, in the same run. A response whose `ETag` is not the manifest hash (the file moved on
+   before the manifest did) is refused as `DOWNLOAD_CONTENT_CHANGED` and its bytes dropped; the
+   next run reads the new manifest and fetches whole. "Names the manifest hash" means
+   `"<hash>"`, `W/"<hash>"` or `"<hash>-gzip|zstd|br|deflate"`: Caddy's `encode` (§14.2) appends
+   the encoding to a strong tag whenever it compresses, which it does for every browser (checked
+   on staging 2026-09-25; a compressed 206 still carries the uncompressed `Content-Range`).
+3. The body streams into memory; every 256 KB, and whenever the stream breaks, what arrived is
+   written to `kv.downloadReceivedBytes`, so neither a dropped connection nor a killed tab loses
+   it. No headers within 30 s, or no body bytes for 30 s, abandons the request
+   (`DOWNLOAD_STALLED`, `data.phase` `headers` or `body`; a real network failure stays
+   `NETWORK`), keeping the bytes. Fewer bytes than the manifest promised is
+   `DOWNLOAD_TRUNCATED`. Refused to start with less free storage than 3× the package
+   (`STORAGE_FULL`).
+4. Verify (`sync/package-hash.ts`): UTF-8 JSON, shaped like the paid package, and sha256 of the
+   canonical JSON of `items` equal to `manifest.paid.hash` (the builder's `canonicalJson`, checked
+   byte for byte against it in a test). A mismatch (`HASH_MISMATCH`) drops the stored bytes, so
+   the retry starts from byte 0. The package installed carries the hash that was verified, never
+   the file's own `hash` field, since step 1 compares it with the manifest.
+5. **Atomic swap:** `stores/content.ts` `install` writes `packages.paid` in one IndexedDB `put`
+   — committed whole or not at all — and only then switches the content store to it; the stored
+   bytes are cleared after. Nothing before this step touches the package the user studies from,
+   so every failure (offline, 403, a bad hash, a full disk, a crash) leaves the previous package
+   intact and in use. A crash after the last byte and before the swap installs from `kv` on the
+   next run with no fetch; a crash after the swap finds the hash already installed. At load,
+   `paid` is active when the entitlement is `full` and `packages.paid` exists. `free` is kept.
+   `download_done` is queued.
+
+Reported (`client_errors`, kind `download`) the first time: `HASH_MISMATCH`,
+`DOWNLOAD_CORRUPT`, `DOWNLOAD_RANGE_MISMATCH`, `SERVER_NOT_FOUND` (a server older than the
+client), `SERVER_NOT_ENTITLED`, `INSTALL_FAILED`; anything else at the fifth consecutive failure.
+503 `PAYMENT_DISABLED_MOCK_SMS` is never reported — on staging it is the server working as
+designed. A 401 or 403 waits for a login, a fresh entitlement or a tap rather than a timer; a 429
+waits out `retryAfter` and nothing jumps it. The purchase result and settings show the state
+through `ui/download-status.ts` («دانلود واژه‌ها ۶۳٪ — با اینترنت ادامه پیدا می‌کند», a progress
+bar, a retry where a tap can help). Study continues on whatever package is active meanwhile.
+While the paid package is loaded for this account, an `error` (a failed update check — frequent
+on a filtered network, where `navigator.onLine` stays true) reads «همهٔ واژه‌ها روی این دستگاه
+آماده‌اند» with no retry button; the machine still climbs its ladder and reports as above, and
+`data-state` still says `error`. Decided 2026-09-25 from the purchase journey's finding.
 
 The server half is `[live]` (§8.2 `content/manifest`, `content/paid`): a resume gets 206 with
 `Content-Range`; `ETag` is the manifest's paid hash, so sending `If-Range` makes a resume across a
 content update come back as a whole-file 200; a range at or past the end is 416; 20 fetches per
 user per day, each Range fetch counting; 503 `PAYMENT_DISABLED_MOCK_SMS` while SMS is mock.
 
-### 7.6 Entitlement on the device [building]
+Proved end to end on 2026-09-25 (`e2e/payment-journey.spec.ts`, §16.2): the client against the
+real PocketBase and Go's `http.ServeContent`, no Caddy in between — a whole-file 200, the tab
+killed mid-body by a reload, then one 206 from the stored byte with `If-Range` equal to the
+`ETag` (`"<hash>"`, uncompressed here) and a byte-exact `Content-Range`, verified, installed,
+and studied offline across a reload. Chromium's offline emulation (`context.setOffline`) does
+not cut a body already streaming, so the kill is a reload, not a network cut. Behind Caddy the
+ETag gains `-gzip`, which only the unit tests cover.
 
-`kv.entitlement = { status: 'none' | 'full', source, grantedAt, checkedAt }`. Written only from a
-server response (`/api/me`, or the purchase result: `GET /api/pay/status/:id` answers `entitled`;
-a `pay/request` answering `granted: true` — a 100 % code — is followed by `/api/me` for `source`
-and `grantedAt`). Read offline forever; never expires. An online
-check that says `none` while the cache says `full` is logged as a `client_errors` record and the
-cache is **kept** until the owner acts — the app never revokes on its own.
+### 7.6 Entitlement on the device [live]
+
+`kv.entitlement = { byUser: { [userId]: { status: 'none' | 'full', source, grantedAt, checkedAt } } }`
+— `source` is `zarinpal` | `discount` | `manual`, `grantedAt` PocketBase's datetime text,
+verbatim.
+
+**Per account.** A record counts only while the account it belongs to is signed in:
+`stores/auth.ts`'s `entitlement` is `byUser[userId]`, or `none` when signed out or when the
+account has no record. So on a shared phone — A buys, signs out, B signs in — B gets the free
+package, no download runs, and nothing is reported. `signIn`/`signOut` rescope it at once, and
+`sync/entitlement-live.ts` `followEntitlementNow` (subscribed in `main.tsx`) reloads the content
+store on every change of the effective status — free ↔ paid without a reload, the loads run in
+turn so the last one always matches the current account — and on becoming `full` asks the
+download to check the package (it fetches nothing when the stored hash is current). The stored
+`packages.paid` is never deleted, so A signing back in has it offline, with no network call. A
+download that finishes after a sign-out stores the package but does not load it. The records sit
+side by side in one small map rather than one record tagged with a `userId`, so B's `none` can
+never overwrite A's `full`. A value without `byUser` (written by pre-account staging builds)
+belongs to nobody; the next `/api/me` fills the account in.
+
+Written only from a server response, through `stores/auth.ts`
+`adoptServerEntitlement(server, userId)`, which applies `sync/entitlement.ts` `mergeEntitlement`
+to that account's record — `userId` is the account the request was made as, captured before it
+was sent, so an answer that arrives after a sign-out or an account switch lands in the right
+record; with no account it is dropped. There is deliberately no plain setter. The responses:
+`/api/me` (at launch when logged in, after a login, on a purchase result of `ok`), and
+`GET /api/pay/status/:id` answering `entitled: true` (cached as `full`, then `/api/me` fills in
+`source` and `grantedAt`). A 100 % code's `granted: true` lands on `/purchase/result?status=ok`,
+which asks `/api/me`. Read offline forever; never expires.
+
+**Never revoked by the device, within one account.** A network error, a 401, a 5xx, the 503 gate
+or a malformed body changes nothing (`refreshEntitlement` never throws; a failed cache write is
+reported, and the answer holds in memory for the session). An online `/api/me` that says `none`
+while that account's record says `full` keeps the record and files one `client_errors` record
+(`ENTITLEMENT_MISMATCH`, kind `payment`) — a refund is the owner's act (§8.3). Another account's
+`none` is not a mismatch: it is that account's own record. A cached `full` starts the download
+(§7.5).
+
+**`kv.pendingPayment`** (`sync/payment-status.ts`): `/checkout` writes `{paymentId, userId,
+startedAt}` just before it redirects to the gateway, and before it goes to the result for a
+100 % code's grant (a failed write is reported and the payment goes ahead — the callback and the
+reconcile cron settle it without the record). **`purchase_done` is queued exactly once per
+payment, by whichever path removes the record naming it**: the record is removed by one
+check-and-delete in a single IndexedDB transaction (`db/repo.ts` `kvDeleteIf`), which tells its
+caller whether it removed it, so the launch recovery and the result screen racing on the gateway's
+landing, a reload of `/purchase/result` or a later poll cannot queue it twice. No record (a
+failed write, a landing without `paymentId`, which the server sends only for `unknown_payment`)
+means no beacon. At launch, when logged in, `recoverPendingPayment` asks `pay/status/:id` before
+anything assumes failure: `entitled` caches `full`, starts the download and clears the record,
+queueing `purchase_done` when that clear removed it;
+`failed`/`expired`, 404 and `verified` without an entitlement (reported, `inconsistent`) clear
+it; `pending`, offline, 401, the 503 gate and 5xx keep it for the next launch. A record of
+another account is kept and not asked about. `pollPayment` asks on a bounded backoff (2 s rising
+to 30 s, eleven asks, under three minutes) for a `pending` result.
 
 ### 7.7 Service worker and updates [live]
 
@@ -632,11 +739,11 @@ because the service worker answers every navigation with `index.html` (§7.7).
 | `/boxes` | Leitner boxes `[live]` | Five columns with counts (`boxCounts`) plus «دیده‌نشده»; tap a box → inline list of words in it with next-due relative time (`ui/relative-time.ts`); tap a word → `/word/:id`. Bottom nav. |
 | `/word/:id` | Word detail `[live]` | `screens/word/WordDetail.tsx`: every sense, confusables, exam history, a review timeline (one dot per event, grade 1 filled), «این را بلدم», a flag sheet (3 reasons → `outbox` kind `flag`). |
 | `/progress` | Progress `[live]` | Percent with the one-sentence rule («هر بار که یک کلمه در کنکور آمده، یک امتیاز»), conquered/total, a hand-rolled SVG 30-day bar chart (`engine/chart-data.ts`, pure), pace estimate vs exam date with a goal nudge when `verdict === 'behind'`. Bottom nav. |
-| `/paywall` | Paywall | The pace argument, what is included, price with strike-through, «خرید» → login if anonymous → `/checkout`. «بعداً» returns to study (early-pool cards keep the app usable). **Placeholder until Phase 5:** the argument and «بعداً» are live; the price and «خرید» arrive with payment. |
+| `/paywall` `[live]` | Paywall | `screens/paywall/` (`machine.ts` pure, `flow.ts` never throws). The pace argument and what is included, always, offline too; then the price (list price struck through when above the sale price) and «خرید» → `/login?next=/checkout` if anonymous, else `/checkout`. It asks `pay/quote` first, even anonymously, because that is the route carrying the mock-SMS gate (503 before auth): gated → «پرداخت به‌زودی فعال می‌شود», calm, no «خرید»; an anonymous 401 → prices from the public `/api/config`; offline → a Persian note and a retry; `already-entitled` or a cached `full` → «نسخهٔ کامل برای شما فعال است». «بعداً» → `/review` in every state (early-pool cards keep the app usable). Test ids: `paywall` (`data-state`: `loading`/`ready`/`disabled`/`offline`/`failed`/`owned`), `paywall-price`, `paywall-buy`, `paywall-later`, `paywall-retry`, `payment-soon`. |
 | `/login` **[live]** | Phone + OTP — **online** | `screens/login/machine.ts` (pure, total, unit-tested): `enterPhone → sending → enterCode → verifying → done`; errors: `rateLimited` (shows retry-after in minutes; retry or change number), `wrongCode` (`wrong` with attempts left, or `expired` / `locked` → resend), `networkError` (retries whichever request failed; offline shows a Persian explanation, never a crash). `flow.ts` performs the two requests with injected deps and never throws. Explains why the number is needed (backup, restore, purchase). The phone is sent as typed — the server normalises it; the code accepts Persian digits. On success: `stores/auth.ts` `signIn` writes `userId` + phone + token to `kv.auth`, then `sync/login-merge.ts` `runLoginMerge(userId)` — the login merge of §7.4 (re-queue every local event, reconcile the profile, fire a `login` backup run without awaiting it). Then home if a profile exists, else `/onboarding` (`destinationAfterLogin`). |
-| `/checkout` | Price, discount code — **online** | `quote` on code entry; «پرداخت» → `pay/request` → redirect to Zarinpal. |
-| `/purchase/result` | Callback landing — **online** | `?status=ok|failed`; on ok: fetch `/api/me`, cache entitlement, start download, show progress; on failed: reason + retry. If a `pendingPayment` exists on next launch, ask `/api/pay/status/:id` before assuming failure. |
-| `/settings` | Settings `[live]`* | Account (phone, or «ذخیرهٔ پیشرفت با شمارهٔ موبایل» → `/login`), goal (minutes → `goalFromMinutes`), exam date (Jalali text input via `date-fns-jalali`), field (`content/field-codes.json`, named codes only), theme, backup row (status, last backup time; anonymous: «پیشرفت فقط روی همین دستگاه ذخیره شده است.») + manual button (`requestBackup('manual')`, §7.4), download row (state only), «نصب برنامه» (opens the install sheet — the install paragraph below), «گزارش مشکل» → `reportError('user_report', …)`, about + version + support link. *Local parts and backup are fully wired; the account row's logged-out button is «ذخیرهٔ پیشرفت با شمارهٔ موبایل» → `/login`; download shows live store state but its `run()` is a stub until Phase 5. |
+| `/checkout` `[live]` | Price, discount code — **online** | `screens/checkout/`: `machine.ts` (`loading → ready ⇄ applying`, `ready → requesting → redirecting | granted`, and `disabled`, `owned`, `loginNeeded`, `error` with a retry of exactly the request that failed), `flow.ts`. Logged out → `/login?next=/checkout`, which returns here. The server's price (sale, list struck through, discount, payable — the client computes nothing); «اعمال کد» asks `pay/quote` and shows every `codeStatus` in Persian (`ok`, `invalid`, `expired`, `exhausted`, `used`; `already-entitled` → `owned`); an empty code removes the applied one. «پرداخت» sends only a code the server accepted to `pay/request`: `gatewayUrl` (absolute http(s) only) → `kv.pendingPayment` written, `purchase_started` queued, `location.assign`; `granted: true` → `kv.pendingPayment` written, `/purchase/result?status=ok&paymentId=…`; `DISCOUNT_REJECTED` → the quote is asked again with that code, showing the server's status; 409 → `owned` (asks `/api/me`); 401 → login; the gate → «پرداخت به‌زودی فعال می‌شود», never an error; network, 429 (minutes), `GATEWAY_FAILED` → a Persian note and a retry. «بعداً» → `/review`. Test ids: `checkout` (`data-state`), `checkout-code`, `checkout-apply`, `checkout-code-status` (`data-code-status`), `checkout-payable`, `checkout-discount`, `checkout-pay`, `checkout-error`, `checkout-retry`, `checkout-later`, `payment-soon`. |
+| `/purchase/result` `[live]` | Callback landing — **online** | `screens/purchase-result/`. `?status=ok&ref=&paymentId=` → `confirming`: `/api/me` (cache through the §7.6 merge, start the download), then clear a matching `pendingPayment` and queue `purchase_done` only if this clear removed it (§7.6) → `entitled`, which shows «نسخهٔ کامل فعال شد», the bank's `ref` («کد پیگیری»), the download's state and progress bar (§7.5) and «شروع مرور»; if `/api/me` still says none, it asks the payment instead. `?status=pending&paymentId=` (or no status) → `waiting`: `pay/status/:id` on the bounded backoff (§7.6) → `entitled` / `failed` / `stillPending` («بررسی دوباره»); every `entitled` answer asks for the download, and `purchase_done` follows the §7.6 once-per-payment rule. `?status=failed&reason=` → the Persian reason (`cancelled`, `not_paid`, `amount_mismatch`, `unknown_payment`, `expired`, `gateway_error`, anything else) and «تلاش دوباره برای پرداخت» → `/checkout`. Offline → a note and a retry of the same question; 401 → login and back to this URL; `verified` without an entitlement → a support note. The query string only picks the question: a hand-typed `?status=ok` unlocks nothing. Polling stops when the screen unmounts. Launch-time recovery of a `pendingPayment` is §7.6. Test ids: `purchase-result` (`data-state`: `confirming`/`waiting`/`entitled`/`stillPending`/`failed`/`offline`/`loginNeeded`/`inconsistent`/`disabled`), `purchase-entitled`, `purchase-download-status` (`data-state` = the download state), `purchase-download-retry`, `purchase-start-review`, `purchase-failed` (`data-reason`), `purchase-retry`, `purchase-still-pending`, `purchase-check-again`, `purchase-login`, `purchase-later`; the progress bar is `role="progressbar"` named «پیشرفت دانلود واژه‌ها». |
+| `/settings` | Settings `[live]`* | Account (phone, or «ذخیرهٔ پیشرفت با شمارهٔ موبایل» → `/login`), goal (minutes → `goalFromMinutes`), exam date (Jalali text input via `date-fns-jalali`), field (`content/field-codes.json`, named codes only), theme, backup row (status, last backup time; anonymous: «پیشرفت فقط روی همین دستگاه ذخیره شده است.») + manual button (`requestBackup('manual')`, §7.4), download row (the cached entitlement «نسخهٔ کامل» / «نسخهٔ رایگان» `settings-entitlement`; the download state `settings-download-status` with `data-state`, through `ui/download-status.ts`; a progress bar while downloading; «تلاش دوباره» `settings-download-retry` → `requestDownload('manual')` when a tap can help — never on a 429 or the gate; «خرید نسخهٔ کامل» `settings-buy` → `/paywall` for a free user), «نصب برنامه» (opens the install sheet — the install paragraph below), «گزارش مشکل» → `reportError('user_report', …)`, about + version + support link. *Local parts and backup are fully wired; the account row's logged-out button is «ذخیرهٔ پیشرفت با شمارهٔ موبایل» → `/login`; the download row is wired to the real runner (§7.5) and `[live]`: the purchase journey (`payment-journey.spec.ts`, ticket dev-payment/01 part B) reads `settings-entitlement` and `settings-download-status = installed` offline after a reload. |
 | `/season` | Season summary `[live]` | Shown once when the exam date passes (`engine/season.ts`, pure): conquered, days studied, presentations; «تاریخ جدید» → `/settings`. |
 
 Install prompt **[live]**: on Android Chrome, `beforeinstallprompt` is captured (`pwa/install.ts`,
@@ -1233,21 +1340,59 @@ produces a schedule where a word can be conquered in exactly 7 days but the medi
   `login-merge.test.ts`): the full table, the ladder climbing through real retries, 429 with
   `retryAfter`, offline, 401, a failure mid-push, a crash between push and mark (the server keeps
   one copy — asserted), a crash between a pulled page and its cursor, a user change mid-run,
-  one-run-at-a-time under a burst of triggers, the outbox rules, the per-user cursor.
-- E2E (Playwright, Android-sized viewport, against a real PocketBase started by the test runner
-  — `playwright.config.ts`'s second `webServer`, `server/scripts/e2e.mjs`, `127.0.0.1:8091`, a
-  throwaway `pb_data`, `SMS_PROVIDER=mock` so the code is `123456` — reached through
-  `vite preview`'s `/api` proxy, same-origin as behind Caddy; and a Zarinpal mock route). Built
-  so far: `login.spec.ts` (mock-code login → home, `kv.auth` survives a reload and the token
+  one-run-at-a-time under a burst of triggers, the outbox rules, the per-user cursor. Download
+  (`sync/download.test.ts`, `download-live.test.ts`): the full table, a stream cut mid-body and
+  resumed by a fresh runner (a reload), cut twice, offline mid-body, an ETag changed between
+  attempts with and without the manifest caught up, 200-for-206, 416, a 206 from the wrong byte,
+  a hash mismatch then a clean retry from byte 0, a crash on each side of the swap, a failed
+  update swap keeping the old package, 403/429/503/404, the stall watchdog, `Content-Range`
+  parsing. Entitlement and payment (`entitlement.test.ts`, `payment-status.test.ts`): never
+  revoked by 401/5xx/503/malformed answers, every `pay/status` outcome, launch recovery kept
+  offline and cleared on a terminal answer, the polling bounds; the shared-phone scenario over
+  the real stores (`entitlement-account.test.ts`: A full → sign out → none → B none with no
+  mismatch → A back full and on the paid package with no network call; a late answer lands in
+  its own account's record; a legacy record belongs to nobody). Screens are tested as pure
+  machines plus never-throwing flows (`screens/{login,paywall,checkout,purchase-result}/*.test.ts`).
+- E2E (Playwright, Android-sized viewport, against the built app and a real PocketBase started
+  by the test runner, reached through `vite preview`'s `/api` proxy, same-origin as behind
+  Caddy). `playwright.config.ts` starts **two** preview + PocketBase pairs, each PocketBase from
+  `server/scripts/e2e.mjs` on a throwaway `pb_data`:
+  - project `android` — preview `:4173` → `127.0.0.1:8091`, `SMS_PROVIDER=mock` (the code is
+    `123456`), so payment is gated exactly as on staging. Every spec but the purchase journey.
+  - project `payment` — preview `:4174` (`--port`; `KL_E2E_API_TARGET` points its proxy) →
+    `127.0.0.1:8092` with `KL_E2E_PAYMENT=1`: `SMS_PROVIDER=console`, `ZARINPAL_PROVIDER=mock`,
+    `ZARINPAL_CALLBACK_URL` = the preview origin's `/api/pay/callback` (through the proxy, as
+    production's goes through Caddy), `CONTENT_DIR` = `server/content`, `PUBLIC_APP_ORIGIN` =
+    the preview origin. Before it prints the ready line Playwright waits for, the script sets
+    the prices and creates the discount codes through the superuser API (`e2e/pay-server.ts`
+    owns the values; one superuser login per run, because `_superusers:auth` allows 3 per 10 s).
+    Its stdout is copied to a temp log, which `e2e/pay-server.ts` `consoleOtp` reads for the
+    OTP. Each test sends its own `X-Forwarded-For` — the header PocketBase trusts from Caddy —
+    so the OTP route's 10-per-hour-per-IP limit does not end a `--repeat-each` run. No test hook
+    exists in the app or the hooks. Only `payment-journey.spec.ts` runs here.
+
+  Built so far: `login.spec.ts` (mock-code login → home, `kv.auth` survives a reload and the token
   answers `/api/me`; a wrong code shows the tries left; offline explains itself) and
   `sync.spec.ts` (study 10 anonymously → log in → the backup leaves nothing unsynced and the
   server holds 10 → a new browser context, i.e. a fresh device, lands on onboarding → log in with
   the same phone → the 10 events are back in IndexedDB and `/boxes` shows the same counts, also
-  after a reload). The target: onboarding → 10 reviews → **offline**
-  (`context.setOffline(true)`) → 10 more reviews → back online → backup happens → paywall at the
-  limit → login with the console OTP → checkout with a discount code → mock gateway → result →
-  paid download → offline → study from the paid package → reload → state intact. Second spec:
-  restore on a fresh context. Third (`errors.spec.ts`, built): a real throw from the built bundle
+  after a reload), and `payment-gate.spec.ts` (on the gated server the paywall and checkout say
+  «پرداخت به‌زودی فعال می‌شود» with no buy button and no alert, «بعداً» returns to study, an
+  anonymous `/checkout` goes through login and back), and `payment-journey.spec.ts` (the
+  `payment` project, 2026-09-25): a fresh install with 149 of the 150 free words already known
+  and the paywall counter at 99, so the real 100th presentation opens `/paywall` → «خرید» →
+  login with the console OTP → back to `/checkout` → a 50 % code (`checkout-code-status` ok, the
+  discount and payable as the server computed them) → «پرداخت» → the mock gateway's callback →
+  `/purchase/result` `entitled` → the download throttled, killed mid-body by a reload once a
+  checkpoint is in `kv`, then resumed: exactly one 200 and one 206, the 206 from the requested
+  byte with a byte-exact `Content-Range` and `If-Range` = `ETag` → `installed` → offline → a
+  card that exists only in the paid package → reload offline → home counts 893 words, settings
+  says «نسخهٔ کامل» and `installed`, the next card is paid-only too. A second test: a 100 % code
+  grants with no request to the callback, and the download installs. Stable at
+  `--repeat-each=10` (20/20). Not covered: signing out (the app has no sign-out control yet;
+  the shared-phone rules are unit-tested in `entitlement-account.test.ts`). Still a target:
+  onboarding → 10 reviews → offline → 10 more → back online → backup, and restore on a fresh
+  context (partly `sync.spec.ts`). Third (`errors.spec.ts`, built): a real throw from the built bundle
   (a query-param-gated hook in `main.tsx`, never armed for a real user) is captured, drains
   through the outbox with no login (ticket dev-server/04), and `tools/errors` resolves its stack
   against the sourcemap for that build — proving symbolication against a real build, not a mock.

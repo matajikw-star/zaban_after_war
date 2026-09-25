@@ -4,6 +4,7 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { defineConfig, devices } from '@playwright/test';
+import { PAY_APP_ORIGIN, PAY_PB_HOST, PAY_PB_LOG, PAY_SEED } from './e2e/pay-server.ts';
 
 /**
  * Playwright's own Chromium build is downloaded from `cdn.playwright.dev`, which answers 403
@@ -75,7 +76,25 @@ export default defineConfig({
     baseURL: 'http://127.0.0.1:4173',
     trace: 'on-first-retry',
   },
-  projects: [{ name: 'android', use: { ...devices['Pixel 7'], ...(channel ? { channel } : {}) } }],
+  projects: [
+    {
+      name: 'android',
+      testIgnore: /payment-journey\.spec\.ts$/,
+      use: { ...devices['Pixel 7'], ...(channel ? { channel } : {}) },
+    },
+    {
+      // The purchase journey needs payment switched on, which the gated server above must never
+      // have (payment-gate.spec.ts proves the gate). Its own preview + PocketBase pair
+      // (e2e/pay-server.ts), so neither spec can see the other's server.
+      name: 'payment',
+      testMatch: /payment-journey\.spec\.ts$/,
+      use: {
+        ...devices['Pixel 7'],
+        ...(channel ? { channel } : {}),
+        baseURL: PAY_APP_ORIGIN,
+      },
+    },
+  ],
   webServer: [
     {
       command: 'pnpm preview',
@@ -92,6 +111,30 @@ export default defineConfig({
       reuseExistingServer: !process.env.CI,
       timeout: 180_000,
       env: { SOURCEMAP_DIR: e2eSourcemapDir },
+    },
+    {
+      // The payment project's preview: the same build, its /api proxied to the payment server.
+      command: `pnpm preview --port ${new URL(PAY_APP_ORIGIN).port}`,
+      url: PAY_APP_ORIGIN,
+      reuseExistingServer: !process.env.CI,
+      timeout: 120_000,
+      env: { KL_E2E_API_TARGET: `http://${PAY_PB_HOST}` },
+    },
+    {
+      // SMS_PROVIDER=console, ZARINPAL_PROVIDER=mock, CONTENT_DIR=server/content; prices and
+      // discount codes seeded through the superuser API before the ready line (e2e.mjs).
+      command: 'pnpm --filter @kl/server pb:e2e',
+      url: `http://${PAY_PB_HOST}/api/health`,
+      wait: { stdout: /kl-e2e payment server ready/ },
+      reuseExistingServer: !process.env.CI,
+      timeout: 180_000,
+      env: {
+        KL_E2E_PAYMENT: '1',
+        KL_E2E_PB_HOST: PAY_PB_HOST,
+        KL_E2E_APP_ORIGIN: PAY_APP_ORIGIN,
+        KL_E2E_PB_LOG: PAY_PB_LOG,
+        KL_E2E_PAY_SEED: JSON.stringify(PAY_SEED),
+      },
     },
   ],
 });

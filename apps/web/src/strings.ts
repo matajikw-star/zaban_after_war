@@ -128,11 +128,109 @@ export const strings = {
     saveProgressLater: 'بعداً',
   },
 
-  /** The paywall (what.md §7.8). Placeholder copy until Phase 5 builds the real screen. */
+  /** The paywall (what.md §7.8). */
   paywall: {
     pace: 'نسخهٔ رایگان ۱۵۰ کلمه دارد. با نسخهٔ کامل، همهٔ کلمه‌هایی که ده سال اخیر در کنکور آمده‌اند به مرور می‌رسند و پیش از روز آزمون تمام می‌شوند.',
-    soon: 'خرید در مرحلهٔ بعد فعال می‌شود.',
+    includedTitle: 'در نسخهٔ کامل',
+    included: [
+      'همهٔ واژه‌هایی که در ده سال اخیر در کنکور آمده‌اند',
+      'بدون اینترنت، روی همین دستگاه',
+      'یک بار پرداخت، بدون اشتراک',
+    ],
+    listPriceLabel: 'قیمت اصلی',
+    buy: 'خرید',
+    loading: 'در حال دریافت قیمت…',
+    offline: 'برای دیدن قیمت و خرید به اینترنت نیاز است. مرور واژه‌ها بدون اینترنت هم کار می‌کند.',
+    failed: 'قیمت دریافت نشد. کمی بعد دوباره تلاش کنید.',
+    owned: 'نسخهٔ کامل برای شما فعال است.',
     later: 'بعداً',
+  },
+
+  /** Payment switched off on the server (§8.2's mock-SMS gate): calm, never an error. */
+  payment: {
+    soon: 'پرداخت به‌زودی فعال می‌شود.',
+    toman: (amount: string) => `${amount} تومان`,
+    retry: 'تلاش دوباره',
+  },
+
+  /** `/checkout` (what.md §7.8). */
+  checkout: {
+    priceLabel: 'قیمت',
+    discountLabel: 'تخفیف',
+    payableLabel: 'مبلغ قابل پرداخت',
+    codeLabel: 'کد تخفیف',
+    codePlaceholder: 'اگر کد تخفیف دارید',
+    apply: 'اعمال کد',
+    applying: 'در حال بررسی کد…',
+    removeCode: 'حذف کد',
+    pay: 'پرداخت',
+    paying: 'در حال اتصال به درگاه…',
+    redirecting: 'در حال انتقال به درگاه پرداخت…',
+    loading: 'در حال دریافت قیمت…',
+    codeStatus: {
+      ok: 'کد تخفیف اعمال شد.',
+      invalid: 'این کد تخفیف معتبر نیست.',
+      expired: 'مهلت این کد تخفیف تمام شده است.',
+      exhausted: 'ظرفیت این کد تخفیف تمام شده است.',
+      used: 'شما قبلاً از این کد تخفیف استفاده کرده‌اید.',
+    },
+    owned: 'نسخهٔ کامل برای شما فعال است؛ نیازی به پرداخت نیست.',
+    network: 'اتصال به اینترنت برقرار نیست. پرداخت به اینترنت نیاز دارد.',
+    rateLimited: (minutes: string) =>
+      `درخواست‌ها بیش از حد مجاز شد. ${minutes} دقیقهٔ دیگر دوباره تلاش کنید.`,
+    gateway: 'درگاه پرداخت پاسخ نداد. چیزی از حساب شما کم نشده است؛ دوباره تلاش کنید.',
+    failed: 'مشکلی پیش آمد. کمی بعد دوباره تلاش کنید.',
+    later: 'بعداً',
+    home: 'بازگشت به خانه',
+  },
+
+  /** `/purchase/result` (what.md §7.8). */
+  purchase: {
+    confirming: 'در حال بررسی پرداخت…',
+    waiting: 'پرداخت در حال تأیید است. چند لحظه صبر کنید…',
+    stillPending:
+      'پرداخت هنوز تأیید نشده است. اگر مبلغی از حساب شما کم شده، به‌محض تأیید، نسخهٔ کامل خودبه‌خود فعال می‌شود.',
+    checkAgain: 'بررسی دوباره',
+    entitled: 'نسخهٔ کامل فعال شد.',
+    /** Followed by the bank's reference, isolated left-to-right in the markup. */
+    refIdLabel: 'کد پیگیری:',
+    startReview: 'شروع مرور',
+    failedTitle: 'پرداخت انجام نشد.',
+    reasons: {
+      cancelled: 'پرداخت لغو شد.',
+      not_paid: 'پرداخت از طرف بانک تأیید نشد.',
+      amount_mismatch:
+        'مبلغ پرداخت‌شده با مبلغ سفارش یکی نبود. اگر مبلغی از حساب شما کم شده، طبق قانون بانک ظرف ۷۲ ساعت برمی‌گردد.',
+      unknown_payment: 'این پرداخت پیدا نشد.',
+      expired: 'مهلت این پرداخت تمام شد.',
+      gateway_error: 'درگاه پرداخت در دسترس نبود.',
+      other: 'پرداخت ناموفق بود.',
+    },
+    moneyNote: 'اگر مبلغی از حساب شما کم شده و نسخهٔ کامل فعال نشد، با پشتیبانی تماس بگیرید.',
+    retry: 'تلاش دوباره برای پرداخت',
+    later: 'بعداً',
+    offline: 'اتصال به اینترنت برقرار نیست. برای دیدن نتیجهٔ پرداخت به اینترنت نیاز است.',
+    loginNeeded: 'برای دیدن نتیجهٔ پرداخت وارد حساب خود شوید.',
+    login: 'ورود',
+    inconsistent:
+      'پرداخت ثبت شد اما نسخهٔ کامل فعال نشد. این مورد گزارش شد؛ لطفاً با پشتیبانی تماس بگیرید.',
+  },
+
+  /** The paid download's state, in settings and on the purchase result (§7.5). */
+  download: {
+    progressLabel: 'پیشرفت دانلود واژه‌ها',
+    none: 'نیازی به دانلود نیست',
+    waiting: 'در انتظار دانلود',
+    checking: 'در حال بررسی…',
+    progress: (percent: string) => `دانلود واژه‌ها ${percent} — با اینترنت ادامه پیدا می‌کند`,
+    verifying: 'در حال بررسی صحت…',
+    installed: 'همهٔ واژه‌ها روی این دستگاه آماده‌اند',
+    errorOffline: 'دانلود در انتظار اینترنت',
+    errorRateLimited: 'دانلود امروز بیش از حد تکرار شد؛ بعداً خودبه‌خود ادامه پیدا می‌کند',
+    errorStorage: 'فضای خالی دستگاه برای دانلود کافی نیست',
+    errorDisabled: 'دانلود به‌زودی فعال می‌شود',
+    errorOther: 'دانلود ناموفق بود؛ دوباره تلاش می‌شود',
+    retry: 'تلاش دوباره',
   },
 
   boxes: {
@@ -216,12 +314,9 @@ export const strings = {
     backupSaveProgress: 'ذخیرهٔ پیشرفت با شمارهٔ موبایل',
     backupRelogin: 'برای ادامهٔ پشتیبان‌گیری دوباره وارد شوید',
     downloadTitle: 'دانلود واژه‌ها',
-    downloadNone: 'نیازی به دانلود نیست',
-    downloadChecking: 'در حال بررسی…',
-    downloadProgress: (percent: string) => `دانلود واژه‌ها ${percent} — با اینترنت ادامه پیدا می‌کند`,
-    downloadVerifying: 'در حال بررسی صحت…',
-    downloadInstalled: 'نصب‌شده',
-    downloadError: 'دانلود در انتظار اینترنت',
+    entitlementFull: 'نسخهٔ کامل',
+    entitlementNone: 'نسخهٔ رایگان',
+    buyFull: 'خرید نسخهٔ کامل',
     installTitle: 'نصب برنامه',
     installInstalledLabel: 'نصب‌شده',
     reportTitle: 'گزارش مشکل',

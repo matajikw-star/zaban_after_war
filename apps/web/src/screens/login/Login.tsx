@@ -10,12 +10,13 @@
 
 import { CircleAlert } from 'lucide-react';
 import { type FormEvent, useCallback, useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate, useSearchParams } from 'react-router';
 import { reportError } from '../../log/errors.ts';
 import { otpRequest, otpVerify } from '../../net/api.ts';
 import { useAuthStore } from '../../stores/auth.ts';
 import { useSettingsStore } from '../../stores/settings.ts';
 import { strings } from '../../strings.ts';
+import { refreshEntitlementNow } from '../../sync/entitlement-live.ts';
 import { runLoginMerge } from '../../sync/login-merge.ts';
 import { Button } from '../../ui/Button.tsx';
 import { Card } from '../../ui/Card.tsx';
@@ -36,7 +37,12 @@ const deps: LoginDeps = {
   requestCode: otpRequest,
   verifyCode: otpVerify,
   signIn: (auth) => useAuthStore.getState().signIn(auth),
-  afterLogin: runLoginMerge,
+  afterLogin: async (userId) => {
+    await runLoginMerge(userId);
+    // A returning buyer on a fresh install: the entitlement, and so the paid download, comes back
+    // with the login (§7.6, §9.3). Not awaited; never throws.
+    void refreshEntitlementNow();
+  },
   reportError: (err, phase) => void reportError('error', err, { phase }),
 };
 
@@ -49,6 +55,10 @@ const PROBLEM_CLASS = 'flex items-start gap-2 text-body-sm font-medium text-[var
 export function Login() {
   const navigate = useNavigate();
   const hasProfile = useSettingsStore((s) => s.hasProfile);
+  // `?next=/checkout` from the paywall, `?next=/purchase/result…` from a result that needs the
+  // account (§7.8); `safeNext` ignores anything else.
+  const [params] = useSearchParams();
+  const next = params.get('next');
   const [state, setState] = useState<LoginState>(LOGIN_START);
   const [phoneInput, setPhoneInput] = useState('');
   const [codeInput, setCodeInput] = useState('');
@@ -67,11 +77,11 @@ export function Login() {
     } else if (state.name === 'verifying') {
       void checkCode(deps, state.phone, state.code).then(dispatch);
     } else if (state.name === 'done') {
-      void navigate(destinationAfterLogin(hasProfile), { replace: true });
+      void navigate(destinationAfterLogin(hasProfile, next), { replace: true });
     } else if (state.name === 'enterCode') {
       setCodeInput('');
     }
-  }, [state, hasProfile, navigate, dispatch]);
+  }, [state, hasProfile, next, navigate, dispatch]);
 
   function submitPhone(e: FormEvent): void {
     e.preventDefault();

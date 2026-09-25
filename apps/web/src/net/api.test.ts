@@ -3,7 +3,7 @@ import { setClockForTests } from '../engine/clock.ts';
 import { type AppError, isAppError } from '../errors.ts';
 import { breadcrumbs, clearBreadcrumbs } from '../log/breadcrumbs.ts';
 import { useAuthStore } from '../stores/auth.ts';
-import { contentPaid, health, me, otpRequest, syncPush } from './api.ts';
+import { contentPaid, health, me, otpRequest, payQuote, payRequest, syncPush } from './api.ts';
 
 const T0 = 1_760_000_000_000;
 
@@ -105,16 +105,67 @@ describe('request', () => {
       vi.fn(async () => response),
     );
 
-    await expect(contentPaid(100)).resolves.toBe(response);
+    await expect(contentPaid({ from: 100 })).resolves.toBe(response);
   });
 
-  it('sets a Range header when resuming', async () => {
+  it('sets Range and If-Range when resuming', async () => {
     const fetchMock = fetchDouble(async () => new Response('{}', { status: 206 }));
     vi.stubGlobal('fetch', fetchMock);
 
-    await contentPaid(4096);
+    await contentPaid({ from: 4096, ifRange: '"abc"' });
 
     expect(headersOf(fetchMock).range).toBe('bytes=4096-');
+    expect(headersOf(fetchMock)['if-range']).toBe('"abc"');
+  });
+
+  it('asks for the whole file from byte 0, with no If-Range', async () => {
+    const fetchMock = fetchDouble(async () => new Response('{}', { status: 200 }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await contentPaid({ from: 0, ifRange: '"abc"' });
+
+    expect(headersOf(fetchMock).range).toBeUndefined();
+    expect(headersOf(fetchMock)['if-range']).toBeUndefined();
+  });
+
+  it('sends an empty discount code as no code', async () => {
+    const fetchMock = fetchDouble(async () => jsonResponse(200, {}));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await payQuote('');
+
+    expect(fetchMock.mock.calls[0]?.[1]?.body).toBe('{}');
+  });
+});
+
+describe('payment error mapping', () => {
+  it('carries codeStatus from a DISCOUNT_REJECTED body', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () =>
+        jsonResponse(400, {
+          error: { code: 'DISCOUNT_REJECTED', message: 'no' },
+          codeStatus: 'exhausted',
+        }),
+      ),
+    );
+
+    const err = await rejection(payRequest('HALF'));
+    expect(err.code).toBe('SERVER_DISCOUNT_REJECTED');
+    expect(err.data).toMatchObject({ codeStatus: 'exhausted', status: 400 });
+  });
+
+  it('maps the mock-SMS gate to SERVER_PAYMENT_DISABLED_MOCK_SMS', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () =>
+        jsonResponse(503, { error: { code: 'PAYMENT_DISABLED_MOCK_SMS', message: 'gated' } }),
+      ),
+    );
+
+    const err = await rejection(payQuote());
+    expect(err.code).toBe('SERVER_PAYMENT_DISABLED_MOCK_SMS');
+    expect(err.data).toMatchObject({ status: 503 });
   });
 });
 

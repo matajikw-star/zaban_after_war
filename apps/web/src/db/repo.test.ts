@@ -9,6 +9,7 @@ import {
   getPackage,
   insertPulled,
   kvDelete,
+  kvDeleteIf,
   kvGet,
   kvSet,
   lastEvents,
@@ -172,6 +173,35 @@ describe('kv', () => {
 
     await kvDelete('installId');
     expect(await kvGet<string>('installId')).toBeUndefined();
+  });
+
+  it('kvDeleteIf deletes only when the predicate holds, and says whether it did', async () => {
+    const record = { paymentId: 'p1', userId: 'u', startedAt: 1 };
+    const names = (id: string) => (value: unknown) =>
+      (value as { paymentId?: unknown } | undefined)?.paymentId === id;
+
+    expect(await kvDeleteIf('pendingPayment', names('p1'))).toBe(false);
+
+    await kvSet('pendingPayment', record);
+    expect(await kvDeleteIf('pendingPayment', names('p2'))).toBe(false);
+    expect(await kvGet('pendingPayment')).toEqual(record);
+
+    expect(await kvDeleteIf('pendingPayment', names('p1'))).toBe(true);
+    expect(await kvGet('pendingPayment')).toBeUndefined();
+    expect(await kvDeleteIf('pendingPayment', names('p1'))).toBe(false);
+  });
+
+  it('kvDeleteIf: of two concurrent callers, exactly one wins', async () => {
+    const names = (value: unknown) => (value as { paymentId?: unknown }).paymentId === 'p1';
+    for (let round = 0; round < 5; round += 1) {
+      await kvSet('pendingPayment', { paymentId: 'p1', userId: 'u', startedAt: 1 });
+      const results = await Promise.all([
+        kvDeleteIf('pendingPayment', names),
+        kvDeleteIf('pendingPayment', names),
+        kvDeleteIf('pendingPayment', names),
+      ]);
+      expect(results.filter(Boolean)).toHaveLength(1);
+    }
   });
 
   it('stores a structured value as itself', async () => {

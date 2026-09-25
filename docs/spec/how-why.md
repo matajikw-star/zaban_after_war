@@ -907,6 +907,87 @@ Zarinpal's public v4 documentation, not from a live answer; whether `verify` acc
 is also not confirmed. The owner's real 1,000-toman payment (ticket "done when") is where each is
 checked, and a wrong one fails safe: an unknown answer leaves the payment `pending`.
 
+### 5.15 Payment, client half (ticket dev-payment/01 part A, 2026-09-25)
+
+**The resume point stores the bytes, not a count.** §7.5 first said "the received byte count
+is kept in `kv`". A count alone can resume only while the in-memory buffer is still alive, and
+the realistic interruption on a phone — the tab killed in the background, the browser closed —
+loses the buffer. So `kv.downloadReceivedBytes` is `{hash, version, bytes}`: written every
+256 KB and whenever the stream breaks, tagged with the manifest hash so bytes of an older file
+are never offered to a newer one (and `If-Range` makes the server refuse to mix them too). The
+package is ~1.4 MB, so the cost is at most one extra copy in IndexedDB until the install clears
+it. The key name is kept (renaming a `kv` key is a migration); only the value's shape is fixed.
+This is a stored format on users' devices, which is why it is written down here.
+
+**The swap is one `put`.** No staging table, no "active" flag written separately: `packages.paid`
+is written in a single IndexedDB `put` of the whole verified package, and which package is
+active is derived at load (`paid` when entitled and present). A crash therefore has exactly two
+outcomes — the old row or the new one — and there is nothing to reconcile. Everything before the
+`put` (partial bytes, verification) lives outside `packages`.
+
+**The paywall asks `pay/quote` even when anonymous.** The screen must know whether payment is
+open (staging's mock-SMS gate) before it offers «خرید». The gate answers 503 before auth, so
+`pay/quote` answers that question for anyone; an anonymous caller then gets a 401 and reads the
+prices from `/api/config`. The alternative — a flag in `/api/config` — would be a server change
+and a second source of truth for the gate.
+
+**A stall watchdog, not a total timeout.** A slow but moving download on a poor mobile link must
+be allowed to finish; a silent one must not hold the one-run-at-a-time lock forever. So: 30 s for
+headers, then 30 s without a body byte abandons the stream, keeping what arrived.
+
+**`?next=` on `/login` is an allowlist** (`/checkout`, `/purchase/result`), so a crafted link can
+never turn the login screen into an open redirect.
+
+### 5.16 The entitlement cache is per account (lead review of dev-payment/01 part A, 2026-09-25)
+
+**Problem.** The cache was one record for the device. On a shared phone — A buys and signs
+out, B signs in — the never-revoke rule kept `full`, so B studied the paid package, every
+launch filed `ENTITLEMENT_MISMATCH`, and the download's 403 `NOT_ENTITLED` was reported.
+
+**Decision** (the same reasoning as §5.8's per-user sync cursor): a record counts only while
+the account it was granted to is signed in; signed out or signed in as someone else, the device
+treats the entitlement as `none`. "Never revoked by the device" still holds within one account.
+The stored paid package is never deleted, so A signing back in regains it offline; only which
+package the content store loads changes, and a subscription switches it free ↔ paid without a
+reload.
+
+**Storage: one small map, `{byUser: {[userId]: Entitlement}}`**, rather than one record tagged
+with a `userId`, because the tagged record would have to be overwritten by B's `none` — losing
+A's `full` until A's next online `/api/me`, i.e. A offline would lose the paid package. The map
+is a few records at most. A pre-account value (staging builds) reads as belonging to nobody:
+nobody holds a real paid entitlement yet, and the next `/api/me` fills it in.
+
+**Answers are keyed by the account they were asked as**, captured before the request is sent,
+not by whoever is signed in when the answer arrives — otherwise a sign-out during `/api/me`
+could file A's `full` under B.
+
+### 5.17 The purchase journey's e2e server (ticket dev-payment/01 part B, 2026-09-25)
+
+**A second preview + PocketBase pair, not a switched first one.** The gated server
+(`SMS_PROVIDER=mock`) is what staging runs and what `payment-gate.spec.ts` proves; switching it to
+the console provider would have turned every existing login into a stdout read and lost the gate
+proof. A Playwright project per pair keeps each spec on the server it means, at the cost of two
+more processes (≈ 2 s of start-up).
+
+**Seeded by the script, not by the spec.** Prices and discount codes are written through the
+superuser API once, before the ready line Playwright waits for (`webServer.wait.stdout`). A spec
+logging in as superuser per test hit `_superusers:auth`'s 3-per-10-s limit in the arithmetic of a
+`--repeat-each=10` run; a client backdoor was never an option.
+
+**Each test sends its own `X-Forwarded-For`.** The OTP route allows 10 requests per IP per hour,
+keyed on `e.realIP()`, which trusts that header because production sits behind Caddy (checked by
+hand: 12 requests with 12 addresses all answered 200; without the header the 11th was 429). The
+test plays Caddy's part; no app or hook code knows about it.
+
+**The mid-body cut is a reload.** Chromium's offline emulation refused new requests but let the
+paid body that was already streaming finish (first run: the progress kept climbing after
+`setOffline(true)`). A reload kills the fetch with the document — the "killed tab" case of §7.5 —
+and the next document resumes with `Range`. A second CDP session (the throttle) must be detached
+before `setOffline`: its own `offline: false` kept `navigator.onLine` true, the runner ran, the
+manifest fetch failed, and the installed package showed «دانلود در انتظار اینترنت». Not an app
+bug under a real offline device (the runner skips while `navigator.onLine` is false), but the same
+display follows whenever `onLine` is true with no route out — noted for the owner, unchanged.
+
 ## 6. How to extend this file
 
 

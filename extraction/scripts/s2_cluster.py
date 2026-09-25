@@ -248,6 +248,9 @@ def main() -> int:
                 # Extraction status is owned by S4 and preserved across re-clusters.
                 "extraction": prev.get("extraction", "pending"),
             })
+            # So is the note that says why a review flag was cleared (status.py --note).
+            if "reviewNote" in prev:
+                papers[-1]["reviewNote"] = prev["reviewNote"]
         print(f"{year}: {len(by_year[year]):>4} booklets -> {len(clusters):>2} distinct papers"
               f"   sizes={sorted((len(c['members']) for c in clusters), reverse=True)}")
 

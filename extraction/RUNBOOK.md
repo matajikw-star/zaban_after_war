@@ -208,7 +208,13 @@ because nothing does.
 
 **Papers flagged `needs-owner-review`.** The cross-check found options in the
 model's transcript that the local OCR cannot corroborate, twice. Usually a bad
-scan. Open the PNG under `extraction/cache/pages/<paperId>/` and look.
+scan. Open the PNG under `extraction/cache/pages/<paperId>/` and look. Clearing a
+flag records why, on the paper's row in `papers.jsonl` (S2 keeps it across
+re-clusters):
+`python extraction/scripts/status.py --mark <paperId> extracted --note "<decision, evidence, date>"`.
+An independent transcript of the same test that agrees option for option - a
+paper retired as its duplicate (ADR-0021) - is evidence enough; four papers were
+cleared that way on 2026-09-25.
 
 ---
 

@@ -184,7 +184,7 @@ inside S4 would cost a re-read of every page image. See ADR-0010.
 |---|---|---|
 | `booklets.jsonl` | PDF in the corpus | S0 |
 | `routes.jsonl` | booklet: its English page numbers, and where its reading and grammar sit | S1 |
-| `papers.jsonl` | distinct English paper, with its members and `extraction` status | S2 / `status.py` |
+| `papers.jsonl` | distinct English paper, with its members, `extraction` status and, once a review flag is cleared, the `reviewNote` saying why | S2 / `status.py` |
 | `crosscheck.jsonl` | extracted paper, with disputed options and stem words | S5 |
 
 **`extraction/cache/`** — gitignored and fully regenerable: OCR text per page,

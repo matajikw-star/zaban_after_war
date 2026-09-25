@@ -31,13 +31,27 @@ THRESHOLD = 0.55   # same-paper similarity floor; scans of one paper land ~0.8+
 MIN_TOKENS = 25    # below this a fingerprint is too thin to trust
 
 
+def fold_ocr_confusions(token: str) -> str:
+    """Collapse the letter pair the OCR confuses, so one word reads as one token.
+
+    Tesseract reads `e` as `c` on some print runs and not on others (`becausc`,
+    `applianccs`, `ccntral`). A fingerprint is a set of exact tokens, so every
+    word with an `e` in it became a different token, and two scans of one paper
+    fell to Jaccard 0.33-0.5 - under THRESHOLD. That split 1399 into 11 clusters
+    for 7 papers and 1400 into 13 for 6 (ticket dev-content/03, ADR-0021).
+    Folded, S2 recovers exactly one cluster per paper in every year 1398-1405,
+    and two different papers still score at most 0.16."""
+    return token.replace("e", "c")
+
+
 def booklet_fingerprint(route: dict) -> set[str]:
     """Bag of distinctive words from the booklet's general-English pages."""
     toks: set[str] = set()
     for pno in general_pages(route):
         cf = OCR_CACHE / route["bookletId"] / f"p{pno:03d}.txt"
         if cf.exists():
-            toks |= fingerprint_tokens(cf.read_text(encoding="utf-8"))
+            toks |= {fold_ocr_confusions(t)
+                     for t in fingerprint_tokens(cf.read_text(encoding="utf-8"))}
     return toks
 
 
@@ -82,14 +96,25 @@ def exam_anchors(year: int) -> dict[str, str]:
     The hard constraint on id assignment. content/exams/<id>.json records the
     source file the extractor saw, and that booklet is by definition a member of
     the cluster the id names. Anything that would move the id to a cluster not
-    containing that booklet is a bug, not a re-cluster."""
+    containing that booklet is a bug, not a re-cluster.
+
+    A paper retired with `duplicateOf` (ADR-0021) anchors nothing: its booklet
+    sits in the kept paper's cluster, which the kept paper claims."""
     out: dict[str, str] = {}
     for f in sorted((CONTENT / "exams").glob(f"arshad-{year}-p*.json")):
         exam = load_json(f) or {}
+        if exam.get("duplicateOf"):
+            continue
         src = (exam.get("source") or {}).get("file")
         if src:
             out[f.stem] = re.sub(r"\.pdf$", "", src, flags=re.I)
     return out
+
+
+def transcribed_duplicates(year: int) -> set[str]:
+    """Paper ids retired with `duplicateOf` (ADR-0021): expected to own no cluster."""
+    return {f.stem for f in (CONTENT / "exams").glob(f"arshad-{year}-p*.json")
+            if (load_json(f) or {}).get("duplicateOf")}
 
 
 def assign_ids(year: int, clusters: list[dict], prev: dict[str, dict]) -> list[str]:
@@ -145,7 +170,11 @@ def assign_ids(year: int, clusters: list[dict], prev: dict[str, dict]) -> list[s
         m = re.search(r"-p(\d+)$", pid)
         return int(m.group(1)) if m else 0
 
-    burned = {index_of(pid) for pid in prev} | {index_of(pid) for pid in taken}
+    # Every id with a transcript is burned too: a retired paper (ADR-0021) has no
+    # row in papers.jsonl once its cluster has merged, and its id must still
+    # never be handed to a different paper.
+    transcribed = {f.stem for f in (CONTENT / "exams").glob(f"arshad-{year}-p*.json")}
+    burned = {index_of(pid) for pid in set(prev) | taken | transcribed}
     nxt = 1
     for ci in range(len(clusters)):
         if ci in out:
@@ -155,7 +184,7 @@ def assign_ids(year: int, clusters: list[dict], prev: dict[str, dict]) -> list[s
         out[ci] = f"arshad-{year}-p{nxt:02d}"
         burned.add(nxt)
 
-    lost = sorted(set(prev) - set(out.values()))
+    lost = sorted(set(prev) - set(out.values()) - transcribed_duplicates(year))
     if lost:
         print(f"  !! {year}: no cluster claims {lost} - these papers vanished from "
               f"the routing; their ids are retired, never reused")
@@ -194,8 +223,13 @@ def main() -> int:
         clusters = cluster_year(by_year[year], fps)
         clusters.sort(key=lambda c: -len(c["members"]))
         prev_year = {pid: row for pid, row in existing.items() if row["year"] == year}
+        anchors = exam_anchors(year)
         for paper_id, c in zip(assign_ids(year, clusters, prev_year), clusters):
-            rep = pick_representative(c["members"])
+            # An extracted paper's representative is the booklet it was read from,
+            # so S5 corroborates the transcript against the pages the model saw
+            # (ADR-0009) even after a merge brings in a "better" booklet.
+            read_from = [m for m in c["members"] if m["bookletId"] == anchors.get(paper_id)]
+            rep = read_from[0] if read_from else pick_representative(c["members"])
             prev = existing.get(paper_id, {})
             papers.append({
                 "paperId": paper_id,

@@ -225,3 +225,46 @@ Caddy); unit tests cover it.
 **Checks** (this machine, `KL_E2E_CHANNEL=msedge`): lint 0, typecheck 0, test 0 (729), test:server
 0 (175), build 0, budget 0 (227.4 KB), full e2e 0 (22 passed, 12 skipped; also 0 with
 `--workers=1`), `--project=payment --repeat-each=10` 0 (20/20).
+
+### 2026-09-25 — Review fixes
+
+Branch `fix/payment-review` (from `origin/develop` f211a9b), one commit per fix, tests first.
+
+1. **Headers timeout reported the wrong code** (`99beb04`). `download-live.ts` `fetchPaid`'s 30 s
+   headers timer only aborted, which `net/api.ts` reports as `NETWORK`. Now
+   `responseWithHeadersTimeout` (injectable `StallTimers`) rejects with `DOWNLOAD_STALLED`,
+   `data.phase: 'headers'` (the body stall now says `phase: 'body'`); a failure before the timeout
+   keeps its own code. Tests in `download-live.test.ts`.
+2. **`purchase_done` queued more than once** (`89e7c71`). Rule: queued exactly once per payment,
+   by whichever path removes the `kv.pendingPayment` record naming it. `db/repo.ts` `kvDeleteIf`
+   reads and deletes in one Dexie transaction and says whether it deleted; `clearPending` /
+   `settlePendingPayment` return that boolean. `onEntitled` only starts the download; the new
+   `onPurchased` queues the beacon, from `checkPayment` only when the outcome is `entitled` and its
+   clear removed the record, from `confirmOk` only when `settlePending` returned true. Tests:
+   recovery + `confirmOk` in either order or concurrently → one; a reload → zero; a poll reaching
+   `entitled` after the record was cleared → zero; the download is still asked for every time;
+   concurrent `kvDeleteIf` → exactly one winner (`repo.test.ts`).
+   - **A 100 % grant now writes `pendingPayment` too** (`screens/checkout/flow.ts`). It wrote none
+     before, so under the new rule a free code's purchase would never have been counted.
+   - **A landing without `paymentId`:** the server sends one on every redirect except
+     `status=failed&reason=unknown_payment` (no payment was found, `lib/pay.js` `handleCallback`).
+     A hand-typed `?status=ok` without it names no record → no beacon; the entitlement still comes
+     only from `/api/me`.
+3. **Another account saw «همهٔ واژه‌ها … آماده‌اند»** (`c3dd1e6`). A stored `packages.paid` puts
+   the machine in `installed` whoever is signed in. `ui/download-status.ts`: without the
+   entitlement the row says «نیازی به دانلود نیست», no retry, no progress bar, whatever the machine
+   state (`downloadCanRetry`/`downloadPercent` now take `entitled`). what.md §7.5 no longer says the
+   stored package makes the row right for everyone.
+4. **The stored hash was the file's own claim** (`dcd96e7`). `verifyPaidPackage` returns the
+   package with `hash` set to the verified hash, so a wrong or missing `hash` field no longer
+   redownloads every launch. Test in `package-hash.test.ts`.
+
+Notes from the lead:
+- A `?status=failed` landing deliberately does not clear `pendingPayment` — a query string is not
+  a server answer; the next launch asks `pay/status` and clears it.
+- f211a9b (an installed package stays «همهٔ واژه‌ها آماده است» when an update check fails) was
+  decided by the lead engineer on 2026-09-25, not the owner; the owner may reverse it.
+
+Checks (this machine, `KL_E2E_CHANNEL=msedge`): lint 0, typecheck 0, test 0 (752), build 0,
+budget 0 (227.6 KB of 300 KB), full e2e 0 (22 passed, 12 skipped), `payment-journey
+--repeat-each=3` 0 (6 passed).
